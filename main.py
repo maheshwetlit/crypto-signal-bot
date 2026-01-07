@@ -157,23 +157,16 @@ async def main():
     except:
         print("Start message failed - check config")
 
-    while True:
-        try:
-            print(f"Scanning at {datetime.now().strftime('%H:%M:%S')}...")
-
-            for symbol in Config.SYMBOLS:
-                signal = await engine.scan_symbol(symbol)
-                if signal:
-                    await notifier.send_signal(signal)
-                    await asyncio.sleep(2)
-
-            await asyncio.sleep(Config.SCAN_INTERVAL)
-        except KeyboardInterrupt:
-            print("Bot stopped")
-            break
-        except Exception as e:
-            print(f"Error: {e}")
-            await asyncio.sleep(60)
-
+    # Run single scan (GitHub Actions will run this every 5 minutes via cron)
+    try:
+        print(f"Scanning at {datetime.now().strftime('%H:%M:%S')}...")
+        for symbol in Config.SYMBOLS:
+            signal = await engine.scan_symbol(symbol)
+            if signal:
+                await notifier.send_signal(signal)
+                await asyncio.sleep(2)
+        print("Scan complete")
+    except Exception as e:
+        print(f"Error: {e}")
 if __name__ == "__main__":
     asyncio.run(main())
