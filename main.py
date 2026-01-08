@@ -1,7 +1,6 @@
 #!/usr/bin/env python3
 # Crypto Signal Bot - GitHub Actions Compatible
-import ccxt, pandas as pd, numpy as np, time, os, requests
-from datetime import datetime
+import ccxt, pandas as pd, numpy as np, time, os, requests, asynciofrom datetime import datetime
 
 class Config:
     TELEGRAM_BOT_TOKEN = os.getenv('TELEGRAM_BOT_TOKEN', '')
