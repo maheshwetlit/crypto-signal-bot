@@ -15,23 +15,17 @@ import numpy as np
 import requests
 
 
-# ----------------------------
-# Config
-# ----------------------------
 class Config:
     TELEGRAM_BOT_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN", "")
     TELEGRAM_CHAT_ID = os.getenv("TELEGRAM_CHAT_ID", "")
 
-    # Pairs
     SYMBOLS = ["BTC/USDT", "ETH/USDT", "SOL/USDT", "BNB/USDT", "DOGE/USDT"]
 
-    # Candle settings
     LTF_TIMEFRAME = "1h"   # entry timeframe
-    HTF_TIMEFRAME = "4h"   # trend timeframe (keeps noise down)
+    HTF_TIMEFRAME = "4h"   # trend timeframe
     OHLCV_LIMIT = 220      # a bit > 200 to be safe with EMA/ATR warmup
 
-    # Strategy parameters
-    SIGNAL_COOLDOWN = 3600  # seconds per symbol (extra protection)
+    SIGNAL_COOLDOWN = 3600  # seconds
 
     ATR_SHORT = 14
     ATR_LONG = 100
@@ -39,29 +33,25 @@ class Config:
 
     EXTREME_MOVE_3D_PCT = 30  # block long after +30% in 3d, block short after -30% in 3d
 
-    # Risk model
     BTC_ATR_MULT = 1.5
     ALT_ATR_MULT = 2.0
 
-    # Scheduling / state
     STATE_FILE = "bot_state.json"
-    # If you run on 15m schedule, use a small delay (cron minute 5/20/35/50) so the last closed candle is stable.
 
 
 def utc_now():
     return datetime.now(timezone.utc)
 
 
-# ----------------------------
-# Persistent State (for GitHub Actions)
-# ----------------------------
 class BotState:
-    """
+    """Persistent state for scheduled runs.
+
     Stores:
       - last_processed_ltf_ts: per-symbol last processed 1h candle timestamp (ms)
       - last_signal_ts: per-symbol unix time() for cooldown
     """
-    def __init__(self, path):
+
+    def __init__(self, path: str):
         self.path = path
         self.data = {
             "last_processed_ltf_ts": {},
@@ -75,59 +65,52 @@ class BotState:
         try:
             with open(self.path, "r", encoding="utf-8") as f:
                 self.data = json.load(f)
-            # ensure keys exist
             self.data.setdefault("last_processed_ltf_ts", {})
             self.data.setdefault("last_signal_ts", {})
         except Exception:
-            # if state corrupt, start fresh
             self.data = {"last_processed_ltf_ts": {}, "last_signal_ts": {}}
 
     def save(self):
         with open(self.path, "w", encoding="utf-8") as f:
             json.dump(self.data, f, indent=2, sort_keys=True)
 
-    def get_last_candle_ts(self, symbol):
+    def get_last_candle_ts(self, symbol: str) -> int:
         return int(self.data["last_processed_ltf_ts"].get(symbol, 0))
 
-    def set_last_candle_ts(self, symbol, ts_ms):
+    def set_last_candle_ts(self, symbol: str, ts_ms: int):
         self.data["last_processed_ltf_ts"][symbol] = int(ts_ms)
 
-    def get_last_signal_time(self, symbol):
+    def get_last_signal_time(self, symbol: str) -> float:
         return float(self.data["last_signal_ts"].get(symbol, 0.0))
 
-    def set_last_signal_time(self, symbol, t):
+    def set_last_signal_time(self, symbol: str, t: float):
         self.data["last_signal_ts"][symbol] = float(t)
 
 
-# ----------------------------
-# Engine
-# ----------------------------
 class CryptoEngine:
     def __init__(self):
         print("CRYPTO ENGINE SIGNAL BOT")
         print("Exchange: Kraken")
         self.exchange = ccxt.kraken({"enableRateLimit": True})
-        self.exchange.load_markets()  # markets/symbols are only available after this [web:22]
+        self.exchange.load_markets()
         print("Exchange initialized and markets loaded.")
 
     @staticmethod
     def _to_ohlcv_df(ohlcv):
-        # CCXT OHLCV format: [timestamp, open, high, low, close, volume]
-        df = pd.DataFrame(ohlcv, columns=["t", "open", "high", "low", "close", "volume"])
-        return df
+        return pd.DataFrame(ohlcv, columns=["t", "open", "high", "low", "close", "volume"])
 
-    def fetch_ohlcv_df(self, symbol, timeframe, limit):
-        # Unified signature: fetch_ohlcv(symbol, timeframe, since, limit, params) [web:8]
+    def fetch_ohlcv_df(self, symbol: str, timeframe: str, limit: int) -> pd.DataFrame:
+        # CCXT unified signature: fetch_ohlcv(symbol, timeframe, since, limit, params)
         ohlcv = self.exchange.fetch_ohlcv(symbol, timeframe, None, limit)
         return self._to_ohlcv_df(ohlcv)
 
     @staticmethod
-    def calculate_atr(df, period):
+    def calculate_atr(df: pd.DataFrame, period: int) -> pd.Series:
         h, l, c = df["high"], df["low"], df["close"]
         tr = pd.concat([h - l, (h - c.shift()).abs(), (l - c.shift()).abs()], axis=1).max(axis=1)
         return tr.rolling(period).mean()
 
-    def detect_regime(self, df_1h):
+    def detect_regime(self, df_1h: pd.DataFrame) -> dict:
         atr_s = self.calculate_atr(df_1h, Config.ATR_SHORT)
         atr_l = self.calculate_atr(df_1h, Config.ATR_LONG)
 
@@ -136,7 +119,6 @@ class CryptoEngine:
 
         ratio = (atr_s_last / atr_l_last) if (atr_l_last and np.isfinite(atr_l_last)) else 0.0
 
-        # 3-day move on 1h candles = 72 bars
         move_3d = 0.0
         if len(df_1h) > 72:
             base = float(df_1h["close"].iloc[-72])
@@ -159,7 +141,7 @@ class CryptoEngine:
         }
 
     @staticmethod
-    def analyze_trend(df_htf):
+    def analyze_trend(df_htf: pd.DataFrame) -> str:
         ema50 = df_htf["close"].ewm(span=50).mean()
         ema200 = df_htf["close"].ewm(span=200).mean()
 
@@ -174,7 +156,7 @@ class CryptoEngine:
         return "NEUTRAL"
 
     @staticmethod
-    def detect_entry(df_1h, trend):
+    def detect_entry(df_1h: pd.DataFrame, trend: str):
         ema50 = df_1h["close"].ewm(span=50).mean()
         e50 = ema50.iloc[-1]
 
@@ -186,10 +168,7 @@ class CryptoEngine:
         vol_ma20 = df_1h["volume"].rolling(20).mean().iloc[-1]
         vol_ok = df_1h["volume"].iloc[-1] > (vol_ma20 * 1.2) if np.isfinite(vol_ma20) else False
 
-        # LONG: wick below EMA50 + close above + green candle
         long_bounce = (last_low <= e50) and (last_close > e50) and (last_close > last_open)
-
-        # SHORT: wick above EMA50 + close below + red candle
         short_reject = (last_high >= e50) and (last_close < e50) and (last_close < last_open)
 
         if trend == "BULLISH":
@@ -215,7 +194,7 @@ class CryptoEngine:
         return None
 
     @staticmethod
-    def calculate_levels(symbol, entry, atr, side):
+    def calculate_levels(symbol: str, entry: float, atr: float, side: str) -> dict:
         is_btc = "BTC" in symbol
         mult = Config.BTC_ATR_MULT if is_btc else Config.ALT_ATR_MULT
 
@@ -234,7 +213,6 @@ class CryptoEngine:
                 "risk_pct": (dist / entry) * 100.0 if entry else 0.0,
             }
 
-        # SHORT
         sl = entry + (atr * mult)
         dist = sl - entry
         return {
@@ -246,13 +224,11 @@ class CryptoEngine:
             "risk_pct": (dist / entry) * 100.0 if entry else 0.0,
         }
 
-    def scan_symbol(self, symbol, state: BotState):
-        # sanity: ensure symbol exists on exchange
+    def scan_symbol(self, symbol: str, state: BotState):
         if symbol not in self.exchange.symbols:
             print(f"[SKIP] {symbol} not in exchange symbols list.")
             return None
 
-        # cooldown (persistent across runs)
         now = time.time()
         last_sig = state.get_last_signal_time(symbol)
         if last_sig and (now - last_sig) < Config.SIGNAL_COOLDOWN:
@@ -260,7 +236,6 @@ class CryptoEngine:
             print(f"[COOLDOWN] {symbol} last signal {mins} min ago.")
             return None
 
-        # fetch candles
         df_1h = self.fetch_ohlcv_df(symbol, Config.LTF_TIMEFRAME, Config.OHLCV_LIMIT)
         df_htf = self.fetch_ohlcv_df(symbol, Config.HTF_TIMEFRAME, Config.OHLCV_LIMIT)
 
@@ -268,7 +243,6 @@ class CryptoEngine:
             print(f"[SKIP] {symbol} insufficient candles (1h={len(df_1h)} htf={len(df_htf)}).")
             return None
 
-        # 15m schedule gate: only process when we see a NEW 1h candle timestamp
         last_candle_ts = int(df_1h["t"].iloc[-1])
         prev_ts = state.get_last_candle_ts(symbol)
         if prev_ts and last_candle_ts <= prev_ts:
@@ -304,7 +278,7 @@ class CryptoEngine:
             "symbol": symbol,
             "signal": side,
             "pattern": entry_data["pattern"],
-            "quality": entry_data["quality"],   # 3/4 or 4/4
+            "quality": entry_data["quality"],
             "confidence": entry_data["confidence"],
             "regime": regime,
             "htf_trend": trend,
@@ -313,23 +287,19 @@ class CryptoEngine:
         }
 
 
-# ----------------------------
-# Telegram Notifier
-# ----------------------------
 class TelegramNotifier:
     def __init__(self):
         self.bot_token = Config.TELEGRAM_BOT_TOKEN
         self.chat_id = Config.TELEGRAM_CHAT_ID
         self.base_url = f"https://api.telegram.org/bot{self.bot_token}/sendMessage" if self.bot_token else ""
 
-    def send_message(self, text):
+    def send_message(self, text: str) -> bool:
         if not self.bot_token or not self.chat_id:
             print("[WARN] Missing TELEGRAM_BOT_TOKEN or TELEGRAM_CHAT_ID. Skipping Telegram send.")
             return False
 
         try:
             payload = {"chat_id": self.chat_id, "text": text, "parse_mode": "Markdown"}
-            # Telegram sendMessage supports parse_mode in the request body. [web:10]
             r = requests.post(self.base_url, data=payload, timeout=10)
             if r.status_code == 200:
                 return True
@@ -340,15 +310,14 @@ class TelegramNotifier:
             return False
 
     @staticmethod
-    def _fmt_price(x):
-        # BTC needs fewer decimals than DOGE; this keeps it readable.
+    def _fmt_price(x: float) -> str:
         if x >= 1000:
             return f"{x:.2f}"
         if x >= 1:
             return f"{x:.4f}"
         return f"{x:.6f}"
 
-    def format_signal(self, s):
+    def format_signal(self, s: dict) -> str:
         l = s["levels"]
         side = s["signal"]
 
@@ -359,7 +328,6 @@ class TelegramNotifier:
             title = "🔴 *SHORT SIGNAL* 🔴"
             side_lbl = "SELL"
 
-        # show R labels aligned with direction (TPs already computed correctly)
         return (
             f"{title}\n\n"
             f"💎 *Pair:* {s['symbol']}\n"
@@ -381,13 +349,10 @@ class TelegramNotifier:
             f"Time (UTC): {s['timestamp'].strftime('%H:%M:%S')}"
         )
 
-    def send_signal(self, signal):
+    def send_signal(self, signal: dict) -> bool:
         return self.send_message(self.format_signal(signal))
 
 
-# ----------------------------
-# Main
-# ----------------------------
 def main():
     print("=" * 60)
     print("CRYPTO SIGNAL BOT - GITHUB ACTIONS (LONG+SHORT)")
@@ -403,7 +368,7 @@ def main():
         "🤖 *Bot Scan Started*\n\n"
         "Exchange: Kraken\n"
         f"Pairs: {', '.join(Config.SYMBOLS)}\n"
-        f"Schedule: every 15m (process new 1h candles only)\n"
+        "Schedule: every 15m (process new 1h candles only)\n"
         f"Time (UTC): {utc_now().strftime('%H:%M:%S')}\n"
     )
 
@@ -413,7 +378,7 @@ def main():
         if s:
             signals.append(s)
             notifier.send_signal(s)
-            time.sleep(2)  # gentle pacing
+            time.sleep(2)
 
     completion_msg = (
         f"✅ Scan complete: {len(signals)} signal(s) sent"
@@ -423,7 +388,6 @@ def main():
     print(completion_msg)
     notifier.send_message(completion_msg)
 
-    # Persist state for GitHub Actions (commit this file back, or store as artifact)
     state.save()
 
     print("=" * 60)
