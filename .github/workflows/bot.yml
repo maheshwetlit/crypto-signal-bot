@@ -3,8 +3,8 @@ name: Crypto Signal Bot
 
 on:
   schedule:
-    - cron: '*/1 * * * *'  # Runs every 1 minute
-      workflow_dispatch:  # Allows manual trigger
+          - cron: '*/5 * * * *'
+                workflow_dispatch:  # Allows manual trigger# Runs every 5 minuteslow_dispatch:  # Allows manual trigger
 
 jobs:
   run-bot:
