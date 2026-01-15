@@ -2,10 +2,9 @@ name: Crypto Signal Bot
 # Re-enabled workflow - January 15, 2026
 
 on:
-  schedule:
-          - cron: '*/5 * * * *'
-                workflow_dispatch:  # Allows manual trigger# Runs every 5 minuteslow_dispatch:  # Allows manual trigger
-
+    schedule:
+    - cron: '*/5 * * * *'  # Runs every 5 minutes
+  workflow_dispatch:  # Allows manual trigger
 jobs:
   run-bot:
     runs-on: ubuntu-latest
