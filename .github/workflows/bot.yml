@@ -1,4 +1,5 @@
 name: Crypto Signal Bot
+# Re-enabled workflow - January 15, 2026
 
 on:
   schedule:
