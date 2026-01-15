@@ -2,8 +2,8 @@ name: Crypto Signal Bot
 # Re-enabled workflow - January 15, 2026
 
 on:
-  schedule:
-    - cron: '*/15 * * * *
+  hedule:
+    - cron: '*/15 * * * *'
   workflow_dispatch:  # Allows manual trigger
 jobs:
   run-bot:
