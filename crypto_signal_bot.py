@@ -414,52 +414,31 @@ class TelegramNotifier:
 
         hint = self.compute_exposure_hint(s)
 
-        return (
-            f"{title}
+        return f"""{title}
 
-"
-            f"💎 *Pair:* {s['symbol']}
-"
-            f"📊 *Pattern:* {s['pattern']}
-"
-            f"🎭 *Style:* {s['style']}
-"
-            f"⭐ *Confidence:* {s['confidence']} ({s['quality']}/4)
-"
-            f"🧭 *Side:* {side_lbl}
+💎 *Pair:* {s['symbol']}
+📊 *Pattern:* {s['pattern']}
+🎭 *Style:* {s['style']}
+⭐ *Confidence:* {s['confidence']} ({s['quality']}/4)
+🧭 *Side:* {side_lbl}
 
-"
-            f"🎯 *Entry:* `{self._fmt_price(l['entry'])}`
-"
-            f"🛡 *Stop Loss:* `{self._fmt_price(l['stop_loss'])}`
-"
-            f"   *Risk:* {l['risk_pct']:.2f}%
+🎯 *Entry:* `{self._fmt_price(l['entry'])}`
+🛡 *Stop Loss:* `{self._fmt_price(l['stop_loss'])}`
+   *Risk:* {l['risk_pct']:.2f}%
 
-"
-            f"💰 *Take Profits:*
-"
-            f" TP1: `{self._fmt_price(l['tp1'])}` (1.5R)
-"
-            f" TP2: `{self._fmt_price(l['tp2'])}` (2.5R)
-"
-            f" TP3: `{self._fmt_price(l['tp3'])}` (4.0R)
+💰 *Take Profits:*
+ TP1: `{self._fmt_price(l['tp1'])}` (1.5R)
+ TP2: `{self._fmt_price(l['tp2'])}` (2.5R)
+ TP3: `{self._fmt_price(l['tp3'])}` (4.0R)
 
-"
-            f"📈 *CONDITIONS*
-"
-            f"Regime: {s['regime']['state']} ({s['regime']['label']})
-"
-            f"HTF Trend: {s['htf_trend']}
-"
-            f"ATR%: {s['regime']['atr_pct']:.2f}%
-"
-            f"3D Move: {s['regime']['move_3d']:.2f}%
-"
-            f"Time (UTC): {s['timestamp'].strftime('%H:%M:%S')}
+📈 *CONDITIONS*
+Regime: {s['regime']['state']} ({s['regime']['label']})
+HTF Trend: {s['htf_trend']}
+ATR%: {s['regime']['atr_pct']:.2f}%
+3D Move: {s['regime']['move_3d']:.2f}%
+Time (UTC): {s['timestamp'].strftime('%H:%M:%S')}
 
-"
-            f"📌 *Position Sizing Hint:* {hint}"
-        )
+📌 *Position Sizing Hint:* {hint}"""
 
     def send_signal(self, signal: dict) -> bool:
         return self.send_message(self.format_signal(signal))
@@ -476,21 +455,15 @@ def main():
     engine = CryptoEngine()
     notifier = TelegramNotifier()
 
-    notifier.send_message(
-        "🤖 *Bot Scan Started* (Regime/Style Enhanced)
+    msg_start = f"""🤖 *Bot Scan Started* (Regime/Style Enhanced)
 
-"
-        "Exchange: Kraken
-"
-        f"Pairs: {', '.join(Config.SYMBOLS)}
-"
-        "Schedule: every 15m (process new 1h candles)
-"
-        "Features: Regime labels, EMA extension gate, MO/MR style, exposure hints
-"
-        f"Time (UTC): {utc_now().strftime('%H:%M:%S')}
-"
-    )
+Exchange: Kraken
+Pairs: {', '.join(Config.SYMBOLS)}
+Schedule: every 15m (process new 1h candles)
+Features: Regime labels, EMA extension gate, MO/MR style, exposure hints
+Time (UTC): {utc_now().strftime('%H:%M:%S')}"""
+
+    notifier.send_message(msg_start)
 
     signals = []
     for symbol in Config.SYMBOLS:
