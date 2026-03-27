@@ -6,13 +6,19 @@ on:
     - cron: '*/15 * * * *'  # Runs every 15 minutes
   workflow_dispatch:  # Allows manual trigger
 
+permissions:
+  contents: read
+
 jobs:
   run-bot:
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          persist-credentials: true
 
       - name: Set up Python
         uses: actions/setup-python@v4
@@ -29,4 +35,4 @@ jobs:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
         run: |
-         python crypto_signal_bot.py
+          python crypto_signal_bot.py
