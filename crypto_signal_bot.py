@@ -52,12 +52,24 @@ class BotState:
     def get_last_signal_time(self, sym): return self.data["last_signal_ts"].get(sym, 0)
     def set_last_signal_time(self, sym, t): self.data["last_signal_ts"][sym] = t
 
+class TelegramNotifier:
+    def __init__(self):
+        self.bot_token = Config.TELEGRAM_BOT_TOKEN
+        self.chat_id = Config.TELEGRAM_CHAT_ID
+        self.url = f"https://api.telegram.org/bot{self.bot_token}/sendMessage" if self.bot_token else ""
+    def send_message(self, text: str) -> bool:
+        if not self.bot_token or not self.chat_id: return False
+        try:
+            payload = {"chat_id": self.chat_id, "text": text, "parse_mode": "Markdown"}
+            r = requests.post(self.url, data=payload, timeout=10)
+            return r.status_code == 200
+        except Exception: return False
+
 class GoatXXEngine:
     def __init__(self):
         self.exchange = ccxt.binance({"enableRateLimit": True})
     
     def get_top_volume_symbols(self):
-        """Dynamically fetch symbols with >$50M 24h volume"""
         try:
             tickers = self.exchange.fetch_tickers()
             filtered = []
@@ -66,20 +78,13 @@ class GoatXXEngine:
                 vol = data.get('quoteVolume', 0)
                 if vol >= Config.MIN_24H_VOLUME_USD:
                     filtered.append({'symbol': symbol, 'volume': vol})
-            
-            # Sort by volume and take top N
             filtered.sort(key=lambda x: x['volume'], reverse=True)
-            top_symbols = [x['symbol'] for x in filtered[:Config.MAX_COINS_TO_SCAN]]
-            print(f"Scanner: Found {len(top_symbols)} coins with >${Config.MIN_24H_VOLUME_USD/1e6}M volume.")
-            return top_symbols
-        except Exception as e:
-            print(f"Scanner Error: {e}")
-            return []
+            return [x['symbol'] for x in filtered[:Config.MAX_COINS_TO_SCAN]]
+        except Exception: return []
 
     def fetch_df(self, symbol, tf, limit):
         ohlcv = self.exchange.fetch_ohlcv(symbol, tf, limit=limit)
-        df = pd.DataFrame(ohlcv, columns=["t", "open", "high", "low", "close", "volume"])
-        return df
+        return pd.DataFrame(ohlcv, columns=["t", "open", "high", "low", "close", "volume"])
 
     def analyze_regime(self, df, symbol):
         close = df["close"].iloc[-1]
@@ -98,47 +103,51 @@ class GoatXXEngine:
         return "NEUTRAL"
 
     def detect_signal(self, df_ltf, trend):
-        ema50 = df_ltf["close"].ewm(span=50).mean()
-        e50 = ema50.iloc[-1]
-        c = df_ltf["close"].iloc[-1]
-        o = df_ltf["open"].iloc[-1]
+        e50 = df_ltf["close"].ewm(span=50).mean().iloc[-1]
+        c, o = df_ltf["close"].iloc[-1], df_ltf["open"].iloc[-1]
         dist = abs(c - e50) / e50 * 100
         if dist > Config.MAX_EMA_DIST_PCT: return None
-        
         vol_ma = df_ltf["volume"].rolling(20).mean().iloc[-1]
-        vol_ok = df_ltf["volume"].iloc[-1] > vol_ma * 1.2
-        
-        sig_type = None
-        if trend == "BULLISH" and c > e50:
-            if c > o and vol_ok:
-                sig_type = "PRIME" if dist < 1.0 else "BRK"
-                return {"side": "LONG", "type": sig_type}
-        if trend == "BEARISH" and c < e50:
-            if c < o and vol_ok:
-                sig_type = "PRIME" if dist < 1.0 else "BRK"
-                return {"side": "SHORT", "type": sig_type}
+        if df_ltf["volume"].iloc[-1] > vol_ma * 1.2:
+            if trend == "BULLISH" and c > e50 and c > o:
+                return {"side": "LONG", "type": "PRIME" if dist < 1.0 else "BRK"}
+            if trend == "BEARISH" and c < e50 and c < o:
+                return {"side": "SHORT", "type": "PRIME" if dist < 1.0 else "BRK"}
         return None
 
 def main():
     engine = GoatXXEngine()
     state = BotState(Config.STATE_FILE)
+    notifier = TelegramNotifier()
     symbols = engine.get_top_volume_symbols()
     
-    print(f"Bot Scan Started: {len(symbols)} pairs | {utc_now()}")
+    start_msg = f"🤖 *GoatXX Scan Started*
+Exchange: Binance
+Pairs Found: {len(symbols)}
+Interval: 5m
+Time (UTC): {utc_now().strftime('%H:%M:%S')}"
+    notifier.send_message(start_msg)
+    
+    signals_sent = 0
     for sym in symbols:
         try:
             df_ltf = engine.fetch_df(sym, Config.LTF_TIMEFRAME, Config.OHLCV_LIMIT)
             df_htf = engine.fetch_df(sym, Config.HTF_TIMEFRAME, Config.OHLCV_LIMIT)
-            regime = engine.analyze_regime(df_ltf, sym)
-            if not regime["ok"]: continue
-            
+            if not engine.analyze_regime(df_ltf, sym)["ok"]: continue
             trend = engine.get_trend(df_htf)
             sig = engine.detect_signal(df_ltf, trend)
             if sig:
-                msg = f"🚀 {sig['type']} SIGNAL: {sym} {sig['side']} | Trend: {trend}"
-                print(msg)
+                msg = f"🚀 *{sig['type']} SIGNAL: {sym}*
+Side: {sig['side']}
+Trend: {trend}
+Time: {utc_now().strftime('%H:%M:%S')}"
+                if notifier.send_message(msg):
+                    signals_sent += 1
                 state.set_last_signal_time(sym, time.time())
         except Exception: continue
+    
+    notifier.send_message(f"✅ *Scan Complete*
+Signals Sent: {signals_sent}")
     state.save()
 
 if __name__ == '__main__':
