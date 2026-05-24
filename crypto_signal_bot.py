@@ -121,11 +121,17 @@ def main():
     notifier = TelegramNotifier()
     symbols = engine.get_top_volume_symbols()
     
-    start_msg = f"🤖 *GoatXX Scan Started*
-Exchange: Binance
-Pairs Found: {len(symbols)}
-Interval: 5m
-Time (UTC): {utc_now().strftime('%H:%M:%S')}"
+    start_msg = (
+        f"🤖 *GoatXX Scan Started*
+"
+        f"Exchange: Binance
+"
+        f"Pairs Found: {len(symbols)}
+"
+        f"Interval: 5m
+"
+        f"Time (UTC): {utc_now().strftime('%H:%M:%S')}"
+    )
     notifier.send_message(start_msg)
     
     signals_sent = 0
@@ -137,10 +143,15 @@ Time (UTC): {utc_now().strftime('%H:%M:%S')}"
             trend = engine.get_trend(df_htf)
             sig = engine.detect_signal(df_ltf, trend)
             if sig:
-                msg = f"🚀 *{sig['type']} SIGNAL: {sym}*
-Side: {sig['side']}
-Trend: {trend}
-Time: {utc_now().strftime('%H:%M:%S')}"
+                msg = (
+                    f"🚀 *{sig['type']} SIGNAL: {sym}*
+"
+                    f"Side: {sig['side']}
+"
+                    f"Trend: {trend}
+"
+                    f"Time: {utc_now().strftime('%H:%M:%S')}"
+                )
                 if notifier.send_message(msg):
                     signals_sent += 1
                 state.set_last_signal_time(sym, time.time())
