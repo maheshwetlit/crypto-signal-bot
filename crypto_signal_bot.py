@@ -151,6 +151,4 @@ Signals Sent: {signals_sent}")
     state.save()
 
 if __name__ == '__main__':
-    while True:
-        main()
-        time.sleep(300)
+    main()
