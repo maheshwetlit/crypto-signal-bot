@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # GoatXX Enhanced Crypto Signal Bot
-# Features: Adaptive Regime, BRK/Prime Signal Logic, Multi-Timeframe Trend
+# Features: Dynamic Scanner ($50M+ Volume), Adaptive Regime, BRK/Prime Logic
 # Exchange: Binance | Scan: 5m
 import os
 import json
@@ -14,17 +14,21 @@ import requests
 class Config:
     TELEGRAM_BOT_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN", "")
     TELEGRAM_CHAT_ID = os.getenv("TELEGRAM_CHAT_ID", "")
-    # Monitoring Top Volume / Major pairs
-    SYMBOLS = ["BTC/USDT", "ETH/USDT", "SOL/USDT", "BNB/USDT", "DOGE/USDT"]
-    LTF_TIMEFRAME = "5m"  # Updated to 5m
-    HTF_TIMEFRAME = "1h"  # HTF adjusted for 5m entries
+    
+    # Scanner Config
+    MIN_24H_VOLUME_USD = 50_000_000
+    MAX_COINS_TO_SCAN = 60
+    QUOTE_CURRENCY = "USDT"
+    
+    LTF_TIMEFRAME = "5m"
+    HTF_TIMEFRAME = "1h"
     OHLCV_LIMIT = 500
     
     # Adaptive Logic
-    ATR_FLOOR_BTC = 0.2  # Adjusted for 5m
-    ATR_FLOOR_ALT = 0.4  # Adjusted for 5m
+    ATR_FLOOR_BTC = 0.2
+    ATR_FLOOR_ALT = 0.4
     MAX_EMA_DIST_PCT = 5.0
-    BASE_COOLDOWN = 300   # 5 mins cooldown
+    BASE_COOLDOWN = 300
     
     STATE_FILE = "bot_state.json"
 
@@ -50,9 +54,28 @@ class BotState:
 
 class GoatXXEngine:
     def __init__(self):
-        # Updated to Binance
         self.exchange = ccxt.binance({"enableRateLimit": True})
     
+    def get_top_volume_symbols(self):
+        """Dynamically fetch symbols with >$50M 24h volume"""
+        try:
+            tickers = self.exchange.fetch_tickers()
+            filtered = []
+            for symbol, data in tickers.items():
+                if not symbol.endswith(Config.QUOTE_CURRENCY): continue
+                vol = data.get('quoteVolume', 0)
+                if vol >= Config.MIN_24H_VOLUME_USD:
+                    filtered.append({'symbol': symbol, 'volume': vol})
+            
+            # Sort by volume and take top N
+            filtered.sort(key=lambda x: x['volume'], reverse=True)
+            top_symbols = [x['symbol'] for x in filtered[:Config.MAX_COINS_TO_SCAN]]
+            print(f"Scanner: Found {len(top_symbols)} coins with >${Config.MIN_24H_VOLUME_USD/1e6}M volume.")
+            return top_symbols
+        except Exception as e:
+            print(f"Scanner Error: {e}")
+            return []
+
     def fetch_df(self, symbol, tf, limit):
         ohlcv = self.exchange.fetch_ohlcv(symbol, tf, limit=limit)
         df = pd.DataFrame(ohlcv, columns=["t", "open", "high", "low", "close", "volume"])
@@ -85,7 +108,6 @@ class GoatXXEngine:
         vol_ma = df_ltf["volume"].rolling(20).mean().iloc[-1]
         vol_ok = df_ltf["volume"].iloc[-1] > vol_ma * 1.2
         
-        # BRK (Breakout/Breakdown) vs PRIME (High Quality Setup)
         sig_type = None
         if trend == "BULLISH" and c > e50:
             if c > o and vol_ok:
@@ -100,8 +122,10 @@ class GoatXXEngine:
 def main():
     engine = GoatXXEngine()
     state = BotState(Config.STATE_FILE)
-    print(f"Bot Scan Started: Binance 5m | {utc_now()}")
-    for sym in Config.SYMBOLS:
+    symbols = engine.get_top_volume_symbols()
+    
+    print(f"Bot Scan Started: {len(symbols)} pairs | {utc_now()}")
+    for sym in symbols:
         try:
             df_ltf = engine.fetch_df(sym, Config.LTF_TIMEFRAME, Config.OHLCV_LIMIT)
             df_htf = engine.fetch_df(sym, Config.HTF_TIMEFRAME, Config.OHLCV_LIMIT)
@@ -113,13 +137,11 @@ def main():
             if sig:
                 msg = f"🚀 {sig['type']} SIGNAL: {sym} {sig['side']} | Trend: {trend}"
                 print(msg)
-                # Integration for Telegram would go here
                 state.set_last_signal_time(sym, time.time())
-        except Exception as e:
-            print(f"Error scanning {sym}: {e}")
+        except Exception: continue
     state.save()
 
 if __name__ == '__main__':
     while True:
         main()
-        time.sleep(300)  # 5 minute loop
+        time.sleep(300)
