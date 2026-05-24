@@ -159,11 +159,9 @@ def format_signal_message(sig: dict) -> str:
     return msg
 
 
-def format_start_message(n_symbols: int) -> str:
-    return (
+def format_start_message(n_symbols: int, exchange_name: str = "Binance") -> str:    return (
         "\U0001f916 *GoatXX Scan Started*\n"
-        "Exchange: Binance\n"
-        "Pairs Found: " + str(n_symbols) + "\n"
+        "Exchange: " + exchange_name + "\n"        "Pairs Found: " + str(n_symbols) + "\n"
         "Interval: " + Config.LTF_TIMEFRAME
     )
 
@@ -182,8 +180,13 @@ def format_summary_message(signals_sent: int, scanned: int, elapsed: float) -> s
 # ---------------------------------------------------------------------------
 class GoatXXEngine:
     def __init__(self):
-        self.exchange = ccxt.binance({"enableRateLimit": True, "options": {"defaultType": "spot"}})
-    # --- Market universe ---------------------------------------------------
+        # Try Bybit first (no geo-restrictions), fall back to Binance
+        try:
+            self.exchange = ccxt.bybit({"enableRateLimit": True, "options": {"defaultType": "spot"}})
+            self.exchange_name = "Bybit"
+        except Exception:
+            self.exchange = ccxt.binance({"enableRateLimit": True, "options": {"defaultType": "spot"}})
+            self.exchange_name = "Binance"    # --- Market universe ---------------------------------------------------
     def get_top_volume_symbols(self) -> list:
         try:
             tickers = self.exchange.fetch_tickers()
@@ -329,12 +332,9 @@ def main():
     t_start  = time.time()
 
     symbols = engine.get_top_volume_symbols()
-    notifier.send_message(format_start_message(len(symbols)))
-
+    notifier.send_message(format_start_message(len(symbols), engine.exchange_name))
     signals_sent = 0
     scanned      = 0
-
-    for sym in symbols:
         if state.is_on_cooldown(sym):
             continue
         try:
