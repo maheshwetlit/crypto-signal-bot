@@ -97,7 +97,7 @@ class GoatXXEngine:
                 if vol >= Config.MIN_24H_VOLUME_USD:
                     filtered.append({"symbol": symbol, "volume": vol})
             filtered.sort(key=lambda x: x["volume"], reverse=True)
-            return [x["symbol"] for x in filtered[: Config.MAX_COINS_TO_SCAN]]
+            return [x["symbol"] for x in filtered[:Config.MAX_COINS_TO_SCAN]]
         except Exception:
             return []
 
@@ -113,15 +113,15 @@ class GoatXXEngine:
         tr = pd.concat(
             [
                 df["high"] - df["low"],
-                (df["high"].values - prev_close).__abs__(),
-                (df["low"].values - prev_close).__abs__(),
+                pd.Series(np.abs(df["high"].values - prev_close)),
+                pd.Series(np.abs(df["low"].values - prev_close)),
             ],
             axis=1,
         ).max(axis=1)
         atr = tr.rolling(14).mean().iloc[-1]
         atr_pct = (atr / close) * 100
         floor = Config.ATR_FLOOR_BTC if "BTC" in symbol else Config.ATR_FLOOR_ALT
-        return {"ok": atr_pct > floor, "atr_pct": atr_pct}
+        return {"ok": bool(atr_pct > floor), "atr_pct": atr_pct}
 
     def get_trend(self, df_htf):
         e50 = df_htf["close"].ewm(span=50).mean().iloc[-1]
@@ -155,12 +155,13 @@ def main():
     engine = GoatXXEngine()
     state = BotState(Config.STATE_FILE)
     notifier = TelegramNotifier()
+
     symbols = engine.get_top_volume_symbols()
 
     start_msg = (
-        "*GoatXX Scan Started*\n"
+        "\U0001f916 *GoatXX Scan Started*\n"
         "Exchange: Binance\n"
-        f"Pairs Found: {len(symbols)}\n"
+        "Pairs Found: " + str(len(symbols)) + "\n"
         "Interval: 5m"
     )
     notifier.send_message(start_msg)
@@ -168,24 +169,17 @@ def main():
     signals_sent = 0
     for sym in symbols:
         try:
-            now = time.time()
-            if now - state.get_last_signal_time(sym) < Config.BASE_COOLDOWN:
-                continue
-
             df_ltf = engine.fetch_df(sym, Config.LTF_TIMEFRAME, Config.OHLCV_LIMIT)
             df_htf = engine.fetch_df(sym, Config.HTF_TIMEFRAME, Config.OHLCV_LIMIT)
-
             if not engine.analyze_regime(df_ltf, sym)["ok"]:
                 continue
-
             trend = engine.get_trend(df_htf)
             sig = engine.detect_signal(df_ltf, trend)
-
             if sig:
                 msg = (
-                    f"*{sig['type']} SIGNAL: {sym}*\n"
-                    f"Side: {sig['side']}\n"
-                    f"Trend: {trend}"
+                    "\U0001f680 *" + sig["type"] + " SIGNAL: " + sym + "*\n"
+                    "Side: " + sig["side"] + "\n"
+                    "Trend: " + trend
                 )
                 if notifier.send_message(msg):
                     signals_sent += 1
@@ -194,7 +188,7 @@ def main():
             continue
 
     notifier.send_message(
-        f"*Scan Complete*\nSignals Sent: {signals_sent}"
+        "\u2705 *Scan Complete*\nSignals Sent: " + str(signals_sent)
     )
     state.save()
 
