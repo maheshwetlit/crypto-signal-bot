@@ -182,8 +182,7 @@ def format_summary_message(signals_sent: int, scanned: int, elapsed: float) -> s
 # ---------------------------------------------------------------------------
 class GoatXXEngine:
     def __init__(self):
-        self.exchange = ccxt.binance({"enableRateLimit": True})
-
+        self.exchange = ccxt.binance({"enableRateLimit": True, "options": {"defaultType": "spot"}})
     # --- Market universe ---------------------------------------------------
     def get_top_volume_symbols(self) -> list:
         try:
