@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 # GoatXX Enhanced Crypto Signal Bot
-# Features: Adaptive Regime, GoatXX Quality Logic, Multi-Timeframe Trend
+# Features: Adaptive Regime, BRK/Prime Signal Logic, Multi-Timeframe Trend
+# Exchange: Binance | Scan: 5m
 import os
 import json
 import time
@@ -13,16 +14,17 @@ import requests
 class Config:
     TELEGRAM_BOT_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN", "")
     TELEGRAM_CHAT_ID = os.getenv("TELEGRAM_CHAT_ID", "")
+    # Monitoring Top Volume / Major pairs
     SYMBOLS = ["BTC/USDT", "ETH/USDT", "SOL/USDT", "BNB/USDT", "DOGE/USDT"]
-    LTF_TIMEFRAME = "1h"
-    HTF_TIMEFRAME = "4h"
-    OHLCV_LIMIT = 300
+    LTF_TIMEFRAME = "5m"  # Updated to 5m
+    HTF_TIMEFRAME = "1h"  # HTF adjusted for 5m entries
+    OHLCV_LIMIT = 500
     
     # Adaptive Logic
-    ATR_FLOOR_BTC = 0.4
-    ATR_FLOOR_ALT = 0.7
-    MAX_EMA_DIST_PCT = 8.0
-    BASE_COOLDOWN = 3600
+    ATR_FLOOR_BTC = 0.2  # Adjusted for 5m
+    ATR_FLOOR_ALT = 0.4  # Adjusted for 5m
+    MAX_EMA_DIST_PCT = 5.0
+    BASE_COOLDOWN = 300   # 5 mins cooldown
     
     STATE_FILE = "bot_state.json"
 
@@ -48,7 +50,8 @@ class BotState:
 
 class GoatXXEngine:
     def __init__(self):
-        self.exchange = ccxt.kraken({"enableRateLimit": True})
+        # Updated to Binance
+        self.exchange = ccxt.binance({"enableRateLimit": True})
     
     def fetch_df(self, symbol, tf, limit):
         ohlcv = self.exchange.fetch_ohlcv(symbol, tf, limit=limit)
@@ -72,35 +75,51 @@ class GoatXXEngine:
         return "NEUTRAL"
 
     def detect_signal(self, df_ltf, trend):
-        e50 = df_ltf["close"].ewm(span=50).mean().iloc[-1]
+        ema50 = df_ltf["close"].ewm(span=50).mean()
+        e50 = ema50.iloc[-1]
         c = df_ltf["close"].iloc[-1]
+        o = df_ltf["open"].iloc[-1]
         dist = abs(c - e50) / e50 * 100
         if dist > Config.MAX_EMA_DIST_PCT: return None
         
-        # GoatXX Quality Logic (Simplified)
         vol_ma = df_ltf["volume"].rolling(20).mean().iloc[-1]
-        vol_ok = df_ltf["volume"].iloc[-1] > vol_ma * 1.1
+        vol_ok = df_ltf["volume"].iloc[-1] > vol_ma * 1.2
         
-        if trend == "BULLISH" and c > e50 and vol_ok:
-            return {"side": "LONG", "quality": 3}
-        if trend == "BEARISH" and c < e50 and vol_ok:
-            return {"side": "SHORT", "quality": 3}
+        # BRK (Breakout/Breakdown) vs PRIME (High Quality Setup)
+        sig_type = None
+        if trend == "BULLISH" and c > e50:
+            if c > o and vol_ok:
+                sig_type = "PRIME" if dist < 1.0 else "BRK"
+                return {"side": "LONG", "type": sig_type}
+        if trend == "BEARISH" and c < e50:
+            if c < o and vol_ok:
+                sig_type = "PRIME" if dist < 1.0 else "BRK"
+                return {"side": "SHORT", "type": sig_type}
         return None
 
 def main():
     engine = GoatXXEngine()
     state = BotState(Config.STATE_FILE)
+    print(f"Bot Scan Started: Binance 5m | {utc_now()}")
     for sym in Config.SYMBOLS:
-        df_ltf = engine.fetch_df(sym, Config.LTF_TIMEFRAME, Config.OHLCV_LIMIT)
-        df_htf = engine.fetch_df(sym, Config.HTF_TIMEFRAME, Config.OHLCV_LIMIT)
-        regime = engine.analyze_regime(df_ltf, sym)
-        if not regime["ok"]: continue
-        
-        trend = engine.get_trend(df_htf)
-        sig = engine.detect_signal(df_ltf, trend)
-        if sig:
-            print(f"SIGNAL: {sym} {sig['side']} Quality: {sig['quality']}")
-            state.set_last_signal_time(sym, time.time())
+        try:
+            df_ltf = engine.fetch_df(sym, Config.LTF_TIMEFRAME, Config.OHLCV_LIMIT)
+            df_htf = engine.fetch_df(sym, Config.HTF_TIMEFRAME, Config.OHLCV_LIMIT)
+            regime = engine.analyze_regime(df_ltf, sym)
+            if not regime["ok"]: continue
+            
+            trend = engine.get_trend(df_htf)
+            sig = engine.detect_signal(df_ltf, trend)
+            if sig:
+                msg = f"🚀 {sig['type']} SIGNAL: {sym} {sig['side']} | Trend: {trend}"
+                print(msg)
+                # Integration for Telegram would go here
+                state.set_last_signal_time(sym, time.time())
+        except Exception as e:
+            print(f"Error scanning {sym}: {e}")
     state.save()
 
-if __name__ == '__main__': main()
+if __name__ == '__main__':
+    while True:
+        main()
+        time.sleep(300)  # 5 minute loop
