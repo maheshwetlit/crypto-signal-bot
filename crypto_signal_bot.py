@@ -124,10 +124,9 @@ def main():
         syms = sorted([s for s, d in tickers.items() if s.endswith("/USDT") and d.get("quoteVolume", 0) >= Config.MIN_24H_VOLUME_USD], key=lambda x: tickers[x]["quoteVolume"], reverse=True)[:Config.MAX_COINS_TO_SCAN]
     except: return
     h = utc_now().hour
-    msg_start = "🤖 *GoatXX v8.9.14 Started*" + "
-" + f"Pairs: {len(syms)}" + "
-" + f"Session: {'DEAD' if _is_dead_zone(h) else 'ACTIVE'}"
-    nt.send(msg_start)
+    nt.send("🤖 *GoatXX v8.9.14 Started*
+" + f"Pairs: {len(syms)}
+" + f"Session: {'DEAD' if _is_dead_zone(h) else 'ACTIVE'}")
     if _is_dead_zone(h): return
     for s in syms:
         if state.is_on_cooldown(s): continue
@@ -136,11 +135,11 @@ def main():
             df_h = pd.DataFrame(ex.fetch_ohlcv(s, "1h", limit=100), columns=["t","open","high","low","close","volume"])
             sig = compute_goat_score(df_l, df_h, s)
             if sig:
-                m = f"🚀 *{sig['side']} SIGNAL*" + "
-" + f"Pair: `{s}`" + "
-" + f"Style: {sig['style']}" + "
-" + f"Score: {sig['eff']:.1f}" + "
-" + f"Entry: `{sig['entry']:.8f}`" + "
+                m = f"🚀 *{sig['side']} SIGNAL*
+" + f"Pair: `{s}`
+" + f"Style: {sig['style']}
+" + f"Score: {sig['eff']:.1f}
+" + f"Entry: `{sig['entry']:.8f}`
 " + f"SL: `{sig['sl']:.8f}`"
                 for i, p in enumerate(sig['tp']): m += "
 " + f"TP{i+1}: `{p:.8f}`"
