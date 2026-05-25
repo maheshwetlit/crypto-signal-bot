@@ -10,10 +10,9 @@ permissions:
 
 jobs:
   run-bot:
-    runs-on: ubuntu-latest
-        env:
-              FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
-
+          runs-on: ubuntu-latest
+      env:
+        FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
