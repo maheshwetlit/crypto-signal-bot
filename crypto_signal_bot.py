@@ -335,6 +335,7 @@ def main():
     notifier.send_message(format_start_message(len(symbols), engine.exchange_name))
     signals_sent = 0
     scanned      = 0
+    for sym in symbols:
         if state.is_on_cooldown(sym):
             continue
         try:
