@@ -36,7 +36,7 @@ class Config:
     SCORE_ENTRY_THR    = 75
     SL_ATR_MULT        = 2.0
     TP_R_MULTIPLES     = [1.5, 2.5, 4.0]
-    EXCHANGE           = "Binance"
+    EXCHANGE           = "Bybit"
     FETCH_RETRY        = 3
 
 def utc_now(): return datetime.now(timezone.utc)
@@ -152,7 +152,7 @@ def compute_goat_score(df_l, df_h, symbol):
     return {"side": side, "style": style, "entry": c, "sl": c-sl if is_l else c+sl, "tp": tp_p, "eff": eff}
 
 def main():
-    ex = ccxt.binance({"enableRateLimit": True})
+    ex = ccxt.bybit({"enableRateLimit": True})
     state = BotState(Config.STATE_FILE)
     nt = TelegramNotifier()
     nl = chr(10)
