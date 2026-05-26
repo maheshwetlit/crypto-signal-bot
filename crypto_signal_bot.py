@@ -21,7 +21,7 @@ class Config:
     OHLCV_LIMIT        = 500
     ATR_FLOOR_BTC      = 0.2
     ATR_FLOOR_ALT      = 0.4
-    MAX_EMA_DIST_PCT   = 5.0
+    MAX_EMA_DIST_PCT   = 8.0
     BASE_COOLDOWN      = 300
     STATE_FILE         = "bot_state.json"
     RSI_PERIOD         = 14
@@ -135,10 +135,10 @@ def compute_goat_score(df_l, df_h, symbol):
     ht_e50 = df_h["close"].ewm(span=50, adjust=False).mean().iloc[-1]
     ht_e200 = df_h["close"].ewm(span=200, adjust=False).mean().iloc[-1]
     ht_t = "BULLISH" if ht_c > ht_e50 > ht_e200 else ("BEARISH" if ht_c < ht_e50 < ht_e200 else "NEUTRAL")
-    if _rsi(df_h["close"]).iloc[-1] < 45.0 and c > o:
+    if _rsi(df_h["close"]).iloc[-1] < 35.0 and c > o:
         return None
-    is_l = ht_t == "BULLISH" and c > e50 and c > o and h > 0 and h > hp
-    is_s = ht_t == "BEARISH" and c < e50 and c < o and h < 0 and h < hp
+    is_l = ht_t in ("BULLISH", "NEUTRAL") and c > e50 and c > o and h > 0 and h > hp
+    is_s = ht_t in ("BEARISH", "NEUTRAL") and c < e50 and c < o and h < 0 and h < hp
     if not (is_l or is_s):
         return None
     side = "LONG" if is_l else "SHORT"
