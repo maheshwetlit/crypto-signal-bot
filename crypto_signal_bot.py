@@ -40,7 +40,7 @@ class Config:
     FETCH_RETRY        = 3
 
 def utc_now(): return datetime.now(timezone.utc)
-def _is_dead_zone(h): return 22 <= h or h < 6
+def _is_dead_zone(h): return False  # Dead zone disabled - crypto runs 24/7
 
 def _rsi(series, period=14):
     delta = series.diff()
