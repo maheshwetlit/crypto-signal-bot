@@ -13,7 +13,7 @@ import requests
 class Config:
     TELEGRAM_BOT_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN", "")
     TELEGRAM_CHAT_ID   = os.getenv("TELEGRAM_CHAT_ID", "")
-    MIN_24H_VOLUME_USD = 50_000_000
+    MIN_24H_VOLUME_USD = 5_000_000
     MAX_COINS_TO_SCAN  = 60
     QUOTE_CURRENCY     = "USDT"
     LTF_TIMEFRAME      = "5m"
@@ -33,7 +33,7 @@ class Config:
     MACD_SIGNAL        = 9
     VOL_GATE           = 1.1
     VOL_IDEAL          = 1.4
-    SCORE_ENTRY_THR    = 75
+    SCORE_ENTRY_THR    = 60
     SL_ATR_MULT        = 2.0
     TP_R_MULTIPLES     = [1.5, 2.5, 4.0]
     EXCHANGE          = "KuCoin"
