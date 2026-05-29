@@ -12,35 +12,39 @@ import requests
 # --- Config ---
 class Config:
     TELEGRAM_BOT_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN", "")
-    TELEGRAM_CHAT_ID   = os.getenv("TELEGRAM_CHAT_ID", "")
+    TELEGRAM_CHAT_ID = os.getenv("TELEGRAM_CHAT_ID", "")
     MIN_24H_VOLUME_USD = 5_000_000
-    MAX_COINS_TO_SCAN  = 60
-    QUOTE_CURRENCY     = "USDT"
-    LTF_TIMEFRAME      = "5m"
-    HTF_TIMEFRAME      = "1h"
-    OHLCV_LIMIT        = 500
-    ATR_FLOOR_BTC      = 0.2
-    ATR_FLOOR_ALT      = 0.4
-    MAX_EMA_DIST_PCT   = 8.0
-    BASE_COOLDOWN      = 300
-    STATE_FILE         = "bot_state.json"
-    RSI_PERIOD         = 14
-    RSI_LATE_THR       = 72
-    ADX_PERIOD         = 14
-    ADX_TREND_THR      = 22
-    MACD_FAST          = 12
-    MACD_SLOW          = 26
-    MACD_SIGNAL        = 9
-    VOL_GATE           = 1.1
-    VOL_IDEAL          = 1.4
-    SCORE_ENTRY_THR    = 60
-    SL_ATR_MULT        = 2.0
-    TP_R_MULTIPLES     = [1.5, 2.5, 4.0]
-    EXCHANGE          = "KuCoin"
-    FETCH_RETRY        = 3
+    MAX_COINS_TO_SCAN = 60
+    QUOTE_CURRENCY = "USDT"
+    LTF_TIMEFRAME = "5m"
+    HTF_TIMEFRAME = "1h"
+    OHLCV_LIMIT = 500
+    ATR_FLOOR_BTC = 0.2
+    ATR_FLOOR_ALT = 0.4
+    MAX_EMA_DIST_PCT = 8.0
+    BASE_COOLDOWN = 600          # ✅ FIXED: was 300 (5min) → 600 (10min)
+    NOTIFY_INTERVAL = "10m"      # ✅ FIXED: new — used in Telegram label
+    STATE_FILE = "bot_state.json"
+    RSI_PERIOD = 14
+    RSI_LATE_THR = 72
+    ADX_PERIOD = 14
+    ADX_TREND_THR = 22
+    MACD_FAST = 12
+    MACD_SLOW = 26
+    MACD_SIGNAL = 9
+    VOL_GATE = 1.1
+    VOL_IDEAL = 1.4
+    SCORE_ENTRY_THR = 60
+    SL_ATR_MULT = 2.0
+    TP_R_MULTIPLES = [1.5, 2.5, 4.0]
+    EXCHANGE = "KuCoin"
+    FETCH_RETRY = 3
 
-def utc_now(): return datetime.now(timezone.utc)
-def _is_dead_zone(h): return False  # Dead zone disabled - crypto runs 24/7
+def utc_now():
+    return datetime.now(timezone.utc)
+
+def _is_dead_zone(h):
+    return False  # Dead zone disabled - crypto runs 24/7
 
 def _rsi(series, period=14):
     delta = series.diff()
@@ -70,11 +74,14 @@ class BotState:
                     self.data = json.load(f)
             except:
                 pass
+
     def save(self):
         with open(self.path, "w") as f:
             json.dump(self.data, f)
+
     def is_on_cooldown(self, s):
         return time.time() < self.data["cooldowns"].get(s, 0)
+
     def record_signal(self, s):
         self.data["cooldowns"][s] = time.time() + Config.BASE_COOLDOWN
 
@@ -93,7 +100,7 @@ class TelegramNotifier:
                     print(f"Telegram error {r.status_code}: {r.text}")
             except Exception as e:
                 print(f"Telegram send attempt {attempt+1} failed: {e}")
-                time.sleep(2)
+            time.sleep(2)
         return False
 
 def fetch_tickers_with_retry(ex, notifier):
@@ -107,7 +114,7 @@ def fetch_tickers_with_retry(ex, notifier):
             if attempt < Config.FETCH_RETRY - 1:
                 time.sleep(5)
             else:
-                notifier.send(f"\u26a0\ufe0f *GoatXX fetch_tickers FAILED*\nError: `{str(e)[:200]}`\nBot stopped.")
+                notifier.send(f"\\u26a0\\ufe0f *GoatXX fetch_tickers FAILED*\nError: `{str(e)[:200]}`\nBot stopped.")
                 return None
 
 def compute_goat_score(df_l, df_h, symbol):
@@ -157,7 +164,6 @@ def main():
     nt = TelegramNotifier()
     nl = chr(10)
 
-    # Fetch tickers with retry + error notification
     tickers = fetch_tickers_with_retry(ex, nt)
     if tickers is None:
         print("ERROR: Could not fetch tickers after retries. Exiting.")
@@ -176,7 +182,7 @@ def main():
         f"\U0001f916 *GoatXX Scan Started*{nl}"
         f"Exchange: {Config.EXCHANGE}{nl}"
         f"Pairs Found: {len(syms)}{nl}"
-        f"Interval: {Config.LTF_TIMEFRAME}{nl}"
+        f"Interval: {Config.NOTIFY_INTERVAL}{nl}"  # ✅ FIXED: was Config.LTF_TIMEFRAME → always showed "5m"
         f"Session: {session}"
     )
 
@@ -185,11 +191,12 @@ def main():
         return
 
     if len(syms) == 0:
-        nt.send(f"\u26a0\ufe0f No pairs found above volume threshold! Check exchange connectivity.")
+        nt.send(f"\\u26a0\\ufe0f No pairs found above volume threshold! Check exchange connectivity.")
         return
 
     signals_sent = 0
     scan_errors = 0
+
     for s in syms:
         if state.is_on_cooldown(s):
             continue
@@ -218,7 +225,7 @@ def main():
 
     state.save()
     nt.send(
-        f"\u2705 *Scan Complete*{nl}"
+        f"\\u2705 *Scan Complete*{nl}"
         f"Scanned: {len(syms)} pairs{nl}"
         f"Signals Sent: {signals_sent}{nl}"
         f"Errors: {scan_errors}{nl}"
