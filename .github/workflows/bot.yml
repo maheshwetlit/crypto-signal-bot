@@ -2,10 +2,14 @@ name: Crypto Signal Bot
 
 on:
   schedule:
-    - cron: '*/5 * * * *'  # Every 5 minutes (GitHub may throttle - use cron-job.org as backup)
+    - cron: '*/10 * * * *'  # ✅ FIXED: was '*/5' → now '*/10' (every 10 minutes)
+                              # NOTE: GitHub may throttle on free repos — use cron-job.org as backup:
+                              # POST https://api.github.com/repos/maheshwetlit/crypto-signal-bot/dispatches
+                              # Header: Authorization: Bearer <YOUR_GITHUB_PAT>
+                              # Body: {"event_type":"run-bot"}
   workflow_dispatch:
   repository_dispatch:
-    types: [run-bot]  # Triggered by external cron via GitHub API
+    types: [run-bot]
 
 permissions:
   contents: read
@@ -15,7 +19,6 @@ jobs:
     runs-on: ubuntu-latest
     env:
       FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
-
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
