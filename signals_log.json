@@ -1,0 +1,27 @@
+[
+  {
+    "id": "SIG-0001",
+    "time": "2026-06-02T17:00:00+00:00",
+    "pair": "SUIUSDT",
+    "exchange": "KuCoin",
+    "direction": "SHORT",
+    "style": "MOMENTUM",
+    "score": 120.0,
+    "adx": 41.3,
+    "rsi": 32.7,
+    "volume_x": 2.4,
+    "htf_trend": "BEARISH",
+    "entry": 0.81280000,
+    "sl": 0.82742857,
+    "tp1": 0.79085714,
+    "tp2": 0.77622857,
+    "tp3": 0.75428571,
+    "tp_main": 0.75428571,
+    "capital": 1000,
+    "status": "OPEN",
+    "exit_price": null,
+    "pnl_usd": null,
+    "result": null,
+    "closed_at": null
+  }
+]
