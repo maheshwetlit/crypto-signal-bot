@@ -1,13 +1,14 @@
 #!/usr/bin/env python3
 """
 hermes_validator.py
-Hermes Signal Validator - checks OPEN signals against Binance live price
+Hermes Signal Validator - checks OPEN signals against live price on the correct exchange
 Run by Hermes cron every 5 minutes
+Supports: Binance, KuCoin
 """
-
 import json
 import os
 import requests
+import time
 from datetime import datetime, timezone
 
 # --- CONFIG ---
@@ -16,18 +17,72 @@ CAPITAL_PER_TRADE = 1000.0  # USD per signal
 TELEGRAM_BOT_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN", "")
 TELEGRAM_CHAT_ID = os.getenv("TELEGRAM_CHAT_ID", "")
 
+# Exchange API endpoints mapping
+# Binance uses SUIUSDT format, KuCoin uses SUI-USDT format
+EXCHANGE_APIS = {
+    "Binance": {
+        "url": "https://api.binance.com/api/v3/ticker/price?symbol={symbol}",
+        "price_key": "price",
+        "symbol_format": "{symbol}"  # e.g., SUIUSDT
+    },
+    "KuCoin": {
+        "url": "https://api.kucoin.com/api/v1/market/orderbook/level1?symbol={symbol}",
+        "price_key": "price",
+        "symbol_format": "{symbol}"  # e.g., SUI-USDT
+    },
+    "Bybit": {
+        "url": "https://api.bybit.com/v5/market/tickers?category=linear&symbol={symbol}",
+        "price_key": "lastPrice",
+        "symbol_format": "{symbol}"  # e.g., SUIUSDT
+    }
+}
 
-def get_binance_price(symbol: str) -> float:
-    """Fetch current price from Binance public API."""
-    try:
-        url = f"https://api.binance.com/api/v3/ticker/price?symbol={symbol}"
-        r = requests.get(url, timeout=5)
-        r.raise_for_status()
-        return float(r.json()["price"])
-    except Exception as e:
-        print(f"[ERROR] Binance price fetch failed for {symbol}: {e}")
-        return None
+def get_exchange_price(symbol: str, exchange: str) -> float:
+    """Fetch current price from the correct exchange based on signal metadata."""
+    if exchange not in EXCHANGE_APIS:
+        print(f"[WARN] Unknown exchange: {exchange}. Defaulting to Binance.")
+        exchange = "Binance"
 
+    api_info = EXCHANGE_APIS[exchange]
+    # Format symbol based on exchange requirements
+    formatted_symbol = api_info["symbol_format"].format(symbol=symbol)
+
+    # For KuCoin, the pair in signals_log is like "SUIUSDT" but needs "SUI-USDT"
+    if exchange == "KuCoin" and "/" not in symbol and "-" not in symbol:
+        # Convert SUIUSDT -> SUI-USDT
+        # Try to detect quote currency
+        for quote in ["USDT", "BTC", "ETH", "USDC"]:
+            if symbol.endswith(quote):
+                base = symbol[:-len(quote)]
+                formatted_symbol = f"{base}-{quote}"
+                break
+
+    for attempt in range(3):
+        try:
+            url = api_info["url"].format(symbol=formatted_symbol)
+            headers = {}
+            if exchange == "KuCoin":
+                headers["Content-Type"] = "application/json"
+            r = requests.get(url, headers=headers, timeout=8)
+            r.raise_for_status()
+            data = r.json()
+
+            # Handle nested response structures
+            if exchange == "KuCoin" and "data" in data:
+                data = data["data"]
+            elif exchange == "Bybit" and "data" in data and "list" in data["data"]:
+                data = data["data"]["list"][0] if data["data"]["list"] else {}
+
+            price = float(data.get(api_info["price_key"], 0))
+            if price > 0:
+                return price
+        except Exception as e:
+            print(f"[ERROR] {exchange} price fetch attempt {attempt+1}/3 failed for {symbol}: {e}")
+            if attempt < 2:
+                time.sleep(1)
+
+    print(f"[ERROR] All attempts failed for {symbol} on {exchange}")
+    return None
 
 def send_telegram(message: str):
     """Send message to Telegram."""
@@ -44,9 +99,8 @@ def send_telegram(message: str):
     except Exception as e:
         print(f"[ERROR] Telegram send failed: {e}")
 
-
 def validate_signals():
-    """Main validator - reads signals_log.json, checks OPEN signals, updates results."""
+    """Main validator - reads signals_log.json, checks OPEN signals against correct exchange, updates results."""
     if not os.path.exists(SIGNAL_LOG_FILE):
         print(f"[INFO] No signal log found at {SIGNAL_LOG_FILE}")
         return
@@ -65,6 +119,7 @@ def validate_signals():
         direction = sig.get("side", sig.get("direction", "")).upper()
         entry = float(sig.get("entry", 0))
         sl = float(sig.get("sl", 0))
+        exchange = sig.get("exchange", "Binance")  # Default to Binance for backward compatibility
 
         # Support tp1/tp2/tp3 or single tp
         tp = float(
@@ -77,11 +132,13 @@ def validate_signals():
         if not symbol or not entry or not tp or not sl:
             continue
 
-        current_price = get_binance_price(symbol)
+        current_price = get_exchange_price(symbol, exchange)
         if current_price is None:
             continue
 
         result = None
+        outcome = None
+
         # Validate LONG
         if direction == "LONG":
             if current_price >= tp:
@@ -90,7 +147,6 @@ def validate_signals():
             elif current_price <= sl:
                 result = "LOSS"
                 outcome = "SL HIT"
-
         # Validate SHORT
         elif direction == "SHORT":
             if current_price <= tp:
@@ -106,7 +162,6 @@ def validate_signals():
                 pnl_pct = (current_price - entry) / entry * 100
             else:
                 pnl_pct = (entry - current_price) / entry * 100
-
             pnl_usd = round(CAPITAL_PER_TRADE * pnl_pct / 100, 2)
             pnl_pct = round(pnl_pct, 2)
 
@@ -117,6 +172,7 @@ def validate_signals():
             sig["exit_time"] = now
             sig["pnl_usd"] = pnl_usd
             sig["pnl_pct"] = pnl_pct
+            sig["closed_at"] = now
             updated = True
 
             # Send Telegram alert
@@ -129,14 +185,17 @@ def validate_signals():
 
             msg = (
                 f"{emoji} <b>SIGNAL {result}</b>\n"
-                f"Pair: <b>{symbol}</b> | {direction}\n"
+                f"Exchange: <b>{exchange}</b> | Pair: <b>{symbol}</b> | {direction}\n"
                 f"Entry: {entry} | Exit: {current_price}\n"
                 f"Result: {outcome}\n"
                 f"P&L: {pnl_str} (@${int(CAPITAL_PER_TRADE)} capital)\n"
                 f"Time: {now[:16].replace('T', ' ')} UTC"
             )
             send_telegram(msg)
-            print(f"[{result}] {symbol} {direction} | {outcome} | PnL: {pnl_str}")
+            print(f"[{result}] {exchange} | {symbol} {direction} | {outcome} | PnL: {pnl_str}")
+        else:
+            # Log open signals for debugging
+            print(f"[OPEN] {exchange} | {symbol} {direction} | Entry: {entry} | SL: {sl} | TP: {tp} | Current: {current_price}")
 
     if updated:
         with open(SIGNAL_LOG_FILE, "w") as f:
@@ -144,7 +203,6 @@ def validate_signals():
         print(f"[INFO] signals_log.json updated.")
     else:
         print(f"[INFO] No signals closed this run.")
-
 
 if __name__ == "__main__":
     validate_signals()
