@@ -19,14 +19,14 @@ class Config:
     LTF_TIMEFRAME = "5m"
     HTF_TIMEFRAME = "1h"
     OHLCV_LIMIT = 500
-    # FIX 1: Relaxed ATR floors — 0.4% for alts was killing all low-vol setups in ranging markets
     ATR_FLOOR_BTC = 0.10
     ATR_FLOOR_ALT = 0.15
-    # FIX 2: Relaxed EMA distance — 8% was too tight for trending breakouts
     MAX_EMA_DIST_PCT = 12.0
     BASE_COOLDOWN = 600
     NOTIFY_INTERVAL = "10m"
     STATE_FILE = "bot_state.json"
+    # ✅ NEW — signal log file path
+    SIGNAL_LOG_FILE = "signals_log.json"
     RSI_PERIOD = 14
     RSI_LATE_THR = 72
     ADX_PERIOD = 14
@@ -41,12 +41,13 @@ class Config:
     TP_R_MULTIPLES = [1.5, 2.5, 4.0]
     EXCHANGE = "KuCoin"
     FETCH_RETRY = 3
+    CAPITAL_PER_SIGNAL = 1000.0      # ✅ NEW — $1000 per signal for P&L tracking
 
 def utc_now():
     return datetime.now(timezone.utc)
 
 def _is_dead_zone(h):
-    return False  # Crypto runs 24/7
+    return False
 
 def _rsi(series, period=14):
     delta = series.diff()
@@ -71,7 +72,6 @@ def _atr(df, p=14):
     return tr.rolling(p).mean()
 
 def _adx(df, p=14):
-    """Proper ADX calculation — was using a broken proxy before."""
     high, low, close = df["high"], df["low"], df["close"]
     tr = pd.concat([
         high - low,
@@ -79,17 +79,61 @@ def _adx(df, p=14):
         abs(low - close.shift(1))
     ], axis=1).max(axis=1)
     atr = tr.ewm(alpha=1/p, adjust=False).mean()
-
     dm_plus  = high.diff()
     dm_minus = -low.diff()
     dm_plus  = dm_plus.where((dm_plus > dm_minus) & (dm_plus > 0), 0)
     dm_minus = dm_minus.where((dm_minus > dm_plus) & (dm_minus > 0), 0)
-
     di_plus  = 100 * dm_plus.ewm(alpha=1/p, adjust=False).mean() / atr.replace(0, np.nan)
     di_minus = 100 * dm_minus.ewm(alpha=1/p, adjust=False).mean() / atr.replace(0, np.nan)
     dx       = 100 * abs(di_plus - di_minus) / (di_plus + di_minus).replace(0, np.nan)
     adx      = dx.ewm(alpha=1/p, adjust=False).mean()
     return adx
+
+
+# ✅ NEW FUNCTION — logs every signal to signals_log.json for Hermes to track
+def log_signal(symbol, sig):
+    """Write signal to JSON log. Called once per signal before Telegram send."""
+    log = []
+    if os.path.exists(Config.SIGNAL_LOG_FILE):
+        try:
+            with open(Config.SIGNAL_LOG_FILE, "r") as f:
+                log = json.load(f)
+        except Exception:
+            log = []
+
+    entry = {
+        "id":         f"SIG-{len(log)+1:04d}",
+        "time":       utc_now().isoformat(),
+        "pair":       symbol,
+        "exchange":   Config.EXCHANGE,
+        "direction":  sig["side"],        # LONG or SHORT
+        "style":      sig["style"],       # PRIME / BRK / MOMENTUM
+        "score":      sig["eff"],
+        "adx":        sig["adx"],
+        "rsi":        sig["rsi"],
+        "volume_x":   sig["rv"],
+        "htf_trend":  sig["htf"],
+        "entry":      sig["entry"],
+        "sl":         sig["sl"],
+        "tp1":        sig["tp"][0],
+        "tp2":        sig["tp"][1] if len(sig["tp"]) > 1 else None,
+        "tp3":        sig["tp"][2] if len(sig["tp"]) > 2 else None,
+        "tp_main":    sig["tp"][-1],      # Highest TP for validation
+        "capital":    Config.CAPITAL_PER_SIGNAL,
+        "status":     "OPEN",             # Hermes updates this to WIN/LOSS
+        "exit_price": None,
+        "pnl_usd":    None,
+        "result":     None,
+        "closed_at":  None
+    }
+    log.append(entry)
+
+    with open(Config.SIGNAL_LOG_FILE, "w") as f:
+        json.dump(log, f, indent=2)
+
+    print(f"[LOG] {entry['id']} {symbol} {sig['side']} logged to {Config.SIGNAL_LOG_FILE}")
+    return entry["id"]
+
 
 class BotState:
     def __init__(self, path):
@@ -111,6 +155,9 @@ class BotState:
 
     def record_signal(self, s):
         self.data["cooldowns"][s] = time.time() + Config.BASE_COOLDOWN
+        # ✅ NOTE: log_signal() is called from main() before this,
+        #          so the full sig dict is available there (not here)
+
 
 class TelegramNotifier:
     def send(self, msg):
@@ -125,8 +172,6 @@ class TelegramNotifier:
                     json={
                         "chat_id": Config.TELEGRAM_CHAT_ID,
                         "text": msg,
-                        # FIX 3: Switch to HTML parse mode — MarkdownV2 needs heavy escaping.
-                        # "Markdown" v1 silently drops \uXXXX unicode escapes sent as literals.
                         "parse_mode": "HTML"
                     },
                     timeout=15
@@ -156,13 +201,6 @@ def fetch_tickers_with_retry(ex, notifier):
                 return None
 
 def compute_goat_score(df_l, df_h, symbol):
-    """
-    FIX 4: Rewritten scoring. Previously:
-      - score was always the same hardcoded expression (~72.9) regardless of data
-      - RSI HTF filter was inverted (killed bounces instead of protecting them)
-      - ADX was computed as abs(diff(14)).rolling(14).mean() / atr — not real ADX
-      - EMA distance and ATR floors were too aggressive for ranging crypto markets
-    """
     if len(df_l) < 50 or len(df_h) < 50:
         return None
 
@@ -170,38 +208,31 @@ def compute_goat_score(df_l, df_h, symbol):
     o   = df_l["open"].iloc[-1]
     e50 = df_l["close"].ewm(span=50, adjust=False).mean().iloc[-1]
 
-    # EMA distance filter — relaxed to 12%
     dist = abs(c - e50) / e50 * 100
     if dist > Config.MAX_EMA_DIST_PCT:
         return None
 
-    # ATR filter — relaxed floors
     atr_v = _atr(df_l).iloc[-1]
     atr_p = (atr_v / c) * 100
     floor = Config.ATR_FLOOR_BTC if "BTC" in symbol else Config.ATR_FLOOR_ALT
     if atr_p < floor:
         return None
 
-    # Volume gate
     v_ma = df_l["volume"].rolling(20).mean().iloc[-1]
     rv   = df_l["volume"].iloc[-1] / v_ma if v_ma > 0 else 0
     if rv < Config.VOL_GATE:
         return None
 
-    # RSI late-stage filter (both short and standard RSI must be hot)
     rsi_val  = _rsi(df_l["close"]).iloc[-1]
     rsi7_val = _rsi(df_l["close"], 7).iloc[-1]
     if rsi_val >= Config.RSI_LATE_THR and rsi7_val >= Config.RSI_LATE_THR:
         return None
 
-    # MACD
     _, _, hist = _macd(df_l["close"])
     h, hp = hist.iloc[-1], hist.iloc[-2]
 
-    # Real ADX
     adx_val = _adx(df_l).iloc[-1]
 
-    # HTF context
     ht_c   = df_h["close"].iloc[-1]
     ht_e50 = df_h["close"].ewm(span=50, adjust=False).mean().iloc[-1]
     ht_e200= df_h["close"].ewm(span=200, adjust=False).mean().iloc[-1]
@@ -213,30 +244,22 @@ def compute_goat_score(df_l, df_h, symbol):
         "NEUTRAL"
     )
 
-    # FIX 5: Inverted HTF RSI filter corrected.
-    # Old code: `if _rsi(df_h["close"]).iloc[-1] < 35 and c > o: return None`
-    # This killed bullish bounces from oversold — the most reliable reversal setup.
-    # New: only block if HTF RSI is overbought (>75) on a long entry, or oversold (<25) on short.
     is_long  = ht_t in ("BULLISH", "NEUTRAL") and c > e50 and c > o and h > 0 and h > hp
     is_short = ht_t in ("BEARISH", "NEUTRAL") and c < e50 and c < o and h < 0 and h < hp
 
     if is_long  and htf_rsi > 75:
-        return None  # 1H overbought on a long — skip
+        return None
     if is_short and htf_rsi < 25:
-        return None  # 1H oversold on a short — skip
+        return None
 
     if not (is_long or is_short):
         return None
 
     side  = "LONG" if is_long else "SHORT"
-
-    # FIX 6: Real score built from actual indicator values, not hardcoded constants
     score = 50.0
 
-    # Trend alignment (25 pts)
     score += 25.0 if ht_t == ("BULLISH" if is_long else "BEARISH") else 10.0
 
-    # Momentum (20 pts)
     macd_bull = h > 0 and h > hp
     macd_bear = h < 0 and h < hp
     if (is_long and macd_bull) or (is_short and macd_bear):
@@ -244,31 +267,26 @@ def compute_goat_score(df_l, df_h, symbol):
     elif (is_long and h > 0) or (is_short and h < 0):
         score += 8.0
 
-    # RSI zone (15 pts)
     if is_long  and 45 <= rsi_val <= 65:
         score += 15.0
     elif is_short and 35 <= rsi_val <= 55:
         score += 15.0
     elif is_long  and rsi_val < 45:
-        score += 8.0   # oversold bounce bonus
+        score += 8.0
 
-    # Volume (15 pts)
     if rv >= Config.VOL_IDEAL:
         score += 15.0
     elif rv >= Config.VOL_GATE:
         score += 7.0
 
-    # ADX trend strength (10 pts)
     if adx_val >= 30:
         score += 10.0
     elif adx_val >= Config.ADX_TREND_THR:
         score += 5.0
 
-    # EMA proximity bonus (5 pts — price near EMA is clean entry)
     if dist < 2.0:
         score += 5.0
 
-    # Effective score with timing penalties
     eff = score
     if rv   < Config.VOL_IDEAL:
         eff -= 8.0
@@ -280,7 +298,6 @@ def compute_goat_score(df_l, df_h, symbol):
     if eff < Config.SCORE_ENTRY_THR:
         return None
 
-    # Signal style
     brkout_hi = df_l["high"].rolling(50).max().iloc[-2] if len(df_l) >= 52 else None
     if dist < 1.5:
         style = "PRIME"
@@ -289,7 +306,6 @@ def compute_goat_score(df_l, df_h, symbol):
     else:
         style = "MOMENTUM"
 
-    # SL / TP
     sl_dist = atr_v * Config.SL_ATR_MULT
     sl_price = (c - sl_dist) if is_long else (c + sl_dist)
     tp_prices = [
@@ -333,8 +349,6 @@ def main():
     h       = utc_now().hour
     session = "DEAD" if _is_dead_zone(h) else "ACTIVE"
 
-    # FIX 3: Use real Unicode characters — not escaped \uXXXX strings.
-    # In Python source files, emoji are first-class string characters.
     nt.send(
         f"🤖 <b>GoatXX Scan Started</b>{nl}"
         f"Exchange: {Config.EXCHANGE}{nl}"
@@ -369,6 +383,9 @@ def main():
 
             sig = compute_goat_score(df_l, df_h, s)
             if sig:
+                # ✅ NEW — log to JSON BEFORE sending to Telegram
+                log_signal(s, sig)
+
                 m = (
                     f"🚀 <b>{sig['side']} SIGNAL</b>{nl}"
                     f"Pair: <code>{s}</code>{nl}"
