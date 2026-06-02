@@ -1,0 +1,44 @@
+name: Hermes Signal Validator
+
+on:
+  schedule:
+    # Every 5 min via staggered triggers (GitHub free tier)
+    - cron: '0,5,10,15,20,25,30,35,40,45,50,55 * * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  validate-signals:
+    runs-on: ubuntu-latest
+    env:
+      TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+      TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          persist-credentials: true
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+
+      - name: Install dependencies
+        run: pip install requests
+
+      - name: Run Hermes Validator
+        run: python hermes_validator.py
+
+      - name: Commit updated signals_log.json
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git pull --rebase origin main
+          git add signals_log.json || true
+          git diff --staged --quiet || git commit -m "auto: update signals_log.json [validator]"
+          git push || true
