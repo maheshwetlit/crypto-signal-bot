@@ -1,5 +1,4 @@
 name: Hermes Signal Validator
-
 on:
   schedule:
     # Every 5 min via staggered triggers (GitHub free tier)
@@ -13,27 +12,22 @@ jobs:
   validate-signals:
     runs-on: ubuntu-latest
     env:
-      TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
-      TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
-
+      HERMESBOT: ${{ secrets.HERMESCRYPTOTRADINGBOT }}
+      HERMES_CHAT_ID: ${{ secrets.HERMES_CHAT_ID }}
     steps:
       - name: Checkout code
         uses: actions/checkout@v5
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           persist-credentials: true
-
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
           python-version: '3.10'
-
       - name: Install dependencies
         run: pip install requests
-
       - name: Run Hermes Validator
         run: python hermes_validator.py
-
       - name: Commit updated signals_log.json
         run: |
           git config --local user.email "action@github.com"
