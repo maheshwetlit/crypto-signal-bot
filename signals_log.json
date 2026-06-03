@@ -650,5 +650,30 @@
     "pnl_usd": null,
     "result": null,
     "closed_at": null
+  },
+  {
+    "id": "SIG-0027",
+    "time": "2026-06-03T20:45:56.860965+00:00",
+    "pair": "AVAX/USDT",
+    "exchange": "KuCoin",
+    "direction": "SHORT",
+    "style": "MOMENTUM",
+    "score": 104.0,
+    "adx": 26.4,
+    "rsi": 33.4,
+    "volume_x": 1.33,
+    "htf_trend": "BEARISH",
+    "entry": 7.985,
+    "sl": 8.062142857142856,
+    "tp1": 7.8692857142857155,
+    "tp2": 7.79214285714286,
+    "tp3": 7.676428571428575,
+    "tp_main": 7.676428571428575,
+    "capital": 1000.0,
+    "status": "OPEN",
+    "exit_price": null,
+    "pnl_usd": null,
+    "result": null,
+    "closed_at": null
   }
 ]
