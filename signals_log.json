@@ -125,5 +125,30 @@
     "pnl_usd": null,
     "result": null,
     "closed_at": null
+  },
+  {
+    "id": "SIG-0006",
+    "time": "2026-06-03T14:06:02.496277+00:00",
+    "pair": "ADA/USDT",
+    "exchange": "KuCoin",
+    "direction": "SHORT",
+    "style": "PRIME",
+    "score": 106.0,
+    "adx": 14.0,
+    "rsi": 43.9,
+    "volume_x": 1.15,
+    "htf_trend": "BEARISH",
+    "entry": 0.2149,
+    "sl": 0.21627142857142856,
+    "tp1": 0.21284285714285717,
+    "tp2": 0.21147142857142864,
+    "tp3": 0.2094142857142858,
+    "tp_main": 0.2094142857142858,
+    "capital": 1000.0,
+    "status": "OPEN",
+    "exit_price": null,
+    "pnl_usd": null,
+    "result": null,
+    "closed_at": null
   }
 ]
