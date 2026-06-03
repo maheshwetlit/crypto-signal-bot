@@ -11,17 +11,19 @@
     "rsi": 32.7,
     "volume_x": 2.4,
     "htf_trend": "BEARISH",
-    "entry": 0.81280000,
+    "entry": 0.8128,
     "sl": 0.82742857,
     "tp1": 0.79085714,
     "tp2": 0.77622857,
     "tp3": 0.75428571,
     "tp_main": 0.75428571,
     "capital": 1000,
-    "status": "OPEN",
-    "exit_price": null,
-    "pnl_usd": null,
-    "result": null,
-    "closed_at": null
+    "status": "LOSS",
+    "exit_price": 0.8379,
+    "pnl_usd": -30.88,
+    "result": "SL HIT",
+    "closed_at": "2026-06-03T11:30:12.417643+00:00",
+    "exit_time": "2026-06-03T11:30:12.417643+00:00",
+    "pnl_pct": -3.09
   }
 ]
