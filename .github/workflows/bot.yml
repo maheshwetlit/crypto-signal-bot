@@ -4,7 +4,7 @@ on:
     # Multiple staggered triggers - GitHub throttles single */10 on free repos
     # These fire at :00, :10, :20, :30, :40, :50 of every hour
     - cron: '0,10,20,30,40,50 * * * *'
-  workflow_dispatch
+  workflow_dispatch:
   repository_dispatch:
     types: [run-bot]
 permissions:
