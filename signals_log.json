@@ -25,5 +25,30 @@
     "closed_at": "2026-06-03T11:30:12.417643+00:00",
     "exit_time": "2026-06-03T11:30:12.417643+00:00",
     "pnl_pct": -3.09
+  },
+  {
+    "id": "SIG-0002",
+    "time": "2026-06-03T13:16:01.055931+00:00",
+    "pair": "NEX/USDT",
+    "exchange": "KuCoin",
+    "direction": "SHORT",
+    "style": "PRIME",
+    "score": 135.0,
+    "adx": 24.7,
+    "rsi": 41.6,
+    "volume_x": 7.28,
+    "htf_trend": "BEARISH",
+    "entry": 3.279e-06,
+    "sl": 3.3074285714285714e-06,
+    "tp1": 3.2363571428571425e-06,
+    "tp2": 3.2079285714285714e-06,
+    "tp3": 3.165285714285714e-06,
+    "tp_main": 3.165285714285714e-06,
+    "capital": 1000.0,
+    "status": "OPEN",
+    "exit_price": null,
+    "pnl_usd": null,
+    "result": null,
+    "closed_at": null
   }
 ]
