@@ -375,5 +375,30 @@
     "pnl_usd": null,
     "result": null,
     "closed_at": null
+  },
+  {
+    "id": "SIG-0016",
+    "time": "2026-06-03T17:40:48.596917+00:00",
+    "pair": "ZEC/USDT",
+    "exchange": "KuCoin",
+    "direction": "LONG",
+    "style": "PRIME",
+    "score": 140.0,
+    "adx": 38.2,
+    "rsi": 57.4,
+    "volume_x": 1.49,
+    "htf_trend": "BULLISH",
+    "entry": 611.0,
+    "sl": 600.3084285714286,
+    "tp1": 627.0373571428571,
+    "tp2": 637.7289285714286,
+    "tp3": 653.7662857142857,
+    "tp_main": 653.7662857142857,
+    "capital": 1000.0,
+    "status": "OPEN",
+    "exit_price": null,
+    "pnl_usd": null,
+    "result": null,
+    "closed_at": null
   }
 ]
