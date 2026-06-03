@@ -4,7 +4,6 @@ hermes_daily_report.py
 Hermes Daily Signal Report - sends yesterday's performance to Telegram
 Run by Hermes cron every day at 08:00 Helsinki time
 """
-
 import json
 import os
 import requests
@@ -16,7 +15,6 @@ SIGNAL_LOG_FILE = "signals_log.json"
 CAPITAL_PER_TRADE = 1000.0
 TELEGRAM_BOT_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN", "")
 TELEGRAM_CHAT_ID = os.getenv("TELEGRAM_CHAT_ID", "")
-
 
 def send_telegram(message: str):
     if not TELEGRAM_BOT_TOKEN or not TELEGRAM_CHAT_ID:
@@ -32,12 +30,15 @@ def send_telegram(message: str):
     except Exception as e:
         print(f"[ERROR] Telegram: {e}")
 
+def get_pnl(s):
+    """Safely extract pnl_usd from a signal, handling None values."""
+    val = s.get("pnl_usd")
+    return 0.0 if val is None else float(val)
 
 def generate_daily_report():
     if not os.path.exists(SIGNAL_LOG_FILE):
         send_telegram("No signals_log.json found. Bot may not have fired any signals yet.")
         return
-
     with open(SIGNAL_LOG_FILE, "r") as f:
         all_signals = json.load(f)
 
@@ -72,13 +73,12 @@ def generate_daily_report():
     closed = win_count + loss_count
 
     win_rate = round(win_count / closed * 100, 1) if closed > 0 else 0.0
-
-    total_pnl = sum(float(s.get("pnl_usd", 0)) for s in yesterday_signals if s.get("status") in ["WIN", "LOSS"])
+    total_pnl = sum(get_pnl(s) for s in yesterday_signals if s.get("status") in ["WIN", "LOSS"])
     total_pnl = round(total_pnl, 2)
 
     # Profit factor
-    gross_win = sum(float(s.get("pnl_usd", 0)) for s in wins if float(s.get("pnl_usd", 0)) > 0)
-    gross_loss = abs(sum(float(s.get("pnl_usd", 0)) for s in losses if float(s.get("pnl_usd", 0)) < 0))
+    gross_win = sum(get_pnl(s) for s in wins if get_pnl(s) > 0)
+    gross_loss = abs(sum(get_pnl(s) for s in losses if get_pnl(s) < 0))
     profit_factor = round(gross_win / gross_loss, 2) if gross_loss > 0 else 0.0
 
     # Best / Worst pair
@@ -86,7 +86,7 @@ def generate_daily_report():
     for s in yesterday_signals:
         pair = s.get("pair", "UNKNOWN")
         status = s.get("status", "OPEN")
-        pnl = float(s.get("pnl_usd", 0))
+        pnl = get_pnl(s)
         if status == "WIN":
             pair_stats[pair]["wins"] += 1
         elif status == "LOSS":
@@ -114,7 +114,7 @@ def generate_daily_report():
         f"📅 {yesterday} (Helsinki time)\n"
         f"━━━━━━━━━━━━━━━━━━━━\n"
         f"📡 Total Signals: <b>{total}</b>\n"
-        f"✅ Wins: <b>{win_count}</b>  ❌ Losses: <b>{loss_count}</b>  ⏳ Open: <b>{open_count}</b>\n"
+        f"✅ Wins: <b>{win_count}</b> ❌ Losses: <b>{loss_count}</b> ⏳ Open: <b>{open_count}</b>\n"
         f"🎯 Win Rate: <b>{win_rate}%</b> ({closed} closed)\n"
         f"{pnl_emoji} Net P&L: <b>{pnl_sign}${total_pnl}</b> (@$1,000/signal)\n"
         f"💹 Profit Factor: <b>{profit_factor}</b>\n"
@@ -124,10 +124,8 @@ def generate_daily_report():
         f"━━━━━━━━━━━━━━━━━━━━\n"
         f"🔍 Report generated: {today} 08:00 Helsinki"
     )
-
     send_telegram(report)
     print(report)
-
 
 if __name__ == "__main__":
     generate_daily_report()
