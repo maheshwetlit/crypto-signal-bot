@@ -30,10 +30,10 @@ jobs:
           pip install -r requirements.txt
       - name: Run bot
         env:
-          TELEGRAM_BOT_TOKEN: ${{ secrets.HERMESBOT }}
-          TELEGRAM_CHAT_ID: ${{ secrets.HERMES_CHAT_ID }}
-          HERMES_BOT_TOKEN: ${{ secrets.HERMESBOT }}
-          HERMES_CHAT_ID: ${{ secrets.HERMES_CHAT_ID }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.HERMESCRYPTOTRADINGBOT }}
+          TELEGRAM_CHAT_ID: ${{ secrets.HERMES_TELEGRAM_CHAT_ID }}
+          HERMES_BOT_TOKEN: ${{ secrets.HERMESCRYPTOTRADINGBOT }}
+          HERMES_TELEGRAM_CHAT_ID: ${{ secrets.HERMES_TELEGRAM_CHAT_ID }}
         run: python crypto_signal_bot.py
       - name: Commit signals log
         run: |
@@ -62,7 +62,7 @@ jobs:
             COLOR="red"
           fi
           curl -s -X POST https://api.telegram.org/bot${{ secrets.HERMESCRYPTOTRADINGBOT }}/sendMessage \
-            -d chat_id=${{ secrets.HERMES_CHAT_ID }} \
+            -d chat_id=${{ secrets.HERMES_TELEGRAM_CHAT_ID }} \
             -d text="${MSG}" \
             -d parse_mode=HTML \
             -d disable_notification=true \
