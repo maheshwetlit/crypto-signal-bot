@@ -1,5 +1,4 @@
 name: Crypto Signal Bot
-
 on:
   schedule:
     # Multiple staggered triggers - GitHub throttles single */10 on free repos
@@ -10,7 +9,7 @@ on:
     types: [run-bot]
 
 permissions:
-  contents: read
+  contents: write
 
 jobs:
   run-bot:
@@ -36,6 +35,25 @@ jobs:
 
       - name: Run bot
         env:
-          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
-          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.HERMESBOT }}
+          TELEGRAM_CHAT_ID: ${{ secrets.HERMES_CHAT_ID }}
+          HERMES_BOT_TOKEN: ${{ secrets.HERMESBOT }}
+          HERMES_CHAT_ID: ${{ secrets.HERMES_CHAT_ID }}
         run: python crypto_signal_bot.py
+
+      - name: Commit signals log
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          if [ -f signals_log.json ]; then
+            git add signals_log.json
+            git diff --cached --quiet || git commit -m "Update signals_log.json [skip ci]"
+            git push
+          else
+            echo "signals_log.json not found, skipping commit"
+          fi
+        env:
+          GIT_AUTHOR_NAME: github-actions[bot]
+          GIT_AUTHOR_EMAIL: github-actions[bot]@users.noreply.github.com
+          GIT_COMMITTER_NAME: github-actions[bot]
+          GIT_COMMITTER_EMAIL: github-actions[bot]@users.noreply.github.com
