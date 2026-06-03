@@ -4,7 +4,7 @@ on:
     # Multiple staggered triggers - GitHub throttles single */10 on free repos
     # These fire at :00, :10, :20, :30, :40, :50 of every hour
     - cron: '0,10,20,30,40,50 * * * *'
-  workflow_dispatch:
+  workflow_dispatch
   repository_dispatch:
     types: [run-bot]
 permissions:
@@ -51,9 +51,7 @@ jobs:
           GIT_AUTHOR_EMAIL: github-actions[bot]@users.noreply.github.com
           GIT_COMMITTER_NAME: github-actions[bot]
           GIT_COMMITTER_EMAIL: github-actions[bot]@users.noreply.github.com
-      
-
-                    - name: Notify status
+      - name: Notify status
         if: success() || failure()
         run: |
           if [ "${{ job.status }}" = "success" ]; then
