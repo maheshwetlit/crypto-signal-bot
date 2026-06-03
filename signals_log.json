@@ -150,5 +150,30 @@
     "pnl_usd": null,
     "result": null,
     "closed_at": null
+  },
+  {
+    "id": "SIG-0007",
+    "time": "2026-06-03T14:09:59.661768+00:00",
+    "pair": "ETH/USDT",
+    "exchange": "KuCoin",
+    "direction": "SHORT",
+    "style": "PRIME",
+    "score": 106.0,
+    "adx": 13.2,
+    "rsi": 35.0,
+    "volume_x": 1.3,
+    "htf_trend": "BEARISH",
+    "entry": 1862.79,
+    "sl": 1874.9985714285715,
+    "tp1": 1844.4771428571428,
+    "tp2": 1832.2685714285712,
+    "tp3": 1813.955714285714,
+    "tp_main": 1813.955714285714,
+    "capital": 1000.0,
+    "status": "OPEN",
+    "exit_price": null,
+    "pnl_usd": null,
+    "result": null,
+    "closed_at": null
   }
 ]
