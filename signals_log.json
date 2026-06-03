@@ -425,5 +425,30 @@
     "pnl_usd": null,
     "result": null,
     "closed_at": null
+  },
+  {
+    "id": "SIG-0018",
+    "time": "2026-06-03T19:21:00.467021+00:00",
+    "pair": "FET/USDT",
+    "exchange": "KuCoin",
+    "direction": "SHORT",
+    "style": "PRIME",
+    "score": 106.0,
+    "adx": 15.1,
+    "rsi": 52.0,
+    "volume_x": 1.17,
+    "htf_trend": "BEARISH",
+    "entry": 0.2598,
+    "sl": 0.2624714285714285,
+    "tp1": 0.2557928571428571,
+    "tp2": 0.25312142857142855,
+    "tp3": 0.2491142857142857,
+    "tp_main": 0.2491142857142857,
+    "capital": 1000.0,
+    "status": "OPEN",
+    "exit_price": null,
+    "pnl_usd": null,
+    "result": null,
+    "closed_at": null
   }
 ]
