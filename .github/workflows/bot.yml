@@ -1,59 +1,70 @@
 name: Crypto Signal Bot
 on:
-  schedule:
-    # Multiple staggered triggers - GitHub throttles single */10 on free repos
-    # These fire at :00, :10, :20, :30, :40, :50 of every hour
-    - cron: '0,10,20,30,40,50 * * * *'
-  workflow_dispatch:
-  repository_dispatch:
-    types: [run-bot]
-
+ schedule:
+ # Multiple staggered triggers - GitHub throttles single */10 on free repos
+ # These fire at :00, :10, :20, :30, :40, :50 of every hour
+ - cron: '0,10,20,30,40,50 * * * *'
+ workflow_dispatch:
+ repository_dispatch:
+ types: [run-bot]
 permissions:
-  contents: write
-
+ contents: write
 jobs:
-  run-bot:
-    runs-on: ubuntu-latest
-    env:
-      FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v5
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          persist-credentials: true
-
-      - name: Set up Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: '3.10'
-
-      - name: Install dependencies
-        run: |
-          python -m pip install --upgrade pip
-          pip install -r requirements.txt
-
-      - name: Run bot
-        env:
-          TELEGRAM_BOT_TOKEN: ${{ secrets.HERMESBOT }}
-          TELEGRAM_CHAT_ID: ${{ secrets.HERMES_CHAT_ID }}
-          HERMES_BOT_TOKEN: ${{ secrets.HERMESBOT }}
-          HERMES_CHAT_ID: ${{ secrets.HERMES_CHAT_ID }}
-        run: python crypto_signal_bot.py
-
-      - name: Commit signals log
-        run: |
-          git config --global user.name "github-actions[bot]"
-          git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          if [ -f signals_log.json ]; then
-            git add signals_log.json
-            git diff --cached --quiet || git commit -m "Update signals_log.json [skip ci]"
-            git push
-          else
-            echo "signals_log.json not found, skipping commit"
-          fi
-        env:
-          GIT_AUTHOR_NAME: github-actions[bot]
-          GIT_AUTHOR_EMAIL: github-actions[bot]@users.noreply.github.com
-          GIT_COMMITTER_NAME: github-actions[bot]
-          GIT_COMMITTER_EMAIL: github-actions[bot]@users.noreply.github.com
+ run-bot:
+ runs-on: ubuntu-latest
+ env:
+ FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+ steps:
+ - name: Checkout code
+ uses: actions/checkout@v5
+ with:
+ token: ${{ secrets.GITHUB_TOKEN }}
+ persist-credentials: true
+ - name: Set up Python
+ uses: actions/setup-python@v5
+ with:
+ python-version: '3.10'
+ - name: Install dependencies
+ run: |
+ python -m pip install --upgrade pip
+ pip install -r requirements.txt
+ - name: Run bot
+ env:
+ TELEGRAM_BOT_TOKEN: ${{ secrets.HERMESBOT }}
+ TELEGRAM_CHAT_ID: ${{ secrets.HERMES_CHAT_ID }}
+ HERMES_BOT_TOKEN: ${{ secrets.HERMESBOT }}
+ HERMES_CHAT_ID: ${{ secrets.HERMES_CHAT_ID }}
+ run: python crypto_signal_bot.py
+ - name: Commit signals log
+ if: success() || failure()
+ run: |
+ git config --global user.name "github-actions[bot]"
+ git config --global user.email "github-actions[bot]@users.noreply.github.com"
+ if [ -f signals_log.json ]; then
+ git add signals_log.json
+ git diff --cached --quiet || git commit -m "Update signals_log.json [skip ci]"
+ git push
+ else
+ echo "signals_log.json not found, skipping commit"
+ fi
+ env:
+ GIT_AUTHOR_NAME: github-actions[bot]
+ GIT_AUTHOR_EMAIL: github-actions[bot]@users.noreply.github.com
+ GIT_COMMITTER_NAME: github-actions[bot]
+ GIT_COMMITTER_EMAIL: github-actions[bot]@users.noreply.github.com
+ - name: Notify status
+ if: success() || failure()
+ run: |
+ if [ "${{ job.status }}" = "success" ]; then
+ MSG="Cryptosignal Bot run succeeded"
+ COLOR="green"
+ else
+ MSG="Cryptosignal Bot run FAILED - check Actions log"
+ COLOR="red"
+ fi
+ curl -s -X POST https://api.telegram.org/bot${{ secrets.HERMESCRYPTOTRADINGBOT }}/sendMessage \
+ -d chat_id=${{ secrets.HERMES_CHAT_ID }} \
+ -d text="${MSG}" \
+ -d parse_mode=HTML \
+ -d disable_notification=true \
+ > /dev/null
