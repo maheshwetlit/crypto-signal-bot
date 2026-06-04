@@ -11,7 +11,7 @@ jobs:
  runs-on: ubuntu-latest
  env:
  HERMESBOT: ${{ secrets.HERMESCRYPTOTRADINGBOT }}
- HERMES_CHAT_ID: ${{ secrets.HERMES_CHAT_ID }}
+ HERMES_CHAT_ID: ${{ secrets.HERMES_TELEGRAM_CHAT_ID }}
  steps:
  - name: Checkout code
  uses: actions/checkout@v5
@@ -32,7 +32,7 @@ jobs:
  MSG="Hermes Daily Signal Report FAILED - check Actions log"
  fi
  curl -s -X POST https://api.telegram.org/bot${{ secrets.HERMESCRYPTOTRADINGBOT }}/sendMessage \
- -d chat_id=${{ secrets.HERMES_CHAT_ID }} \
+ -d chat_id=${{ secrets.HERMES_TELEGRAM_CHAT_ID }} \
  -d text="${MSG}" \
  -d parse_mode=HTML \
  -d disable_notification=true \
