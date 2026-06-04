@@ -1875,5 +1875,30 @@
     "pnl_usd": null,
     "result": null,
     "closed_at": null
+  },
+  {
+    "id": "SIG-0076",
+    "time": "2026-06-04T19:35:54.034399+00:00",
+    "pair": "PIEVERSE/USDT",
+    "exchange": "KuCoin",
+    "direction": "SHORT",
+    "style": "PRIME",
+    "score": 91.0,
+    "adx": 10.8,
+    "rsi": 37.3,
+    "volume_x": 1.15,
+    "htf_trend": "NEUTRAL",
+    "entry": 0.8357,
+    "sl": 0.8442714285714286,
+    "tp1": 0.8228428571428572,
+    "tp2": 0.8142714285714288,
+    "tp3": 0.801414285714286,
+    "tp_main": 0.801414285714286,
+    "capital": 1000.0,
+    "status": "OPEN",
+    "exit_price": null,
+    "pnl_usd": null,
+    "result": null,
+    "closed_at": null
   }
 ]
