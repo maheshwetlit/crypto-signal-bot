@@ -1900,5 +1900,30 @@
     "pnl_usd": null,
     "result": null,
     "closed_at": null
+  },
+  {
+    "id": "SIG-0077",
+    "time": "2026-06-04T20:00:59.535563+00:00",
+    "pair": "SOL/USDT",
+    "exchange": "KuCoin",
+    "direction": "SHORT",
+    "style": "PRIME",
+    "score": 107.0,
+    "adx": 11.3,
+    "rsi": 26.6,
+    "volume_x": 3.38,
+    "htf_trend": "BEARISH",
+    "entry": 69.05,
+    "sl": 69.54714285714286,
+    "tp1": 68.30428571428571,
+    "tp2": 67.80714285714286,
+    "tp3": 67.06142857142858,
+    "tp_main": 67.06142857142858,
+    "capital": 1000.0,
+    "status": "OPEN",
+    "exit_price": null,
+    "pnl_usd": null,
+    "result": null,
+    "closed_at": null
   }
 ]
