@@ -950,5 +950,30 @@
     "pnl_usd": null,
     "result": null,
     "closed_at": null
+  },
+  {
+    "id": "SIG-0039",
+    "time": "2026-06-04T01:50:54.861285+00:00",
+    "pair": "CTR/USDT",
+    "exchange": "KuCoin",
+    "direction": "SHORT",
+    "style": "MOMENTUM",
+    "score": 86.0,
+    "adx": 21.1,
+    "rsi": 39.7,
+    "volume_x": 1.31,
+    "htf_trend": "NEUTRAL",
+    "entry": 0.017255,
+    "sl": 0.017574142857142858,
+    "tp1": 0.016776285714285712,
+    "tp2": 0.016457142857142854,
+    "tp3": 0.015978428571428567,
+    "tp_main": 0.015978428571428567,
+    "capital": 1000.0,
+    "status": "OPEN",
+    "exit_price": null,
+    "pnl_usd": null,
+    "result": null,
+    "closed_at": null
   }
 ]
