@@ -1850,5 +1850,30 @@
     "pnl_usd": null,
     "result": null,
     "closed_at": null
+  },
+  {
+    "id": "SIG-0075",
+    "time": "2026-06-04T18:50:59.024314+00:00",
+    "pair": "H/USDT",
+    "exchange": "KuCoin",
+    "direction": "SHORT",
+    "style": "MOMENTUM",
+    "score": 87.0,
+    "adx": 16.1,
+    "rsi": 22.5,
+    "volume_x": 1.95,
+    "htf_trend": "NEUTRAL",
+    "entry": 0.573925,
+    "sl": 0.5824002857142857,
+    "tp1": 0.5612120714285715,
+    "tp2": 0.5527367857142857,
+    "tp3": 0.5400238571428573,
+    "tp_main": 0.5400238571428573,
+    "capital": 1000.0,
+    "status": "OPEN",
+    "exit_price": null,
+    "pnl_usd": null,
+    "result": null,
+    "closed_at": null
   }
 ]
