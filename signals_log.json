@@ -925,5 +925,30 @@
     "pnl_usd": null,
     "result": null,
     "closed_at": null
+  },
+  {
+    "id": "SIG-0038",
+    "time": "2026-06-04T01:20:59.492320+00:00",
+    "pair": "BCH/USDT",
+    "exchange": "KuCoin",
+    "direction": "SHORT",
+    "style": "MOMENTUM",
+    "score": 107.0,
+    "adx": 20.8,
+    "rsi": 33.2,
+    "volume_x": 1.57,
+    "htf_trend": "BEARISH",
+    "entry": 238.31,
+    "sl": 242.01714285714286,
+    "tp1": 232.74928571428572,
+    "tp2": 229.04214285714286,
+    "tp3": 223.48142857142858,
+    "tp_main": 223.48142857142858,
+    "capital": 1000.0,
+    "status": "OPEN",
+    "exit_price": null,
+    "pnl_usd": null,
+    "result": null,
+    "closed_at": null
   }
 ]
