@@ -1400,5 +1400,30 @@
     "pnl_usd": null,
     "result": null,
     "closed_at": null
+  },
+  {
+    "id": "SIG-0057",
+    "time": "2026-06-04T08:15:59.598090+00:00",
+    "pair": "LIT/USDT",
+    "exchange": "KuCoin",
+    "direction": "SHORT",
+    "style": "MOMENTUM",
+    "score": 100.0,
+    "adx": 47.9,
+    "rsi": 5.6,
+    "volume_x": 1.8,
+    "htf_trend": "NEUTRAL",
+    "entry": 1.511,
+    "sl": 1.5348571428571427,
+    "tp1": 1.4752142857142856,
+    "tp2": 1.4513571428571428,
+    "tp3": 1.4155714285714285,
+    "tp_main": 1.4155714285714285,
+    "capital": 1000.0,
+    "status": "OPEN",
+    "exit_price": null,
+    "pnl_usd": null,
+    "result": null,
+    "closed_at": null
   }
 ]
