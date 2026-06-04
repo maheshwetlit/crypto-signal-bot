@@ -1550,5 +1550,30 @@
     "pnl_usd": null,
     "result": null,
     "closed_at": null
+  },
+  {
+    "id": "SIG-0063",
+    "time": "2026-06-04T09:05:57.677295+00:00",
+    "pair": "ONDO/USDT",
+    "exchange": "KuCoin",
+    "direction": "SHORT",
+    "style": "MOMENTUM",
+    "score": 100.0,
+    "adx": 41.1,
+    "rsi": 20.2,
+    "volume_x": 1.69,
+    "htf_trend": "NEUTRAL",
+    "entry": 0.35644,
+    "sl": 0.3662728571428571,
+    "tp1": 0.34169071428571424,
+    "tp2": 0.3318578571428571,
+    "tp3": 0.31710857142857135,
+    "tp_main": 0.31710857142857135,
+    "capital": 1000.0,
+    "status": "OPEN",
+    "exit_price": null,
+    "pnl_usd": null,
+    "result": null,
+    "closed_at": null
   }
 ]
