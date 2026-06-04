@@ -1050,5 +1050,30 @@
     "pnl_usd": null,
     "result": null,
     "closed_at": null
+  },
+  {
+    "id": "SIG-0043",
+    "time": "2026-06-04T04:35:54.590677+00:00",
+    "pair": "ICP/USDT",
+    "exchange": "KuCoin",
+    "direction": "SHORT",
+    "style": "MOMENTUM",
+    "score": 107.0,
+    "adx": 16.6,
+    "rsi": 48.3,
+    "volume_x": 3.13,
+    "htf_trend": "NEUTRAL",
+    "entry": 2.898,
+    "sl": 2.937714285714286,
+    "tp1": 2.8384285714285715,
+    "tp2": 2.7987142857142855,
+    "tp3": 2.739142857142857,
+    "tp_main": 2.739142857142857,
+    "capital": 1000.0,
+    "status": "OPEN",
+    "exit_price": null,
+    "pnl_usd": null,
+    "result": null,
+    "closed_at": null
   }
 ]
