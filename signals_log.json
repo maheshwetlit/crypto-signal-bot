@@ -1825,5 +1825,30 @@
     "pnl_usd": null,
     "result": null,
     "closed_at": null
+  },
+  {
+    "id": "SIG-0074",
+    "time": "2026-06-04T18:11:01.292054+00:00",
+    "pair": "PEPE/USDT",
+    "exchange": "KuCoin",
+    "direction": "SHORT",
+    "style": "PRIME",
+    "score": 106.0,
+    "adx": 12.1,
+    "rsi": 37.3,
+    "volume_x": 1.27,
+    "htf_trend": "BEARISH",
+    "entry": 2.975e-06,
+    "sl": 3.0025714285714283e-06,
+    "tp1": 2.9336428571428573e-06,
+    "tp2": 2.9060714285714285e-06,
+    "tp3": 2.864714285714286e-06,
+    "tp_main": 2.864714285714286e-06,
+    "capital": 1000.0,
+    "status": "OPEN",
+    "exit_price": null,
+    "pnl_usd": null,
+    "result": null,
+    "closed_at": null
   }
 ]
