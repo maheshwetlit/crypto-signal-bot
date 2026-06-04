@@ -1425,5 +1425,30 @@
     "pnl_usd": null,
     "result": null,
     "closed_at": null
+  },
+  {
+    "id": "SIG-0058",
+    "time": "2026-06-04T08:20:49.231605+00:00",
+    "pair": "XMR/USDT",
+    "exchange": "KuCoin",
+    "direction": "SHORT",
+    "style": "MOMENTUM",
+    "score": 91.0,
+    "adx": 19.9,
+    "rsi": 39.6,
+    "volume_x": 1.24,
+    "htf_trend": "NEUTRAL",
+    "entry": 353.05,
+    "sl": 358.1514285714286,
+    "tp1": 345.39785714285716,
+    "tp2": 340.2964285714286,
+    "tp3": 332.64428571428573,
+    "tp_main": 332.64428571428573,
+    "capital": 1000.0,
+    "status": "OPEN",
+    "exit_price": null,
+    "pnl_usd": null,
+    "result": null,
+    "closed_at": null
   }
 ]
