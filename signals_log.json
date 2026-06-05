@@ -2550,5 +2550,30 @@
     "pnl_usd": null,
     "result": null,
     "closed_at": null
+  },
+  {
+    "id": "SIG-0103",
+    "time": "2026-06-05T06:01:04.177819+00:00",
+    "pair": "XRP/USDT",
+    "exchange": "KuCoin",
+    "direction": "SHORT",
+    "style": "MOMENTUM",
+    "score": 91.0,
+    "adx": 18.6,
+    "rsi": 20.8,
+    "volume_x": 1.15,
+    "htf_trend": "BEARISH",
+    "entry": 1.11943,
+    "sl": 1.129867142857143,
+    "tp1": 1.1037742857142854,
+    "tp2": 1.0933371428571426,
+    "tp3": 1.077681428571428,
+    "tp_main": 1.077681428571428,
+    "capital": 1000.0,
+    "status": "OPEN",
+    "exit_price": null,
+    "pnl_usd": null,
+    "result": null,
+    "closed_at": null
   }
 ]
