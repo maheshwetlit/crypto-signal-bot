@@ -2500,5 +2500,30 @@
     "pnl_usd": null,
     "result": null,
     "closed_at": null
+  },
+  {
+    "id": "SIG-0101",
+    "time": "2026-06-05T05:40:57.898059+00:00",
+    "pair": "RAIN/USDT",
+    "exchange": "KuCoin",
+    "direction": "SHORT",
+    "style": "PRIME",
+    "score": 91.0,
+    "adx": 15.3,
+    "rsi": 28.1,
+    "volume_x": 1.25,
+    "htf_trend": "BEARISH",
+    "entry": 0.013934,
+    "sl": 0.01407957142857143,
+    "tp1": 0.013715642857142857,
+    "tp2": 0.01357007142857143,
+    "tp3": 0.013351714285714286,
+    "tp_main": 0.013351714285714286,
+    "capital": 1000.0,
+    "status": "OPEN",
+    "exit_price": null,
+    "pnl_usd": null,
+    "result": null,
+    "closed_at": null
   }
 ]
