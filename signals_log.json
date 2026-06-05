@@ -2875,5 +2875,30 @@
     "pnl_usd": null,
     "result": null,
     "closed_at": null
+  },
+  {
+    "id": "SIG-0116",
+    "time": "2026-06-05T14:03:01.854135+00:00",
+    "pair": "ENA/USDT",
+    "exchange": "KuCoin",
+    "direction": "SHORT",
+    "style": "PRIME",
+    "score": 120.0,
+    "adx": 24.2,
+    "rsi": 50.6,
+    "volume_x": 2.21,
+    "htf_trend": "NEUTRAL",
+    "entry": 0.0865,
+    "sl": 0.08879999999999999,
+    "tp1": 0.08304999999999998,
+    "tp2": 0.08074999999999999,
+    "tp3": 0.07729999999999998,
+    "tp_main": 0.07729999999999998,
+    "capital": 1000.0,
+    "status": "OPEN",
+    "exit_price": null,
+    "pnl_usd": null,
+    "result": null,
+    "closed_at": null
   }
 ]
