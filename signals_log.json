@@ -2900,5 +2900,30 @@
     "pnl_usd": null,
     "result": null,
     "closed_at": null
+  },
+  {
+    "id": "SIG-0117",
+    "time": "2026-06-05T14:05:51.798398+00:00",
+    "pair": "TRX/USDT",
+    "exchange": "KuCoin",
+    "direction": "SHORT",
+    "style": "PRIME",
+    "score": 106.0,
+    "adx": 21.8,
+    "rsi": 36.7,
+    "volume_x": 1.26,
+    "htf_trend": "BEARISH",
+    "entry": 0.3239,
+    "sl": 0.3250428571428572,
+    "tp1": 0.3221857142857143,
+    "tp2": 0.32104285714285713,
+    "tp3": 0.3193285714285714,
+    "tp_main": 0.3193285714285714,
+    "capital": 1000.0,
+    "status": "OPEN",
+    "exit_price": null,
+    "pnl_usd": null,
+    "result": null,
+    "closed_at": null
   }
 ]
