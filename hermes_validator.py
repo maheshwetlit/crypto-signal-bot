@@ -33,33 +33,27 @@ EXCHANGE_APIS = {
     }
 }
 
+
 def format_symbol(pair: str, exchange: str) -> str:
     """
     Convert pair symbol to exchange-specific format.
     Data stores pairs as 'BNB/USDT' or 'SUIUSDT'.
-      - KuCoin expects:  BNB-USDT  (dash-separated)
-      - Binance expects: BNBUSDT   (no separator)
-      - Bybit expects:   BNBUSDT   (no separator)
+    - KuCoin expects: BNB-USDT (dash-separated)
+    - Binance expects: BNBUSDT (no separator)
+    - Bybit expects: BNBUSDT (no separator)
     """
-    # Normalise: strip whitespace
     pair = pair.strip()
-
     if exchange == "KuCoin":
-        # BNB/USDT -> BNB-USDT,  SUIUSDT -> SUI-USDT
         if "/" in pair:
             return pair.replace("/", "-")
-        # No separator — detect quote currency and insert dash
         for quote in ["USDT", "USDC", "BTC", "ETH", "DAI", "TUSD"]:
             if pair.endswith(quote) and len(pair) > len(quote):
                 base = pair[:-len(quote)]
                 return f"{base}-{quote}"
-        return pair  # fallback: return as-is
-
+        return pair
     if exchange in ("Binance", "Bybit"):
-        # BNB/USDT -> BNBUSDT,  BNB-USDT -> BNBUSDT
         return pair.replace("/", "").replace("-", "")
-
-    return pair  # unknown exchange: return as-is
+    return pair
 
 
 def get_exchange_price(symbol: str, exchange: str) -> float:
@@ -67,18 +61,14 @@ def get_exchange_price(symbol: str, exchange: str) -> float:
     if exchange not in EXCHANGE_APIS:
         print(f"[WARN] Unknown exchange: {exchange}. Defaulting to Binance.")
         exchange = "Binance"
-
     api_info = EXCHANGE_APIS[exchange]
     formatted_symbol = format_symbol(symbol, exchange)
-
     for attempt in range(3):
         try:
             url = api_info["url"].format(symbol=formatted_symbol)
             r = requests.get(url, timeout=8)
             r.raise_for_status()
             data = r.json()
-
-            # Handle nested response structures
             if exchange == "KuCoin" and "data" in data:
                 data = data["data"]
             elif exchange == "Bybit" and "result" in data:
@@ -87,18 +77,14 @@ def get_exchange_price(symbol: str, exchange: str) -> float:
                     data = tickers[0]
                 else:
                     data = {}
-
             price = float(data.get(api_info["price_key"], 0))
             if price > 0:
                 return price
-
             print(f"[WARN] Zero/empty price from {exchange} for {formatted_symbol} (attempt {attempt+1})")
-
         except Exception as e:
             print(f"[ERROR] {exchange} price fetch attempt {attempt+1}/3 failed for {formatted_symbol}: {e}")
             if attempt < 2:
                 time.sleep(1)
-
     print(f"[ERROR] All attempts failed for {symbol} (formatted: {formatted_symbol}) on {exchange}")
     return None
 
@@ -117,6 +103,25 @@ def send_telegram(message: str):
         }, timeout=5)
     except Exception as e:
         print(f"[ERROR] Telegram send failed: {e}")
+
+
+def get_tp_value(sig: dict) -> float:
+    """Extract TP value from signal, supporting tp, tp1, tp2, tp3, or list format."""
+    # Try tp1 first (Hermes-style multi-TP)
+    if sig.get("tp1") is not None:
+        return float(sig["tp1"])
+    # Try single tp (could be number, list, or None)
+    tp_raw = sig.get("tp")
+    if tp_raw is not None:
+        if isinstance(tp_raw, list):
+            return float(tp_raw[0]) if tp_raw else 0.0
+        return float(tp_raw)
+    # Try tp2, tp3 as fallback
+    if sig.get("tp2") is not None:
+        return float(sig["tp2"])
+    if sig.get("tp3") is not None:
+        return float(sig["tp3"])
+    return 0.0
 
 
 def validate_signals():
@@ -140,14 +145,7 @@ def validate_signals():
         entry = float(sig.get("entry", 0))
         sl = float(sig.get("sl", 0))
         exchange = sig.get("exchange", "Binance")
-
-        # Support tp1/tp2/tp3 or single tp
-        tp = float(
-            sig.get("tp1") or
-            sig.get("tp") or
-            (sig.get("tp", [None])[0] if isinstance(sig.get("tp"), list) else None) or
-            0
-        )
+        tp = get_tp_value(sig)
 
         if not symbol or not entry or not tp or not sl:
             print(f"[SKIP] Incomplete signal {sig.get('id', '?')}: symbol={symbol} entry={entry} tp={tp} sl={sl}")
@@ -160,7 +158,6 @@ def validate_signals():
         result = None
         outcome = None
 
-        # Validate LONG
         if direction == "LONG":
             if current_price >= tp:
                 result = "WIN"
@@ -168,8 +165,6 @@ def validate_signals():
             elif current_price <= sl:
                 result = "LOSS"
                 outcome = "SL HIT"
-
-        # Validate SHORT
         elif direction == "SHORT":
             if current_price <= tp:
                 result = "WIN"
@@ -179,7 +174,6 @@ def validate_signals():
                 outcome = "SL HIT"
 
         if result:
-            # Calculate PnL
             if direction == "LONG":
                 pnl_pct = (current_price - entry) / entry * 100
             else:
@@ -188,17 +182,14 @@ def validate_signals():
             pnl_usd = round(CAPITAL_PER_TRADE * pnl_pct / 100, 2)
             pnl_pct = round(pnl_pct, 2)
 
-            # Update signal record
             sig["status"] = result
             sig["result"] = outcome
             sig["exit_price"] = current_price
             sig["exit_time"] = now
             sig["pnl_usd"] = pnl_usd
             sig["pnl_pct"] = pnl_pct
-            sig["closed_at"] = now
             updated = True
 
-            # Send Telegram alert
             if result == "WIN":
                 emoji = "\u2705"
                 pnl_str = f"+${pnl_usd} (+{pnl_pct}%)"
