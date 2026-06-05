@@ -2300,5 +2300,30 @@
     "pnl_usd": null,
     "result": null,
     "closed_at": null
+  },
+  {
+    "id": "SIG-0093",
+    "time": "2026-06-05T02:30:53.505905+00:00",
+    "pair": "TAO/USDT",
+    "exchange": "KuCoin",
+    "direction": "SHORT",
+    "style": "MOMENTUM",
+    "score": 91.0,
+    "adx": 17.1,
+    "rsi": 23.8,
+    "volume_x": 1.21,
+    "htf_trend": "BEARISH",
+    "entry": 207.04,
+    "sl": 209.5442857142857,
+    "tp1": 203.2835714285714,
+    "tp2": 200.77928571428572,
+    "tp3": 197.02285714285713,
+    "tp_main": 197.02285714285713,
+    "capital": 1000.0,
+    "status": "OPEN",
+    "exit_price": null,
+    "pnl_usd": null,
+    "result": null,
+    "closed_at": null
   }
 ]
