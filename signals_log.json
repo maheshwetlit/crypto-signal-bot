@@ -3175,5 +3175,30 @@
     "pnl_usd": null,
     "result": null,
     "closed_at": null
+  },
+  {
+    "id": "SIG-0128",
+    "time": "2026-06-05T21:40:49.891379+00:00",
+    "pair": "SIREN/USDT",
+    "exchange": "KuCoin",
+    "direction": "LONG",
+    "style": "BRK",
+    "score": 135.0,
+    "adx": 30.9,
+    "rsi": 63.4,
+    "volume_x": 1.87,
+    "htf_trend": "BULLISH",
+    "entry": 0.74069,
+    "sl": 0.7272842857142857,
+    "tp1": 0.7607985714285713,
+    "tp2": 0.7742042857142856,
+    "tp3": 0.794312857142857,
+    "tp_main": 0.794312857142857,
+    "capital": 1000.0,
+    "status": "OPEN",
+    "exit_price": null,
+    "pnl_usd": null,
+    "result": null,
+    "closed_at": null
   }
 ]
