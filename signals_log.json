@@ -2975,5 +2975,30 @@
     "pnl_usd": null,
     "result": null,
     "closed_at": null
+  },
+  {
+    "id": "SIG-0120",
+    "time": "2026-06-05T16:38:32.753776+00:00",
+    "pair": "BNB/USDT",
+    "exchange": "KuCoin",
+    "direction": "SHORT",
+    "style": "MOMENTUM",
+    "score": 109.0,
+    "adx": 30.8,
+    "rsi": 33.0,
+    "volume_x": 1.14,
+    "htf_trend": "BEARISH",
+    "entry": 571.374,
+    "sl": 580.3204285714286,
+    "tp1": 557.9543571428572,
+    "tp2": 549.0079285714287,
+    "tp3": 535.5882857142859,
+    "tp_main": 535.5882857142859,
+    "capital": 1000.0,
+    "status": "OPEN",
+    "exit_price": null,
+    "pnl_usd": null,
+    "result": null,
+    "closed_at": null
   }
 ]
