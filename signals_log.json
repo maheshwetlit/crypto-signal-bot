@@ -2600,5 +2600,30 @@
     "pnl_usd": null,
     "result": null,
     "closed_at": null
+  },
+  {
+    "id": "SIG-0105",
+    "time": "2026-06-05T06:25:47.296068+00:00",
+    "pair": "XLM/USDT",
+    "exchange": "KuCoin",
+    "direction": "SHORT",
+    "style": "MOMENTUM",
+    "score": 102.0,
+    "adx": 21.3,
+    "rsi": 18.1,
+    "volume_x": 4.93,
+    "htf_trend": "BEARISH",
+    "entry": 0.1891,
+    "sl": 0.19255714285714284,
+    "tp1": 0.18391428571428572,
+    "tp2": 0.18045714285714287,
+    "tp3": 0.1752714285714286,
+    "tp_main": 0.1752714285714286,
+    "capital": 1000.0,
+    "status": "OPEN",
+    "exit_price": null,
+    "pnl_usd": null,
+    "result": null,
+    "closed_at": null
   }
 ]
