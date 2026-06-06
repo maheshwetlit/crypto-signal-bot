@@ -3650,5 +3650,30 @@
     "pnl_usd": null,
     "result": null,
     "closed_at": null
+  },
+  {
+    "id": "SIG-0147",
+    "time": "2026-06-06T11:49:30.867768+00:00",
+    "pair": "LAB/USDT",
+    "exchange": "KuCoin",
+    "direction": "SHORT",
+    "style": "MOMENTUM",
+    "score": 99.0,
+    "adx": 22.5,
+    "rsi": 20.1,
+    "volume_x": 1.2,
+    "htf_trend": "BEARISH",
+    "entry": 8.91166,
+    "sl": 9.19038857142857,
+    "tp1": 8.493567142857142,
+    "tp2": 8.214838571428572,
+    "tp3": 7.796745714285715,
+    "tp_main": 7.796745714285715,
+    "capital": 1000.0,
+    "status": "OPEN",
+    "exit_price": null,
+    "pnl_usd": null,
+    "result": null,
+    "closed_at": null
   }
 ]
