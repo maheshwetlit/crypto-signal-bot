@@ -270,9 +270,58 @@ def build_report(signals, fetch_failures=0, skip_prices=False):
     return "\n".join(L)
 
 
+def get_last_run_time():
+    """Read the last successful run time from the tracker log."""
+    tracker_file = os.path.join(SCRIPT_DIR, "win_loss_tracker.json")
+    if os.path.exists(tracker_file):
+        try:
+            with open(tracker_file) as f:
+                data = json.load(f)
+            snaps = data.get("snapshots", [])
+            if snaps:
+                return datetime.fromisoformat(snaps[-1]["timestamp"])
+        except Exception:
+            pass
+    return None
+
+def run_gap_recovery(last_run):
+    """If we were offline for >2 hours, run extra validator passes to catch up."""
+    if last_run is None:
+        return
+    now = datetime.now(timezone.utc)
+    gap_hours = (now - last_run).total_seconds() / 3600
+    if gap_hours <= 2:
+        return  # no significant gap
+
+    print(f"[RECOVERY] Offline gap detected: {gap_hours:.1f}h since last run")
+    print(f"[RECOVERY] Running extra validation passes...")
+
+    # Run the validator multiple times with delays to catch price movements
+    # that happened during the offline period
+    import hermes_validator as _val
+    for pass_num in range(min(int(gap_hours), 6)):  # max 6 extra passes
+        print(f"[RECOVERY] Validation pass {pass_num+1}...")
+        try:
+            _val.validate_signals()
+        except Exception as e:
+            print(f"[RECOVERY] Pass {pass_num+1} error: {e}")
+        if pass_num < int(gap_hours) - 1:
+            time.sleep(5)  # small delay between passes
+
+    print(f"[RECOVERY] Gap recovery complete")
+
+
 def main():
     dry_run    = "--dry-run" in sys.argv
     skipPrices = "--skip-prices" in sys.argv or dry_run
+
+    # ── Offline gap recovery ──
+    if not dry_run:
+        last_run = get_last_run_time()
+        if last_run:
+            gap_h = (datetime.now(timezone.utc) - last_run).total_seconds() / 3600
+            if gap_h > 2:
+                run_gap_recovery(last_run)
 
     # Step 1: Fetch from GitHub
     print("[1/5] Fetching signals from GitHub...")

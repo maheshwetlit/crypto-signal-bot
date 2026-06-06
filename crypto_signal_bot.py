@@ -121,7 +121,7 @@ class Config:
     SCORE_POST_LOSS_1  = 95.0         # HERMES-11: after 1 loss in 4h
     SCORE_POST_LOSS_2  = 98.0         # HERMES-11: after 2 consecutive losses in 8h
     SL_ATR_MULT        = 2.0
-    MAX_SL_PCT         = 3.0          # Max SL as % of entry (caps oversized stops)
+    MAX_SL_PCT         = 2.5          # Max SL as % of entry (2.5% — crypto wicks are 1-2%, need room)
     MIN_SL_PCT         = 0.5          # Min SL as % of entry (avoids spread risk)
     TP_R_MULTIPLES     = [1.5, 2.5, 4.0]       # Standard trend
     TP_R_MULTIPLES_STRONG = [2.0, 3.5, 5.0]    # Strong trend (ADX >= 30)

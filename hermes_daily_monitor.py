@@ -176,21 +176,28 @@ def auto_adjust(stats, config_history):
     if stats["avg_loss_pct"] > TARGETS["avg_loss_pct_max"]:
         if severity != "CRITICAL":
             severity = "WARNING"
-        adjustments.append({
-            "param": "MAX_SL_PCT",
-            "current": 3.0,
-            "suggested": max(2.0, 3.0 - (stats["avg_loss_pct"] - TARGETS["avg_loss_pct_max"]) * 0.5),
-            "reason": f"Avg loss {stats['avg_loss_pct']}% > target {TARGETS['avg_loss_pct_max']}% — tighten SL"
-        })
+        # Tighten SL proportionally to how far over target we are
+        # Use 2.5% floor (not 2.0%) — crypto wicks are 1-2%, need room to breathe
+        suggested = max(2.5, 3.0 - (stats["avg_loss_pct"] - TARGETS["avg_loss_pct_max"]) * 0.3)
+        if suggested < 3.0:  # only suggest if it actually changes
+            adjustments.append({
+                "param": "MAX_SL_PCT",
+                "current": 3.0,
+                "suggested": round(suggested, 1),
+                "reason": f"Avg loss {stats['avg_loss_pct']}% > target {TARGETS['avg_loss_pct_max']}% — tighten SL to {suggested:.1f}%"
+            })
 
     # Check max single loss
     if stats["max_loss_pct"] > TARGETS["max_loss_pct_max"]:
-        adjustments.append({
-            "param": "MAX_SL_PCT",
-            "current": 3.0,
-            "suggested": min(3.0, TARGETS["max_loss_pct_max"] * 0.8),
-            "reason": f"Max loss {stats['max_loss_pct']}% > cap {TARGETS['max_loss_pct_max']}% — hard cap needed"
-        })
+        # Hard cap at 80% of max allowed (e.g., 4.0% if max is 5%)
+        suggested = TARGETS["max_loss_pct_max"] * 0.8
+        if suggested < 3.0:  # only suggest if it actually tightens
+            adjustments.append({
+                "param": "MAX_SL_PCT",
+                "current": 3.0,
+                "suggested": round(suggested, 1),
+                "reason": f"Max loss {stats['max_loss_pct']}% > cap {TARGETS['max_loss_pct_max']}% — hard cap at {suggested:.1f}%"
+            })
 
     # Check consecutive losses
     if stats["max_consec_losses"] >= 3:
