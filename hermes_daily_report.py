@@ -1,101 +1,96 @@
 #!/usr/bin/env python3
 """
 hermes_daily_report.py
-Hermes Daily Signal Report - sends yesterday's performance to Telegram
-Run by Hermes cron every day at 08:00 Helsinki time
+Fetches signals_log.json from GitHub, calculates daily stats per token,
+and sends a formatted report to Telegram.
 """
-import json
-import os
-import requests
+import os, sys, json, base64, urllib.request, requests
 from datetime import datetime, timedelta, timezone
 from collections import defaultdict
 
-# --- CONFIG ---
-SIGNAL_LOG_FILE = "signals_log.json"
-CAPITAL_PER_TRADE = 1000.0
-HERMES_BOT_TOKEN = os.getenv("HERMESBOT", "")
-HERMES_CHAT_ID = os.getenv("HERMES_CHAT_ID", "")
+# --- Config ---
+SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+GH_TOKEN_FILE = os.path.join(SCRIPT_DIR, ".gh_token")
+TG_TOKEN_FILE = os.path.join(SCRIPT_DIR, ".tg_token")
+CHAT_ID = "5515185305"
+CAPITAL = 1000.0
 
-def send_telegram(message: str):
-    if not HERMES_BOT_TOKEN or not HERMES_CHAT_ID:
-        print(message)
-        return
-    try:
-        url = f"https://api.telegram.org/bot{HERMES_BOT_TOKEN}/sendMessage"
-        requests.post(url, json={
-            "chat_id": HERMES_CHAT_ID,
-            "text": message,
-            "parse_mode": "HTML"
-        }, timeout=5)
-    except Exception as e:
-        print(f"[ERROR] Telegram: {e}")
+# --- Read tokens ---
+with open(GH_TOKEN_FILE) as f:
+    gh_token = f.read().strip()
+with open(TG_TOKEN_FILE) as f:
+    tg_token = f.read().strip()
 
-def get_pnl(s):
-    """Safely extract pnl_usd from a signal, handling None values."""
-    val = s.get("pnl_usd")
-    return 0.0 if val is None else float(val)
+# --- Fetch signals_log.json ---
+url = "https://api.github.com/repos/maheshwetlit/crypto-signal-bot/contents/signals_log.json"
+req = urllib.request.Request(url, headers={
+    "Authorization": "Bearer " + gh_token,
+    "Accept": "application/vnd.github.v3+json"
+})
+resp = urllib.request.urlopen(req, timeout=15)
+data = json.loads(resp.read())
+raw = base64.b64decode(data["content"]).decode()
+signals = json.loads(raw)
 
-def generate_daily_report():
-    """Read signals_log.json and compile yesterday's performance report."""
-    if not os.path.exists(SIGNAL_LOG_FILE):
-        print(f"[INFO] No signal log found at {SIGNAL_LOG_FILE}")
-        return
-    with open(SIGNAL_LOG_FILE, "r") as f:
-        signals = json.load(f)
-    # Get yesterday's date
-    yesterday = (datetime.now(timezone.utc) - timedelta(days=1)).strftime("%Y-%m-%d")
-    # Filter signals closed yesterday
-    yesterdays_signals = [
-        s for s in signals
-        if s.get("closed_at", "")[:10] == yesterday and s.get("status") in ("WIN", "LOSS")
-    ]
-    if not yesterdays_signals:
-        # If no closed signals yesterday, check if any still open
-        open_signals = [s for s in signals if s.get("status") == "OPEN"]
-        msg = (
-            f"<b>Hermes Daily Report</b>\n"
-            f"Date: {yesterday}\n\n"
-            f"No signals closed yesterday.\n"
-            f"Open signals: {len(open_signals)}"
-        )
-        send_telegram(msg)
-        print(f"[INFO] {yesterday}: No signals closed. {len(open_signals)} open.")
-        return
-    # Calculate stats
-    wins = [s for s in yesterdays_signals if s.get("status") == "WIN"]
-    losses = [s for s in yesterdays_signals if s.get("status") == "LOSS"]
-    total = len(yesterdays_signals)
-    win_rate = round((len(wins) / total) * 100, 1)
-    total_pnl = sum(get_pnl(s) for s in yesterdays_signals)
-    # Exchange breakdown
-    exchanges = defaultdict(lambda: {"wins": 0, "losses": 0, "pnl": 0.0})
-    for s in yesterdays_signals:
-        exc = s.get("exchange", "Unknown")
-        pnl = get_pnl(s)
-        if s.get("status") == "WIN":
-            exchanges[exc]["wins"] += 1
-        else:
-            exchanges[exc]["losses"] += 1
-        exchanges[exc]["pnl"] += pnl
-    # Build message
-    pnl_emoji = "" if total_pnl >= 0 else ""
-    pnl_str = f"+${total_pnl}" if total_pnl >= 0 else f"-${abs(total_pnl)}"
-    msg = (
-        f"{pnl_emoji} <b>Hermes Daily Report</b>\n"
-        f"Date: <b>{yesterday}</b>\n\n"
-        f"Total Signals: <b>{total}</b>\n"
-        f"Wins: <b>{len(wins)}</b> | Losses: <b>{len(losses)}</b>\n"
-        f"Win Rate: <b>{win_rate}%</b>\n"
-        f"Net P&L: <b>{pnl_str}</b>\n\n"
-    )
-    # Add per-exchange stats
-    msg += "<b>Exchange Breakdown:</b>\n"
-    for exc, stats in sorted(exchanges.items()):
-        exc_pnl = round(stats["pnl"], 2)
-        exc_pnl_str = f"+${exc_pnl}" if exc_pnl >= 0 else f"-${abs(exc_pnl)}"
-        msg += f"{exc}: {stats['wins']}W / {stats['losses']}L | P&L: {exc_pnl_str}\n"
-    send_telegram(msg)
-    print(f"[INFO] Daily report sent for {yesterday}")
+# --- Filter to yesterday ---
+yesterday = (datetime.now(timezone.utc) - timedelta(days=1)).strftime("%Y-%m-%d")
+filtered = [s for s in signals if yesterday in s.get("time", "")]
 
-if __name__ == "__main__":
-    generate_daily_report()
+total = len(filtered)
+wins = sum(1 for s in filtered if s.get("status") == "WIN")
+losses = sum(1 for s in filtered if s.get("status") == "LOSS")
+opens = sum(1 for s in filtered if s.get("status") == "OPEN")
+closed = wins + losses
+wr = (wins / closed * 100) if closed > 0 else 0
+pnl = sum((s.get("pnl_usd") or 0) for s in filtered)
+
+# --- Per-token breakdown ---
+tokens = defaultdict(lambda: {"w": 0, "l": 0, "o": 0, "pnl": 0.0, "n": 0})
+for s in filtered:
+    t = s.get("pair", "?")
+    tokens[t]["n"] += 1
+    tokens[t]["pnl"] += s.get("pnl_usd") or 0
+    if s.get("status") == "WIN":
+        tokens[t]["w"] += 1
+    elif s.get("status") == "LOSS":
+        tokens[t]["l"] += 1
+    elif s.get("status") == "OPEN":
+        tokens[t]["o"] += 1
+
+# --- Build Telegram message ---
+lines = []
+lines.append("📊 <b>DAILY SIGNAL REPORT — " + yesterday + "</b>")
+lines.append("━━━━━━━━━━━━━━━━━━━━")
+lines.append("📈 Signals: <b>" + str(total) + "</b> | ✅ " + str(wins) + " | ❌ " + str(losses) + " | ⏳ " + str(opens))
+lines.append("🎯 Win Rate: <b>" + "{:.1f}".format(wr) + "%</b>")
+pnl_str = "+" + "{:.2f}".format(pnl) if pnl >= 0 else "{:.2f}".format(pnl)
+lines.append("💰 Net P&L: <b>$" + pnl_str + "</b> (@ $1,000/signal)")
+
+if tokens:
+    lines.append("")
+    lines.append("📋 <b>BREAKDOWN BY TOKEN</b>")
+    lines.append("━━━━━━━━━━━━━━━━━━━━")
+    for t, v in sorted(tokens.items(), key=lambda x: -x[1]["pnl"]):
+        tp = "+" + "{:.2f}".format(v["pnl"]) if v["pnl"] >= 0 else "{:.2f}".format(v["pnl"])
+        status_parts = []
+        if v["w"]: status_parts.append("✅" + str(v["w"]))
+        if v["l"]: status_parts.append("❌" + str(v["l"]))
+        if v["o"]: status_parts.append("⏳" + str(v["o"]))
+        status_str = " ".join(status_parts) if status_parts else "—"
+        lines.append("🔹 <b>" + t + "</b> → " + str(v["n"]) + " sig | " + status_str + " | $" + tp)
+
+message = "\n".join(lines)
+
+# --- Send to Telegram ---
+tg_url = "https://api.telegram.org/bot" + tg_token + "/sendMessage"
+r = requests.post(tg_url, json={
+    "chat_id": CHAT_ID,
+    "text": message,
+    "parse_mode": "HTML"
+}, timeout=10)
+
+if r.json().get("ok"):
+    print("[OK] Daily report sent to Telegram for " + yesterday)
+else:
+    print("[ERROR] Telegram send failed:", r.json())
+    sys.exit(1)

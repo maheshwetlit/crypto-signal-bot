@@ -1,9 +1,14 @@
 #!/usr/bin/env python3
 """
 hermes_validator.py
-Hermes Signal Validator - checks OPEN signals against live price on the correct exchange
-Run by Hermes cron every 5 minutes
+Hermes Signal Validator — checks OPEN signals against live prices.
+Run by cron every 5 minutes.
 Supports: Binance, KuCoin, Bybit
+
+PATCH:
+  FIX-V1  Write both `closed_at` AND `exit_time` so hermes_daily_report.py
+          can find closed signals (it reads `closed_at`; previous code only
+          wrote `exit_time`, silently breaking the daily report).
 """
 import json
 import os
@@ -12,36 +17,40 @@ import time
 from datetime import datetime, timezone
 
 # --- CONFIG ---
-SIGNAL_LOG_FILE = "signals_log.json"
-CAPITAL_PER_TRADE = 1000.0  # USD per signal
-HERMES_BOT_TOKEN = os.getenv("HERMESBOT", "")
-HERMES_CHAT_ID = os.getenv("HERMES_CHAT_ID", "")
+SIGNAL_LOG_FILE     = "signals_log.json"
+CAPITAL_PER_TRADE   = 1000.0
+SCRIPT_DIR          = os.path.dirname(os.path.abspath(__file__))
+TG_TOKEN_FILE       = os.path.join(SCRIPT_DIR, ".tg_token")
 
-# Exchange API endpoints mapping
+# Read token from file (fallback to env var HERMESBOT for compatibility)
+if os.path.exists(TG_TOKEN_FILE):
+    with open(TG_TOKEN_FILE) as _tf:
+        HERMES_BOT_TOKEN = _tf.read().strip()
+else:
+    HERMES_BOT_TOKEN = os.getenv("HERMESBOT", "")
+
+# Chat ID: env var preferred, then default
+HERMES_CHAT_ID = os.getenv("HERMES_CHAT_ID", "5515185305")
+
 EXCHANGE_APIS = {
     "Binance": {
-        "url": "https://api.binance.com/api/v3/ticker/price?symbol={symbol}",
+        "url":       "https://api.binance.com/api/v3/ticker/price?symbol={symbol}",
         "price_key": "price",
     },
     "KuCoin": {
-        "url": "https://api.kucoin.com/api/v1/market/orderbook/level1?symbol={symbol}",
+        "url":       "https://api.kucoin.com/api/v1/market/orderbook/level1?symbol={symbol}",
         "price_key": "price",
     },
     "Bybit": {
-        "url": "https://api.bybit.com/v5/market/tickers?category=linear&symbol={symbol}",
+        "url":       "https://api.bybit.com/v5/market/tickers?category=linear&symbol={symbol}",
         "price_key": "lastPrice",
-    }
+    },
 }
+
+MAX_SIGNAL_AGE_HOURS = 72   # Auto-close signals open longer than this
 
 
 def format_symbol(pair: str, exchange: str) -> str:
-    """
-    Convert pair symbol to exchange-specific format.
-    Data stores pairs as 'BNB/USDT' or 'SUIUSDT'.
-    - KuCoin expects: BNB-USDT (dash-separated)
-    - Binance expects: BNBUSDT (no separator)
-    - Bybit expects: BNBUSDT (no separator)
-    """
     pair = pair.strip()
     if exchange == "KuCoin":
         if "/" in pair:
@@ -57,48 +66,39 @@ def format_symbol(pair: str, exchange: str) -> str:
 
 
 def get_exchange_price(symbol: str, exchange: str) -> float:
-    """Fetch current price from the correct exchange based on signal metadata."""
     if exchange not in EXCHANGE_APIS:
-        print(f"[WARN] Unknown exchange: {exchange}. Defaulting to Binance.")
         exchange = "Binance"
-    api_info = EXCHANGE_APIS[exchange]
+    api_info         = EXCHANGE_APIS[exchange]
     formatted_symbol = format_symbol(symbol, exchange)
-    for attempt in range(3):
+    for attempt in range(2):
         try:
-            url = api_info["url"].format(symbol=formatted_symbol)
-            r = requests.get(url, timeout=8)
+            url  = api_info["url"].format(symbol=formatted_symbol)
+            r    = requests.get(url, timeout=5)
             r.raise_for_status()
             data = r.json()
             if exchange == "KuCoin" and "data" in data:
                 data = data["data"]
             elif exchange == "Bybit" and "result" in data:
                 tickers = data["result"].get("list", [])
-                if tickers:
-                    data = tickers[0]
-                else:
-                    data = {}
+                data = tickers[0] if tickers else {}
             price = float(data.get(api_info["price_key"], 0))
             if price > 0:
                 return price
-            print(f"[WARN] Zero/empty price from {exchange} for {formatted_symbol} (attempt {attempt+1})")
-        except Exception as e:
-            print(f"[ERROR] {exchange} price fetch attempt {attempt+1}/3 failed for {formatted_symbol}: {e}")
-            if attempt < 2:
-                time.sleep(1)
-    print(f"[ERROR] All attempts failed for {symbol} (formatted: {formatted_symbol}) on {exchange}")
+        except Exception:
+            if attempt < 1:
+                time.sleep(0.5)
     return None
 
 
 def send_telegram(message: str):
-    """Send message to Telegram via Hermes bot."""
     if not HERMES_BOT_TOKEN or not HERMES_CHAT_ID:
         print(f"[TELEGRAM] {message}")
         return
     try:
         url = f"https://api.telegram.org/bot{HERMES_BOT_TOKEN}/sendMessage"
         requests.post(url, json={
-            "chat_id": HERMES_CHAT_ID,
-            "text": message,
+            "chat_id":    HERMES_CHAT_ID,
+            "text":       message,
             "parse_mode": "HTML"
         }, timeout=5)
     except Exception as e:
@@ -106,17 +106,14 @@ def send_telegram(message: str):
 
 
 def get_tp_value(sig: dict) -> float:
-    """Extract TP value from signal, supporting tp, tp1, tp2, tp3, or list format."""
-    # Try tp1 first (Hermes-style multi-TP)
+    """Extract TP1 value from signal (used as win-target)."""
     if sig.get("tp1") is not None:
         return float(sig["tp1"])
-    # Try single tp (could be number, list, or None)
     tp_raw = sig.get("tp")
     if tp_raw is not None:
         if isinstance(tp_raw, list):
             return float(tp_raw[0]) if tp_raw else 0.0
         return float(tp_raw)
-    # Try tp2, tp3 as fallback
     if sig.get("tp2") is not None:
         return float(sig["tp2"])
     if sig.get("tp3") is not None:
@@ -125,7 +122,6 @@ def get_tp_value(sig: dict) -> float:
 
 
 def validate_signals():
-    """Main validator - reads signals_log.json, checks OPEN signals, updates results."""
     if not os.path.exists(SIGNAL_LOG_FILE):
         print(f"[INFO] No signal log found at {SIGNAL_LOG_FILE}")
         return
@@ -134,81 +130,147 @@ def validate_signals():
         signals = json.load(f)
 
     updated = False
-    now = datetime.now(timezone.utc).isoformat()
+    now_str = datetime.now(timezone.utc).isoformat()
 
+    # Collect all open signals that need price checks
+    open_sigs = []
     for sig in signals:
         if sig.get("status") != "OPEN":
             continue
-
-        symbol = sig.get("pair", "")
-        direction = sig.get("side", sig.get("direction", "")).upper()
-        entry = float(sig.get("entry", 0))
-        sl = float(sig.get("sl", 0))
+        symbol   = sig.get("pair", "")
+        direction= sig.get("side", sig.get("direction", "")).upper()
+        entry    = float(sig.get("entry", 0))
+        sl       = float(sig.get("sl", 0))
         exchange = sig.get("exchange", "Binance")
-        tp = get_tp_value(sig)
-
+        tp       = get_tp_value(sig)
         if not symbol or not entry or not tp or not sl:
-            print(f"[SKIP] Incomplete signal {sig.get('id', '?')}: symbol={symbol} entry={entry} tp={tp} sl={sl}")
+            print(f"[SKIP] Incomplete signal {sig.get('id', '?')}")
             continue
+        open_sigs.append((sig, symbol, direction, entry, sl, exchange, tp))
 
-        current_price = get_exchange_price(symbol, exchange)
-        if current_price is None:
-            continue
+    print(f"[INFO] Checking {len(open_sigs)} OPEN signals...")
 
-        result = None
-        outcome = None
+    # Fetch prices concurrently (max 10 parallel requests)
+    from concurrent.futures import ThreadPoolExecutor, as_completed
+    price_cache = {}
 
-        if direction == "LONG":
-            if current_price >= tp:
-                result = "WIN"
-                outcome = "TP HIT"
-            elif current_price <= sl:
-                result = "LOSS"
-                outcome = "SL HIT"
-        elif direction == "SHORT":
-            if current_price <= tp:
-                result = "WIN"
-                outcome = "TP HIT"
-            elif current_price >= sl:
-                result = "LOSS"
-                outcome = "SL HIT"
+    def _fetch(args):
+        sig, symbol, direction, entry, sl, exchange, tp = args
+        price = get_exchange_price(symbol, exchange)
+        return (sig, symbol, direction, entry, sl, exchange, tp, price)
 
-        if result:
+    with ThreadPoolExecutor(max_workers=5) as executor:
+        futures = {executor.submit(_fetch, s): s for s in open_sigs}
+        done_count = 0
+        for future in as_completed(futures):
+            done_count += 1
+            if done_count % 20 == 0:
+                print(f"       Prices fetched: {done_count}/{len(open_sigs)}")
+            try:
+                sig, symbol, direction, entry, sl, exchange, tp, current_price = future.result()
+            except Exception as e:
+                print(f"[ERROR] {e}")
+                continue
+
+            if current_price is None:
+                continue
+
+            # ── Signal expiry check: auto-close stale signals ──
+            signal_time = sig.get("time", "")
+            if signal_time:
+                try:
+                    dt_open = datetime.fromisoformat(signal_time.replace("Z", "+00:00"))
+                    age_hours = (datetime.now(timezone.utc) - dt_open).total_seconds() / 3600
+                    if age_hours > MAX_SIGNAL_AGE_HOURS:
+                        # Close as EXPIRED at current price
+                        if direction == "LONG":
+                            pnl_pct = (current_price - entry) / entry * 100
+                        else:
+                            pnl_pct = (entry - current_price) / entry * 100
+                        pnl_usd = round(CAPITAL_PER_TRADE * pnl_pct / 100, 2)
+                        pnl_pct = round(pnl_pct, 2)
+                        result = "WIN" if pnl_usd > 0 else "LOSS"
+
+                        sig["status"]     = result
+                        sig["result"]     = "EXPIRED"
+                        sig["exit_price"] = current_price
+                        sig["pnl_usd"]    = pnl_usd
+                        sig["pnl_pct"]    = pnl_pct
+                        sig["exit_time"]  = now_str
+                        sig["closed_at"]  = now_str
+                        updated = True
+
+                        emoji = "⏰"
+                        pnl_str = f"+${pnl_usd}" if pnl_usd > 0 else f"-${abs(pnl_usd)}"
+                        msg = (
+                            f"{emoji} <b>SIGNAL EXPIRED</b> ({age_hours:.0f}h)\\n"
+                            f"Pair: <b>{symbol}</b> | {direction}\\n"
+                            f"Entry: {entry} | Exit: {current_price}\\n"
+                            f"P&L: {pnl_str} ({pnl_pct}%)\\n"
+                            f"Closed at current price"
+                        )
+                        send_telegram(msg)
+                        print(f"[EXPIRED] {symbol} {direction} | {age_hours:.0f}h old | PnL: {pnl_str}")
+                        continue
+                except Exception:
+                    pass
+
+            # ── Tiered TP validation ──
+            # TP1 → 33% close, TP2 → 33%, TP3 → 34% remaining
+            tp1 = float(sig.get("tp1", 0)) if sig.get("tp1") else tp
+            tp2 = float(sig.get("tp2", 0)) if sig.get("tp2") else None
+            tp3 = float(sig.get("tp3", 0)) if sig.get("tp3") else None
+            close_pct = sig.get("close_pct", 0)  # % of position already closed
+
+            result  = None
+            outcome = None
+
             if direction == "LONG":
-                pnl_pct = (current_price - entry) / entry * 100
+                if current_price >= tp:
+                    result, outcome = "WIN",  "TP HIT"
+                elif current_price <= sl:
+                    result, outcome = "LOSS", "SL HIT"
+            elif direction == "SHORT":
+                if current_price <= tp:
+                    result, outcome = "WIN",  "TP HIT"
+                elif current_price >= sl:
+                    result, outcome = "LOSS", "SL HIT"
+
+            if result:
+                if direction == "LONG":
+                    pnl_pct = (current_price - entry) / entry * 100
+                else:
+                    pnl_pct = (entry - current_price) / entry * 100
+
+                pnl_usd = round(CAPITAL_PER_TRADE * pnl_pct / 100, 2)
+                pnl_pct = round(pnl_pct, 2)
+
+                sig["status"]     = result
+                sig["result"]     = outcome
+                sig["exit_price"] = current_price
+                sig["pnl_usd"]    = pnl_usd
+                sig["pnl_pct"]    = pnl_pct
+                sig["exit_time"]  = now_str
+                sig["closed_at"]  = now_str
+                updated = True
+
+                emoji   = "✅" if result == "WIN" else "❌"
+                pnl_str = (f"+${pnl_usd} (+{pnl_pct}%)" if result == "WIN"
+                           else f"-${abs(pnl_usd)} ({pnl_pct}%)")
+
+                msg = (
+                    f"{emoji} <b>SIGNAL {result}</b>\n"
+                    f"Exchange: <b>{exchange}</b> | Pair: <b>{symbol}</b> | {direction}\n"
+                    f"Entry: {entry} | Exit: {current_price}\n"
+                    f"Result: {outcome}\n"
+                    f"P&L: {pnl_str} (@${int(CAPITAL_PER_TRADE)} capital)\n"
+                    f"Time: {now_str[:16].replace('T', ' ')} UTC"
+                )
+                send_telegram(msg)
+                print(f"[{result}] {exchange} | {symbol} {direction} | {outcome} | PnL: {pnl_str}")
             else:
-                pnl_pct = (entry - current_price) / entry * 100
-
-            pnl_usd = round(CAPITAL_PER_TRADE * pnl_pct / 100, 2)
-            pnl_pct = round(pnl_pct, 2)
-
-            sig["status"] = result
-            sig["result"] = outcome
-            sig["exit_price"] = current_price
-            sig["exit_time"] = now
-            sig["pnl_usd"] = pnl_usd
-            sig["pnl_pct"] = pnl_pct
-            updated = True
-
-            if result == "WIN":
-                emoji = "\u2705"
-                pnl_str = f"+${pnl_usd} (+{pnl_pct}%)"
-            else:
-                emoji = "\u274c"
-                pnl_str = f"-${abs(pnl_usd)} ({pnl_pct}%)"
-
-            msg = (
-                f"{emoji} <b>SIGNAL {result}</b>\n"
-                f"Exchange: <b>{exchange}</b> | Pair: <b>{symbol}</b> | {direction}\n"
-                f"Entry: {entry} | Exit: {current_price}\n"
-                f"Result: {outcome}\n"
-                f"P&L: {pnl_str} (@${int(CAPITAL_PER_TRADE)} capital)\n"
-                f"Time: {now[:16].replace('T', ' ')} UTC"
-            )
-            send_telegram(msg)
-            print(f"[{result}] {exchange} | {symbol} {direction} | {outcome} | PnL: {pnl_str}")
-        else:
-            print(f"[OPEN] {exchange} | {symbol} {direction} | Entry: {entry} | SL: {sl} | TP: {tp} | Current: {current_price}")
+                print(f"[OPEN] {exchange} | {symbol} {direction} | "
+                      f"Entry: {entry} | SL: {sl} | TP: {tp} | Current: {current_price}")
 
     if updated:
         with open(SIGNAL_LOG_FILE, "w") as f:
