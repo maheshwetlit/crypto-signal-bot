@@ -3825,5 +3825,30 @@
     "pnl_usd": null,
     "result": null,
     "closed_at": null
+  },
+  {
+    "id": "SIG-0154",
+    "time": "2026-06-06T16:20:51.675196+00:00",
+    "pair": "WLD/USDT",
+    "exchange": "KuCoin",
+    "direction": "SHORT",
+    "style": "MOMENTUM",
+    "score": 92.0,
+    "adx": 13.0,
+    "rsi": 34.8,
+    "volume_x": 2.84,
+    "htf_trend": "NEUTRAL",
+    "entry": 0.4091,
+    "sl": 0.4178428571428572,
+    "tp1": 0.3959857142857143,
+    "tp2": 0.38724285714285717,
+    "tp3": 0.3741285714285714,
+    "tp_main": 0.3741285714285714,
+    "capital": 1000.0,
+    "status": "OPEN",
+    "exit_price": null,
+    "pnl_usd": null,
+    "result": null,
+    "closed_at": null
   }
 ]
