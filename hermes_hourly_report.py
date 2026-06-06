@@ -334,6 +334,20 @@ def main():
 
     with open(os.path.join(SCRIPT_DIR, "last_hourly_report.txt"), "w") as f:
         f.write(report)
+
+    # Step 6: Win/Loss tracker
+    print("[6/6] Running win/loss tracker...")
+    try:
+        import subprocess as sp
+        tracker_result = sp.run(
+            [sys.executable, os.path.join(SCRIPT_DIR, "win_loss_tracker.py")],
+            capture_output=True, text=True, timeout=30
+        )
+        if tracker_result.stdout:
+            print(tracker_result.stdout.strip())
+    except Exception as e:
+        print(f"       Tracker error (non-fatal): {e}")
+
     print("[DONE]")
 
 
