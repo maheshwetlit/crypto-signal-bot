@@ -4100,11 +4100,13 @@
     "tp3": 0.5664142857142855,
     "tp_main": 0.5664142857142855,
     "capital": 1000.0,
-    "status": "OPEN",
-    "exit_price": null,
-    "pnl_usd": null,
-    "result": null,
-    "closed_at": null
+    "status": "WIN",
+    "exit_price": 0.5938,
+    "pnl_usd": 27.04,
+    "result": "TP HIT",
+    "closed_at": "2026-06-06T20:01:40.689235+00:00",
+    "pnl_pct": 2.7,
+    "exit_time": "2026-06-06T20:01:40.689235+00:00"
   },
   {
     "id": "SIG-0154",
