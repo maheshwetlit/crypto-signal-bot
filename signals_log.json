@@ -3301,17 +3301,22 @@
     "tp3": 0.058291071428571435,
     "tp_main": 0.058291071428571435,
     "capital": 1000.0,
-    "status": "OPEN",
-    "exit_price": null,
-    "pnl_usd": null,
-    "result": null,
-    "closed_at": null,
-    "exit_time": null,
+    "status": "BLOCKED",
+    "exit_price": 0.05922,
+    "pnl_usd": 0.0,
+    "result": "FILTER_BLOCKED",
+    "closed_at": "2026-06-21T17:04:39.229901+00:00",
+    "exit_time": "2026-06-21T17:04:39.229901+00:00",
     "grind_count": 0,
     "grind_entries": [
       0.05922
     ],
-    "tag": "ema_short"
+    "tag": "ema_short",
+    "filter_checked": true,
+    "filter_result": "BLOCK",
+    "filter_reason": "BLOCKED: Volume 0.59x < minimum 1.5x",
+    "filter_confidence": "NONE",
+    "pnl_pct": 0.0
   },
   {
     "id": "SIG-0112",
@@ -3333,16 +3338,21 @@
     "tp3": 0.058291071428571435,
     "tp_main": 0.058291071428571435,
     "capital": 1000.0,
-    "status": "OPEN",
-    "exit_price": null,
-    "pnl_usd": null,
-    "result": null,
-    "closed_at": null,
-    "exit_time": null,
+    "status": "BLOCKED",
+    "exit_price": 0.05922,
+    "pnl_usd": 0.0,
+    "result": "FILTER_BLOCKED",
+    "closed_at": "2026-06-21T17:04:39.229901+00:00",
+    "exit_time": "2026-06-21T17:04:39.229901+00:00",
     "grind_count": 0,
     "grind_entries": [
       0.05922
     ],
-    "tag": "bb_short"
+    "tag": "bb_short",
+    "filter_checked": true,
+    "filter_result": "BLOCK",
+    "filter_reason": "BLOCKED: Volume 0.59x < minimum 1.5x",
+    "filter_confidence": "NONE",
+    "pnl_pct": 0.0
   }
 ]
