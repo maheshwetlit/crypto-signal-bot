@@ -3354,5 +3354,37 @@
     "filter_reason": "BLOCKED: Volume 0.59x < minimum 1.5x",
     "filter_confidence": "NONE",
     "pnl_pct": 0.0
+  },
+  {
+    "id": "SIG-0113",
+    "time": "2026-06-21T17:12:52.564364+00:00",
+    "pair": "ADA/USDT",
+    "exchange": "KuCoin",
+    "direction": "SHORT",
+    "style": "NFI_KST",
+    "score": 70.0,
+    "adx": 26.3,
+    "rsi": 50.0,
+    "rsi3": NaN,
+    "volume_x": 1.2,
+    "htf_trend": "BEARISH",
+    "entry": 0.1623,
+    "sl": 0.16279285714285713,
+    "tp1": 0.16131428571428572,
+    "tp2": 0.16082142857142856,
+    "tp3": 0.1598357142857143,
+    "tp_main": 0.1598357142857143,
+    "capital": 1000.0,
+    "status": "OPEN",
+    "exit_price": null,
+    "pnl_usd": null,
+    "result": null,
+    "closed_at": null,
+    "exit_time": null,
+    "grind_count": 0,
+    "grind_entries": [
+      0.1623
+    ],
+    "tag": "nfi_kst_short"
   }
 ]
