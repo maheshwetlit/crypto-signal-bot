@@ -3375,16 +3375,21 @@
     "tp3": 0.1598357142857143,
     "tp_main": 0.1598357142857143,
     "capital": 1000.0,
-    "status": "OPEN",
-    "exit_price": null,
-    "pnl_usd": null,
-    "result": null,
-    "closed_at": null,
-    "exit_time": null,
+    "status": "BLOCKED",
+    "exit_price": 0.1623,
+    "pnl_usd": 0.0,
+    "result": "FILTER_BLOCKED",
+    "closed_at": "2026-06-21T18:00:04.656555+00:00",
+    "exit_time": "2026-06-21T18:00:04.656555+00:00",
     "grind_count": 0,
     "grind_entries": [
       0.1623
     ],
-    "tag": "nfi_kst_short"
+    "tag": "nfi_kst_short",
+    "filter_checked": true,
+    "filter_result": "BLOCK",
+    "filter_reason": "BLOCKED: RSI 50.0 in death zone (50.0-59.0)",
+    "filter_confidence": "NONE",
+    "pnl_pct": 0.0
   }
 ]
