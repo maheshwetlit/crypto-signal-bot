@@ -2947,5 +2947,37 @@
     "filter_reason": "BLOCKED: LONG signals disabled (15.8% WR)",
     "filter_confidence": "NONE",
     "pnl_pct": 0.0
+  },
+  {
+    "id": "SIG-0102",
+    "time": "2026-06-21T15:15:00.384708+00:00",
+    "pair": "BILL/USDT",
+    "exchange": "KuCoin",
+    "direction": "SHORT",
+    "style": "NFI_KST",
+    "score": 70.0,
+    "adx": 28.1,
+    "rsi": 75.4,
+    "rsi3": NaN,
+    "volume_x": 1.5,
+    "htf_trend": "NEUTRAL",
+    "entry": 0.05737,
+    "sl": 0.058117857142857145,
+    "tp1": 0.05587428571428571,
+    "tp2": 0.05512642857142856,
+    "tp3": 0.053630714285714275,
+    "tp_main": 0.053630714285714275,
+    "capital": 1000.0,
+    "status": "OPEN",
+    "exit_price": null,
+    "pnl_usd": null,
+    "result": null,
+    "closed_at": null,
+    "exit_time": null,
+    "grind_count": 0,
+    "grind_entries": [
+      0.05737
+    ],
+    "tag": "nfi_kst_short"
   }
 ]
