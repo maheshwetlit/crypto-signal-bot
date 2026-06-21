@@ -2857,17 +2857,22 @@
     "tp3": 0.16751428571428575,
     "tp_main": 0.16751428571428575,
     "capital": 1000.0,
-    "status": "OPEN",
-    "exit_price": null,
-    "pnl_usd": null,
-    "result": null,
-    "closed_at": null,
-    "exit_time": null,
+    "status": "BLOCKED",
+    "exit_price": 0.1652,
+    "pnl_usd": 0.0,
+    "result": "FILTER_BLOCKED",
+    "closed_at": "2026-06-21T15:06:28.848356+00:00",
+    "exit_time": "2026-06-21T15:06:28.848356+00:00",
     "grind_count": 0,
     "grind_entries": [
       0.1652
     ],
-    "tag": "bb_long"
+    "tag": "bb_long",
+    "filter_checked": true,
+    "filter_result": "BLOCK",
+    "filter_reason": "BLOCKED: LONG signals disabled (15.8% WR)",
+    "filter_confidence": "NONE",
+    "pnl_pct": 0.0
   },
   {
     "id": "SIG-0100",
@@ -2889,17 +2894,22 @@
     "tp3": 0.22833035714285715,
     "tp_main": 0.22833035714285715,
     "capital": 1000.0,
-    "status": "OPEN",
-    "exit_price": null,
-    "pnl_usd": null,
-    "result": null,
-    "closed_at": null,
-    "exit_time": null,
+    "status": "BLOCKED",
+    "exit_price": 0.217,
+    "pnl_usd": 0.0,
+    "result": "FILTER_BLOCKED",
+    "closed_at": "2026-06-21T15:06:28.848356+00:00",
+    "exit_time": "2026-06-21T15:06:28.848356+00:00",
     "grind_count": 0,
     "grind_entries": [
       0.217
     ],
-    "tag": "nfi_kst_long"
+    "tag": "nfi_kst_long",
+    "filter_checked": true,
+    "filter_result": "BLOCK",
+    "filter_reason": "BLOCKED: LONG signals disabled (15.8% WR)",
+    "filter_confidence": "NONE",
+    "pnl_pct": 0.0
   },
   {
     "id": "SIG-0101",
@@ -2921,16 +2931,21 @@
     "tp3": 0.2237982142857143,
     "tp_main": 0.2237982142857143,
     "capital": 1000.0,
-    "status": "OPEN",
-    "exit_price": null,
-    "pnl_usd": null,
-    "result": null,
-    "closed_at": null,
-    "exit_time": null,
+    "status": "BLOCKED",
+    "exit_price": 0.217,
+    "pnl_usd": 0.0,
+    "result": "FILTER_BLOCKED",
+    "closed_at": "2026-06-21T15:06:28.848356+00:00",
+    "exit_time": "2026-06-21T15:06:28.848356+00:00",
     "grind_count": 0,
     "grind_entries": [
       0.217
     ],
-    "tag": "ema_long"
+    "tag": "ema_long",
+    "filter_checked": true,
+    "filter_result": "BLOCK",
+    "filter_reason": "BLOCKED: LONG signals disabled (15.8% WR)",
+    "filter_confidence": "NONE",
+    "pnl_pct": 0.0
   }
 ]
