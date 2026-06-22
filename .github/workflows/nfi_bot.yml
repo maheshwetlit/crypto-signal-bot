@@ -1,0 +1,31 @@
+name: NFI Crypto Bot
+
+on:
+  schedule:
+    - cron: '*/10 * * * *'  # every 10 minutes
+  workflow_dispatch:  # manual trigger
+
+jobs:
+  run-bot:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      
+      - name: Install dependencies
+        run: |
+          pip install ccxt pandas numpy requests
+      
+      - name: Run NFI bot
+        run: python crypto_signal_bot.py
+      
+      - name: Commit results
+        run: |
+          git config user.name "NFI Bot"
+          git config user.email "bot@nfibot"
+          git add signals_log.json bot_state.json
+          git diff --cached --quiet || git commit -m "Bot scan: $(date -u +%Y-%m-%dT%H:%M:%S)"
+          git push
