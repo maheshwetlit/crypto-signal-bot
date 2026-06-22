@@ -111,7 +111,7 @@ def _ma8_distance(price, ma8):
 def _load_signals():
     if not os.path.exists(Config.SIGNAL_LOG_FILE): return []
     try:
-        with open(Config.SIGNAL_LOG_FILE) as f: return json.load(f)
+        with open(Config.SIGNAL_LOG_FILE, encoding="utf-8") as f: return json.load(f)
     except: return []
 
 def log_signal(symbol, sig):
@@ -132,7 +132,7 @@ def log_signal(symbol, sig):
         "closed_at": None, "exit_time": None,
     }
     log.append(entry)
-    with open(Config.SIGNAL_LOG_FILE, "w") as f: json.dump(log, f, indent=2)
+    with open(Config.SIGNAL_LOG_FILE, "w", encoding="utf-8") as f: json.dump(log, f, indent=2)
     return entry["id"]
 
 # ── Bot State ──
@@ -142,10 +142,10 @@ class BotState:
         self.data = {"cooldowns": {}}
         if os.path.exists(path):
             try:
-                with open(path) as f: self.data = json.load(f)
+                with open(path, encoding="utf-8") as f: self.data = json.load(f)
             except: pass
     def save(self):
-        with open(self.path, "w") as f: json.dump(self.data, f)
+        with open(self.path, "w", encoding="utf-8") as f: json.dump(self.data, f)
     def is_on_cooldown(self, s):
         return time.time() < self.data["cooldowns"].get(s, 0)
     def record_and_save(self, s):
