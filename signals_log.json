@@ -3819,17 +3819,22 @@
     "tp3": 0.7522744,
     "tp_main": 0.7522744,
     "capital": 1000.0,
-    "status": "OPEN",
-    "exit_price": null,
-    "pnl_usd": null,
-    "result": null,
-    "closed_at": null,
-    "exit_time": null,
+    "status": "BLOCKED",
+    "exit_price": 0.69016,
+    "pnl_usd": 0.0,
+    "result": "FILTER_BLOCKED",
+    "closed_at": "2026-06-22T12:00:43.200653+00:00",
+    "exit_time": "2026-06-22T12:00:43.200653+00:00",
     "grind_count": 0,
     "grind_entries": [
       0.69016
     ],
-    "tag": "nfi_bb_long"
+    "tag": "nfi_bb_long",
+    "filter_checked": true,
+    "filter_result": "BLOCK",
+    "filter_reason": "BLOCKED: LONG signals disabled (15.8% WR)",
+    "filter_confidence": "NONE",
+    "pnl_pct": 0.0
   },
   {
     "id": "SIG-0126",
@@ -3851,17 +3856,22 @@
     "tp3": 0.7522744,
     "tp_main": 0.7522744,
     "capital": 1000.0,
-    "status": "OPEN",
-    "exit_price": null,
-    "pnl_usd": null,
-    "result": null,
-    "closed_at": null,
-    "exit_time": null,
+    "status": "BLOCKED",
+    "exit_price": 0.69016,
+    "pnl_usd": 0.0,
+    "result": "FILTER_BLOCKED",
+    "closed_at": "2026-06-22T12:00:43.200653+00:00",
+    "exit_time": "2026-06-22T12:00:43.200653+00:00",
     "grind_count": 0,
     "grind_entries": [
       0.69016
     ],
-    "tag": "nfi_cmf_long"
+    "tag": "nfi_cmf_long",
+    "filter_checked": true,
+    "filter_result": "BLOCK",
+    "filter_reason": "BLOCKED: LONG signals disabled (15.8% WR)",
+    "filter_confidence": "NONE",
+    "pnl_pct": 0.0
   },
   {
     "id": "SIG-0127",
@@ -3883,17 +3893,22 @@
     "tp3": 6.303357142857142,
     "tp_main": 6.303357142857142,
     "capital": 1000.0,
-    "status": "OPEN",
-    "exit_price": null,
-    "pnl_usd": null,
-    "result": null,
-    "closed_at": null,
-    "exit_time": null,
+    "status": "BLOCKED",
+    "exit_price": 6.358,
+    "pnl_usd": 0.0,
+    "result": "FILTER_BLOCKED",
+    "closed_at": "2026-06-22T12:00:43.200653+00:00",
+    "exit_time": "2026-06-22T12:00:43.200653+00:00",
     "grind_count": 0,
     "grind_entries": [
       6.358
     ],
-    "tag": "nfi_rsi3_short"
+    "tag": "nfi_rsi3_short",
+    "filter_checked": true,
+    "filter_result": "BLOCK",
+    "filter_reason": "BLOCKED: Volume 1.18x < minimum 1.5x",
+    "filter_confidence": "NONE",
+    "pnl_pct": 0.0
   },
   {
     "id": "SIG-0128",
@@ -3915,17 +3930,22 @@
     "tp3": 6.276035714285714,
     "tp_main": 6.276035714285714,
     "capital": 1000.0,
-    "status": "OPEN",
-    "exit_price": null,
-    "pnl_usd": null,
-    "result": null,
-    "closed_at": null,
-    "exit_time": null,
+    "status": "BLOCKED",
+    "exit_price": 6.358,
+    "pnl_usd": 0.0,
+    "result": "FILTER_BLOCKED",
+    "closed_at": "2026-06-22T12:00:43.200653+00:00",
+    "exit_time": "2026-06-22T12:00:43.200653+00:00",
     "grind_count": 0,
     "grind_entries": [
       6.358
     ],
-    "tag": "nfi_bb_short"
+    "tag": "nfi_bb_short",
+    "filter_checked": true,
+    "filter_result": "BLOCK",
+    "filter_reason": "BLOCKED: Volume 1.18x < minimum 1.5x",
+    "filter_confidence": "NONE",
+    "pnl_pct": 0.0
   },
   {
     "id": "SIG-0129",
@@ -3947,17 +3967,22 @@
     "tp3": 0.7084089285714286,
     "tp_main": 0.7084089285714286,
     "capital": 1000.0,
-    "status": "OPEN",
-    "exit_price": null,
-    "pnl_usd": null,
-    "result": null,
-    "closed_at": null,
-    "exit_time": null,
+    "status": "BLOCKED",
+    "exit_price": 0.7262,
+    "pnl_usd": 0.0,
+    "result": "FILTER_BLOCKED",
+    "closed_at": "2026-06-22T12:00:43.200653+00:00",
+    "exit_time": "2026-06-22T12:00:43.200653+00:00",
     "grind_count": 0,
     "grind_entries": [
       0.7262
     ],
-    "tag": "nfi_bb_short"
+    "tag": "nfi_bb_short",
+    "filter_checked": true,
+    "filter_result": "BLOCK",
+    "filter_reason": "BLOCKED: Volume 1.29x < minimum 1.5x",
+    "filter_confidence": "NONE",
+    "pnl_pct": 0.0
   },
   {
     "id": "SIG-0130",
@@ -3979,17 +4004,22 @@
     "tp3": 0.7070946428571427,
     "tp_main": 0.7070946428571427,
     "capital": 1000.0,
-    "status": "OPEN",
-    "exit_price": null,
-    "pnl_usd": null,
-    "result": null,
-    "closed_at": null,
-    "exit_time": null,
+    "status": "BLOCKED",
+    "exit_price": 0.7299,
+    "pnl_usd": 0.0,
+    "result": "FILTER_BLOCKED",
+    "closed_at": "2026-06-22T12:00:43.200653+00:00",
+    "exit_time": "2026-06-22T12:00:43.200653+00:00",
     "grind_count": 0,
     "grind_entries": [
       0.7299
     ],
-    "tag": "nfi_bb_short"
+    "tag": "nfi_bb_short",
+    "filter_checked": true,
+    "filter_result": "BLOCK",
+    "filter_reason": "BLOCKED: Volume 1.19x < minimum 1.5x",
+    "filter_confidence": "NONE",
+    "pnl_pct": 0.0
   },
   {
     "id": "SIG-0131",
@@ -4011,16 +4041,21 @@
     "tp3": 0.7146964285714286,
     "tp_main": 0.7146964285714286,
     "capital": 1000.0,
-    "status": "OPEN",
-    "exit_price": null,
-    "pnl_usd": null,
-    "result": null,
-    "closed_at": null,
-    "exit_time": null,
+    "status": "BLOCKED",
+    "exit_price": 0.7299,
+    "pnl_usd": 0.0,
+    "result": "FILTER_BLOCKED",
+    "closed_at": "2026-06-22T12:00:43.200653+00:00",
+    "exit_time": "2026-06-22T12:00:43.200653+00:00",
     "grind_count": 0,
     "grind_entries": [
       0.7299
     ],
-    "tag": "nfi_srsi_short"
+    "tag": "nfi_srsi_short",
+    "filter_checked": true,
+    "filter_result": "BLOCK",
+    "filter_reason": "BLOCKED: Volume 1.19x < minimum 1.5x",
+    "filter_confidence": "NONE",
+    "pnl_pct": 0.0
   }
 ]
