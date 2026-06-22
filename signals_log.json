@@ -3745,17 +3745,22 @@
     "tp3": 0.8216257142857142,
     "tp_main": 0.8216257142857142,
     "capital": 1000.0,
-    "status": "OPEN",
-    "exit_price": null,
-    "pnl_usd": null,
-    "result": null,
-    "closed_at": null,
-    "exit_time": null,
+    "status": "BLOCKED",
+    "exit_price": 0.79475,
+    "pnl_usd": 0.0,
+    "result": "FILTER_BLOCKED",
+    "closed_at": "2026-06-22T11:02:32.314194+00:00",
+    "exit_time": "2026-06-22T11:02:32.314194+00:00",
     "grind_count": 0,
     "grind_entries": [
       0.79475
     ],
-    "tag": "nfi_rsi3_long"
+    "tag": "nfi_rsi3_long",
+    "filter_checked": true,
+    "filter_result": "BLOCK",
+    "filter_reason": "BLOCKED: LONG signals disabled (15.8% WR)",
+    "filter_confidence": "NONE",
+    "pnl_pct": 0.0
   },
   {
     "id": "SIG-0124",
@@ -3777,16 +3782,21 @@
     "tp3": 0.8350635714285713,
     "tp_main": 0.8350635714285713,
     "capital": 1000.0,
-    "status": "OPEN",
-    "exit_price": null,
-    "pnl_usd": null,
-    "result": null,
-    "closed_at": null,
-    "exit_time": null,
+    "status": "BLOCKED",
+    "exit_price": 0.79475,
+    "pnl_usd": 0.0,
+    "result": "FILTER_BLOCKED",
+    "closed_at": "2026-06-22T11:02:32.314194+00:00",
+    "exit_time": "2026-06-22T11:02:32.314194+00:00",
     "grind_count": 0,
     "grind_entries": [
       0.79475
     ],
-    "tag": "nfi_bb_long"
+    "tag": "nfi_bb_long",
+    "filter_checked": true,
+    "filter_result": "BLOCK",
+    "filter_reason": "BLOCKED: LONG signals disabled (15.8% WR)",
+    "filter_confidence": "NONE",
+    "pnl_pct": 0.0
   }
 ]
