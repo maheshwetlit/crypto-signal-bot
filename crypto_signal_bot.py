@@ -680,36 +680,39 @@ def _score_signal_nfi(ind, direction, style, regime):
     if not is_long and ind["rsi3_15m"] < 70:
         score -= 8
 
-    # 4h trend should agree
-    if is_long and ind["fh_c"] < ind["fh_e50"]:
-        score -= 10
-    if not is_long and ind["fh_c"] > ind["fh_e50"]:
-        score -= 10
+    # ── HARD TREND BLOCKS (NFI principle: never fight the trend) ──
+    # If 4H and daily both strongly against trade, REJECT entirely
+    trend_against = 0
+    if is_long:
+        if ind["fh_c"] < ind["fh_e50"]:  # 4H bearish
+            trend_against += 1
+        if ind["dc"] < ind["de200"]:  # Daily bearish
+            trend_against += 1
+        if ind["ht_t"] == "BEARISH":  # 1H bearish
+            trend_against += 1
+    else:  # SHORT
+        if ind["fh_c"] > ind["fh_e50"]:  # 4H bullish
+            trend_against += 1
+        if ind["dc"] > ind["de200"]:  # Daily bullish
+            trend_against += 1
+        if ind["ht_t"] == "BULLISH":  # 1H bullish
+            trend_against += 1
 
-    # Daily trend (macro)
-    if is_long and ind["dc"] < ind["de200"]:
-        score -= 12
-    if not is_long and ind["dc"] > ind["de200"]:
-        score -= 12
+    # If 2+ timeframes are against the trade, heavy penalty
+    if trend_against >= 2:
+        score -= 30  # Essentially blocks the signal
+    elif trend_against == 1:
+        score -= 15
 
-    # ── HTF alignment ──
+    # ── HTF alignment (regime-aware) ──
     regime_bearish = regime in ("EXTREME_FEAR", "BEARISH")
     regime_bullish = regime == "BULLISH"
 
     if is_long:
         if ind["ht_t"] == "BEARISH" and not regime_bullish:
             score -= 10
-        # Extra penalty if 4H is also bearish
-        if ind.get("fh_c", 0) < ind.get("fh_e50", 0):
-            score -= 8
     else:  # SHORT
         if ind["ht_t"] == "BULLISH" and not regime_bearish:
-            score -= 10
-        # Extra penalty if 4H is also bullish
-        if ind.get("fh_c", 0) > ind.get("fh_e50", 0):
-            score -= 8
-        # Extra penalty if daily trend is bullish
-        if ind.get("dc", 0) > ind.get("de200", 0):
             score -= 10
 
     # ── MACD confirmation ──
