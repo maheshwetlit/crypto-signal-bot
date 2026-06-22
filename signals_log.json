@@ -3647,5 +3647,37 @@
       0.06245
     ],
     "tag": "nfi_srsi_short"
+  },
+  {
+    "id": "SIG-0122",
+    "time": "2026-06-22T07:44:39.451046+00:00",
+    "pair": "O/USDT",
+    "exchange": "KuCoin",
+    "direction": "LONG",
+    "style": "EMA_PULLBACK",
+    "score": 70.0,
+    "adx": 21.3,
+    "rsi": 72.8,
+    "rsi3": NaN,
+    "volume_x": 0.94,
+    "htf_trend": "BULLISH",
+    "entry": 0.76628,
+    "sl": 0.7509543999999999,
+    "tp1": 0.7892684,
+    "tp2": 0.7969312,
+    "tp3": 0.8122568,
+    "tp_main": 0.8122568,
+    "capital": 1000.0,
+    "status": "OPEN",
+    "exit_price": null,
+    "pnl_usd": null,
+    "result": null,
+    "closed_at": null,
+    "exit_time": null,
+    "grind_count": 0,
+    "grind_entries": [
+      0.76628
+    ],
+    "tag": "ema_long"
   }
 ]
