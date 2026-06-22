@@ -48,7 +48,7 @@ EXCHANGE_APIS = {
 
 def load_token(path):
     if os.path.exists(path):
-        with open(path) as f:
+        with open(path, encoding="utf-8") as f:
             return f.read().strip()
     return ""
 
@@ -62,7 +62,7 @@ def gh_fetch_signals():
         "Authorization": "Bearer " + token,
         "Accept": "application/vnd.github.v3+json"
     })
-    resp = urllib.request.urlopen(req, timeout=15)
+    resp = urllib.request.urlopen(req, timeout=15, encoding="utf-8")
     data = json.loads(resp.read())
     raw = base64.b64decode(data["content"]).decode()
     return json.loads(raw)
@@ -76,7 +76,7 @@ def gh_commit_signals(signals):
         "Authorization": "Bearer " + token,
         "Accept": "application/vnd.github.v3+json"
     })
-    resp = urllib.request.urlopen(req, timeout=15)
+    resp = urllib.request.urlopen(req, timeout=15, encoding="utf-8")
     sha = json.loads(resp.read())["sha"]
     payload = json.dumps({
         "message": "Signal update " + datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC"),
@@ -88,7 +88,7 @@ def gh_commit_signals(signals):
         "Accept": "application/vnd.github.v3+json",
         "Content-Type": "application/json"
     }, method="PUT")
-    resp2 = urllib.request.urlopen(req2, timeout=15)
+    resp2 = urllib.request.urlopen(req2, timeout=15, encoding="utf-8")
     return resp2.status == 200
 
 
@@ -288,7 +288,7 @@ def get_last_run_time():
     tracker_file = os.path.join(SCRIPT_DIR, "win_loss_tracker.json")
     if os.path.exists(tracker_file):
         try:
-            with open(tracker_file) as f:
+            with open(tracker_file, encoding="utf-8") as f:
                 data = json.load(f)
             snaps = data.get("snapshots", [])
             if snaps:
@@ -341,7 +341,7 @@ def main():
     signals = gh_fetch_signals()
     open_count = len([s for s in signals if s.get("status") == "OPEN"])
     print(f"       {len(signals)} signals ({open_count} OPEN)")
-    with open(SIGNAL_LOG_FILE, "w") as f:
+    with open(SIGNAL_LOG_FILE, "w", encoding="utf-8") as f:
         json.dump(signals, f, indent=2)
 
     # Step 1b: Run entry filter on NEW signals
@@ -373,7 +373,7 @@ def main():
         if new_signals:
             print(f"  Filter result: {len(new_signals)-blocked_count}/{len(new_signals)} passed, {blocked_count} blocked")
             # Re-save with filter results
-            with open(SIGNAL_LOG_FILE, "w") as f:
+            with open(SIGNAL_LOG_FILE, "w", encoding="utf-8") as f:
                 json.dump(signals, f, indent=2)
         else:
             print("  No new signals to filter")
@@ -398,7 +398,7 @@ def main():
 
     # Step 3: Read updated signals
     print("[3/6] Reading updated signals...")
-    with open(SIGNAL_LOG_FILE) as f:
+    with open(SIGNAL_LOG_FILE, encoding="utf-8") as f:
         updated = json.load(f)
 
     # Step 4: Commit back to GitHub (non-fatal if it fails)
@@ -430,7 +430,7 @@ def main():
         else:
             print("       ERROR: Telegram send failed")
 
-    with open(os.path.join(SCRIPT_DIR, "last_hourly_report.txt"), "w") as f:
+    with open(os.path.join(SCRIPT_DIR, "last_hourly_report.txt"), "w", encoding="utf-8") as f:
         f.write(report)
 
     # Step 6: Win/Loss tracker
@@ -458,7 +458,7 @@ def main():
         print(dashboard)
         # Send dashboard to Telegram
         if not dry_run:
-            _token = open(os.path.join(SCRIPT_DIR, ".tg_token")).read().strip()
+            _token = open(os.path.join(SCRIPT_DIR, ".tg_token"), encoding="utf-8").read().strip()
             _url = f"https://api.telegram.org/bot{_token}/sendMessage"
             # Split if needed
             _chunks = []
