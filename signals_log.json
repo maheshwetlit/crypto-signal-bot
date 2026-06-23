@@ -317,12 +317,17 @@
     "tp2": 1.1138549999999998,
     "tp3": 1.1125199999999997,
     "capital": 1000.0,
-    "status": "OPEN",
-    "exit_price": null,
-    "pnl_usd": null,
-    "result": null,
-    "closed_at": null,
-    "exit_time": null
+    "status": "BLOCKED",
+    "exit_price": 1.11608,
+    "pnl_usd": 0.0,
+    "result": "FILTER_BLOCKED",
+    "closed_at": "2026-06-23T08:00:57.019791+00:00",
+    "exit_time": "2026-06-23T08:00:57.019791+00:00",
+    "filter_checked": true,
+    "filter_result": "BLOCK",
+    "filter_reason": "BLOCKED: Volume 0x < minimum 1.5x",
+    "filter_confidence": "NONE",
+    "pnl_pct": 0.0
   },
   {
     "id": "SIG-0012",
@@ -342,11 +347,16 @@
     "tp2": 1.1138549999999998,
     "tp3": 1.1125199999999997,
     "capital": 1000.0,
-    "status": "OPEN",
-    "exit_price": null,
-    "pnl_usd": null,
-    "result": null,
-    "closed_at": null,
-    "exit_time": null
+    "status": "BLOCKED",
+    "exit_price": 1.11608,
+    "pnl_usd": 0.0,
+    "result": "FILTER_BLOCKED",
+    "closed_at": "2026-06-23T08:00:57.019791+00:00",
+    "exit_time": "2026-06-23T08:00:57.019791+00:00",
+    "filter_checked": true,
+    "filter_result": "BLOCK",
+    "filter_reason": "BLOCKED: Volume 0x < minimum 1.5x",
+    "filter_confidence": "NONE",
+    "pnl_pct": 0.0
   }
 ]
