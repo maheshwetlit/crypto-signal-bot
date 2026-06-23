@@ -2188,5 +2188,30 @@
     "filter_reason": "BLOCKED: Volume 0x < minimum 1.5x",
     "filter_confidence": "NONE",
     "pnl_pct": 0.0
+  },
+  {
+    "id": "SIG-0074",
+    "time": "2026-06-23T14:05:51.207392+00:00",
+    "pair": "ZEC/USDT",
+    "exchange": "KuCoin",
+    "direction": "SHORT",
+    "style": "GR_BB_REV",
+    "score": 78,
+    "rsi3": 68.9,
+    "rsi14": 53.3,
+    "ma8_dist": 0.05,
+    "entry": 422.975,
+    "sl": 425.238,
+    "sl_band": [],
+    "tp1": 419.58050000000003,
+    "tp2": 417.3175000000001,
+    "tp3": 413.9230000000001,
+    "capital": 1000.0,
+    "status": "OPEN",
+    "exit_price": null,
+    "pnl_usd": null,
+    "result": null,
+    "closed_at": null,
+    "exit_time": null
   }
 ]
