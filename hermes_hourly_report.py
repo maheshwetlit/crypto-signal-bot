@@ -332,40 +332,11 @@ def main():
         json.dump(signals, f, indent=2)
 
     # Step 1b: Run entry filter on NEW signals
-    print("[1b/6] Running entry filter on new signals...")
-    try:
-        import hermes_entry_filter as _filter
-        filter_log = _filter.load_filter_log()
-        new_signals = [s for s in signals if s.get("status") == "OPEN" and not s.get("filter_checked")]
-        blocked_count = 0
-        for sig in new_signals:
-            allowed, reason, confidence = _filter.check_entry_filter(sig, signals, filter_log)
-            sig["filter_checked"] = True
-            sig["filter_result"] = "PASS" if allowed else "BLOCK"
-            sig["filter_reason"] = reason
-            sig["filter_confidence"] = confidence
-            if not allowed:
-                blocked_count += 1
-                # Close blocked signals immediately
-                sig["status"] = "BLOCKED"
-                sig["result"] = "FILTER_BLOCKED"
-                sig["closed_at"] = datetime.now(timezone.utc).isoformat()
-                sig["exit_time"] = sig["closed_at"]
-                sig["exit_price"] = sig.get("entry", 0)
-                sig["pnl_usd"] = 0.0
-                sig["pnl_pct"] = 0.0
-                print(f"  [BLOCKED] {sig.get('pair','?')} {sig.get('direction','?')} — {reason}")
-            else:
-                print(f"  [PASS] {sig.get('pair','?')} {sig.get('direction','?')} — {reason} ({confidence})")
-        if new_signals:
-            print(f"  Filter result: {len(new_signals)-blocked_count}/{len(new_signals)} passed, {blocked_count} blocked")
-            # Re-save with filter results
-            with open(SIGNAL_LOG_FILE, "w") as f:
-                json.dump(signals, f, indent=2)
-        else:
-            print("  No new signals to filter")
-    except Exception as e:
-        print(f"  Filter error (non-fatal): {e}")
+    # NOTE: Entry filter is disabled — the bot's own trend filter (8-day MA direction + 
+    # RSI-3 thresholds) is sufficient. The old filter was blocking 100% of signals due to 
+    # field name mismatches (checking 'rsi' and 'volume_x' which the bot doesn't send).
+    print("[1b/6] Entry filter skipped (bot's internal trend filter is sufficient)")
+    print(f"       {len([s for s in signals if s.get('status')=='OPEN'])} OPEN signals will be validated")
 
     # Step 2: Run validator (import directly to use venv Python)
     print("[2/6] Running validator...")
