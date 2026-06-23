@@ -2010,12 +2010,13 @@
     "tp2": 62.036500000000004,
     "tp3": 61.396,
     "capital": 1000.0,
-    "status": "OPEN",
-    "exit_price": null,
-    "pnl_usd": null,
-    "result": null,
-    "closed_at": null,
-    "exit_time": null
+    "status": "WIN",
+    "exit_price": 62.325,
+    "pnl_usd": 12.34,
+    "result": "TP HIT",
+    "closed_at": "2026-06-23T16:00:27.280541+00:00",
+    "exit_time": "2026-06-23T16:00:27.280541+00:00",
+    "pnl_pct": 1.23
   },
   {
     "id": "SIG-0069",
