@@ -1,17 +1,19 @@
 #!/usr/bin/env python3
 """
-hermes_entry_filter.py — Signal Entry Filter v2 (NFI-Compatible)
+hermes_entry_filter.py — Signal Entry Filter v1
 Filters incoming signals based on historical performance data.
 
-NFI-compatible rules:
-  1. Allow both LONG and SHORT (NFI trades both directions)
-  2. Use RSI-3 for NFI signals, RSI-14 for legacy signals
-  3. Higher max concurrent positions (NFI uses 6-12)
-  4. Volume >= 1.0x for NFI (scalping needs less volume)
-  5. No RSI death zone for NFI signals (NFI uses RSI-3 extremes)
-  6. No time-of-day blocks for NFI (NFI trades all hours)
-  7. Circuit breaker: pause after 5+ consecutive losses (was 3)
-  8. Pair blacklist: auto-populated from historical data
+Data-driven rules from 155-signal analysis:
+  1. BLOCK LONG signals entirely (15.8% WR, -$2,730 P&L)
+  2. BLOCK RSI 50-59 entries (11.1% WR — overbought death zone)
+  3. BLOCK entries at 10:00 UTC (9.1% WR — manipulation hour)
+  4. REQUIRE volume ≥1.5x (74.6% WR vs 62.5% for 1.5-2.9x)
+  5. PREFER RSI 30-49 range (81-85% WR)
+  6. PREFER volume ≥3.0x (63.6% WR, but 80% for 5x+)
+  7. SCORE <120 preferred (76.3% WR vs 58.1% for 120-139)
+  8. BLOCK pairs with >3 losses and negative P&L
+  9. CIRCUIT BREAKER: pause new entries after 3+ consecutive losses
+  10. MAX 3 concurrent positions (risk management)
 """
 import json
 import os
@@ -26,32 +28,33 @@ FILTER_LOG   = os.path.join(SCRIPT_DIR, "hermes_filter_log.json")
 #  FILTER RULES (from data analysis)
 # ═══════════════════════════════════════════
 
-# Block LONG entirely — DISABLED for NFI (NFI trades both directions)
-BLOCK_LONG_SIGNALS = False
+# Block LONG entirely — 15.8% WR is catastrophic
+# NOTE: Only block if historical data confirms poor performance
+# The bot's own trend filter (allow_long/allow_short) already prevents counter-trend entries
+BLOCK_LONG_SIGNALS = False  # Changed: bot's 8-day MA trend filter is sufficient
 
-# RSI death zones — only apply to legacy signals (not NFI)
-# NFI uses RSI-3, not RSI-14, so this filter doesn't apply
-RSI_BLOCK_RANGES = []  # disabled — NFI uses RSI-3 extremes
-RSI_PREFERRED_RANGES = [(30.0, 49.0)]  # preferred RSI-14 range for legacy
+# RSI death zones (from data: RSI 50-59 = 11.1% WR)
+RSI_BLOCK_RANGES = [(50.0, 59.0)]  # block entries in this RSI range
+RSI_PREFERRED_RANGES = [(30.0, 49.0)]  # preferred RSI range (81-85% WR)
 
-# Time-based blocks — DISABLED for NFI (NFI trades all hours)
-BLOCK_HOURS_UTC = []  # disabled
-PREFERRED_HOURS_UTC = []  # disabled
+# Time-based blocks (from data: 10:00 UTC = 9.1% WR)
+BLOCK_HOURS_UTC = [10]  # block entries at these UTC hours
+PREFERRED_HOURS_UTC = [5, 6, 8, 9, 13, 20, 23]  # high-WR hours
 
-# Volume requirements — lowered for NFI scalping
-MIN_VOLUME_X = 1.0  # lowered from 1.5 — NFI scalps need less volume
-PREFERRED_VOLUME_X = 3.0
+# Volume requirements (from data: 5x+ = 80% WR, <1.5x = 74.6% but small sample)
+MIN_VOLUME_X = 1.5  # minimum volume multiplier
+PREFERRED_VOLUME_X = 3.0  # preferred volume multiplier
 
-# Score filter — NFI scores are 70-100 range
-MAX_SCORE = 150  # raised from 139 — NFI scores can be higher
-PREFERRED_MAX_SCORE = 119
+# Score filter (from data: score 120+ = worse WR than <100)
+MAX_SCORE = 139  # block scores above this (58.1% WR for 120-139)
+PREFERRED_MAX_SCORE = 119  # preferred max score (70.8% WR)
 
-# Pair blacklist
-PAIR_BLACKLIST = set()
+# Pair blacklist — pairs with >3 losses and negative P&L
+PAIR_BLACKLIST = set()  # auto-populated from data
 
-# Circuit breaker — more lenient for NFI
-MAX_CONSEC_LOSSES = 5  # raised from 3 — NFI grinding needs room
-MAX_CONCURRENT_OPEN = 10  # raised from 3 — NFI uses 6-12
+# Circuit breaker
+MAX_CONSEC_LOSSES = 3  # pause entries after this many consecutive losses
+MAX_CONCURRENT_OPEN = 3  # max concurrent open positions
 
 
 def load_signals():
@@ -117,57 +120,49 @@ def get_open_count(signals):
 def check_entry_filter(signal, signals_log, filter_log=None):
     """
     Check if a new signal should be allowed entry.
-    NFI signals get different treatment than legacy signals.
     Returns: (allowed: bool, reason: str, confidence: str)
     """
     reasons = []
     confidence = "HIGH"
 
-    # Detect NFI signal
-    style = signal.get("style", "")
-    is_nfi = style.startswith("NFI_")
+    # 1. Block LONG signals
     direction = signal.get("direction", signal.get("side", "")).upper()
-
-    # 1. Block LONG signals — only for legacy (not NFI)
-    if not is_nfi and BLOCK_LONG_SIGNALS and direction == "LONG":
+    if BLOCK_LONG_SIGNALS and direction == "LONG":
         return False, "BLOCKED: LONG signals disabled (15.8% WR)", "NONE"
 
-    # 2. RSI filter — only for legacy signals (NFI uses RSI-3)
-    if not is_nfi:
-        rsi = signal.get("rsi", 0)
-        for rsi_low, rsi_high in RSI_BLOCK_RANGES:
-            if rsi_low <= rsi <= rsi_high:
-                return False, f"BLOCKED: RSI {rsi} in death zone ({rsi_low}-{rsi_high})", "NONE"
+    # 2. RSI filter
+    rsi = signal.get("rsi", 0)
+    for rsi_low, rsi_high in RSI_BLOCK_RANGES:
+        if rsi_low <= rsi <= rsi_high:
+            return False, f"BLOCKED: RSI {rsi} in death zone ({rsi_low}-{rsi_high})", "NONE"
 
-    # 3. Time-of-day filter — only for legacy signals
-    if not is_nfi:
-        entry_time = signal.get("time", "")
-        if entry_time:
-            try:
-                dt = datetime.fromisoformat(entry_time.replace("Z", "+00:00"))
-                hour = dt.hour
-                if hour in BLOCK_HOURS_UTC:
-                    return False, f"BLOCKED: Entry at {hour:02d}:00 UTC (low-WR hour)", "NONE"
-                if hour not in PREFERRED_HOURS_UTC:
-                    confidence = "MEDIUM"
-                    reasons.append(f"Non-preferred hour {hour:02d}:00 UTC")
-            except Exception:
-                pass
+    # 3. Time-of-day filter
+    entry_time = signal.get("time", "")
+    if entry_time:
+        try:
+            dt = datetime.fromisoformat(entry_time.replace("Z", "+00:00"))
+            hour = dt.hour
+            if hour in BLOCK_HOURS_UTC:
+                return False, f"BLOCKED: Entry at {hour:02d}:00 UTC (low-WR hour)", "NONE"
+            if hour not in PREFERRED_HOURS_UTC:
+                confidence = "MEDIUM"
+                reasons.append(f"Non-preferred hour {hour:02d}:00 UTC")
+        except Exception:
+            pass
 
-    # 4. Volume filter — lower threshold for NFI
+    # 4. Volume filter
     vol = signal.get("volume_x", 0)
-    min_vol = 0.5 if is_nfi else MIN_VOLUME_X  # NFI scalps can work with lower volume
-    if vol < min_vol:
-        return False, f"BLOCKED: Volume {vol}x < minimum {min_vol}x", "NONE"
+    if vol < MIN_VOLUME_X:
+        return False, f"BLOCKED: Volume {vol}x < minimum {MIN_VOLUME_X}x", "NONE"
     if vol < PREFERRED_VOLUME_X:
         confidence = "MEDIUM"
         reasons.append(f"Volume {vol}x below preferred {PREFERRED_VOLUME_X}x")
 
-    # 5. Score filter — NFI signals already scored 70+
+    # 5. Score filter
     score = signal.get("score", 0)
     if score > MAX_SCORE:
-        return False, f"BLOCKED: Score {score} > max {MAX_SCORE}", "NONE"
-    if not is_nfi and score > PREFERRED_MAX_SCORE:
+        return False, f"BLOCKED: Score {score} > max {MAX_SCORE} (overbought)", "NONE"
+    if score > PREFERRED_MAX_SCORE:
         confidence = "MEDIUM"
         reasons.append(f"Score {score} above preferred {PREFERRED_MAX_SCORE}")
 
@@ -187,10 +182,17 @@ def check_entry_filter(signal, signals_log, filter_log=None):
     if open_count >= MAX_CONCURRENT_OPEN:
         return False, f"BLOCKED: Max concurrent positions ({open_count}/{MAX_CONCURRENT_OPEN})", "NONE"
 
-    # 9. NFI confidence boost
-    if is_nfi:
+    # 9. RSI preferred range bonus
+    for rsi_low, rsi_high in RSI_PREFERRED_RANGES:
+        if rsi_low <= rsi <= rsi_high:
+            confidence = "HIGH"
+            reasons.append(f"RSI {rsi} in preferred range ({rsi_low}-{rsi_high})")
+            break
+
+    # 10. Volume preferred bonus
+    if vol >= 5.0:
         confidence = "HIGH"
-        reasons.append(f"NFI signal: {style}")
+        reasons.append(f"High volume {vol}x (80% WR historically)")
 
     reason_str = " | ".join(reasons) if reasons else "All filters passed"
     return True, reason_str, confidence
