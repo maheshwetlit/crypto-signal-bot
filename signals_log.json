@@ -1,1152 +1,2303 @@
 [
+
   {
+
     "id": "SIG-0001",
+
     "time": "2026-06-22T14:11:34.789391+00:00",
+
     "pair": "XRP/USDT",
+
     "exchange": "KuCoin",
+
     "direction": "LONG",
+
     "style": "GR_RETRACE",
+
     "score": 85,
+
     "rsi3": 0.0,
+
     "rsi14": 48.6,
+
     "ma8_dist": 0.84,
+
     "entry": 1.15578,
+
     "sl": 1.14797,
+
     "sl_band": [],
+
     "tp1": 1.1674950000000002,
+
     "tp2": 1.1753050000000003,
+
     "tp3": 1.1870200000000004,
+
     "capital": 1000.0,
+
     "status": "BLOCKED",
+
     "exit_price": 1.15578,
+
     "pnl_usd": 0.0,
+
     "result": "FILTER_BLOCKED",
+
     "closed_at": "2026-06-22T16:00:23.142168+00:00",
+
     "exit_time": "2026-06-22T16:00:23.142168+00:00",
+
     "filter_checked": true,
+
     "filter_result": "BLOCK",
+
     "filter_reason": "BLOCKED: LONG signals disabled (15.8% WR)",
+
     "filter_confidence": "NONE",
+
     "pnl_pct": 0.0
+
   },
+
   {
+
     "id": "SIG-0002",
+
     "time": "2026-06-22T14:11:34.796401+00:00",
+
     "pair": "XRP/USDT",
+
     "exchange": "KuCoin",
+
     "direction": "LONG",
+
     "style": "GR_BB_REV",
+
     "score": 78,
+
     "rsi3": 0.0,
+
     "rsi14": 48.6,
+
     "ma8_dist": 0.84,
+
     "entry": 1.15578,
+
     "sl": 1.14797,
+
     "sl_band": [],
+
     "tp1": 1.1674950000000002,
+
     "tp2": 1.1753050000000003,
+
     "tp3": 1.1870200000000004,
+
     "capital": 1000.0,
+
     "status": "BLOCKED",
+
     "exit_price": 1.15578,
+
     "pnl_usd": 0.0,
+
     "result": "FILTER_BLOCKED",
+
     "closed_at": "2026-06-22T16:00:23.142168+00:00",
+
     "exit_time": "2026-06-22T16:00:23.142168+00:00",
+
     "filter_checked": true,
+
     "filter_result": "BLOCK",
+
     "filter_reason": "BLOCKED: LONG signals disabled (15.8% WR)",
+
     "filter_confidence": "NONE",
+
     "pnl_pct": 0.0
+
   },
+
   {
+
     "id": "SIG-0003",
+
     "time": "2026-06-22T14:11:36.394297+00:00",
+
     "pair": "TAO/USDT",
+
     "exchange": "KuCoin",
+
     "direction": "LONG",
+
     "style": "GR_RETRACE",
+
     "score": 85,
+
     "rsi3": 0.0,
+
     "rsi14": 40.8,
+
     "ma8_dist": 0.36,
+
     "entry": 234.84,
+
     "sl": 234.18,
+
     "sl_band": [],
+
     "tp1": 235.82999999999998,
+
     "tp2": 236.49,
+
     "tp3": 237.48,
+
     "capital": 1000.0,
+
     "status": "BLOCKED",
+
     "exit_price": 234.84,
+
     "pnl_usd": 0.0,
+
     "result": "FILTER_BLOCKED",
+
     "closed_at": "2026-06-22T16:00:23.142168+00:00",
+
     "exit_time": "2026-06-22T16:00:23.142168+00:00",
+
     "filter_checked": true,
+
     "filter_result": "BLOCK",
+
     "filter_reason": "BLOCKED: LONG signals disabled (15.8% WR)",
+
     "filter_confidence": "NONE",
+
     "pnl_pct": 0.0
+
   },
+
   {
+
     "id": "SIG-0004",
+
     "time": "2026-06-23T08:23:57.648482+00:00",
+
     "pair": "ADI/USDT",
+
     "exchange": "KuCoin",
+
     "direction": "LONG",
+
     "style": "GR_RETRACE",
+
     "score": 85,
+
     "rsi3": 3.9,
+
     "rsi14": 33.1,
+
     "ma8_dist": 0.0,
+
     "entry": 4.3998,
+
     "sl": 4.3919,
+
     "sl_band": [],
+
     "tp1": 4.41165,
+
     "tp2": 4.419550000000001,
+
     "tp3": 4.431400000000001,
+
     "capital": 1000.0,
+
     "status": "BLOCKED",
+
     "exit_price": 4.3998,
+
     "pnl_usd": 0.0,
+
     "result": "FILTER_BLOCKED",
+
     "closed_at": "2026-06-23T09:00:04.676568+00:00",
+
     "exit_time": "2026-06-23T09:00:04.676568+00:00",
+
     "filter_checked": true,
+
     "filter_result": "BLOCK",
+
     "filter_reason": "BLOCKED: LONG signals disabled (15.8% WR)",
+
     "filter_confidence": "NONE",
+
     "pnl_pct": 0.0
+
   },
+
   {
+
     "id": "SIG-0005",
+
     "time": "2026-06-23T08:23:57.661421+00:00",
+
     "pair": "ADI/USDT",
+
     "exchange": "KuCoin",
+
     "direction": "LONG",
+
     "style": "GR_BB_REV",
+
     "score": 78,
+
     "rsi3": 3.9,
+
     "rsi14": 33.1,
+
     "ma8_dist": 0.0,
+
     "entry": 4.3998,
+
     "sl": 4.3919,
+
     "sl_band": [],
+
     "tp1": 4.41165,
+
     "tp2": 4.419550000000001,
+
     "tp3": 4.431400000000001,
+
     "capital": 1000.0,
+
     "status": "BLOCKED",
+
     "exit_price": 4.3998,
+
     "pnl_usd": 0.0,
+
     "result": "FILTER_BLOCKED",
+
     "closed_at": "2026-06-23T09:00:04.676568+00:00",
+
     "exit_time": "2026-06-23T09:00:04.676568+00:00",
+
     "filter_checked": true,
+
     "filter_result": "BLOCK",
+
     "filter_reason": "BLOCKED: LONG signals disabled (15.8% WR)",
+
     "filter_confidence": "NONE",
+
     "pnl_pct": 0.0
+
   },
+
   {
+
     "id": "SIG-0006",
+
     "time": "2026-06-23T08:37:35.173567+00:00",
+
     "pair": "RAIN/USDT",
+
     "exchange": "KuCoin",
+
     "direction": "SHORT",
+
     "style": "GR_BB_REV",
+
     "score": 78,
+
     "rsi3": 89.6,
+
     "rsi14": 39.3,
+
     "ma8_dist": 0.61,
+
     "entry": 0.015861,
+
     "sl": 0.015968,
+
     "sl_band": [],
+
     "tp1": 0.0157005,
+
     "tp2": 0.015593500000000001,
+
     "tp3": 0.015433000000000002,
+
     "capital": 1000.0,
+
     "status": "BLOCKED",
+
     "exit_price": 0.015861,
+
     "pnl_usd": 0.0,
+
     "result": "FILTER_BLOCKED",
+
     "closed_at": "2026-06-23T09:00:04.676568+00:00",
+
     "exit_time": "2026-06-23T09:00:04.676568+00:00",
+
     "filter_checked": true,
+
     "filter_result": "BLOCK",
+
     "filter_reason": "BLOCKED: Volume 0x < minimum 1.5x",
+
     "filter_confidence": "NONE",
+
     "pnl_pct": 0.0
+
   },
+
   {
+
     "id": "SIG-0007",
+
     "time": "2026-06-23T09:15:16.783686+00:00",
+
     "pair": "ASTER/USDT",
+
     "exchange": "KuCoin",
+
     "direction": "SHORT",
+
     "style": "GR_RETRACE",
+
     "score": 85,
+
     "rsi3": 82.4,
+
     "rsi14": 41.4,
+
     "ma8_dist": 1.03,
+
     "entry": 0.6178,
+
     "sl": 0.6236,
+
     "sl_band": [],
+
     "tp1": 0.6091,
+
     "tp2": 0.6033,
+
     "tp3": 0.5945999999999999,
+
     "capital": 1000.0,
+
     "status": "BLOCKED",
+
     "exit_price": 0.6178,
+
     "pnl_usd": 0.0,
+
     "result": "FILTER_BLOCKED",
+
     "closed_at": "2026-06-23T09:21:28.090272+00:00",
+
     "exit_time": "2026-06-23T09:21:28.090272+00:00",
+
     "filter_checked": true,
+
     "filter_result": "BLOCK",
+
     "filter_reason": "BLOCKED: Volume 0x < minimum 1.5x",
+
     "filter_confidence": "NONE",
+
     "pnl_pct": 0.0
+
   },
+
   {
+
     "id": "SIG-0008",
+
     "time": "2026-06-23T09:15:48.342744+00:00",
+
     "pair": "STAR/USDT",
+
     "exchange": "KuCoin",
+
     "direction": "SHORT",
+
     "style": "GR_RETRACE",
+
     "score": 85,
+
     "rsi3": 80.0,
+
     "rsi14": 46.3,
+
     "ma8_dist": 0.96,
+
     "entry": 0.1607,
+
     "sl": 0.1613,
+
     "sl_band": [],
+
     "tp1": 0.15980000000000003,
+
     "tp2": 0.15920000000000004,
+
     "tp3": 0.15830000000000005,
+
     "capital": 1000.0,
+
     "status": "BLOCKED",
+
     "exit_price": 0.1607,
+
     "pnl_usd": 0.0,
+
     "result": "FILTER_BLOCKED",
+
     "closed_at": "2026-06-23T09:21:28.090272+00:00",
+
     "exit_time": "2026-06-23T09:21:28.090272+00:00",
+
     "filter_checked": true,
+
     "filter_result": "BLOCK",
+
     "filter_reason": "BLOCKED: Volume 0x < minimum 1.5x",
+
     "filter_confidence": "NONE",
+
     "pnl_pct": 0.0
+
   },
+
   {
+
     "id": "SIG-0009",
+
     "time": "2026-06-23T09:15:48.347152+00:00",
+
     "pair": "STAR/USDT",
+
     "exchange": "KuCoin",
+
     "direction": "SHORT",
+
     "style": "GR_BB_REV",
+
     "score": 78,
+
     "rsi3": 80.0,
+
     "rsi14": 46.3,
+
     "ma8_dist": 0.96,
+
     "entry": 0.1607,
+
     "sl": 0.1613,
+
     "sl_band": [],
+
     "tp1": 0.15980000000000003,
+
     "tp2": 0.15920000000000004,
+
     "tp3": 0.15830000000000005,
+
     "capital": 1000.0,
+
     "status": "BLOCKED",
+
     "exit_price": 0.1607,
+
     "pnl_usd": 0.0,
+
     "result": "FILTER_BLOCKED",
+
     "closed_at": "2026-06-23T09:21:28.090272+00:00",
+
     "exit_time": "2026-06-23T09:21:28.090272+00:00",
+
     "filter_checked": true,
+
     "filter_result": "BLOCK",
+
     "filter_reason": "BLOCKED: Volume 0x < minimum 1.5x",
+
     "filter_confidence": "NONE",
+
     "pnl_pct": 0.0
+
   },
+
   {
+
     "id": "SIG-0010",
+
     "time": "2026-06-23T09:56:29.724409+00:00",
+
     "pair": "BTC/USDT",
+
     "exchange": "KuCoin",
+
     "direction": "SHORT",
+
     "style": "GR_RETRACE",
+
     "score": 85,
+
     "rsi3": 84.4,
+
     "rsi14": 55.5,
+
     "ma8_dist": 1.33,
+
     "entry": 62395.0,
+
     "sl": 62531.4,
+
     "sl_band": [],
+
     "tp1": 62190.399999999994,
+
     "tp2": 62054.0,
+
     "tp3": 61849.399999999994,
+
     "capital": 1000.0,
+
     "status": "BLOCKED",
+
     "exit_price": 62395.0,
+
     "pnl_usd": 0.0,
+
     "result": "FILTER_BLOCKED",
+
     "closed_at": "2026-06-23T10:00:05.736280+00:00",
+
     "exit_time": "2026-06-23T10:00:05.736280+00:00",
+
     "filter_checked": true,
+
     "filter_result": "BLOCK",
+
     "filter_reason": "BLOCKED: Volume 0x < minimum 1.5x",
+
     "filter_confidence": "NONE",
+
     "pnl_pct": 0.0
+
   },
+
   {
+
     "id": "SIG-0011",
+
     "time": "2026-06-23T09:56:29.732698+00:00",
+
     "pair": "BTC/USDT",
+
     "exchange": "KuCoin",
+
     "direction": "SHORT",
+
     "style": "GR_BB_REV",
+
     "score": 78,
+
     "rsi3": 84.4,
+
     "rsi14": 55.5,
+
     "ma8_dist": 1.33,
+
     "entry": 62395.0,
+
     "sl": 62531.4,
+
     "sl_band": [],
+
     "tp1": 62190.399999999994,
+
     "tp2": 62054.0,
+
     "tp3": 61849.399999999994,
+
     "capital": 1000.0,
+
     "status": "BLOCKED",
+
     "exit_price": 62395.0,
+
     "pnl_usd": 0.0,
+
     "result": "FILTER_BLOCKED",
+
     "closed_at": "2026-06-23T10:00:05.736921+00:00",
+
     "exit_time": "2026-06-23T10:00:05.736921+00:00",
+
     "filter_checked": true,
+
     "filter_result": "BLOCK",
+
     "filter_reason": "BLOCKED: Volume 0x < minimum 1.5x",
+
     "filter_confidence": "NONE",
+
     "pnl_pct": 0.0
+
   },
+
   {
+
     "id": "SIG-0012",
+
     "time": "2026-06-23T09:56:34.361758+00:00",
+
     "pair": "ZEC/USDT",
+
     "exchange": "KuCoin",
+
     "direction": "SHORT",
+
     "style": "GR_BB_REV",
+
     "score": 78,
+
     "rsi3": 90.9,
+
     "rsi14": 70.5,
+
     "ma8_dist": 2.38,
+
     "entry": 423.667,
+
     "sl": 424.563,
+
     "sl_band": [],
+
     "tp1": 422.323,
+
     "tp2": 421.4269999999999,
+
     "tp3": 420.0829999999999,
+
     "capital": 1000.0,
+
     "status": "BLOCKED",
+
     "exit_price": 423.667,
+
     "pnl_usd": 0.0,
+
     "result": "FILTER_BLOCKED",
+
     "closed_at": "2026-06-23T10:00:05.736921+00:00",
+
     "exit_time": "2026-06-23T10:00:05.736921+00:00",
+
     "filter_checked": true,
+
     "filter_result": "BLOCK",
+
     "filter_reason": "BLOCKED: Volume 0x < minimum 1.5x",
+
     "filter_confidence": "NONE",
+
     "pnl_pct": 0.0
+
   },
+
   {
+
     "id": "SIG-0013",
+
     "time": "2026-06-23T09:56:35.914184+00:00",
+
     "pair": "XRP/USDT",
+
     "exchange": "KuCoin",
+
     "direction": "SHORT",
+
     "style": "GR_BB_REV",
+
     "score": 78,
+
     "rsi3": 69.9,
+
     "rsi14": 65.3,
+
     "ma8_dist": 0.99,
+
     "entry": 1.10409,
+
     "sl": 1.10677,
+
     "sl_band": [],
+
     "tp1": 1.10007,
+
     "tp2": 1.0973899999999999,
+
     "tp3": 1.09337,
+
     "capital": 1000.0,
+
     "status": "BLOCKED",
+
     "exit_price": 1.10409,
+
     "pnl_usd": 0.0,
+
     "result": "FILTER_BLOCKED",
+
     "closed_at": "2026-06-23T10:00:05.736921+00:00",
+
     "exit_time": "2026-06-23T10:00:05.736921+00:00",
+
     "filter_checked": true,
+
     "filter_result": "BLOCK",
+
     "filter_reason": "BLOCKED: Volume 0x < minimum 1.5x",
+
     "filter_confidence": "NONE",
+
     "pnl_pct": 0.0
+
   },
+
   {
+
     "id": "SIG-0014",
+
     "time": "2026-06-23T09:56:42.024198+00:00",
+
     "pair": "TAO/USDT",
+
     "exchange": "KuCoin",
+
     "direction": "SHORT",
+
     "style": "GR_SRST",
+
     "score": 80,
+
     "rsi3": 63.5,
+
     "rsi14": 44.2,
+
     "ma8_dist": 1.81,
+
     "entry": 218.86,
+
     "sl": 220.31,
+
     "sl_band": [],
+
     "tp1": 216.68500000000003,
+
     "tp2": 215.23500000000004,
+
     "tp3": 213.06000000000006,
+
     "capital": 1000.0,
+
     "status": "BLOCKED",
+
     "exit_price": 218.86,
+
     "pnl_usd": 0.0,
+
     "result": "FILTER_BLOCKED",
+
     "closed_at": "2026-06-23T10:00:05.736921+00:00",
+
     "exit_time": "2026-06-23T10:00:05.736921+00:00",
+
     "filter_checked": true,
+
     "filter_result": "BLOCK",
+
     "filter_reason": "BLOCKED: Volume 0x < minimum 1.5x",
+
     "filter_confidence": "NONE",
+
     "pnl_pct": 0.0
+
   },
+
   {
+
     "id": "SIG-0015",
+
     "time": "2026-06-23T09:56:51.261694+00:00",
+
     "pair": "PIEVERSE/USDT",
+
     "exchange": "KuCoin",
+
     "direction": "SHORT",
+
     "style": "GR_SRST",
+
     "score": 80,
+
     "rsi3": 61.5,
+
     "rsi14": 60.4,
+
     "ma8_dist": 2.4,
+
     "entry": 0.6596,
+
     "sl": 0.6629,
+
     "sl_band": [],
+
     "tp1": 0.6546499999999998,
+
     "tp2": 0.6513499999999998,
+
     "tp3": 0.6463999999999996,
+
     "capital": 1000.0,
+
     "status": "BLOCKED",
+
     "exit_price": 0.6596,
+
     "pnl_usd": 0.0,
+
     "result": "FILTER_BLOCKED",
+
     "closed_at": "2026-06-23T10:00:05.736921+00:00",
+
     "exit_time": "2026-06-23T10:00:05.736921+00:00",
+
     "filter_checked": true,
+
     "filter_result": "BLOCK",
+
     "filter_reason": "BLOCKED: Volume 0x < minimum 1.5x",
+
     "filter_confidence": "NONE",
+
     "pnl_pct": 0.0
+
   },
+
   {
+
     "id": "SIG-0016",
+
     "time": "2026-06-23T09:56:54.315239+00:00",
+
     "pair": "DOT/USDT",
+
     "exchange": "KuCoin",
+
     "direction": "SHORT",
+
     "style": "GR_BB_REV",
+
     "score": 78,
+
     "rsi3": 90.5,
+
     "rsi14": 69.3,
+
     "ma8_dist": 2.36,
+
     "entry": 0.8957,
+
     "sl": 0.8962,
+
     "sl_band": [],
+
     "tp1": 0.8949500000000001,
+
     "tp2": 0.8944500000000002,
+
     "tp3": 0.8937000000000003,
+
     "capital": 1000.0,
+
     "status": "BLOCKED",
+
     "exit_price": 0.8957,
+
     "pnl_usd": 0.0,
+
     "result": "FILTER_BLOCKED",
+
     "closed_at": "2026-06-23T10:00:05.736921+00:00",
+
     "exit_time": "2026-06-23T10:00:05.736921+00:00",
+
     "filter_checked": true,
+
     "filter_result": "BLOCK",
+
     "filter_reason": "BLOCKED: Volume 0x < minimum 1.5x",
+
     "filter_confidence": "NONE",
+
     "pnl_pct": 0.0
+
   },
+
   {
+
     "id": "SIG-0017",
+
     "time": "2026-06-23T09:56:57.701111+00:00",
+
     "pair": "BNB/USDT",
+
     "exchange": "KuCoin",
+
     "direction": "SHORT",
+
     "style": "GR_RETRACE",
+
     "score": 85,
+
     "rsi3": 72.9,
+
     "rsi14": 39.6,
+
     "ma8_dist": 1.88,
+
     "entry": 572.01,
+
     "sl": 576.016,
+
     "sl_band": [],
+
     "tp1": 566.001,
+
     "tp2": 561.9950000000001,
+
     "tp3": 555.9860000000001,
+
     "capital": 1000.0,
+
     "status": "BLOCKED",
+
     "exit_price": 572.01,
+
     "pnl_usd": 0.0,
+
     "result": "FILTER_BLOCKED",
+
     "closed_at": "2026-06-23T10:00:05.736921+00:00",
+
     "exit_time": "2026-06-23T10:00:05.736921+00:00",
+
     "filter_checked": true,
+
     "filter_result": "BLOCK",
+
     "filter_reason": "BLOCKED: Volume 0x < minimum 1.5x",
+
     "filter_confidence": "NONE",
+
     "pnl_pct": 0.0
+
   },
+
   {
+
     "id": "SIG-0018",
+
     "time": "2026-06-23T09:56:57.707888+00:00",
+
     "pair": "BNB/USDT",
+
     "exchange": "KuCoin",
+
     "direction": "SHORT",
+
     "style": "GR_BB_REV",
+
     "score": 78,
+
     "rsi3": 72.9,
+
     "rsi14": 39.6,
+
     "ma8_dist": 1.88,
+
     "entry": 572.01,
+
     "sl": 576.016,
+
     "sl_band": [],
+
     "tp1": 566.001,
+
     "tp2": 561.9950000000001,
+
     "tp3": 555.9860000000001,
+
     "capital": 1000.0,
+
     "status": "BLOCKED",
+
     "exit_price": 572.01,
+
     "pnl_usd": 0.0,
+
     "result": "FILTER_BLOCKED",
+
     "closed_at": "2026-06-23T10:00:05.736921+00:00",
+
     "exit_time": "2026-06-23T10:00:05.736921+00:00",
+
     "filter_checked": true,
+
     "filter_result": "BLOCK",
+
     "filter_reason": "BLOCKED: Volume 0x < minimum 1.5x",
+
     "filter_confidence": "NONE",
+
     "pnl_pct": 0.0
+
   },
+
   {
+
     "id": "SIG-0019",
+
     "time": "2026-06-23T09:57:03.982352+00:00",
+
     "pair": "ADA/USDT",
+
     "exchange": "KuCoin",
+
     "direction": "SHORT",
+
     "style": "GR_BB_REV",
+
     "score": 78,
+
     "rsi3": 66.7,
+
     "rsi14": 53.6,
+
     "ma8_dist": 2.4,
+
     "entry": 0.1525,
+
     "sl": 0.1533,
+
     "sl_band": [],
+
     "tp1": 0.1513,
+
     "tp2": 0.15050000000000002,
+
     "tp3": 0.14930000000000002,
+
     "capital": 1000.0,
+
     "status": "BLOCKED",
+
     "exit_price": 0.1525,
+
     "pnl_usd": 0.0,
+
     "result": "FILTER_BLOCKED",
+
     "closed_at": "2026-06-23T10:00:05.736921+00:00",
+
     "exit_time": "2026-06-23T10:00:05.736921+00:00",
+
     "filter_checked": true,
+
     "filter_result": "BLOCK",
+
     "filter_reason": "BLOCKED: Volume 0x < minimum 1.5x",
+
     "filter_confidence": "NONE",
+
     "pnl_pct": 0.0
+
   },
+
   {
+
     "id": "SIG-0020",
+
     "time": "2026-06-23T10:37:16.530024+00:00",
+
     "pair": "TAO/USDT",
+
     "exchange": "KuCoin",
+
     "direction": "SHORT",
+
     "style": "GR_BB_REV",
+
     "score": 78,
+
     "rsi3": 68.4,
+
     "rsi14": 56.9,
+
     "ma8_dist": 0.96,
+
     "entry": 219.89,
+
     "sl": 221.13,
+
     "sl_band": [],
+
     "tp1": 218.02999999999997,
+
     "tp2": 216.78999999999996,
+
     "tp3": 214.92999999999995,
+
     "capital": 1000.0,
+
     "status": "BLOCKED",
+
     "exit_price": 219.89,
+
     "pnl_usd": 0.0,
+
     "result": "FILTER_BLOCKED",
+
     "closed_at": "2026-06-23T11:00:09.900330+00:00",
+
     "exit_time": "2026-06-23T11:00:09.900330+00:00",
+
     "filter_checked": true,
+
     "filter_result": "BLOCK",
+
     "filter_reason": "BLOCKED: Entry at 10:00 UTC (low-WR hour)",
+
     "filter_confidence": "NONE",
+
     "pnl_pct": 0.0
+
   },
+
   {
+
     "id": "SIG-0021",
+
     "time": "2026-06-23T10:37:23.085806+00:00",
+
     "pair": "AAVE/USDT",
+
     "exchange": "KuCoin",
+
     "direction": "SHORT",
+
     "style": "GR_BB_REV",
+
     "score": 78,
+
     "rsi3": 66.0,
+
     "rsi14": 62.5,
+
     "ma8_dist": 1.22,
+
     "entry": 72.139,
+
     "sl": 72.239,
+
     "sl_band": [],
+
     "tp1": 71.98899999999998,
+
     "tp2": 71.88899999999998,
+
     "tp3": 71.73899999999996,
+
     "capital": 1000.0,
+
     "status": "BLOCKED",
+
     "exit_price": 72.139,
+
     "pnl_usd": 0.0,
+
     "result": "FILTER_BLOCKED",
+
     "closed_at": "2026-06-23T11:00:09.900330+00:00",
+
     "exit_time": "2026-06-23T11:00:09.900330+00:00",
+
     "filter_checked": true,
+
     "filter_result": "BLOCK",
+
     "filter_reason": "BLOCKED: Entry at 10:00 UTC (low-WR hour)",
+
     "filter_confidence": "NONE",
+
     "pnl_pct": 0.0
+
   },
+
   {
+
     "id": "SIG-0022",
+
     "time": "2026-06-23T10:37:36.013579+00:00",
+
     "pair": "SEI/USDT",
+
     "exchange": "KuCoin",
+
     "direction": "SHORT",
+
     "style": "GR_SRST",
+
     "score": 80,
+
     "rsi3": 63.2,
+
     "rsi14": 62.1,
+
     "ma8_dist": 1.13,
+
     "entry": 0.05264,
+
     "sl": 0.05269,
+
     "sl_band": [],
+
     "tp1": 0.052565,
+
     "tp2": 0.05251499999999999,
+
     "tp3": 0.052439999999999994,
+
     "capital": 1000.0,
+
     "status": "BLOCKED",
+
     "exit_price": 0.05264,
+
     "pnl_usd": 0.0,
+
     "result": "FILTER_BLOCKED",
+
     "closed_at": "2026-06-23T11:00:09.900330+00:00",
+
     "exit_time": "2026-06-23T11:00:09.900330+00:00",
+
     "filter_checked": true,
+
     "filter_result": "BLOCK",
+
     "filter_reason": "BLOCKED: Entry at 10:00 UTC (low-WR hour)",
+
     "filter_confidence": "NONE",
+
     "pnl_pct": 0.0
+
   },
+
   {
+
     "id": "SIG-0023",
+
     "time": "2026-06-23T10:37:51.905394+00:00",
+
     "pair": "TRX/USDT",
+
     "exchange": "KuCoin",
+
     "direction": "SHORT",
+
     "style": "GR_BB_REV",
+
     "score": 78,
+
     "rsi3": 66.7,
+
     "rsi14": 36.4,
+
     "ma8_dist": 0.52,
+
     "entry": 0.3297,
+
     "sl": 0.3305,
+
     "sl_band": [],
+
     "tp1": 0.32849999999999996,
+
     "tp2": 0.32769999999999994,
+
     "tp3": 0.3264999999999999,
+
     "capital": 1000.0,
+
     "status": "BLOCKED",
+
     "exit_price": 0.3297,
+
     "pnl_usd": 0.0,
+
     "result": "FILTER_BLOCKED",
+
     "closed_at": "2026-06-23T11:00:09.900330+00:00",
+
     "exit_time": "2026-06-23T11:00:09.900330+00:00",
+
     "filter_checked": true,
+
     "filter_result": "BLOCK",
+
     "filter_reason": "BLOCKED: Entry at 10:00 UTC (low-WR hour)",
+
     "filter_confidence": "NONE",
+
     "pnl_pct": 0.0
+
   },
+
   {
+
     "id": "SIG-0024",
+
     "time": "2026-06-23T10:38:47.127149+00:00",
+
     "pair": "XMR/USDT",
+
     "exchange": "KuCoin",
+
     "direction": "SHORT",
+
     "style": "GR_RETRACE",
+
     "score": 85,
+
     "rsi3": 75.1,
+
     "rsi14": 45.7,
+
     "ma8_dist": 1.55,
+
     "entry": 315.92,
+
     "sl": 318.76,
+
     "sl_band": [],
+
     "tp1": 311.6600000000001,
+
     "tp2": 308.82000000000005,
+
     "tp3": 304.5600000000001,
+
     "capital": 1000.0,
+
     "status": "BLOCKED",
+
     "exit_price": 315.92,
+
     "pnl_usd": 0.0,
+
     "result": "FILTER_BLOCKED",
+
     "closed_at": "2026-06-23T11:00:09.900330+00:00",
+
     "exit_time": "2026-06-23T11:00:09.900330+00:00",
+
     "filter_checked": true,
+
     "filter_result": "BLOCK",
+
     "filter_reason": "BLOCKED: Entry at 10:00 UTC (low-WR hour)",
+
     "filter_confidence": "NONE",
+
     "pnl_pct": 0.0
+
   },
+
   {
+
     "id": "SIG-0025",
+
     "time": "2026-06-23T10:38:47.134001+00:00",
+
     "pair": "XMR/USDT",
+
     "exchange": "KuCoin",
+
     "direction": "SHORT",
+
     "style": "GR_BB_REV",
+
     "score": 78,
+
     "rsi3": 75.1,
+
     "rsi14": 45.7,
+
     "ma8_dist": 1.55,
+
     "entry": 315.92,
+
     "sl": 318.76,
+
     "sl_band": [],
+
     "tp1": 311.6600000000001,
+
     "tp2": 308.82000000000005,
+
     "tp3": 304.5600000000001,
+
     "capital": 1000.0,
+
     "status": "BLOCKED",
+
     "exit_price": 315.92,
+
     "pnl_usd": 0.0,
+
     "result": "FILTER_BLOCKED",
+
     "closed_at": "2026-06-23T11:00:09.900330+00:00",
+
     "exit_time": "2026-06-23T11:00:09.900330+00:00",
+
     "filter_checked": true,
+
     "filter_result": "BLOCK",
+
     "filter_reason": "BLOCKED: Entry at 10:00 UTC (low-WR hour)",
+
     "filter_confidence": "NONE",
+
     "pnl_pct": 0.0
+
   },
+
   {
+
     "id": "SIG-0026",
+
     "time": "2026-06-23T10:39:04.333451+00:00",
+
     "pair": "ASTER/USDT",
+
     "exchange": "KuCoin",
+
     "direction": "SHORT",
+
     "style": "GR_RETRACE",
+
     "score": 85,
+
     "rsi3": 83.3,
+
     "rsi14": 53.9,
+
     "ma8_dist": 0.56,
+
     "entry": 0.6193,
+
     "sl": 0.6207,
+
     "sl_band": [],
+
     "tp1": 0.6171999999999999,
+
     "tp2": 0.6157999999999998,
+
     "tp3": 0.6136999999999997,
+
     "capital": 1000.0,
+
     "status": "BLOCKED",
+
     "exit_price": 0.6193,
+
     "pnl_usd": 0.0,
+
     "result": "FILTER_BLOCKED",
+
     "closed_at": "2026-06-23T11:00:09.900330+00:00",
+
     "exit_time": "2026-06-23T11:00:09.900330+00:00",
+
     "filter_checked": true,
+
     "filter_result": "BLOCK",
+
     "filter_reason": "BLOCKED: Entry at 10:00 UTC (low-WR hour)",
+
     "filter_confidence": "NONE",
+
     "pnl_pct": 0.0
+
   },
+
   {
+
     "id": "SIG-0027",
+
     "time": "2026-06-23T10:39:04.339833+00:00",
+
     "pair": "ASTER/USDT",
+
     "exchange": "KuCoin",
+
     "direction": "SHORT",
+
     "style": "GR_BB_REV",
+
     "score": 78,
+
     "rsi3": 83.3,
+
     "rsi14": 53.9,
+
     "ma8_dist": 0.56,
+
     "entry": 0.6193,
+
     "sl": 0.6207,
+
     "sl_band": [],
+
     "tp1": 0.6171999999999999,
+
     "tp2": 0.6157999999999998,
+
     "tp3": 0.6136999999999997,
+
     "capital": 1000.0,
+
     "status": "BLOCKED",
+
     "exit_price": 0.6193,
+
     "pnl_usd": 0.0,
+
     "result": "FILTER_BLOCKED",
+
     "closed_at": "2026-06-23T11:00:09.900330+00:00",
+
     "exit_time": "2026-06-23T11:00:09.900330+00:00",
+
     "filter_checked": true,
+
     "filter_result": "BLOCK",
+
     "filter_reason": "BLOCKED: Entry at 10:00 UTC (low-WR hour)",
+
     "filter_confidence": "NONE",
+
     "pnl_pct": 0.0
+
   },
+
   {
+
     "id": "SIG-0028",
+
     "time": "2026-06-23T10:53:15.361696+00:00",
+
     "pair": "TAO/USDT",
+
     "exchange": "KuCoin",
+
     "direction": "SHORT",
+
     "style": "GR_BB_REV",
+
     "score": 78,
+
     "rsi3": 68.3,
+
     "rsi14": 60.4,
+
     "ma8_dist": 1.05,
+
     "entry": 219.72,
+
     "sl": 221.13,
+
     "sl_band": [],
+
     "tp1": 217.60500000000002,
+
     "tp2": 216.195,
+
     "tp3": 214.08,
+
     "capital": 1000.0,
+
     "status": "BLOCKED",
+
     "exit_price": 219.72,
+
     "pnl_usd": 0.0,
+
     "result": "FILTER_BLOCKED",
+
     "closed_at": "2026-06-23T11:00:09.900330+00:00",
+
     "exit_time": "2026-06-23T11:00:09.900330+00:00",
+
     "filter_checked": true,
+
     "filter_result": "BLOCK",
+
     "filter_reason": "BLOCKED: Entry at 10:00 UTC (low-WR hour)",
+
     "filter_confidence": "NONE",
+
     "pnl_pct": 0.0
+
   },
+
   {
+
     "id": "SIG-0029",
+
     "time": "2026-06-23T10:53:20.290314+00:00",
+
     "pair": "UNI/USDT",
+
     "exchange": "KuCoin",
+
     "direction": "SHORT",
+
     "style": "GR_RETRACE",
+
     "score": 85,
+
     "rsi3": 72.2,
+
     "rsi14": 69.2,
+
     "ma8_dist": 1.66,
+
     "entry": 2.8552,
+
     "sl": 2.8664,
+
     "sl_band": [],
+
     "tp1": 2.8384,
+
     "tp2": 2.8271999999999995,
+
     "tp3": 2.8103999999999996,
+
     "capital": 1000.0,
+
     "status": "BLOCKED",
+
     "exit_price": 2.8552,
+
     "pnl_usd": 0.0,
+
     "result": "FILTER_BLOCKED",
+
     "closed_at": "2026-06-23T11:00:09.900330+00:00",
+
     "exit_time": "2026-06-23T11:00:09.900330+00:00",
+
     "filter_checked": true,
+
     "filter_result": "BLOCK",
+
     "filter_reason": "BLOCKED: Entry at 10:00 UTC (low-WR hour)",
+
     "filter_confidence": "NONE",
+
     "pnl_pct": 0.0
+
   },
+
   {
+
     "id": "SIG-0030",
+
     "time": "2026-06-23T10:53:20.297147+00:00",
+
     "pair": "UNI/USDT",
+
     "exchange": "KuCoin",
+
     "direction": "SHORT",
+
     "style": "GR_BB_REV",
+
     "score": 78,
+
     "rsi3": 72.2,
+
     "rsi14": 69.2,
+
     "ma8_dist": 1.66,
+
     "entry": 2.8552,
+
     "sl": 2.8664,
+
     "sl_band": [],
+
     "tp1": 2.8384,
+
     "tp2": 2.8271999999999995,
+
     "tp3": 2.8103999999999996,
+
     "capital": 1000.0,
+
     "status": "BLOCKED",
+
     "exit_price": 2.8552,
+
     "pnl_usd": 0.0,
+
     "result": "FILTER_BLOCKED",
+
     "closed_at": "2026-06-23T11:00:09.900330+00:00",
+
     "exit_time": "2026-06-23T11:00:09.900330+00:00",
+
     "filter_checked": true,
+
     "filter_result": "BLOCK",
+
     "filter_reason": "BLOCKED: Entry at 10:00 UTC (low-WR hour)",
+
     "filter_confidence": "NONE",
+
     "pnl_pct": 0.0
+
   },
+
   {
+
     "id": "SIG-0031",
+
     "time": "2026-06-23T11:05:51.564106+00:00",
+
     "pair": "BTC/USDT",
+
     "exchange": "KuCoin",
+
     "direction": "SHORT",
+
     "style": "GR_RETRACE",
+
     "score": 85,
+
     "rsi3": 90.9,
+
     "rsi14": 46.2,
+
     "ma8_dist": 0.71,
+
     "entry": 62338.2,
+
     "sl": 62585.9,
+
     "sl_band": [],
+
     "tp1": 61966.649999999994,
+
     "tp2": 61718.94999999998,
+
     "tp3": 61347.39999999998,
+
     "capital": 1000.0,
+
     "status": "OPEN",
+
     "exit_price": null,
+
     "pnl_usd": null,
+
     "result": null,
+
     "closed_at": null,
+
     "exit_time": null
+
   },
+
   {
+
     "id": "SIG-0032",
+
     "time": "2026-06-23T11:05:51.575744+00:00",
+
     "pair": "BTC/USDT",
+
     "exchange": "KuCoin",
+
     "direction": "SHORT",
+
     "style": "GR_BB_REV",
+
     "score": 78,
+
     "rsi3": 90.9,
+
     "rsi14": 46.2,
+
     "ma8_dist": 0.71,
+
     "entry": 62338.2,
+
     "sl": 62585.9,
+
     "sl_band": [],
+
     "tp1": 61966.649999999994,
+
     "tp2": 61718.94999999998,
+
     "tp3": 61347.39999999998,
+
     "capital": 1000.0,
+
     "status": "OPEN",
+
     "exit_price": null,
+
     "pnl_usd": null,
+
     "result": null,
+
     "closed_at": null,
+
     "exit_time": null
+
   },
+
   {
+
     "id": "SIG-0033",
+
     "time": "2026-06-23T11:05:53.150662+00:00",
+
     "pair": "ETH/USDT",
+
     "exchange": "KuCoin",
+
     "direction": "SHORT",
+
     "style": "GR_RETRACE",
+
     "score": 85,
+
     "rsi3": 88.8,
+
     "rsi14": 56.0,
+
     "ma8_dist": 1.38,
+
     "entry": 1653.51,
+
     "sl": 1658.8,
+
     "sl_band": [],
+
     "tp1": 1645.575,
+
     "tp2": 1640.285,
+
     "tp3": 1632.3500000000001,
+
     "capital": 1000.0,
+
     "status": "OPEN",
+
     "exit_price": null,
+
     "pnl_usd": null,
+
     "result": null,
+
     "closed_at": null,
+
     "exit_time": null
+
   },
+
   {
+
     "id": "SIG-0034",
+
     "time": "2026-06-23T11:05:53.155187+00:00",
+
     "pair": "ETH/USDT",
+
     "exchange": "KuCoin",
+
     "direction": "SHORT",
+
     "style": "GR_BB_REV",
+
     "score": 78,
+
     "rsi3": 88.8,
+
     "rsi14": 56.0,
+
     "ma8_dist": 1.38,
+
     "entry": 1653.51,
+
     "sl": 1658.8,
+
     "sl_band": [],
+
     "tp1": 1645.575,
+
     "tp2": 1640.285,
+
     "tp3": 1632.3500000000001,
+
     "capital": 1000.0,
+
     "status": "OPEN",
+
     "exit_price": null,
+
     "pnl_usd": null,
+
     "result": null,
+
     "closed_at": null,
+
     "exit_time": null
+
   },
+
   {
+
     "id": "SIG-0035",
+
     "time": "2026-06-23T11:05:56.646632+00:00",
+
     "pair": "ZEC/USDT",
+
     "exchange": "KuCoin",
+
     "direction": "SHORT",
+
     "style": "GR_RETRACE",
+
     "score": 85,
+
     "rsi3": 93.4,
+
     "rsi14": 47.9,
+
     "ma8_dist": 1.08,
+
     "entry": 423.614,
+
     "sl": 425.758,
+
     "sl_band": [],
+
     "tp1": 420.39799999999997,
+
     "tp2": 418.25399999999996,
+
     "tp3": 415.03799999999995,
+
     "capital": 1000.0,
+
     "status": "OPEN",
+
     "exit_price": null,
+
     "pnl_usd": null,
+
     "result": null,
+
     "closed_at": null,
+
     "exit_time": null
+
   },
+
   {
+
     "id": "SIG-0036",
+
     "time": "2026-06-23T11:05:56.652242+00:00",
+
     "pair": "ZEC/USDT",
+
     "exchange": "KuCoin",
+
     "direction": "SHORT",
+
     "style": "GR_BB_REV",
+
     "score": 78,
+
     "rsi3": 93.4,
+
     "rsi14": 47.9,
+
     "ma8_dist": 1.08,
+
     "entry": 423.614,
+
     "sl": 425.758,
+
     "sl_band": [],
+
     "tp1": 420.39799999999997,
+
     "tp2": 418.25399999999996,
+
     "tp3": 415.03799999999995,
+
     "capital": 1000.0,
+
     "status": "OPEN",
+
     "exit_price": null,
+
     "pnl_usd": null,
+
     "result": null,
+
     "closed_at": null,
+
     "exit_time": null
+
   },
+
   {
+
     "id": "SIG-0037",
+
     "time": "2026-06-23T11:05:59.735189+00:00",
+
     "pair": "XRP/USDT",
+
     "exchange": "KuCoin",
+
     "direction": "SHORT",
+
     "style": "GR_RETRACE",
+
     "score": 85,
+
     "rsi3": 87.3,
+
     "rsi14": 55.9,
+
     "ma8_dist": 0.35,
+
     "entry": 1.10518,
+
     "sl": 1.10762,
+
     "sl_band": [],
+
     "tp1": 1.10152,
+
     "tp2": 1.09908,
+
     "tp3": 1.09542,
+
     "capital": 1000.0,
+
     "status": "OPEN",
+
     "exit_price": null,
+
     "pnl_usd": null,
+
     "result": null,
+
     "closed_at": null,
+
     "exit_time": null
+
   },
+
   {
+
     "id": "SIG-0038",
+
     "time": "2026-06-23T11:05:59.739823+00:00",
+
     "pair": "XRP/USDT",
+
     "exchange": "KuCoin",
+
     "direction": "SHORT",
+
     "style": "GR_BB_REV",
+
     "score": 78,
+
     "rsi3": 87.3,
+
     "rsi14": 55.9,
+
     "ma8_dist": 0.35,
+
     "entry": 1.10518,
+
     "sl": 1.10762,
+
     "sl_band": [],
+
     "tp1": 1.10152,
+
     "tp2": 1.09908,
+
     "tp3": 1.09542,
+
     "capital": 1000.0,
+
     "status": "OPEN",
+
     "exit_price": null,
+
     "pnl_usd": null,
+
     "result": null,
+
     "closed_at": null,
+
     "exit_time": null
+
   },
+
   {
+
     "id": "SIG-0039",
+
     "time": "2026-06-23T11:06:01.303109+00:00",
+
     "pair": "SOL/USDT",
+
     "exchange": "KuCoin",
+
     "direction": "SHORT",
+
     "style": "GR_RETRACE",
+
     "score": 85,
+
     "rsi3": 73.9,
+
     "rsi14": 46.2,
+
     "ma8_dist": 1.31,
+
     "entry": 68.85,
+
     "sl": 69.22,
+
     "sl_band": [],
+
     "tp1": 68.29499999999999,
+
     "tp2": 67.92499999999998,
+
     "tp3": 67.36999999999998,
+
     "capital": 1000.0,
+
     "status": "OPEN",
+
     "exit_price": null,
+
     "pnl_usd": null,
+
     "result": null,
+
     "closed_at": null,
+
     "exit_time": null
+
   },
+
   {
+
     "id": "SIG-0040",
+
     "time": "2026-06-23T11:06:01.307277+00:00",
+
     "pair": "SOL/USDT",
+
     "exchange": "KuCoin",
+
     "direction": "SHORT",
+
     "style": "GR_BB_REV",
+
     "score": 78,
+
     "rsi3": 73.9,
+
     "rsi14": 46.2,
+
     "ma8_dist": 1.31,
+
     "entry": 68.85,
+
     "sl": 69.22,
+
     "sl_band": [],
+
     "tp1": 68.29499999999999,
+
     "tp2": 67.92499999999998,
+
     "tp3": 67.36999999999998,
+
     "capital": 1000.0,
+
     "status": "OPEN",
+
     "exit_price": null,
+
     "pnl_usd": null,
+
     "result": null,
+
     "closed_at": null,
+
     "exit_time": null
+
   }
+
 ]
