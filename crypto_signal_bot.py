@@ -123,6 +123,8 @@ def log_signal(symbol, sig):
         "score": sig.get("eff", 0),
         "rsi3": sig.get("rsi3", 0), "rsi14": sig.get("rsi14", 0),
         "ma8_dist": sig.get("ma8_dist", 0),
+        "htf": sig.get("htf", "N/A"),
+        "vol_x": sig.get("vol_x", 0),
         "entry": sig["entry"], "sl": sig["sl"], "sl_band": sig.get("sl_band", []),
         "tp1": sig["tp"][0] if len(sig["tp"]) > 0 else None,
         "tp2": sig["tp"][1] if len(sig["tp"]) > 1 else None,
