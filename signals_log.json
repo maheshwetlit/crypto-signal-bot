@@ -2038,5 +2038,30 @@
     "result": null,
     "closed_at": null,
     "exit_time": null
+  },
+  {
+    "id": "SIG-0070",
+    "time": "2026-06-23T13:28:48.779627+00:00",
+    "pair": "TRX/USDT",
+    "exchange": "KuCoin",
+    "direction": "SHORT",
+    "style": "GR_BB_REV",
+    "score": 78,
+    "rsi3": 66.7,
+    "rsi14": 38.9,
+    "ma8_dist": 0.19,
+    "entry": 0.3296,
+    "sl": 0.3301,
+    "sl_band": [],
+    "tp1": 0.32885,
+    "tp2": 0.32835000000000003,
+    "tp3": 0.3276,
+    "capital": 1000.0,
+    "status": "OPEN",
+    "exit_price": null,
+    "pnl_usd": null,
+    "result": null,
+    "closed_at": null,
+    "exit_time": null
   }
 ]
