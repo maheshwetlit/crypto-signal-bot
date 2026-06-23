@@ -207,6 +207,25 @@ def compute_signals(df_5m, df_15m, df_1h, df_4h, df_1d, symbol):
         if rsi14_5m >= 50.0 and rsi14_5m <= 59.0:
             return []
         
+        # ── Volume analysis ──
+        v_ma = df_5m["volume"].rolling(20).mean().iloc[-1]
+        rv = df_5m["volume"].iloc[-1] / v_ma if v_ma > 0 else 0
+        
+        # ── Multi-TF trend analysis (HTF) ──
+        # 4h trend
+        ma8_4h = _sma(df_4h["close"], 8).iloc[-1]
+        c_4h = df_4h["close"].iloc[-1]
+        trend_4h = "BULLISH" if c_4h > ma8_4h else "BEARISH"
+        # 1d trend
+        ma8_1d = _sma(df_1d["close"], 8).iloc[-1]
+        c_1d = df_1d["close"].iloc[-1]
+        trend_1d = "BULLISH" if c_1d > ma8_1d else "BEARISH"
+        # Combined HTF
+        if trend_4h == trend_1d:
+            htf = trend_4h
+        else:
+            htf = "NEUTRAL"
+        
         # ── Remaining indicators ──
         rsi3_15m = _rsi(df_15m["close"], 3).iloc[-1]
         rsi3_1h = _rsi(df_1h["close"], 3).iloc[-1]
@@ -240,7 +259,8 @@ def compute_signals(df_5m, df_15m, df_1h, df_4h, df_1d, symbol):
                 tp = [c + (c - sl) * r for r in [1.5, 2.5, 4.0]]
                 candidates.append({"side":"LONG","style":"GR_RETRACE","entry":c,"sl":sl,"tp":tp,
                     "eff":85,"rsi14":round(rsi14_5m,1),"rsi3":round(rsi3_5m,1),
-                    "ma8_dist":round(ma8_dist,2),"band":[round(band_low,8),round(band_high,8)]})
+                    "ma8_dist":round(ma8_dist,2),"band":[round(band_low,8),round(band_high,8)],
+                    "htf":htf,"vol_x":round(rv,2)})
         
         if allow_short and ma8_dist < 2.0 and rsi3_5m > 70 and mh > 0:
             band_low, band_high = _fib_band(recent_high, recent_low, "short")
@@ -250,7 +270,8 @@ def compute_signals(df_5m, df_15m, df_1h, df_4h, df_1d, symbol):
                 tp = [c - (sl - c) * r for r in [1.5, 2.5, 4.0]]
                 candidates.append({"side":"SHORT","style":"GR_RETRACE","entry":c,"sl":sl,"tp":tp,
                     "eff":85,"rsi14":round(rsi14_5m,1),"rsi3":round(rsi3_5m,1),
-                    "ma8_dist":round(ma8_dist,2),"band":[round(band_low,8),round(band_high,8)]})
+                    "ma8_dist":round(ma8_dist,2),"band":[round(band_low,8),round(band_high,8)],
+                    "htf":htf,"vol_x":round(rv,2)})
         
         # SIGNAL 2: BB + RSI-3 (relaxed for scalping)
         if allow_long and ma8_dist < 2.5 and c <= bbl * 1.01 and rsi3_5m < 35:
@@ -261,7 +282,8 @@ def compute_signals(df_5m, df_15m, df_1h, df_4h, df_1d, symbol):
                 tp = [c + (c - sl) * r for r in [1.5, 2.5, 4.0]]
                 candidates.append({"side":"LONG","style":"GR_BB_REV","entry":c,"sl":sl,"tp":tp,
                     "eff":78,"rsi14":round(rsi14_5m,1),"rsi3":round(rsi3_5m,1),
-                    "ma8_dist":round(ma8_dist,2),"band":[round(band_low,8),round(band_high,8)]})
+                    "ma8_dist":round(ma8_dist,2),"band":[round(band_low,8),round(band_high,8)],
+                    "htf":htf,"vol_x":round(rv,2)})
         
         if allow_short and ma8_dist < 2.5 and c >= bbu * 0.99 and rsi3_5m > 65:
             band_low, band_high = _fib_band(recent_high, recent_low, "short")
@@ -271,7 +293,8 @@ def compute_signals(df_5m, df_15m, df_1h, df_4h, df_1d, symbol):
                 tp = [c - (sl - c) * r for r in [1.5, 2.5, 4.0]]
                 candidates.append({"side":"SHORT","style":"GR_BB_REV","entry":c,"sl":sl,"tp":tp,
                     "eff":78,"rsi14":round(rsi14_5m,1),"rsi3":round(rsi3_5m,1),
-                    "ma8_dist":round(ma8_dist,2),"band":[round(band_low,8),round(band_high,8)]})
+                    "ma8_dist":round(ma8_dist,2),"band":[round(band_low,8),round(band_high,8)],
+                    "htf":htf,"vol_x":round(rv,2)})
         
         # SIGNAL 3: StochRSI (relaxed for scalping)
         if allow_long and ma8_dist < 2.5 and srsi_k > srsi_d and srsi_k < 30 and rsi3_5m < 40:
@@ -282,7 +305,8 @@ def compute_signals(df_5m, df_15m, df_1h, df_4h, df_1d, symbol):
                 tp = [c + (c - sl) * r for r in [1.5, 2.5, 4.0]]
                 candidates.append({"side":"LONG","style":"GR_SRST","entry":c,"sl":sl,"tp":tp,
                     "eff":80,"rsi14":round(rsi14_5m,1),"rsi3":round(rsi3_5m,1),
-                    "ma8_dist":round(ma8_dist,2),"band":[round(band_low,8),round(band_high,8)]})
+                    "ma8_dist":round(ma8_dist,2),"band":[round(band_low,8),round(band_high,8)],
+                    "htf":htf,"vol_x":round(rv,2)})
         
         if allow_short and ma8_dist < 2.5 and srsi_k < srsi_d and srsi_k > 70 and rsi3_5m > 60:
             band_low, band_high = _fib_band(recent_high, recent_low, "short")
@@ -292,7 +316,8 @@ def compute_signals(df_5m, df_15m, df_1h, df_4h, df_1d, symbol):
                 tp = [c - (sl - c) * r for r in [1.5, 2.5, 4.0]]
                 candidates.append({"side":"SHORT","style":"GR_SRST","entry":c,"sl":sl,"tp":tp,
                     "eff":80,"rsi14":round(rsi14_5m,1),"rsi3":round(rsi3_5m,1),
-                    "ma8_dist":round(ma8_dist,2),"band":[round(band_low,8),round(band_high,8)]})
+                    "ma8_dist":round(ma8_dist,2),"band":[round(band_low,8),round(band_high,8)],
+                    "htf":htf,"vol_x":round(rv,2)})
         
         candidates.sort(key=lambda s: -s["eff"])
         return candidates[:2]
@@ -342,6 +367,7 @@ def main():
                 total_open += 1
                 m = (f"⚡ <b>{sig['side']} SCALP</b>\nPair: <code>{s}</code>\nStyle: {sig['style']}\n"
                      f"RSI-3: {sig.get('rsi3','N/A')} | RSI-14: {sig['rsi14']}\n"
+                     f"HTF: {sig.get('htf','N/A')} | Vol: {sig.get('vol_x','N/A')}x\n"
                      f"MA8 Dist: {sig.get('ma8_dist','N/A')}%\n"
                      f"Entry: <code>{sig['entry']:.8f}</code>\nSL: <code>{sig['sl']:.8f}</code>")
                 for i, p in enumerate(sig["tp"]):
