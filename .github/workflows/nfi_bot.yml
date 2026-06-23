@@ -26,6 +26,6 @@ jobs:
         run: |
           git config user.name "NFI Bot"
           git config user.email "bot@nfibot"
-          git add signals_log.json bot_state.json
+          git add signals_log.json
           git diff --cached --quiet || git commit -m "Bot scan: $(date -u +%Y-%m-%dT%H:%M:%S)"
           git push
