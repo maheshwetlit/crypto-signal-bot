@@ -128,6 +128,7 @@ def log_signal(symbol, sig):
         "tp2": sig["tp"][1] if len(sig["tp"]) > 1 else None,
         "tp3": sig["tp"][2] if len(sig["tp"]) > 2 else None,
         "capital": Config.CAPITAL_PER_SIGNAL, "status": "OPEN",
+        "filter_checked": True,  # Already filtered at bot level (time-of-day, RSI death zone, trend)
         "exit_price": None, "pnl_usd": None, "result": None,
         "closed_at": None, "exit_time": None,
     }
@@ -191,9 +192,22 @@ def compute_signals(df_5m, df_15m, df_1h, df_4h, df_1d, symbol):
         if not allow_long and not allow_short:
             return []
         
-        # Indicators on 5m
+        # ── Time-of-day filter (built into bot) ──
+        # Block entries at 10:00 UTC (historically 9.1% WR — manipulation hour)
+        current_hour = utc_now().hour
+        if current_hour == 10:
+            return []
+        
+        # ── Indicators on 5m (needed for filters below) ──
         rsi3_5m = _rsi(df_5m["close"], 3).iloc[-1]
         rsi14_5m = _rsi(df_5m["close"], 14).iloc[-1]
+        
+        # ── RSI death zone filter (built into bot) ──
+        # Block RSI 50-59 entries (historically 11.1% WR — overbought death zone)
+        if rsi14_5m >= 50.0 and rsi14_5m <= 59.0:
+            return []
+        
+        # ── Remaining indicators ──
         rsi3_15m = _rsi(df_15m["close"], 3).iloc[-1]
         rsi3_1h = _rsi(df_1h["close"], 3).iloc[-1]
         atr_5m = _atr(df_5m, 14).iloc[-1]
