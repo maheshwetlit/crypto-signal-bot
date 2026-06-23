@@ -257,7 +257,7 @@ def compute_signals(df_5m, df_15m, df_1h, df_4h, df_1d, symbol):
             sl_pct = (c - sl) / c * 100
             if sl_pct <= Config.MAX_LOSS_PCT and sl < c:
                 tp = [c + (c - sl) * r for r in [1.5, 2.5, 4.0]]
-                candidates.append({"side":"LONG","style":"GR_RETRACE","entry":c,"sl":sl,"tp":tp,
+                candidates.append({"side":"LONG","style":"NFI_RSI3_EXT","entry":c,"sl":sl,"tp":tp,
                     "eff":85,"rsi14":round(rsi14_5m,1),"rsi3":round(rsi3_5m,1),
                     "ma8_dist":round(ma8_dist,2),"band":[round(band_low,8),round(band_high,8)],
                     "htf":htf,"vol_x":round(rv,2)})
@@ -268,7 +268,7 @@ def compute_signals(df_5m, df_15m, df_1h, df_4h, df_1d, symbol):
             sl_pct = (sl - c) / c * 100
             if sl_pct <= Config.MAX_LOSS_PCT and sl > c:
                 tp = [c - (sl - c) * r for r in [1.5, 2.5, 4.0]]
-                candidates.append({"side":"SHORT","style":"GR_RETRACE","entry":c,"sl":sl,"tp":tp,
+                candidates.append({"side":"SHORT","style":"NFI_RSI3_EXT","entry":c,"sl":sl,"tp":tp,
                     "eff":85,"rsi14":round(rsi14_5m,1),"rsi3":round(rsi3_5m,1),
                     "ma8_dist":round(ma8_dist,2),"band":[round(band_low,8),round(band_high,8)],
                     "htf":htf,"vol_x":round(rv,2)})
@@ -280,7 +280,7 @@ def compute_signals(df_5m, df_15m, df_1h, df_4h, df_1d, symbol):
             sl_pct = (c - sl) / c * 100
             if sl_pct <= Config.MAX_LOSS_PCT and sl < c:
                 tp = [c + (c - sl) * r for r in [1.5, 2.5, 4.0]]
-                candidates.append({"side":"LONG","style":"GR_BB_REV","entry":c,"sl":sl,"tp":tp,
+                candidates.append({"side":"LONG","style":"NFI_BB_REV","entry":c,"sl":sl,"tp":tp,
                     "eff":78,"rsi14":round(rsi14_5m,1),"rsi3":round(rsi3_5m,1),
                     "ma8_dist":round(ma8_dist,2),"band":[round(band_low,8),round(band_high,8)],
                     "htf":htf,"vol_x":round(rv,2)})
@@ -291,7 +291,7 @@ def compute_signals(df_5m, df_15m, df_1h, df_4h, df_1d, symbol):
             sl_pct = (sl - c) / c * 100
             if sl_pct <= Config.MAX_LOSS_PCT and sl > c:
                 tp = [c - (sl - c) * r for r in [1.5, 2.5, 4.0]]
-                candidates.append({"side":"SHORT","style":"GR_BB_REV","entry":c,"sl":sl,"tp":tp,
+                candidates.append({"side":"SHORT","style":"NFI_BB_REV","entry":c,"sl":sl,"tp":tp,
                     "eff":78,"rsi14":round(rsi14_5m,1),"rsi3":round(rsi3_5m,1),
                     "ma8_dist":round(ma8_dist,2),"band":[round(band_low,8),round(band_high,8)],
                     "htf":htf,"vol_x":round(rv,2)})
@@ -303,7 +303,7 @@ def compute_signals(df_5m, df_15m, df_1h, df_4h, df_1d, symbol):
             sl_pct = (c - sl) / c * 100
             if sl_pct <= Config.MAX_LOSS_PCT and sl < c:
                 tp = [c + (c - sl) * r for r in [1.5, 2.5, 4.0]]
-                candidates.append({"side":"LONG","style":"GR_SRST","entry":c,"sl":sl,"tp":tp,
+                candidates.append({"side":"LONG","style":"NFI_SRST","entry":c,"sl":sl,"tp":tp,
                     "eff":80,"rsi14":round(rsi14_5m,1),"rsi3":round(rsi3_5m,1),
                     "ma8_dist":round(ma8_dist,2),"band":[round(band_low,8),round(band_high,8)],
                     "htf":htf,"vol_x":round(rv,2)})
@@ -314,7 +314,7 @@ def compute_signals(df_5m, df_15m, df_1h, df_4h, df_1d, symbol):
             sl_pct = (sl - c) / c * 100
             if sl_pct <= Config.MAX_LOSS_PCT and sl > c:
                 tp = [c - (sl - c) * r for r in [1.5, 2.5, 4.0]]
-                candidates.append({"side":"SHORT","style":"GR_SRST","entry":c,"sl":sl,"tp":tp,
+                candidates.append({"side":"SHORT","style":"NFI_SRST","entry":c,"sl":sl,"tp":tp,
                     "eff":80,"rsi14":round(rsi14_5m,1),"rsi3":round(rsi3_5m,1),
                     "ma8_dist":round(ma8_dist,2),"band":[round(band_low,8),round(band_high,8)],
                     "htf":htf,"vol_x":round(rv,2)})
