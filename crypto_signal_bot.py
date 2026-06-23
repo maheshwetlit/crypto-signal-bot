@@ -23,8 +23,8 @@ PHI_INV = 0.618033988749895  # 1/PHI
 
 class Config:
     SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
-    TELEGRAM_BOT_TOKEN = ""
-    TELEGRAM_CHAT_ID = "5515185305"
+    TELEGRAM_BOT_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN", "")
+    TELEGRAM_CHAT_ID = os.getenv("TELEGRAM_CHAT_ID", "5515185305")
     EXCHANGE = "KuCoin"
     MIN_24H_VOLUME_USD = 3_000_000
     MAX_COINS_TO_SCAN = 80
@@ -217,9 +217,8 @@ def compute_signals(df_5m, df_15m, df_1h, df_4h, df_1d, symbol):
         candidates = []
         
         # SIGNAL 1: Retracement Entry (Highest Probability)
-        # For scalping: 5m RSI-3 extreme + price near 8-day MA is enough
-        # Don't require 15m/1h to also be extreme (that's too strict for scalps)
-        if allow_long and ma8_dist < 2.0 and rsi3_5m < 20 and mh < 0:
+        # Relaxed RSI-3 thresholds for realistic scalping
+        if allow_long and ma8_dist < 2.0 and rsi3_5m < 30 and mh < 0:
             band_low, band_high = _fib_band(recent_high, recent_low, "long")
             sl = band_low
             sl_pct = (c - sl) / c * 100
@@ -229,7 +228,7 @@ def compute_signals(df_5m, df_15m, df_1h, df_4h, df_1d, symbol):
                     "eff":85,"rsi14":round(rsi14_5m,1),"rsi3":round(rsi3_5m,1),
                     "ma8_dist":round(ma8_dist,2),"band":[round(band_low,8),round(band_high,8)]})
         
-        if allow_short and ma8_dist < 2.0 and rsi3_5m > 80 and mh > 0:
+        if allow_short and ma8_dist < 2.0 and rsi3_5m > 70 and mh > 0:
             band_low, band_high = _fib_band(recent_high, recent_low, "short")
             sl = band_high
             sl_pct = (sl - c) / c * 100
@@ -240,7 +239,7 @@ def compute_signals(df_5m, df_15m, df_1h, df_4h, df_1d, symbol):
                     "ma8_dist":round(ma8_dist,2),"band":[round(band_low,8),round(band_high,8)]})
         
         # SIGNAL 2: BB + RSI-3 (relaxed for scalping)
-        if allow_long and ma8_dist < 2.5 and c <= bbl * 1.01 and rsi3_5m < 20:
+        if allow_long and ma8_dist < 2.5 and c <= bbl * 1.01 and rsi3_5m < 35:
             band_low, band_high = _fib_band(recent_high, recent_low, "long")
             sl = band_low
             sl_pct = (c - sl) / c * 100
@@ -250,7 +249,7 @@ def compute_signals(df_5m, df_15m, df_1h, df_4h, df_1d, symbol):
                     "eff":78,"rsi14":round(rsi14_5m,1),"rsi3":round(rsi3_5m,1),
                     "ma8_dist":round(ma8_dist,2),"band":[round(band_low,8),round(band_high,8)]})
         
-        if allow_short and ma8_dist < 2.5 and c >= bbu * 0.99 and rsi3_5m > 80:
+        if allow_short and ma8_dist < 2.5 and c >= bbu * 0.99 and rsi3_5m > 65:
             band_low, band_high = _fib_band(recent_high, recent_low, "short")
             sl = band_high
             sl_pct = (sl - c) / c * 100
@@ -261,7 +260,7 @@ def compute_signals(df_5m, df_15m, df_1h, df_4h, df_1d, symbol):
                     "ma8_dist":round(ma8_dist,2),"band":[round(band_low,8),round(band_high,8)]})
         
         # SIGNAL 3: StochRSI (relaxed for scalping)
-        if allow_long and ma8_dist < 2.5 and srsi_k > srsi_d and srsi_k < 25 and rsi3_5m < 25:
+        if allow_long and ma8_dist < 2.5 and srsi_k > srsi_d and srsi_k < 30 and rsi3_5m < 40:
             band_low, band_high = _fib_band(recent_high, recent_low, "long")
             sl = band_low
             sl_pct = (c - sl) / c * 100
@@ -271,7 +270,7 @@ def compute_signals(df_5m, df_15m, df_1h, df_4h, df_1d, symbol):
                     "eff":80,"rsi14":round(rsi14_5m,1),"rsi3":round(rsi3_5m,1),
                     "ma8_dist":round(ma8_dist,2),"band":[round(band_low,8),round(band_high,8)]})
         
-        if allow_short and ma8_dist < 2.5 and srsi_k < srsi_d and srsi_k > 75 and rsi3_5m > 75:
+        if allow_short and ma8_dist < 2.5 and srsi_k < srsi_d and srsi_k > 70 and rsi3_5m > 60:
             band_low, band_high = _fib_band(recent_high, recent_low, "short")
             sl = band_high
             sl_pct = (sl - c) / c * 100
