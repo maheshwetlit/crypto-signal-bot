@@ -138,5 +138,30 @@
     "result": null,
     "closed_at": null,
     "exit_time": null
+  },
+  {
+    "id": "SIG-0006",
+    "time": "2026-06-23T08:37:35.173567+00:00",
+    "pair": "RAIN/USDT",
+    "exchange": "KuCoin",
+    "direction": "SHORT",
+    "style": "GR_BB_REV",
+    "score": 78,
+    "rsi3": 89.6,
+    "rsi14": 39.3,
+    "ma8_dist": 0.61,
+    "entry": 0.015861,
+    "sl": 0.015968,
+    "sl_band": [],
+    "tp1": 0.0157005,
+    "tp2": 0.015593500000000001,
+    "tp3": 0.015433000000000002,
+    "capital": 1000.0,
+    "status": "OPEN",
+    "exit_price": null,
+    "pnl_usd": null,
+    "result": null,
+    "closed_at": null,
+    "exit_time": null
   }
 ]
