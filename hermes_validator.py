@@ -41,10 +41,11 @@ EXCHANGE_APIS = {
 }
 
 # --- Time-decay thresholds (hours) ---
-MAX_SIGNAL_AGE_HOURS  = 72   # hard expiry
-STALE_CHECK_HOURS     = 12   # start checking for stale trades
-BREAKEVEN_CLOSE_HOURS = 24   # close losing trades (capital recycling)
-FORCE_CLOSE_HOURS     = 48   # force close any trade regardless
+# Industry standard: Freqtrade uses 24h timeout, quant systems use 24-48h for scalps
+MAX_SIGNAL_AGE_HOURS  = 24   # hard expiry (signal thesis invalid after 24h on 5m timeframe)
+STALE_CHECK_HOURS     = 6    # start checking for stale trades (sideways = capital lock)
+BREAKEVEN_CLOSE_HOURS = 12   # close losing trades after 12h (capital recycling)
+FORCE_CLOSE_HOURS     = 18   # force close any trade after 18h regardless of PnL
 
 # --- Trailing SL config ---
 TRAIL_ACTIVATION_PCT  = 5.0  # activate trailing SL after +5% favorable move
