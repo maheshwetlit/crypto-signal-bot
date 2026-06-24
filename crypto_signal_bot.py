@@ -21,9 +21,12 @@ import ccxt, pandas as pd, numpy as np, requests
 PHI = 1.618033988749895
 PHI_INV = 0.618033988749895  # 1/PHI
 
+SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+
 def _load_hermes_token():
     """Load HermesTrading bot token from .tg_token_hermes (base64 encoded)."""
-    token_file = os.path.join(Config.SCRIPT_DIR, ".tg_token_hermes")
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+    token_file = os.path.join(script_dir, ".tg_token_hermes")
     if os.path.exists(token_file):
         import base64
         with open(token_file) as f:
