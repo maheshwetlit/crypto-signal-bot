@@ -423,7 +423,13 @@ def main():
     
     if signals_sent > 0:
         style_str = " | ".join(f"{k}: {v}" for k, v in sorted(style_counts.items(), key=lambda x: -x[1]))
-        nt.send(f"✅ <b>Scan Complete</b>\nScanned: {len(syms)} | Signals: {signals_sent}\nStyles: {style_str}")
+        nt.send(f"✅ <b>Scan Complete</b>
+Scanned: {len(syms)} | Signals: {signals_sent}
+Styles: {style_str}")
+    else:
+        nt.send(f"⚠️ <b>Scan Complete</b>
+Scanned: {len(syms)} | Signals: 0
+No qualifying setups found this scan.")
 
 if __name__ == "__main__":
     main()
