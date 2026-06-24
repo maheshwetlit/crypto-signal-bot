@@ -38,4 +38,5 @@ jobs:
           git config user.email "bot@nfibot"
           git add signals_log.json
           git diff --cached --quiet || git commit -m "Bot scan: $(date -u +%Y-%m-%dT%H:%M:%S)"
-          git push
+          git pull --rebase origin main || true
+          git push origin main
