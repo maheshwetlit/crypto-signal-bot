@@ -2422,5 +2422,33 @@
     "closed_at": "2026-06-24T08:01:08.820396+00:00",
     "exit_time": "2026-06-24T08:01:08.820396+00:00",
     "pnl_pct": -1.95
+  },
+  {
+    "id": "SIG-0084",
+    "time": "2026-06-24T08:02:07.086976+00:00",
+    "pair": "XRP/USDT",
+    "exchange": "KuCoin",
+    "direction": "SHORT",
+    "style": "NFI_BB_REV",
+    "score": 78,
+    "rsi3": 68.2,
+    "rsi14": 32.3,
+    "ma8_dist": 0.38,
+    "htf": "BEARISH",
+    "vol_x": 0.57,
+    "entry": 1.09918,
+    "sl": 1.10515,
+    "sl_band": [],
+    "tp1": 1.090225,
+    "tp2": 1.084255,
+    "tp3": 1.0753,
+    "capital": 1000.0,
+    "status": "OPEN",
+    "filter_checked": true,
+    "exit_price": null,
+    "pnl_usd": null,
+    "result": null,
+    "closed_at": null,
+    "exit_time": null
   }
 ]
