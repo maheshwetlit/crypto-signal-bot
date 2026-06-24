@@ -21,10 +21,22 @@ import ccxt, pandas as pd, numpy as np, requests
 PHI = 1.618033988749895
 PHI_INV = 0.618033988749895  # 1/PHI
 
+def _load_hermes_token():
+    """Load HermesTrading bot token from .tg_token_hermes (base64 encoded)."""
+    token_file = os.path.join(Config.SCRIPT_DIR, ".tg_token_hermes")
+    if os.path.exists(token_file):
+        import base64
+        with open(token_file) as f:
+            return base64.b64decode(f.read().strip()).decode()
+    return ""
+
 class Config:
     SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
     TELEGRAM_BOT_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN", "")
     TELEGRAM_CHAT_ID = os.getenv("TELEGRAM_CHAT_ID", "5515185305")
+    # HermesTrading bot (second channel for signals)
+    HERMES_BOT_TOKEN = _load_hermes_token()
+    HERMES_CHAT_ID = ""  # Will be set when user starts the bot
     EXCHANGE = "KuCoin"
     MIN_24H_VOLUME_USD = 3_000_000
     MAX_COINS_TO_SCAN = 80
@@ -125,6 +137,7 @@ def log_signal(symbol, sig):
         "ma8_dist": sig.get("ma8_dist", 0),
         "htf": sig.get("htf", "N/A"),
         "vol_x": sig.get("vol_x", 0),
+        "adx": sig.get("adx", 0),
         "entry": sig["entry"], "sl": sig["sl"], "sl_band": sig.get("sl_band", []),
         "tp1": sig["tp"][0] if len(sig["tp"]) > 0 else None,
         "tp2": sig["tp"][1] if len(sig["tp"]) > 1 else None,
@@ -158,23 +171,29 @@ class BotState:
 # ── Telegram ──
 class TelegramNotifier:
     def send(self, msg):
-        if not Config.TELEGRAM_BOT_TOKEN:
-            print("[TG] ❌ TELEGRAM_BOT_TOKEN is empty!")
+        """Send message to both Telegram channels (My_crypto_bot + HermesTrading)."""
+        ok1 = self._send_to(Config.TELEGRAM_BOT_TOKEN, Config.TELEGRAM_CHAT_ID, msg, "My_crypto_bot")
+        ok2 = self._send_to(Config.HERMES_BOT_TOKEN, Config.HERMES_CHAT_ID, msg, "HermesTrading")
+        return ok1 or ok2
+
+    def _send_to(self, token, chat_id, msg, label):
+        if not token:
+            print(f"[{label}] ❌ Token is empty!")
             return False
-        if not Config.TELEGRAM_CHAT_ID:
-            print("[TG] ❌ TELEGRAM_CHAT_ID is empty!")
+        if not chat_id:
+            print(f"[{label}] ❌ Chat ID is empty!")
             return False
-        url = f"https://api.telegram.org/bot{Config.TELEGRAM_BOT_TOKEN}/sendMessage"
-        print(f"[TG] Sending to chat {Config.TELEGRAM_CHAT_ID} via bot {Config.TELEGRAM_BOT_TOKEN[:10]}...")
+        url = f"https://api.telegram.org/bot{token}/sendMessage"
+        print(f"[{label}] Sending to chat {chat_id} via bot {token[:10]}...")
         for attempt in range(3):
             try:
-                r = requests.post(url, json={"chat_id": Config.TELEGRAM_CHAT_ID, "text": msg, "parse_mode": "HTML"}, timeout=15)
+                r = requests.post(url, json={"chat_id": chat_id, "text": msg, "parse_mode": "HTML"}, timeout=15)
                 if r.status_code == 200:
-                    print(f"[TG] ✅ Sent OK (attempt {attempt+1})")
+                    print(f"[{label}] ✅ Sent OK (attempt {attempt+1})")
                     return True
-                print(f"[TG] ❌ HTTP {r.status_code}: {r.text[:200]}")
+                print(f"[{label}] ❌ HTTP {r.status_code}: {r.text[:200]}")
             except Exception as e:
-                print(f"[TG] ❌ Attempt {attempt+1} exception: {e}")
+                print(f"[{label}] ❌ Attempt {attempt+1} exception: {e}")
             time.sleep(2)
         return False
 
@@ -272,7 +291,7 @@ def compute_signals(df_5m, df_15m, df_1h, df_4h, df_1d, symbol):
                 candidates.append({"side":"LONG","style":"NFI_RSI3_EXT","entry":c,"sl":sl,"tp":tp,
                     "eff":85,"rsi14":round(rsi14_5m,1),"rsi3":round(rsi3_5m,1),
                     "ma8_dist":round(ma8_dist,2),"band":[round(band_low,8),round(band_high,8)],
-                    "htf":htf,"vol_x":round(rv,2)})
+                    "htf":htf,"vol_x":round(rv,2),"adx":round(adx_val,1)})
         
         if allow_short and ma8_dist < 2.0 and rsi3_5m > 70 and mh > 0:
             band_low, band_high = _fib_band(recent_high, recent_low, "short")
@@ -283,7 +302,7 @@ def compute_signals(df_5m, df_15m, df_1h, df_4h, df_1d, symbol):
                 candidates.append({"side":"SHORT","style":"NFI_RSI3_EXT","entry":c,"sl":sl,"tp":tp,
                     "eff":85,"rsi14":round(rsi14_5m,1),"rsi3":round(rsi3_5m,1),
                     "ma8_dist":round(ma8_dist,2),"band":[round(band_low,8),round(band_high,8)],
-                    "htf":htf,"vol_x":round(rv,2)})
+                    "htf":htf,"vol_x":round(rv,2),"adx":round(adx_val,1)})
         
         # SIGNAL 2: BB + RSI-3 (relaxed for scalping)
         if allow_long and ma8_dist < 2.5 and c <= bbl * 1.01 and rsi3_5m < 35:
@@ -295,7 +314,7 @@ def compute_signals(df_5m, df_15m, df_1h, df_4h, df_1d, symbol):
                 candidates.append({"side":"LONG","style":"NFI_BB_REV","entry":c,"sl":sl,"tp":tp,
                     "eff":78,"rsi14":round(rsi14_5m,1),"rsi3":round(rsi3_5m,1),
                     "ma8_dist":round(ma8_dist,2),"band":[round(band_low,8),round(band_high,8)],
-                    "htf":htf,"vol_x":round(rv,2)})
+                    "htf":htf,"vol_x":round(rv,2),"adx":round(adx_val,1)})
         
         if allow_short and ma8_dist < 2.5 and c >= bbu * 0.99 and rsi3_5m > 65:
             band_low, band_high = _fib_band(recent_high, recent_low, "short")
@@ -306,7 +325,7 @@ def compute_signals(df_5m, df_15m, df_1h, df_4h, df_1d, symbol):
                 candidates.append({"side":"SHORT","style":"NFI_BB_REV","entry":c,"sl":sl,"tp":tp,
                     "eff":78,"rsi14":round(rsi14_5m,1),"rsi3":round(rsi3_5m,1),
                     "ma8_dist":round(ma8_dist,2),"band":[round(band_low,8),round(band_high,8)],
-                    "htf":htf,"vol_x":round(rv,2)})
+                    "htf":htf,"vol_x":round(rv,2),"adx":round(adx_val,1)})
         
         # SIGNAL 3: StochRSI (relaxed for scalping)
         if allow_long and ma8_dist < 2.5 and srsi_k > srsi_d and srsi_k < 30 and rsi3_5m < 40:
@@ -318,7 +337,7 @@ def compute_signals(df_5m, df_15m, df_1h, df_4h, df_1d, symbol):
                 candidates.append({"side":"LONG","style":"NFI_SRST","entry":c,"sl":sl,"tp":tp,
                     "eff":80,"rsi14":round(rsi14_5m,1),"rsi3":round(rsi3_5m,1),
                     "ma8_dist":round(ma8_dist,2),"band":[round(band_low,8),round(band_high,8)],
-                    "htf":htf,"vol_x":round(rv,2)})
+                    "htf":htf,"vol_x":round(rv,2),"adx":round(adx_val,1)})
         
         if allow_short and ma8_dist < 2.5 and srsi_k < srsi_d and srsi_k > 70 and rsi3_5m > 60:
             band_low, band_high = _fib_band(recent_high, recent_low, "short")
@@ -329,7 +348,7 @@ def compute_signals(df_5m, df_15m, df_1h, df_4h, df_1d, symbol):
                 candidates.append({"side":"SHORT","style":"NFI_SRST","entry":c,"sl":sl,"tp":tp,
                     "eff":80,"rsi14":round(rsi14_5m,1),"rsi3":round(rsi3_5m,1),
                     "ma8_dist":round(ma8_dist,2),"band":[round(band_low,8),round(band_high,8)],
-                    "htf":htf,"vol_x":round(rv,2)})
+                    "htf":htf,"vol_x":round(rv,2),"adx":round(adx_val,1)})
         
         candidates.sort(key=lambda s: -s["eff"])
         return candidates[:2]
@@ -380,11 +399,16 @@ def main():
                 log_signal(s, sig)
                 state.record_and_save(s)
                 total_open += 1
-                m = (f"⚡ <b>{sig['side']} SCALP</b>\nPair: <code>{s}</code>\nStyle: {sig['style']}\n"
-                     f"RSI-3: {sig.get('rsi3','N/A')} | RSI-14: {sig['rsi14']}\n"
-                     f"HTF: {sig.get('htf','N/A')} | Vol: {sig.get('vol_x','N/A')}x\n"
-                     f"MA8 Dist: {sig.get('ma8_dist','N/A')}%\n"
-                     f"Entry: <code>{sig['entry']:.8f}</code>\nSL: <code>{sig['sl']:.8f}</code>")
+                m = (
+                    f"⚡ <b>{sig['side']} SCALP</b>\n"
+                    f"Pair: <code>{s}</code>\n"
+                    f"Style: {sig['style']}\n"
+                    f"Score: {sig['eff']}\n"
+                    f"HTF: {sig.get('htf','N/A')} | ADX: {sig.get('adx','N/A')} | RSI: {sig.get('rsi14','N/A')} | Vol: {sig.get('vol_x','N/A')}x\n"
+                    f"MA8 Dist: {sig.get('ma8_dist','N/A')}%\n"
+                    f"Entry: <code>{sig['entry']:.8f}</code>\n"
+                    f"SL: <code>{sig['sl']:.8f}</code>"
+                )
                 for i, p in enumerate(sig["tp"]):
                     m += f"\nTP{i+1}: <code>{p:.8f}</code>"
                 nt.send(m)
