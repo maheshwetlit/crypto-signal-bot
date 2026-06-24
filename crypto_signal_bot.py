@@ -158,13 +158,23 @@ class BotState:
 # ── Telegram ──
 class TelegramNotifier:
     def send(self, msg):
-        if not Config.TELEGRAM_BOT_TOKEN: return False
+        if not Config.TELEGRAM_BOT_TOKEN:
+            print("[TG] ❌ TELEGRAM_BOT_TOKEN is empty!")
+            return False
+        if not Config.TELEGRAM_CHAT_ID:
+            print("[TG] ❌ TELEGRAM_CHAT_ID is empty!")
+            return False
         url = f"https://api.telegram.org/bot{Config.TELEGRAM_BOT_TOKEN}/sendMessage"
+        print(f"[TG] Sending to chat {Config.TELEGRAM_CHAT_ID} via bot {Config.TELEGRAM_BOT_TOKEN[:10]}...")
         for attempt in range(3):
             try:
                 r = requests.post(url, json={"chat_id": Config.TELEGRAM_CHAT_ID, "text": msg, "parse_mode": "HTML"}, timeout=15)
-                if r.status_code == 200: return True
-            except: pass
+                if r.status_code == 200:
+                    print(f"[TG] ✅ Sent OK (attempt {attempt+1})")
+                    return True
+                print(f"[TG] ❌ HTTP {r.status_code}: {r.text[:200]}")
+            except Exception as e:
+                print(f"[TG] ❌ Attempt {attempt+1} exception: {e}")
             time.sleep(2)
         return False
 
@@ -328,6 +338,9 @@ def compute_signals(df_5m, df_15m, df_1h, df_4h, df_1d, symbol):
         return []
 
 def main():
+    print(f"[BOT] Starting crypto_signal_bot.py v13.0...")
+    print(f"[BOT] TELEGRAM_BOT_TOKEN: {'SET' if Config.TELEGRAM_BOT_TOKEN else 'EMPTY'}")
+    print(f"[BOT] TELEGRAM_CHAT_ID: {Config.TELEGRAM_CHAT_ID}")
     ex = ccxt.kucoin({"enableRateLimit": True})
     state = BotState(Config.STATE_FILE)
     nt = TelegramNotifier()
