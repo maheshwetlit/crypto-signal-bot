@@ -4442,13 +4442,14 @@
     "tp2": 38.399,
     "tp3": 37.186400000000006,
     "capital": 1000.0,
-    "status": "OPEN",
+    "status": "LOSS",
     "filter_checked": true,
-    "exit_price": null,
-    "pnl_usd": null,
-    "result": null,
-    "closed_at": null,
-    "exit_time": null
+    "exit_price": 40.95,
+    "pnl_usd": -13.11,
+    "result": "STALE CLOSE",
+    "closed_at": "2026-06-25T23:48:12.407653+00:00",
+    "exit_time": "2026-06-25T23:48:12.407653+00:00",
+    "pnl_pct": -1.31
   },
   {
     "id": "SIG-0152",
