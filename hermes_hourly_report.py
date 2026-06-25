@@ -19,11 +19,14 @@ import requests
 
 # ── Config ──
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+SCRIPTS_DIR = os.path.join(os.path.dirname(SCRIPT_DIR), "scripts")
+sys.path.insert(0, SCRIPTS_DIR)
 os.chdir(SCRIPT_DIR)
 
-GH_TOKEN_FILE = os.path.join(SCRIPT_DIR, ".gh_token")
-TG_TOKEN_FILE = os.path.join(SCRIPT_DIR, ".tg_token")
-SIGNAL_LOG_FILE = os.path.join(SCRIPT_DIR, "signals_log.json")
+REPORT_DIR = os.path.dirname(SCRIPT_DIR)
+GH_TOKEN_FILE = os.path.join(REPORT_DIR, ".gh_token")
+TG_TOKEN_FILE  = os.path.join(REPORT_DIR, ".tg_token")
+SIGNAL_LOG_FILE = os.path.join(REPORT_DIR, "signals_log.json")
 GH_API_URL     = "https://api.github.com/repos/maheshwetlit/crypto-signal-bot/contents/signals_log.json"
 CHAT_ID        = "5515185305"
 CAPITAL        = 1000.0
@@ -46,7 +49,7 @@ EXCHANGE_APIS = {
 
 def load_token(path):
     if os.path.exists(path):
-        with open(path) as f:
+        with open(path, encoding="utf-8") as f:
             return f.read().strip()
     return ""
 
@@ -60,7 +63,7 @@ def gh_fetch_signals():
         "Authorization": "Bearer " + token,
         "Accept": "application/vnd.github.v3+json"
     })
-    resp = urllib.request.urlopen(req, timeout=15)
+    resp = urllib.request.urlopen(req, timeout=15, encoding="utf-8")
     data = json.loads(resp.read())
     raw = base64.b64decode(data["content"]).decode()
     return json.loads(raw)
@@ -74,7 +77,7 @@ def gh_commit_signals(signals):
         "Authorization": "Bearer " + token,
         "Accept": "application/vnd.github.v3+json"
     })
-    resp = urllib.request.urlopen(req, timeout=15)
+    resp = urllib.request.urlopen(req, timeout=15, encoding="utf-8")
     sha = json.loads(resp.read())["sha"]
     payload = json.dumps({
         "message": "Signal update " + datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC"),
@@ -86,7 +89,7 @@ def gh_commit_signals(signals):
         "Accept": "application/vnd.github.v3+json",
         "Content-Type": "application/json"
     }, method="PUT")
-    resp2 = urllib.request.urlopen(req2, timeout=15)
+    resp2 = urllib.request.urlopen(req2, timeout=15, encoding="utf-8")
     return resp2.status == 200
 
 
@@ -165,16 +168,26 @@ def send_telegram(message):
 
 
 def build_report(signals, fetch_failures=0, skip_prices=False):
-    wins   = [s for s in signals if s.get("status") == "WIN"]
-    losses = [s for s in signals if s.get("status") == "LOSS"]
-    opens  = [s for s in signals if s.get("status") == "OPEN"]
+    # Filter to NFI signals only (v10+)
+    nfi_signals = [s for s in signals if s.get("style", "").startswith("NFI_")]
+    # Also keep all signals for overall comparison
+    all_closed = [s for s in signals if s.get("status") in ("WIN", "LOSS")]
+    nfi_closed = [s for s in nfi_signals if s.get("status") in ("WIN", "LOSS")]
+
+    wins   = [s for s in nfi_signals if s.get("status") == "WIN"]
+    losses = [s for s in nfi_signals if s.get("status") == "LOSS"]
+    opens  = [s for s in nfi_signals if s.get("status") == "OPEN"]
     closed = wins + losses
 
-    total  = len(signals)
+    total  = len(nfi_signals)
     wr     = (len(wins) / len(closed) * 100) if closed else 0
     lr     = (len(losses) / len(closed) * 100) if closed else 0
     net_pnl = sum(s.get("pnl_usd") or 0 for s in closed)
     capital_return = (net_pnl / (len(closed) * CAPITAL) * 100) if closed else 0
+
+    # Overall stats (all signals)
+    all_wr = (len([s for s in all_closed if s.get("status")=="WIN"]) / len(all_closed) * 100) if all_closed else 0
+    all_net = sum(s.get("pnl_usd") or 0 for s in all_closed)
 
     now_str = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M")
 
@@ -183,19 +196,20 @@ def build_report(signals, fetch_failures=0, skip_prices=False):
     L.append(f"🕐 {now_str} UTC")
     L.append("━━━━━━━━━━━━━━━━━━━━")
     L.append("")
-    L.append("📈 SUMMARY")
-    L.append(f"Total Signals: {total} | ✅{len(wins)} | ❌{len(losses)} | ⏳{len(opens)}")
-    if fetch_failures:
-        L.append(f"⚠️ Fetch Failures: {fetch_failures}")
-    L.append(f"🎯 Win Rate: {wr:.1f}%")
-    L.append(f"📉 Loss Rate: {lr:.1f}%")
+    L.append("📈 NFI SIGNALS (v10)")
+    L.append(f"Total NFI: {total} | ✅{len(wins)} | ❌{len(losses)} | ⏳{len(opens)}")
+    if closed:
+        L.append(f"🎯 NFI Win Rate: {wr:.1f}%")
+        L.append(f"📉 NFI Loss Rate: {lr:.1f}%")
     pnl_sign = "+" if net_pnl >= 0 else ""
-    L.append(f"💰 Net P&L: {pnl_sign}${net_pnl:,.2f} (@ ${CAPITAL:,.0f}/signal)")
-    L.append(f"💵 Capital Return: {pnl_sign}{capital_return:.1f}%")
+    L.append(f"💰 NFI Net P&L: {pnl_sign}${net_pnl:,.2f}")
+    L.append("")
+    L.append(f"📈 ALL SIGNALS (for comparison)")
+    L.append(f"Total: {len(signals)} | Closed: {len(all_closed)} | WR: {all_wr:.1f}% | Net: ${all_net:,.2f}")
 
-    # Per-pair breakdown — group by (pair, direction)
+    # Per-pair breakdown — NFI signals only
     pair_dir_stats = defaultdict(lambda: {"w": 0, "l": 0, "o": 0, "pnl": 0.0, "n": 0})
-    for s in signals:
+    for s in nfi_signals:  # Only NFI signals
         pair = s.get("pair", "?")
         direction = s.get("direction", "?")
         key = (pair, direction)
@@ -272,10 +286,10 @@ def build_report(signals, fetch_failures=0, skip_prices=False):
 
 def get_last_run_time():
     """Read the last successful run time from the tracker log."""
-    tracker_file = os.path.join(SCRIPT_DIR, "win_loss_tracker.json")
+    tracker_file = os.path.join(REPORT_DIR, "win_loss_tracker.json")
     if os.path.exists(tracker_file):
         try:
-            with open(tracker_file) as f:
+            with open(tracker_file, encoding="utf-8") as f:
                 data = json.load(f)
             snaps = data.get("snapshots", [])
             if snaps:
@@ -328,15 +342,44 @@ def main():
     signals = gh_fetch_signals()
     open_count = len([s for s in signals if s.get("status") == "OPEN"])
     print(f"       {len(signals)} signals ({open_count} OPEN)")
-    with open(SIGNAL_LOG_FILE, "w") as f:
+    with open(SIGNAL_LOG_FILE, "w", encoding="utf-8") as f:
         json.dump(signals, f, indent=2)
 
     # Step 1b: Run entry filter on NEW signals
-    # NOTE: Entry filter is disabled — the bot's own trend filter (8-day MA direction + 
-    # RSI-3 thresholds) is sufficient. The old filter was blocking 100% of signals due to 
-    # field name mismatches (checking 'rsi' and 'volume_x' which the bot doesn't send).
-    print("[1b/6] Entry filter skipped (bot's internal trend filter is sufficient)")
-    print(f"       {len([s for s in signals if s.get('status')=='OPEN'])} OPEN signals will be validated")
+    print("[1b/6] Running entry filter on new signals...")
+    try:
+        import hermes_entry_filter as _filter
+        filter_log = _filter.load_filter_log()
+        new_signals = [s for s in signals if s.get("status") == "OPEN" and not s.get("filter_checked")]
+        blocked_count = 0
+        for sig in new_signals:
+            allowed, reason, confidence = _filter.check_entry_filter(sig, signals, filter_log)
+            sig["filter_checked"] = True
+            sig["filter_result"] = "PASS" if allowed else "BLOCK"
+            sig["filter_reason"] = reason
+            sig["filter_confidence"] = confidence
+            if not allowed:
+                blocked_count += 1
+                # Close blocked signals immediately
+                sig["status"] = "BLOCKED"
+                sig["result"] = "FILTER_BLOCKED"
+                sig["closed_at"] = datetime.now(timezone.utc).isoformat()
+                sig["exit_time"] = sig["closed_at"]
+                sig["exit_price"] = sig.get("entry", 0)
+                sig["pnl_usd"] = 0.0
+                sig["pnl_pct"] = 0.0
+                print(f"  [BLOCKED] {sig.get('pair','?')} {sig.get('direction','?')} — {reason}")
+            else:
+                print(f"  [PASS] {sig.get('pair','?')} {sig.get('direction','?')} — {reason} ({confidence})")
+        if new_signals:
+            print(f"  Filter result: {len(new_signals)-blocked_count}/{len(new_signals)} passed, {blocked_count} blocked")
+            # Re-save with filter results
+            with open(SIGNAL_LOG_FILE, "w", encoding="utf-8") as f:
+                json.dump(signals, f, indent=2)
+        else:
+            print("  No new signals to filter")
+    except Exception as e:
+        print(f"  Filter error (non-fatal): {e}")
 
     # Step 2: Run validator (import directly to use venv Python)
     print("[2/6] Running validator...")
@@ -356,7 +399,7 @@ def main():
 
     # Step 3: Read updated signals
     print("[3/6] Reading updated signals...")
-    with open(SIGNAL_LOG_FILE) as f:
+    with open(SIGNAL_LOG_FILE, encoding="utf-8") as f:
         updated = json.load(f)
 
     # Step 4: Commit back to GitHub (non-fatal if it fails)
@@ -388,7 +431,7 @@ def main():
         else:
             print("       ERROR: Telegram send failed")
 
-    with open(os.path.join(SCRIPT_DIR, "last_hourly_report.txt"), "w") as f:
+    with open(os.path.join(REPORT_DIR, "last_hourly_report.txt"), "w", encoding="utf-8") as f:
         f.write(report)
 
     # Step 6: Win/Loss tracker
@@ -396,13 +439,44 @@ def main():
     try:
         import subprocess as sp
         tracker_result = sp.run(
-            [sys.executable, os.path.join(SCRIPT_DIR, "win_loss_tracker.py")],
+            [sys.executable, os.path.join(REPORT_DIR, "win_loss_tracker.py")],
             capture_output=True, text=True, timeout=30
         )
         if tracker_result.stdout:
             print(tracker_result.stdout.strip())
     except Exception as e:
         print(f"       Tracker error (non-fatal): {e}")
+
+    # Step 7: Capital engine + dashboard
+    print("[7/6] Running capital engine...")
+    try:
+        import hermes_capital_engine as _cap
+        _cap_log = _cap.load_capital_log()
+        _cap_log = _cap.update_capital(updated, _cap_log)
+        _milestones = _cap.check_milestones(_cap_log)
+        _cap.save_capital_log(_cap_log)
+        dashboard = _cap.build_today_dashboard(updated, _cap_log)
+        print(dashboard)
+        # Send dashboard to Telegram
+        if not dry_run:
+            _token = open(os.path.join(REPORT_DIR, ".tg_token"), encoding="utf-8").read().strip()
+            _url = f"https://api.telegram.org/bot{_token}/sendMessage"
+            # Split if needed
+            _chunks = []
+            _msg = dashboard
+            while len(_msg) > 4096:
+                _idx = _msg.rfind('\n', 0, 4096)
+                if _idx == -1: _idx = 4096
+                _chunks.append(_msg[:_idx])
+                _msg = _msg[_idx+1:]
+            _chunks.append(_msg)
+            for _i, _chunk in enumerate(_chunks):
+                requests.post(_url, json={"chat_id": CHAT_ID, "text": _chunk, "parse_mode": "HTML"}, timeout=15)
+                if _i < len(_chunks) - 1:
+                    time.sleep(1)
+            print("       Dashboard sent to Telegram OK")
+    except Exception as e:
+        print(f"       Capital engine error (non-fatal): {e}")
 
     print("[DONE]")
 
