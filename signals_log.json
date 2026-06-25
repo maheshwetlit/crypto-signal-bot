@@ -4293,13 +4293,14 @@
     "tp2": 0.581685,
     "tp3": 0.563316,
     "capital": 1000.0,
-    "status": "OPEN",
+    "status": "LOSS",
     "filter_checked": true,
-    "exit_price": null,
-    "pnl_usd": null,
-    "result": null,
-    "closed_at": null,
-    "exit_time": null
+    "exit_price": 0.6207,
+    "pnl_usd": -13.72,
+    "result": "STALE CLOSE",
+    "closed_at": "2026-06-25T20:33:43.536644+00:00",
+    "exit_time": "2026-06-25T20:33:43.536644+00:00",
+    "pnl_pct": -1.37
   },
   {
     "id": "SIG-0147",
