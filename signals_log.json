@@ -3894,12 +3894,13 @@
     "tp2": 0.49039,
     "tp3": 0.474904,
     "capital": 1000.0,
-    "status": "OPEN",
+    "status": "WIN",
     "filter_checked": true,
-    "exit_price": null,
-    "pnl_usd": null,
-    "result": null,
-    "closed_at": null,
-    "exit_time": null
+    "exit_price": 0.5006,
+    "pnl_usd": 30.22,
+    "result": "TP HIT",
+    "closed_at": "2026-06-25T12:21:13.793362+00:00",
+    "exit_time": "2026-06-25T12:21:13.793362+00:00",
+    "pnl_pct": 3.02
   }
 ]
