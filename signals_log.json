@@ -4263,13 +4263,14 @@
     "tp2": 18.620506607142858,
     "tp3": 19.22565857142857,
     "capital": 1000.0,
-    "status": "OPEN",
+    "status": "WIN",
     "filter_checked": true,
-    "exit_price": null,
-    "pnl_usd": null,
-    "result": null,
-    "closed_at": null,
-    "exit_time": null
+    "exit_price": 18.47472,
+    "pnl_usd": 48.99,
+    "result": "TP HIT",
+    "closed_at": "2026-06-25T14:27:14.859725+00:00",
+    "exit_time": "2026-06-25T14:27:14.859725+00:00",
+    "pnl_pct": 4.9
   },
   {
     "id": "SIG-0146",
