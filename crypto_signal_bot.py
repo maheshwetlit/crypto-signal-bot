@@ -39,7 +39,7 @@ class Config:
     TELEGRAM_CHAT_ID = os.getenv("TELEGRAM_CHAT_ID", "5515185305")
     # HermesTrading bot (second channel for signals)
     HERMES_BOT_TOKEN = _load_hermes_token()
-    HERMES_CHAT_ID = ""  # Will be set when user starts the bot
+    HERMES_CHAT_ID = os.getenv("HERMES_CHAT_ID", "")  # Set via env or .start command
     EXCHANGE = "KuCoin"
     MIN_24H_VOLUME_USD = 3_000_000
     MAX_COINS_TO_SCAN = 80
@@ -52,7 +52,7 @@ class Config:
     SIGNAL_LOG_FILE = "signals_log.json"
     BLOCKLIST = {"H/USDT"}
     # Risk management: tight SL, low drawdown focus
-    MAX_LOSS_PCT = 1.0  # Max 1% loss per trade (investor: 3%)
+    MAX_LOSS_PCT = 2.5  # Max 2.5% loss per trade (ATR-based SL with 2% floor)
     TP_R_MULTIPLES = [1.5, 2.5, 4.0]  # Let winners run
 
 def utc_now():
@@ -75,6 +75,20 @@ def _sma(series, period):
 def _atr(df, p=14):
     tr = pd.concat([df["high"] - df["low"], abs(df["high"] - df["close"].shift(1)), abs(df["low"] - df["close"].shift(1))], axis=1).max(axis=1)
     return tr.rolling(p).mean()
+
+def _adx(df, period=14):
+    """Calculate Average Directional Index."""
+    plus_dm = df["high"].diff()
+    minus_dm = -df["low"].diff()
+    plus_dm = plus_dm.where((plus_dm > minus_dm) & (plus_dm > 0), 0.0)
+    minus_dm = minus_dm.where((minus_dm > plus_dm) & (minus_dm > 0), 0.0)
+    tr = pd.concat([df["high"] - df["low"], abs(df["high"] - df["close"].shift(1)), abs(df["low"] - df["close"].shift(1))], axis=1).max(axis=1)
+    tr_smooth = tr.rolling(period).mean()
+    plus_di = 100 * (plus_dm.rolling(period).mean() / tr_smooth)
+    minus_di = 100 * (minus_dm.rolling(period).mean() / tr_smooth)
+    dx = 100 * abs(plus_di - minus_di) / (plus_di + minus_di)
+    adx = dx.rolling(period).mean()
+    return adx
 
 def _bb(df, period=20, stds=2.0):
     mid = df["close"].rolling(period).mean()
@@ -173,11 +187,21 @@ class BotState:
 
 # ── Telegram ──
 class TelegramNotifier:
-    def send(self, msg):
-        """Send message to both Telegram channels (My_crypto_bot + HermesTrading)."""
-        ok1 = self._send_to(Config.TELEGRAM_BOT_TOKEN, Config.TELEGRAM_CHAT_ID, msg, "My_crypto_bot")
-        ok2 = self._send_to(Config.HERMES_BOT_TOKEN, Config.HERMES_CHAT_ID, msg, "HermesTrading")
-        return ok1 or ok2
+    def __init__(self):
+        # Signal channel: prefer HermesTrading bot, fallback to BESOL_FUTURE_BOT
+        self.signal_token = Config.HERMES_BOT_TOKEN or Config.TELEGRAM_BOT_TOKEN
+        self.signal_chat_id = Config.HERMES_CHAT_ID or Config.TELEGRAM_CHAT_ID
+        # Report channel: always BESOL_FUTURE_BOT
+        self.report_token = Config.TELEGRAM_BOT_TOKEN
+        self.report_chat_id = Config.TELEGRAM_CHAT_ID
+
+    def send_signal(self, msg):
+        """Send signal to signal channel (HermesTrading or BESOL_FUTURE_BOT)."""
+        return self._send_to(self.signal_token, self.signal_chat_id, msg, "SignalBot")
+
+    def send_report(self, msg):
+        """Send report/summary to BESOL_FUTURE_BOT (report channel)."""
+        return self._send_to(self.report_token, self.report_chat_id, msg, "ReportBot")
 
     def _send_to(self, token, chat_id, msg, label):
         if not token:
@@ -222,29 +246,29 @@ def compute_signals(df_5m, df_15m, df_1h, df_4h, df_1d, symbol):
         # Allow directions based on 8-day MA
         allow_long = price_above_ma8 and ma8_rising and ma8_dist < 3.0
         allow_short = price_below_ma8 and ma8_falling and ma8_dist < 3.0
-        
+
         if not allow_long and not allow_short:
             return []
-        
+
         # ── Time-of-day filter (built into bot) ──
         # Block entries at 10:00 UTC (historically 9.1% WR — manipulation hour)
         current_hour = utc_now().hour
         if current_hour == 10:
             return []
-        
+
         # ── Indicators on 5m (needed for filters below) ──
         rsi3_5m = _rsi(df_5m["close"], 3).iloc[-1]
         rsi14_5m = _rsi(df_5m["close"], 14).iloc[-1]
-        
+
         # ── RSI death zone filter (built into bot) ──
         # Block RSI 50-59 entries (historically 11.1% WR — overbought death zone)
         if rsi14_5m >= 50.0 and rsi14_5m <= 59.0:
             return []
-        
+
         # ── Volume analysis ──
         v_ma = df_5m["volume"].rolling(20).mean().iloc[-1]
         rv = df_5m["volume"].iloc[-1] / v_ma if v_ma > 0 else 0
-        
+
         # ── Multi-TF trend analysis (HTF) ──
         # 4h trend
         ma8_4h = _sma(df_4h["close"], 8).iloc[-1]
@@ -254,17 +278,23 @@ def compute_signals(df_5m, df_15m, df_1h, df_4h, df_1d, symbol):
         ma8_1d = _sma(df_1d["close"], 8).iloc[-1]
         c_1d = df_1d["close"].iloc[-1]
         trend_1d = "BULLISH" if c_1d > ma8_1d else "BEARISH"
-        # Combined HTF
+        # Combined HTF — HARD BLOCK if timeframes disagree
         if trend_4h == trend_1d:
             htf = trend_4h
         else:
             htf = "NEUTRAL"
-        
+
+        # ── HARD BLOCK: NEUTRAL HTF — 4h and 1d must agree ──
+        # NEUTRAL HTF = no edge, signals in this regime have 33% WR historically
+        if htf == "NEUTRAL":
+            return []
+
         # ── Remaining indicators ──
         rsi3_15m = _rsi(df_15m["close"], 3).iloc[-1]
         rsi3_1h = _rsi(df_1h["close"], 3).iloc[-1]
         atr_5m = _atr(df_5m, 14).iloc[-1]
         atr_pct = (atr_5m / c) * 100 if c > 0 else 0
+        adx_val = _adx(df_5m, 14).iloc[-1]
         _, _, macd_hist = _macd(df_5m["close"])
         mh = macd_hist.iloc[-1]
         srsi_k, srsi_d = _stochrsi(df_5m["close"])
@@ -273,84 +303,103 @@ def compute_signals(df_5m, df_15m, df_1h, df_4h, df_1d, symbol):
         bbl, bbm, bbu = bbl.iloc[-1], bbm.iloc[-1], bbu.iloc[-1]
         v_ma = df_5m["volume"].rolling(20).mean().iloc[-1]
         rv = df_5m["volume"].iloc[-1] / v_ma if v_ma > 0 else 0
-        
+
         # Swing levels for band-based SL
         recent_low = df_5m["low"].rolling(20).min().iloc[-1]
         recent_high = df_5m["high"].rolling(20).max().iloc[-1]
-        
+
         if atr_pct < 0.08:
             return []
+
+        # ── ADX filter: skip if ADX < 15 (no trend strength) ──
+        if adx_val < 15:
+            return []
+
+        # ── HTF alignment check: signal direction must match HTF ──
+        # LONG signal requires HTF=BULLISH, SHORT signal requires HTF=BEARISH
+        if allow_long and htf != "BULLISH":
+            allow_long = False
+        if allow_short and htf != "BEARISH":
+            allow_short = False
+        if not allow_long and not allow_short:
+            return []
+
+        # ── ATR-based SL with minimum 2% distance ──
+        def _calc_atr_sl(entry, direction, atr):
+            """Calculate SL based on ATR, minimum 2% from entry."""
+            if direction == "LONG":
+                sl = entry - 1.5 * atr
+                max_sl = entry * 0.98  # SL can't be higher than 2% below entry
+                sl = min(sl, max_sl)
+            else:
+                sl = entry + 1.5 * atr
+                max_sl = entry * 1.02  # SL can't be lower than 2% above entry
+                sl = max(sl, max_sl)
+            return sl
         
         candidates = []
         
         # SIGNAL 1: Retracement Entry (Highest Probability)
-        # Relaxed RSI-3 thresholds for realistic scalping
         if allow_long and ma8_dist < 2.0 and rsi3_5m < 30 and mh < 0:
-            band_low, band_high = _fib_band(recent_high, recent_low, "long")
-            sl = band_low
+            sl = _calc_atr_sl(c, "LONG", atr_5m)
             sl_pct = (c - sl) / c * 100
             if sl_pct <= Config.MAX_LOSS_PCT and sl < c:
                 tp = [c + (c - sl) * r for r in [1.5, 2.5, 4.0]]
                 candidates.append({"side":"LONG","style":"NFI_RSI3_EXT","entry":c,"sl":sl,"tp":tp,
                     "eff":85,"rsi14":round(rsi14_5m,1),"rsi3":round(rsi3_5m,1),
-                    "ma8_dist":round(ma8_dist,2),"band":[round(band_low,8),round(band_high,8)],
+                    "ma8_dist":round(ma8_dist,2),"band":[round(sl*0.995,8),round(sl*1.005,8)],
                     "htf":htf,"vol_x":round(rv,2),"adx":round(adx_val,1)})
-        
+
         if allow_short and ma8_dist < 2.0 and rsi3_5m > 70 and mh > 0:
-            band_low, band_high = _fib_band(recent_high, recent_low, "short")
-            sl = band_high
+            sl = _calc_atr_sl(c, "SHORT", atr_5m)
             sl_pct = (sl - c) / c * 100
             if sl_pct <= Config.MAX_LOSS_PCT and sl > c:
                 tp = [c - (sl - c) * r for r in [1.5, 2.5, 4.0]]
                 candidates.append({"side":"SHORT","style":"NFI_RSI3_EXT","entry":c,"sl":sl,"tp":tp,
                     "eff":85,"rsi14":round(rsi14_5m,1),"rsi3":round(rsi3_5m,1),
-                    "ma8_dist":round(ma8_dist,2),"band":[round(band_low,8),round(band_high,8)],
+                    "ma8_dist":round(ma8_dist,2),"band":[round(sl*0.995,8),round(sl*1.005,8)],
                     "htf":htf,"vol_x":round(rv,2),"adx":round(adx_val,1)})
         
         # SIGNAL 2: BB + RSI-3 (relaxed for scalping)
         if allow_long and ma8_dist < 2.5 and c <= bbl * 1.01 and rsi3_5m < 35:
-            band_low, band_high = _fib_band(recent_high, recent_low, "long")
-            sl = band_low
+            sl = _calc_atr_sl(c, "LONG", atr_5m)
             sl_pct = (c - sl) / c * 100
             if sl_pct <= Config.MAX_LOSS_PCT and sl < c:
                 tp = [c + (c - sl) * r for r in [1.5, 2.5, 4.0]]
                 candidates.append({"side":"LONG","style":"NFI_BB_REV","entry":c,"sl":sl,"tp":tp,
                     "eff":78,"rsi14":round(rsi14_5m,1),"rsi3":round(rsi3_5m,1),
-                    "ma8_dist":round(ma8_dist,2),"band":[round(band_low,8),round(band_high,8)],
+                    "ma8_dist":round(ma8_dist,2),"band":[round(sl*0.995,8),round(sl*1.005,8)],
                     "htf":htf,"vol_x":round(rv,2),"adx":round(adx_val,1)})
-        
+
         if allow_short and ma8_dist < 2.5 and c >= bbu * 0.99 and rsi3_5m > 65:
-            band_low, band_high = _fib_band(recent_high, recent_low, "short")
-            sl = band_high
+            sl = _calc_atr_sl(c, "SHORT", atr_5m)
             sl_pct = (sl - c) / c * 100
             if sl_pct <= Config.MAX_LOSS_PCT and sl > c:
                 tp = [c - (sl - c) * r for r in [1.5, 2.5, 4.0]]
                 candidates.append({"side":"SHORT","style":"NFI_BB_REV","entry":c,"sl":sl,"tp":tp,
                     "eff":78,"rsi14":round(rsi14_5m,1),"rsi3":round(rsi3_5m,1),
-                    "ma8_dist":round(ma8_dist,2),"band":[round(band_low,8),round(band_high,8)],
+                    "ma8_dist":round(ma8_dist,2),"band":[round(sl*0.995,8),round(sl*1.005,8)],
                     "htf":htf,"vol_x":round(rv,2),"adx":round(adx_val,1)})
         
         # SIGNAL 3: StochRSI (relaxed for scalping)
         if allow_long and ma8_dist < 2.5 and srsi_k > srsi_d and srsi_k < 30 and rsi3_5m < 40:
-            band_low, band_high = _fib_band(recent_high, recent_low, "long")
-            sl = band_low
+            sl = _calc_atr_sl(c, "LONG", atr_5m)
             sl_pct = (c - sl) / c * 100
             if sl_pct <= Config.MAX_LOSS_PCT and sl < c:
                 tp = [c + (c - sl) * r for r in [1.5, 2.5, 4.0]]
                 candidates.append({"side":"LONG","style":"NFI_SRST","entry":c,"sl":sl,"tp":tp,
                     "eff":80,"rsi14":round(rsi14_5m,1),"rsi3":round(rsi3_5m,1),
-                    "ma8_dist":round(ma8_dist,2),"band":[round(band_low,8),round(band_high,8)],
+                    "ma8_dist":round(ma8_dist,2),"band":[round(sl*0.995,8),round(sl*1.005,8)],
                     "htf":htf,"vol_x":round(rv,2),"adx":round(adx_val,1)})
-        
+
         if allow_short and ma8_dist < 2.5 and srsi_k < srsi_d and srsi_k > 70 and rsi3_5m > 60:
-            band_low, band_high = _fib_band(recent_high, recent_low, "short")
-            sl = band_high
+            sl = _calc_atr_sl(c, "SHORT", atr_5m)
             sl_pct = (sl - c) / c * 100
             if sl_pct <= Config.MAX_LOSS_PCT and sl > c:
                 tp = [c - (sl - c) * r for r in [1.5, 2.5, 4.0]]
                 candidates.append({"side":"SHORT","style":"NFI_SRST","entry":c,"sl":sl,"tp":tp,
                     "eff":80,"rsi14":round(rsi14_5m,1),"rsi3":round(rsi3_5m,1),
-                    "ma8_dist":round(ma8_dist,2),"band":[round(band_low,8),round(band_high,8)],
+                    "ma8_dist":round(ma8_dist,2),"band":[round(sl*0.995,8),round(sl*1.005,8)],
                     "htf":htf,"vol_x":round(rv,2),"adx":round(adx_val,1)})
         
         candidates.sort(key=lambda s: -s["eff"])
@@ -414,22 +463,19 @@ def main():
                 )
                 for i, p in enumerate(sig["tp"]):
                     m += f"\nTP{i+1}: <code>{p:.8f}</code>"
-                nt.send(m)
+                nt.send_signal(m)
                 signals_sent += 1
                 style_counts[sig["style"]] += 1
         except Exception as e:
             print(f"Error {s}: {e}")
             continue
-    
+
+    # Always send scan summary to report channel (BESOL_FUTURE_BOT)
     if signals_sent > 0:
         style_str = " | ".join(f"{k}: {v}" for k, v in sorted(style_counts.items(), key=lambda x: -x[1]))
-        nt.send(f"✅ <b>Scan Complete</b>
-Scanned: {len(syms)} | Signals: {signals_sent}
-Styles: {style_str}")
+        nt.send_report(f"✅ <b>Scan Complete</b>\nScanned: {len(syms)} | Signals: {signals_sent}\nStyles: {style_str}")
     else:
-        nt.send(f"⚠️ <b>Scan Complete</b>
-Scanned: {len(syms)} | Signals: 0
-No qualifying setups found this scan.")
+        nt.send_report(f"📊 <b>Scan Complete</b>\nScanned: {len(syms)} | No signals generated (filters active)")
 
 if __name__ == "__main__":
     main()
