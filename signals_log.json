@@ -5278,13 +5278,14 @@
     "tp2": 90.54465,
     "tp3": 93.13164,
     "capital": 1000.0,
-    "status": "OPEN",
+    "status": "WIN",
     "filter_checked": true,
-    "exit_price": null,
-    "pnl_usd": null,
-    "result": null,
-    "closed_at": null,
-    "exit_time": null
+    "exit_price": 89.063,
+    "pnl_usd": 32.82,
+    "result": "TP HIT",
+    "closed_at": "2026-06-26T14:26:00.185678+00:00",
+    "exit_time": "2026-06-26T14:26:00.185678+00:00",
+    "pnl_pct": 3.28
   },
   {
     "id": "SIG-0180",
