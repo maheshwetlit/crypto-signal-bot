@@ -4593,13 +4593,14 @@
     "tp2": 199.842,
     "tp3": 193.5312,
     "capital": 1000.0,
-    "status": "OPEN",
+    "status": "LOSS",
     "filter_checked": true,
-    "exit_price": null,
-    "pnl_usd": null,
-    "result": null,
-    "closed_at": null,
-    "exit_time": null
+    "exit_price": 215.39,
+    "pnl_usd": -23.91,
+    "result": "SL HIT",
+    "closed_at": "2026-06-26T06:46:20.568655+00:00",
+    "exit_time": "2026-06-26T06:46:20.568655+00:00",
+    "pnl_pct": -2.39
   },
   {
     "id": "SIG-0157",
