@@ -4770,13 +4770,14 @@
     "tp2": 0.038835999999999996,
     "tp3": 0.03760959999999999,
     "capital": 1000.0,
-    "status": "OPEN",
+    "status": "LOSS",
     "filter_checked": true,
-    "exit_price": null,
-    "pnl_usd": null,
-    "result": null,
-    "closed_at": null,
-    "exit_time": null
+    "exit_price": 0.04202,
+    "pnl_usd": -27.89,
+    "result": "SL HIT",
+    "closed_at": "2026-06-26T09:30:49.712942+00:00",
+    "exit_time": "2026-06-26T09:30:49.712942+00:00",
+    "pnl_pct": -2.79
   },
   {
     "id": "SIG-0163",
@@ -4828,13 +4829,14 @@
     "tp2": 0.03894049999999999,
     "tp3": 0.03771079999999999,
     "capital": 1000.0,
-    "status": "OPEN",
+    "status": "LOSS",
     "filter_checked": true,
-    "exit_price": null,
-    "pnl_usd": null,
-    "result": null,
-    "closed_at": null,
-    "exit_time": null
+    "exit_price": 0.04202,
+    "pnl_usd": -25.13,
+    "result": "SL HIT",
+    "closed_at": "2026-06-26T09:30:49.712942+00:00",
+    "exit_time": "2026-06-26T09:30:49.712942+00:00",
+    "pnl_pct": -2.51
   },
   {
     "id": "SIG-0165",
@@ -4857,13 +4859,14 @@
     "tp2": 0.03894049999999999,
     "tp3": 0.03771079999999999,
     "capital": 1000.0,
-    "status": "OPEN",
+    "status": "LOSS",
     "filter_checked": true,
-    "exit_price": null,
-    "pnl_usd": null,
-    "result": null,
-    "closed_at": null,
-    "exit_time": null
+    "exit_price": 0.04202,
+    "pnl_usd": -25.13,
+    "result": "SL HIT",
+    "closed_at": "2026-06-26T09:30:49.712942+00:00",
+    "exit_time": "2026-06-26T09:30:49.712942+00:00",
+    "pnl_pct": -2.51
   },
   {
     "id": "SIG-0166",
