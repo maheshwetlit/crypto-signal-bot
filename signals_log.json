@@ -4623,13 +4623,14 @@
     "tp2": 60.105549999999994,
     "tp3": 58.20748,
     "capital": 1000.0,
-    "status": "OPEN",
+    "status": "LOSS",
     "filter_checked": true,
-    "exit_price": null,
-    "pnl_usd": null,
-    "result": null,
-    "closed_at": null,
-    "exit_time": null
+    "exit_price": 64.64,
+    "pnl_usd": -21.67,
+    "result": "SL HIT",
+    "closed_at": "2026-06-26T07:56:48.127116+00:00",
+    "exit_time": "2026-06-26T07:56:48.127116+00:00",
+    "pnl_pct": -2.17
   },
   {
     "id": "SIG-0158",
