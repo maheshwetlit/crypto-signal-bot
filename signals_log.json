@@ -4893,13 +4893,14 @@
     "tp2": 89.64374999999998,
     "tp3": 92.20499999999998,
     "capital": 1000.0,
-    "status": "OPEN",
+    "status": "WIN",
     "filter_checked": true,
-    "exit_price": null,
-    "pnl_usd": null,
-    "result": null,
-    "closed_at": null,
-    "exit_time": null
+    "exit_price": 88.175,
+    "pnl_usd": 32.8,
+    "result": "TP HIT",
+    "closed_at": "2026-06-26T12:35:54.870252+00:00",
+    "exit_time": "2026-06-26T12:35:54.870252+00:00",
+    "pnl_pct": 3.28
   },
   {
     "id": "SIG-0167",
@@ -4922,13 +4923,14 @@
     "tp2": 89.64374999999998,
     "tp3": 92.20499999999998,
     "capital": 1000.0,
-    "status": "OPEN",
+    "status": "WIN",
     "filter_checked": true,
-    "exit_price": null,
-    "pnl_usd": null,
-    "result": null,
-    "closed_at": null,
-    "exit_time": null
+    "exit_price": 88.153,
+    "pnl_usd": 32.54,
+    "result": "TP HIT",
+    "closed_at": "2026-06-26T12:35:54.870252+00:00",
+    "exit_time": "2026-06-26T12:35:54.870252+00:00",
+    "pnl_pct": 3.25
   },
   {
     "id": "SIG-0168",
