@@ -4652,13 +4652,14 @@
     "tp2": 38.826499999999996,
     "tp3": 37.6004,
     "capital": 1000.0,
-    "status": "OPEN",
+    "status": "LOSS",
     "filter_checked": true,
-    "exit_price": null,
-    "pnl_usd": null,
-    "result": null,
-    "closed_at": null,
-    "exit_time": null
+    "exit_price": 41.73,
+    "pnl_usd": -21.04,
+    "result": "SL HIT",
+    "closed_at": "2026-06-26T06:46:32.382278+00:00",
+    "exit_time": "2026-06-26T06:46:32.382278+00:00",
+    "pnl_pct": -2.1
   },
   {
     "id": "SIG-0159",
