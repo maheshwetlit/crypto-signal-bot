@@ -5253,13 +5253,14 @@
     "tp2": 56316.380000000005,
     "tp3": 54537.968,
     "capital": 1000.0,
-    "status": "OPEN",
+    "status": "LOSS",
     "filter_checked": true,
-    "exit_price": null,
-    "pnl_usd": null,
-    "result": null,
-    "closed_at": null,
-    "exit_time": null
+    "exit_price": 60014.8,
+    "pnl_usd": -12.39,
+    "result": "STALE CLOSE",
+    "closed_at": "2026-06-26T19:12:37.405274+00:00",
+    "exit_time": "2026-06-26T19:12:37.405274+00:00",
+    "pnl_pct": -1.24
   },
   {
     "id": "SIG-0179",
