@@ -6333,13 +6333,14 @@
     "tp2": 527.9947999999999,
     "tp3": 511.32128,
     "capital": 1000.0,
-    "status": "OPEN",
+    "status": "WIN",
     "filter_checked": true,
-    "exit_price": null,
-    "pnl_usd": null,
-    "result": null,
-    "closed_at": null,
-    "exit_time": null
+    "exit_price": 555.393,
+    "pnl_usd": 0.7,
+    "result": "STALE CLOSE",
+    "closed_at": "2026-06-28T14:38:36.722472+00:00",
+    "exit_time": "2026-06-28T14:38:36.722472+00:00",
+    "pnl_pct": 0.07
   },
   {
     "id": "SIG-0215",
