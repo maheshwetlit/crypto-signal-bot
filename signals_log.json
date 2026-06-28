@@ -6421,13 +6421,14 @@
     "tp2": 0.1098485,
     "tp3": 0.1063796,
     "capital": 1000.0,
-    "status": "OPEN",
+    "status": "WIN",
     "filter_checked": true,
-    "exit_price": null,
-    "pnl_usd": null,
-    "result": null,
-    "closed_at": null,
-    "exit_time": null
+    "exit_price": 0.11188,
+    "pnl_usd": 32.43,
+    "result": "TP HIT",
+    "closed_at": "2026-06-28T16:01:35.968788+00:00",
+    "exit_time": "2026-06-28T16:01:35.968788+00:00",
+    "pnl_pct": 3.24
   },
   {
     "id": "SIG-0218",
