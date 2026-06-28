@@ -164,6 +164,36 @@ def send_telegram(message):
     return all_ok
 
 
+def _save_report_state(total_closed, wins, losses, net_pnl):
+    """Save current report state so the next run can compute period delta."""
+    state = {
+        "timestamp": datetime.now(timezone.utc).isoformat(),
+        "total_closed": total_closed,
+        "wins": wins,
+        "losses": losses,
+        "net_pnl": net_pnl,
+    }
+    state_file = os.path.join(SCRIPT_DIR, "last_report_state.json")
+    try:
+        with open(state_file, "w") as f:
+            json.dump(state, f, indent=2)
+    except Exception:
+        pass
+
+
+def load_last_snapshot():
+    """Load the last report state for period delta calculation."""
+    state_file = os.path.join(SCRIPT_DIR, "last_report_state.json")
+    if not os.path.exists(state_file):
+        return None
+    try:
+        with open(state_file) as f:
+            return json.load(f)
+    except Exception:
+        pass
+    return None
+
+
 def build_report(signals, fetch_failures=0, skip_prices=False):
     wins   = [s for s in signals if s.get("status") == "WIN"]
     losses = [s for s in signals if s.get("status") == "LOSS"]
@@ -175,6 +205,20 @@ def build_report(signals, fetch_failures=0, skip_prices=False):
     lr     = (len(losses) / len(closed) * 100) if closed else 0
     net_pnl = sum(s.get("pnl_usd") or 0 for s in closed)
     capital_return = (net_pnl / (len(closed) * CAPITAL) * 100) if closed else 0
+
+    # Period delta: compare with last report state
+    prev = load_last_snapshot()
+    period_pnl = None
+    period_closed = None
+    period_wins = None
+    period_losses = None
+    if prev:
+        prev_pnl = prev.get("net_pnl", 0)
+        prev_total = prev.get("total_closed", 0)
+        period_pnl = round(net_pnl - prev_pnl, 2)
+        period_closed = len(closed) - prev_total
+        period_wins = len(wins) - prev.get("wins", 0)
+        period_losses = len(losses) - prev.get("losses", 0)
 
     now_str = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M")
 
@@ -192,6 +236,13 @@ def build_report(signals, fetch_failures=0, skip_prices=False):
     pnl_sign = "+" if net_pnl >= 0 else ""
     L.append(f"💰 Net P&L: {pnl_sign}${net_pnl:,.2f} (@ ${CAPITAL:,.0f}/signal)")
     L.append(f"💵 Capital Return: {pnl_sign}{capital_return:.1f}%")
+
+    # Period delta line
+    if period_pnl is not None:
+        pd_sign = "+" if period_pnl >= 0 else ""
+        L.append("")
+        L.append(f"📅 Since Last Report: {period_closed} closed ({period_wins}W/{period_losses}L) → {pd_sign}${period_pnl:,.2f}")
+        L.append(f"   ↳ Cumulative: {pnl_sign}${net_pnl:,.2f} across {len(closed)} closed signals")
 
     # Per-pair breakdown — group by (pair, direction)
     pair_dir_stats = defaultdict(lambda: {"w": 0, "l": 0, "o": 0, "pnl": 0.0, "n": 0})
@@ -383,6 +434,9 @@ def main():
 
     with open(os.path.join(SCRIPT_DIR, "last_hourly_report.txt"), "w") as f:
         f.write(report)
+
+    # Save state for next report's period delta
+    _save_report_state(len(closed), len(wins), len(losses), net_pnl)
 
     # Step 6: Win/Loss tracker
     print("[6/6] Running win/loss tracker...")

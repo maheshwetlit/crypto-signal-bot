@@ -218,9 +218,34 @@ def validate_signals():
             # ── Tiered TP validation ──
             # TP1 → 33% close, TP2 → 33%, TP3 → 34% remaining
             tp1 = float(sig.get("tp1", 0)) if sig.get("tp1") else tp
-            tp2 = float(sig.get("tp2", 0)) if sig.get("tp2") else None
-            tp3 = float(sig.get("tp3", 0)) if sig.get("tp3") else None
-            close_pct = sig.get("close_pct", 0)  # % of position already closed
+            cap_config = sig.get("capital") or 1000.0
+
+            # HYBRID v9.0: Breakeven at 60% of TP1 distance
+            breakeven_pct = 0.60
+            tp1_price_for_be = float(sig.get("tp1", 0))
+            sig_entry = float(sig.get("entry", 0))
+            sig_sl = float(sig.get("sl", 0))
+            sig_entry_for_be = sig_entry
+            if tp1_price_for_be and sig_entry_for_be:
+                dist_to_tp1 = abs(tp1_price_for_be - sig_entry_for_be)
+                if direction_b == "LONG":
+                    breakeven_price = sig_entry_for_be + breakeven_pct * dist_to_tp1
+                    fetched_close = current_price
+                    if fetched_close >= breakeven_price and sig_sl < sig_entry_for_be:
+                        sig["sl"] = round(sig_entry_for_be, 8)
+                        sig["status"] = "TRAILING"
+                        sig["result"] = "BE_MOVED"
+                        updated = True
+                        print(f"   [HYBRID-BE] {symbol} {direction_b}: SL -> entry {sig_entry_for_be}")
+                else:
+                    breakeven_price = sig_entry_for_be - breakeven_pct * dist_to_tp1
+                    fetched_close = current_price
+                    if fetched_close <= breakeven_price and sig_sl > sig_entry_for_be:
+                        sig["sl"] = round(sig_entry_for_be, 8)
+                        sig["status"] = "TRAILING"
+                        sig["result"] = "BE_MOVED"
+                        updated = True
+                        print(f"   [HYBRID-BE] {symbol} {direction_b}: SL -> entry {sig_entry_for_be}")
 
             result  = None
             outcome = None
