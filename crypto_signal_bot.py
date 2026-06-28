@@ -148,6 +148,26 @@ class Config:
     # Profit protection
     SL_BREAKEVEN_PCT   = 0.6          # move SL to BE at 60% of TP1 distance
 
+    EXCHANGE           = "KuCoin"
+
+    # NFI legacy pre-filters (used before structure detection)
+    ADX_PERIOD         = 14
+    ADX_HARD_FLOOR     = 25
+    ADX_TREND_THR      = 28
+    ADX_BORDERLINE     = 25
+    ADX_STRONG         = 35
+    VOL_GATE           = 1.2
+    VOL_IDEAL          = 1.5
+    ATR_FLOOR_BTC      = 0.10
+    ATR_FLOOR_ALT      = 0.15
+    MAX_EMA_DIST_PCT   = 12.0
+    SCORE_ENTRY_THR    = 85.0
+    SCORE_OVERRIDE     = 92.0
+    SCORE_PRIME_THR    = 75.0
+    SCORE_BREAKOUT_THR = 78.0
+    SCORE_POST_LOSS_1  = 95.0
+    SCORE_POST_LOSS_2  = 98.0
+
     # NH
     RSI_LATE_THR       = 68
     COOLDOWN           = 900          # 15 min between signals on same pair
