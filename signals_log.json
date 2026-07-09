@@ -6808,12 +6808,13 @@
     "tp3": 469.1807142857143,
     "tp_main": 469.1807142857143,
     "capital": 1000.0,
-    "status": "OPEN",
-    "exit_price": null,
-    "pnl_usd": null,
-    "result": null,
-    "closed_at": null,
-    "exit_time": null
+    "status": "WIN",
+    "exit_price": 467.204,
+    "pnl_usd": 5.14,
+    "result": "TP HIT",
+    "closed_at": "2026-07-09T11:00:02.264022+00:00",
+    "exit_time": "2026-07-09T11:00:02.264022+00:00",
+    "pnl_pct": 0.51
   },
   {
     "id": "SIG-0231",
@@ -6835,11 +6836,12 @@
     "tp3": 469.1807142857143,
     "tp_main": 469.1807142857143,
     "capital": 1000.0,
-    "status": "OPEN",
-    "exit_price": null,
-    "pnl_usd": null,
-    "result": null,
-    "closed_at": null,
-    "exit_time": null
+    "status": "WIN",
+    "exit_price": 467.204,
+    "pnl_usd": 5.14,
+    "result": "TP HIT",
+    "closed_at": "2026-07-09T11:00:02.264022+00:00",
+    "exit_time": "2026-07-09T11:00:02.264022+00:00",
+    "pnl_pct": 0.51
   }
 ]
