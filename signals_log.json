@@ -6752,12 +6752,13 @@
     "tp3": 63017.014285714286,
     "tp_main": 63017.014285714286,
     "capital": 1000.0,
-    "status": "OPEN",
-    "exit_price": null,
-    "pnl_usd": null,
-    "result": null,
-    "closed_at": null,
-    "exit_time": null
+    "status": "WIN",
+    "exit_price": 62904.5,
+    "pnl_usd": 1.87,
+    "result": "TP HIT",
+    "closed_at": "2026-07-09T10:00:58.419053+00:00",
+    "exit_time": "2026-07-09T10:00:58.419053+00:00",
+    "pnl_pct": 0.19
   },
   {
     "id": "SIG-0229",
@@ -6779,12 +6780,13 @@
     "tp3": 63017.014285714286,
     "tp_main": 63017.014285714286,
     "capital": 1000.0,
-    "status": "OPEN",
-    "exit_price": null,
-    "pnl_usd": null,
-    "result": null,
-    "closed_at": null,
-    "exit_time": null
+    "status": "WIN",
+    "exit_price": 62904.5,
+    "pnl_usd": 1.87,
+    "result": "TP HIT",
+    "closed_at": "2026-07-09T10:00:58.419053+00:00",
+    "exit_time": "2026-07-09T10:00:58.419053+00:00",
+    "pnl_pct": 0.19
   },
   {
     "id": "SIG-0230",
