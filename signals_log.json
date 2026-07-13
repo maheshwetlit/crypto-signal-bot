@@ -8158,5 +8158,37 @@
     ],
     "tag": "nfi_bb_long",
     "pnl_pct": -0.75
+  },
+  {
+    "id": "SIG-0272",
+    "time": "2026-07-13T16:32:04.318659+00:00",
+    "pair": "SEI/USDT",
+    "exchange": "KuCoin",
+    "direction": "SHORT",
+    "style": "CONFIRMED_BREAKOUT",
+    "score": 80.3,
+    "adx": 20.3,
+    "rsi": 18.4,
+    "rsi3": 0.0,
+    "volume_x": 1.48,
+    "htf_trend": "BEARISH",
+    "entry": 0.04784,
+    "sl": 0.0487968,
+    "tp1": 0.04740944,
+    "tp2": null,
+    "tp3": null,
+    "tp_main": 0.04740944,
+    "capital": 1000.0,
+    "status": "OPEN",
+    "exit_price": null,
+    "pnl_usd": null,
+    "result": null,
+    "closed_at": null,
+    "exit_time": null,
+    "grind_count": 0,
+    "grind_entries": [
+      0.04784
+    ],
+    "tag": "breakout_short"
   }
 ]
