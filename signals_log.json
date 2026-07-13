@@ -8014,17 +8014,18 @@
     "tp3": 523.8156785714286,
     "tp_main": 523.8156785714286,
     "capital": 1000.0,
-    "status": "OPEN",
-    "exit_price": null,
-    "pnl_usd": null,
-    "result": null,
-    "closed_at": null,
-    "exit_time": null,
+    "status": "LOSS",
+    "exit_price": 507.44810714285717,
+    "pnl_usd": -8.0,
+    "result": "LOSS",
+    "closed_at": "2026-07-13T16:25:51.338318+00:00",
+    "exit_time": "2026-07-13T16:25:51.338318+00:00",
     "grind_count": 0,
     "grind_entries": [
       511.54
     ],
-    "tag": "bb_long"
+    "tag": "bb_long",
+    "pnl_pct": -0.8
   },
   {
     "id": "SIG-0268",
