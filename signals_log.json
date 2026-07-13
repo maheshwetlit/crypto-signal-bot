@@ -7894,5 +7894,37 @@
       0.035699
     ],
     "tag": "bb_long"
+  },
+  {
+    "id": "SIG-0264",
+    "time": "2026-07-13T15:16:49.624098+00:00",
+    "pair": "ANSEM/USDT",
+    "exchange": "KuCoin",
+    "direction": "LONG",
+    "style": "EMA_PULLBACK",
+    "score": 57.0,
+    "adx": 36.1,
+    "rsi": 79.9,
+    "rsi3": 0.0,
+    "volume_x": 0.51,
+    "htf_trend": "BULLISH",
+    "entry": 0.2564,
+    "sl": 0.251272,
+    "tp1": 0.264092,
+    "tp2": 0.266656,
+    "tp3": 0.271784,
+    "tp_main": 0.271784,
+    "capital": 1000.0,
+    "status": "OPEN",
+    "exit_price": null,
+    "pnl_usd": null,
+    "result": null,
+    "closed_at": null,
+    "exit_time": null,
+    "grind_count": 0,
+    "grind_entries": [
+      0.2564
+    ],
+    "tag": "ema_long"
   }
 ]
