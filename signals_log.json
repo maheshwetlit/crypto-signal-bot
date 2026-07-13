@@ -7522,5 +7522,37 @@
       0.1586
     ],
     "tag": "bb_short"
+  },
+  {
+    "id": "SIG-0253",
+    "time": "2026-07-13T13:11:54.296176+00:00",
+    "pair": "UNI/USDT",
+    "exchange": "KuCoin",
+    "direction": "LONG",
+    "style": "NFI_RSI3_EXTREME",
+    "score": 57.0,
+    "adx": 37.8,
+    "rsi": 17.4,
+    "rsi3": 0.0,
+    "volume_x": 0.72,
+    "htf_trend": "NEUTRAL",
+    "entry": 3.4567,
+    "sl": 3.439867857142857,
+    "tp1": 3.473532142857143,
+    "tp2": 3.4819482142857145,
+    "tp3": 3.490364285714286,
+    "tp_main": 3.490364285714286,
+    "capital": 1000.0,
+    "status": "OPEN",
+    "exit_price": null,
+    "pnl_usd": null,
+    "result": null,
+    "closed_at": null,
+    "exit_time": null,
+    "grind_count": 0,
+    "grind_entries": [
+      3.4567
+    ],
+    "tag": "nfi_rsi3_long"
   }
 ]
