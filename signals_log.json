@@ -7990,5 +7990,37 @@
       1.9536
     ],
     "tag": "ema_long"
+  },
+  {
+    "id": "SIG-0267",
+    "time": "2026-07-13T15:31:13.197733+00:00",
+    "pair": "ZEC/USDT",
+    "exchange": "KuCoin",
+    "direction": "LONG",
+    "style": "BB_SQUEEZE",
+    "score": 55.0,
+    "adx": 26.9,
+    "rsi": 62.8,
+    "rsi3": 0.0,
+    "volume_x": 0.06,
+    "htf_trend": "NEUTRAL",
+    "entry": 511.54,
+    "sl": 507.44810714285717,
+    "tp1": 517.6778392857143,
+    "tp2": 519.7237857142858,
+    "tp3": 523.8156785714286,
+    "tp_main": 523.8156785714286,
+    "capital": 1000.0,
+    "status": "OPEN",
+    "exit_price": null,
+    "pnl_usd": null,
+    "result": null,
+    "closed_at": null,
+    "exit_time": null,
+    "grind_count": 0,
+    "grind_entries": [
+      511.54
+    ],
+    "tag": "bb_long"
   }
 ]
