@@ -9433,5 +9433,37 @@
       0.6541
     ],
     "tag": "breakout_short"
+  },
+  {
+    "id": "SIG-0311",
+    "time": "2026-07-13T22:51:57.491389+00:00",
+    "pair": "GROVE/USDT",
+    "exchange": "KuCoin",
+    "direction": "SHORT",
+    "style": "CONFIRMED_BREAKOUT",
+    "score": 91.0,
+    "adx": 31.0,
+    "rsi": 53.3,
+    "rsi3": 0.0,
+    "volume_x": 0.92,
+    "htf_trend": "BEARISH",
+    "entry": 0.01821,
+    "sl": 0.018574200000000003,
+    "tp1": 0.01804611,
+    "tp2": null,
+    "tp3": null,
+    "tp_main": 0.01804611,
+    "capital": 1000.0,
+    "status": "OPEN",
+    "exit_price": null,
+    "pnl_usd": null,
+    "result": null,
+    "closed_at": null,
+    "exit_time": null,
+    "grind_count": 0,
+    "grind_entries": [
+      0.01821
+    ],
+    "tag": "breakout_short"
   }
 ]
