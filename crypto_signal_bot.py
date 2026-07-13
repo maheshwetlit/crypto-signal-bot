@@ -173,7 +173,7 @@ class Config:
 
     # ── Position management ──
     MAX_OPEN_PER_PAIR   = 2
-    MAX_OPEN_TOTAL      = 15
+    MAX_OPEN_TOTAL      = 40
     BASE_COOLDOWN       = 300
     MIN_ENTRY_PRICE     = 0.000001
 
@@ -385,7 +385,71 @@ def log_signal(symbol, sig):
     return entry["id"]
 
 
-# ─────────────────────────────────────────────
+def close_open_signals(ex, nt):
+    """Close any OPEN signal whose TP/SL has been hit, or that has been open
+    longer than MAX_HOLD_BARS (stale). Without this the log fills with OPEN
+    signals and MAX_OPEN_TOTAL starves the engine (0 new signals)."""
+    log = _load_signals()
+    if not log:
+        return 0, 0
+    changed = False
+    wins = losses = 0
+    now = utc_now()
+    for s in log:
+        if s.get("status") != "OPEN":
+            continue
+        sym = s["pair"]
+        try:
+            cur = ex.fetch_ticker(sym)["last"]
+        except Exception:
+            continue
+        entry = s["entry"]; sl = s["sl"]; tp = s.get("tp_main") or s.get("tp1")
+        direction = s["direction"]
+        closed = False
+        if tp is not None:
+            if direction == "LONG" and cur >= tp:
+                closed, res, px = True, "WIN", tp
+            elif direction == "SHORT" and cur <= tp:
+                closed, res, px = True, "WIN", tp
+        if not closed and sl is not None:
+            if direction == "LONG" and cur <= sl:
+                closed, res, px = True, "LOSS", sl
+            elif direction == "SHORT" and cur >= sl:
+                closed, res, px = True, "LOSS", sl
+        # stale timeout
+        if not closed:
+            try:
+                age_min = (now - datetime.fromisoformat(s["time"])).total_seconds() / 60
+            except Exception:
+                age_min = 0
+            if age_min >= Config.MAX_HOLD_BARS * 5:
+                closed, res, px = True, "LOSS" if False else "STALE", cur
+        if closed:
+            pnl_pct = (px - entry) / entry if direction == "LONG" else (entry - px) / entry
+            s["status"] = "CLOSED" if res == "STALE" else res
+            s["result"] = res
+            s["exit_price"] = px
+            s["closed_at"] = now.isoformat()
+            s["exit_time"] = now.isoformat()
+            s["pnl_pct"] = round(pnl_pct * 100, 2)
+            s["pnl_usd"] = round(Config.CAPITAL_PER_SIGNAL * pnl_pct, 2)
+            changed = True
+            if res == "WIN":
+                wins += 1
+            else:
+                losses += 1
+            print(f"[CLOSE] {s['id']} {sym} {direction} {res} @ {px}")
+    if changed:
+        with open(Config.SIGNAL_LOG_FILE, "w") as f:
+            _file_lock(f)
+            json.dump(log, f, indent=2)
+            _file_unlock(f)
+        if wins or losses:
+            nt.send(f"🔄 Closed this run: ✅{wins} ❌{losses}")
+    return wins, losses
+
+
+
 #  Bot state (cooldowns)
 # ─────────────────────────────────────────────
 class BotState:
@@ -965,6 +1029,9 @@ def main():
         nt.send("⚠️ No pairs found above volume threshold!")
         return
 
+    current_signals = _load_signals()
+    # Close any OPEN signals that hit TP/SL or went stale (frees slots)
+    close_open_signals(ex, nt)
     current_signals = _load_signals()
     total_open = sum(1 for s in current_signals if s.get("status") == "OPEN")
 
