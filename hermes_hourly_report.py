@@ -23,6 +23,13 @@ os.chdir(SCRIPT_DIR)
 
 GH_TOKEN_FILE = os.path.join(SCRIPT_DIR, ".gh_token")
 TG_TOKEN_FILE  = os.path.join(SCRIPT_DIR, ".tg_token")
+
+# Fallback to the shared hermes-agent token dir (single source of truth)
+_HERMES_DIR = os.path.join(os.path.dirname(SCRIPT_DIR), "AppData", "Local", "hermes", "hermes-agent")
+if not os.path.exists(GH_TOKEN_FILE) and os.path.exists(os.path.join(_HERMES_DIR, ".gh_token")):
+    GH_TOKEN_FILE = os.path.join(_HERMES_DIR, ".gh_token")
+if not os.path.exists(TG_TOKEN_FILE) and os.path.exists(os.path.join(_HERMES_DIR, ".tg_token")):
+    TG_TOKEN_FILE = os.path.join(_HERMES_DIR, ".tg_token")
 SIGNAL_LOG_FILE = os.path.join(SCRIPT_DIR, "signals_log.json")
 GH_API_URL     = "https://api.github.com/repos/maheshwetlit/crypto-signal-bot/contents/signals_log.json"
 CHAT_ID        = "5515185305"
@@ -318,6 +325,12 @@ def build_report(signals, fetch_failures=0, skip_prices=False):
         for s in opens:
             L.append(f"  ⏳ {s['pair']} {s.get('direction','')} | Entry: {s.get('entry',0):.6f}")
 
+    # Save state for next report's period delta (vars are in scope here)
+    try:
+        _save_report_state(len(closed), len(wins), len(losses), net_pnl)
+    except Exception:
+        pass
+
     return "\n".join(L)
 
 
@@ -434,9 +447,6 @@ def main():
 
     with open(os.path.join(SCRIPT_DIR, "last_hourly_report.txt"), "w") as f:
         f.write(report)
-
-    # Save state for next report's period delta
-    _save_report_state(len(closed), len(wins), len(losses), net_pnl)
 
     # Step 6: Win/Loss tracker
     print("[6/6] Running win/loss tracker...")
