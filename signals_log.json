@@ -7163,5 +7163,37 @@
       0.6665
     ],
     "tag": "ema_short"
+  },
+  {
+    "id": "SIG-0242",
+    "time": "2026-07-13T12:26:16.820268+00:00",
+    "pair": "GROVE/USDT",
+    "exchange": "KuCoin",
+    "direction": "SHORT",
+    "style": "NFI_RSI3_EXTREME",
+    "score": 57.0,
+    "adx": 23.5,
+    "rsi": 79.8,
+    "rsi3": 97.4,
+    "volume_x": 0.43,
+    "htf_trend": "BEARISH",
+    "entry": 0.0198,
+    "sl": 0.020012142857142857,
+    "tp1": 0.019587857142857146,
+    "tp2": 0.019481785714285715,
+    "tp3": 0.019375714285714288,
+    "tp_main": 0.019375714285714288,
+    "capital": 1000.0,
+    "status": "OPEN",
+    "exit_price": null,
+    "pnl_usd": null,
+    "result": null,
+    "closed_at": null,
+    "exit_time": null,
+    "grind_count": 0,
+    "grind_entries": [
+      0.0198
+    ],
+    "tag": "nfi_rsi3_short"
   }
 ]
