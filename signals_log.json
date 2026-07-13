@@ -7788,17 +7788,18 @@
     "tp3": 3.5989785714285714,
     "tp_main": 3.5989785714285714,
     "capital": 1000.0,
-    "status": "OPEN",
-    "exit_price": null,
-    "pnl_usd": null,
-    "result": null,
-    "closed_at": null,
-    "exit_time": null,
+    "status": "CLOSED",
+    "exit_price": 3.5348,
+    "pnl_usd": 0.34,
+    "result": "STALE",
+    "closed_at": "2026-07-13T18:05:52.527447+00:00",
+    "exit_time": "2026-07-13T18:05:52.527447+00:00",
     "grind_count": 0,
     "grind_entries": [
       3.5336
     ],
-    "tag": "ema_long"
+    "tag": "ema_long",
+    "pnl_pct": 0.03
   },
   {
     "id": "SIG-0261",
@@ -7820,17 +7821,18 @@
     "tp3": 3.5989785714285714,
     "tp_main": 3.5989785714285714,
     "capital": 1000.0,
-    "status": "OPEN",
-    "exit_price": null,
-    "pnl_usd": null,
-    "result": null,
-    "closed_at": null,
-    "exit_time": null,
+    "status": "CLOSED",
+    "exit_price": 3.5348,
+    "pnl_usd": 0.34,
+    "result": "STALE",
+    "closed_at": "2026-07-13T18:05:52.527447+00:00",
+    "exit_time": "2026-07-13T18:05:52.527447+00:00",
     "grind_count": 0,
     "grind_entries": [
       3.5336
     ],
-    "tag": "bb_long"
+    "tag": "bb_long",
+    "pnl_pct": 0.03
   },
   {
     "id": "SIG-0262",
@@ -7852,17 +7854,18 @@
     "tp3": 0.036498071428571435,
     "tp_main": 0.036498071428571435,
     "capital": 1000.0,
-    "status": "OPEN",
-    "exit_price": null,
-    "pnl_usd": null,
-    "result": null,
-    "closed_at": null,
-    "exit_time": null,
+    "status": "CLOSED",
+    "exit_price": 0.035568,
+    "pnl_usd": -3.67,
+    "result": "STALE",
+    "closed_at": "2026-07-13T18:05:52.527447+00:00",
+    "exit_time": "2026-07-13T18:05:52.527447+00:00",
     "grind_count": 0,
     "grind_entries": [
       0.035699
     ],
-    "tag": "ema_long"
+    "tag": "ema_long",
+    "pnl_pct": -0.37
   },
   {
     "id": "SIG-0263",
@@ -7884,17 +7887,18 @@
     "tp3": 0.036498071428571435,
     "tp_main": 0.036498071428571435,
     "capital": 1000.0,
-    "status": "OPEN",
-    "exit_price": null,
-    "pnl_usd": null,
-    "result": null,
-    "closed_at": null,
-    "exit_time": null,
+    "status": "CLOSED",
+    "exit_price": 0.035568,
+    "pnl_usd": -3.67,
+    "result": "STALE",
+    "closed_at": "2026-07-13T18:05:52.527447+00:00",
+    "exit_time": "2026-07-13T18:05:52.527447+00:00",
     "grind_count": 0,
     "grind_entries": [
       0.035699
     ],
-    "tag": "bb_long"
+    "tag": "bb_long",
+    "pnl_pct": -0.37
   },
   {
     "id": "SIG-0264",
