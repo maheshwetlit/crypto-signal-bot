@@ -8150,5 +8150,37 @@
       0.4148
     ],
     "tag": "nfi_bb_long"
+  },
+  {
+    "id": "SIG-0272",
+    "time": "2026-07-13T15:56:49.719256+00:00",
+    "pair": "ADA/USDT",
+    "exchange": "KuCoin",
+    "direction": "SHORT",
+    "style": "CONFIRMED_BREAKOUT",
+    "score": 79.2,
+    "adx": 19.2,
+    "rsi": 33.3,
+    "rsi3": 0.0,
+    "volume_x": 0.7,
+    "htf_trend": "BEARISH",
+    "entry": 0.1587,
+    "sl": 0.16187400000000002,
+    "tp1": 0.15727170000000001,
+    "tp2": null,
+    "tp3": null,
+    "tp_main": 0.15727170000000001,
+    "capital": 1000.0,
+    "status": "OPEN",
+    "exit_price": null,
+    "pnl_usd": null,
+    "result": null,
+    "closed_at": null,
+    "exit_time": null,
+    "grind_count": 0,
+    "grind_entries": [
+      0.1587
+    ],
+    "tag": "breakout_short"
   }
 ]
