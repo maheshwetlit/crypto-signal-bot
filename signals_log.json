@@ -9339,17 +9339,18 @@
     "tp3": null,
     "tp_main": 0.2211912,
     "capital": 1000.0,
-    "status": "OPEN",
-    "exit_price": null,
-    "pnl_usd": null,
-    "result": null,
-    "closed_at": null,
-    "exit_time": null,
+    "status": "CLOSED",
+    "exit_price": 0.2265,
+    "pnl_usd": -14.78,
+    "result": "STALE",
+    "closed_at": "2026-07-14T00:35:49.995754+00:00",
+    "exit_time": "2026-07-14T00:35:49.995754+00:00",
     "grind_count": 0,
     "grind_entries": [
       0.2232
     ],
-    "tag": "breakout_short"
+    "tag": "breakout_short",
+    "pnl_pct": -1.48
   },
   {
     "id": "SIG-0308",
@@ -9860,6 +9861,70 @@
     "grind_count": 0,
     "grind_entries": [
       0.158
+    ],
+    "tag": "breakout_long"
+  },
+  {
+    "id": "SIG-0324",
+    "time": "2026-07-14T00:36:37.846169+00:00",
+    "pair": "BNB/USDT",
+    "exchange": "KuCoin",
+    "direction": "LONG",
+    "style": "CONFIRMED_BREAKOUT",
+    "score": 88.7,
+    "adx": 28.7,
+    "rsi": 72.5,
+    "rsi3": 96.1,
+    "volume_x": 1.44,
+    "htf_trend": "BEARISH",
+    "entry": 568.536,
+    "sl": 557.1652799999999,
+    "tp1": 573.6528239999999,
+    "tp2": null,
+    "tp3": null,
+    "tp_main": 573.6528239999999,
+    "capital": 1000.0,
+    "status": "OPEN",
+    "exit_price": null,
+    "pnl_usd": null,
+    "result": null,
+    "closed_at": null,
+    "exit_time": null,
+    "grind_count": 0,
+    "grind_entries": [
+      568.536
+    ],
+    "tag": "breakout_long"
+  },
+  {
+    "id": "SIG-0325",
+    "time": "2026-07-14T00:36:49.890881+00:00",
+    "pair": "SNX/USDT",
+    "exchange": "KuCoin",
+    "direction": "LONG",
+    "style": "CONFIRMED_BREAKOUT",
+    "score": 90.2,
+    "adx": 30.2,
+    "rsi": 78.6,
+    "rsi3": 91.7,
+    "volume_x": 0.34,
+    "htf_trend": "NEUTRAL",
+    "entry": 0.2265,
+    "sl": 0.22197,
+    "tp1": 0.22853849999999998,
+    "tp2": null,
+    "tp3": null,
+    "tp_main": 0.22853849999999998,
+    "capital": 1000.0,
+    "status": "OPEN",
+    "exit_price": null,
+    "pnl_usd": null,
+    "result": null,
+    "closed_at": null,
+    "exit_time": null,
+    "grind_count": 0,
+    "grind_entries": [
+      0.2265
     ],
     "tag": "breakout_long"
   }
