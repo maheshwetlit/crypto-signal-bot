@@ -12436,5 +12436,37 @@
       0.1641
     ],
     "tag": "breakout_long"
+  },
+  {
+    "id": "SIG-0402",
+    "time": "2026-07-14T14:02:37.245754+00:00",
+    "pair": "SNX/USDT",
+    "exchange": "KuCoin",
+    "direction": "SHORT",
+    "style": "CONFIRMED_BREAKOUT",
+    "score": 100.0,
+    "adx": 42.8,
+    "rsi": 48.1,
+    "rsi3": 0.0,
+    "volume_x": 1.26,
+    "htf_trend": "BULLISH",
+    "entry": 0.2327,
+    "sl": 0.23735399999999998,
+    "tp1": 0.2306057,
+    "tp2": null,
+    "tp3": null,
+    "tp_main": 0.2306057,
+    "capital": 1000.0,
+    "status": "OPEN",
+    "exit_price": null,
+    "pnl_usd": null,
+    "result": null,
+    "closed_at": null,
+    "exit_time": null,
+    "grind_count": 0,
+    "grind_entries": [
+      0.2327
+    ],
+    "tag": "breakout_short"
   }
 ]
