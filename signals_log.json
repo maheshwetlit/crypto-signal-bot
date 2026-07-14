@@ -10824,17 +10824,18 @@
     "tp3": null,
     "tp_main": 328.75237999999996,
     "capital": 1000.0,
-    "status": "OPEN",
-    "exit_price": null,
-    "pnl_usd": null,
-    "result": null,
-    "closed_at": null,
-    "exit_time": null,
+    "status": "CLOSED",
+    "exit_price": 326.22,
+    "pnl_usd": 1.23,
+    "result": "STALE",
+    "closed_at": "2026-07-14T11:31:28.558005+00:00",
+    "exit_time": "2026-07-14T11:31:28.558005+00:00",
     "grind_count": 0,
     "grind_entries": [
       325.82
     ],
-    "tag": "breakout_long"
+    "tag": "breakout_long",
+    "pnl_pct": 0.12
   },
   {
     "id": "SIG-0353",
