@@ -10286,17 +10286,18 @@
     "tp3": null,
     "tp_main": 0.0362231,
     "capital": 1000.0,
-    "status": "OPEN",
-    "exit_price": null,
-    "pnl_usd": null,
-    "result": null,
-    "closed_at": null,
-    "exit_time": null,
+    "status": "WIN",
+    "exit_price": 0.0362231,
+    "pnl_usd": 9.0,
+    "result": "WIN",
+    "closed_at": "2026-07-14T03:31:30.264015+00:00",
+    "exit_time": "2026-07-14T03:31:30.264015+00:00",
     "grind_count": 0,
     "grind_entries": [
       0.0359
     ],
-    "tag": "breakout_long"
+    "tag": "breakout_long",
+    "pnl_pct": 0.9
   },
   {
     "id": "SIG-0337",
@@ -10391,6 +10392,38 @@
     "grind_count": 0,
     "grind_entries": [
       7.891
+    ],
+    "tag": "breakout_short"
+  },
+  {
+    "id": "SIG-0340",
+    "time": "2026-07-14T03:32:25.999841+00:00",
+    "pair": "PIEVERSE/USDT",
+    "exchange": "KuCoin",
+    "direction": "SHORT",
+    "style": "CONFIRMED_BREAKOUT",
+    "score": 78.0,
+    "adx": 18.0,
+    "rsi": 37.5,
+    "rsi3": 46.8,
+    "volume_x": 1.4,
+    "htf_trend": "BEARISH",
+    "entry": 0.6557,
+    "sl": 0.6688139999999999,
+    "tp1": 0.6497987,
+    "tp2": null,
+    "tp3": null,
+    "tp_main": 0.6497987,
+    "capital": 1000.0,
+    "status": "OPEN",
+    "exit_price": null,
+    "pnl_usd": null,
+    "result": null,
+    "closed_at": null,
+    "exit_time": null,
+    "grind_count": 0,
+    "grind_entries": [
+      0.6557
     ],
     "tag": "breakout_short"
   }
