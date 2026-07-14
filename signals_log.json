@@ -12900,17 +12900,18 @@
     "tp3": null,
     "tp_main": 1.11425888,
     "capital": 1000.0,
-    "status": "OPEN",
-    "exit_price": null,
-    "pnl_usd": null,
-    "result": null,
-    "closed_at": null,
-    "exit_time": null,
+    "status": "WIN",
+    "exit_price": 1.11425888,
+    "pnl_usd": 9.0,
+    "result": "WIN",
+    "closed_at": "2026-07-14T19:15:58.144201+00:00",
+    "exit_time": "2026-07-14T19:15:58.144201+00:00",
     "grind_count": 0,
     "grind_entries": [
       1.10432
     ],
-    "tag": "breakout_long"
+    "tag": "breakout_long",
+    "pnl_pct": 0.9
   },
   {
     "id": "SIG-0416",
@@ -13069,6 +13070,38 @@
     "grind_count": 0,
     "grind_entries": [
       202.48
+    ],
+    "tag": "breakout_long"
+  },
+  {
+    "id": "SIG-0421",
+    "time": "2026-07-14T19:16:26.792720+00:00",
+    "pair": "TAO/USDT",
+    "exchange": "KuCoin",
+    "direction": "LONG",
+    "style": "CONFIRMED_BREAKOUT",
+    "score": 84.0,
+    "adx": 24.0,
+    "rsi": 68.5,
+    "rsi3": 69.2,
+    "volume_x": 0.98,
+    "htf_trend": "BEARISH",
+    "entry": 203.25,
+    "sl": 199.185,
+    "tp1": 205.07924999999997,
+    "tp2": null,
+    "tp3": null,
+    "tp_main": 205.07924999999997,
+    "capital": 1000.0,
+    "status": "OPEN",
+    "exit_price": null,
+    "pnl_usd": null,
+    "result": null,
+    "closed_at": null,
+    "exit_time": null,
+    "grind_count": 0,
+    "grind_entries": [
+      203.25
     ],
     "tag": "breakout_long"
   }
