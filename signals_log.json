@@ -10468,5 +10468,37 @@
     ],
     "tag": "breakout_long",
     "pnl_pct": 0.9
+  },
+  {
+    "id": "SIG-0342",
+    "time": "2026-07-14T04:06:38.934524+00:00",
+    "pair": "CARDS/USDT",
+    "exchange": "KuCoin",
+    "direction": "SHORT",
+    "style": "CONFIRMED_BREAKOUT",
+    "score": 100.0,
+    "adx": 58.9,
+    "rsi": 0.0,
+    "rsi3": 0.0,
+    "volume_x": 1.61,
+    "htf_trend": "BULLISH",
+    "entry": 0.1637,
+    "sl": 0.166974,
+    "tp1": 0.1622267,
+    "tp2": null,
+    "tp3": null,
+    "tp_main": 0.1622267,
+    "capital": 1000.0,
+    "status": "OPEN",
+    "exit_price": null,
+    "pnl_usd": null,
+    "result": null,
+    "closed_at": null,
+    "exit_time": null,
+    "grind_count": 0,
+    "grind_entries": [
+      0.1637
+    ],
+    "tag": "breakout_short"
   }
 ]
