@@ -17994,19 +17994,20 @@
     "tp3": null,
     "tp_main": 0.1700165,
     "capital": 1000.0,
-    "status": "OPEN",
-    "exit_price": null,
-    "pnl_usd": null,
-    "result": null,
-    "closed_at": null,
-    "exit_time": null,
+    "status": "LOSS",
+    "exit_price": 0.16513,
+    "pnl_usd": -20.0,
+    "result": "LOSS",
+    "closed_at": "2026-07-15T16:11:25.494403+00:00",
+    "exit_time": "2026-07-15T16:11:25.494403+00:00",
     "grind_count": 0,
     "grind_entries": [
       0.1685
     ],
     "tag": "breakout_long",
     "best_price": 0.1689,
-    "worst_price": 0.1655
+    "worst_price": 0.1644,
+    "pnl_pct": -2.0
   },
   {
     "id": "SIG-0568",
@@ -18040,7 +18041,7 @@
     ],
     "tag": "breakout_long",
     "best_price": 0.07522,
-    "worst_price": 0.0744
+    "worst_price": 0.07417
   },
   {
     "id": "SIG-0569",
@@ -18142,7 +18143,7 @@
     ],
     "tag": "breakout_short",
     "best_price": 574.422,
-    "worst_price": 574.422
+    "worst_price": 573.994
   },
   {
     "id": "SIG-0572",
@@ -18175,7 +18176,7 @@
       0.1853
     ],
     "tag": "breakout_short",
-    "best_price": 0.1853,
+    "best_price": 0.1864,
     "worst_price": 0.1853
   },
   {
@@ -18210,6 +18211,40 @@
     ],
     "tag": "breakout_short",
     "best_price": 0.2796,
-    "worst_price": 0.2796
+    "worst_price": 0.2791
+  },
+  {
+    "id": "SIG-0574",
+    "time": "2026-07-15T16:12:00.313371+00:00",
+    "pair": "PEPE/USDT",
+    "exchange": "KuCoin",
+    "direction": "SHORT",
+    "style": "CONFIRMED_BREAKOUT",
+    "score": 80.3,
+    "adx": 20.3,
+    "rsi": 27.8,
+    "rsi3": 0.0,
+    "volume_x": 1.83,
+    "htf_trend": "BULLISH",
+    "entry": 2.796e-06,
+    "sl": 2.85192e-06,
+    "tp1": 2.770836e-06,
+    "tp2": null,
+    "tp3": null,
+    "tp_main": 2.770836e-06,
+    "capital": 1000.0,
+    "status": "OPEN",
+    "exit_price": null,
+    "pnl_usd": null,
+    "result": null,
+    "closed_at": null,
+    "exit_time": null,
+    "grind_count": 0,
+    "grind_entries": [
+      2.796e-06
+    ],
+    "tag": "breakout_short",
+    "best_price": 2.796e-06,
+    "worst_price": 2.796e-06
   }
 ]
