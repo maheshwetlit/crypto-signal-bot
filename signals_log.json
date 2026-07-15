@@ -14818,5 +14818,37 @@
       0.1637
     ],
     "tag": "breakout_long"
+  },
+  {
+    "id": "SIG-0474",
+    "time": "2026-07-15T03:26:16.722147+00:00",
+    "pair": "HYPE/USDT",
+    "exchange": "KuCoin",
+    "direction": "LONG",
+    "style": "CONFIRMED_BREAKOUT",
+    "score": 100.0,
+    "adx": 44.0,
+    "rsi": 91.7,
+    "rsi3": 98.2,
+    "volume_x": 0.7,
+    "htf_trend": "NEUTRAL",
+    "entry": 67.383,
+    "sl": 66.03533999999999,
+    "tp1": 67.98944699999998,
+    "tp2": null,
+    "tp3": null,
+    "tp_main": 67.98944699999998,
+    "capital": 1000.0,
+    "status": "OPEN",
+    "exit_price": null,
+    "pnl_usd": null,
+    "result": null,
+    "closed_at": null,
+    "exit_time": null,
+    "grind_count": 0,
+    "grind_entries": [
+      67.383
+    ],
+    "tag": "breakout_long"
   }
 ]
