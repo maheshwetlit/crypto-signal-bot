@@ -14817,17 +14817,18 @@
     "tp3": null,
     "tp_main": 0.1651733,
     "capital": 1000.0,
-    "status": "OPEN",
-    "exit_price": null,
-    "pnl_usd": null,
-    "result": null,
-    "closed_at": null,
-    "exit_time": null,
+    "status": "CLOSED",
+    "exit_price": 0.1646,
+    "pnl_usd": 5.5,
+    "result": "STALE",
+    "closed_at": "2026-07-15T06:25:51.067905+00:00",
+    "exit_time": "2026-07-15T06:25:51.067905+00:00",
     "grind_count": 0,
     "grind_entries": [
       0.1637
     ],
-    "tag": "breakout_long"
+    "tag": "breakout_long",
+    "pnl_pct": 0.55
   },
   {
     "id": "SIG-0474",
@@ -15140,17 +15141,18 @@
     "tp3": null,
     "tp_main": 0.08921578,
     "capital": 1000.0,
-    "status": "OPEN",
-    "exit_price": null,
-    "pnl_usd": null,
-    "result": null,
-    "closed_at": null,
-    "exit_time": null,
+    "status": "LOSS",
+    "exit_price": 0.0866516,
+    "pnl_usd": -20.0,
+    "result": "LOSS",
+    "closed_at": "2026-07-15T06:25:51.067905+00:00",
+    "exit_time": "2026-07-15T06:25:51.067905+00:00",
     "grind_count": 0,
     "grind_entries": [
       0.08842
     ],
-    "tag": "breakout_long"
+    "tag": "breakout_long",
+    "pnl_pct": -2.0
   },
   {
     "id": "SIG-0484",
@@ -15526,17 +15528,18 @@
     "tp3": null,
     "tp_main": 0.08967992,
     "capital": 1000.0,
-    "status": "OPEN",
-    "exit_price": null,
-    "pnl_usd": null,
-    "result": null,
-    "closed_at": null,
-    "exit_time": null,
+    "status": "LOSS",
+    "exit_price": 0.0871024,
+    "pnl_usd": -20.0,
+    "result": "LOSS",
+    "closed_at": "2026-07-15T06:25:51.067905+00:00",
+    "exit_time": "2026-07-15T06:25:51.067905+00:00",
     "grind_count": 0,
     "grind_entries": [
       0.08888
     ],
-    "tag": "breakout_long"
+    "tag": "breakout_long",
+    "pnl_pct": -2.0
   },
   {
     "id": "SIG-0496",
@@ -15951,6 +15954,38 @@
     "grind_count": 0,
     "grind_entries": [
       6.706
+    ],
+    "tag": "breakout_long"
+  },
+  {
+    "id": "SIG-0509",
+    "time": "2026-07-15T06:26:40.977076+00:00",
+    "pair": "ANTFUN/USDT",
+    "exchange": "KuCoin",
+    "direction": "LONG",
+    "style": "CONFIRMED_BREAKOUT",
+    "score": 100.0,
+    "adx": 41.2,
+    "rsi": 62.0,
+    "rsi3": 73.4,
+    "volume_x": 2.49,
+    "htf_trend": "BULLISH",
+    "entry": 0.038118,
+    "sl": 0.037355639999999996,
+    "tp1": 0.038461062,
+    "tp2": null,
+    "tp3": null,
+    "tp_main": 0.038461062,
+    "capital": 1000.0,
+    "status": "OPEN",
+    "exit_price": null,
+    "pnl_usd": null,
+    "result": null,
+    "closed_at": null,
+    "exit_time": null,
+    "grind_count": 0,
+    "grind_entries": [
+      0.038118
     ],
     "tag": "breakout_long"
   }
