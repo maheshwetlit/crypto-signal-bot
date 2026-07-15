@@ -16302,17 +16302,18 @@
     "tp3": null,
     "tp_main": 545.857665,
     "capital": 1000.0,
-    "status": "OPEN",
-    "exit_price": null,
-    "pnl_usd": null,
-    "result": null,
-    "closed_at": null,
-    "exit_time": null,
+    "status": "LOSS",
+    "exit_price": 561.8313,
+    "pnl_usd": -20.0,
+    "result": "LOSS",
+    "closed_at": "2026-07-15T10:15:57.012614+00:00",
+    "exit_time": "2026-07-15T10:15:57.012614+00:00",
     "grind_count": 0,
     "grind_entries": [
       550.815
     ],
-    "tag": "breakout_short"
+    "tag": "breakout_short",
+    "pnl_pct": -2.0
   },
   {
     "id": "SIG-0519",
