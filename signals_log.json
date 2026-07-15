@@ -17057,5 +17057,37 @@
       0.4154
     ],
     "tag": "breakout_long"
+  },
+  {
+    "id": "SIG-0542",
+    "time": "2026-07-15T11:52:21.210710+00:00",
+    "pair": "WLD/USDT",
+    "exchange": "KuCoin",
+    "direction": "LONG",
+    "style": "CONFIRMED_BREAKOUT",
+    "score": 82.5,
+    "adx": 22.5,
+    "rsi": 72.6,
+    "rsi3": 77.4,
+    "volume_x": 0.71,
+    "htf_trend": "BULLISH",
+    "entry": 0.4168,
+    "sl": 0.408464,
+    "tp1": 0.42055119999999996,
+    "tp2": null,
+    "tp3": null,
+    "tp_main": 0.42055119999999996,
+    "capital": 1000.0,
+    "status": "OPEN",
+    "exit_price": null,
+    "pnl_usd": null,
+    "result": null,
+    "closed_at": null,
+    "exit_time": null,
+    "grind_count": 0,
+    "grind_entries": [
+      0.4168
+    ],
+    "tag": "breakout_long"
   }
 ]
