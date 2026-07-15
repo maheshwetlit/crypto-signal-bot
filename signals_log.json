@@ -16102,17 +16102,18 @@
     "tp3": null,
     "tp_main": 0.2324886,
     "capital": 1000.0,
-    "status": "OPEN",
-    "exit_price": null,
-    "pnl_usd": null,
-    "result": null,
-    "closed_at": null,
-    "exit_time": null,
+    "status": "WIN",
+    "exit_price": 0.2324886,
+    "pnl_usd": 9.0,
+    "result": "WIN",
+    "closed_at": "2026-07-15T09:25:47.376278+00:00",
+    "exit_time": "2026-07-15T09:25:47.376278+00:00",
     "grind_count": 0,
     "grind_entries": [
       0.2346
     ],
-    "tag": "breakout_short"
+    "tag": "breakout_short",
+    "pnl_pct": 0.9
   },
   {
     "id": "SIG-0513",
@@ -16392,17 +16393,18 @@
     "tp3": null,
     "tp_main": 45.64716,
     "capital": 1000.0,
-    "status": "OPEN",
-    "exit_price": null,
-    "pnl_usd": null,
-    "result": null,
-    "closed_at": null,
-    "exit_time": null,
+    "status": "WIN",
+    "exit_price": 45.64716,
+    "pnl_usd": 9.0,
+    "result": "WIN",
+    "closed_at": "2026-07-15T09:25:47.376278+00:00",
+    "exit_time": "2026-07-15T09:25:47.376278+00:00",
     "grind_count": 0,
     "grind_entries": [
       45.24
     ],
-    "tag": "breakout_long"
+    "tag": "breakout_long",
+    "pnl_pct": 0.9
   },
   {
     "id": "SIG-0522",
@@ -16500,5 +16502,37 @@
       68.012
     ],
     "tag": "breakout_long"
+  },
+  {
+    "id": "SIG-0525",
+    "time": "2026-07-15T09:26:58.072138+00:00",
+    "pair": "CARDS/USDT",
+    "exchange": "KuCoin",
+    "direction": "SHORT",
+    "style": "CONFIRMED_BREAKOUT",
+    "score": 88.9,
+    "adx": 28.9,
+    "rsi": 61.8,
+    "rsi3": 33.3,
+    "volume_x": 0.77,
+    "htf_trend": "NEUTRAL",
+    "entry": 0.163,
+    "sl": 0.16626000000000002,
+    "tp1": 0.161533,
+    "tp2": null,
+    "tp3": null,
+    "tp_main": 0.161533,
+    "capital": 1000.0,
+    "status": "OPEN",
+    "exit_price": null,
+    "pnl_usd": null,
+    "result": null,
+    "closed_at": null,
+    "exit_time": null,
+    "grind_count": 0,
+    "grind_entries": [
+      0.163
+    ],
+    "tag": "breakout_short"
   }
 ]
