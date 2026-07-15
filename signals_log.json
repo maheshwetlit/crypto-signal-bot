@@ -14421,17 +14421,18 @@
     "tp3": null,
     "tp_main": 336.24924999999996,
     "capital": 1000.0,
-    "status": "OPEN",
-    "exit_price": null,
-    "pnl_usd": null,
-    "result": null,
-    "closed_at": null,
-    "exit_time": null,
+    "status": "CLOSED",
+    "exit_price": 331.07,
+    "pnl_usd": -6.54,
+    "result": "STALE",
+    "closed_at": "2026-07-15T04:15:55.865124+00:00",
+    "exit_time": "2026-07-15T04:15:55.865124+00:00",
     "grind_count": 0,
     "grind_entries": [
       333.25
     ],
-    "tag": "breakout_long"
+    "tag": "breakout_long",
+    "pnl_pct": -0.65
   },
   {
     "id": "SIG-0462",
@@ -15111,5 +15112,37 @@
       0.1716
     ],
     "tag": "breakout_short"
+  },
+  {
+    "id": "SIG-0483",
+    "time": "2026-07-15T04:16:44.322601+00:00",
+    "pair": "BDX/USDT",
+    "exchange": "KuCoin",
+    "direction": "LONG",
+    "style": "CONFIRMED_BREAKOUT",
+    "score": 96.1,
+    "adx": 36.1,
+    "rsi": 45.4,
+    "rsi3": 90.9,
+    "volume_x": 0.42,
+    "htf_trend": "BEARISH",
+    "entry": 0.08842,
+    "sl": 0.0866516,
+    "tp1": 0.08921578,
+    "tp2": null,
+    "tp3": null,
+    "tp_main": 0.08921578,
+    "capital": 1000.0,
+    "status": "OPEN",
+    "exit_price": null,
+    "pnl_usd": null,
+    "result": null,
+    "closed_at": null,
+    "exit_time": null,
+    "grind_count": 0,
+    "grind_entries": [
+      0.08842
+    ],
+    "tag": "breakout_long"
   }
 ]
