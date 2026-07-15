@@ -18706,7 +18706,7 @@
       0.1865
     ],
     "tag": "breakout_short",
-    "best_price": 0.1893,
+    "best_price": 0.1898,
     "worst_price": 0.1864
   },
   {
@@ -18808,7 +18808,7 @@
       1.10978
     ],
     "tag": "breakout_short",
-    "best_price": 1.11506,
+    "best_price": 1.11554,
     "worst_price": 1.10978
   },
   {
@@ -18912,7 +18912,7 @@
     ],
     "tag": "breakout_long",
     "best_price": 0.04937,
-    "worst_price": 0.04898
+    "worst_price": 0.04879
   },
   {
     "id": "SIG-0594",
@@ -18946,7 +18946,7 @@
     ],
     "tag": "breakout_long",
     "best_price": 0.04937,
-    "worst_price": 0.04906
+    "worst_price": 0.04879
   },
   {
     "id": "SIG-0595",
@@ -19119,7 +19119,7 @@
     ],
     "tag": "breakout_long",
     "best_price": 0.2323,
-    "worst_price": 0.2319
+    "worst_price": 0.2317
   },
   {
     "id": "SIG-0600",
@@ -19153,7 +19153,7 @@
     ],
     "tag": "breakout_short",
     "best_price": 4.236e-06,
-    "worst_price": 4.232e-06
+    "worst_price": 4.231e-06
   },
   {
     "id": "SIG-0601",
@@ -19209,19 +19209,20 @@
     "tp3": null,
     "tp_main": 0.19165939999999998,
     "capital": 1000.0,
-    "status": "OPEN",
-    "exit_price": null,
-    "pnl_usd": null,
-    "result": null,
-    "closed_at": null,
-    "exit_time": null,
+    "status": "WIN",
+    "exit_price": 0.19165939999999998,
+    "pnl_usd": 9.0,
+    "result": "WIN",
+    "closed_at": "2026-07-15T22:01:35.660976+00:00",
+    "exit_time": "2026-07-15T22:01:35.660976+00:00",
     "grind_count": 0,
     "grind_entries": [
       0.1934
     ],
     "tag": "breakout_short",
     "best_price": 0.1934,
-    "worst_price": 0.1925
+    "worst_price": 0.1916,
+    "pnl_pct": 0.9
   },
   {
     "id": "SIG-0603",
@@ -19255,7 +19256,7 @@
     ],
     "tag": "breakout_long",
     "best_price": 199.42,
-    "worst_price": 199.41
+    "worst_price": 199.21
   },
   {
     "id": "SIG-0604",
@@ -19288,7 +19289,7 @@
       0.1895
     ],
     "tag": "breakout_long",
-    "best_price": 0.1895,
+    "best_price": 0.1898,
     "worst_price": 0.1895
   },
   {
@@ -19323,6 +19324,6 @@
     ],
     "tag": "breakout_short",
     "best_price": 6.684,
-    "worst_price": 6.684
+    "worst_price": 6.673
   }
 ]
