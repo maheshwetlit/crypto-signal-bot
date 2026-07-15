@@ -15576,17 +15576,18 @@
     "tp3": null,
     "tp_main": 334.79628999999994,
     "capital": 1000.0,
-    "status": "OPEN",
-    "exit_price": null,
-    "pnl_usd": null,
-    "result": null,
-    "closed_at": null,
-    "exit_time": null,
+    "status": "CLOSED",
+    "exit_price": 329.57,
+    "pnl_usd": -6.75,
+    "result": "STALE",
+    "closed_at": "2026-07-15T08:55:50.400394+00:00",
+    "exit_time": "2026-07-15T08:55:50.400394+00:00",
     "grind_count": 0,
     "grind_entries": [
       331.81
     ],
-    "tag": "breakout_long"
+    "tag": "breakout_long",
+    "pnl_pct": -0.68
   },
   {
     "id": "SIG-0497",
@@ -16388,6 +16389,38 @@
     "grind_count": 0,
     "grind_entries": [
       45.24
+    ],
+    "tag": "breakout_long"
+  },
+  {
+    "id": "SIG-0522",
+    "time": "2026-07-15T08:56:01.926136+00:00",
+    "pair": "BTC/USDT",
+    "exchange": "KuCoin",
+    "direction": "LONG",
+    "style": "CONFIRMED_BREAKOUT",
+    "score": 79.5,
+    "adx": 19.5,
+    "rsi": 62.9,
+    "rsi3": 54.8,
+    "volume_x": 2.21,
+    "htf_trend": "BULLISH",
+    "entry": 64737.3,
+    "sl": 63442.554000000004,
+    "tp1": 65319.935699999995,
+    "tp2": null,
+    "tp3": null,
+    "tp_main": 65319.935699999995,
+    "capital": 1000.0,
+    "status": "OPEN",
+    "exit_price": null,
+    "pnl_usd": null,
+    "result": null,
+    "closed_at": null,
+    "exit_time": null,
+    "grind_count": 0,
+    "grind_entries": [
+      64737.3
     ],
     "tag": "breakout_long"
   }
