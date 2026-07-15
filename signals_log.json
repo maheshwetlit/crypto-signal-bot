@@ -15460,17 +15460,18 @@
     "tp3": null,
     "tp_main": 0.01527131,
     "capital": 1000.0,
-    "status": "OPEN",
-    "exit_price": null,
-    "pnl_usd": null,
-    "result": null,
-    "closed_at": null,
-    "exit_time": null,
+    "status": "WIN",
+    "exit_price": 0.01527131,
+    "pnl_usd": 9.0,
+    "result": "WIN",
+    "closed_at": "2026-07-15T06:18:30.698776+00:00",
+    "exit_time": "2026-07-15T06:18:30.698776+00:00",
     "grind_count": 0,
     "grind_entries": [
       0.01541
     ],
-    "tag": "breakout_short"
+    "tag": "breakout_short",
+    "pnl_pct": 0.9
   },
   {
     "id": "SIG-0494",
@@ -15492,17 +15493,18 @@
     "tp3": null,
     "tp_main": 0.01527131,
     "capital": 1000.0,
-    "status": "OPEN",
-    "exit_price": null,
-    "pnl_usd": null,
-    "result": null,
-    "closed_at": null,
-    "exit_time": null,
+    "status": "WIN",
+    "exit_price": 0.01527131,
+    "pnl_usd": 9.0,
+    "result": "WIN",
+    "closed_at": "2026-07-15T06:18:30.698776+00:00",
+    "exit_time": "2026-07-15T06:18:30.698776+00:00",
     "grind_count": 0,
     "grind_entries": [
       0.01541
     ],
-    "tag": "breakout_short"
+    "tag": "breakout_short",
+    "pnl_pct": 0.9
   },
   {
     "id": "SIG-0495",
@@ -15885,6 +15887,70 @@
     "grind_count": 0,
     "grind_entries": [
       0.6358
+    ],
+    "tag": "breakout_long"
+  },
+  {
+    "id": "SIG-0507",
+    "time": "2026-07-15T06:19:20.785650+00:00",
+    "pair": "GROVE/USDT",
+    "exchange": "KuCoin",
+    "direction": "SHORT",
+    "style": "CONFIRMED_BREAKOUT",
+    "score": 82.7,
+    "adx": 22.7,
+    "rsi": 8.3,
+    "rsi3": 0.0,
+    "volume_x": 0.14,
+    "htf_trend": "BEARISH",
+    "entry": 0.01527,
+    "sl": 0.015575400000000001,
+    "tp1": 0.01513257,
+    "tp2": null,
+    "tp3": null,
+    "tp_main": 0.01513257,
+    "capital": 1000.0,
+    "status": "OPEN",
+    "exit_price": null,
+    "pnl_usd": null,
+    "result": null,
+    "closed_at": null,
+    "exit_time": null,
+    "grind_count": 0,
+    "grind_entries": [
+      0.01527
+    ],
+    "tag": "breakout_short"
+  },
+  {
+    "id": "SIG-0508",
+    "time": "2026-07-15T06:19:36.984550+00:00",
+    "pair": "AVAX/USDT",
+    "exchange": "KuCoin",
+    "direction": "LONG",
+    "style": "CONFIRMED_BREAKOUT",
+    "score": 88.9,
+    "adx": 28.9,
+    "rsi": 83.1,
+    "rsi3": 86.7,
+    "volume_x": 2.19,
+    "htf_trend": "NEUTRAL",
+    "entry": 6.706,
+    "sl": 6.57188,
+    "tp1": 6.766354,
+    "tp2": null,
+    "tp3": null,
+    "tp_main": 6.766354,
+    "capital": 1000.0,
+    "status": "OPEN",
+    "exit_price": null,
+    "pnl_usd": null,
+    "result": null,
+    "closed_at": null,
+    "exit_time": null,
+    "grind_count": 0,
+    "grind_entries": [
+      6.706
     ],
     "tag": "breakout_long"
   }
