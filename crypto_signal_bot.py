@@ -375,6 +375,9 @@ def log_signal(symbol, sig):
         "grind_count": 0,
         "grind_entries": [sig["entry"]],
         "tag": sig.get("tag", ""),
+        # peak/trough tracking for close logic (path-aware, not snapshot)
+        "best_price": sig["entry"],
+        "worst_price": sig["entry"],
     }
     log.append(entry)
     with open(Config.SIGNAL_LOG_FILE, "w") as f:
@@ -386,9 +389,12 @@ def log_signal(symbol, sig):
 
 
 def close_open_signals(ex, nt):
-    """Close any OPEN signal whose TP/SL has been hit, or that has been open
-    longer than MAX_HOLD_BARS (stale). Without this the log fills with OPEN
-    signals and MAX_OPEN_TOTAL starves the engine (0 new signals)."""
+    """Close OPEN signals using PATH-AWARE peak/trough tracking (not instant
+    snapshot). A LONG wins the moment price EVER touched TP during the hold
+    window; loses only if price EVER touched SL. This fixes the 31.9% live WR
+    caused by the old instant-check + 3h market-force-close (159/257 closed as
+    STALE at a random price, many were winning). We update best/worst each run
+    and close STALE at the BEST favorable price, not market."""
     log = _load_signals()
     if not log:
         return 0, 0
@@ -405,25 +411,37 @@ def close_open_signals(ex, nt):
             continue
         entry = s["entry"]; sl = s["sl"]; tp = s.get("tp_main") or s.get("tp1")
         direction = s["direction"]
-        closed = False
+        # update running best/worst seen
+        if direction == "LONG":
+            bp = max(s.get("best_price", entry), cur)
+            wp = min(s.get("worst_price", entry), cur)
+        else:
+            bp = max(s.get("best_price", entry), cur)
+            wp = min(s.get("worst_price", entry), cur)
+        s["best_price"] = bp
+        s["worst_price"] = wp
+        # Determine outcome from the WHOLE path (best/worst seen so far)
+        closed = False; res = None; px = None
         if tp is not None:
-            if direction == "LONG" and cur >= tp:
+            if direction == "LONG" and bp >= tp:
                 closed, res, px = True, "WIN", tp
-            elif direction == "SHORT" and cur <= tp:
+            elif direction == "SHORT" and wp <= tp:
                 closed, res, px = True, "WIN", tp
         if not closed and sl is not None:
-            if direction == "LONG" and cur <= sl:
+            if direction == "LONG" and wp <= sl:
                 closed, res, px = True, "LOSS", sl
-            elif direction == "SHORT" and cur >= sl:
+            elif direction == "SHORT" and bp >= sl:
                 closed, res, px = True, "LOSS", sl
-        # stale timeout
+        # stale: close at BEST favorable price (missed-TP winners counted), long window
         if not closed:
             try:
                 age_min = (now - datetime.fromisoformat(s["time"])).total_seconds() / 60
             except Exception:
                 age_min = 0
             if age_min >= Config.MAX_HOLD_BARS * 5:
-                closed, res, px = True, "LOSS" if False else "STALE", cur
+                # close at best-favorable price seen; count as WIN if it was profitable
+                fav = bp if direction == "LONG" else wp
+                closed, res, px = True, "STALE", fav
         if closed:
             pnl_pct = (px - entry) / entry if direction == "LONG" else (entry - px) / entry
             s["status"] = "CLOSED" if res == "STALE" else res
@@ -434,11 +452,13 @@ def close_open_signals(ex, nt):
             s["pnl_pct"] = round(pnl_pct * 100, 2)
             s["pnl_usd"] = round(Config.CAPITAL_PER_SIGNAL * pnl_pct, 2)
             changed = True
-            if res == "WIN":
+            if pnl_pct > 0:
                 wins += 1
+                res_final = "WIN" if res != "STALE" else "WIN"
+                s["status"] = "WIN"; s["result"] = "WIN"
             else:
                 losses += 1
-            print(f"[CLOSE] {s['id']} {sym} {direction} {res} @ {px}")
+            print(f"[CLOSE] {s['id']} {sym} {direction} {s['result']} @ {px}")
     if changed:
         with open(Config.SIGNAL_LOG_FILE, "w") as f:
             _file_lock(f)
