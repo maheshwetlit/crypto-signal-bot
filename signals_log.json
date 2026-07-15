@@ -14452,5 +14452,37 @@
       7.0397
     ],
     "tag": "breakout_long"
+  },
+  {
+    "id": "SIG-0463",
+    "time": "2026-07-15T01:32:06.062458+00:00",
+    "pair": "BDX/USDT",
+    "exchange": "KuCoin",
+    "direction": "LONG",
+    "style": "CONFIRMED_BREAKOUT",
+    "score": 100.0,
+    "adx": 50.6,
+    "rsi": 71.2,
+    "rsi3": 65.6,
+    "volume_x": 0.7,
+    "htf_trend": "BEARISH",
+    "entry": 0.0899,
+    "sl": 0.08810199999999999,
+    "tp1": 0.09070909999999999,
+    "tp2": null,
+    "tp3": null,
+    "tp_main": 0.09070909999999999,
+    "capital": 1000.0,
+    "status": "OPEN",
+    "exit_price": null,
+    "pnl_usd": null,
+    "result": null,
+    "closed_at": null,
+    "exit_time": null,
+    "grind_count": 0,
+    "grind_entries": [
+      0.0899
+    ],
+    "tag": "breakout_long"
   }
 ]
