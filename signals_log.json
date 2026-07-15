@@ -17190,19 +17190,20 @@
     "tp3": null,
     "tp_main": 0.2780746,
     "capital": 1000.0,
-    "status": "OPEN",
-    "exit_price": null,
-    "pnl_usd": null,
-    "result": null,
-    "closed_at": null,
-    "exit_time": null,
+    "status": "WIN",
+    "exit_price": 0.2798,
+    "pnl_usd": 2.85,
+    "result": "WIN",
+    "closed_at": "2026-07-15T15:16:09.428877+00:00",
+    "exit_time": "2026-07-15T15:16:09.428877+00:00",
     "grind_count": 0,
     "grind_entries": [
       0.2806
     ],
     "tag": "breakout_short",
     "best_price": 0.2829,
-    "worst_price": 0.2798
+    "worst_price": 0.2798,
+    "pnl_pct": 0.29
   },
   {
     "id": "SIG-0545",
@@ -17583,7 +17584,7 @@
     ],
     "tag": "breakout_long",
     "best_price": 584.184,
-    "worst_price": 581.067
+    "worst_price": 580.253
   },
   {
     "id": "SIG-0556",
@@ -17652,7 +17653,7 @@
     ],
     "tag": "breakout_long",
     "best_price": 0.767,
-    "worst_price": 0.7586
+    "worst_price": 0.7573
   },
   {
     "id": "SIG-0558",
@@ -17755,7 +17756,7 @@
     ],
     "tag": "breakout_long",
     "best_price": 6.756,
-    "worst_price": 6.693
+    "worst_price": 6.689
   },
   {
     "id": "SIG-0561",
@@ -17823,7 +17824,7 @@
     ],
     "tag": "breakout_long",
     "best_price": 0.638,
-    "worst_price": 0.633
+    "worst_price": 0.6315
   },
   {
     "id": "SIG-0563",
@@ -17857,7 +17858,7 @@
     ],
     "tag": "breakout_long",
     "best_price": 0.767,
-    "worst_price": 0.7586
+    "worst_price": 0.7573
   },
   {
     "id": "SIG-0564",
@@ -17993,7 +17994,7 @@
     ],
     "tag": "breakout_long",
     "best_price": 0.1689,
-    "worst_price": 0.1662
+    "worst_price": 0.1658
   },
   {
     "id": "SIG-0568",
@@ -18060,7 +18061,7 @@
       0.037602
     ],
     "tag": "breakout_short",
-    "best_price": 0.037606,
+    "best_price": 0.038029,
     "worst_price": 0.037574
   },
   {
@@ -18094,7 +18095,7 @@
       0.037569
     ],
     "tag": "breakout_short",
-    "best_price": 0.037569,
+    "best_price": 0.038029,
     "worst_price": 0.037569
   }
 ]
