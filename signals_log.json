@@ -18062,5 +18062,39 @@
     "tag": "breakout_short",
     "best_price": 0.037606,
     "worst_price": 0.037574
+  },
+  {
+    "id": "SIG-0570",
+    "time": "2026-07-15T15:06:27.230081+00:00",
+    "pair": "ANTFUN/USDT",
+    "exchange": "KuCoin",
+    "direction": "SHORT",
+    "style": "CONFIRMED_BREAKOUT",
+    "score": 100.0,
+    "adx": 68.9,
+    "rsi": 48.3,
+    "rsi3": 39.7,
+    "volume_x": 1.18,
+    "htf_trend": "BULLISH",
+    "entry": 0.037569,
+    "sl": 0.03832038,
+    "tp1": 0.037230878999999995,
+    "tp2": null,
+    "tp3": null,
+    "tp_main": 0.037230878999999995,
+    "capital": 1000.0,
+    "status": "OPEN",
+    "exit_price": null,
+    "pnl_usd": null,
+    "result": null,
+    "closed_at": null,
+    "exit_time": null,
+    "grind_count": 0,
+    "grind_entries": [
+      0.037569
+    ],
+    "tag": "breakout_short",
+    "best_price": 0.037569,
+    "worst_price": 0.037569
   }
 ]
