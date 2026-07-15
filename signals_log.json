@@ -16137,17 +16137,18 @@
     "tp3": null,
     "tp_main": 1856.50967,
     "capital": 1000.0,
-    "status": "OPEN",
-    "exit_price": null,
-    "pnl_usd": null,
-    "result": null,
-    "closed_at": null,
-    "exit_time": null,
+    "status": "CLOSED",
+    "exit_price": 1884.54,
+    "pnl_usd": -5.96,
+    "result": "STALE",
+    "closed_at": "2026-07-15T10:05:55.606960+00:00",
+    "exit_time": "2026-07-15T10:05:55.606960+00:00",
     "grind_count": 0,
     "grind_entries": [
       1873.37
     ],
-    "tag": "breakout_short"
+    "tag": "breakout_short",
+    "pnl_pct": -0.6
   },
   {
     "id": "SIG-0514",
@@ -16169,17 +16170,18 @@
     "tp3": null,
     "tp_main": 0.16242489999999998,
     "capital": 1000.0,
-    "status": "OPEN",
-    "exit_price": null,
-    "pnl_usd": null,
-    "result": null,
-    "closed_at": null,
-    "exit_time": null,
+    "status": "CLOSED",
+    "exit_price": 0.1646,
+    "pnl_usd": -4.27,
+    "result": "STALE",
+    "closed_at": "2026-07-15T10:05:55.606960+00:00",
+    "exit_time": "2026-07-15T10:05:55.606960+00:00",
     "grind_count": 0,
     "grind_entries": [
       0.1639
     ],
-    "tag": "breakout_short"
+    "tag": "breakout_short",
+    "pnl_pct": -0.43
   },
   {
     "id": "SIG-0515",
@@ -16234,17 +16236,18 @@
     "tp3": null,
     "tp_main": 6.612943,
     "capital": 1000.0,
-    "status": "OPEN",
-    "exit_price": null,
-    "pnl_usd": null,
-    "result": null,
-    "closed_at": null,
-    "exit_time": null,
+    "status": "CLOSED",
+    "exit_price": 6.679,
+    "pnl_usd": -0.9,
+    "result": "STALE",
+    "closed_at": "2026-07-15T10:05:55.606960+00:00",
+    "exit_time": "2026-07-15T10:05:55.606960+00:00",
     "grind_count": 0,
     "grind_entries": [
       6.673
     ],
-    "tag": "breakout_short"
+    "tag": "breakout_short",
+    "pnl_pct": -0.09
   },
   {
     "id": "SIG-0517",
@@ -16600,5 +16603,37 @@
       0.07377
     ],
     "tag": "breakout_short"
+  },
+  {
+    "id": "SIG-0528",
+    "time": "2026-07-15T10:07:09.894027+00:00",
+    "pair": "AVAX/USDT",
+    "exchange": "KuCoin",
+    "direction": "LONG",
+    "style": "CONFIRMED_BREAKOUT",
+    "score": 78.1,
+    "adx": 18.1,
+    "rsi": 67.0,
+    "rsi3": 88.0,
+    "volume_x": 0.76,
+    "htf_trend": "NEUTRAL",
+    "entry": 6.682,
+    "sl": 6.548360000000001,
+    "tp1": 6.742138,
+    "tp2": null,
+    "tp3": null,
+    "tp_main": 6.742138,
+    "capital": 1000.0,
+    "status": "OPEN",
+    "exit_price": null,
+    "pnl_usd": null,
+    "result": null,
+    "closed_at": null,
+    "exit_time": null,
+    "grind_count": 0,
+    "grind_entries": [
+      6.682
+    ],
+    "tag": "breakout_long"
   }
 ]
