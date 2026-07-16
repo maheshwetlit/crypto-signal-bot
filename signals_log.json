@@ -24684,5 +24684,39 @@
     "tag": "breakout_short",
     "best_price": 0.1892,
     "worst_price": 0.1891
+  },
+  {
+    "id": "SIG-0759",
+    "time": "2026-07-16T19:41:51.382147+00:00",
+    "pair": "BLUAI/USDT",
+    "exchange": "KuCoin",
+    "direction": "SHORT",
+    "style": "CONFIRMED_BREAKOUT",
+    "score": 78.9,
+    "adx": 18.9,
+    "rsi": 31.5,
+    "rsi3": 7.9,
+    "volume_x": 2.26,
+    "htf_trend": "BEARISH",
+    "entry": 0.011678,
+    "sl": 0.01191156,
+    "tp1": 0.011572898,
+    "tp2": null,
+    "tp3": null,
+    "tp_main": 0.011572898,
+    "capital": 1000.0,
+    "status": "OPEN",
+    "exit_price": null,
+    "pnl_usd": null,
+    "result": null,
+    "closed_at": null,
+    "exit_time": null,
+    "grind_count": 0,
+    "grind_entries": [
+      0.011678
+    ],
+    "tag": "breakout_short",
+    "best_price": 0.011678,
+    "worst_price": 0.011678
   }
 ]
