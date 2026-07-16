@@ -19500,19 +19500,20 @@
     "tp3": null,
     "tp_main": 1.563798,
     "capital": 1000.0,
-    "status": "OPEN",
-    "exit_price": null,
-    "pnl_usd": null,
-    "result": null,
-    "closed_at": null,
-    "exit_time": null,
+    "status": "WIN",
+    "exit_price": 1.57,
+    "pnl_usd": 5.07,
+    "result": "WIN",
+    "closed_at": "2026-07-16T01:55:49.066851+00:00",
+    "exit_time": "2026-07-16T01:55:49.066851+00:00",
     "grind_count": 0,
     "grind_entries": [
       1.578
     ],
     "tag": "breakout_short",
     "best_price": 1.584,
-    "worst_price": 1.57
+    "worst_price": 1.57,
+    "pnl_pct": 0.51
   },
   {
     "id": "SIG-0611",
@@ -19990,7 +19991,7 @@
       0.7516
     ],
     "tag": "breakout_short",
-    "best_price": 0.7526,
+    "best_price": 0.7533,
     "worst_price": 0.7486
   },
   {
@@ -20024,7 +20025,7 @@
       0.1647
     ],
     "tag": "breakout_short",
-    "best_price": 0.1653,
+    "best_price": 0.1655,
     "worst_price": 0.1641
   },
   {
@@ -20264,7 +20265,7 @@
       66.34
     ],
     "tag": "breakout_short",
-    "best_price": 66.661,
+    "best_price": 66.744,
     "worst_price": 66.34
   },
   {
@@ -20335,5 +20336,39 @@
     "best_price": 0.001683,
     "worst_price": 0.001649,
     "pnl_pct": -2.0
+  },
+  {
+    "id": "SIG-0635",
+    "time": "2026-07-16T01:56:25.466845+00:00",
+    "pair": "TAO/USDT",
+    "exchange": "KuCoin",
+    "direction": "LONG",
+    "style": "CONFIRMED_BREAKOUT",
+    "score": 84.0,
+    "adx": 24.0,
+    "rsi": 67.4,
+    "rsi3": 99.4,
+    "volume_x": 7.83,
+    "htf_trend": "NEUTRAL",
+    "entry": 201.78,
+    "sl": 197.74439999999998,
+    "tp1": 203.59601999999998,
+    "tp2": null,
+    "tp3": null,
+    "tp_main": 203.59601999999998,
+    "capital": 1000.0,
+    "status": "OPEN",
+    "exit_price": null,
+    "pnl_usd": null,
+    "result": null,
+    "closed_at": null,
+    "exit_time": null,
+    "grind_count": 0,
+    "grind_entries": [
+      201.78
+    ],
+    "tag": "breakout_long",
+    "best_price": 201.78,
+    "worst_price": 201.78
   }
 ]
