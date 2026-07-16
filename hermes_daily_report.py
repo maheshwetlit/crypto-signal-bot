@@ -32,14 +32,33 @@ data = json.loads(resp.read())
 raw = base64.b64decode(data["content"]).decode()
 signals = json.loads(raw)
 
+def _classify(sig):
+    """Robust WIN/LOSS/OPEN classification (status OR result aware)."""
+    st = sig.get("status"); res = sig.get("result")
+    if st == "WIN" or res == "WIN":
+        return "WIN"
+    if st == "LOSS" or res in ("LOSS", "STALE", "EXPIRED"):
+        return "LOSS"
+    if st == "CLOSED":
+        pnl = sig.get("pnl_usd")
+        if pnl is not None:
+            return "WIN" if pnl > 0 else "LOSS"
+        return "LOSS"
+    if st == "OPEN":
+        return "OPEN"
+    if res == "WIN":
+        return "WIN"
+    return "OPEN"
+
+
 # --- Filter to yesterday ---
 yesterday = (datetime.now(timezone.utc) - timedelta(days=1)).strftime("%Y-%m-%d")
 filtered = [s for s in signals if yesterday in s.get("time", "")]
 
 total = len(filtered)
-wins = sum(1 for s in filtered if s.get("status") == "WIN")
-losses = sum(1 for s in filtered if s.get("status") == "LOSS")
-opens = sum(1 for s in filtered if s.get("status") == "OPEN")
+wins = sum(1 for s in filtered if _classify(s) == "WIN")
+losses = sum(1 for s in filtered if _classify(s) == "LOSS")
+opens = sum(1 for s in filtered if _classify(s) == "OPEN")
 closed = wins + losses
 wr = (wins / closed * 100) if closed > 0 else 0
 pnl = sum((s.get("pnl_usd") or 0) for s in filtered)
@@ -50,11 +69,12 @@ for s in filtered:
     t = s.get("pair", "?")
     tokens[t]["n"] += 1
     tokens[t]["pnl"] += s.get("pnl_usd") or 0
-    if s.get("status") == "WIN":
+    c = _classify(s)
+    if c == "WIN":
         tokens[t]["w"] += 1
-    elif s.get("status") == "LOSS":
+    elif c == "LOSS":
         tokens[t]["l"] += 1
-    elif s.get("status") == "OPEN":
+    elif c == "OPEN":
         tokens[t]["o"] += 1
 
 # --- Build Telegram message ---
