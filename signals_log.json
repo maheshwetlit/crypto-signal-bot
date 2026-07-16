@@ -24085,5 +24085,39 @@
     "tag": "breakout_short",
     "best_price": 0.38399,
     "worst_price": 0.38399
+  },
+  {
+    "id": "SIG-0742",
+    "time": "2026-07-16T16:02:08.587757+00:00",
+    "pair": "HYPE/USDT",
+    "exchange": "KuCoin",
+    "direction": "SHORT",
+    "style": "CONFIRMED_BREAKOUT",
+    "score": 82.4,
+    "adx": 22.4,
+    "rsi": 27.4,
+    "rsi3": 0.0,
+    "volume_x": 1.76,
+    "htf_trend": "BEARISH",
+    "entry": 65.089,
+    "sl": 66.39078,
+    "tp1": 64.503199,
+    "tp2": null,
+    "tp3": null,
+    "tp_main": 64.503199,
+    "capital": 1000.0,
+    "status": "OPEN",
+    "exit_price": null,
+    "pnl_usd": null,
+    "result": null,
+    "closed_at": null,
+    "exit_time": null,
+    "grind_count": 0,
+    "grind_entries": [
+      65.089
+    ],
+    "tag": "breakout_short",
+    "best_price": 65.089,
+    "worst_price": 65.089
   }
 ]
