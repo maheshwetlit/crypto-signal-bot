@@ -22233,7 +22233,7 @@
       195.76
     ],
     "tag": "breakout_short",
-    "best_price": 197.32,
+    "best_price": 197.56,
     "worst_price": 195.76
   },
   {
@@ -22596,18 +22596,19 @@
     "tp3": null,
     "tp_main": 550.41131,
     "capital": 1000.0,
-    "status": "OPEN",
-    "exit_price": null,
-    "pnl_usd": null,
-    "result": null,
-    "closed_at": null,
-    "exit_time": null,
+    "status": "WIN",
+    "exit_price": 550.41131,
+    "pnl_usd": 9.0,
+    "result": "WIN",
+    "closed_at": "2026-07-16T09:01:38.523779+00:00",
+    "exit_time": "2026-07-16T09:01:38.523779+00:00",
     "grind_count": 0,
     "grind_entries": [
       555.41
     ],
     "tag": "breakout_short",
     "best_price": 555.41,
-    "worst_price": 554.2
+    "worst_price": 549.834,
+    "pnl_pct": 0.9
   }
 ]
