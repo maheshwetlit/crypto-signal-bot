@@ -201,10 +201,34 @@ def load_last_snapshot():
     return None
 
 
+def _classify(sig):
+    """Robustly classify a signal as 'WIN' / 'LOSS' / 'OPEN' regardless of
+    whether the bot used status or result fields. Fixes the old bug where
+    STALE/CLOSED-loss signals (status='CLOSED', result='STALE') were excluded
+    from BOTH win and loss counts, inflating the reported win rate."""
+    st = sig.get("status")
+    res = sig.get("result")
+    if st == "WIN" or res == "WIN":
+        return "WIN"
+    if st == "LOSS" or res in ("LOSS", "STALE", "EXPIRED"):
+        return "LOSS"
+    if st == "CLOSED":
+        pnl = sig.get("pnl_usd")
+        if pnl is not None:
+            return "WIN" if pnl > 0 else "LOSS"
+        return "LOSS"
+    if st == "OPEN":
+        return "OPEN"
+    # fallback: trust result
+    if res == "WIN":
+        return "WIN"
+    return "OPEN"
+
+
 def build_report(signals, fetch_failures=0, skip_prices=False):
-    wins   = [s for s in signals if s.get("status") == "WIN"]
-    losses = [s for s in signals if s.get("status") == "LOSS"]
-    opens  = [s for s in signals if s.get("status") == "OPEN"]
+    wins   = [s for s in signals if _classify(s) == "WIN"]
+    losses = [s for s in signals if _classify(s) == "LOSS"]
+    opens  = [s for s in signals if _classify(s) == "OPEN"]
     closed = wins + losses
 
     total  = len(signals)
@@ -259,11 +283,12 @@ def build_report(signals, fetch_failures=0, skip_prices=False):
         key = (pair, direction)
         pair_dir_stats[key]["n"] += 1
         pair_dir_stats[key]["pnl"] += s.get("pnl_usd") or 0
-        if s.get("status") == "WIN":
+        c = _classify(s)
+        if c == "WIN":
             pair_dir_stats[key]["w"] += 1
-        elif s.get("status") == "LOSS":
+        elif c == "LOSS":
             pair_dir_stats[key]["l"] += 1
-        elif s.get("status") == "OPEN":
+        elif c == "OPEN":
             pair_dir_stats[key]["o"] += 1
 
     sorted_pd = sorted(pair_dir_stats.items(), key=lambda x: (-x[1]["n"], -x[1]["pnl"]))
@@ -390,7 +415,7 @@ def main():
     # Step 1: Fetch from GitHub
     print("[1/5] Fetching signals from GitHub...")
     signals = gh_fetch_signals()
-    open_count = len([s for s in signals if s.get("status") == "OPEN"])
+    open_count = len([s for s in signals if _classify(s) == "OPEN"])
     print(f"       {len(signals)} signals ({open_count} OPEN)")
     with open(SIGNAL_LOG_FILE, "w") as f:
         json.dump(signals, f, indent=2)
