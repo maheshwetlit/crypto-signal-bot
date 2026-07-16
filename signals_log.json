@@ -20060,19 +20060,20 @@
     "tp3": null,
     "tp_main": 0.6242309,
     "capital": 1000.0,
-    "status": "OPEN",
-    "exit_price": null,
-    "pnl_usd": null,
-    "result": null,
-    "closed_at": null,
-    "exit_time": null,
+    "status": "WIN",
+    "exit_price": 0.6288,
+    "pnl_usd": 1.75,
+    "result": "WIN",
+    "closed_at": "2026-07-16T03:31:34.556971+00:00",
+    "exit_time": "2026-07-16T03:31:34.556971+00:00",
     "grind_count": 0,
     "grind_entries": [
       0.6299
     ],
     "tag": "breakout_short",
-    "best_price": 0.631,
-    "worst_price": 0.6288
+    "best_price": 0.6317,
+    "worst_price": 0.6288,
+    "pnl_pct": 0.17
   },
   {
     "id": "SIG-0627",
@@ -20244,7 +20245,7 @@
       0.8418
     ],
     "tag": "breakout_short",
-    "best_price": 0.8486,
+    "best_price": 0.8494,
     "worst_price": 0.8418
   },
   {
@@ -20312,7 +20313,7 @@
       578.105
     ],
     "tag": "breakout_short",
-    "best_price": 580.461,
+    "best_price": 580.881,
     "worst_price": 578.105
   },
   {
@@ -20553,7 +20554,7 @@
       579.695
     ],
     "tag": "breakout_short",
-    "best_price": 580.461,
+    "best_price": 580.881,
     "worst_price": 579.695
   },
   {
@@ -20692,5 +20693,39 @@
     "best_price": 0.001653,
     "worst_price": 0.001636,
     "pnl_pct": 0.9
+  },
+  {
+    "id": "SIG-0645",
+    "time": "2026-07-16T03:32:08.495018+00:00",
+    "pair": "DOGE/USDT",
+    "exchange": "KuCoin",
+    "direction": "LONG",
+    "style": "CONFIRMED_BREAKOUT",
+    "score": 88.3,
+    "adx": 28.3,
+    "rsi": 58.6,
+    "rsi3": NaN,
+    "volume_x": 0.72,
+    "htf_trend": "BULLISH",
+    "entry": 0.07434,
+    "sl": 0.0728532,
+    "tp1": 0.07500906,
+    "tp2": null,
+    "tp3": null,
+    "tp_main": 0.07500906,
+    "capital": 1000.0,
+    "status": "OPEN",
+    "exit_price": null,
+    "pnl_usd": null,
+    "result": null,
+    "closed_at": null,
+    "exit_time": null,
+    "grind_count": 0,
+    "grind_entries": [
+      0.07434
+    ],
+    "tag": "breakout_long",
+    "best_price": 0.07434,
+    "worst_price": 0.07434
   }
 ]
