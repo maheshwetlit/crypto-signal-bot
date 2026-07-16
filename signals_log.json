@@ -23940,5 +23940,39 @@
     "best_price": 0.299,
     "worst_price": 0.295,
     "pnl_pct": 0.9
+  },
+  {
+    "id": "SIG-0738",
+    "time": "2026-07-16T15:17:20.445389+00:00",
+    "pair": "RAVE/USDT",
+    "exchange": "KuCoin",
+    "direction": "SHORT",
+    "style": "CONFIRMED_BREAKOUT",
+    "score": 88.0,
+    "adx": 28.0,
+    "rsi": 35.0,
+    "rsi3": 0.0,
+    "volume_x": 0.55,
+    "htf_trend": "BULLISH",
+    "entry": 0.295,
+    "sl": 0.3009,
+    "tp1": 0.29234499999999997,
+    "tp2": null,
+    "tp3": null,
+    "tp_main": 0.29234499999999997,
+    "capital": 1000.0,
+    "status": "OPEN",
+    "exit_price": null,
+    "pnl_usd": null,
+    "result": null,
+    "closed_at": null,
+    "exit_time": null,
+    "grind_count": 0,
+    "grind_entries": [
+      0.295
+    ],
+    "tag": "breakout_short",
+    "best_price": 0.295,
+    "worst_price": 0.295
   }
 ]
