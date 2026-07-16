@@ -20550,19 +20550,20 @@
     "tp3": null,
     "tp_main": 574.477745,
     "capital": 1000.0,
-    "status": "OPEN",
-    "exit_price": null,
-    "pnl_usd": null,
-    "result": null,
-    "closed_at": null,
-    "exit_time": null,
+    "status": "CLOSED",
+    "exit_price": 579.695,
+    "pnl_usd": 0.0,
+    "result": "STALE",
+    "closed_at": "2026-07-16T05:35:51.176559+00:00",
+    "exit_time": "2026-07-16T05:35:51.176559+00:00",
     "grind_count": 0,
     "grind_entries": [
       579.695
     ],
     "tag": "breakout_short",
-    "best_price": 581.417,
-    "worst_price": 579.695
+    "best_price": 584.029,
+    "worst_price": 579.695,
+    "pnl_pct": 0.0
   },
   {
     "id": "SIG-0641",
@@ -20836,7 +20837,7 @@
       6.706
     ],
     "tag": "breakout_short",
-    "best_price": 6.71,
+    "best_price": 6.713,
     "worst_price": 6.695
   },
   {
@@ -20939,7 +20940,7 @@
       6.704
     ],
     "tag": "breakout_short",
-    "best_price": 6.71,
+    "best_price": 6.713,
     "worst_price": 6.695
   },
   {
@@ -20973,7 +20974,7 @@
       2.768e-06
     ],
     "tag": "breakout_short",
-    "best_price": 2.776e-06,
+    "best_price": 2.783e-06,
     "worst_price": 2.768e-06
   },
   {
@@ -21041,7 +21042,7 @@
       2.77e-06
     ],
     "tag": "breakout_short",
-    "best_price": 2.776e-06,
+    "best_price": 2.783e-06,
     "worst_price": 2.77e-06
   },
   {
@@ -21145,7 +21146,7 @@
     ],
     "tag": "breakout_long",
     "best_price": 0.1896,
-    "worst_price": 0.1896
+    "worst_price": 0.1882
   },
   {
     "id": "SIG-0658",
@@ -21179,7 +21180,7 @@
     ],
     "tag": "breakout_long",
     "best_price": 64928.4,
-    "worst_price": 64928.4
+    "worst_price": 64883.3
   },
   {
     "id": "SIG-0659",
@@ -21213,7 +21214,7 @@
     ],
     "tag": "breakout_long",
     "best_price": 77.28,
-    "worst_price": 77.28
+    "worst_price": 77.2
   },
   {
     "id": "SIG-0660",
@@ -21247,6 +21248,6 @@
     ],
     "tag": "breakout_short",
     "best_price": 0.001624,
-    "worst_price": 0.001624
+    "worst_price": 0.00162
   }
 ]
