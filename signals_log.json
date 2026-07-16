@@ -20130,19 +20130,20 @@
     "tp3": null,
     "tp_main": 1.563798,
     "capital": 1000.0,
-    "status": "OPEN",
-    "exit_price": null,
-    "pnl_usd": null,
-    "result": null,
-    "closed_at": null,
-    "exit_time": null,
+    "status": "WIN",
+    "exit_price": 1.568,
+    "pnl_usd": 6.34,
+    "result": "WIN",
+    "closed_at": "2026-07-16T03:35:46.669063+00:00",
+    "exit_time": "2026-07-16T03:35:46.669063+00:00",
     "grind_count": 0,
     "grind_entries": [
       1.578
     ],
     "tag": "breakout_short",
     "best_price": 1.587,
-    "worst_price": 1.568
+    "worst_price": 1.568,
+    "pnl_pct": 0.63
   },
   {
     "id": "SIG-0629",
@@ -20245,7 +20246,7 @@
       0.8418
     ],
     "tag": "breakout_short",
-    "best_price": 0.8494,
+    "best_price": 0.8496,
     "worst_price": 0.8418
   },
   {
@@ -20726,6 +20727,40 @@
     ],
     "tag": "breakout_long",
     "best_price": 0.07434,
-    "worst_price": 0.07434
+    "worst_price": 0.07433
+  },
+  {
+    "id": "SIG-0646",
+    "time": "2026-07-16T03:36:45.753877+00:00",
+    "pair": "RAVE/USDT",
+    "exchange": "KuCoin",
+    "direction": "LONG",
+    "style": "CONFIRMED_BREAKOUT",
+    "score": 85.1,
+    "adx": 25.1,
+    "rsi": 64.7,
+    "rsi3": NaN,
+    "volume_x": 1.47,
+    "htf_trend": "BULLISH",
+    "entry": 0.295,
+    "sl": 0.28909999999999997,
+    "tp1": 0.29765499999999995,
+    "tp2": null,
+    "tp3": null,
+    "tp_main": 0.29765499999999995,
+    "capital": 1000.0,
+    "status": "OPEN",
+    "exit_price": null,
+    "pnl_usd": null,
+    "result": null,
+    "closed_at": null,
+    "exit_time": null,
+    "grind_count": 0,
+    "grind_entries": [
+      0.295
+    ],
+    "tag": "breakout_long",
+    "best_price": 0.295,
+    "worst_price": 0.295
   }
 ]
