@@ -24027,7 +24027,7 @@
     ],
     "tag": "breakout_long",
     "best_price": 6.653,
-    "worst_price": 6.556
+    "worst_price": 6.528
   },
   {
     "id": "SIG-0740",
@@ -24096,7 +24096,7 @@
     ],
     "tag": "breakout_short",
     "best_price": 0.38705,
-    "worst_price": 0.38257
+    "worst_price": 0.38115
   },
   {
     "id": "SIG-0742",
@@ -24188,19 +24188,20 @@
     "tp3": null,
     "tp_main": 1.554879,
     "capital": 1000.0,
-    "status": "OPEN",
-    "exit_price": null,
-    "pnl_usd": null,
-    "result": null,
-    "closed_at": null,
-    "exit_time": null,
+    "status": "WIN",
+    "exit_price": 1.554879,
+    "pnl_usd": 9.0,
+    "result": "WIN",
+    "closed_at": "2026-07-16T17:55:49.752742+00:00",
+    "exit_time": "2026-07-16T17:55:49.752742+00:00",
     "grind_count": 0,
     "grind_entries": [
       1.569
     ],
     "tag": "breakout_short",
     "best_price": 1.57,
-    "worst_price": 1.562
+    "worst_price": 1.553,
+    "pnl_pct": 0.9
   },
   {
     "id": "SIG-0745",
@@ -24374,7 +24375,7 @@
     ],
     "tag": "breakout_short",
     "best_price": 1.565,
-    "worst_price": 1.562
+    "worst_price": 1.553
   },
   {
     "id": "SIG-0750",
@@ -24408,7 +24409,7 @@
     ],
     "tag": "breakout_short",
     "best_price": 8.3982,
-    "worst_price": 8.3982
+    "worst_price": 8.3605
   },
   {
     "id": "SIG-0751",
@@ -24442,7 +24443,7 @@
     ],
     "tag": "breakout_short",
     "best_price": 0.04786,
-    "worst_price": 0.04786
+    "worst_price": 0.04752
   },
   {
     "id": "SIG-0752",
@@ -24476,7 +24477,7 @@
     ],
     "tag": "breakout_long",
     "best_price": 0.7497,
-    "worst_price": 0.7497
+    "worst_price": 0.7471
   },
   {
     "id": "SIG-0753",
@@ -24510,6 +24511,40 @@
     ],
     "tag": "breakout_short",
     "best_price": 6.552,
-    "worst_price": 6.552
+    "worst_price": 6.528
+  },
+  {
+    "id": "SIG-0754",
+    "time": "2026-07-16T17:56:32.166611+00:00",
+    "pair": "DOGE/USDT",
+    "exchange": "KuCoin",
+    "direction": "SHORT",
+    "style": "CONFIRMED_BREAKOUT",
+    "score": 79.6,
+    "adx": 19.6,
+    "rsi": 36.8,
+    "rsi3": 3.4,
+    "volume_x": 0.75,
+    "htf_trend": "NEUTRAL",
+    "entry": 0.07305,
+    "sl": 0.07451100000000001,
+    "tp1": 0.07239255,
+    "tp2": null,
+    "tp3": null,
+    "tp_main": 0.07239255,
+    "capital": 1000.0,
+    "status": "OPEN",
+    "exit_price": null,
+    "pnl_usd": null,
+    "result": null,
+    "closed_at": null,
+    "exit_time": null,
+    "grind_count": 0,
+    "grind_entries": [
+      0.07305
+    ],
+    "tag": "breakout_short",
+    "best_price": 0.07305,
+    "worst_price": 0.07305
   }
 ]
