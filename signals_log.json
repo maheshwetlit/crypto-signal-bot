@@ -21180,19 +21180,20 @@
     "tp3": null,
     "tp_main": 65512.7556,
     "capital": 1000.0,
-    "status": "OPEN",
-    "exit_price": null,
-    "pnl_usd": null,
-    "result": null,
-    "closed_at": null,
-    "exit_time": null,
+    "status": "CLOSED",
+    "exit_price": 64928.4,
+    "pnl_usd": 0.0,
+    "result": "STALE",
+    "closed_at": "2026-07-16T08:35:50.089999+00:00",
+    "exit_time": "2026-07-16T08:35:50.089999+00:00",
     "grind_count": 0,
     "grind_entries": [
       64928.4
     ],
     "tag": "breakout_long",
     "best_price": 64928.4,
-    "worst_price": 63911.6
+    "worst_price": 63911.6,
+    "pnl_pct": 0.0
   },
   {
     "id": "SIG-0659",
@@ -21214,19 +21215,20 @@
     "tp3": null,
     "tp_main": 77.97551999999999,
     "capital": 1000.0,
-    "status": "OPEN",
-    "exit_price": null,
-    "pnl_usd": null,
-    "result": null,
-    "closed_at": null,
-    "exit_time": null,
+    "status": "WIN",
+    "exit_price": 77.5,
+    "pnl_usd": 2.85,
+    "result": "WIN",
+    "closed_at": "2026-07-16T08:35:50.089999+00:00",
+    "exit_time": "2026-07-16T08:35:50.089999+00:00",
     "grind_count": 0,
     "grind_entries": [
       77.28
     ],
     "tag": "breakout_long",
     "best_price": 77.5,
-    "worst_price": 75.77
+    "worst_price": 75.77,
+    "pnl_pct": 0.28
   },
   {
     "id": "SIG-0660",
@@ -21431,7 +21433,7 @@
       0.188
     ],
     "tag": "breakout_short",
-    "best_price": 0.1895,
+    "best_price": 0.1897,
     "worst_price": 0.1866
   },
   {
@@ -22126,7 +22128,7 @@
       1.557
     ],
     "tag": "breakout_short",
-    "best_price": 1.561,
+    "best_price": 1.569,
     "worst_price": 1.556
   },
   {
@@ -22160,7 +22162,7 @@
       0.6258
     ],
     "tag": "breakout_short",
-    "best_price": 0.6259,
+    "best_price": 0.6282,
     "worst_price": 0.6243
   },
   {
@@ -22194,7 +22196,7 @@
       1881.03
     ],
     "tag": "breakout_short",
-    "best_price": 1881.03,
+    "best_price": 1894.66,
     "worst_price": 1880.0
   },
   {
@@ -22228,7 +22230,7 @@
       195.76
     ],
     "tag": "breakout_short",
-    "best_price": 196.28,
+    "best_price": 197.32,
     "worst_price": 195.76
   },
   {
@@ -22262,7 +22264,7 @@
       8.4095
     ],
     "tag": "breakout_short",
-    "best_price": 8.4156,
+    "best_price": 8.4613,
     "worst_price": 8.4095
   },
   {
@@ -22296,7 +22298,7 @@
       574.501
     ],
     "tag": "breakout_short",
-    "best_price": 575.186,
+    "best_price": 577.5,
     "worst_price": 574.501
   },
   {
@@ -22330,7 +22332,7 @@
       0.7351
     ],
     "tag": "breakout_short",
-    "best_price": 0.7352,
+    "best_price": 0.7404,
     "worst_price": 0.7351
   },
   {
@@ -22364,7 +22366,7 @@
       0.04747
     ],
     "tag": "breakout_short",
-    "best_price": 0.0476,
+    "best_price": 0.04794,
     "worst_price": 0.04747
   },
   {
@@ -22398,7 +22400,7 @@
       6.551
     ],
     "tag": "breakout_short",
-    "best_price": 6.561,
+    "best_price": 6.604,
     "worst_price": 6.551
   },
   {
@@ -22432,7 +22434,7 @@
       0.1613
     ],
     "tag": "breakout_short",
-    "best_price": 0.1614,
+    "best_price": 0.1624,
     "worst_price": 0.1613
   },
   {
@@ -22466,7 +22468,7 @@
       1.548
     ],
     "tag": "breakout_short",
-    "best_price": 1.553,
+    "best_price": 1.56,
     "worst_price": 1.548
   },
   {
@@ -22500,7 +22502,41 @@
       0.6242
     ],
     "tag": "breakout_short",
-    "best_price": 0.6259,
+    "best_price": 0.6282,
     "worst_price": 0.6242
+  },
+  {
+    "id": "SIG-0697",
+    "time": "2026-07-16T08:36:45.779015+00:00",
+    "pair": "SNX/USDT",
+    "exchange": "KuCoin",
+    "direction": "SHORT",
+    "style": "CONFIRMED_BREAKOUT",
+    "score": 100.0,
+    "adx": 45.3,
+    "rsi": 34.0,
+    "rsi3": 40.0,
+    "volume_x": 0.74,
+    "htf_trend": "NEUTRAL",
+    "entry": 0.2268,
+    "sl": 0.231336,
+    "tp1": 0.2247588,
+    "tp2": null,
+    "tp3": null,
+    "tp_main": 0.2247588,
+    "capital": 1000.0,
+    "status": "OPEN",
+    "exit_price": null,
+    "pnl_usd": null,
+    "result": null,
+    "closed_at": null,
+    "exit_time": null,
+    "grind_count": 0,
+    "grind_entries": [
+      0.2268
+    ],
+    "tag": "breakout_short",
+    "best_price": 0.2268,
+    "worst_price": 0.2268
   }
 ]
