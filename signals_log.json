@@ -23560,19 +23560,20 @@
     "tp3": null,
     "tp_main": 1.1197579299999998,
     "capital": 1000.0,
-    "status": "OPEN",
-    "exit_price": null,
-    "pnl_usd": null,
-    "result": null,
-    "closed_at": null,
-    "exit_time": null,
+    "status": "WIN",
+    "exit_price": 1.11557,
+    "pnl_usd": 5.23,
+    "result": "WIN",
+    "closed_at": "2026-07-16T16:35:49.960020+00:00",
+    "exit_time": "2026-07-16T16:35:49.960020+00:00",
     "grind_count": 0,
     "grind_entries": [
       1.10977
     ],
     "tag": "breakout_long",
     "best_price": 1.11557,
-    "worst_price": 1.10849
+    "worst_price": 1.10849,
+    "pnl_pct": 0.52
   },
   {
     "id": "SIG-0727",
@@ -23594,19 +23595,20 @@
     "tp3": null,
     "tp_main": 0.7549337999999999,
     "capital": 1000.0,
-    "status": "OPEN",
-    "exit_price": null,
-    "pnl_usd": null,
-    "result": null,
-    "closed_at": null,
-    "exit_time": null,
+    "status": "WIN",
+    "exit_price": 0.7525,
+    "pnl_usd": 5.75,
+    "result": "WIN",
+    "closed_at": "2026-07-16T16:35:49.960020+00:00",
+    "exit_time": "2026-07-16T16:35:49.960020+00:00",
     "grind_count": 0,
     "grind_entries": [
       0.7482
     ],
     "tag": "breakout_long",
     "best_price": 0.7525,
-    "worst_price": 0.7471
+    "worst_price": 0.7471,
+    "pnl_pct": 0.57
   },
   {
     "id": "SIG-0728",
@@ -23628,19 +23630,20 @@
     "tp3": null,
     "tp_main": 6.6704989999999995,
     "capital": 1000.0,
-    "status": "OPEN",
-    "exit_price": null,
-    "pnl_usd": null,
-    "result": null,
-    "closed_at": null,
-    "exit_time": null,
+    "status": "WIN",
+    "exit_price": 6.649,
+    "pnl_usd": 5.75,
+    "result": "WIN",
+    "closed_at": "2026-07-16T16:35:49.960020+00:00",
+    "exit_time": "2026-07-16T16:35:49.960020+00:00",
     "grind_count": 0,
     "grind_entries": [
       6.611
     ],
     "tag": "breakout_long",
     "best_price": 6.649,
-    "worst_price": 6.606
+    "worst_price": 6.606,
+    "pnl_pct": 0.57
   },
   {
     "id": "SIG-0729",
@@ -24121,6 +24124,6 @@
     ],
     "tag": "breakout_short",
     "best_price": 65.089,
-    "worst_price": 64.685
+    "worst_price": 64.633
   }
 ]
