@@ -278,14 +278,16 @@ def build_report(stats, prev_stats, severity, adjustments, config_history):
             f"Net P&L:   {'📈' if pnl_d > 0 else '📉'} ${pnl_d:+,.0f}{nl}{nl}"
         )
 
-    # Auto-adjustments
+    # Auto-adjustments (NOTE: these are SUGGESTIONS ONLY — the monitor never
+    # writes them back to crypto_signal_bot.py. The bot keeps its own config.)
     if adjustments:
         m += (
-            f"<b>🔧 Auto-Adjustments ({severity})</b>{nl}"
+            f"<b>🔧 Suggested Parameter Tuning ({severity})</b>{nl}"
             f"━━━━━━━━━━━━━━━━━━━━{nl}"
+            f"<i>⚠️ Suggestions only — NOT auto-applied to the bot.</i>{nl}{nl}"
         )
         for adj in adjustments:
-            m += f"• {adj['param']}: {adj['current']} → {adj['suggested']:.1f}{nl}"
+            m += f"• {adj['param']}: suggested {adj['suggested']:.1f} (current {adj['current']}){nl}"
             m += f"  Reason: {adj['reason']}{nl}"
     else:
         m += (
