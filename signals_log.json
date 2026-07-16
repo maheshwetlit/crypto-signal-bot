@@ -24719,5 +24719,39 @@
     "best_price": 0.011678,
     "worst_price": 0.011501,
     "pnl_pct": 0.9
+  },
+  {
+    "id": "SIG-0760",
+    "time": "2026-07-16T19:52:06.446219+00:00",
+    "pair": "GRAM/USDT",
+    "exchange": "KuCoin",
+    "direction": "SHORT",
+    "style": "CONFIRMED_BREAKOUT",
+    "score": 93.6,
+    "adx": 33.6,
+    "rsi": 30.4,
+    "rsi3": 0.0,
+    "volume_x": 2.3,
+    "htf_trend": "BEARISH",
+    "entry": 1.528,
+    "sl": 1.55856,
+    "tp1": 1.514248,
+    "tp2": null,
+    "tp3": null,
+    "tp_main": 1.514248,
+    "capital": 1000.0,
+    "status": "OPEN",
+    "exit_price": null,
+    "pnl_usd": null,
+    "result": null,
+    "closed_at": null,
+    "exit_time": null,
+    "grind_count": 0,
+    "grind_entries": [
+      1.528
+    ],
+    "tag": "breakout_short",
+    "best_price": 1.528,
+    "worst_price": 1.528
   }
 ]
