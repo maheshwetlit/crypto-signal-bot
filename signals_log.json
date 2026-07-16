@@ -24823,5 +24823,39 @@
     "tag": "breakout_short",
     "best_price": 62.401,
     "worst_price": 62.401
+  },
+  {
+    "id": "SIG-0763",
+    "time": "2026-07-16T20:46:31.688191+00:00",
+    "pair": "LTC/USDT",
+    "exchange": "KuCoin",
+    "direction": "SHORT",
+    "style": "CONFIRMED_BREAKOUT",
+    "score": 76.8,
+    "adx": 16.8,
+    "rsi": 34.8,
+    "rsi3": 0.0,
+    "volume_x": 3.98,
+    "htf_trend": "BULLISH",
+    "entry": 45.12,
+    "sl": 46.0224,
+    "tp1": 44.713919999999995,
+    "tp2": null,
+    "tp3": null,
+    "tp_main": 44.713919999999995,
+    "capital": 1000.0,
+    "status": "OPEN",
+    "exit_price": null,
+    "pnl_usd": null,
+    "result": null,
+    "closed_at": null,
+    "exit_time": null,
+    "grind_count": 0,
+    "grind_entries": [
+      45.12
+    ],
+    "tag": "breakout_short",
+    "best_price": 45.12,
+    "worst_price": 45.12
   }
 ]
