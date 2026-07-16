@@ -24400,19 +24400,20 @@
     "tp3": null,
     "tp_main": 8.322616199999999,
     "capital": 1000.0,
-    "status": "OPEN",
-    "exit_price": null,
-    "pnl_usd": null,
-    "result": null,
-    "closed_at": null,
-    "exit_time": null,
+    "status": "WIN",
+    "exit_price": 8.3605,
+    "pnl_usd": 4.49,
+    "result": "WIN",
+    "closed_at": "2026-07-16T20:51:09.675792+00:00",
+    "exit_time": "2026-07-16T20:51:09.675792+00:00",
     "grind_count": 0,
     "grind_entries": [
       8.3982
     ],
     "tag": "breakout_short",
     "best_price": 8.4229,
-    "worst_price": 8.3605
+    "worst_price": 8.3605,
+    "pnl_pct": 0.45
   },
   {
     "id": "SIG-0751",
@@ -24434,19 +24435,20 @@
     "tp3": null,
     "tp_main": 0.04742926,
     "capital": 1000.0,
-    "status": "OPEN",
-    "exit_price": null,
-    "pnl_usd": null,
-    "result": null,
-    "closed_at": null,
-    "exit_time": null,
+    "status": "WIN",
+    "exit_price": 0.04749,
+    "pnl_usd": 7.73,
+    "result": "WIN",
+    "closed_at": "2026-07-16T20:51:09.675792+00:00",
+    "exit_time": "2026-07-16T20:51:09.675792+00:00",
     "grind_count": 0,
     "grind_entries": [
       0.04786
     ],
     "tag": "breakout_short",
     "best_price": 0.04786,
-    "worst_price": 0.04749
+    "worst_price": 0.04749,
+    "pnl_pct": 0.77
   },
   {
     "id": "SIG-0752",
@@ -24513,7 +24515,7 @@
       6.552
     ],
     "tag": "breakout_short",
-    "best_price": 6.594,
+    "best_price": 6.601,
     "worst_price": 6.528
   },
   {
@@ -24684,7 +24686,7 @@
       0.1891
     ],
     "tag": "breakout_short",
-    "best_price": 0.1901,
+    "best_price": 0.1908,
     "worst_price": 0.1891
   },
   {
@@ -24753,7 +24755,7 @@
       1.528
     ],
     "tag": "breakout_short",
-    "best_price": 1.532,
+    "best_price": 1.536,
     "worst_price": 1.528
   },
   {
@@ -24788,7 +24790,7 @@
     ],
     "tag": "breakout_short",
     "best_price": 0.37359,
-    "worst_price": 0.37359
+    "worst_price": 0.37131
   },
   {
     "id": "SIG-0762",
@@ -24821,7 +24823,7 @@
       62.401
     ],
     "tag": "breakout_short",
-    "best_price": 62.401,
+    "best_price": 62.772,
     "worst_price": 62.401
   },
   {
@@ -24855,7 +24857,41 @@
       45.12
     ],
     "tag": "breakout_short",
-    "best_price": 45.12,
+    "best_price": 45.14,
     "worst_price": 45.12
+  },
+  {
+    "id": "SIG-0764",
+    "time": "2026-07-16T20:51:59.515971+00:00",
+    "pair": "TRUMP/USDT",
+    "exchange": "KuCoin",
+    "direction": "SHORT",
+    "style": "CONFIRMED_BREAKOUT",
+    "score": 87.3,
+    "adx": 27.3,
+    "rsi": 41.2,
+    "rsi3": 20.0,
+    "volume_x": 1.43,
+    "htf_trend": "BEARISH",
+    "entry": 1.558,
+    "sl": 1.5891600000000001,
+    "tp1": 1.543978,
+    "tp2": null,
+    "tp3": null,
+    "tp_main": 1.543978,
+    "capital": 1000.0,
+    "status": "OPEN",
+    "exit_price": null,
+    "pnl_usd": null,
+    "result": null,
+    "closed_at": null,
+    "exit_time": null,
+    "grind_count": 0,
+    "grind_entries": [
+      1.558
+    ],
+    "tag": "breakout_short",
+    "best_price": 1.558,
+    "worst_price": 1.558
   }
 ]
