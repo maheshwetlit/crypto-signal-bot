@@ -12,8 +12,8 @@ jobs:
   daily-report:
     runs-on: ubuntu-latest
     env:
-      HERMESBOT: ${{ secrets.HERMESCRYPTOTRADINGBOT }}
-      HERMES_BOT_TOKEN: ${{ secrets.HERMESCRYPTOTRADINGBOT }}
+      HERMESBOT: ${{ secrets.GITHUB_TOKEN }}
+      HERMES_BOT_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       TELEGRAM_BOT_TOKEN: ${{ secrets.HERMESCRYPTOTRADINGBOT }}
       HERMES_CHAT_ID: ${{ secrets.HERMES_TELEGRAM_CHAT_ID }}
       TELEGRAM_CHAT_ID: ${{ secrets.HERMES_TELEGRAM_CHAT_ID }}
