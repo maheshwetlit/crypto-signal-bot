@@ -228,7 +228,7 @@ def validate_signals():
             sig_entry_for_be = sig_entry
             if tp1_price_for_be and sig_entry_for_be:
                 dist_to_tp1 = abs(tp1_price_for_be - sig_entry_for_be)
-                if direction_b == "LONG":
+                if direction == "LONG":
                     breakeven_price = sig_entry_for_be + breakeven_pct * dist_to_tp1
                     fetched_close = current_price
                     if fetched_close >= breakeven_price and sig_sl < sig_entry_for_be:
@@ -236,7 +236,7 @@ def validate_signals():
                         sig["status"] = "TRAILING"
                         sig["result"] = "BE_MOVED"
                         updated = True
-                        print(f"   [HYBRID-BE] {symbol} {direction_b}: SL -> entry {sig_entry_for_be}")
+                        print(f"   [HYBRID-BE] {symbol} {direction}: SL -> entry {sig_entry_for_be}")
                 else:
                     breakeven_price = sig_entry_for_be - breakeven_pct * dist_to_tp1
                     fetched_close = current_price
