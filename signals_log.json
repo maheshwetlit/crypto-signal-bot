@@ -30523,19 +30523,20 @@
     "tp3": null,
     "tp_main": 45.45544999999999,
     "capital": 1000.0,
-    "status": "OPEN",
-    "exit_price": null,
-    "pnl_usd": null,
-    "result": null,
-    "closed_at": null,
-    "exit_time": null,
+    "status": "WIN",
+    "exit_price": 45.08,
+    "pnl_usd": 0.67,
+    "result": "WIN",
+    "closed_at": "2026-07-17T20:33:19.511270+00:00",
+    "exit_time": "2026-07-17T20:33:19.511270+00:00",
     "grind_count": 0,
     "grind_entries": [
       45.05
     ],
     "tag": "breakout_long",
     "best_price": 45.08,
-    "worst_price": 44.87
+    "worst_price": 44.87,
+    "pnl_pct": 0.07
   },
   {
     "id": "SIG-0926",
@@ -30557,19 +30558,20 @@
     "tp3": null,
     "tp_main": 6.672517,
     "capital": 1000.0,
-    "status": "OPEN",
-    "exit_price": null,
-    "pnl_usd": null,
-    "result": null,
-    "closed_at": null,
-    "exit_time": null,
+    "status": "WIN",
+    "exit_price": 6.625,
+    "pnl_usd": 1.81,
+    "result": "WIN",
+    "closed_at": "2026-07-17T20:33:19.511270+00:00",
+    "exit_time": "2026-07-17T20:33:19.511270+00:00",
     "grind_count": 0,
     "grind_entries": [
       6.613
     ],
     "tag": "breakout_long",
     "best_price": 6.625,
-    "worst_price": 6.562
+    "worst_price": 6.559,
+    "pnl_pct": 0.18
   },
   {
     "id": "SIG-0927",
@@ -30602,7 +30604,7 @@
       0.6196
     ],
     "tag": "breakout_short",
-    "best_price": 0.6205,
+    "best_price": 0.6208,
     "worst_price": 0.6184
   },
   {
@@ -30637,7 +30639,7 @@
     ],
     "tag": "breakout_long",
     "best_price": 6.625,
-    "worst_price": 6.562
+    "worst_price": 6.559
   },
   {
     "id": "SIG-0929",
@@ -30809,7 +30811,7 @@
       0.01596
     ],
     "tag": "breakout_short",
-    "best_price": 0.01601,
+    "best_price": 0.01602,
     "worst_price": 0.01596
   },
   {
@@ -30843,7 +30845,7 @@
       0.04684
     ],
     "tag": "breakout_short",
-    "best_price": 0.04704,
+    "best_price": 0.04709,
     "worst_price": 0.04684
   },
   {
@@ -30878,7 +30880,7 @@
     ],
     "tag": "breakout_long",
     "best_price": 8.2373,
-    "worst_price": 8.2237
+    "worst_price": 8.2234
   },
   {
     "id": "SIG-0936",
@@ -30912,7 +30914,7 @@
     ],
     "tag": "breakout_long",
     "best_price": 8.2485,
-    "worst_price": 8.2237
+    "worst_price": 8.2234
   },
   {
     "id": "SIG-0937",
@@ -30996,11 +30998,45 @@
     "volume_x": 1.07,
     "htf_trend": "BULLISH",
     "entry": 329.9,
-    "sl": 323.30199999999996,
+    "sl": 329.9,
     "tp1": 332.86909999999995,
     "tp2": null,
     "tp3": null,
     "tp_main": 332.86909999999995,
+    "capital": 1000.0,
+    "status": "TRAILING",
+    "exit_price": null,
+    "pnl_usd": null,
+    "result": "BE_MOVED",
+    "closed_at": null,
+    "exit_time": null,
+    "grind_count": 0,
+    "grind_entries": [
+      329.9
+    ],
+    "tag": "breakout_long",
+    "best_price": 331.87,
+    "worst_price": 329.9
+  },
+  {
+    "id": "SIG-0940",
+    "time": "2026-07-17T20:33:31.797471+00:00",
+    "pair": "XMR/USDT",
+    "exchange": "KuCoin",
+    "direction": "LONG",
+    "style": "CONFIRMED_BREAKOUT",
+    "score": 84.3,
+    "adx": 24.3,
+    "rsi": 71.3,
+    "rsi3": NaN,
+    "volume_x": 1.1,
+    "htf_trend": "BULLISH",
+    "entry": 332.4,
+    "sl": 325.75199999999995,
+    "tp1": 335.3915999999999,
+    "tp2": null,
+    "tp3": null,
+    "tp_main": 335.3915999999999,
     "capital": 1000.0,
     "status": "OPEN",
     "exit_price": null,
@@ -31010,10 +31046,10 @@
     "exit_time": null,
     "grind_count": 0,
     "grind_entries": [
-      329.9
+      332.4
     ],
     "tag": "breakout_long",
-    "best_price": 329.9,
-    "worst_price": 329.9
+    "best_price": 332.4,
+    "worst_price": 332.4
   }
 ]
