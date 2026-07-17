@@ -26825,7 +26825,7 @@
     ],
     "tag": "breakout_long",
     "best_price": 1.558,
-    "worst_price": 1.538
+    "worst_price": 1.532
   },
   {
     "id": "SIG-0820",
@@ -27021,19 +27021,20 @@
     "tp3": null,
     "tp_main": 58.673146,
     "capital": 1000.0,
-    "status": "OPEN",
-    "exit_price": null,
-    "pnl_usd": null,
-    "result": null,
-    "closed_at": null,
-    "exit_time": null,
+    "status": "WIN",
+    "exit_price": 58.673146,
+    "pnl_usd": 9.0,
+    "result": "WIN",
+    "closed_at": "2026-07-17T07:35:51.605924+00:00",
+    "exit_time": "2026-07-17T07:35:51.605924+00:00",
     "grind_count": 0,
     "grind_entries": [
       59.206
     ],
     "tag": "breakout_short",
     "best_price": 59.606,
-    "worst_price": 58.856
+    "worst_price": 58.591,
+    "pnl_pct": 0.9
   },
   {
     "id": "SIG-0826",
@@ -27159,19 +27160,20 @@
     "tp3": null,
     "tp_main": 2.717322e-06,
     "capital": 1000.0,
-    "status": "OPEN",
-    "exit_price": null,
-    "pnl_usd": null,
-    "result": null,
-    "closed_at": null,
-    "exit_time": null,
+    "status": "WIN",
+    "exit_price": 2.717322e-06,
+    "pnl_usd": 9.0,
+    "result": "WIN",
+    "closed_at": "2026-07-17T07:35:51.605924+00:00",
+    "exit_time": "2026-07-17T07:35:51.605924+00:00",
     "grind_count": 0,
     "grind_entries": [
       2.742e-06
     ],
     "tag": "breakout_short",
     "best_price": 2.748e-06,
-    "worst_price": 2.72e-06
+    "worst_price": 2.705e-06,
+    "pnl_pct": 0.9
   },
   {
     "id": "SIG-0830",
@@ -27409,7 +27411,7 @@
     ],
     "tag": "breakout_short",
     "best_price": 45.18,
-    "worst_price": 44.79
+    "worst_price": 44.77
   },
   {
     "id": "SIG-0837",
@@ -27511,7 +27513,7 @@
     ],
     "tag": "breakout_short",
     "best_price": 1.548,
-    "worst_price": 1.537
+    "worst_price": 1.532
   },
   {
     "id": "SIG-0840",
@@ -27545,7 +27547,7 @@
     ],
     "tag": "breakout_short",
     "best_price": 2.749e-06,
-    "worst_price": 2.721e-06
+    "worst_price": 2.705e-06
   },
   {
     "id": "SIG-0841",
@@ -27817,7 +27819,7 @@
     ],
     "tag": "breakout_long",
     "best_price": 6.501,
-    "worst_price": 6.473
+    "worst_price": 6.471
   },
   {
     "id": "SIG-0849",
@@ -27885,7 +27887,7 @@
     ],
     "tag": "breakout_short",
     "best_price": 0.7338,
-    "worst_price": 0.733
+    "worst_price": 0.7327
   },
   {
     "id": "SIG-0851",
@@ -27920,5 +27922,39 @@
     "tag": "breakout_short",
     "best_price": 4.114e-06,
     "worst_price": 4.114e-06
+  },
+  {
+    "id": "SIG-0852",
+    "time": "2026-07-17T07:36:35.847437+00:00",
+    "pair": "AVAX/USDT",
+    "exchange": "KuCoin",
+    "direction": "SHORT",
+    "style": "CONFIRMED_BREAKOUT",
+    "score": 78.2,
+    "adx": 18.2,
+    "rsi": 30.2,
+    "rsi3": 27.3,
+    "volume_x": 1.34,
+    "htf_trend": "NEUTRAL",
+    "entry": 6.471,
+    "sl": 6.600420000000001,
+    "tp1": 6.412761,
+    "tp2": null,
+    "tp3": null,
+    "tp_main": 6.412761,
+    "capital": 1000.0,
+    "status": "OPEN",
+    "exit_price": null,
+    "pnl_usd": null,
+    "result": null,
+    "closed_at": null,
+    "exit_time": null,
+    "grind_count": 0,
+    "grind_entries": [
+      6.471
+    ],
+    "tag": "breakout_short",
+    "best_price": 6.471,
+    "worst_price": 6.471
   }
 ]
