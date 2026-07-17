@@ -26473,5 +26473,39 @@
     "tag": "breakout_long",
     "best_price": 0.04739,
     "worst_price": 0.04739
+  },
+  {
+    "id": "SIG-0810",
+    "time": "2026-07-17T03:26:49.672238+00:00",
+    "pair": "MYRO/USDT",
+    "exchange": "KuCoin",
+    "direction": "LONG",
+    "style": "CONFIRMED_BREAKOUT",
+    "score": 93.8,
+    "adx": 33.8,
+    "rsi": 68.7,
+    "rsi3": NaN,
+    "volume_x": 11.14,
+    "htf_trend": "NEUTRAL",
+    "entry": 0.002239,
+    "sl": 0.00219422,
+    "tp1": 0.002259151,
+    "tp2": null,
+    "tp3": null,
+    "tp_main": 0.002259151,
+    "capital": 1000.0,
+    "status": "OPEN",
+    "exit_price": null,
+    "pnl_usd": null,
+    "result": null,
+    "closed_at": null,
+    "exit_time": null,
+    "grind_count": 0,
+    "grind_entries": [
+      0.002239
+    ],
+    "tag": "breakout_long",
+    "best_price": 0.002239,
+    "worst_price": 0.002239
   }
 ]
