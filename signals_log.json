@@ -30569,7 +30569,7 @@
     ],
     "tag": "breakout_long",
     "best_price": 6.625,
-    "worst_price": 6.565
+    "worst_price": 6.562
   },
   {
     "id": "SIG-0927",
@@ -30637,7 +30637,7 @@
     ],
     "tag": "breakout_long",
     "best_price": 6.625,
-    "worst_price": 6.565
+    "worst_price": 6.562
   },
   {
     "id": "SIG-0929",
@@ -30694,19 +30694,20 @@
     "tp3": null,
     "tp_main": 329.4385,
     "capital": 1000.0,
-    "status": "OPEN",
-    "exit_price": null,
-    "pnl_usd": null,
-    "result": null,
-    "closed_at": null,
-    "exit_time": null,
+    "status": "WIN",
+    "exit_price": 329.4385,
+    "pnl_usd": 9.0,
+    "result": "WIN",
+    "closed_at": "2026-07-17T20:21:05.725719+00:00",
+    "exit_time": "2026-07-17T20:21:05.725719+00:00",
     "grind_count": 0,
     "grind_entries": [
       326.5
     ],
     "tag": "breakout_long",
-    "best_price": 328.34,
-    "worst_price": 326.13
+    "best_price": 329.92,
+    "worst_price": 326.13,
+    "pnl_pct": 0.9
   },
   {
     "id": "SIG-0931",
@@ -30808,7 +30809,7 @@
       0.01596
     ],
     "tag": "breakout_short",
-    "best_price": 0.01599,
+    "best_price": 0.01601,
     "worst_price": 0.01596
   },
   {
@@ -30842,7 +30843,7 @@
       0.04684
     ],
     "tag": "breakout_short",
-    "best_price": 0.04696,
+    "best_price": 0.04704,
     "worst_price": 0.04684
   },
   {
@@ -30980,5 +30981,39 @@
     "tag": "breakout_short",
     "best_price": 0.7383,
     "worst_price": 0.7373
+  },
+  {
+    "id": "SIG-0939",
+    "time": "2026-07-17T20:21:17.103358+00:00",
+    "pair": "XMR/USDT",
+    "exchange": "KuCoin",
+    "direction": "LONG",
+    "style": "CONFIRMED_BREAKOUT",
+    "score": 81.7,
+    "adx": 21.7,
+    "rsi": 62.3,
+    "rsi3": NaN,
+    "volume_x": 1.07,
+    "htf_trend": "BULLISH",
+    "entry": 329.9,
+    "sl": 323.30199999999996,
+    "tp1": 332.86909999999995,
+    "tp2": null,
+    "tp3": null,
+    "tp_main": 332.86909999999995,
+    "capital": 1000.0,
+    "status": "OPEN",
+    "exit_price": null,
+    "pnl_usd": null,
+    "result": null,
+    "closed_at": null,
+    "exit_time": null,
+    "grind_count": 0,
+    "grind_entries": [
+      329.9
+    ],
+    "tag": "breakout_long",
+    "best_price": 329.9,
+    "worst_price": 329.9
   }
 ]
