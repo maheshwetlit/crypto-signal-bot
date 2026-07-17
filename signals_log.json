@@ -31047,19 +31047,20 @@
     "tp3": null,
     "tp_main": 335.3915999999999,
     "capital": 1000.0,
-    "status": "OPEN",
-    "exit_price": null,
-    "pnl_usd": null,
-    "result": null,
-    "closed_at": null,
-    "exit_time": null,
+    "status": "CLOSED",
+    "exit_price": 332.4,
+    "pnl_usd": 0.0,
+    "result": "STALE",
+    "closed_at": "2026-07-17T23:35:53.328039+00:00",
+    "exit_time": "2026-07-17T23:35:53.328039+00:00",
     "grind_count": 0,
     "grind_entries": [
       332.4
     ],
     "tag": "breakout_long",
     "best_price": 332.4,
-    "worst_price": 329.68
+    "worst_price": 329.68,
+    "pnl_pct": 0.0
   },
   {
     "id": "SIG-0941",
@@ -31297,7 +31298,7 @@
       0.16
     ],
     "tag": "breakout_long",
-    "best_price": 0.16,
+    "best_price": 0.1601,
     "worst_price": 0.1596
   },
   {
@@ -31365,7 +31366,7 @@
       2.73e-06
     ],
     "tag": "breakout_short",
-    "best_price": 2.737e-06,
+    "best_price": 2.746e-06,
     "worst_price": 2.729e-06
   },
   {
@@ -31467,7 +31468,75 @@
       2.739e-06
     ],
     "tag": "breakout_long",
-    "best_price": 2.739e-06,
+    "best_price": 2.746e-06,
     "worst_price": 2.729e-06
+  },
+  {
+    "id": "SIG-0953",
+    "time": "2026-07-17T23:36:23.296426+00:00",
+    "pair": "ONDO/USDT",
+    "exchange": "KuCoin",
+    "direction": "LONG",
+    "style": "CONFIRMED_BREAKOUT",
+    "score": 81.2,
+    "adx": 21.2,
+    "rsi": 63.0,
+    "rsi3": NaN,
+    "volume_x": 1.57,
+    "htf_trend": "BULLISH",
+    "entry": 0.37238,
+    "sl": 0.3649324,
+    "tp1": 0.3757314199999999,
+    "tp2": null,
+    "tp3": null,
+    "tp_main": 0.3757314199999999,
+    "capital": 1000.0,
+    "status": "OPEN",
+    "exit_price": null,
+    "pnl_usd": null,
+    "result": null,
+    "closed_at": null,
+    "exit_time": null,
+    "grind_count": 0,
+    "grind_entries": [
+      0.37238
+    ],
+    "tag": "breakout_long",
+    "best_price": 0.37238,
+    "worst_price": 0.37238
+  },
+  {
+    "id": "SIG-0954",
+    "time": "2026-07-17T23:36:29.425685+00:00",
+    "pair": "ADA/USDT",
+    "exchange": "KuCoin",
+    "direction": "LONG",
+    "style": "CONFIRMED_BREAKOUT",
+    "score": 81.2,
+    "adx": 21.2,
+    "rsi": 70.0,
+    "rsi3": 75.0,
+    "volume_x": 1.01,
+    "htf_trend": "NEUTRAL",
+    "entry": 0.1668,
+    "sl": 0.163464,
+    "tp1": 0.16830119999999998,
+    "tp2": null,
+    "tp3": null,
+    "tp_main": 0.16830119999999998,
+    "capital": 1000.0,
+    "status": "OPEN",
+    "exit_price": null,
+    "pnl_usd": null,
+    "result": null,
+    "closed_at": null,
+    "exit_time": null,
+    "grind_count": 0,
+    "grind_entries": [
+      0.1668
+    ],
+    "tag": "breakout_long",
+    "best_price": 0.1668,
+    "worst_price": 0.1668
   }
 ]
