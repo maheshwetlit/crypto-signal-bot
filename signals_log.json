@@ -27095,19 +27095,20 @@
     "tp3": null,
     "tp_main": 327.16873999999996,
     "capital": 1000.0,
-    "status": "OPEN",
-    "exit_price": null,
-    "pnl_usd": null,
-    "result": null,
-    "closed_at": null,
-    "exit_time": null,
+    "status": "WIN",
+    "exit_price": 327.8,
+    "pnl_usd": 7.09,
+    "result": "WIN",
+    "closed_at": "2026-07-17T08:30:53.315532+00:00",
+    "exit_time": "2026-07-17T08:30:53.315532+00:00",
     "grind_count": 0,
     "grind_entries": [
       330.14
     ],
     "tag": "breakout_short",
     "best_price": 330.9,
-    "worst_price": 328.29
+    "worst_price": 327.8,
+    "pnl_pct": 0.71
   },
   {
     "id": "SIG-0828",
@@ -27622,7 +27623,7 @@
     ],
     "tag": "breakout_short",
     "best_price": 330.81,
-    "worst_price": 328.33
+    "worst_price": 327.8
   },
   {
     "id": "SIG-0843",
@@ -27930,7 +27931,7 @@
     ],
     "tag": "breakout_short",
     "best_price": 4.119e-06,
-    "worst_price": 4.101e-06
+    "worst_price": 4.099e-06
   },
   {
     "id": "SIG-0852",
@@ -27999,5 +28000,39 @@
     "tag": "breakout_short",
     "best_price": 74.64,
     "worst_price": 74.42
+  },
+  {
+    "id": "SIG-0854",
+    "time": "2026-07-17T08:31:39.806399+00:00",
+    "pair": "BLUAI/USDT",
+    "exchange": "KuCoin",
+    "direction": "LONG",
+    "style": "CONFIRMED_BREAKOUT",
+    "score": 95.1,
+    "adx": 35.1,
+    "rsi": 86.4,
+    "rsi3": NaN,
+    "volume_x": 0.87,
+    "htf_trend": "BEARISH",
+    "entry": 0.012124,
+    "sl": 0.01188152,
+    "tp1": 0.012233115999999999,
+    "tp2": null,
+    "tp3": null,
+    "tp_main": 0.012233115999999999,
+    "capital": 1000.0,
+    "status": "OPEN",
+    "exit_price": null,
+    "pnl_usd": null,
+    "result": null,
+    "closed_at": null,
+    "exit_time": null,
+    "grind_count": 0,
+    "grind_entries": [
+      0.012124
+    ],
+    "tag": "breakout_long",
+    "best_price": 0.012124,
+    "worst_price": 0.012124
   }
 ]
