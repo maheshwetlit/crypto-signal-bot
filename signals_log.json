@@ -26080,19 +26080,20 @@
     "tp3": null,
     "tp_main": 6.432581,
     "capital": 1000.0,
-    "status": "OPEN",
-    "exit_price": null,
-    "pnl_usd": null,
-    "result": null,
-    "closed_at": null,
-    "exit_time": null,
+    "status": "WIN",
+    "exit_price": 6.458,
+    "pnl_usd": 5.08,
+    "result": "WIN",
+    "closed_at": "2026-07-17T03:11:00.366442+00:00",
+    "exit_time": "2026-07-17T03:11:00.366442+00:00",
     "grind_count": 0,
     "grind_entries": [
       6.491
     ],
     "tag": "breakout_short",
-    "best_price": 6.512,
-    "worst_price": 6.458
+    "best_price": 6.519,
+    "worst_price": 6.458,
+    "pnl_pct": 0.51
   },
   {
     "id": "SIG-0799",
@@ -26400,5 +26401,39 @@
     "tag": "breakout_short",
     "best_price": 0.3231,
     "worst_price": 0.3218
+  },
+  {
+    "id": "SIG-0808",
+    "time": "2026-07-17T03:12:08.360519+00:00",
+    "pair": "ESPORTS/USDT",
+    "exchange": "KuCoin",
+    "direction": "SHORT",
+    "style": "CONFIRMED_BREAKOUT",
+    "score": 94.1,
+    "adx": 34.1,
+    "rsi": 38.8,
+    "rsi3": 0.0,
+    "volume_x": 2.79,
+    "htf_trend": "BULLISH",
+    "entry": 0.0238,
+    "sl": 0.024276000000000002,
+    "tp1": 0.0235858,
+    "tp2": null,
+    "tp3": null,
+    "tp_main": 0.0235858,
+    "capital": 1000.0,
+    "status": "OPEN",
+    "exit_price": null,
+    "pnl_usd": null,
+    "result": null,
+    "closed_at": null,
+    "exit_time": null,
+    "grind_count": 0,
+    "grind_entries": [
+      0.0238
+    ],
+    "tag": "breakout_short",
+    "best_price": 0.0238,
+    "worst_price": 0.0238
   }
 ]
