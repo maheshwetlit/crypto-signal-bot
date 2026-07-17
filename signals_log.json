@@ -29544,19 +29544,20 @@
     "tp3": null,
     "tp_main": 62303.079900000004,
     "capital": 1000.0,
-    "status": "OPEN",
-    "exit_price": null,
-    "pnl_usd": null,
-    "result": null,
-    "closed_at": null,
-    "exit_time": null,
+    "status": "WIN",
+    "exit_price": 62682.6,
+    "pnl_usd": 2.96,
+    "result": "WIN",
+    "closed_at": "2026-07-17T16:35:50.292681+00:00",
+    "exit_time": "2026-07-17T16:35:50.292681+00:00",
     "grind_count": 0,
     "grind_entries": [
       62868.9
     ],
     "tag": "breakout_short",
     "best_price": 63508.2,
-    "worst_price": 62682.6
+    "worst_price": 62682.6,
+    "pnl_pct": 0.3
   },
   {
     "id": "SIG-0898",
@@ -29578,19 +29579,20 @@
     "tp3": null,
     "tp_main": 1799.05149,
     "capital": 1000.0,
-    "status": "OPEN",
-    "exit_price": null,
-    "pnl_usd": null,
-    "result": null,
-    "closed_at": null,
-    "exit_time": null,
+    "status": "WIN",
+    "exit_price": 1808.79,
+    "pnl_usd": 3.64,
+    "result": "WIN",
+    "closed_at": "2026-07-17T16:35:50.292681+00:00",
+    "exit_time": "2026-07-17T16:35:50.292681+00:00",
     "grind_count": 0,
     "grind_entries": [
       1815.39
     ],
     "tag": "breakout_short",
     "best_price": 1835.7,
-    "worst_price": 1808.79
+    "worst_price": 1808.79,
+    "pnl_pct": 0.36
   },
   {
     "id": "SIG-0899",
@@ -29830,7 +29832,7 @@
       0.07206
     ],
     "tag": "breakout_long",
-    "best_price": 0.07236,
+    "best_price": 0.07237,
     "worst_price": 0.07176
   },
   {
@@ -30138,7 +30140,7 @@
       0.07214
     ],
     "tag": "breakout_long",
-    "best_price": 0.07236,
+    "best_price": 0.07237,
     "worst_price": 0.07214
   },
   {
@@ -30172,7 +30174,7 @@
       1.548
     ],
     "tag": "breakout_long",
-    "best_price": 1.556,
+    "best_price": 1.557,
     "worst_price": 1.548
   },
   {
@@ -30276,7 +30278,7 @@
     ],
     "tag": "breakout_long",
     "best_price": 564.123,
-    "worst_price": 562.772
+    "worst_price": 562.67
   },
   {
     "id": "SIG-0919",
@@ -30309,7 +30311,7 @@
       1.549
     ],
     "tag": "breakout_long",
-    "best_price": 1.556,
+    "best_price": 1.557,
     "worst_price": 1.549
   }
 ]
