@@ -28738,5 +28738,39 @@
     "tag": "breakout_long",
     "best_price": 0.07202,
     "worst_price": 0.07192
+  },
+  {
+    "id": "SIG-0875",
+    "time": "2026-07-17T11:22:13.016839+00:00",
+    "pair": "ESPORTS/USDT",
+    "exchange": "KuCoin",
+    "direction": "LONG",
+    "style": "CONFIRMED_BREAKOUT",
+    "score": 82.4,
+    "adx": 22.4,
+    "rsi": 46.8,
+    "rsi3": 85.7,
+    "volume_x": 1.85,
+    "htf_trend": "BULLISH",
+    "entry": 0.0279,
+    "sl": 0.027342,
+    "tp1": 0.0281511,
+    "tp2": null,
+    "tp3": null,
+    "tp_main": 0.0281511,
+    "capital": 1000.0,
+    "status": "OPEN",
+    "exit_price": null,
+    "pnl_usd": null,
+    "result": null,
+    "closed_at": null,
+    "exit_time": null,
+    "grind_count": 0,
+    "grind_entries": [
+      0.0279
+    ],
+    "tag": "breakout_long",
+    "best_price": 0.0279,
+    "worst_price": 0.0279
   }
 ]
