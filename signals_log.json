@@ -26954,19 +26954,20 @@
     "tp3": null,
     "tp_main": 0.0801719,
     "capital": 1000.0,
-    "status": "OPEN",
-    "exit_price": null,
-    "pnl_usd": null,
-    "result": null,
-    "closed_at": null,
-    "exit_time": null,
+    "status": "WIN",
+    "exit_price": 0.08,
+    "pnl_usd": 11.12,
+    "result": "TP HIT",
+    "closed_at": "2026-07-17T08:00:06.104204+00:00",
+    "exit_time": "2026-07-17T08:00:06.104204+00:00",
     "grind_count": 0,
     "grind_entries": [
       0.0809
     ],
     "tag": "breakout_short",
     "best_price": 0.0809,
-    "worst_price": 0.0802
+    "worst_price": 0.0802,
+    "pnl_pct": 1.11
   },
   {
     "id": "SIG-0824",
