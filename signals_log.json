@@ -28179,19 +28179,20 @@
     "tp3": null,
     "tp_main": 2.7908939999999997e-06,
     "capital": 1000.0,
-    "status": "OPEN",
-    "exit_price": null,
-    "pnl_usd": null,
-    "result": null,
-    "closed_at": null,
-    "exit_time": null,
+    "status": "CLOSED",
+    "exit_price": 2.766e-06,
+    "pnl_usd": 0.0,
+    "result": "STALE",
+    "closed_at": "2026-07-17T12:25:48.652240+00:00",
+    "exit_time": "2026-07-17T12:25:48.652240+00:00",
     "grind_count": 0,
     "grind_entries": [
       2.766e-06
     ],
     "tag": "breakout_long",
     "best_price": 2.766e-06,
-    "worst_price": 2.722e-06
+    "worst_price": 2.722e-06,
+    "pnl_pct": 0.0
   },
   {
     "id": "SIG-0859",
@@ -28224,7 +28225,7 @@
       0.6132
     ],
     "tag": "breakout_short",
-    "best_price": 0.6173,
+    "best_price": 0.6177,
     "worst_price": 0.613
   },
   {
@@ -28258,7 +28259,7 @@
       0.6134
     ],
     "tag": "breakout_short",
-    "best_price": 0.6173,
+    "best_price": 0.6177,
     "worst_price": 0.613
   },
   {
@@ -28292,7 +28293,7 @@
       63007.3
     ],
     "tag": "breakout_long",
-    "best_price": 63211.8,
+    "best_price": 63242.6,
     "worst_price": 63007.3
   },
   {
@@ -28809,5 +28810,73 @@
     "tag": "breakout_long",
     "best_price": 0.04716,
     "worst_price": 0.04709
+  },
+  {
+    "id": "SIG-0877",
+    "time": "2026-07-17T12:25:59.461073+00:00",
+    "pair": "ETH/USDT",
+    "exchange": "KuCoin",
+    "direction": "SHORT",
+    "style": "CONFIRMED_BREAKOUT",
+    "score": 77.2,
+    "adx": 17.2,
+    "rsi": 51.2,
+    "rsi3": 49.9,
+    "volume_x": 3.02,
+    "htf_trend": "NEUTRAL",
+    "entry": 1835.88,
+    "sl": 1872.5976,
+    "tp1": 1819.35708,
+    "tp2": null,
+    "tp3": null,
+    "tp_main": 1819.35708,
+    "capital": 1000.0,
+    "status": "OPEN",
+    "exit_price": null,
+    "pnl_usd": null,
+    "result": null,
+    "closed_at": null,
+    "exit_time": null,
+    "grind_count": 0,
+    "grind_entries": [
+      1835.88
+    ],
+    "tag": "breakout_short",
+    "best_price": 1835.88,
+    "worst_price": 1835.88
+  },
+  {
+    "id": "SIG-0878",
+    "time": "2026-07-17T12:26:22.096189+00:00",
+    "pair": "TAO/USDT",
+    "exchange": "KuCoin",
+    "direction": "SHORT",
+    "style": "CONFIRMED_BREAKOUT",
+    "score": 80.0,
+    "adx": 20.0,
+    "rsi": 37.3,
+    "rsi3": 0.0,
+    "volume_x": 1.11,
+    "htf_trend": "BEARISH",
+    "entry": 192.17,
+    "sl": 196.0134,
+    "tp1": 190.44046999999998,
+    "tp2": null,
+    "tp3": null,
+    "tp_main": 190.44046999999998,
+    "capital": 1000.0,
+    "status": "OPEN",
+    "exit_price": null,
+    "pnl_usd": null,
+    "result": null,
+    "closed_at": null,
+    "exit_time": null,
+    "grind_count": 0,
+    "grind_entries": [
+      192.17
+    ],
+    "tag": "breakout_short",
+    "best_price": 192.17,
+    "worst_price": 192.17
   }
 ]
