@@ -27970,19 +27970,20 @@
     "tp3": null,
     "tp_main": 6.412761,
     "capital": 1000.0,
-    "status": "OPEN",
-    "exit_price": null,
-    "pnl_usd": null,
-    "result": null,
-    "closed_at": null,
-    "exit_time": null,
+    "status": "WIN",
+    "exit_price": 6.431,
+    "pnl_usd": 6.18,
+    "result": "WIN",
+    "closed_at": "2026-07-17T10:41:00.552620+00:00",
+    "exit_time": "2026-07-17T10:41:00.552620+00:00",
     "grind_count": 0,
     "grind_entries": [
       6.471
     ],
     "tag": "breakout_short",
     "best_price": 6.507,
-    "worst_price": 6.431
+    "worst_price": 6.431,
+    "pnl_pct": 0.62
   },
   {
     "id": "SIG-0853",
@@ -28015,7 +28016,7 @@
       74.58
     ],
     "tag": "breakout_short",
-    "best_price": 74.74,
+    "best_price": 74.81,
     "worst_price": 74.3
   },
   {
@@ -28222,7 +28223,7 @@
       0.6132
     ],
     "tag": "breakout_short",
-    "best_price": 0.6152,
+    "best_price": 0.6159,
     "worst_price": 0.613
   },
   {
@@ -28256,7 +28257,7 @@
       0.6134
     ],
     "tag": "breakout_short",
-    "best_price": 0.6152,
+    "best_price": 0.6159,
     "worst_price": 0.613
   },
   {
@@ -28290,7 +28291,7 @@
       63007.3
     ],
     "tag": "breakout_long",
-    "best_price": 63134.0,
+    "best_price": 63165.4,
     "worst_price": 63007.3
   },
   {
@@ -28358,7 +28359,7 @@
       0.7349
     ],
     "tag": "breakout_long",
-    "best_price": 0.7359,
+    "best_price": 0.7361,
     "worst_price": 0.7346
   },
   {
@@ -28460,7 +28461,7 @@
       0.7351
     ],
     "tag": "breakout_long",
-    "best_price": 0.7359,
+    "best_price": 0.7361,
     "worst_price": 0.7346
   },
   {
@@ -28598,7 +28599,7 @@
       564.702
     ],
     "tag": "breakout_short",
-    "best_price": 564.702,
+    "best_price": 564.867,
     "worst_price": 564.016
   },
   {
@@ -28632,7 +28633,41 @@
       563.675
     ],
     "tag": "breakout_short",
-    "best_price": 564.016,
+    "best_price": 564.867,
     "worst_price": 563.675
+  },
+  {
+    "id": "SIG-0872",
+    "time": "2026-07-17T10:41:34.563216+00:00",
+    "pair": "ONDO/USDT",
+    "exchange": "KuCoin",
+    "direction": "LONG",
+    "style": "CONFIRMED_BREAKOUT",
+    "score": 94.8,
+    "adx": 34.8,
+    "rsi": 84.7,
+    "rsi3": 94.9,
+    "volume_x": 0.79,
+    "htf_trend": "BULLISH",
+    "entry": 0.37837,
+    "sl": 0.3708026,
+    "tp1": 0.38177532999999997,
+    "tp2": null,
+    "tp3": null,
+    "tp_main": 0.38177532999999997,
+    "capital": 1000.0,
+    "status": "OPEN",
+    "exit_price": null,
+    "pnl_usd": null,
+    "result": null,
+    "closed_at": null,
+    "exit_time": null,
+    "grind_count": 0,
+    "grind_entries": [
+      0.37837
+    ],
+    "tag": "breakout_long",
+    "best_price": 0.37837,
+    "worst_price": 0.37837
   }
 ]
