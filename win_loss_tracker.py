@@ -34,10 +34,21 @@ def save_tracker(data):
     with open(TRACKER_LOG, "w") as f:
         json.dump(data, f, indent=2)
 
+def _classify(sig):
+    st = sig.get("status"); res = sig.get("result")
+    if st == "WIN" or res == "WIN": return "WIN"
+    if st == "LOSS" or res in ("LOSS", "STALE", "EXPIRED"): return "LOSS"
+    if st == "CLOSED":
+        p = sig.get("pnl_usd")
+        return "WIN" if (p is not None and p > 0) else "LOSS"
+    if st == "OPEN": return "OPEN"
+    if res == "WIN": return "WIN"
+    return "OPEN"
+
 def current_stats(signals):
-    closed = [s for s in signals if s.get("status") in ("WIN","LOSS")]
-    wins = [s for s in closed if s.get("status") == "WIN"]
-    losses = [s for s in closed if s.get("status") == "LOSS"]
+    closed = [s for s in signals if _classify(s) in ("WIN", "LOSS")]
+    wins = [s for s in closed if _classify(s) == "WIN"]
+    losses = [s for s in closed if _classify(s) == "LOSS"]
     
     if not closed:
         return None
