@@ -30735,5 +30735,39 @@
     "tag": "breakout_long",
     "best_price": 1.09406,
     "worst_price": 1.09169
+  },
+  {
+    "id": "SIG-0932",
+    "time": "2026-07-17T19:11:50.656944+00:00",
+    "pair": "OXT/USDT",
+    "exchange": "KuCoin",
+    "direction": "SHORT",
+    "style": "CONFIRMED_BREAKOUT",
+    "score": 76.9,
+    "adx": 16.9,
+    "rsi": 20.2,
+    "rsi3": 0.0,
+    "volume_x": 2.61,
+    "htf_trend": "BULLISH",
+    "entry": 0.01691,
+    "sl": 0.0172482,
+    "tp1": 0.01675781,
+    "tp2": null,
+    "tp3": null,
+    "tp_main": 0.01675781,
+    "capital": 1000.0,
+    "status": "OPEN",
+    "exit_price": null,
+    "pnl_usd": null,
+    "result": null,
+    "closed_at": null,
+    "exit_time": null,
+    "grind_count": 0,
+    "grind_entries": [
+      0.01691
+    ],
+    "tag": "breakout_short",
+    "best_price": 0.01691,
+    "worst_price": 0.01691
   }
 ]
