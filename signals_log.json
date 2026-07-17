@@ -26290,19 +26290,20 @@
     "tp3": null,
     "tp_main": 0.017011739999999997,
     "capital": 1000.0,
-    "status": "OPEN",
-    "exit_price": null,
-    "pnl_usd": null,
-    "result": null,
-    "closed_at": null,
-    "exit_time": null,
+    "status": "CLOSED",
+    "exit_price": 0.01686,
+    "pnl_usd": 0.0,
+    "result": "STALE",
+    "closed_at": "2026-07-17T04:11:06.413574+00:00",
+    "exit_time": "2026-07-17T04:11:06.413574+00:00",
     "grind_count": 0,
     "grind_entries": [
       0.01686
     ],
     "tag": "breakout_long",
     "best_price": 0.01686,
-    "worst_price": 0.01664
+    "worst_price": 0.01664,
+    "pnl_pct": 0.0
   },
   {
     "id": "SIG-0805",
@@ -26370,7 +26371,7 @@
     ],
     "tag": "breakout_short",
     "best_price": 60.535,
-    "worst_price": 60.214
+    "worst_price": 60.204
   },
   {
     "id": "SIG-0807",
@@ -26473,7 +26474,7 @@
     ],
     "tag": "breakout_long",
     "best_price": 0.04739,
-    "worst_price": 0.04717
+    "worst_price": 0.04706
   },
   {
     "id": "SIG-0810",
@@ -26579,5 +26580,39 @@
     "best_price": 0.002605,
     "worst_price": 0.002362,
     "pnl_pct": 0.9
+  },
+  {
+    "id": "SIG-0813",
+    "time": "2026-07-17T04:12:11.605155+00:00",
+    "pair": "AVAX/USDT",
+    "exchange": "KuCoin",
+    "direction": "SHORT",
+    "style": "CONFIRMED_BREAKOUT",
+    "score": 80.4,
+    "adx": 20.4,
+    "rsi": 52.9,
+    "rsi3": 0.0,
+    "volume_x": 2.16,
+    "htf_trend": "NEUTRAL",
+    "entry": 6.504,
+    "sl": 6.63408,
+    "tp1": 6.445463999999999,
+    "tp2": null,
+    "tp3": null,
+    "tp_main": 6.445463999999999,
+    "capital": 1000.0,
+    "status": "OPEN",
+    "exit_price": null,
+    "pnl_usd": null,
+    "result": null,
+    "closed_at": null,
+    "exit_time": null,
+    "grind_count": 0,
+    "grind_entries": [
+      6.504
+    ],
+    "tag": "breakout_short",
+    "best_price": 6.504,
+    "worst_price": 6.504
   }
 ]
