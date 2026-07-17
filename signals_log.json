@@ -31190,5 +31190,39 @@
     "tag": "breakout_short",
     "best_price": 1.472,
     "worst_price": 1.472
+  },
+  {
+    "id": "SIG-0945",
+    "time": "2026-07-17T21:31:49.442554+00:00",
+    "pair": "DOGE/USDT",
+    "exchange": "KuCoin",
+    "direction": "LONG",
+    "style": "CONFIRMED_BREAKOUT",
+    "score": 82.5,
+    "adx": 22.5,
+    "rsi": 75.4,
+    "rsi3": 33.3,
+    "volume_x": 1.02,
+    "htf_trend": "NEUTRAL",
+    "entry": 0.07281,
+    "sl": 0.0713538,
+    "tp1": 0.07346528999999999,
+    "tp2": null,
+    "tp3": null,
+    "tp_main": 0.07346528999999999,
+    "capital": 1000.0,
+    "status": "OPEN",
+    "exit_price": null,
+    "pnl_usd": null,
+    "result": null,
+    "closed_at": null,
+    "exit_time": null,
+    "grind_count": 0,
+    "grind_entries": [
+      0.07281
+    ],
+    "tag": "breakout_long",
+    "best_price": 0.07281,
+    "worst_price": 0.07281
   }
 ]
