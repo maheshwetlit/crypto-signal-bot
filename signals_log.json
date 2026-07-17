@@ -30360,7 +30360,7 @@
     ],
     "tag": "breakout_long",
     "best_price": 0.6223,
-    "worst_price": 0.619
+    "worst_price": 0.6189
   },
   {
     "id": "SIG-0921",
@@ -30394,7 +30394,7 @@
     ],
     "tag": "breakout_long",
     "best_price": 0.38114,
-    "worst_price": 0.37739
+    "worst_price": 0.37476
   },
   {
     "id": "SIG-0922",
@@ -30428,7 +30428,7 @@
     ],
     "tag": "breakout_long",
     "best_price": 0.7443,
-    "worst_price": 0.7398
+    "worst_price": 0.7366
   },
   {
     "id": "SIG-0923",
@@ -30462,7 +30462,7 @@
     ],
     "tag": "breakout_long",
     "best_price": 2.755e-06,
-    "worst_price": 2.748e-06
+    "worst_price": 2.744e-06
   },
   {
     "id": "SIG-0924",
@@ -30496,7 +30496,7 @@
     ],
     "tag": "breakout_long",
     "best_price": 0.1881,
-    "worst_price": 0.1871
+    "worst_price": 0.1865
   },
   {
     "id": "SIG-0925",
@@ -30564,7 +30564,7 @@
     ],
     "tag": "breakout_long",
     "best_price": 6.625,
-    "worst_price": 6.594
+    "worst_price": 6.571
   },
   {
     "id": "SIG-0927",
@@ -30598,7 +30598,7 @@
     ],
     "tag": "breakout_short",
     "best_price": 0.6205,
-    "worst_price": 0.619
+    "worst_price": 0.6189
   },
   {
     "id": "SIG-0928",
@@ -30632,7 +30632,7 @@
     ],
     "tag": "breakout_long",
     "best_price": 6.625,
-    "worst_price": 6.605
+    "worst_price": 6.571
   },
   {
     "id": "SIG-0929",
@@ -30666,7 +30666,7 @@
     ],
     "tag": "breakout_short",
     "best_price": 0.04732,
-    "worst_price": 0.04719
+    "worst_price": 0.04693
   },
   {
     "id": "SIG-0930",
@@ -30699,7 +30699,7 @@
       326.5
     ],
     "tag": "breakout_long",
-    "best_price": 327.52,
+    "best_price": 327.9,
     "worst_price": 326.5
   },
   {
@@ -30734,7 +30734,7 @@
     ],
     "tag": "breakout_long",
     "best_price": 1.09406,
-    "worst_price": 1.09169
+    "worst_price": 1.08894
   },
   {
     "id": "SIG-0932",
@@ -30756,6 +30756,41 @@
     "tp3": null,
     "tp_main": 0.01675781,
     "capital": 1000.0,
+    "status": "LOSS",
+    "exit_price": 0.0172482,
+    "pnl_usd": -20.0,
+    "result": "LOSS",
+    "closed_at": "2026-07-17T19:15:57.651123+00:00",
+    "exit_time": "2026-07-17T19:15:57.651123+00:00",
+    "grind_count": 0,
+    "grind_entries": [
+      0.01691
+    ],
+    "tag": "breakout_short",
+    "best_price": 0.01771,
+    "worst_price": 0.01691,
+    "pnl_pct": -2.0
+  },
+  {
+    "id": "SIG-0933",
+    "time": "2026-07-17T19:16:44.927704+00:00",
+    "pair": "CHZ/USDT",
+    "exchange": "KuCoin",
+    "direction": "SHORT",
+    "style": "CONFIRMED_BREAKOUT",
+    "score": 76.7,
+    "adx": 16.7,
+    "rsi": 46.4,
+    "rsi3": 0.0,
+    "volume_x": 1.73,
+    "htf_trend": "BEARISH",
+    "entry": 0.01596,
+    "sl": 0.016279199999999997,
+    "tp1": 0.015816359999999998,
+    "tp2": null,
+    "tp3": null,
+    "tp_main": 0.015816359999999998,
+    "capital": 1000.0,
     "status": "OPEN",
     "exit_price": null,
     "pnl_usd": null,
@@ -30764,10 +30799,10 @@
     "exit_time": null,
     "grind_count": 0,
     "grind_entries": [
-      0.01691
+      0.01596
     ],
     "tag": "breakout_short",
-    "best_price": 0.01691,
-    "worst_price": 0.01691
+    "best_price": 0.01596,
+    "worst_price": 0.01596
   }
 ]
