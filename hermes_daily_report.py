@@ -15,11 +15,23 @@ TG_TOKEN_FILE = os.path.join(SCRIPT_DIR, ".tg_token")
 CHAT_ID = "5515185305"
 CAPITAL = 1000.0
 
-# --- Read tokens ---
-with open(GH_TOKEN_FILE) as f:
-    gh_token = f.read().strip()
-with open(TG_TOKEN_FILE) as f:
-    tg_token = f.read().strip()
+# --- Read tokens: env vars first (GitHub Actions), file fallback (local) ---
+def _read_token(*env_names, file_path=None):
+    for e in env_names:
+        v = os.environ.get(e)
+        if v:
+            return v.strip()
+    if file_path and os.path.exists(file_path):
+        with open(file_path) as f:
+            return f.read().strip()
+    return ""
+
+GH_TOKEN_FILE = os.path.join(SCRIPT_DIR, ".gh_token")
+TG_TOKEN_FILE = os.path.join(SCRIPT_DIR, ".tg_token")
+gh_token = _read_token("HERMESBOT", "HERMES_BOT_TOKEN", "GITHUB_TOKEN", file_path=GH_TOKEN_FILE)
+tg_token = _read_token("TELEGRAM_BOT_TOKEN", "HERMESCRYPTOTRADINGBOT", "HERMES_TELEGRAM_BOT_TOKEN", file_path=TG_TOKEN_FILE)
+CHAT_ID = os.environ.get("HERMES_CHAT_ID", os.environ.get("TELEGRAM_CHAT_ID", "5515185305"))
+CAPITAL = 1000.0
 
 # --- Fetch signals_log.json ---
 url = "https://api.github.com/repos/maheshwetlit/crypto-signal-bot/contents/signals_log.json"
