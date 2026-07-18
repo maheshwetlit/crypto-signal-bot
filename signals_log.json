@@ -32028,5 +32028,39 @@
     "best_price": 0.02473,
     "worst_price": 0.02404,
     "pnl_pct": -2.0
+  },
+  {
+    "id": "SIG-0969",
+    "time": "2026-07-18T01:46:18.440638+00:00",
+    "pair": "AAVE/USDT",
+    "exchange": "KuCoin",
+    "direction": "SHORT",
+    "style": "CONFIRMED_BREAKOUT",
+    "score": 77.8,
+    "adx": 17.8,
+    "rsi": 48.3,
+    "rsi3": 3.1,
+    "volume_x": 2.0,
+    "htf_trend": "BEARISH",
+    "entry": 89.791,
+    "sl": 91.58682,
+    "tp1": 88.98288099999999,
+    "tp2": null,
+    "tp3": null,
+    "tp_main": 88.98288099999999,
+    "capital": 1000.0,
+    "status": "OPEN",
+    "exit_price": null,
+    "pnl_usd": null,
+    "result": null,
+    "closed_at": null,
+    "exit_time": null,
+    "grind_count": 0,
+    "grind_entries": [
+      89.791
+    ],
+    "tag": "breakout_short",
+    "best_price": 89.791,
+    "worst_price": 89.791
   }
 ]
