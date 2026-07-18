@@ -34340,5 +34340,39 @@
     "tag": "breakout_long",
     "best_price": 46.01,
     "worst_price": 46.01
+  },
+  {
+    "id": "SIG-1035",
+    "time": "2026-07-18T14:41:27.029736+00:00",
+    "pair": "TAO/USDT",
+    "exchange": "KuCoin",
+    "direction": "LONG",
+    "style": "CONFIRMED_BREAKOUT",
+    "score": 78.5,
+    "adx": 18.5,
+    "rsi": 73.1,
+    "rsi3": NaN,
+    "volume_x": 2.42,
+    "htf_trend": "BEARISH",
+    "entry": 193.1,
+    "sl": 189.238,
+    "tp1": 194.83789999999996,
+    "tp2": null,
+    "tp3": null,
+    "tp_main": 194.83789999999996,
+    "capital": 1000.0,
+    "status": "OPEN",
+    "exit_price": null,
+    "pnl_usd": null,
+    "result": null,
+    "closed_at": null,
+    "exit_time": null,
+    "grind_count": 0,
+    "grind_entries": [
+      193.1
+    ],
+    "tag": "breakout_long",
+    "best_price": 193.1,
+    "worst_price": 193.1
   }
 ]
