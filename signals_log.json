@@ -34019,19 +34019,20 @@
     "tp3": null,
     "tp_main": 0.04621033,
     "capital": 1000.0,
-    "status": "OPEN",
-    "exit_price": null,
-    "pnl_usd": null,
-    "result": null,
-    "closed_at": null,
-    "exit_time": null,
+    "status": "WIN",
+    "exit_price": 0.04637,
+    "pnl_usd": 5.58,
+    "result": "WIN",
+    "closed_at": "2026-07-18T14:45:55.286061+00:00",
+    "exit_time": "2026-07-18T14:45:55.286061+00:00",
     "grind_count": 0,
     "grind_entries": [
       0.04663
     ],
     "tag": "breakout_short",
     "best_price": 0.04667,
-    "worst_price": 0.04637
+    "worst_price": 0.04637,
+    "pnl_pct": 0.56
   },
   {
     "id": "SIG-1026",
@@ -34203,7 +34204,7 @@
     ],
     "tag": "breakout_short",
     "best_price": 0.8376,
-    "worst_price": 0.8338
+    "worst_price": 0.8335
   },
   {
     "id": "SIG-1031",
@@ -34236,7 +34237,7 @@
       192.29
     ],
     "tag": "breakout_short",
-    "best_price": 192.29,
+    "best_price": 193.27,
     "worst_price": 191.51
   },
   {
@@ -34270,7 +34271,7 @@
       1.0845
     ],
     "tag": "breakout_short",
-    "best_price": 1.0871,
+    "best_price": 1.08899,
     "worst_price": 1.0845
   },
   {
@@ -34304,7 +34305,7 @@
       0.1642
     ],
     "tag": "breakout_short",
-    "best_price": 0.1645,
+    "best_price": 0.1648,
     "worst_price": 0.1642
   },
   {
@@ -34338,7 +34339,7 @@
       46.01
     ],
     "tag": "breakout_long",
-    "best_price": 46.01,
+    "best_price": 46.17,
     "worst_price": 46.01
   },
   {
@@ -34372,7 +34373,41 @@
       193.1
     ],
     "tag": "breakout_long",
-    "best_price": 193.1,
+    "best_price": 193.27,
     "worst_price": 193.1
+  },
+  {
+    "id": "SIG-1036",
+    "time": "2026-07-18T14:46:50.416608+00:00",
+    "pair": "SYN/USDT",
+    "exchange": "KuCoin",
+    "direction": "LONG",
+    "style": "CONFIRMED_BREAKOUT",
+    "score": 94.9,
+    "adx": 34.9,
+    "rsi": 70.8,
+    "rsi3": 97.8,
+    "volume_x": 1.21,
+    "htf_trend": "NEUTRAL",
+    "entry": 0.2438,
+    "sl": 0.238924,
+    "tp1": 0.24599419999999997,
+    "tp2": null,
+    "tp3": null,
+    "tp_main": 0.24599419999999997,
+    "capital": 1000.0,
+    "status": "OPEN",
+    "exit_price": null,
+    "pnl_usd": null,
+    "result": null,
+    "closed_at": null,
+    "exit_time": null,
+    "grind_count": 0,
+    "grind_entries": [
+      0.2438
+    ],
+    "tag": "breakout_long",
+    "best_price": 0.2438,
+    "worst_price": 0.2438
   }
 ]
