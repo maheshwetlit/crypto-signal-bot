@@ -33888,7 +33888,7 @@
       1.8947
     ],
     "tag": "breakout_short",
-    "best_price": 1.9166,
+    "best_price": 1.9186,
     "worst_price": 1.8947
   },
   {
@@ -34082,19 +34082,20 @@
     "tp3": null,
     "tp_main": 0.23015289999999997,
     "capital": 1000.0,
-    "status": "OPEN",
-    "exit_price": null,
-    "pnl_usd": null,
-    "result": null,
-    "closed_at": null,
-    "exit_time": null,
+    "status": "WIN",
+    "exit_price": 0.23015289999999997,
+    "pnl_usd": 9.0,
+    "result": "WIN",
+    "closed_at": "2026-07-18T12:45:54.490776+00:00",
+    "exit_time": "2026-07-18T12:45:54.490776+00:00",
     "grind_count": 0,
     "grind_entries": [
       0.2281
     ],
     "tag": "breakout_long",
-    "best_price": 0.2281,
-    "worst_price": 0.226
+    "best_price": 0.2314,
+    "worst_price": 0.226,
+    "pnl_pct": 0.9
   },
   {
     "id": "SIG-1028",
@@ -34127,7 +34128,41 @@
       0.04645
     ],
     "tag": "breakout_short",
-    "best_price": 0.04653,
+    "best_price": 0.04654,
     "worst_price": 0.0464
+  },
+  {
+    "id": "SIG-1029",
+    "time": "2026-07-18T12:46:08.831598+00:00",
+    "pair": "XRP/USDT",
+    "exchange": "KuCoin",
+    "direction": "LONG",
+    "style": "CONFIRMED_BREAKOUT",
+    "score": 76.6,
+    "adx": 16.6,
+    "rsi": 60.8,
+    "rsi3": 94.5,
+    "volume_x": 1.18,
+    "htf_trend": "BEARISH",
+    "entry": 1.08965,
+    "sl": 1.067857,
+    "tp1": 1.09945685,
+    "tp2": null,
+    "tp3": null,
+    "tp_main": 1.09945685,
+    "capital": 1000.0,
+    "status": "OPEN",
+    "exit_price": null,
+    "pnl_usd": null,
+    "result": null,
+    "closed_at": null,
+    "exit_time": null,
+    "grind_count": 0,
+    "grind_entries": [
+      1.08965
+    ],
+    "tag": "breakout_long",
+    "best_price": 1.08965,
+    "worst_price": 1.08965
   }
 ]
