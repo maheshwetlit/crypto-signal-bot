@@ -33670,19 +33670,20 @@
     "tp3": null,
     "tp_main": 8.1497858,
     "capital": 1000.0,
-    "status": "OPEN",
-    "exit_price": null,
-    "pnl_usd": null,
-    "result": null,
-    "closed_at": null,
-    "exit_time": null,
+    "status": "WIN",
+    "exit_price": 8.2148,
+    "pnl_usd": 1.09,
+    "result": "WIN",
+    "closed_at": "2026-07-18T12:31:04.438043+00:00",
+    "exit_time": "2026-07-18T12:31:04.438043+00:00",
     "grind_count": 0,
     "grind_entries": [
       8.2238
     ],
     "tag": "breakout_short",
     "best_price": 8.2965,
-    "worst_price": 8.2148
+    "worst_price": 8.2148,
+    "pnl_pct": 0.11
   },
   {
     "id": "SIG-1016",
@@ -33819,7 +33820,7 @@
     ],
     "tag": "breakout_short",
     "best_price": 0.34676,
-    "worst_price": 0.34203
+    "worst_price": 0.3417
   },
   {
     "id": "SIG-1020",
@@ -33853,7 +33854,7 @@
     ],
     "tag": "breakout_short",
     "best_price": 193.48,
-    "worst_price": 192.44
+    "worst_price": 192.16
   },
   {
     "id": "SIG-1021",
@@ -33921,7 +33922,7 @@
     ],
     "tag": "breakout_short",
     "best_price": 0.1662,
-    "worst_price": 0.1658
+    "worst_price": 0.1655
   },
   {
     "id": "SIG-1023",
@@ -33955,7 +33956,7 @@
     ],
     "tag": "breakout_long",
     "best_price": 59.09,
-    "worst_price": 58.818
+    "worst_price": 58.657
   },
   {
     "id": "SIG-1024",
@@ -33989,7 +33990,7 @@
     ],
     "tag": "breakout_short",
     "best_price": 59.08,
-    "worst_price": 58.818
+    "worst_price": 58.657
   },
   {
     "id": "SIG-1025",
@@ -34023,7 +34024,7 @@
     ],
     "tag": "breakout_short",
     "best_price": 0.04667,
-    "worst_price": 0.04657
+    "worst_price": 0.0464
   },
   {
     "id": "SIG-1026",
@@ -34092,7 +34093,7 @@
     ],
     "tag": "breakout_long",
     "best_price": 0.2281,
-    "worst_price": 0.2281
+    "worst_price": 0.2273
   },
   {
     "id": "SIG-1028",
@@ -34126,6 +34127,6 @@
     ],
     "tag": "breakout_short",
     "best_price": 0.04645,
-    "worst_price": 0.04645
+    "worst_price": 0.0464
   }
 ]
