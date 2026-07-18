@@ -33087,7 +33087,7 @@
     ],
     "tag": "breakout_short",
     "best_price": 1.9201,
-    "worst_price": 1.9033
+    "worst_price": 1.9002
   },
   {
     "id": "SIG-0999",
@@ -33155,7 +33155,7 @@
     ],
     "tag": "breakout_short",
     "best_price": 2.728e-06,
-    "worst_price": 2.713e-06
+    "worst_price": 2.71e-06
   },
   {
     "id": "SIG-1001",
@@ -33189,7 +33189,7 @@
     ],
     "tag": "breakout_short",
     "best_price": 3.5226,
-    "worst_price": 3.507
+    "worst_price": 3.506
   },
   {
     "id": "SIG-1002",
@@ -33291,7 +33291,7 @@
     ],
     "tag": "breakout_short",
     "best_price": 6.6,
-    "worst_price": 6.549
+    "worst_price": 6.544
   },
   {
     "id": "SIG-1005",
@@ -33325,7 +33325,7 @@
     ],
     "tag": "breakout_short",
     "best_price": 45.47,
-    "worst_price": 45.43
+    "worst_price": 45.39
   },
   {
     "id": "SIG-1006",
@@ -33427,7 +33427,7 @@
     ],
     "tag": "breakout_long",
     "best_price": 45.52,
-    "worst_price": 45.43
+    "worst_price": 45.39
   },
   {
     "id": "SIG-1009",
@@ -33484,19 +33484,20 @@
     "tp3": null,
     "tp_main": 0.02248579,
     "capital": 1000.0,
-    "status": "OPEN",
-    "exit_price": null,
-    "pnl_usd": null,
-    "result": null,
-    "closed_at": null,
-    "exit_time": null,
+    "status": "WIN",
+    "exit_price": 0.02248579,
+    "pnl_usd": 9.0,
+    "result": "WIN",
+    "closed_at": "2026-07-18T09:25:54.963619+00:00",
+    "exit_time": "2026-07-18T09:25:54.963619+00:00",
     "grind_count": 0,
     "grind_entries": [
       0.02269
     ],
     "tag": "breakout_short",
     "best_price": 0.02269,
-    "worst_price": 0.02249
+    "worst_price": 0.02248,
+    "pnl_pct": 0.9
   },
   {
     "id": "SIG-1011",
@@ -33565,7 +33566,7 @@
     ],
     "tag": "breakout_short",
     "best_price": 8.2353,
-    "worst_price": 8.2241
+    "worst_price": 8.2238
   },
   {
     "id": "SIG-1013",
@@ -33635,5 +33636,39 @@
     "tag": "breakout_short",
     "best_price": 0.158,
     "worst_price": 0.1578
+  },
+  {
+    "id": "SIG-1015",
+    "time": "2026-07-18T09:26:26.975855+00:00",
+    "pair": "LINK/USDT",
+    "exchange": "KuCoin",
+    "direction": "SHORT",
+    "style": "CONFIRMED_BREAKOUT",
+    "score": 78.5,
+    "adx": 18.5,
+    "rsi": 36.7,
+    "rsi3": 17.6,
+    "volume_x": 1.29,
+    "htf_trend": "NEUTRAL",
+    "entry": 8.2238,
+    "sl": 8.388276000000001,
+    "tp1": 8.1497858,
+    "tp2": null,
+    "tp3": null,
+    "tp_main": 8.1497858,
+    "capital": 1000.0,
+    "status": "OPEN",
+    "exit_price": null,
+    "pnl_usd": null,
+    "result": null,
+    "closed_at": null,
+    "exit_time": null,
+    "grind_count": 0,
+    "grind_entries": [
+      8.2238
+    ],
+    "tag": "breakout_short",
+    "best_price": 8.2238,
+    "worst_price": 8.2238
   }
 ]
