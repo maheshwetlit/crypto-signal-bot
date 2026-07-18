@@ -35038,5 +35038,39 @@
     "tag": "breakout_long",
     "best_price": 0.1656,
     "worst_price": 0.1656
+  },
+  {
+    "id": "SIG-1055",
+    "time": "2026-07-18T19:36:29.700719+00:00",
+    "pair": "DEXE/USDT",
+    "exchange": "KuCoin",
+    "direction": "SHORT",
+    "style": "CONFIRMED_BREAKOUT",
+    "score": 79.8,
+    "adx": 19.8,
+    "rsi": 26.3,
+    "rsi3": 0.9,
+    "volume_x": 3.24,
+    "htf_trend": "BEARISH",
+    "entry": 35.4677,
+    "sl": 36.177054,
+    "tp1": 35.1484907,
+    "tp2": null,
+    "tp3": null,
+    "tp_main": 35.1484907,
+    "capital": 1000.0,
+    "status": "OPEN",
+    "exit_price": null,
+    "pnl_usd": null,
+    "result": null,
+    "closed_at": null,
+    "exit_time": null,
+    "grind_count": 0,
+    "grind_entries": [
+      35.4677
+    ],
+    "tag": "breakout_short",
+    "best_price": 35.4677,
+    "worst_price": 35.4677
   }
 ]
