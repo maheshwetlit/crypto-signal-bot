@@ -33705,19 +33705,20 @@
     "tp3": null,
     "tp_main": 0.727394,
     "capital": 1000.0,
-    "status": "OPEN",
-    "exit_price": null,
-    "pnl_usd": null,
-    "result": null,
-    "closed_at": null,
-    "exit_time": null,
+    "status": "CLOSED",
+    "exit_price": 0.734,
+    "pnl_usd": 0.0,
+    "result": "STALE",
+    "closed_at": "2026-07-18T12:35:51.203670+00:00",
+    "exit_time": "2026-07-18T12:35:51.203670+00:00",
     "grind_count": 0,
     "grind_entries": [
       0.734
     ],
     "tag": "breakout_short",
     "best_price": 0.736,
-    "worst_price": 0.734
+    "worst_price": 0.734,
+    "pnl_pct": 0.0
   },
   {
     "id": "SIG-1017",
@@ -33887,7 +33888,7 @@
       1.8947
     ],
     "tag": "breakout_short",
-    "best_price": 1.9143,
+    "best_price": 1.9166,
     "worst_price": 1.8947
   },
   {
@@ -34093,7 +34094,7 @@
     ],
     "tag": "breakout_long",
     "best_price": 0.2281,
-    "worst_price": 0.2273
+    "worst_price": 0.226
   },
   {
     "id": "SIG-1028",
@@ -34126,7 +34127,7 @@
       0.04645
     ],
     "tag": "breakout_short",
-    "best_price": 0.04645,
+    "best_price": 0.04653,
     "worst_price": 0.0464
   }
 ]
