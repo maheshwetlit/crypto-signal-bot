@@ -31612,7 +31612,7 @@
       1.555
     ],
     "tag": "breakout_long",
-    "best_price": 1.565,
+    "best_price": 1.567,
     "worst_price": 1.555
   },
   {
@@ -31714,7 +31714,7 @@
       1.556
     ],
     "tag": "breakout_long",
-    "best_price": 1.565,
+    "best_price": 1.567,
     "worst_price": 1.556
   },
   {
@@ -31748,7 +31748,7 @@
       4.152e-06
     ],
     "tag": "breakout_long",
-    "best_price": 4.154e-06,
+    "best_price": 4.157e-06,
     "worst_price": 4.145e-06
   },
   {
@@ -31851,7 +31851,7 @@
       89.747
     ],
     "tag": "breakout_short",
-    "best_price": 90.026,
+    "best_price": 90.175,
     "worst_price": 89.747
   },
   {
@@ -31885,7 +31885,7 @@
       4.152e-06
     ],
     "tag": "breakout_long",
-    "best_price": 4.154e-06,
+    "best_price": 4.157e-06,
     "worst_price": 4.152e-06
   },
   {
@@ -31919,7 +31919,7 @@
       1.488
     ],
     "tag": "breakout_short",
-    "best_price": 1.493,
+    "best_price": 1.495,
     "worst_price": 1.488
   },
   {
@@ -31942,19 +31942,20 @@
     "tp3": null,
     "tp_main": 0.37917210999999995,
     "capital": 1000.0,
-    "status": "OPEN",
-    "exit_price": null,
-    "pnl_usd": null,
-    "result": null,
-    "closed_at": null,
-    "exit_time": null,
+    "status": "WIN",
+    "exit_price": 0.37917210999999995,
+    "pnl_usd": 9.0,
+    "result": "WIN",
+    "closed_at": "2026-07-18T01:25:53.493358+00:00",
+    "exit_time": "2026-07-18T01:25:53.493358+00:00",
     "grind_count": 0,
     "grind_entries": [
       0.37579
     ],
     "tag": "breakout_long",
-    "best_price": 0.37718,
-    "worst_price": 0.37579
+    "best_price": 0.37976,
+    "worst_price": 0.37579,
+    "pnl_pct": 0.9
   },
   {
     "id": "SIG-0967",
@@ -31987,7 +31988,7 @@
       6.61
     ],
     "tag": "breakout_long",
-    "best_price": 6.616,
+    "best_price": 6.619,
     "worst_price": 6.61
   },
   {
@@ -32010,18 +32011,19 @@
     "tp3": null,
     "tp_main": 0.024952569999999997,
     "capital": 1000.0,
-    "status": "OPEN",
-    "exit_price": null,
-    "pnl_usd": null,
-    "result": null,
-    "closed_at": null,
-    "exit_time": null,
+    "status": "LOSS",
+    "exit_price": 0.024235399999999997,
+    "pnl_usd": -20.0,
+    "result": "LOSS",
+    "closed_at": "2026-07-18T01:25:53.493358+00:00",
+    "exit_time": "2026-07-18T01:25:53.493358+00:00",
     "grind_count": 0,
     "grind_entries": [
       0.02473
     ],
     "tag": "breakout_long",
     "best_price": 0.02473,
-    "worst_price": 0.02473
+    "worst_price": 0.02404,
+    "pnl_pct": -2.0
   }
 ]
