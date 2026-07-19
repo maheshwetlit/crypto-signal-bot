@@ -441,9 +441,13 @@ def main():
     with open(SIGNAL_LOG_FILE) as f:
         updated = json.load(f)
 
-    # Step 4: Commit back to GitHub (non-fatal if it fails)
+    # Step 4: Commit back to GitHub — DISABLED by default.
+    # The GitHub Actions bot (bot.yml) is the SOLE writer of signals_log.json.
+    # A local/remote report task pushing a stale local copy was corrupting the
+    # log (truncating signals). Reports are READ-ONLY now. Set HERMES_REPORT_WRITE=1
+    # only if you intentionally want the report task to also write.
     print("[4/5] Committing to GitHub...")
-    if not dry_run:
+    if os.environ.get("HERMES_REPORT_WRITE") == "1" and not dry_run:
         try:
             if gh_commit_signals(updated):
                 print("       Committed OK")
@@ -453,7 +457,7 @@ def main():
             print(f"       WARN: GitHub commit failed ({e}) — signals not synced to GitHub")
             print("       The validator still updated the local signals_log.json")
     else:
-        print("       DRY RUN — skip commit")
+        print("       READ-ONLY: report does not write the log (bot is sole writer)")
 
     # Step 5: Build and send report
     print("[5/5] Building report...")
