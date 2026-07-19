@@ -30,19 +30,24 @@ jobs:
           pip install -r requirements.txt
       - name: Run bot
         env:
-          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
-          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
-          HERMES_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
-          HERMES_TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.HERMESCRYPTOTRADINGBOT }}
+          TELEGRAM_CHAT_ID: ${{ secrets.HERMES_TELEGRAM_CHAT_ID }}
+          HERMES_BOT_TOKEN: ${{ secrets.HERMESCRYPTOTRADINGBOT }}
+          HERMES_TELEGRAM_CHAT_ID: ${{ secrets.HERMES_TELEGRAM_CHAT_ID }}
         run: python crypto_signal_bot.py
       - name: Commit signals log
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           if [ -f signals_log.json ]; then
+            # Rebase-pull first so concurrent runs can't clobber each other's signals
+            git pull --rebase --autostash origin main || true
             git add signals_log.json
             git diff --cached --quiet || git commit -m "Update signals_log.json [skip ci]"
-            git push
+            # Retry push up to 3x; if it fails (concurrent write), the next run picks up the slack
+            for i in 1 2 3; do
+              git push && break || { sleep 5; git pull --rebase --autostash origin main || true; }
+            done
           else
             echo "signals_log.json not found, skipping commit"
           fi
