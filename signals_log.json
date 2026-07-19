@@ -35979,5 +35979,39 @@
     "tag": "breakout_long",
     "best_price": 0.8363,
     "worst_price": 0.8363
+  },
+  {
+    "id": "SIG-1082",
+    "time": "2026-07-19T03:46:17.963872+00:00",
+    "pair": "TRUMP/USDT",
+    "exchange": "KuCoin",
+    "direction": "LONG",
+    "style": "CONFIRMED_BREAKOUT",
+    "score": 84.1,
+    "adx": 24.1,
+    "rsi": 56.2,
+    "rsi3": 69.2,
+    "volume_x": 1.41,
+    "htf_trend": "BULLISH",
+    "entry": 1.661,
+    "sl": 1.62778,
+    "tp1": 1.675949,
+    "tp2": null,
+    "tp3": null,
+    "tp_main": 1.675949,
+    "capital": 1000.0,
+    "status": "OPEN",
+    "exit_price": null,
+    "pnl_usd": null,
+    "result": null,
+    "closed_at": null,
+    "exit_time": null,
+    "grind_count": 0,
+    "grind_entries": [
+      1.661
+    ],
+    "tag": "breakout_long",
+    "best_price": 1.661,
+    "worst_price": 1.661
   }
 ]
