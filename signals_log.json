@@ -36114,19 +36114,20 @@
     "tp3": null,
     "tp_main": 0.33918957,
     "capital": 1000.0,
-    "status": "OPEN",
-    "exit_price": null,
-    "pnl_usd": null,
-    "result": null,
-    "closed_at": null,
-    "exit_time": null,
+    "status": "LOSS",
+    "exit_price": 0.3491154,
+    "pnl_usd": -20.0,
+    "result": "LOSS",
+    "closed_at": "2026-07-19T06:35:53.530181+00:00",
+    "exit_time": "2026-07-19T06:35:53.530181+00:00",
     "grind_count": 0,
     "grind_entries": [
       0.34227
     ],
     "tag": "breakout_short",
-    "best_price": 0.34793,
-    "worst_price": 0.34227
+    "best_price": 0.35017,
+    "worst_price": 0.34227,
+    "pnl_pct": -2.0
   },
   {
     "id": "SIG-1086",
@@ -36193,7 +36194,7 @@
       558.191
     ],
     "tag": "breakout_long",
-    "best_price": 559.179,
+    "best_price": 559.886,
     "worst_price": 557.93
   },
   {
@@ -36296,7 +36297,41 @@
       1.9262
     ],
     "tag": "breakout_long",
-    "best_price": 1.9287,
+    "best_price": 1.931,
     "worst_price": 1.9253
+  },
+  {
+    "id": "SIG-1091",
+    "time": "2026-07-19T06:36:26.402159+00:00",
+    "pair": "ONDO/USDT",
+    "exchange": "KuCoin",
+    "direction": "LONG",
+    "style": "CONFIRMED_BREAKOUT",
+    "score": 86.2,
+    "adx": 26.2,
+    "rsi": 80.9,
+    "rsi3": NaN,
+    "volume_x": 1.82,
+    "htf_trend": "NEUTRAL",
+    "entry": 0.35063,
+    "sl": 0.3436174,
+    "tp1": 0.35378566999999994,
+    "tp2": null,
+    "tp3": null,
+    "tp_main": 0.35378566999999994,
+    "capital": 1000.0,
+    "status": "OPEN",
+    "exit_price": null,
+    "pnl_usd": null,
+    "result": null,
+    "closed_at": null,
+    "exit_time": null,
+    "grind_count": 0,
+    "grind_entries": [
+      0.35063
+    ],
+    "tag": "breakout_long",
+    "best_price": 0.35063,
+    "worst_price": 0.35063
   }
 ]
