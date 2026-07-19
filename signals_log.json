@@ -35703,5 +35703,39 @@
     "best_price": 0.0441,
     "worst_price": 0.0441,
     "pnl_pct": 2.04
+  },
+  {
+    "id": "SIG-1074",
+    "time": "2026-07-19T01:41:27.095201+00:00",
+    "pair": "TAO/USDT",
+    "exchange": "KuCoin",
+    "direction": "SHORT",
+    "style": "CONFIRMED_BREAKOUT",
+    "score": 76.9,
+    "adx": 16.9,
+    "rsi": 27.1,
+    "rsi3": 0.0,
+    "volume_x": 1.11,
+    "htf_trend": "NEUTRAL",
+    "entry": 195.4,
+    "sl": 199.30800000000002,
+    "tp1": 193.6414,
+    "tp2": null,
+    "tp3": null,
+    "tp_main": 193.6414,
+    "capital": 1000.0,
+    "status": "OPEN",
+    "exit_price": null,
+    "pnl_usd": null,
+    "result": null,
+    "closed_at": null,
+    "exit_time": null,
+    "grind_count": 0,
+    "grind_entries": [
+      195.4
+    ],
+    "tag": "breakout_short",
+    "best_price": 195.4,
+    "worst_price": 195.4
   }
 ]
