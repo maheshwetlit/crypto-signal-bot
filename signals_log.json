@@ -35207,19 +35207,20 @@
     "tp3": null,
     "tp_main": 65402.06829999999,
     "capital": 1000.0,
-    "status": "OPEN",
-    "exit_price": null,
-    "pnl_usd": null,
-    "result": null,
-    "closed_at": null,
-    "exit_time": null,
+    "status": "WIN",
+    "exit_price": 64854.7,
+    "pnl_usd": 0.56,
+    "result": "WIN",
+    "closed_at": "2026-07-19T00:25:46.119842+00:00",
+    "exit_time": "2026-07-19T00:25:46.119842+00:00",
     "grind_count": 0,
     "grind_entries": [
       64818.7
     ],
     "tag": "breakout_long",
-    "best_price": 64831.2,
-    "worst_price": 64783.8
+    "best_price": 64854.7,
+    "worst_price": 64783.8,
+    "pnl_pct": 0.06
   },
   {
     "id": "SIG-1060",
@@ -35241,19 +35242,20 @@
     "tp3": null,
     "tp_main": 1.10750867,
     "capital": 1000.0,
-    "status": "OPEN",
-    "exit_price": null,
-    "pnl_usd": null,
-    "result": null,
-    "closed_at": null,
-    "exit_time": null,
+    "status": "CLOSED",
+    "exit_price": 1.09763,
+    "pnl_usd": 0.0,
+    "result": "STALE",
+    "closed_at": "2026-07-19T00:25:46.119842+00:00",
+    "exit_time": "2026-07-19T00:25:46.119842+00:00",
     "grind_count": 0,
     "grind_entries": [
       1.09763
     ],
     "tag": "breakout_long",
     "best_price": 1.09763,
-    "worst_price": 1.09263
+    "worst_price": 1.09263,
+    "pnl_pct": 0.0
   },
   {
     "id": "SIG-1061",
@@ -35287,7 +35289,7 @@
     ],
     "tag": "breakout_short",
     "best_price": 0.34899,
-    "worst_price": 0.34708
+    "worst_price": 0.34594
   },
   {
     "id": "SIG-1062",
@@ -35320,7 +35322,7 @@
       1.614
     ],
     "tag": "breakout_short",
-    "best_price": 1.623,
+    "best_price": 1.637,
     "worst_price": 1.614
   },
   {
@@ -35388,7 +35390,7 @@
       335.49
     ],
     "tag": "breakout_long",
-    "best_price": 336.06,
+    "best_price": 336.4,
     "worst_price": 335.44
   },
   {
@@ -35457,7 +35459,7 @@
     ],
     "tag": "breakout_long",
     "best_price": 60.463,
-    "worst_price": 60.391
+    "worst_price": 60.381
   },
   {
     "id": "SIG-1067",
@@ -35490,7 +35492,7 @@
       336.37
     ],
     "tag": "breakout_long",
-    "best_price": 336.37,
+    "best_price": 336.4,
     "worst_price": 336.37
   }
 ]
