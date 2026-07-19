@@ -35662,19 +35662,20 @@
     "tp3": null,
     "tp_main": 3.5125004,
     "capital": 1000.0,
-    "status": "OPEN",
-    "exit_price": null,
-    "pnl_usd": null,
-    "result": null,
-    "closed_at": null,
-    "exit_time": null,
+    "status": "WIN",
+    "exit_price": 3.5205,
+    "pnl_usd": 6.74,
+    "result": "WIN",
+    "closed_at": "2026-07-19T04:10:52.521806+00:00",
+    "exit_time": "2026-07-19T04:10:52.521806+00:00",
     "grind_count": 0,
     "grind_entries": [
       3.5444
     ],
     "tag": "breakout_short",
     "best_price": 3.5594,
-    "worst_price": 3.5205
+    "worst_price": 3.5205,
+    "pnl_pct": 0.67
   },
   {
     "id": "SIG-1073",
@@ -35777,7 +35778,7 @@
     ],
     "tag": "breakout_long",
     "best_price": 337.82,
-    "worst_price": 336.75
+    "worst_price": 336.5
   },
   {
     "id": "SIG-1076",
@@ -35913,7 +35914,7 @@
     ],
     "tag": "breakout_long",
     "best_price": 60.976,
-    "worst_price": 60.713
+    "worst_price": 60.67
   },
   {
     "id": "SIG-1080",
@@ -35947,7 +35948,7 @@
     ],
     "tag": "breakout_short",
     "best_price": 46.86,
-    "worst_price": 46.79
+    "worst_price": 46.77
   },
   {
     "id": "SIG-1081",
@@ -36049,6 +36050,40 @@
     ],
     "tag": "breakout_short",
     "best_price": 46.79,
-    "worst_price": 46.79
+    "worst_price": 46.77
+  },
+  {
+    "id": "SIG-1084",
+    "time": "2026-07-19T04:11:33.028043+00:00",
+    "pair": "ESPORTS/USDT",
+    "exchange": "KuCoin",
+    "direction": "LONG",
+    "style": "CONFIRMED_BREAKOUT",
+    "score": 82.2,
+    "adx": 22.2,
+    "rsi": 36.5,
+    "rsi3": 52.5,
+    "volume_x": 1.23,
+    "htf_trend": "BULLISH",
+    "entry": 0.0463,
+    "sl": 0.045374,
+    "tp1": 0.04671669999999999,
+    "tp2": null,
+    "tp3": null,
+    "tp_main": 0.04671669999999999,
+    "capital": 1000.0,
+    "status": "OPEN",
+    "exit_price": null,
+    "pnl_usd": null,
+    "result": null,
+    "closed_at": null,
+    "exit_time": null,
+    "grind_count": 0,
+    "grind_entries": [
+      0.0463
+    ],
+    "tag": "breakout_long",
+    "best_price": 0.0463,
+    "worst_price": 0.0463
   }
 ]
