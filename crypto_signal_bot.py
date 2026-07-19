@@ -360,6 +360,8 @@ def log_signal(symbol, sig):
         "htf_trend":  sig["htf"],
         "entry":      sig["entry"],
         "sl":         sig["sl"],
+        "best_price": sig["entry"],   # peak/trough tracking seed (updated each close run)
+        "worst_price": sig["entry"],
         "tp1":        sig["tp"][0] if len(sig["tp"]) > 0 else None,
         "tp2":        sig["tp"][1] if len(sig["tp"]) > 1 else None,
         "tp3":        sig["tp"][2] if len(sig["tp"]) > 2 else None,
@@ -375,9 +377,6 @@ def log_signal(symbol, sig):
         "grind_count": 0,
         "grind_entries": [sig["entry"]],
         "tag": sig.get("tag", ""),
-        # peak/trough tracking for close logic (path-aware, not snapshot)
-        "best_price": sig["entry"],
-        "worst_price": sig["entry"],
     }
     log.append(entry)
     with open(Config.SIGNAL_LOG_FILE, "w") as f:
@@ -389,12 +388,9 @@ def log_signal(symbol, sig):
 
 
 def close_open_signals(ex, nt):
-    """Close OPEN signals using PATH-AWARE peak/trough tracking (not instant
-    snapshot). A LONG wins the moment price EVER touched TP during the hold
-    window; loses only if price EVER touched SL. This fixes the 31.9% live WR
-    caused by the old instant-check + 3h market-force-close (159/257 closed as
-    STALE at a random price, many were winning). We update best/worst each run
-    and close STALE at the BEST favorable price, not market."""
+    """Close any OPEN signal whose TP/SL has been hit, or that has been open
+    longer than MAX_HOLD_BARS (stale). Without this the log fills with OPEN
+    signals and MAX_OPEN_TOTAL starves the engine (0 new signals)."""
     log = _load_signals()
     if not log:
         return 0, 0
@@ -411,37 +407,45 @@ def close_open_signals(ex, nt):
             continue
         entry = s["entry"]; sl = s["sl"]; tp = s.get("tp_main") or s.get("tp1")
         direction = s["direction"]
-        # update running best/worst seen
+        cur = cur  # current price from ticker
+        # ---- update running best/worst seen (path-aware, not snapshot) ----
         if direction == "LONG":
-            bp = max(s.get("best_price", entry), cur)
-            wp = min(s.get("worst_price", entry), cur)
+            s["best_price"] = max(s.get("best_price", entry), cur)
+            s["worst_price"] = min(s.get("worst_price", entry), cur)
         else:
-            bp = max(s.get("best_price", entry), cur)
-            wp = min(s.get("worst_price", entry), cur)
-        s["best_price"] = bp
-        s["worst_price"] = wp
-        # Determine outcome from the WHOLE path (best/worst seen so far)
-        closed = False; res = None; px = None
+            s["best_price"] = min(s.get("best_price", entry), cur)
+            s["worst_price"] = max(s.get("worst_price", entry), cur)
+        bp = s["best_price"]; wp = s["worst_price"]
+        closed = False
+        # WIN if price EVER touched TP during the hold window (peak/trough)
         if tp is not None:
             if direction == "LONG" and bp >= tp:
                 closed, res, px = True, "WIN", tp
             elif direction == "SHORT" and wp <= tp:
                 closed, res, px = True, "WIN", tp
+        # LOSS if price EVER touched SL
         if not closed and sl is not None:
             if direction == "LONG" and wp <= sl:
                 closed, res, px = True, "LOSS", sl
             elif direction == "SHORT" and bp >= sl:
                 closed, res, px = True, "LOSS", sl
-        # stale: close at BEST favorable price (missed-TP winners counted), long window
+        # stale timeout — close at the BETTER of (SL, current) so losses are
+        # capped at MAX_SL_PCT and favorable stalls aren't force-closed at a dip
         if not closed:
             try:
                 age_min = (now - datetime.fromisoformat(s["time"])).total_seconds() / 60
             except Exception:
                 age_min = 0
             if age_min >= Config.MAX_HOLD_BARS * 5:
-                # close at best-favorable price seen; count as WIN if it was profitable
-                fav = bp if direction == "LONG" else wp
-                closed, res, px = True, "STALE", fav
+                if direction == "LONG":
+                    px = max(sl if sl is not None else cur, cur)
+                else:
+                    px = min(sl if sl is not None else cur, cur)
+                # classify by where px landed relative to entry
+                if (direction == "LONG" and px >= entry) or (direction == "SHORT" and px <= entry):
+                    closed, res = True, "WIN"
+                else:
+                    closed, res = True, "STALE"
         if closed:
             pnl_pct = (px - entry) / entry if direction == "LONG" else (entry - px) / entry
             s["status"] = "CLOSED" if res == "STALE" else res
@@ -452,13 +456,11 @@ def close_open_signals(ex, nt):
             s["pnl_pct"] = round(pnl_pct * 100, 2)
             s["pnl_usd"] = round(Config.CAPITAL_PER_SIGNAL * pnl_pct, 2)
             changed = True
-            if pnl_pct > 0:
+            if res == "WIN":
                 wins += 1
-                res_final = "WIN" if res != "STALE" else "WIN"
-                s["status"] = "WIN"; s["result"] = "WIN"
             else:
                 losses += 1
-            print(f"[CLOSE] {s['id']} {sym} {direction} {s['result']} @ {px}")
+            print(f"[CLOSE] {s['id']} {sym} {direction} {res} @ {px}")
     if changed:
         with open(Config.SIGNAL_LOG_FILE, "w") as f:
             _file_lock(f)
