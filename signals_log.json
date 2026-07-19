@@ -273,11 +273,16 @@
   },
   {
     "id": "SIG-0009",
+<<<<<<< Updated upstream
     "time": "2026-07-19T16:51:26.925017+00:00",
+=======
+    "time": "2026-07-19T16:51:33.847758+00:00",
+>>>>>>> Stashed changes
     "pair": "ESPORTS/USDT",
     "exchange": "KuCoin",
     "direction": "LONG",
     "style": "CONFIRMED_BREAKOUT",
+<<<<<<< Updated upstream
     "score": 87.6,
     "adx": 27.6,
     "rsi": 61.4,
@@ -292,6 +297,22 @@
     "tp2": null,
     "tp3": null,
     "tp_main": 0.037131199999999996,
+=======
+    "score": 87.8,
+    "adx": 27.8,
+    "rsi": 62.1,
+    "rsi3": NaN,
+    "volume_x": 2.26,
+    "htf_trend": "BULLISH",
+    "entry": 0.037,
+    "sl": 0.03626,
+    "best_price": 0.037,
+    "worst_price": 0.037,
+    "tp1": 0.03733299999999999,
+    "tp2": null,
+    "tp3": null,
+    "tp_main": 0.03733299999999999,
+>>>>>>> Stashed changes
     "capital": 1000.0,
     "status": "OPEN",
     "exit_price": null,
@@ -301,7 +322,11 @@
     "exit_time": null,
     "grind_count": 0,
     "grind_entries": [
+<<<<<<< Updated upstream
       0.0368
+=======
+      0.037
+>>>>>>> Stashed changes
     ],
     "tag": "breakout_long"
   }
