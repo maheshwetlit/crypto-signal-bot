@@ -1,7 +1,11 @@
 [
   {
     "id": "SIG-0001",
+<<<<<<< Updated upstream
     "time": "2026-07-20T11:01:23.957320+00:00",
+=======
+    "time": "2026-07-20T11:01:35.119045+00:00",
+>>>>>>> Stashed changes
     "pair": "LTC/USDT",
     "exchange": "KuCoin",
     "direction": "LONG",
@@ -30,6 +34,43 @@
     "grind_count": 0,
     "grind_entries": [
       47.12
+<<<<<<< Updated upstream
+=======
+    ],
+    "tag": "breakout_long"
+  },
+  {
+    "id": "SIG-0002",
+    "time": "2026-07-20T11:01:53.122085+00:00",
+    "pair": "SEI/USDT",
+    "exchange": "KuCoin",
+    "direction": "LONG",
+    "style": "CONFIRMED_BREAKOUT",
+    "score": 82.8,
+    "adx": 22.8,
+    "rsi": 50.0,
+    "rsi3": 33.3,
+    "volume_x": 0.8,
+    "htf_trend": "BEARISH",
+    "entry": 0.0462,
+    "sl": 0.045276,
+    "best_price": 0.0462,
+    "worst_price": 0.0462,
+    "tp1": 0.04661579999999999,
+    "tp2": null,
+    "tp3": null,
+    "tp_main": 0.04661579999999999,
+    "capital": 1000.0,
+    "status": "OPEN",
+    "exit_price": null,
+    "pnl_usd": null,
+    "result": null,
+    "closed_at": null,
+    "exit_time": null,
+    "grind_count": 0,
+    "grind_entries": [
+      0.0462
+>>>>>>> Stashed changes
     ],
     "tag": "breakout_long"
   }
