@@ -103,7 +103,11 @@
   },
   {
     "id": "SIG-0004",
+<<<<<<< Updated upstream
     "time": "2026-07-20T13:31:35.125694+00:00",
+=======
+    "time": "2026-07-20T13:31:49.346317+00:00",
+>>>>>>> Stashed changes
     "pair": "BNB/USDT",
     "exchange": "KuCoin",
     "direction": "SHORT",
@@ -134,6 +138,7 @@
       568.112
     ],
     "tag": "breakout_short"
+<<<<<<< Updated upstream
   },
   {
     "id": "SIG-0005",
@@ -168,5 +173,7 @@
       0.7547
     ],
     "tag": "breakout_long"
+=======
+>>>>>>> Stashed changes
   }
 ]
