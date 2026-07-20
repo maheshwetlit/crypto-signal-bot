@@ -100,5 +100,39 @@
       0.1885
     ],
     "tag": "breakout_long"
+  },
+  {
+    "id": "SIG-0004",
+    "time": "2026-07-20T15:16:44.469799+00:00",
+    "pair": "ONDO/USDT",
+    "exchange": "KuCoin",
+    "direction": "LONG",
+    "style": "CONFIRMED_BREAKOUT",
+    "score": 80.1,
+    "adx": 20.1,
+    "rsi": 60.0,
+    "rsi3": 96.9,
+    "volume_x": 1.01,
+    "htf_trend": "NEUTRAL",
+    "entry": 0.34843,
+    "sl": 0.3414614,
+    "best_price": 0.34843,
+    "worst_price": 0.34843,
+    "tp1": 0.35156587,
+    "tp2": null,
+    "tp3": null,
+    "tp_main": 0.35156587,
+    "capital": 1000.0,
+    "status": "OPEN",
+    "exit_price": null,
+    "pnl_usd": null,
+    "result": null,
+    "closed_at": null,
+    "exit_time": null,
+    "grind_count": 0,
+    "grind_entries": [
+      0.34843
+    ],
+    "tag": "breakout_long"
   }
 ]
