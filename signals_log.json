@@ -103,7 +103,11 @@
   },
   {
     "id": "SIG-0004",
+<<<<<<< Updated upstream
     "time": "2026-07-20T10:51:37.684626+00:00",
+=======
+    "time": "2026-07-20T10:51:55.568727+00:00",
+>>>>>>> Stashed changes
     "pair": "SEI/USDT",
     "exchange": "KuCoin",
     "direction": "LONG",
