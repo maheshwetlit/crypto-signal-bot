@@ -341,7 +341,11 @@
   },
   {
     "id": "SIG-0011",
+<<<<<<< Updated upstream
     "time": "2026-07-20T14:21:42.710047+00:00",
+=======
+    "time": "2026-07-20T14:22:00.462292+00:00",
+>>>>>>> Stashed changes
     "pair": "TRUMP/USDT",
     "exchange": "KuCoin",
     "direction": "SHORT",
@@ -350,7 +354,11 @@
     "adx": 20.9,
     "rsi": 32.6,
     "rsi3": 0.0,
+<<<<<<< Updated upstream
     "volume_x": 1.72,
+=======
+    "volume_x": 2.05,
+>>>>>>> Stashed changes
     "htf_trend": "NEUTRAL",
     "entry": 1.559,
     "sl": 1.59018,
@@ -375,16 +383,28 @@
   },
   {
     "id": "SIG-0012",
+<<<<<<< Updated upstream
     "time": "2026-07-20T14:22:00.271282+00:00",
+=======
+    "time": "2026-07-20T14:22:17.805579+00:00",
+>>>>>>> Stashed changes
     "pair": "SHIB/USDT",
     "exchange": "KuCoin",
     "direction": "SHORT",
     "style": "CONFIRMED_BREAKOUT",
+<<<<<<< Updated upstream
     "score": 84.5,
     "adx": 24.5,
     "rsi": 23.3,
     "rsi3": 0.0,
     "volume_x": 1.72,
+=======
+    "score": 84.6,
+    "adx": 24.6,
+    "rsi": 23.3,
+    "rsi3": 0.0,
+    "volume_x": 2.06,
+>>>>>>> Stashed changes
     "htf_trend": "NEUTRAL",
     "entry": 4.168e-06,
     "sl": 4.251359999999999e-06,
