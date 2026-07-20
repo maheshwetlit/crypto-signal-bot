@@ -757,5 +757,39 @@
       0.002037
     ],
     "tag": "breakout_short"
+  },
+  {
+    "id": "SIG-0023",
+    "time": "2026-07-20T20:51:19.879909+00:00",
+    "pair": "XMR/USDT",
+    "exchange": "KuCoin",
+    "direction": "LONG",
+    "style": "CONFIRMED_BREAKOUT",
+    "score": 83.0,
+    "adx": 23.0,
+    "rsi": 61.0,
+    "rsi3": 85.8,
+    "volume_x": 2.15,
+    "htf_trend": "BULLISH",
+    "entry": 336.89,
+    "sl": 330.1522,
+    "best_price": 336.89,
+    "worst_price": 336.89,
+    "tp1": 339.92200999999994,
+    "tp2": null,
+    "tp3": null,
+    "tp_main": 339.92200999999994,
+    "capital": 1000.0,
+    "status": "OPEN",
+    "exit_price": null,
+    "pnl_usd": null,
+    "result": null,
+    "closed_at": null,
+    "exit_time": null,
+    "grind_count": 0,
+    "grind_entries": [
+      336.89
+    ],
+    "tag": "breakout_long"
   }
 ]
