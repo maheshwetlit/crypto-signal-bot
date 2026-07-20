@@ -1,29 +1,25 @@
 [
   {
     "id": "SIG-0001",
-<<<<<<< Updated upstream
-    "time": "2026-07-20T11:01:23.957320+00:00",
-=======
-    "time": "2026-07-20T11:01:35.119045+00:00",
->>>>>>> Stashed changes
-    "pair": "LTC/USDT",
+    "time": "2026-07-20T11:06:40.972061+00:00",
+    "pair": "TRUMP/USDT",
     "exchange": "KuCoin",
     "direction": "LONG",
     "style": "CONFIRMED_BREAKOUT",
-    "score": 78.6,
-    "adx": 18.6,
-    "rsi": 79.3,
-    "rsi3": NaN,
-    "volume_x": 1.91,
-    "htf_trend": "BULLISH",
-    "entry": 47.12,
-    "sl": 46.1776,
-    "best_price": 47.12,
-    "worst_price": 47.12,
-    "tp1": 47.544079999999994,
+    "score": 82.1,
+    "adx": 22.1,
+    "rsi": 61.5,
+    "rsi3": 66.7,
+    "volume_x": 1.54,
+    "htf_trend": "NEUTRAL",
+    "entry": 1.569,
+    "sl": 1.53762,
+    "best_price": 1.569,
+    "worst_price": 1.569,
+    "tp1": 1.5831209999999998,
     "tp2": null,
     "tp3": null,
-    "tp_main": 47.544079999999994,
+    "tp_main": 1.5831209999999998,
     "capital": 1000.0,
     "status": "OPEN",
     "exit_price": null,
@@ -33,44 +29,7 @@
     "exit_time": null,
     "grind_count": 0,
     "grind_entries": [
-      47.12
-<<<<<<< Updated upstream
-=======
-    ],
-    "tag": "breakout_long"
-  },
-  {
-    "id": "SIG-0002",
-    "time": "2026-07-20T11:01:53.122085+00:00",
-    "pair": "SEI/USDT",
-    "exchange": "KuCoin",
-    "direction": "LONG",
-    "style": "CONFIRMED_BREAKOUT",
-    "score": 82.8,
-    "adx": 22.8,
-    "rsi": 50.0,
-    "rsi3": 33.3,
-    "volume_x": 0.8,
-    "htf_trend": "BEARISH",
-    "entry": 0.0462,
-    "sl": 0.045276,
-    "best_price": 0.0462,
-    "worst_price": 0.0462,
-    "tp1": 0.04661579999999999,
-    "tp2": null,
-    "tp3": null,
-    "tp_main": 0.04661579999999999,
-    "capital": 1000.0,
-    "status": "OPEN",
-    "exit_price": null,
-    "pnl_usd": null,
-    "result": null,
-    "closed_at": null,
-    "exit_time": null,
-    "grind_count": 0,
-    "grind_entries": [
-      0.0462
->>>>>>> Stashed changes
+      1.569
     ],
     "tag": "breakout_long"
   }
