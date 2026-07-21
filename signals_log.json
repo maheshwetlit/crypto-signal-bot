@@ -206,7 +206,11 @@
   },
   {
     "id": "SIG-0007",
+<<<<<<< Updated upstream
     "time": "2026-07-21T10:41:36.841432+00:00",
+=======
+    "time": "2026-07-21T10:42:33.552486+00:00",
+>>>>>>> Stashed changes
     "pair": "SEI/USDT",
     "exchange": "KuCoin",
     "direction": "SHORT",
@@ -215,7 +219,11 @@
     "adx": 17.3,
     "rsi": 46.9,
     "rsi3": 7.7,
+<<<<<<< Updated upstream
     "volume_x": 1.57,
+=======
+    "volume_x": 2.38,
+>>>>>>> Stashed changes
     "htf_trend": "NEUTRAL",
     "entry": 0.04745,
     "sl": 0.048399,
