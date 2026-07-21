@@ -35,13 +35,52 @@
   },
   {
     "id": "SIG-0002",
+<<<<<<< Updated upstream
     "time": "2026-07-21T08:21:24.232756+00:00",
+=======
+    "time": "2026-07-21T08:21:20.952274+00:00",
+    "pair": "ETH/USDT",
+    "exchange": "KuCoin",
+    "direction": "LONG",
+    "style": "CONFIRMED_BREAKOUT",
+    "score": 100.0,
+    "adx": 42.7,
+    "rsi": 67.1,
+    "rsi3": NaN,
+    "volume_x": 1.46,
+    "htf_trend": "BULLISH",
+    "entry": 1945.98,
+    "sl": 1907.0604,
+    "best_price": 1945.98,
+    "worst_price": 1945.98,
+    "tp1": 1963.49382,
+    "tp2": null,
+    "tp3": null,
+    "tp_main": 1963.49382,
+    "capital": 1000.0,
+    "status": "OPEN",
+    "exit_price": null,
+    "pnl_usd": null,
+    "result": null,
+    "closed_at": null,
+    "exit_time": null,
+    "grind_count": 0,
+    "grind_entries": [
+      1945.98
+    ],
+    "tag": "breakout_long"
+  },
+  {
+    "id": "SIG-0003",
+    "time": "2026-07-21T08:21:42.411122+00:00",
+>>>>>>> Stashed changes
     "pair": "LTC/USDT",
     "exchange": "KuCoin",
     "direction": "LONG",
     "style": "CONFIRMED_BREAKOUT",
     "score": 100.0,
     "adx": 47.8,
+<<<<<<< Updated upstream
     "rsi": 61.1,
     "rsi3": 86.7,
     "volume_x": 0.83,
@@ -54,6 +93,20 @@
     "tp2": null,
     "tp3": null,
     "tp_main": 48.06876,
+=======
+    "rsi": 63.2,
+    "rsi3": 88.9,
+    "volume_x": 0.89,
+    "htf_trend": "BULLISH",
+    "entry": 47.67,
+    "sl": 46.7166,
+    "best_price": 47.67,
+    "worst_price": 47.67,
+    "tp1": 48.09903,
+    "tp2": null,
+    "tp3": null,
+    "tp_main": 48.09903,
+>>>>>>> Stashed changes
     "capital": 1000.0,
     "status": "OPEN",
     "exit_price": null,
@@ -63,19 +116,29 @@
     "exit_time": null,
     "grind_count": 0,
     "grind_entries": [
+<<<<<<< Updated upstream
       47.64
+=======
+      47.67
+>>>>>>> Stashed changes
     ],
     "tag": "breakout_long"
   },
   {
+<<<<<<< Updated upstream
     "id": "SIG-0003",
     "time": "2026-07-21T08:22:05.039763+00:00",
+=======
+    "id": "SIG-0004",
+    "time": "2026-07-21T08:22:22.899681+00:00",
+>>>>>>> Stashed changes
     "pair": "SHIB/USDT",
     "exchange": "KuCoin",
     "direction": "LONG",
     "style": "CONFIRMED_BREAKOUT",
     "score": 79.1,
     "adx": 19.1,
+<<<<<<< Updated upstream
     "rsi": 63.8,
     "rsi3": 86.7,
     "volume_x": 2.3,
@@ -88,6 +151,20 @@
     "tp2": null,
     "tp3": null,
     "tp_main": 4.336681999999999e-06,
+=======
+    "rsi": 63.0,
+    "rsi3": 85.7,
+    "volume_x": 2.3,
+    "htf_trend": "BULLISH",
+    "entry": 4.297e-06,
+    "sl": 4.21106e-06,
+    "best_price": 4.297e-06,
+    "worst_price": 4.297e-06,
+    "tp1": 4.335672999999999e-06,
+    "tp2": null,
+    "tp3": null,
+    "tp_main": 4.335672999999999e-06,
+>>>>>>> Stashed changes
     "capital": 1000.0,
     "status": "OPEN",
     "exit_price": null,
@@ -97,7 +174,11 @@
     "exit_time": null,
     "grind_count": 0,
     "grind_entries": [
+<<<<<<< Updated upstream
       4.298e-06
+=======
+      4.297e-06
+>>>>>>> Stashed changes
     ],
     "tag": "breakout_long"
   }
