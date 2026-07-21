@@ -1,29 +1,25 @@
 [
   {
     "id": "SIG-0001",
-<<<<<<< Updated upstream
-    "time": "2026-07-21T13:41:47.010126+00:00",
-=======
-    "time": "2026-07-21T13:41:59.608082+00:00",
->>>>>>> Stashed changes
+    "time": "2026-07-21T14:11:36.246476+00:00",
     "pair": "HYPE/USDT",
     "exchange": "KuCoin",
     "direction": "SHORT",
     "style": "CONFIRMED_BREAKOUT",
-    "score": 87.2,
-    "adx": 27.2,
-    "rsi": 36.4,
-    "rsi3": 0.0,
-    "volume_x": 1.9,
+    "score": 90.5,
+    "adx": 30.5,
+    "rsi": 40.9,
+    "rsi3": 22.4,
+    "volume_x": 3.38,
     "htf_trend": "NEUTRAL",
-    "entry": 62.321,
-    "sl": 63.56742,
-    "best_price": 62.321,
-    "worst_price": 62.321,
-    "tp1": 61.760110999999995,
+    "entry": 62.498,
+    "sl": 63.74796,
+    "best_price": 62.498,
+    "worst_price": 62.498,
+    "tp1": 61.935517999999995,
     "tp2": null,
     "tp3": null,
-    "tp_main": 61.760110999999995,
+    "tp_main": 61.935517999999995,
     "capital": 1000.0,
     "status": "OPEN",
     "exit_price": null,
@@ -33,66 +29,7 @@
     "exit_time": null,
     "grind_count": 0,
     "grind_entries": [
-      62.321
-    ],
-    "tag": "breakout_short"
-  },
-  {
-    "id": "SIG-0002",
-<<<<<<< Updated upstream
-    "time": "2026-07-21T13:41:56.686211+00:00",
-=======
-    "time": "2026-07-21T13:42:12.939998+00:00",
->>>>>>> Stashed changes
-    "pair": "SEI/USDT",
-    "exchange": "KuCoin",
-    "direction": "SHORT",
-    "style": "CONFIRMED_BREAKOUT",
-<<<<<<< Updated upstream
-    "score": 88.9,
-    "adx": 28.9,
-    "rsi": 36.2,
-    "rsi3": 0.0,
-    "volume_x": 3.88,
-    "htf_trend": "NEUTRAL",
-    "entry": 0.04708,
-    "sl": 0.0480216,
-    "best_price": 0.04708,
-    "worst_price": 0.04708,
-    "tp1": 0.046656279999999994,
-    "tp2": null,
-    "tp3": null,
-    "tp_main": 0.046656279999999994,
-=======
-    "score": 89.0,
-    "adx": 29.0,
-    "rsi": 34.0,
-    "rsi3": 0.0,
-    "volume_x": 3.89,
-    "htf_trend": "NEUTRAL",
-    "entry": 0.04705,
-    "sl": 0.047991000000000006,
-    "best_price": 0.04705,
-    "worst_price": 0.04705,
-    "tp1": 0.04662655,
-    "tp2": null,
-    "tp3": null,
-    "tp_main": 0.04662655,
->>>>>>> Stashed changes
-    "capital": 1000.0,
-    "status": "OPEN",
-    "exit_price": null,
-    "pnl_usd": null,
-    "result": null,
-    "closed_at": null,
-    "exit_time": null,
-    "grind_count": 0,
-    "grind_entries": [
-<<<<<<< Updated upstream
-      0.04708
-=======
-      0.04705
->>>>>>> Stashed changes
+      62.498
     ],
     "tag": "breakout_short"
   }
