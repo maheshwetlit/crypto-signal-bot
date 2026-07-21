@@ -717,5 +717,39 @@
       342.55
     ],
     "tag": "breakout_long"
+  },
+  {
+    "id": "SIG-0022",
+    "time": "2026-07-21T03:21:08.410388+00:00",
+    "pair": "ETH/USDT",
+    "exchange": "KuCoin",
+    "direction": "LONG",
+    "style": "CONFIRMED_BREAKOUT",
+    "score": 92.8,
+    "adx": 32.8,
+    "rsi": 76.4,
+    "rsi3": 71.8,
+    "volume_x": 0.87,
+    "htf_trend": "BULLISH",
+    "entry": 1926.7,
+    "sl": 1888.166,
+    "best_price": 1926.7,
+    "worst_price": 1926.7,
+    "tp1": 1944.0403,
+    "tp2": null,
+    "tp3": null,
+    "tp_main": 1944.0403,
+    "capital": 1000.0,
+    "status": "OPEN",
+    "exit_price": null,
+    "pnl_usd": null,
+    "result": null,
+    "closed_at": null,
+    "exit_time": null,
+    "grind_count": 0,
+    "grind_entries": [
+      1926.7
+    ],
+    "tag": "breakout_long"
   }
 ]
