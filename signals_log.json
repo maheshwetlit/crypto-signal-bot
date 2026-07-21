@@ -1,7 +1,11 @@
 [
   {
     "id": "SIG-0001",
+<<<<<<< Updated upstream
     "time": "2026-07-21T08:41:48.014674+00:00",
+=======
+    "time": "2026-07-21T08:41:45.371934+00:00",
+>>>>>>> Stashed changes
     "pair": "BNB/USDT",
     "exchange": "KuCoin",
     "direction": "LONG",
@@ -35,11 +39,16 @@
   },
   {
     "id": "SIG-0002",
+<<<<<<< Updated upstream
     "time": "2026-07-21T08:42:23.878701+00:00",
+=======
+    "time": "2026-07-21T08:42:26.848934+00:00",
+>>>>>>> Stashed changes
     "pair": "PUMP/USDT",
     "exchange": "KuCoin",
     "direction": "SHORT",
     "style": "CONFIRMED_BREAKOUT",
+<<<<<<< Updated upstream
     "score": 76.9,
     "adx": 16.9,
     "rsi": 13.9,
@@ -54,6 +63,22 @@
     "tp2": null,
     "tp3": null,
     "tp_main": 0.001979027,
+=======
+    "score": 77.0,
+    "adx": 17.0,
+    "rsi": 13.4,
+    "rsi3": 0.0,
+    "volume_x": 3.46,
+    "htf_trend": "BULLISH",
+    "entry": 0.001994,
+    "sl": 0.00203388,
+    "best_price": 0.001994,
+    "worst_price": 0.001994,
+    "tp1": 0.001976054,
+    "tp2": null,
+    "tp3": null,
+    "tp_main": 0.001976054,
+>>>>>>> Stashed changes
     "capital": 1000.0,
     "status": "OPEN",
     "exit_price": null,
@@ -63,7 +88,11 @@
     "exit_time": null,
     "grind_count": 0,
     "grind_entries": [
+<<<<<<< Updated upstream
       0.001997
+=======
+      0.001994
+>>>>>>> Stashed changes
     ],
     "tag": "breakout_short"
   }
