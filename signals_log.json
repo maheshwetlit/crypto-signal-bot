@@ -787,5 +787,39 @@
       0.1713
     ],
     "tag": "breakout_long"
+  },
+  {
+    "id": "SIG-0024",
+    "time": "2026-07-21T03:41:46.817121+00:00",
+    "pair": "GROVE/USDT",
+    "exchange": "KuCoin",
+    "direction": "LONG",
+    "style": "CONFIRMED_BREAKOUT",
+    "score": 88.0,
+    "adx": 28.0,
+    "rsi": 57.8,
+    "rsi3": NaN,
+    "volume_x": 0.3,
+    "htf_trend": "BEARISH",
+    "entry": 0.01152,
+    "sl": 0.0112896,
+    "best_price": 0.01152,
+    "worst_price": 0.01152,
+    "tp1": 0.011623679999999999,
+    "tp2": null,
+    "tp3": null,
+    "tp_main": 0.011623679999999999,
+    "capital": 1000.0,
+    "status": "OPEN",
+    "exit_price": null,
+    "pnl_usd": null,
+    "result": null,
+    "closed_at": null,
+    "exit_time": null,
+    "grind_count": 0,
+    "grind_entries": [
+      0.01152
+    ],
+    "tag": "breakout_long"
   }
 ]
