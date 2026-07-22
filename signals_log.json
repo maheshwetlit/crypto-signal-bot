@@ -719,7 +719,11 @@
   },
   {
     "id": "SIG-0022",
+<<<<<<< Updated upstream
     "time": "2026-07-22T14:41:55.904489+00:00",
+=======
+    "time": "2026-07-22T14:42:07.934800+00:00",
+>>>>>>> Stashed changes
     "pair": "ASTER/USDT",
     "exchange": "KuCoin",
     "direction": "SHORT",
@@ -728,7 +732,11 @@
     "adx": 24.8,
     "rsi": 38.3,
     "rsi3": 43.8,
+<<<<<<< Updated upstream
     "volume_x": 3.5,
+=======
+    "volume_x": 3.91,
+>>>>>>> Stashed changes
     "htf_trend": "NEUTRAL",
     "entry": 0.6248,
     "sl": 0.6372960000000001,
