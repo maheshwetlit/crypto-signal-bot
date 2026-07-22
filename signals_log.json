@@ -889,7 +889,11 @@
     "htf_trend": "BULLISH",
     "entry": 1.13864,
     "sl": 1.1614128000000001,
+<<<<<<< Updated upstream
     "best_price": 1.13267,
+=======
+    "best_price": 1.1327,
+>>>>>>> Stashed changes
     "worst_price": 1.14154,
     "tp1": 1.1283922400000002,
     "tp2": null,
@@ -897,11 +901,19 @@
     "tp_main": 1.1283922400000002,
     "capital": 1000.0,
     "status": "WIN",
+<<<<<<< Updated upstream
     "exit_price": 1.13267,
     "pnl_usd": 5.24,
     "result": "WIN",
     "closed_at": "2026-07-22T06:14:42.994800+00:00",
     "exit_time": "2026-07-22T06:14:42.994800+00:00",
+=======
+    "exit_price": 1.1327,
+    "pnl_usd": 5.22,
+    "result": "WIN",
+    "closed_at": "2026-07-22T06:15:57.991901+00:00",
+    "exit_time": "2026-07-22T06:15:57.991901+00:00",
+>>>>>>> Stashed changes
     "grind_count": 0,
     "grind_entries": [
       1.13864
@@ -924,7 +936,11 @@
     "htf_trend": "BEARISH",
     "entry": 60.345,
     "sl": 61.5519,
+<<<<<<< Updated upstream
     "best_price": 58.831,
+=======
+    "best_price": 58.776,
+>>>>>>> Stashed changes
     "worst_price": 60.58,
     "tp1": 59.801895,
     "tp2": null,
@@ -958,7 +974,11 @@
     "htf_trend": "BULLISH",
     "entry": 0.1912,
     "sl": 0.195024,
+<<<<<<< Updated upstream
     "best_price": 0.1891,
+=======
+    "best_price": 0.1889,
+>>>>>>> Stashed changes
     "worst_price": 0.192,
     "tp1": 0.18947920000000001,
     "tp2": null,
@@ -1026,7 +1046,11 @@
     "htf_trend": "BULLISH",
     "entry": 66251.4,
     "sl": 67576.428,
+<<<<<<< Updated upstream
     "best_price": 65982.1,
+=======
+    "best_price": 65946.1,
+>>>>>>> Stashed changes
     "worst_price": 66393.4,
     "tp1": 65655.13739999999,
     "tp2": null,
@@ -1060,7 +1084,11 @@
     "htf_trend": "BULLISH",
     "entry": 0.8501,
     "sl": 0.8671019999999999,
+<<<<<<< Updated upstream
     "best_price": 0.8432,
+=======
+    "best_price": 0.8426,
+>>>>>>> Stashed changes
     "worst_price": 0.8553,
     "tp1": 0.8424491,
     "tp2": null,
@@ -1094,7 +1122,11 @@
     "htf_trend": "BULLISH",
     "entry": 0.1913,
     "sl": 0.195126,
+<<<<<<< Updated upstream
     "best_price": 0.1891,
+=======
+    "best_price": 0.1889,
+>>>>>>> Stashed changes
     "worst_price": 0.192,
     "tp1": 0.1895783,
     "tp2": null,
@@ -1128,7 +1160,11 @@
     "htf_trend": "NEUTRAL",
     "entry": 46.65,
     "sl": 47.583,
+<<<<<<< Updated upstream
     "best_price": 46.41,
+=======
+    "best_price": 46.4,
+>>>>>>> Stashed changes
     "worst_price": 46.68,
     "tp1": 46.230149999999995,
     "tp2": null,
@@ -1162,7 +1198,11 @@
     "htf_trend": "BULLISH",
     "entry": 77.67,
     "sl": 79.2234,
+<<<<<<< Updated upstream
     "best_price": 77.27,
+=======
+    "best_price": 77.22,
+>>>>>>> Stashed changes
     "worst_price": 77.67,
     "tp1": 76.97097,
     "tp2": null,
@@ -1264,7 +1304,11 @@
     "htf_trend": "NEUTRAL",
     "entry": 0.07277,
     "sl": 0.0742254,
+<<<<<<< Updated upstream
     "best_price": 0.07245,
+=======
+    "best_price": 0.0724,
+>>>>>>> Stashed changes
     "worst_price": 0.07283,
     "tp1": 0.07211507,
     "tp2": null,
@@ -1298,7 +1342,11 @@
     "htf_trend": "BEARISH",
     "entry": 59.085,
     "sl": 60.2667,
+<<<<<<< Updated upstream
     "best_price": 58.831,
+=======
+    "best_price": 58.776,
+>>>>>>> Stashed changes
     "worst_price": 59.114,
     "tp1": 58.553235,
     "tp2": null,
@@ -1332,7 +1380,7 @@
     "htf_trend": "NEUTRAL",
     "entry": 2.846e-06,
     "sl": 2.90292e-06,
-    "best_price": 2.844e-06,
+    "best_price": 2.843e-06,
     "worst_price": 2.846e-06,
     "tp1": 2.8203859999999997e-06,
     "tp2": null,
@@ -1434,7 +1482,11 @@
     "htf_trend": "NEUTRAL",
     "entry": 77.45,
     "sl": 78.99900000000001,
+<<<<<<< Updated upstream
     "best_price": 77.27,
+=======
+    "best_price": 77.22,
+>>>>>>> Stashed changes
     "worst_price": 77.45,
     "tp1": 76.75295,
     "tp2": null,
@@ -1503,7 +1555,11 @@
     "entry": 0.07237,
     "sl": 0.0738174,
     "best_price": 0.07237,
+<<<<<<< Updated upstream
     "worst_price": 0.07245,
+=======
+    "worst_price": 0.0724,
+>>>>>>> Stashed changes
     "tp1": 0.07171867,
     "tp2": null,
     "tp3": null,
