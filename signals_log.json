@@ -35,7 +35,45 @@
   },
   {
     "id": "SIG-0002",
+<<<<<<< Updated upstream
     "time": "2026-07-22T15:21:45.014949+00:00",
+=======
+    "time": "2026-07-22T15:21:25.449505+00:00",
+    "pair": "SOL/USDT",
+    "exchange": "KuCoin",
+    "direction": "LONG",
+    "style": "CONFIRMED_BREAKOUT",
+    "score": 92.8,
+    "adx": 32.8,
+    "rsi": 63.6,
+    "rsi3": NaN,
+    "volume_x": 1.24,
+    "htf_trend": "BULLISH",
+    "entry": 78.57,
+    "sl": 76.9986,
+    "best_price": 78.57,
+    "worst_price": 78.57,
+    "tp1": 79.27712999999999,
+    "tp2": null,
+    "tp3": null,
+    "tp_main": 79.27712999999999,
+    "capital": 1000.0,
+    "status": "OPEN",
+    "exit_price": null,
+    "pnl_usd": null,
+    "result": null,
+    "closed_at": null,
+    "exit_time": null,
+    "grind_count": 0,
+    "grind_entries": [
+      78.57
+    ],
+    "tag": "breakout_long"
+  },
+  {
+    "id": "SIG-0003",
+    "time": "2026-07-22T15:22:06.313088+00:00",
+>>>>>>> Stashed changes
     "pair": "ADA/USDT",
     "exchange": "KuCoin",
     "direction": "LONG",
