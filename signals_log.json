@@ -1,7 +1,11 @@
 [
   {
     "id": "SIG-0001",
+<<<<<<< Updated upstream
     "time": "2026-07-22T21:51:36.303658+00:00",
+=======
+    "time": "2026-07-22T21:52:49.780793+00:00",
+>>>>>>> Stashed changes
     "pair": "LTC/USDT",
     "exchange": "KuCoin",
     "direction": "LONG",
@@ -10,7 +14,11 @@
     "adx": 38.3,
     "rsi": 91.3,
     "rsi3": NaN,
+<<<<<<< Updated upstream
     "volume_x": 0.92,
+=======
+    "volume_x": 0.98,
+>>>>>>> Stashed changes
     "htf_trend": "BULLISH",
     "entry": 47.61,
     "sl": 46.6578,
@@ -35,11 +43,16 @@
   },
   {
     "id": "SIG-0002",
+<<<<<<< Updated upstream
     "time": "2026-07-22T21:51:46.743133+00:00",
+=======
+    "time": "2026-07-22T21:52:59.921957+00:00",
+>>>>>>> Stashed changes
     "pair": "PIEVERSE/USDT",
     "exchange": "KuCoin",
     "direction": "LONG",
     "style": "CONFIRMED_BREAKOUT",
+<<<<<<< Updated upstream
     "score": 85.7,
     "adx": 25.7,
     "rsi": 64.1,
@@ -54,6 +67,22 @@
     "tp2": null,
     "tp3": null,
     "tp_main": 0.6814785999999999,
+=======
+    "score": 86.0,
+    "adx": 26.0,
+    "rsi": 65.2,
+    "rsi3": NaN,
+    "volume_x": 1.67,
+    "htf_trend": "BULLISH",
+    "entry": 0.676,
+    "sl": 0.6624800000000001,
+    "best_price": 0.676,
+    "worst_price": 0.676,
+    "tp1": 0.682084,
+    "tp2": null,
+    "tp3": null,
+    "tp_main": 0.682084,
+>>>>>>> Stashed changes
     "capital": 1000.0,
     "status": "OPEN",
     "exit_price": null,
@@ -63,13 +92,21 @@
     "exit_time": null,
     "grind_count": 0,
     "grind_entries": [
+<<<<<<< Updated upstream
       0.6754
+=======
+      0.676
+>>>>>>> Stashed changes
     ],
     "tag": "breakout_long"
   },
   {
     "id": "SIG-0003",
+<<<<<<< Updated upstream
     "time": "2026-07-22T21:51:57.072684+00:00",
+=======
+    "time": "2026-07-22T21:53:09.793902+00:00",
+>>>>>>> Stashed changes
     "pair": "MTV/USDT",
     "exchange": "KuCoin",
     "direction": "LONG",
