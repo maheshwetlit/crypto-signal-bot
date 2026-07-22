@@ -35,11 +35,16 @@
   },
   {
     "id": "SIG-0002",
+<<<<<<< Updated upstream
     "time": "2026-07-22T21:41:41.700455+00:00",
+=======
+    "time": "2026-07-22T21:42:07.984978+00:00",
+>>>>>>> Stashed changes
     "pair": "ENA/USDT",
     "exchange": "KuCoin",
     "direction": "LONG",
     "style": "CONFIRMED_BREAKOUT",
+<<<<<<< Updated upstream
     "score": 80.0,
     "adx": 20.0,
     "rsi": 52.4,
@@ -54,6 +59,22 @@
     "tp2": null,
     "tp3": null,
     "tp_main": 0.0929289,
+=======
+    "score": 79.8,
+    "adx": 19.8,
+    "rsi": 54.5,
+    "rsi3": NaN,
+    "volume_x": 1.42,
+    "htf_trend": "BULLISH",
+    "entry": 0.0922,
+    "sl": 0.090356,
+    "best_price": 0.0922,
+    "worst_price": 0.0922,
+    "tp1": 0.0930298,
+    "tp2": null,
+    "tp3": null,
+    "tp_main": 0.0930298,
+>>>>>>> Stashed changes
     "capital": 1000.0,
     "status": "OPEN",
     "exit_price": null,
@@ -63,7 +84,11 @@
     "exit_time": null,
     "grind_count": 0,
     "grind_entries": [
+<<<<<<< Updated upstream
       0.0921
+=======
+      0.0922
+>>>>>>> Stashed changes
     ],
     "tag": "breakout_long"
   }
