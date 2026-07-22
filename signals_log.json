@@ -32,5 +32,39 @@
       1.15525
     ],
     "tag": "breakout_long"
+  },
+  {
+    "id": "SIG-0002",
+    "time": "2026-07-22T16:06:39.516930+00:00",
+    "pair": "MTV/USDT",
+    "exchange": "KuCoin",
+    "direction": "SHORT",
+    "style": "CONFIRMED_BREAKOUT",
+    "score": 89.5,
+    "adx": 29.5,
+    "rsi": 2.0,
+    "rsi3": 0.0,
+    "volume_x": 0.43,
+    "htf_trend": "BEARISH",
+    "entry": 0.000137441,
+    "sl": 0.00014018982,
+    "best_price": 0.000137441,
+    "worst_price": 0.000137441,
+    "tp1": 0.000136204031,
+    "tp2": null,
+    "tp3": null,
+    "tp_main": 0.000136204031,
+    "capital": 1000.0,
+    "status": "OPEN",
+    "exit_price": null,
+    "pnl_usd": null,
+    "result": null,
+    "closed_at": null,
+    "exit_time": null,
+    "grind_count": 0,
+    "grind_entries": [
+      0.000137441
+    ],
+    "tag": "breakout_short"
   }
 ]
