@@ -273,13 +273,18 @@
   },
   {
     "id": "SIG-0009",
+<<<<<<< Updated upstream
     "time": "2026-07-22T07:56:09.385874+00:00",
+=======
+    "time": "2026-07-22T07:56:50.204872+00:00",
+>>>>>>> Stashed changes
     "pair": "MTV/USDT",
     "exchange": "KuCoin",
     "direction": "LONG",
     "style": "CONFIRMED_BREAKOUT",
     "score": 87.5,
     "adx": 27.5,
+<<<<<<< Updated upstream
     "rsi": 53.6,
     "rsi3": 97.7,
     "volume_x": 8.45,
@@ -292,6 +297,20 @@
     "tp2": null,
     "tp3": null,
     "tp_main": 0.000144168947,
+=======
+    "rsi": 53.5,
+    "rsi3": 97.7,
+    "volume_x": 11.63,
+    "htf_trend": "NEUTRAL",
+    "entry": 0.000142875,
+    "sl": 0.0001400175,
+    "best_price": 0.000142875,
+    "worst_price": 0.000142875,
+    "tp1": 0.00014416087499999998,
+    "tp2": null,
+    "tp3": null,
+    "tp_main": 0.00014416087499999998,
+>>>>>>> Stashed changes
     "capital": 1000.0,
     "status": "OPEN",
     "exit_price": null,
@@ -301,7 +320,11 @@
     "exit_time": null,
     "grind_count": 0,
     "grind_entries": [
+<<<<<<< Updated upstream
       0.000142883
+=======
+      0.000142875
+>>>>>>> Stashed changes
     ],
     "tag": "breakout_long"
   }
