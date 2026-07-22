@@ -35,7 +35,11 @@
   },
   {
     "id": "SIG-0002",
+<<<<<<< Updated upstream
     "time": "2026-07-22T16:06:39.516930+00:00",
+=======
+    "time": "2026-07-22T16:06:45.245611+00:00",
+>>>>>>> Stashed changes
     "pair": "MTV/USDT",
     "exchange": "KuCoin",
     "direction": "SHORT",
