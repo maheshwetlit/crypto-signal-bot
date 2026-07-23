@@ -647,7 +647,11 @@
   },
   {
     "id": "SIG-0020",
+<<<<<<< Updated upstream
     "time": "2026-07-23T09:41:45.083274+00:00",
+=======
+    "time": "2026-07-23T09:42:59.756030+00:00",
+>>>>>>> Stashed changes
     "pair": "O/USDT",
     "exchange": "KuCoin",
     "direction": "SHORT",
