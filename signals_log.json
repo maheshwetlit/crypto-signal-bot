@@ -137,7 +137,11 @@
   },
   {
     "id": "SIG-0005",
+<<<<<<< Updated upstream
     "time": "2026-07-23T20:31:18.609268+00:00",
+=======
+    "time": "2026-07-23T20:31:20.176780+00:00",
+>>>>>>> Stashed changes
     "pair": "XRP/USDT",
     "exchange": "KuCoin",
     "direction": "LONG",
