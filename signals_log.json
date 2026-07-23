@@ -35,7 +35,11 @@
   },
   {
     "id": "SIG-0002",
+<<<<<<< Updated upstream
     "time": "2026-07-23T13:21:29.475554+00:00",
+=======
+    "time": "2026-07-23T13:22:12.389383+00:00",
+>>>>>>> Stashed changes
     "pair": "SNX/USDT",
     "exchange": "KuCoin",
     "direction": "SHORT",
@@ -66,5 +70,42 @@
       0.2241
     ],
     "tag": "breakout_short"
+<<<<<<< Updated upstream
+=======
+  },
+  {
+    "id": "SIG-0003",
+    "time": "2026-07-23T13:22:36.492171+00:00",
+    "pair": "ENA/USDT",
+    "exchange": "KuCoin",
+    "direction": "SHORT",
+    "style": "CONFIRMED_BREAKOUT",
+    "score": 90.6,
+    "adx": 30.6,
+    "rsi": 15.4,
+    "rsi3": 0.0,
+    "volume_x": 2.18,
+    "htf_trend": "NEUTRAL",
+    "entry": 0.0889,
+    "sl": 0.09067800000000001,
+    "best_price": 0.0889,
+    "worst_price": 0.0889,
+    "tp1": 0.08809990000000001,
+    "tp2": null,
+    "tp3": null,
+    "tp_main": 0.08809990000000001,
+    "capital": 1000.0,
+    "status": "OPEN",
+    "exit_price": null,
+    "pnl_usd": null,
+    "result": null,
+    "closed_at": null,
+    "exit_time": null,
+    "grind_count": 0,
+    "grind_entries": [
+      0.0889
+    ],
+    "tag": "breakout_short"
+>>>>>>> Stashed changes
   }
 ]
