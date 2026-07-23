@@ -35,7 +35,11 @@
   },
   {
     "id": "SIG-0002",
+<<<<<<< Updated upstream
     "time": "2026-07-23T20:41:10.433046+00:00",
+=======
+    "time": "2026-07-23T20:41:11.969919+00:00",
+>>>>>>> Stashed changes
     "pair": "SOL/USDT",
     "exchange": "KuCoin",
     "direction": "LONG",
