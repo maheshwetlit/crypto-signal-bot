@@ -1567,6 +1567,7 @@
   },
   {
     "id": "SIG-0046",
+<<<<<<< Updated upstream
     "time": "2026-07-23T07:31:41.517934+00:00",
     "pair": "LTC/USDT",
     "exchange": "KuCoin",
@@ -1586,6 +1587,27 @@
     "tp2": null,
     "tp3": null,
     "tp_main": 46.53736,
+=======
+    "time": "2026-07-23T07:32:01.485061+00:00",
+    "pair": "BTC/USDT",
+    "exchange": "KuCoin",
+    "direction": "SHORT",
+    "style": "CONFIRMED_BREAKOUT",
+    "score": 87.4,
+    "adx": 27.4,
+    "rsi": 34.1,
+    "rsi3": 50.6,
+    "volume_x": 1.41,
+    "htf_trend": "NEUTRAL",
+    "entry": 65456.6,
+    "sl": 66765.732,
+    "best_price": 65456.6,
+    "worst_price": 65456.6,
+    "tp1": 64867.4906,
+    "tp2": null,
+    "tp3": null,
+    "tp_main": 64867.4906,
+>>>>>>> Stashed changes
     "capital": 1000.0,
     "status": "OPEN",
     "exit_price": null,
@@ -1595,13 +1617,55 @@
     "exit_time": null,
     "grind_count": 0,
     "grind_entries": [
+<<<<<<< Updated upstream
       46.96
+=======
+      65456.6
+>>>>>>> Stashed changes
     ],
     "tag": "breakout_short"
   },
   {
     "id": "SIG-0047",
+<<<<<<< Updated upstream
     "time": "2026-07-23T07:31:55.055530+00:00",
+=======
+    "time": "2026-07-23T07:32:22.972959+00:00",
+    "pair": "HYPE/USDT",
+    "exchange": "KuCoin",
+    "direction": "SHORT",
+    "style": "CONFIRMED_BREAKOUT",
+    "score": 85.1,
+    "adx": 25.1,
+    "rsi": 42.0,
+    "rsi3": 0.0,
+    "volume_x": 0.68,
+    "htf_trend": "BEARISH",
+    "entry": 58.555,
+    "sl": 59.7261,
+    "best_price": 58.555,
+    "worst_price": 58.555,
+    "tp1": 58.028005,
+    "tp2": null,
+    "tp3": null,
+    "tp_main": 58.028005,
+    "capital": 1000.0,
+    "status": "OPEN",
+    "exit_price": null,
+    "pnl_usd": null,
+    "result": null,
+    "closed_at": null,
+    "exit_time": null,
+    "grind_count": 0,
+    "grind_entries": [
+      58.555
+    ],
+    "tag": "breakout_short"
+  },
+  {
+    "id": "SIG-0048",
+    "time": "2026-07-23T07:32:31.472663+00:00",
+>>>>>>> Stashed changes
     "pair": "ADA/USDT",
     "exchange": "KuCoin",
     "direction": "SHORT",
