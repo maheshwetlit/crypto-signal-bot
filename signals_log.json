@@ -69,7 +69,11 @@
   },
   {
     "id": "SIG-0003",
+<<<<<<< Updated upstream
     "time": "2026-07-23T12:01:49.379610+00:00",
+=======
+    "time": "2026-07-23T12:02:04.385085+00:00",
+>>>>>>> Stashed changes
     "pair": "AVAX/USDT",
     "exchange": "KuCoin",
     "direction": "SHORT",
@@ -100,6 +104,7 @@
       6.582
     ],
     "tag": "breakout_short"
+<<<<<<< Updated upstream
   },
   {
     "id": "SIG-0004",
@@ -134,5 +139,7 @@
       0.8183
     ],
     "tag": "breakout_short"
+=======
+>>>>>>> Stashed changes
   }
 ]
