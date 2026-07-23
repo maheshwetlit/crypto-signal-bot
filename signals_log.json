@@ -583,7 +583,11 @@
   },
   {
     "id": "SIG-0018",
+<<<<<<< Updated upstream
     "time": "2026-07-23T18:41:35.769710+00:00",
+=======
+    "time": "2026-07-23T18:41:28.064827+00:00",
+>>>>>>> Stashed changes
     "pair": "DOGE/USDT",
     "exchange": "KuCoin",
     "direction": "SHORT",
@@ -617,7 +621,11 @@
   },
   {
     "id": "SIG-0019",
+<<<<<<< Updated upstream
     "time": "2026-07-23T18:41:39.930096+00:00",
+=======
+    "time": "2026-07-23T18:41:34.640521+00:00",
+>>>>>>> Stashed changes
     "pair": "AVAX/USDT",
     "exchange": "KuCoin",
     "direction": "SHORT",
@@ -651,7 +659,45 @@
   },
   {
     "id": "SIG-0020",
+<<<<<<< Updated upstream
     "time": "2026-07-23T18:41:53.895215+00:00",
+=======
+    "time": "2026-07-23T18:41:36.878754+00:00",
+    "pair": "HYPE/USDT",
+    "exchange": "KuCoin",
+    "direction": "SHORT",
+    "style": "CONFIRMED_BREAKOUT",
+    "score": 99.4,
+    "adx": 39.4,
+    "rsi": 32.1,
+    "rsi3": 0.4,
+    "volume_x": 2.85,
+    "htf_trend": "BEARISH",
+    "entry": 57.946,
+    "sl": 59.10492,
+    "best_price": 57.946,
+    "worst_price": 57.946,
+    "tp1": 57.424485999999995,
+    "tp2": null,
+    "tp3": null,
+    "tp_main": 57.424485999999995,
+    "capital": 1000.0,
+    "status": "OPEN",
+    "exit_price": null,
+    "pnl_usd": null,
+    "result": null,
+    "closed_at": null,
+    "exit_time": null,
+    "grind_count": 0,
+    "grind_entries": [
+      57.946
+    ],
+    "tag": "breakout_short"
+  },
+  {
+    "id": "SIG-0021",
+    "time": "2026-07-23T18:41:55.529364+00:00",
+>>>>>>> Stashed changes
     "pair": "ADA/USDT",
     "exchange": "KuCoin",
     "direction": "SHORT",
