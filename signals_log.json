@@ -1135,23 +1135,24 @@
     "entry": 194.67,
     "sl": 198.5634,
     "best_price": 194.62,
-    "worst_price": 196.1,
+    "worst_price": 196.21,
     "tp1": 192.91797,
     "tp2": null,
     "tp3": null,
     "tp_main": 192.91797,
     "capital": 1000.0,
-    "status": "OPEN",
-    "exit_price": null,
-    "pnl_usd": null,
-    "result": null,
-    "closed_at": null,
-    "exit_time": null,
+    "status": "CLOSED",
+    "exit_price": 196.21,
+    "pnl_usd": -7.91,
+    "result": "STALE",
+    "closed_at": "2026-07-23T06:35:49.196239+00:00",
+    "exit_time": "2026-07-23T06:35:49.196239+00:00",
     "grind_count": 0,
     "grind_entries": [
       194.67
     ],
-    "tag": "breakout_short"
+    "tag": "breakout_short",
+    "pnl_pct": -0.79
   },
   {
     "id": "SIG-0034",
@@ -1304,7 +1305,7 @@
     "htf_trend": "NEUTRAL",
     "entry": 196.11,
     "sl": 192.1878,
-    "best_price": 196.11,
+    "best_price": 196.21,
     "worst_price": 196.11,
     "tp1": 197.87499,
     "tp2": null,
@@ -1322,5 +1323,39 @@
       196.11
     ],
     "tag": "breakout_long"
+  },
+  {
+    "id": "SIG-0039",
+    "time": "2026-07-23T06:36:28.765342+00:00",
+    "pair": "PIEVERSE/USDT",
+    "exchange": "KuCoin",
+    "direction": "SHORT",
+    "style": "CONFIRMED_BREAKOUT",
+    "score": 81.5,
+    "adx": 21.5,
+    "rsi": 33.9,
+    "rsi3": 0.0,
+    "volume_x": 2.61,
+    "htf_trend": "NEUTRAL",
+    "entry": 0.6637,
+    "sl": 0.676974,
+    "best_price": 0.6637,
+    "worst_price": 0.6637,
+    "tp1": 0.6577267,
+    "tp2": null,
+    "tp3": null,
+    "tp_main": 0.6577267,
+    "capital": 1000.0,
+    "status": "OPEN",
+    "exit_price": null,
+    "pnl_usd": null,
+    "result": null,
+    "closed_at": null,
+    "exit_time": null,
+    "grind_count": 0,
+    "grind_entries": [
+      0.6637
+    ],
+    "tag": "breakout_short"
   }
 ]
