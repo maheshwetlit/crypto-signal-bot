@@ -137,6 +137,7 @@
   },
   {
     "id": "SIG-0005",
+<<<<<<< Updated upstream
     "time": "2026-07-23T11:21:39.832324+00:00",
     "pair": "HYPE/USDT",
     "exchange": "KuCoin",
@@ -156,6 +157,27 @@
     "tp2": null,
     "tp3": null,
     "tp_main": 59.998166999999995,
+=======
+    "time": "2026-07-23T11:21:51.114842+00:00",
+    "pair": "NEAR/USDT",
+    "exchange": "KuCoin",
+    "direction": "LONG",
+    "style": "CONFIRMED_BREAKOUT",
+    "score": 100.0,
+    "adx": 43.6,
+    "rsi": 83.7,
+    "rsi3": NaN,
+    "volume_x": 0.92,
+    "htf_trend": "BEARISH",
+    "entry": 1.8929,
+    "sl": 1.855042,
+    "best_price": 1.8929,
+    "worst_price": 1.8929,
+    "tp1": 1.9099361,
+    "tp2": null,
+    "tp3": null,
+    "tp_main": 1.9099361,
+>>>>>>> Stashed changes
     "capital": 1000.0,
     "status": "OPEN",
     "exit_price": null,
@@ -165,7 +187,45 @@
     "exit_time": null,
     "grind_count": 0,
     "grind_entries": [
+<<<<<<< Updated upstream
       59.463
+=======
+      1.8929
+    ],
+    "tag": "breakout_long"
+  },
+  {
+    "id": "SIG-0006",
+    "time": "2026-07-23T11:21:58.035264+00:00",
+    "pair": "HYPE/USDT",
+    "exchange": "KuCoin",
+    "direction": "LONG",
+    "style": "CONFIRMED_BREAKOUT",
+    "score": 76.0,
+    "adx": 16.0,
+    "rsi": 60.4,
+    "rsi3": 95.5,
+    "volume_x": 1.97,
+    "htf_trend": "BEARISH",
+    "entry": 59.466,
+    "sl": 58.27668,
+    "best_price": 59.466,
+    "worst_price": 59.466,
+    "tp1": 60.001194,
+    "tp2": null,
+    "tp3": null,
+    "tp_main": 60.001194,
+    "capital": 1000.0,
+    "status": "OPEN",
+    "exit_price": null,
+    "pnl_usd": null,
+    "result": null,
+    "closed_at": null,
+    "exit_time": null,
+    "grind_count": 0,
+    "grind_entries": [
+      59.466
+>>>>>>> Stashed changes
     ],
     "tag": "breakout_long"
   }
