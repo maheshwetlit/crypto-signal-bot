@@ -205,7 +205,11 @@
   },
   {
     "id": "SIG-0007",
+<<<<<<< Updated upstream
     "time": "2026-07-24T11:21:24.775899+00:00",
+=======
+    "time": "2026-07-24T11:21:24.330134+00:00",
+>>>>>>> Stashed changes
     "pair": "TAO/USDT",
     "exchange": "KuCoin",
     "direction": "SHORT",
