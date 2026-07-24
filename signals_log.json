@@ -1729,7 +1729,11 @@
     "htf_trend": "NEUTRAL",
     "entry": 65422.8,
     "sl": 64114.344000000005,
+<<<<<<< Updated upstream
     "best_price": 65561.9,
+=======
+    "best_price": 65546.2,
+>>>>>>> Stashed changes
     "worst_price": 65274.0,
     "tp1": 66011.60519999999,
     "tp2": null,
@@ -1737,17 +1741,29 @@
     "tp_main": 66011.60519999999,
     "capital": 1000.0,
     "status": "WIN",
+<<<<<<< Updated upstream
     "exit_price": 65561.9,
     "pnl_usd": 2.13,
     "result": "WIN",
     "closed_at": "2026-07-24T07:04:32.554671+00:00",
     "exit_time": "2026-07-24T07:04:32.554671+00:00",
+=======
+    "exit_price": 65546.2,
+    "pnl_usd": 1.89,
+    "result": "WIN",
+    "closed_at": "2026-07-24T07:05:56.582083+00:00",
+    "exit_time": "2026-07-24T07:05:56.582083+00:00",
+>>>>>>> Stashed changes
     "grind_count": 0,
     "grind_entries": [
       65422.8
     ],
     "tag": "breakout_long",
+<<<<<<< Updated upstream
     "pnl_pct": 0.21
+=======
+    "pnl_pct": 0.19
+>>>>>>> Stashed changes
   },
   {
     "id": "SIG-0051",
@@ -1799,7 +1815,11 @@
     "entry": 1.8939,
     "sl": 1.931778,
     "best_price": 1.8929,
+<<<<<<< Updated upstream
     "worst_price": 1.9111,
+=======
+    "worst_price": 1.9096,
+>>>>>>> Stashed changes
     "tp1": 1.8768548999999999,
     "tp2": null,
     "tp3": null,
@@ -1832,7 +1852,11 @@
     "htf_trend": "BEARISH",
     "entry": 2.782e-06,
     "sl": 2.7263599999999996e-06,
+<<<<<<< Updated upstream
     "best_price": 2.8e-06,
+=======
+    "best_price": 2.797e-06,
+>>>>>>> Stashed changes
     "worst_price": 2.774e-06,
     "tp1": 2.8070379999999993e-06,
     "tp2": null,
@@ -1866,7 +1890,11 @@
     "htf_trend": "BEARISH",
     "entry": 193.85,
     "sl": 189.97299999999998,
+<<<<<<< Updated upstream
     "best_price": 194.35,
+=======
+    "best_price": 194.2,
+>>>>>>> Stashed changes
     "worst_price": 193.24,
     "tp1": 195.59464999999997,
     "tp2": null,
@@ -1900,7 +1928,11 @@
     "htf_trend": "BEARISH",
     "entry": 58.546,
     "sl": 57.37508,
+<<<<<<< Updated upstream
     "best_price": 58.856,
+=======
+    "best_price": 58.843,
+>>>>>>> Stashed changes
     "worst_price": 58.546,
     "tp1": 59.07291399999999,
     "tp2": null,
@@ -1969,7 +2001,11 @@
     "entry": 355.21,
     "sl": 362.31419999999997,
     "best_price": 355.21,
+<<<<<<< Updated upstream
     "worst_price": 357.74,
+=======
+    "worst_price": 357.31,
+>>>>>>> Stashed changes
     "tp1": 352.01311,
     "tp2": null,
     "tp3": null,
@@ -2002,7 +2038,11 @@
     "htf_trend": "NEUTRAL",
     "entry": 46.9,
     "sl": 45.961999999999996,
+<<<<<<< Updated upstream
     "best_price": 47.12,
+=======
+    "best_price": 47.11,
+>>>>>>> Stashed changes
     "worst_price": 46.9,
     "tp1": 47.32209999999999,
     "tp2": null,
@@ -2036,7 +2076,11 @@
     "htf_trend": "BEARISH",
     "entry": 2.789e-06,
     "sl": 2.7332199999999996e-06,
+<<<<<<< Updated upstream
     "best_price": 2.8e-06,
+=======
+    "best_price": 2.797e-06,
+>>>>>>> Stashed changes
     "worst_price": 2.788e-06,
     "tp1": 2.8141009999999997e-06,
     "tp2": null,
@@ -2138,7 +2182,11 @@
     "htf_trend": "BEARISH",
     "entry": 4.172e-06,
     "sl": 4.08856e-06,
+<<<<<<< Updated upstream
     "best_price": 4.183e-06,
+=======
+    "best_price": 4.181e-06,
+>>>>>>> Stashed changes
     "worst_price": 4.172e-06,
     "tp1": 4.209548e-06,
     "tp2": null,
