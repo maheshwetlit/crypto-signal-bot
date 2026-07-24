@@ -35,7 +35,11 @@
   },
   {
     "id": "SIG-0002",
+<<<<<<< Updated upstream
     "time": "2026-07-24T11:51:44.105790+00:00",
+=======
+    "time": "2026-07-24T11:51:47.242883+00:00",
+>>>>>>> Stashed changes
     "pair": "ASTER/USDT",
     "exchange": "KuCoin",
     "direction": "SHORT",
