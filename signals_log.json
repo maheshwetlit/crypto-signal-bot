@@ -307,7 +307,11 @@
   },
   {
     "id": "SIG-0010",
+<<<<<<< Updated upstream
     "time": "2026-07-24T16:31:37.916877+00:00",
+=======
+    "time": "2026-07-24T16:32:00.790304+00:00",
+>>>>>>> Stashed changes
     "pair": "SEI/USDT",
     "exchange": "KuCoin",
     "direction": "SHORT",
@@ -316,7 +320,11 @@
     "adx": 25.0,
     "rsi": 47.9,
     "rsi3": 20.0,
+<<<<<<< Updated upstream
     "volume_x": 1.32,
+=======
+    "volume_x": 1.6,
+>>>>>>> Stashed changes
     "htf_trend": "BEARISH",
     "entry": 0.04449,
     "sl": 0.045379800000000005,
@@ -341,7 +349,11 @@
   },
   {
     "id": "SIG-0011",
+<<<<<<< Updated upstream
     "time": "2026-07-24T16:31:48.986826+00:00",
+=======
+    "time": "2026-07-24T16:32:16.775163+00:00",
+>>>>>>> Stashed changes
     "pair": "ASTER/USDT",
     "exchange": "KuCoin",
     "direction": "LONG",
