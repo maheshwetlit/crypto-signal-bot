@@ -69,7 +69,45 @@
   },
   {
     "id": "SIG-0003",
+<<<<<<< Updated upstream
     "time": "2026-07-24T09:21:38.952413+00:00",
+=======
+    "time": "2026-07-24T09:22:00.390343+00:00",
+    "pair": "ONDO/USDT",
+    "exchange": "KuCoin",
+    "direction": "SHORT",
+    "style": "CONFIRMED_BREAKOUT",
+    "score": 85.6,
+    "adx": 25.6,
+    "rsi": 23.5,
+    "rsi3": 13.0,
+    "volume_x": 2.25,
+    "htf_trend": "NEUTRAL",
+    "entry": 0.39437,
+    "sl": 0.4022574,
+    "best_price": 0.39437,
+    "worst_price": 0.39437,
+    "tp1": 0.39082067,
+    "tp2": null,
+    "tp3": null,
+    "tp_main": 0.39082067,
+    "capital": 1000.0,
+    "status": "OPEN",
+    "exit_price": null,
+    "pnl_usd": null,
+    "result": null,
+    "closed_at": null,
+    "exit_time": null,
+    "grind_count": 0,
+    "grind_entries": [
+      0.39437
+    ],
+    "tag": "breakout_short"
+  },
+  {
+    "id": "SIG-0004",
+    "time": "2026-07-24T09:22:06.425326+00:00",
+>>>>>>> Stashed changes
     "pair": "DOT/USDT",
     "exchange": "KuCoin",
     "direction": "SHORT",
@@ -78,7 +116,11 @@
     "adx": 27.1,
     "rsi": 31.6,
     "rsi3": 0.0,
+<<<<<<< Updated upstream
     "volume_x": 5.16,
+=======
+    "volume_x": 5.53,
+>>>>>>> Stashed changes
     "htf_trend": "BEARISH",
     "entry": 0.8069,
     "sl": 0.8230379999999999,
