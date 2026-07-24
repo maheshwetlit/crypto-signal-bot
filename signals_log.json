@@ -1,7 +1,11 @@
 [
   {
     "id": "SIG-0001",
+<<<<<<< Updated upstream
     "time": "2026-07-24T10:11:46.427240+00:00",
+=======
+    "time": "2026-07-24T10:11:59.514347+00:00",
+>>>>>>> Stashed changes
     "pair": "DOT/USDT",
     "exchange": "KuCoin",
     "direction": "SHORT",
