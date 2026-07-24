@@ -1,28 +1,25 @@
 [
   {
     "id": "SIG-0001",
-<<<<<<< Updated upstream
-    "time": "2026-07-24T08:11:41.546930+00:00",
-=======
-    "time": "2026-07-24T08:11:33.042535+00:00",
+    "time": "2026-07-24T08:16:43.192499+00:00",
     "pair": "LTC/USDT",
     "exchange": "KuCoin",
     "direction": "SHORT",
     "style": "CONFIRMED_BREAKOUT",
-    "score": 92.0,
-    "adx": 32.0,
-    "rsi": 33.7,
-    "rsi3": 6.7,
-    "volume_x": 0.87,
+    "score": 92.1,
+    "adx": 32.1,
+    "rsi": 21.0,
+    "rsi3": 5.9,
+    "volume_x": 1.06,
     "htf_trend": "NEUTRAL",
-    "entry": 46.83,
-    "sl": 47.7666,
-    "best_price": 46.83,
-    "worst_price": 46.83,
-    "tp1": 46.40853,
+    "entry": 46.74,
+    "sl": 47.674800000000005,
+    "best_price": 46.74,
+    "worst_price": 46.74,
+    "tp1": 46.319340000000004,
     "tp2": null,
     "tp3": null,
-    "tp_main": 46.40853,
+    "tp_main": 46.319340000000004,
     "capital": 1000.0,
     "status": "OPEN",
     "exit_price": null,
@@ -32,47 +29,8 @@
     "exit_time": null,
     "grind_count": 0,
     "grind_entries": [
-      46.83
+      46.74
     ],
     "tag": "breakout_short"
-  },
-  {
-    "id": "SIG-0002",
-    "time": "2026-07-24T08:12:14.102285+00:00",
->>>>>>> Stashed changes
-    "pair": "ASTER/USDT",
-    "exchange": "KuCoin",
-    "direction": "LONG",
-    "style": "CONFIRMED_BREAKOUT",
-    "score": 76.0,
-    "adx": 16.0,
-    "rsi": 60.6,
-    "rsi3": 44.4,
-<<<<<<< Updated upstream
-    "volume_x": 1.77,
-=======
-    "volume_x": 1.92,
->>>>>>> Stashed changes
-    "htf_trend": "NEUTRAL",
-    "entry": 0.6273,
-    "sl": 0.6147539999999999,
-    "best_price": 0.6273,
-    "worst_price": 0.6273,
-    "tp1": 0.6329456999999999,
-    "tp2": null,
-    "tp3": null,
-    "tp_main": 0.6329456999999999,
-    "capital": 1000.0,
-    "status": "OPEN",
-    "exit_price": null,
-    "pnl_usd": null,
-    "result": null,
-    "closed_at": null,
-    "exit_time": null,
-    "grind_count": 0,
-    "grind_entries": [
-      0.6273
-    ],
-    "tag": "breakout_long"
   }
 ]
