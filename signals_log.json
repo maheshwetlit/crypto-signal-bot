@@ -236,5 +236,39 @@
       91.037
     ],
     "tag": "breakout_long"
+  },
+  {
+    "id": "SIG-0008",
+    "time": "2026-07-25T13:21:18.881194+00:00",
+    "pair": "UNI/USDT",
+    "exchange": "KuCoin",
+    "direction": "LONG",
+    "style": "CONFIRMED_BREAKOUT",
+    "score": 92.1,
+    "adx": 32.1,
+    "rsi": 65.1,
+    "rsi3": NaN,
+    "volume_x": 1.07,
+    "htf_trend": "NEUTRAL",
+    "entry": 3.69,
+    "sl": 3.6162,
+    "best_price": 3.69,
+    "worst_price": 3.69,
+    "tp1": 3.7232099999999995,
+    "tp2": null,
+    "tp3": null,
+    "tp_main": 3.7232099999999995,
+    "capital": 1000.0,
+    "status": "OPEN",
+    "exit_price": null,
+    "pnl_usd": null,
+    "result": null,
+    "closed_at": null,
+    "exit_time": null,
+    "grind_count": 0,
+    "grind_entries": [
+      3.69
+    ],
+    "tag": "breakout_long"
   }
 ]
