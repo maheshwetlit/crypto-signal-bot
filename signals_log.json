@@ -1037,13 +1037,18 @@
   },
   {
     "id": "SIG-0031",
+<<<<<<< Updated upstream
     "time": "2026-07-25T20:51:36.265099+00:00",
+=======
+    "time": "2026-07-25T20:52:27.604744+00:00",
+>>>>>>> Stashed changes
     "pair": "ADI/USDT",
     "exchange": "KuCoin",
     "direction": "SHORT",
     "style": "CONFIRMED_BREAKOUT",
     "score": 100.0,
     "adx": 68.8,
+<<<<<<< Updated upstream
     "rsi": 10.5,
     "rsi3": 11.1,
     "volume_x": 0.59,
@@ -1056,6 +1061,20 @@
     "tp2": null,
     "tp3": null,
     "tp_main": 7.2202278,
+=======
+    "rsi": 14.2,
+    "rsi3": 32.7,
+    "volume_x": 0.87,
+    "htf_trend": "NEUTRAL",
+    "entry": 7.2884,
+    "sl": 7.4341680000000006,
+    "best_price": 7.2884,
+    "worst_price": 7.2884,
+    "tp1": 7.2228044,
+    "tp2": null,
+    "tp3": null,
+    "tp_main": 7.2228044,
+>>>>>>> Stashed changes
     "capital": 1000.0,
     "status": "OPEN",
     "exit_price": null,
@@ -1065,7 +1084,11 @@
     "exit_time": null,
     "grind_count": 0,
     "grind_entries": [
+<<<<<<< Updated upstream
       7.2858
+=======
+      7.2884
+>>>>>>> Stashed changes
     ],
     "tag": "breakout_short"
   }
