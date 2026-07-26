@@ -33,5 +33,39 @@
     ],
     "tag": "breakout_long",
     "pnl_pct": 0.9
+  },
+  {
+    "id": "SIG-0002",
+    "time": "2026-07-26T00:21:49.789186+00:00",
+    "pair": "GWEI/USDT",
+    "exchange": "KuCoin",
+    "direction": "SHORT",
+    "style": "CONFIRMED_BREAKOUT",
+    "score": 90.4,
+    "adx": 30.4,
+    "rsi": 6.4,
+    "rsi3": 0.0,
+    "volume_x": 0.96,
+    "htf_trend": "BEARISH",
+    "entry": 0.023613,
+    "sl": 0.02408526,
+    "best_price": 0.023613,
+    "worst_price": 0.023613,
+    "tp1": 0.023400483,
+    "tp2": null,
+    "tp3": null,
+    "tp_main": 0.023400483,
+    "capital": 1000.0,
+    "status": "OPEN",
+    "exit_price": null,
+    "pnl_usd": null,
+    "result": null,
+    "closed_at": null,
+    "exit_time": null,
+    "grind_count": 0,
+    "grind_entries": [
+      0.023613
+    ],
+    "tag": "breakout_short"
   }
 ]
