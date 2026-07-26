@@ -585,8 +585,13 @@
     "exit_price": 2.96412e-06,
     "pnl_usd": -20.0,
     "result": "STALE",
+<<<<<<< Updated upstream
     "closed_at": "2026-07-26T23:11:00.422050+00:00",
     "exit_time": "2026-07-26T23:11:00.422050+00:00",
+=======
+    "closed_at": "2026-07-26T23:11:02.772441+00:00",
+    "exit_time": "2026-07-26T23:11:02.772441+00:00",
+>>>>>>> Stashed changes
     "grind_count": 0,
     "grind_entries": [
       2.906e-06
@@ -953,7 +958,11 @@
     "htf_trend": "BULLISH",
     "entry": 1938.41,
     "sl": 1899.6418,
+<<<<<<< Updated upstream
     "best_price": 1961.04,
+=======
+    "best_price": 1960.79,
+>>>>>>> Stashed changes
     "worst_price": 1938.41,
     "tp1": 1955.8556899999999,
     "tp2": null,
@@ -964,8 +973,13 @@
     "exit_price": 1955.8556899999999,
     "pnl_usd": 9.0,
     "result": "WIN",
+<<<<<<< Updated upstream
     "closed_at": "2026-07-26T23:11:00.422050+00:00",
     "exit_time": "2026-07-26T23:11:00.422050+00:00",
+=======
+    "closed_at": "2026-07-26T23:11:02.772441+00:00",
+    "exit_time": "2026-07-26T23:11:02.772441+00:00",
+>>>>>>> Stashed changes
     "grind_count": 0,
     "grind_entries": [
       1938.41
@@ -988,7 +1002,11 @@
     "htf_trend": "NEUTRAL",
     "entry": 65209.5,
     "sl": 63905.31,
+<<<<<<< Updated upstream
     "best_price": 65489.0,
+=======
+    "best_price": 65482.1,
+>>>>>>> Stashed changes
     "worst_price": 65209.5,
     "tp1": 65796.38549999999,
     "tp2": null,
@@ -1067,8 +1085,13 @@
     "exit_price": 76.81516999999998,
     "pnl_usd": 9.0,
     "result": "WIN",
+<<<<<<< Updated upstream
     "closed_at": "2026-07-26T23:11:00.422050+00:00",
     "exit_time": "2026-07-26T23:11:00.422050+00:00",
+=======
+    "closed_at": "2026-07-26T23:11:02.772441+00:00",
+    "exit_time": "2026-07-26T23:11:02.772441+00:00",
+>>>>>>> Stashed changes
     "grind_count": 0,
     "grind_entries": [
       76.13
@@ -1091,7 +1114,11 @@
     "htf_trend": "NEUTRAL",
     "entry": 65214.4,
     "sl": 63910.112,
+<<<<<<< Updated upstream
     "best_price": 65489.0,
+=======
+    "best_price": 65482.1,
+>>>>>>> Stashed changes
     "worst_price": 65214.4,
     "tp1": 65801.3296,
     "tp2": null,
@@ -1214,7 +1241,11 @@
   },
   {
     "id": "SIG-0036",
+<<<<<<< Updated upstream
     "time": "2026-07-26T23:11:21.063989+00:00",
+=======
+    "time": "2026-07-26T23:11:26.655511+00:00",
+>>>>>>> Stashed changes
     "pair": "TAO/USDT",
     "exchange": "KuCoin",
     "direction": "LONG",
