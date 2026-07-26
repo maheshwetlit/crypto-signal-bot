@@ -173,16 +173,28 @@
   },
   {
     "id": "SIG-0006",
+<<<<<<< Updated upstream
     "time": "2026-07-26T13:20:48.502828+00:00",
+=======
+    "time": "2026-07-26T13:21:04.255429+00:00",
+>>>>>>> Stashed changes
     "pair": "ETH/USDT",
     "exchange": "KuCoin",
     "direction": "LONG",
     "style": "CONFIRMED_BREAKOUT",
+<<<<<<< Updated upstream
     "score": 85.9,
     "adx": 25.9,
     "rsi": 42.0,
     "rsi3": NaN,
     "volume_x": 1.36,
+=======
+    "score": 86.0,
+    "adx": 26.0,
+    "rsi": 42.0,
+    "rsi3": NaN,
+    "volume_x": 1.67,
+>>>>>>> Stashed changes
     "htf_trend": "NEUTRAL",
     "entry": 1887.63,
     "sl": 1849.8774,
