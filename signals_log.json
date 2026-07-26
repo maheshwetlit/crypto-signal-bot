@@ -116,11 +116,16 @@
     "htf_trend": "NEUTRAL",
     "entry": 1890.06,
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     "sl": 1890.06,
     "best_price": 1890.06,
 =======
     "sl": 1852.2587999999998,
     "best_price": 1907.08,
+>>>>>>> Stashed changes
+=======
+    "sl": 1852.2587999999998,
+    "best_price": 1907.12,
 >>>>>>> Stashed changes
     "worst_price": 1890.06,
     "tp1": 1907.0705399999997,
@@ -129,6 +134,7 @@
     "tp_main": 1907.0705399999997,
     "capital": 1000.0,
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     "status": "TRAILING",
     "exit_price": null,
     "pnl_usd": null,
@@ -136,12 +142,19 @@
     "closed_at": null,
     "exit_time": null,
 =======
+=======
+>>>>>>> Stashed changes
     "status": "WIN",
     "exit_price": 1907.0705399999997,
     "pnl_usd": 9.0,
     "result": "WIN",
+<<<<<<< Updated upstream
     "closed_at": "2026-07-26T15:20:52.920581+00:00",
     "exit_time": "2026-07-26T15:20:52.920581+00:00",
+>>>>>>> Stashed changes
+=======
+    "closed_at": "2026-07-26T15:20:59.968627+00:00",
+    "exit_time": "2026-07-26T15:20:59.968627+00:00",
 >>>>>>> Stashed changes
     "grind_count": 0,
     "grind_entries": [
@@ -166,7 +179,11 @@
     "entry": 488.647,
     "sl": 498.41994,
     "best_price": 488.647,
+<<<<<<< Updated upstream
     "worst_price": 493.184,
+=======
+    "worst_price": 493.17,
+>>>>>>> Stashed changes
     "tp1": 484.249177,
     "tp2": null,
     "tp3": null,
@@ -199,7 +216,11 @@
     "htf_trend": "NEUTRAL",
     "entry": 197.48,
     "sl": 193.5304,
+<<<<<<< Updated upstream
     "best_price": 198.3,
+=======
+    "best_price": 198.28,
+>>>>>>> Stashed changes
     "worst_price": 197.48,
     "tp1": 199.25731999999996,
     "tp2": null,
@@ -267,7 +288,11 @@
     "htf_trend": "NEUTRAL",
     "entry": 361.59,
     "sl": 368.8218,
+<<<<<<< Updated upstream
     "best_price": 360.72,
+=======
+    "best_price": 360.77,
+>>>>>>> Stashed changes
     "worst_price": 361.59,
     "tp1": 358.33569,
     "tp2": null,
