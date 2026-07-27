@@ -1,46 +1,25 @@
 [
   {
     "id": "SIG-0001",
-<<<<<<< Updated upstream
-    "time": "2026-07-27T17:30:58.090668+00:00",
-    "pair": "BTC/USDT",
+    "time": "2026-07-27T18:06:16.345991+00:00",
+    "pair": "TAO/USDT",
     "exchange": "KuCoin",
-    "direction": "LONG",
+    "direction": "SHORT",
     "style": "CONFIRMED_BREAKOUT",
-    "score": 78.8,
-    "adx": 18.8,
-    "rsi": 74.8,
-    "rsi3": 71.6,
-    "volume_x": 2.47,
+    "score": 77.2,
+    "adx": 17.2,
+    "rsi": 44.8,
+    "rsi3": 35.0,
+    "volume_x": 4.08,
     "htf_trend": "NEUTRAL",
-    "entry": 64995.3,
-    "sl": 63695.394,
-    "best_price": 64995.3,
-    "worst_price": 64995.3,
-    "tp1": 65580.2577,
+    "entry": 193.96,
+    "sl": 197.8392,
+    "best_price": 193.96,
+    "worst_price": 193.96,
+    "tp1": 192.21436,
     "tp2": null,
     "tp3": null,
-    "tp_main": 65580.2577,
-=======
-    "time": "2026-07-27T17:31:11.922434+00:00",
-    "pair": "BTC/USDT",
-    "exchange": "KuCoin",
-    "direction": "LONG",
-    "style": "CONFIRMED_BREAKOUT",
-    "score": 78.8,
-    "adx": 18.8,
-    "rsi": 74.8,
-    "rsi3": 71.6,
-    "volume_x": 2.48,
-    "htf_trend": "NEUTRAL",
-    "entry": 64995.4,
-    "sl": 63695.492,
-    "best_price": 64995.4,
-    "worst_price": 64995.4,
-    "tp1": 65580.35859999999,
-    "tp2": null,
-    "tp3": null,
-    "tp_main": 65580.35859999999,
+    "tp_main": 192.21436,
     "capital": 1000.0,
     "status": "OPEN",
     "exit_price": null,
@@ -50,47 +29,8 @@
     "exit_time": null,
     "grind_count": 0,
     "grind_entries": [
-      64995.4
+      193.96
     ],
-    "tag": "breakout_long"
-  },
-  {
-    "id": "SIG-0002",
-    "time": "2026-07-27T17:31:43.972686+00:00",
-    "pair": "BNB/USDT",
-    "exchange": "KuCoin",
-    "direction": "LONG",
-    "style": "CONFIRMED_BREAKOUT",
-    "score": 90.3,
-    "adx": 30.3,
-    "rsi": 80.7,
-    "rsi3": NaN,
-    "volume_x": 2.88,
-    "htf_trend": "BULLISH",
-    "entry": 574.764,
-    "sl": 563.26872,
-    "best_price": 574.764,
-    "worst_price": 574.764,
-    "tp1": 579.936876,
-    "tp2": null,
-    "tp3": null,
-    "tp_main": 579.936876,
->>>>>>> Stashed changes
-    "capital": 1000.0,
-    "status": "OPEN",
-    "exit_price": null,
-    "pnl_usd": null,
-    "result": null,
-    "closed_at": null,
-    "exit_time": null,
-    "grind_count": 0,
-    "grind_entries": [
-<<<<<<< Updated upstream
-      64995.3
-=======
-      574.764
->>>>>>> Stashed changes
-    ],
-    "tag": "breakout_long"
+    "tag": "breakout_short"
   }
 ]
