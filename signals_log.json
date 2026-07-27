@@ -377,13 +377,18 @@
   },
   {
     "id": "SIG-0012",
+<<<<<<< Updated upstream
     "time": "2026-07-27T13:01:32.408072+00:00",
+=======
+    "time": "2026-07-27T13:01:53.592353+00:00",
+>>>>>>> Stashed changes
     "pair": "BNB/USDT",
     "exchange": "KuCoin",
     "direction": "LONG",
     "style": "CONFIRMED_BREAKOUT",
     "score": 78.4,
     "adx": 18.4,
+<<<<<<< Updated upstream
     "rsi": 53.1,
     "rsi3": 50.0,
     "volume_x": 1.53,
@@ -396,6 +401,20 @@
     "tp2": null,
     "tp3": null,
     "tp_main": 578.5949059999999,
+=======
+    "rsi": 52.7,
+    "rsi3": 45.5,
+    "volume_x": 1.58,
+    "htf_trend": "BULLISH",
+    "entry": 573.376,
+    "sl": 561.9084799999999,
+    "best_price": 573.376,
+    "worst_price": 573.376,
+    "tp1": 578.5363839999999,
+    "tp2": null,
+    "tp3": null,
+    "tp_main": 578.5363839999999,
+>>>>>>> Stashed changes
     "capital": 1000.0,
     "status": "OPEN",
     "exit_price": null,
@@ -405,19 +424,28 @@
     "exit_time": null,
     "grind_count": 0,
     "grind_entries": [
+<<<<<<< Updated upstream
       573.434
+=======
+      573.376
+>>>>>>> Stashed changes
     ],
     "tag": "breakout_long"
   },
   {
     "id": "SIG-0013",
+<<<<<<< Updated upstream
     "time": "2026-07-27T13:01:41.333993+00:00",
+=======
+    "time": "2026-07-27T13:02:02.554220+00:00",
+>>>>>>> Stashed changes
     "pair": "DOGE/USDT",
     "exchange": "KuCoin",
     "direction": "LONG",
     "style": "CONFIRMED_BREAKOUT",
     "score": 79.3,
     "adx": 19.3,
+<<<<<<< Updated upstream
     "rsi": 60.2,
     "rsi3": 27.8,
     "volume_x": 1.32,
@@ -430,6 +458,20 @@
     "tp2": null,
     "tp3": null,
     "tp_main": 0.07354601,
+=======
+    "rsi": 59.7,
+    "rsi3": 26.3,
+    "volume_x": 1.43,
+    "htf_trend": "BULLISH",
+    "entry": 0.07288,
+    "sl": 0.0714224,
+    "best_price": 0.07288,
+    "worst_price": 0.07288,
+    "tp1": 0.07353591999999999,
+    "tp2": null,
+    "tp3": null,
+    "tp_main": 0.07353591999999999,
+>>>>>>> Stashed changes
     "capital": 1000.0,
     "status": "OPEN",
     "exit_price": null,
@@ -439,7 +481,11 @@
     "exit_time": null,
     "grind_count": 0,
     "grind_entries": [
+<<<<<<< Updated upstream
       0.07289
+=======
+      0.07288
+>>>>>>> Stashed changes
     ],
     "tag": "breakout_long"
   }
