@@ -35,11 +35,16 @@
   },
   {
     "id": "SIG-0002",
+<<<<<<< Updated upstream
     "time": "2026-07-27T13:40:58.086091+00:00",
+=======
+    "time": "2026-07-27T13:41:08.649130+00:00",
+>>>>>>> Stashed changes
     "pair": "SOL/USDT",
     "exchange": "KuCoin",
     "direction": "LONG",
     "style": "CONFIRMED_BREAKOUT",
+<<<<<<< Updated upstream
     "score": 78.2,
     "adx": 18.2,
     "rsi": 77.9,
@@ -54,6 +59,22 @@
     "tp2": null,
     "tp3": null,
     "tp_main": 78.05623999999999,
+=======
+    "score": 78.3,
+    "adx": 18.3,
+    "rsi": 77.5,
+    "rsi3": NaN,
+    "volume_x": 1.1,
+    "htf_trend": "NEUTRAL",
+    "entry": 77.33,
+    "sl": 75.7834,
+    "best_price": 77.33,
+    "worst_price": 77.33,
+    "tp1": 78.02596999999999,
+    "tp2": null,
+    "tp3": null,
+    "tp_main": 78.02596999999999,
+>>>>>>> Stashed changes
     "capital": 1000.0,
     "status": "OPEN",
     "exit_price": null,
@@ -63,19 +84,28 @@
     "exit_time": null,
     "grind_count": 0,
     "grind_entries": [
+<<<<<<< Updated upstream
       77.36
+=======
+      77.33
+>>>>>>> Stashed changes
     ],
     "tag": "breakout_long"
   },
   {
     "id": "SIG-0003",
+<<<<<<< Updated upstream
     "time": "2026-07-27T13:41:03.677473+00:00",
+=======
+    "time": "2026-07-27T13:41:11.407165+00:00",
+>>>>>>> Stashed changes
     "pair": "XRP/USDT",
     "exchange": "KuCoin",
     "direction": "LONG",
     "style": "CONFIRMED_BREAKOUT",
     "score": 78.7,
     "adx": 18.7,
+<<<<<<< Updated upstream
     "rsi": 81.9,
     "rsi3": NaN,
     "volume_x": 1.24,
@@ -88,6 +118,20 @@
     "tp2": null,
     "tp3": null,
     "tp_main": 1.1224015099999998,
+=======
+    "rsi": 81.4,
+    "rsi3": NaN,
+    "volume_x": 1.47,
+    "htf_trend": "NEUTRAL",
+    "entry": 1.11189,
+    "sl": 1.0896522,
+    "best_price": 1.11189,
+    "worst_price": 1.11189,
+    "tp1": 1.1218970099999999,
+    "tp2": null,
+    "tp3": null,
+    "tp_main": 1.1218970099999999,
+>>>>>>> Stashed changes
     "capital": 1000.0,
     "status": "OPEN",
     "exit_price": null,
@@ -97,13 +141,21 @@
     "exit_time": null,
     "grind_count": 0,
     "grind_entries": [
+<<<<<<< Updated upstream
       1.11239
+=======
+      1.11189
+>>>>>>> Stashed changes
     ],
     "tag": "breakout_long"
   },
   {
     "id": "SIG-0004",
+<<<<<<< Updated upstream
     "time": "2026-07-27T13:41:15.273785+00:00",
+=======
+    "time": "2026-07-27T13:41:21.166019+00:00",
+>>>>>>> Stashed changes
     "pair": "BNB/USDT",
     "exchange": "KuCoin",
     "direction": "LONG",
@@ -137,7 +189,11 @@
   },
   {
     "id": "SIG-0005",
+<<<<<<< Updated upstream
     "time": "2026-07-27T13:41:26.517170+00:00",
+=======
+    "time": "2026-07-27T13:41:29.698356+00:00",
+>>>>>>> Stashed changes
     "pair": "DOGE/USDT",
     "exchange": "KuCoin",
     "direction": "LONG",
