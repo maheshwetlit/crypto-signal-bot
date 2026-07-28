@@ -255,7 +255,11 @@
     "htf_trend": "BEARISH",
     "entry": 1.05248,
     "sl": 1.0735296,
+<<<<<<< Updated upstream
     "best_price": 1.05217,
+=======
+    "best_price": 1.05204,
+>>>>>>> Stashed changes
     "worst_price": 1.05248,
     "tp1": 1.04300768,
     "tp2": null,
@@ -289,7 +293,11 @@
     "htf_trend": "NEUTRAL",
     "entry": 6.44,
     "sl": 6.5688,
+<<<<<<< Updated upstream
     "best_price": 6.431,
+=======
+    "best_price": 6.425,
+>>>>>>> Stashed changes
     "worst_price": 6.44,
     "tp1": 6.38204,
     "tp2": null,
@@ -427,7 +435,11 @@
     "entry": 336.12,
     "sl": 342.8424,
     "best_price": 336.12,
+<<<<<<< Updated upstream
     "worst_price": 336.78,
+=======
+    "worst_price": 336.6,
+>>>>>>> Stashed changes
     "tp1": 333.09492,
     "tp2": null,
     "tp3": null,
@@ -495,7 +507,11 @@
     "entry": 0.002022,
     "sl": 0.00198156,
     "best_price": 0.002022,
+<<<<<<< Updated upstream
     "worst_price": 0.001976,
+=======
+    "worst_price": 0.001973,
+>>>>>>> Stashed changes
     "tp1": 0.0020401979999999996,
     "tp2": null,
     "tp3": null,
@@ -505,8 +521,13 @@
     "exit_price": 0.00198156,
     "pnl_usd": -20.0,
     "result": "LOSS",
+<<<<<<< Updated upstream
     "closed_at": "2026-07-28T14:30:53.142363+00:00",
     "exit_time": "2026-07-28T14:30:53.142363+00:00",
+=======
+    "closed_at": "2026-07-28T14:31:10.560699+00:00",
+    "exit_time": "2026-07-28T14:31:10.560699+00:00",
+>>>>>>> Stashed changes
     "grind_count": 0,
     "grind_entries": [
       0.002022
@@ -530,7 +551,11 @@
     "entry": 186.6,
     "sl": 190.332,
     "best_price": 186.6,
+<<<<<<< Updated upstream
     "worst_price": 186.89,
+=======
+    "worst_price": 186.96,
+>>>>>>> Stashed changes
     "tp1": 184.92059999999998,
     "tp2": null,
     "tp3": null,
@@ -564,7 +589,11 @@
     "entry": 0.04229,
     "sl": 0.0431358,
     "best_price": 0.04229,
+<<<<<<< Updated upstream
     "worst_price": 0.04233,
+=======
+    "worst_price": 0.04234,
+>>>>>>> Stashed changes
     "tp1": 0.04190939,
     "tp2": null,
     "tp3": null,
