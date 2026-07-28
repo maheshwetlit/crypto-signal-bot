@@ -1,47 +1,25 @@
 [
   {
     "id": "SIG-0001",
-<<<<<<< Updated upstream
-    "time": "2026-07-28T11:26:28.318849+00:00",
-    "pair": "HYPE/USDT",
+    "time": "2026-07-28T11:31:28.023401+00:00",
+    "pair": "SUI/USDT",
     "exchange": "KuCoin",
     "direction": "SHORT",
     "style": "CONFIRMED_BREAKOUT",
-    "score": 93.5,
-    "adx": 33.5,
-    "rsi": 26.8,
-    "rsi3": 40.6,
-    "volume_x": 0.44,
+    "score": 78.3,
+    "adx": 18.3,
+    "rsi": 48.4,
+    "rsi3": 0.0,
+    "volume_x": 1.35,
     "htf_trend": "BEARISH",
-    "entry": 54.416,
-    "sl": 55.50432,
-    "best_price": 54.416,
-    "worst_price": 54.416,
-    "tp1": 53.926255999999995,
+    "entry": 0.6826,
+    "sl": 0.696252,
+    "best_price": 0.6826,
+    "worst_price": 0.6826,
+    "tp1": 0.6764566,
     "tp2": null,
     "tp3": null,
-    "tp_main": 53.926255999999995,
-=======
-    "time": "2026-07-28T11:27:09.606951+00:00",
-    "pair": "XRP/USDT",
-    "exchange": "KuCoin",
-    "direction": "SHORT",
-    "style": "CONFIRMED_BREAKOUT",
-    "score": 78.8,
-    "adx": 18.8,
-    "rsi": 30.4,
-    "rsi3": 52.8,
-    "volume_x": 0.66,
-    "htf_trend": "BEARISH",
-    "entry": 1.0507,
-    "sl": 1.071714,
-    "best_price": 1.0507,
-    "worst_price": 1.0507,
-    "tp1": 1.0412436999999999,
-    "tp2": null,
-    "tp3": null,
-    "tp_main": 1.0412436999999999,
->>>>>>> Stashed changes
+    "tp_main": 0.6764566,
     "capital": 1000.0,
     "status": "OPEN",
     "exit_price": null,
@@ -51,48 +29,8 @@
     "exit_time": null,
     "grind_count": 0,
     "grind_entries": [
-<<<<<<< Updated upstream
-      54.416
+      0.6826
     ],
     "tag": "breakout_short"
-=======
-      1.0507
-    ],
-    "tag": "breakout_short"
-  },
-  {
-    "id": "SIG-0002",
-    "time": "2026-07-28T11:27:34.196601+00:00",
-    "pair": "HYPE/USDT",
-    "exchange": "KuCoin",
-    "direction": "SHORT",
-    "style": "CONFIRMED_BREAKOUT",
-    "score": 93.6,
-    "adx": 33.6,
-    "rsi": 26.0,
-    "rsi3": 37.6,
-    "volume_x": 0.5,
-    "htf_trend": "BEARISH",
-    "entry": 54.373,
-    "sl": 55.46046,
-    "best_price": 54.373,
-    "worst_price": 54.373,
-    "tp1": 53.883643,
-    "tp2": null,
-    "tp3": null,
-    "tp_main": 53.883643,
-    "capital": 1000.0,
-    "status": "OPEN",
-    "exit_price": null,
-    "pnl_usd": null,
-    "result": null,
-    "closed_at": null,
-    "exit_time": null,
-    "grind_count": 0,
-    "grind_entries": [
-      54.373
-    ],
-    "tag": "breakout_short"
->>>>>>> Stashed changes
   }
 ]
