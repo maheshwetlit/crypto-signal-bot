@@ -69,13 +69,18 @@
   },
   {
     "id": "SIG-0003",
+<<<<<<< Updated upstream
     "time": "2026-07-28T14:51:51.089939+00:00",
+=======
+    "time": "2026-07-28T14:52:00.690237+00:00",
+>>>>>>> Stashed changes
     "pair": "PUMP/USDT",
     "exchange": "KuCoin",
     "direction": "LONG",
     "style": "CONFIRMED_BREAKOUT",
     "score": 80.0,
     "adx": 20.0,
+<<<<<<< Updated upstream
     "rsi": 57.4,
     "rsi3": NaN,
     "volume_x": 1.11,
@@ -88,6 +93,20 @@
     "tp2": null,
     "tp3": null,
     "tp_main": 0.002031117,
+=======
+    "rsi": 57.0,
+    "rsi3": NaN,
+    "volume_x": 1.24,
+    "htf_trend": "NEUTRAL",
+    "entry": 0.002012,
+    "sl": 0.00197176,
+    "best_price": 0.002012,
+    "worst_price": 0.002012,
+    "tp1": 0.0020301079999999997,
+    "tp2": null,
+    "tp3": null,
+    "tp_main": 0.0020301079999999997,
+>>>>>>> Stashed changes
     "capital": 1000.0,
     "status": "OPEN",
     "exit_price": null,
@@ -97,7 +116,11 @@
     "exit_time": null,
     "grind_count": 0,
     "grind_entries": [
+<<<<<<< Updated upstream
       0.002013
+=======
+      0.002012
+>>>>>>> Stashed changes
     ],
     "tag": "breakout_long"
   }
