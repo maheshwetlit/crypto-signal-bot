@@ -1148,7 +1148,11 @@
   },
   {
     "id": "SIG-0034",
+<<<<<<< Updated upstream
     "time": "2026-07-28T03:41:53.813641+00:00",
+=======
+    "time": "2026-07-28T03:42:34.362006+00:00",
+>>>>>>> Stashed changes
     "pair": "ARB/USDT",
     "exchange": "KuCoin",
     "direction": "LONG",
