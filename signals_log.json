@@ -1464,6 +1464,7 @@
   },
   {
     "id": "SIG-0043",
+<<<<<<< Updated upstream
     "time": "2026-07-29T07:19:16.275792+00:00",
     "pair": "BTC/USDT",
     "exchange": "KuCoin",
@@ -1499,10 +1500,14 @@
   {
     "id": "SIG-0044",
     "time": "2026-07-29T07:20:10.972756+00:00",
+=======
+    "time": "2026-07-29T07:22:03.964128+00:00",
+>>>>>>> Stashed changes
     "pair": "FET/USDT",
     "exchange": "KuCoin",
     "direction": "SHORT",
     "style": "CONFIRMED_BREAKOUT",
+<<<<<<< Updated upstream
     "score": 76.7,
     "adx": 16.7,
     "rsi": 63.0,
@@ -1517,6 +1522,22 @@
     "tp2": null,
     "tp3": null,
     "tp_main": 0.13418139999999998,
+=======
+    "score": 76.2,
+    "adx": 16.2,
+    "rsi": 58.6,
+    "rsi3": 27.3,
+    "volume_x": 1.43,
+    "htf_trend": "BEARISH",
+    "entry": 0.1352,
+    "sl": 0.137904,
+    "best_price": 0.1352,
+    "worst_price": 0.1352,
+    "tp1": 0.1339832,
+    "tp2": null,
+    "tp3": null,
+    "tp_main": 0.1339832,
+>>>>>>> Stashed changes
     "capital": 1000.0,
     "status": "OPEN",
     "exit_price": null,
@@ -1526,7 +1547,45 @@
     "exit_time": null,
     "grind_count": 0,
     "grind_entries": [
+<<<<<<< Updated upstream
       0.1354
+=======
+      0.1352
+    ],
+    "tag": "breakout_short"
+  },
+  {
+    "id": "SIG-0044",
+    "time": "2026-07-29T07:22:12.447165+00:00",
+    "pair": "SNX/USDT",
+    "exchange": "KuCoin",
+    "direction": "SHORT",
+    "style": "CONFIRMED_BREAKOUT",
+    "score": 88.7,
+    "adx": 28.7,
+    "rsi": 32.3,
+    "rsi3": 0.0,
+    "volume_x": 1.85,
+    "htf_trend": "BEARISH",
+    "entry": 0.2079,
+    "sl": 0.212058,
+    "best_price": 0.2079,
+    "worst_price": 0.2079,
+    "tp1": 0.2060289,
+    "tp2": null,
+    "tp3": null,
+    "tp_main": 0.2060289,
+    "capital": 1000.0,
+    "status": "OPEN",
+    "exit_price": null,
+    "pnl_usd": null,
+    "result": null,
+    "closed_at": null,
+    "exit_time": null,
+    "grind_count": 0,
+    "grind_entries": [
+      0.2079
+>>>>>>> Stashed changes
     ],
     "tag": "breakout_short"
   }
