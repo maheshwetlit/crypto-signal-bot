@@ -375,7 +375,11 @@
   },
   {
     "id": "SIG-0012",
+<<<<<<< Updated upstream
     "time": "2026-07-29T15:21:35.693352+00:00",
+=======
+    "time": "2026-07-29T15:23:19.511820+00:00",
+>>>>>>> Stashed changes
     "pair": "WIF/USDT",
     "exchange": "KuCoin",
     "direction": "SHORT",
