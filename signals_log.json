@@ -649,5 +649,39 @@
       0.2113
     ],
     "tag": "breakout_long"
+  },
+  {
+    "id": "SIG-0020",
+    "time": "2026-07-30T00:22:05.278686+00:00",
+    "pair": "SIREN/USDT",
+    "exchange": "KuCoin",
+    "direction": "LONG",
+    "style": "CONFIRMED_BREAKOUT",
+    "score": 82.0,
+    "adx": 22.0,
+    "rsi": 81.9,
+    "rsi3": 83.8,
+    "volume_x": 1.83,
+    "htf_trend": "NEUTRAL",
+    "entry": 0.06296,
+    "sl": 0.0617008,
+    "best_price": 0.06296,
+    "worst_price": 0.06296,
+    "tp1": 0.06352664,
+    "tp2": null,
+    "tp3": null,
+    "tp_main": 0.06352664,
+    "capital": 1000.0,
+    "status": "OPEN",
+    "exit_price": null,
+    "pnl_usd": null,
+    "result": null,
+    "closed_at": null,
+    "exit_time": null,
+    "grind_count": 0,
+    "grind_entries": [
+      0.06296
+    ],
+    "tag": "breakout_long"
   }
 ]
