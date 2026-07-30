@@ -620,8 +620,13 @@
     "exit_price": 0.35257,
     "pnl_usd": -17.75,
     "result": "STALE",
+<<<<<<< Updated upstream
     "closed_at": "2026-07-30T22:05:54.503594+00:00",
     "exit_time": "2026-07-30T22:05:54.503594+00:00",
+=======
+    "closed_at": "2026-07-30T22:05:56.498281+00:00",
+    "exit_time": "2026-07-30T22:05:56.498281+00:00",
+>>>>>>> Stashed changes
     "grind_count": 0,
     "grind_entries": [
       0.34642
