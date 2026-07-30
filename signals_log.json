@@ -35,13 +35,18 @@
   },
   {
     "id": "SIG-0002",
+<<<<<<< Updated upstream
     "time": "2026-07-30T13:11:32.838880+00:00",
+=======
+    "time": "2026-07-30T13:12:05.969486+00:00",
+>>>>>>> Stashed changes
     "pair": "SUI/USDT",
     "exchange": "KuCoin",
     "direction": "SHORT",
     "style": "CONFIRMED_BREAKOUT",
     "score": 89.8,
     "adx": 29.8,
+<<<<<<< Updated upstream
     "rsi": 36.0,
     "rsi3": 5.3,
     "volume_x": 1.53,
@@ -54,6 +59,20 @@
     "tp2": null,
     "tp3": null,
     "tp_main": 0.6850783,
+=======
+    "rsi": 36.7,
+    "rsi3": 5.9,
+    "volume_x": 1.53,
+    "htf_trend": "NEUTRAL",
+    "entry": 0.6915,
+    "sl": 0.70533,
+    "best_price": 0.6915,
+    "worst_price": 0.6915,
+    "tp1": 0.6852765,
+    "tp2": null,
+    "tp3": null,
+    "tp_main": 0.6852765,
+>>>>>>> Stashed changes
     "capital": 1000.0,
     "status": "OPEN",
     "exit_price": null,
@@ -63,13 +82,55 @@
     "exit_time": null,
     "grind_count": 0,
     "grind_entries": [
+<<<<<<< Updated upstream
       0.6913
+=======
+      0.6915
+>>>>>>> Stashed changes
     ],
     "tag": "breakout_short"
   },
   {
     "id": "SIG-0003",
+<<<<<<< Updated upstream
     "time": "2026-07-30T13:11:41.287086+00:00",
+=======
+    "time": "2026-07-30T13:12:08.074478+00:00",
+    "pair": "WIF/USDT",
+    "exchange": "KuCoin",
+    "direction": "SHORT",
+    "style": "CONFIRMED_BREAKOUT",
+    "score": 77.4,
+    "adx": 17.4,
+    "rsi": 27.3,
+    "rsi3": 0.0,
+    "volume_x": 0.73,
+    "htf_trend": "BEARISH",
+    "entry": 0.1428,
+    "sl": 0.145656,
+    "best_price": 0.1428,
+    "worst_price": 0.1428,
+    "tp1": 0.1415148,
+    "tp2": null,
+    "tp3": null,
+    "tp_main": 0.1415148,
+    "capital": 1000.0,
+    "status": "OPEN",
+    "exit_price": null,
+    "pnl_usd": null,
+    "result": null,
+    "closed_at": null,
+    "exit_time": null,
+    "grind_count": 0,
+    "grind_entries": [
+      0.1428
+    ],
+    "tag": "breakout_short"
+  },
+  {
+    "id": "SIG-0004",
+    "time": "2026-07-30T13:12:18.630170+00:00",
+>>>>>>> Stashed changes
     "pair": "ENA/USDT",
     "exchange": "KuCoin",
     "direction": "LONG",
