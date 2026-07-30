@@ -1,67 +1,25 @@
 [
   {
     "id": "SIG-0001",
-<<<<<<< Updated upstream
-    "time": "2026-07-30T13:01:34.986653+00:00",
-    "pair": "ONDO/USDT",
-=======
-    "time": "2026-07-30T13:02:09.186359+00:00",
-    "pair": "GRAM/USDT",
->>>>>>> Stashed changes
-    "exchange": "KuCoin",
-    "direction": "LONG",
-    "style": "CONFIRMED_BREAKOUT",
-<<<<<<< Updated upstream
-    "score": 91.5,
-    "adx": 31.5,
-    "rsi": 68.1,
-    "rsi3": 54.2,
-    "volume_x": 2.06,
-    "htf_trend": "BULLISH",
-    "entry": 0.42349,
-    "sl": 0.41502019999999995,
-    "best_price": 0.42349,
-    "worst_price": 0.42349,
-    "tp1": 0.42730140999999994,
-    "tp2": null,
-    "tp3": null,
-    "tp_main": 0.42730140999999994,
-    "capital": 1000.0,
-    "status": "OPEN",
-    "exit_price": null,
-    "pnl_usd": null,
-    "result": null,
-    "closed_at": null,
-    "exit_time": null,
-    "grind_count": 0,
-    "grind_entries": [
-      0.42349
-    ],
-    "tag": "breakout_long"
-  },
-  {
-    "id": "SIG-0002",
-    "time": "2026-07-30T13:02:02.165878+00:00",
-    "pair": "GRAM/USDT",
+    "time": "2026-07-30T13:06:53.523008+00:00",
+    "pair": "PEPE/USDT",
     "exchange": "KuCoin",
     "direction": "SHORT",
     "style": "CONFIRMED_BREAKOUT",
-=======
->>>>>>> Stashed changes
-    "score": 82.7,
-    "adx": 22.7,
-    "rsi": 23.7,
-    "rsi3": 66.7,
-    "volume_x": 1.1,
+    "score": 79.8,
+    "adx": 19.8,
+    "rsi": 38.2,
+    "rsi3": 38.5,
+    "volume_x": 0.88,
     "htf_trend": "BEARISH",
-    "entry": 1.419,
-    "sl": 1.44738,
-    "best_price": 1.419,
-    "worst_price": 1.419,
-    "tp1": 1.406229,
+    "entry": 2.754e-06,
+    "sl": 2.80908e-06,
+    "best_price": 2.754e-06,
+    "worst_price": 2.754e-06,
+    "tp1": 2.7292139999999996e-06,
     "tp2": null,
     "tp3": null,
-    "tp_main": 1.406229,
+    "tp_main": 2.7292139999999996e-06,
     "capital": 1000.0,
     "status": "OPEN",
     "exit_price": null,
@@ -71,7 +29,7 @@
     "exit_time": null,
     "grind_count": 0,
     "grind_entries": [
-      1.419
+      2.754e-06
     ],
     "tag": "breakout_short"
   }
