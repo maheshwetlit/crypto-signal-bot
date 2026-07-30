@@ -1425,8 +1425,13 @@
     "exit_price": 45.46,
     "pnl_usd": -1.1,
     "result": "STALE",
+<<<<<<< Updated upstream
     "closed_at": "2026-07-30T06:11:09.869094+00:00",
     "exit_time": "2026-07-30T06:11:09.869094+00:00",
+=======
+    "closed_at": "2026-07-30T06:11:20.059137+00:00",
+    "exit_time": "2026-07-30T06:11:20.059137+00:00",
+>>>>>>> Stashed changes
     "grind_count": 0,
     "grind_entries": [
       45.51
@@ -1722,7 +1727,7 @@
     "htf_trend": "NEUTRAL",
     "entry": 0.2124,
     "sl": 0.216648,
-    "best_price": 0.2121,
+    "best_price": 0.212,
     "worst_price": 0.2125,
     "tp1": 0.2104884,
     "tp2": null,
@@ -1824,7 +1829,7 @@
     "htf_trend": "NEUTRAL",
     "entry": 0.2121,
     "sl": 0.216342,
-    "best_price": 0.2121,
+    "best_price": 0.212,
     "worst_price": 0.2125,
     "tp1": 0.21019110000000002,
     "tp2": null,
