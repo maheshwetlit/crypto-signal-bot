@@ -35,7 +35,11 @@
   },
   {
     "id": "SIG-0002",
+<<<<<<< Updated upstream
     "time": "2026-07-30T09:41:47.746078+00:00",
+=======
+    "time": "2026-07-30T09:41:39.040895+00:00",
+>>>>>>> Stashed changes
     "pair": "LTC/USDT",
     "exchange": "KuCoin",
     "direction": "SHORT",
@@ -44,7 +48,11 @@
     "adx": 21.2,
     "rsi": 30.4,
     "rsi3": 60.0,
+<<<<<<< Updated upstream
     "volume_x": 0.87,
+=======
+    "volume_x": 0.76,
+>>>>>>> Stashed changes
     "htf_trend": "BEARISH",
     "entry": 45.24,
     "sl": 46.144800000000004,
