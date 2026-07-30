@@ -1,11 +1,17 @@
 [
   {
     "id": "SIG-0001",
+<<<<<<< Updated upstream
     "time": "2026-07-30T13:01:34.986653+00:00",
     "pair": "ONDO/USDT",
+=======
+    "time": "2026-07-30T13:02:09.186359+00:00",
+    "pair": "GRAM/USDT",
+>>>>>>> Stashed changes
     "exchange": "KuCoin",
     "direction": "LONG",
     "style": "CONFIRMED_BREAKOUT",
+<<<<<<< Updated upstream
     "score": 91.5,
     "adx": 31.5,
     "rsi": 68.1,
@@ -40,6 +46,8 @@
     "exchange": "KuCoin",
     "direction": "SHORT",
     "style": "CONFIRMED_BREAKOUT",
+=======
+>>>>>>> Stashed changes
     "score": 82.7,
     "adx": 22.7,
     "rsi": 23.7,
