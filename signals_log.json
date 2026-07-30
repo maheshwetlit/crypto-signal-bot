@@ -35,13 +35,18 @@
   },
   {
     "id": "SIG-0002",
+<<<<<<< Updated upstream
     "time": "2026-07-30T09:51:47.520550+00:00",
+=======
+    "time": "2026-07-30T09:52:10.967216+00:00",
+>>>>>>> Stashed changes
     "pair": "ONDO/USDT",
     "exchange": "KuCoin",
     "direction": "LONG",
     "style": "CONFIRMED_BREAKOUT",
     "score": 98.3,
     "adx": 38.3,
+<<<<<<< Updated upstream
     "rsi": 75.0,
     "rsi3": NaN,
     "volume_x": 1.01,
@@ -54,6 +59,20 @@
     "tp2": null,
     "tp3": null,
     "tp_main": 0.42326540999999995,
+=======
+    "rsi": 75.1,
+    "rsi3": NaN,
+    "volume_x": 1.05,
+    "htf_trend": "BULLISH",
+    "entry": 0.41952,
+    "sl": 0.4111296,
+    "best_price": 0.41952,
+    "worst_price": 0.41952,
+    "tp1": 0.42329567999999995,
+    "tp2": null,
+    "tp3": null,
+    "tp_main": 0.42329567999999995,
+>>>>>>> Stashed changes
     "capital": 1000.0,
     "status": "OPEN",
     "exit_price": null,
@@ -63,7 +82,11 @@
     "exit_time": null,
     "grind_count": 0,
     "grind_entries": [
+<<<<<<< Updated upstream
       0.41949
+=======
+      0.41952
+>>>>>>> Stashed changes
     ],
     "tag": "breakout_long"
   }
