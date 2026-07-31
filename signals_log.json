@@ -1,7 +1,11 @@
 [
   {
     "id": "SIG-0001",
+<<<<<<< Updated upstream
     "time": "2026-07-31T09:11:56.334970+00:00",
+=======
+    "time": "2026-07-31T09:12:18.416467+00:00",
+>>>>>>> Stashed changes
     "pair": "ONDO/USDT",
     "exchange": "KuCoin",
     "direction": "SHORT",
