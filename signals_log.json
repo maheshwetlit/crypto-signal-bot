@@ -137,7 +137,11 @@
   },
   {
     "id": "SIG-0005",
+<<<<<<< Updated upstream
     "time": "2026-07-31T10:11:49.243730+00:00",
+=======
+    "time": "2026-07-31T10:12:20.519787+00:00",
+>>>>>>> Stashed changes
     "pair": "TRX/USDT",
     "exchange": "KuCoin",
     "direction": "SHORT",
