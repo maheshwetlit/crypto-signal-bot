@@ -542,5 +542,39 @@
       0.40643
     ],
     "tag": "breakout_short"
+  },
+  {
+    "id": "SIG-0017",
+    "time": "2026-07-31T03:21:59.559882+00:00",
+    "pair": "COTI/USDT",
+    "exchange": "KuCoin",
+    "direction": "LONG",
+    "style": "CONFIRMED_BREAKOUT",
+    "score": 77.6,
+    "adx": 17.6,
+    "rsi": 65.5,
+    "rsi3": 94.1,
+    "volume_x": 2.87,
+    "htf_trend": "NEUTRAL",
+    "entry": 0.01278,
+    "sl": 0.0125244,
+    "best_price": 0.01278,
+    "worst_price": 0.01278,
+    "tp1": 0.012895019999999998,
+    "tp2": null,
+    "tp3": null,
+    "tp_main": 0.012895019999999998,
+    "capital": 1000.0,
+    "status": "OPEN",
+    "exit_price": null,
+    "pnl_usd": null,
+    "result": null,
+    "closed_at": null,
+    "exit_time": null,
+    "grind_count": 0,
+    "grind_entries": [
+      0.01278
+    ],
+    "tag": "breakout_long"
   }
 ]
