@@ -100,5 +100,39 @@
       0.06953
     ],
     "tag": "breakout_short"
+  },
+  {
+    "id": "SIG-0004",
+    "time": "2026-07-31T13:36:38.198058+00:00",
+    "pair": "PEPE/USDT",
+    "exchange": "KuCoin",
+    "direction": "LONG",
+    "style": "CONFIRMED_BREAKOUT",
+    "score": 95.2,
+    "adx": 35.2,
+    "rsi": 78.8,
+    "rsi3": 62.5,
+    "volume_x": 0.56,
+    "htf_trend": "NEUTRAL",
+    "entry": 2.776e-06,
+    "sl": 2.7204800000000003e-06,
+    "best_price": 2.776e-06,
+    "worst_price": 2.776e-06,
+    "tp1": 2.800984e-06,
+    "tp2": null,
+    "tp3": null,
+    "tp_main": 2.800984e-06,
+    "capital": 1000.0,
+    "status": "OPEN",
+    "exit_price": null,
+    "pnl_usd": null,
+    "result": null,
+    "closed_at": null,
+    "exit_time": null,
+    "grind_count": 0,
+    "grind_entries": [
+      2.776e-06
+    ],
+    "tag": "breakout_long"
   }
 ]
