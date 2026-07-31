@@ -1,25 +1,25 @@
 [
   {
     "id": "SIG-0001",
-    "time": "2026-07-31T09:45:59.285339+00:00",
-    "pair": "ETH/USDT",
+    "time": "2026-07-31T10:02:49.320977+00:00",
+    "pair": "ONDO/USDT",
     "exchange": "KuCoin",
     "direction": "SHORT",
     "style": "CONFIRMED_BREAKOUT",
-    "score": 86.6,
-    "adx": 26.6,
-    "rsi": 27.4,
-    "rsi3": 8.3,
-    "volume_x": 2.36,
+    "score": 87.3,
+    "adx": 27.3,
+    "rsi": 45.2,
+    "rsi3": 28.1,
+    "volume_x": 0.86,
     "htf_trend": "NEUTRAL",
-    "entry": 1882.9,
-    "sl": 1920.5580000000002,
-    "best_price": 1882.9,
-    "worst_price": 1882.9,
-    "tp1": 1865.9539,
+    "entry": 0.40319,
+    "sl": 0.4112538,
+    "best_price": 0.40319,
+    "worst_price": 0.40319,
+    "tp1": 0.39956129,
     "tp2": null,
     "tp3": null,
-    "tp_main": 1865.9539,
+    "tp_main": 0.39956129,
     "capital": 1000.0,
     "status": "OPEN",
     "exit_price": null,
@@ -29,46 +29,8 @@
     "exit_time": null,
     "grind_count": 0,
     "grind_entries": [
-      1882.9
+      0.40319
     ],
     "tag": "breakout_short"
-  },
-  {
-    "id": "SIG-0002",
-<<<<<<< Updated upstream
-    "time": "2026-07-31T09:52:10.963617+00:00",
-=======
-    "time": "2026-07-31T09:52:51.975108+00:00",
->>>>>>> Stashed changes
-    "pair": "ENA/USDT",
-    "exchange": "KuCoin",
-    "direction": "LONG",
-    "style": "CONFIRMED_BREAKOUT",
-    "score": 77.0,
-    "adx": 17.0,
-    "rsi": 52.9,
-    "rsi3": 66.7,
-    "volume_x": 2.26,
-    "htf_trend": "NEUTRAL",
-    "entry": 0.082,
-    "sl": 0.08036,
-    "best_price": 0.082,
-    "worst_price": 0.082,
-    "tp1": 0.08273799999999999,
-    "tp2": null,
-    "tp3": null,
-    "tp_main": 0.08273799999999999,
-    "capital": 1000.0,
-    "status": "OPEN",
-    "exit_price": null,
-    "pnl_usd": null,
-    "result": null,
-    "closed_at": null,
-    "exit_time": null,
-    "grind_count": 0,
-    "grind_entries": [
-      0.082
-    ],
-    "tag": "breakout_long"
   }
 ]
