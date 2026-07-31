@@ -307,13 +307,18 @@
   },
   {
     "id": "SIG-0010",
+<<<<<<< Updated upstream
     "time": "2026-07-31T07:21:32.687823+00:00",
+=======
+    "time": "2026-07-31T07:21:52.538711+00:00",
+>>>>>>> Stashed changes
     "pair": "LINK/USDT",
     "exchange": "KuCoin",
     "direction": "SHORT",
     "style": "CONFIRMED_BREAKOUT",
     "score": 85.7,
     "adx": 25.7,
+<<<<<<< Updated upstream
     "rsi": 17.8,
     "rsi3": 0.0,
     "volume_x": 1.29,
@@ -326,6 +331,20 @@
     "tp2": null,
     "tp3": null,
     "tp_main": 8.1852636,
+=======
+    "rsi": 17.7,
+    "rsi3": 0.0,
+    "volume_x": 1.59,
+    "htf_trend": "BEARISH",
+    "entry": 8.259,
+    "sl": 8.42418,
+    "best_price": 8.259,
+    "worst_price": 8.259,
+    "tp1": 8.184669,
+    "tp2": null,
+    "tp3": null,
+    "tp_main": 8.184669,
+>>>>>>> Stashed changes
     "capital": 1000.0,
     "status": "OPEN",
     "exit_price": null,
@@ -335,19 +354,62 @@
     "exit_time": null,
     "grind_count": 0,
     "grind_entries": [
+<<<<<<< Updated upstream
       8.2596
+=======
+      8.259
+>>>>>>> Stashed changes
     ],
     "tag": "breakout_short"
   },
   {
     "id": "SIG-0011",
+<<<<<<< Updated upstream
     "time": "2026-07-31T07:21:55.271746+00:00",
+=======
+    "time": "2026-07-31T07:22:12.286846+00:00",
+    "pair": "LTC/USDT",
+    "exchange": "KuCoin",
+    "direction": "SHORT",
+    "style": "CONFIRMED_BREAKOUT",
+    "score": 80.0,
+    "adx": 20.0,
+    "rsi": 36.1,
+    "rsi3": 0.0,
+    "volume_x": 1.49,
+    "htf_trend": "BEARISH",
+    "entry": 45.19,
+    "sl": 46.0938,
+    "best_price": 45.19,
+    "worst_price": 45.19,
+    "tp1": 44.78329,
+    "tp2": null,
+    "tp3": null,
+    "tp_main": 44.78329,
+    "capital": 1000.0,
+    "status": "OPEN",
+    "exit_price": null,
+    "pnl_usd": null,
+    "result": null,
+    "closed_at": null,
+    "exit_time": null,
+    "grind_count": 0,
+    "grind_entries": [
+      45.19
+    ],
+    "tag": "breakout_short"
+  },
+  {
+    "id": "SIG-0012",
+    "time": "2026-07-31T07:22:16.244839+00:00",
+>>>>>>> Stashed changes
     "pair": "DOGE/USDT",
     "exchange": "KuCoin",
     "direction": "SHORT",
     "style": "CONFIRMED_BREAKOUT",
     "score": 80.2,
     "adx": 20.2,
+<<<<<<< Updated upstream
     "rsi": 26.7,
     "rsi3": 11.8,
     "volume_x": 0.42,
@@ -360,6 +422,20 @@
     "tp2": null,
     "tp3": null,
     "tp_main": 0.06910243,
+=======
+    "rsi": 26.4,
+    "rsi3": 11.1,
+    "volume_x": 0.42,
+    "htf_trend": "BEARISH",
+    "entry": 0.06972,
+    "sl": 0.07111440000000001,
+    "best_price": 0.06972,
+    "worst_price": 0.06972,
+    "tp1": 0.06909252,
+    "tp2": null,
+    "tp3": null,
+    "tp_main": 0.06909252,
+>>>>>>> Stashed changes
     "capital": 1000.0,
     "status": "OPEN",
     "exit_price": null,
@@ -369,13 +445,22 @@
     "exit_time": null,
     "grind_count": 0,
     "grind_entries": [
+<<<<<<< Updated upstream
       0.06973
+=======
+      0.06972
+>>>>>>> Stashed changes
     ],
     "tag": "breakout_short"
   },
   {
+<<<<<<< Updated upstream
     "id": "SIG-0012",
     "time": "2026-07-31T07:22:17.572644+00:00",
+=======
+    "id": "SIG-0013",
+    "time": "2026-07-31T07:22:40.341193+00:00",
+>>>>>>> Stashed changes
     "pair": "WIF/USDT",
     "exchange": "KuCoin",
     "direction": "SHORT",
