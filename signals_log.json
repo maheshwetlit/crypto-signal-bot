@@ -60,8 +60,13 @@
     "exit_price": 6.46,
     "pnl_usd": -11.63,
     "result": "STALE",
+<<<<<<< Updated upstream
     "closed_at": "2026-07-31T04:35:50.975298+00:00",
     "exit_time": "2026-07-31T04:35:50.975298+00:00",
+=======
+    "closed_at": "2026-07-31T04:36:24.222136+00:00",
+    "exit_time": "2026-07-31T04:36:24.222136+00:00",
+>>>>>>> Stashed changes
     "grind_count": 0,
     "grind_entries": [
       6.536
@@ -92,17 +97,29 @@
     "tp_main": 0.17223629999999998,
     "capital": 1000.0,
     "status": "CLOSED",
+<<<<<<< Updated upstream
     "exit_price": 0.169,
     "pnl_usd": -9.96,
     "result": "STALE",
     "closed_at": "2026-07-31T04:35:50.975298+00:00",
     "exit_time": "2026-07-31T04:35:50.975298+00:00",
+=======
+    "exit_price": 0.1692,
+    "pnl_usd": -8.79,
+    "result": "STALE",
+    "closed_at": "2026-07-31T04:36:24.222136+00:00",
+    "exit_time": "2026-07-31T04:36:24.222136+00:00",
+>>>>>>> Stashed changes
     "grind_count": 0,
     "grind_entries": [
       0.1707
     ],
     "tag": "breakout_long",
+<<<<<<< Updated upstream
     "pnl_pct": -1.0
+=======
+    "pnl_pct": -0.88
+>>>>>>> Stashed changes
   },
   {
     "id": "SIG-0004",
@@ -460,7 +477,11 @@
     "entry": 587.875,
     "sl": 599.6325,
     "best_price": 587.875,
+<<<<<<< Updated upstream
     "worst_price": 589.245,
+=======
+    "worst_price": 589.463,
+>>>>>>> Stashed changes
     "tp1": 582.584125,
     "tp2": null,
     "tp3": null,
@@ -494,7 +515,11 @@
     "entry": 0.04192,
     "sl": 0.0427584,
     "best_price": 0.04188,
+<<<<<<< Updated upstream
     "worst_price": 0.04202,
+=======
+    "worst_price": 0.04199,
+>>>>>>> Stashed changes
     "tp1": 0.04154272,
     "tp2": null,
     "tp3": null,
@@ -685,7 +710,11 @@
   },
   {
     "id": "SIG-0021",
+<<<<<<< Updated upstream
     "time": "2026-07-31T04:36:59.058587+00:00",
+=======
+    "time": "2026-07-31T04:37:17.729290+00:00",
+>>>>>>> Stashed changes
     "pair": "AEON/USDT",
     "exchange": "KuCoin",
     "direction": "LONG",
