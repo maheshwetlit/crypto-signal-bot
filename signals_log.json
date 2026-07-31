@@ -1,29 +1,25 @@
 [
   {
     "id": "SIG-0001",
-<<<<<<< Updated upstream
-    "time": "2026-07-31T11:31:03.072180+00:00",
-=======
-    "time": "2026-07-31T11:31:36.123492+00:00",
->>>>>>> Stashed changes
-    "pair": "SOL/USDT",
+    "time": "2026-07-31T11:42:05.580366+00:00",
+    "pair": "TRUMP/USDT",
     "exchange": "KuCoin",
     "direction": "SHORT",
     "style": "CONFIRMED_BREAKOUT",
-    "score": 79.1,
-    "adx": 19.1,
-    "rsi": 49.4,
-    "rsi3": 46.7,
-    "volume_x": 2.76,
+    "score": 90.7,
+    "adx": 30.7,
+    "rsi": 30.4,
+    "rsi3": 0.0,
+    "volume_x": 0.75,
     "htf_trend": "BEARISH",
-    "entry": 73.6,
-    "sl": 75.07199999999999,
-    "best_price": 73.6,
-    "worst_price": 73.6,
-    "tp1": 72.93759999999999,
+    "entry": 1.438,
+    "sl": 1.46676,
+    "best_price": 1.438,
+    "worst_price": 1.438,
+    "tp1": 1.425058,
     "tp2": null,
     "tp3": null,
-    "tp_main": 72.93759999999999,
+    "tp_main": 1.425058,
     "capital": 1000.0,
     "status": "OPEN",
     "exit_price": null,
@@ -33,7 +29,7 @@
     "exit_time": null,
     "grind_count": 0,
     "grind_entries": [
-      73.6
+      1.438
     ],
     "tag": "breakout_short"
   }
