@@ -1,46 +1,25 @@
 [
   {
     "id": "SIG-0001",
-<<<<<<< Updated upstream
-    "time": "2026-07-31T11:21:53.131661+00:00",
-=======
-    "time": "2026-07-31T11:22:05.334758+00:00",
->>>>>>> Stashed changes
-    "pair": "COTI/USDT",
+    "time": "2026-07-31T11:31:03.072180+00:00",
+    "pair": "SOL/USDT",
     "exchange": "KuCoin",
-    "direction": "LONG",
+    "direction": "SHORT",
     "style": "CONFIRMED_BREAKOUT",
-<<<<<<< Updated upstream
-    "score": 82.8,
-    "adx": 22.8,
-    "rsi": 61.2,
-    "rsi3": NaN,
-    "volume_x": 2.09,
-    "htf_trend": "BULLISH",
-    "entry": 0.01503,
-    "sl": 0.0147294,
-    "best_price": 0.01503,
-    "worst_price": 0.01503,
-    "tp1": 0.015165269999999998,
+    "score": 79.1,
+    "adx": 19.1,
+    "rsi": 49.4,
+    "rsi3": 46.7,
+    "volume_x": 2.76,
+    "htf_trend": "BEARISH",
+    "entry": 73.6,
+    "sl": 75.07199999999999,
+    "best_price": 73.6,
+    "worst_price": 73.6,
+    "tp1": 72.93759999999999,
     "tp2": null,
     "tp3": null,
-    "tp_main": 0.015165269999999998,
-=======
-    "score": 82.9,
-    "adx": 22.9,
-    "rsi": 61.8,
-    "rsi3": NaN,
-    "volume_x": 2.13,
-    "htf_trend": "BULLISH",
-    "entry": 0.01508,
-    "sl": 0.014778399999999999,
-    "best_price": 0.01508,
-    "worst_price": 0.01508,
-    "tp1": 0.015215719999999999,
-    "tp2": null,
-    "tp3": null,
-    "tp_main": 0.015215719999999999,
->>>>>>> Stashed changes
+    "tp_main": 72.93759999999999,
     "capital": 1000.0,
     "status": "OPEN",
     "exit_price": null,
@@ -50,12 +29,8 @@
     "exit_time": null,
     "grind_count": 0,
     "grind_entries": [
-<<<<<<< Updated upstream
-      0.01503
-=======
-      0.01508
->>>>>>> Stashed changes
+      73.6
     ],
-    "tag": "breakout_long"
+    "tag": "breakout_short"
   }
 ]
