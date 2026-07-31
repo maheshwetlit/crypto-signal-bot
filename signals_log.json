@@ -409,7 +409,11 @@
   },
   {
     "id": "SIG-0013",
+<<<<<<< Updated upstream
     "time": "2026-07-31T14:22:08.561191+00:00",
+=======
+    "time": "2026-07-31T14:22:16.378944+00:00",
+>>>>>>> Stashed changes
     "pair": "FET/USDT",
     "exchange": "KuCoin",
     "direction": "LONG",
