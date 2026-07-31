@@ -1,7 +1,11 @@
 [
   {
     "id": "SIG-0001",
+<<<<<<< Updated upstream
     "time": "2026-07-31T11:31:03.072180+00:00",
+=======
+    "time": "2026-07-31T11:31:36.123492+00:00",
+>>>>>>> Stashed changes
     "pair": "SOL/USDT",
     "exchange": "KuCoin",
     "direction": "SHORT",
