@@ -35,13 +35,52 @@
   },
   {
     "id": "SIG-0002",
+<<<<<<< Updated upstream
     "time": "2026-07-31T13:01:39.991359+00:00",
+=======
+    "time": "2026-07-31T13:02:08.601804+00:00",
+    "pair": "HYPE/USDT",
+    "exchange": "KuCoin",
+    "direction": "LONG",
+    "style": "CONFIRMED_BREAKOUT",
+    "score": 86.7,
+    "adx": 26.7,
+    "rsi": 77.5,
+    "rsi3": 62.7,
+    "volume_x": 1.12,
+    "htf_trend": "NEUTRAL",
+    "entry": 55.393,
+    "sl": 54.28514,
+    "best_price": 55.393,
+    "worst_price": 55.393,
+    "tp1": 55.89153699999999,
+    "tp2": null,
+    "tp3": null,
+    "tp_main": 55.89153699999999,
+    "capital": 1000.0,
+    "status": "OPEN",
+    "exit_price": null,
+    "pnl_usd": null,
+    "result": null,
+    "closed_at": null,
+    "exit_time": null,
+    "grind_count": 0,
+    "grind_entries": [
+      55.393
+    ],
+    "tag": "breakout_long"
+  },
+  {
+    "id": "SIG-0003",
+    "time": "2026-07-31T13:02:10.412440+00:00",
+>>>>>>> Stashed changes
     "pair": "DOGE/USDT",
     "exchange": "KuCoin",
     "direction": "LONG",
     "style": "CONFIRMED_BREAKOUT",
     "score": 82.7,
     "adx": 22.7,
+<<<<<<< Updated upstream
     "rsi": 51.7,
     "rsi3": 87.5,
     "volume_x": 1.09,
@@ -54,6 +93,20 @@
     "tp2": null,
     "tp3": null,
     "tp_main": 0.07026675999999998,
+=======
+    "rsi": 52.2,
+    "rsi3": 88.9,
+    "volume_x": 1.24,
+    "htf_trend": "BEARISH",
+    "entry": 0.06965,
+    "sl": 0.068257,
+    "best_price": 0.06965,
+    "worst_price": 0.06965,
+    "tp1": 0.07027685,
+    "tp2": null,
+    "tp3": null,
+    "tp_main": 0.07027685,
+>>>>>>> Stashed changes
     "capital": 1000.0,
     "status": "OPEN",
     "exit_price": null,
@@ -63,19 +116,29 @@
     "exit_time": null,
     "grind_count": 0,
     "grind_entries": [
+<<<<<<< Updated upstream
       0.06964
+=======
+      0.06965
+>>>>>>> Stashed changes
     ],
     "tag": "breakout_long"
   },
   {
+<<<<<<< Updated upstream
     "id": "SIG-0003",
     "time": "2026-07-31T13:01:46.171882+00:00",
+=======
+    "id": "SIG-0004",
+    "time": "2026-07-31T13:02:15.735677+00:00",
+>>>>>>> Stashed changes
     "pair": "PEPE/USDT",
     "exchange": "KuCoin",
     "direction": "LONG",
     "style": "CONFIRMED_BREAKOUT",
     "score": 83.6,
     "adx": 23.6,
+<<<<<<< Updated upstream
     "rsi": 80.9,
     "rsi3": NaN,
     "volume_x": 1.29,
@@ -88,6 +151,20 @@
     "tp2": null,
     "tp3": null,
     "tp_main": 2.7878669999999997e-06,
+=======
+    "rsi": 81.3,
+    "rsi3": NaN,
+    "volume_x": 1.45,
+    "htf_trend": "NEUTRAL",
+    "entry": 2.764e-06,
+    "sl": 2.70872e-06,
+    "best_price": 2.764e-06,
+    "worst_price": 2.764e-06,
+    "tp1": 2.788876e-06,
+    "tp2": null,
+    "tp3": null,
+    "tp_main": 2.788876e-06,
+>>>>>>> Stashed changes
     "capital": 1000.0,
     "status": "OPEN",
     "exit_price": null,
@@ -97,19 +174,29 @@
     "exit_time": null,
     "grind_count": 0,
     "grind_entries": [
+<<<<<<< Updated upstream
       2.763e-06
+=======
+      2.764e-06
+>>>>>>> Stashed changes
     ],
     "tag": "breakout_long"
   },
   {
+<<<<<<< Updated upstream
     "id": "SIG-0004",
     "time": "2026-07-31T13:01:48.233221+00:00",
+=======
+    "id": "SIG-0005",
+    "time": "2026-07-31T13:02:17.530644+00:00",
+>>>>>>> Stashed changes
     "pair": "ONDO/USDT",
     "exchange": "KuCoin",
     "direction": "LONG",
     "style": "CONFIRMED_BREAKOUT",
     "score": 82.5,
     "adx": 22.5,
+<<<<<<< Updated upstream
     "rsi": 62.8,
     "rsi3": NaN,
     "volume_x": 5.09,
@@ -122,6 +209,20 @@
     "tp2": null,
     "tp3": null,
     "tp_main": 0.40890733999999995,
+=======
+    "rsi": 63.3,
+    "rsi3": NaN,
+    "volume_x": 6.18,
+    "htf_trend": "NEUTRAL",
+    "entry": 0.40539,
+    "sl": 0.3972822,
+    "best_price": 0.40539,
+    "worst_price": 0.40539,
+    "tp1": 0.4090385099999999,
+    "tp2": null,
+    "tp3": null,
+    "tp_main": 0.4090385099999999,
+>>>>>>> Stashed changes
     "capital": 1000.0,
     "status": "OPEN",
     "exit_price": null,
@@ -131,7 +232,11 @@
     "exit_time": null,
     "grind_count": 0,
     "grind_entries": [
+<<<<<<< Updated upstream
       0.40526
+=======
+      0.40539
+>>>>>>> Stashed changes
     ],
     "tag": "breakout_long"
   }
