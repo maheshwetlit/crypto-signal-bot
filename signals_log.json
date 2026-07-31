@@ -35,7 +35,11 @@
   },
   {
     "id": "SIG-0002",
+<<<<<<< Updated upstream
     "time": "2026-07-31T09:52:10.963617+00:00",
+=======
+    "time": "2026-07-31T09:52:51.975108+00:00",
+>>>>>>> Stashed changes
     "pair": "ENA/USDT",
     "exchange": "KuCoin",
     "direction": "LONG",
