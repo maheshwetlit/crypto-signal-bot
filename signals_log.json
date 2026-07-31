@@ -69,7 +69,45 @@
   },
   {
     "id": "SIG-0003",
+<<<<<<< Updated upstream
     "time": "2026-07-31T07:51:48.515815+00:00",
+=======
+    "time": "2026-07-31T07:51:53.848352+00:00",
+    "pair": "ADA/USDT",
+    "exchange": "KuCoin",
+    "direction": "LONG",
+    "style": "CONFIRMED_BREAKOUT",
+    "score": 82.4,
+    "adx": 22.4,
+    "rsi": 69.0,
+    "rsi3": NaN,
+    "volume_x": 1.71,
+    "htf_trend": "BULLISH",
+    "entry": 0.17,
+    "sl": 0.1666,
+    "best_price": 0.17,
+    "worst_price": 0.17,
+    "tp1": 0.17153,
+    "tp2": null,
+    "tp3": null,
+    "tp_main": 0.17153,
+    "capital": 1000.0,
+    "status": "OPEN",
+    "exit_price": null,
+    "pnl_usd": null,
+    "result": null,
+    "closed_at": null,
+    "exit_time": null,
+    "grind_count": 0,
+    "grind_entries": [
+      0.17
+    ],
+    "tag": "breakout_long"
+  },
+  {
+    "id": "SIG-0004",
+    "time": "2026-07-31T07:52:08.660231+00:00",
+>>>>>>> Stashed changes
     "pair": "WIF/USDT",
     "exchange": "KuCoin",
     "direction": "LONG",
