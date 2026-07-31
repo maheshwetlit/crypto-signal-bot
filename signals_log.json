@@ -434,7 +434,11 @@
     "htf_trend": "BEARISH",
     "entry": 53.476,
     "sl": 54.54552,
+<<<<<<< Updated upstream
     "best_price": 52.246,
+=======
+    "best_price": 52.267,
+>>>>>>> Stashed changes
     "worst_price": 53.616,
     "tp1": 52.994716,
     "tp2": null,
@@ -442,17 +446,29 @@
     "tp_main": 52.994716,
     "capital": 1000.0,
     "status": "WIN",
+<<<<<<< Updated upstream
     "exit_price": 52.246,
     "pnl_usd": 23.0,
     "result": "WIN",
     "closed_at": "2026-07-31T19:56:02.262165+00:00",
     "exit_time": "2026-07-31T19:56:02.262165+00:00",
+=======
+    "exit_price": 52.267,
+    "pnl_usd": 22.61,
+    "result": "WIN",
+    "closed_at": "2026-07-31T19:56:17.890327+00:00",
+    "exit_time": "2026-07-31T19:56:17.890327+00:00",
+>>>>>>> Stashed changes
     "grind_count": 0,
     "grind_entries": [
       53.476
     ],
     "tag": "breakout_short",
+<<<<<<< Updated upstream
     "pnl_pct": 2.3
+=======
+    "pnl_pct": 2.26
+>>>>>>> Stashed changes
   },
   {
     "id": "SIG-0014",
