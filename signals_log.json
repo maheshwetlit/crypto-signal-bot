@@ -1,46 +1,25 @@
 [
   {
     "id": "SIG-0001",
-<<<<<<< Updated upstream
-    "time": "2026-07-31T10:22:02.146821+00:00",
-=======
-    "time": "2026-07-31T10:22:19.923072+00:00",
->>>>>>> Stashed changes
-    "pair": "FET/USDT",
+    "time": "2026-07-31T10:26:52.758616+00:00",
+    "pair": "AEON/USDT",
     "exchange": "KuCoin",
-    "direction": "LONG",
+    "direction": "SHORT",
     "style": "CONFIRMED_BREAKOUT",
-<<<<<<< Updated upstream
-    "score": 77.7,
-    "adx": 17.7,
-    "rsi": 55.6,
-    "rsi3": 90.0,
-    "volume_x": 2.09,
+    "score": 100.0,
+    "adx": 40.7,
+    "rsi": 24.7,
+    "rsi3": 27.3,
+    "volume_x": 0.79,
     "htf_trend": "NEUTRAL",
-    "entry": 0.1421,
-    "sl": 0.139258,
-    "best_price": 0.1421,
-    "worst_price": 0.1421,
-    "tp1": 0.14337889999999998,
+    "entry": 0.0809,
+    "sl": 0.08251800000000001,
+    "best_price": 0.0809,
+    "worst_price": 0.0809,
+    "tp1": 0.0801719,
     "tp2": null,
     "tp3": null,
-    "tp_main": 0.14337889999999998,
-=======
-    "score": 77.9,
-    "adx": 17.9,
-    "rsi": 57.9,
-    "rsi3": 90.9,
-    "volume_x": 2.44,
-    "htf_trend": "NEUTRAL",
-    "entry": 0.1422,
-    "sl": 0.13935599999999998,
-    "best_price": 0.1422,
-    "worst_price": 0.1422,
-    "tp1": 0.1434798,
-    "tp2": null,
-    "tp3": null,
-    "tp_main": 0.1434798,
->>>>>>> Stashed changes
+    "tp_main": 0.0801719,
     "capital": 1000.0,
     "status": "OPEN",
     "exit_price": null,
@@ -50,12 +29,8 @@
     "exit_time": null,
     "grind_count": 0,
     "grind_entries": [
-<<<<<<< Updated upstream
-      0.1421
-=======
-      0.1422
->>>>>>> Stashed changes
+      0.0809
     ],
-    "tag": "breakout_long"
+    "tag": "breakout_short"
   }
 ]
