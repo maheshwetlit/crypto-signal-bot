@@ -679,5 +679,39 @@
       0.763
     ],
     "tag": "breakout_short"
+  },
+  {
+    "id": "SIG-0021",
+    "time": "2026-08-01T06:41:37.419115+00:00",
+    "pair": "MMT/USDT",
+    "exchange": "KuCoin",
+    "direction": "LONG",
+    "style": "CONFIRMED_BREAKOUT",
+    "score": 84.4,
+    "adx": 24.4,
+    "rsi": 80.2,
+    "rsi3": NaN,
+    "volume_x": 3.14,
+    "htf_trend": "NEUTRAL",
+    "entry": 0.2187,
+    "sl": 0.214326,
+    "best_price": 0.2187,
+    "worst_price": 0.2187,
+    "tp1": 0.22066829999999998,
+    "tp2": null,
+    "tp3": null,
+    "tp_main": 0.22066829999999998,
+    "capital": 1000.0,
+    "status": "OPEN",
+    "exit_price": null,
+    "pnl_usd": null,
+    "result": null,
+    "closed_at": null,
+    "exit_time": null,
+    "grind_count": 0,
+    "grind_entries": [
+      0.2187
+    ],
+    "tag": "breakout_long"
   }
 ]
