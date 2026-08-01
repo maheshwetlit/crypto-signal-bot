@@ -239,5 +239,39 @@
       0.04145
     ],
     "tag": "breakout_short"
+  },
+  {
+    "id": "SIG-0008",
+    "time": "2026-08-01T15:02:00.275751+00:00",
+    "pair": "GIGGLE/USDT",
+    "exchange": "KuCoin",
+    "direction": "SHORT",
+    "style": "CONFIRMED_BREAKOUT",
+    "score": 88.0,
+    "adx": 28.0,
+    "rsi": 53.1,
+    "rsi3": 22.1,
+    "volume_x": 1.07,
+    "htf_trend": "BULLISH",
+    "entry": 42.86,
+    "sl": 43.7172,
+    "best_price": 42.86,
+    "worst_price": 42.86,
+    "tp1": 42.47426,
+    "tp2": null,
+    "tp3": null,
+    "tp_main": 42.47426,
+    "capital": 1000.0,
+    "status": "OPEN",
+    "exit_price": null,
+    "pnl_usd": null,
+    "result": null,
+    "closed_at": null,
+    "exit_time": null,
+    "grind_count": 0,
+    "grind_entries": [
+      42.86
+    ],
+    "tag": "breakout_short"
   }
 ]
