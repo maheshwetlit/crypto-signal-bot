@@ -161,17 +161,18 @@
     "tp3": null,
     "tp_main": 43.61391,
     "capital": 1000.0,
-    "status": "OPEN",
-    "exit_price": null,
-    "pnl_usd": null,
-    "result": null,
-    "closed_at": null,
-    "exit_time": null,
+    "status": "WIN",
+    "exit_price": 42.62,
+    "pnl_usd": 31.58,
+    "result": "WIN",
+    "closed_at": "2026-08-01T12:42:07.672134+00:00",
+    "exit_time": "2026-08-01T12:42:07.672134+00:00",
     "grind_count": 0,
     "grind_entries": [
       44.01
     ],
-    "tag": "breakout_short"
+    "tag": "breakout_short",
+    "pnl_pct": 3.16
   },
   {
     "id": "SIG-0006",
@@ -701,7 +702,11 @@
     "entry": 52.381,
     "sl": 51.33338,
     "best_price": 52.381,
+<<<<<<< Updated upstream
     "worst_price": 52.235,
+=======
+    "worst_price": 52.195,
+>>>>>>> Stashed changes
     "tp1": 52.852428999999994,
     "tp2": null,
     "tp3": null,
