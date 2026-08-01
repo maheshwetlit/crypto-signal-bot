@@ -1667,5 +1667,39 @@
       0.04099
     ],
     "tag": "breakout_long"
+  },
+  {
+    "id": "SIG-0049",
+    "time": "2026-08-01T22:32:15.104390+00:00",
+    "pair": "RATS/USDT",
+    "exchange": "KuCoin",
+    "direction": "LONG",
+    "style": "CONFIRMED_BREAKOUT",
+    "score": 100.0,
+    "adx": 50.8,
+    "rsi": 67.7,
+    "rsi3": 50.3,
+    "volume_x": 0.53,
+    "htf_trend": "BULLISH",
+    "entry": 5.968e-05,
+    "sl": 5.8486399999999996e-05,
+    "best_price": 5.968e-05,
+    "worst_price": 5.968e-05,
+    "tp1": 6.021711999999999e-05,
+    "tp2": null,
+    "tp3": null,
+    "tp_main": 6.021711999999999e-05,
+    "capital": 1000.0,
+    "status": "OPEN",
+    "exit_price": null,
+    "pnl_usd": null,
+    "result": null,
+    "closed_at": null,
+    "exit_time": null,
+    "grind_count": 0,
+    "grind_entries": [
+      5.968e-05
+    ],
+    "tag": "breakout_long"
   }
 ]
