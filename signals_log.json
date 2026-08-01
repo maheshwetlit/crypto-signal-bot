@@ -377,5 +377,39 @@
     ],
     "tag": "breakout_long",
     "pnl_pct": -2.0
+  },
+  {
+    "id": "SIG-0012",
+    "time": "2026-08-01T02:02:05.539159+00:00",
+    "pair": "WIF/USDT",
+    "exchange": "KuCoin",
+    "direction": "LONG",
+    "style": "CONFIRMED_BREAKOUT",
+    "score": 94.2,
+    "adx": 34.2,
+    "rsi": 52.9,
+    "rsi3": 57.1,
+    "volume_x": 1.11,
+    "htf_trend": "NEUTRAL",
+    "entry": 0.1458,
+    "sl": 0.142884,
+    "best_price": 0.1458,
+    "worst_price": 0.1458,
+    "tp1": 0.1471122,
+    "tp2": null,
+    "tp3": null,
+    "tp_main": 0.1471122,
+    "capital": 1000.0,
+    "status": "OPEN",
+    "exit_price": null,
+    "pnl_usd": null,
+    "result": null,
+    "closed_at": null,
+    "exit_time": null,
+    "grind_count": 0,
+    "grind_entries": [
+      0.1458
+    ],
+    "tag": "breakout_long"
   }
 ]
