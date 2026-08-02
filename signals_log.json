@@ -1355,8 +1355,13 @@
     "exit_price": 0.04134,
     "pnl_usd": -8.87,
     "result": "STALE",
+<<<<<<< Updated upstream
     "closed_at": "2026-08-02T12:41:02.732270+00:00",
     "exit_time": "2026-08-02T12:41:02.732270+00:00",
+=======
+    "closed_at": "2026-08-02T12:41:32.898450+00:00",
+    "exit_time": "2026-08-02T12:41:32.898450+00:00",
+>>>>>>> Stashed changes
     "grind_count": 0,
     "grind_entries": [
       0.04171
@@ -1414,7 +1419,11 @@
     "entry": 360.66,
     "sl": 367.87320000000005,
     "best_price": 360.66,
+<<<<<<< Updated upstream
     "worst_price": 363.25,
+=======
+    "worst_price": 363.51,
+>>>>>>> Stashed changes
     "tp1": 357.41406,
     "tp2": null,
     "tp3": null,
@@ -1537,7 +1546,11 @@
   },
   {
     "id": "SIG-0045",
+<<<<<<< Updated upstream
     "time": "2026-08-02T12:41:33.782602+00:00",
+=======
+    "time": "2026-08-02T12:42:04.267323+00:00",
+>>>>>>> Stashed changes
     "pair": "SOL/USDT",
     "exchange": "KuCoin",
     "direction": "SHORT",
