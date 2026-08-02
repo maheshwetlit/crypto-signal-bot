@@ -788,5 +788,39 @@
       1.07368
     ],
     "tag": "breakout_long"
+  },
+  {
+    "id": "SIG-0024",
+    "time": "2026-08-02T03:01:43.093700+00:00",
+    "pair": "GRVT/USDT",
+    "exchange": "KuCoin",
+    "direction": "SHORT",
+    "style": "CONFIRMED_BREAKOUT",
+    "score": 79.2,
+    "adx": 19.2,
+    "rsi": 17.0,
+    "rsi3": 0.0,
+    "volume_x": 1.95,
+    "htf_trend": "BULLISH",
+    "entry": 0.2769,
+    "sl": 0.28243799999999997,
+    "best_price": 0.2769,
+    "worst_price": 0.2769,
+    "tp1": 0.2744079,
+    "tp2": null,
+    "tp3": null,
+    "tp_main": 0.2744079,
+    "capital": 1000.0,
+    "status": "OPEN",
+    "exit_price": null,
+    "pnl_usd": null,
+    "result": null,
+    "closed_at": null,
+    "exit_time": null,
+    "grind_count": 0,
+    "grind_entries": [
+      0.2769
+    ],
+    "tag": "breakout_short"
   }
 ]
