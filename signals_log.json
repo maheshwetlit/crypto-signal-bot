@@ -478,7 +478,45 @@
   },
   {
     "id": "SIG-0015",
+<<<<<<< Updated upstream
     "time": "2026-08-03T21:01:39.693332+00:00",
+=======
+    "time": "2026-08-03T21:01:28.741222+00:00",
+    "pair": "XMR/USDT",
+    "exchange": "KuCoin",
+    "direction": "LONG",
+    "style": "CONFIRMED_BREAKOUT",
+    "score": 80.3,
+    "adx": 20.3,
+    "rsi": 95.2,
+    "rsi3": NaN,
+    "volume_x": 2.0,
+    "htf_trend": "BULLISH",
+    "entry": 364.27,
+    "sl": 356.9846,
+    "best_price": 364.27,
+    "worst_price": 364.27,
+    "tp1": 367.54842999999994,
+    "tp2": null,
+    "tp3": null,
+    "tp_main": 367.54842999999994,
+    "capital": 1000.0,
+    "status": "OPEN",
+    "exit_price": null,
+    "pnl_usd": null,
+    "result": null,
+    "closed_at": null,
+    "exit_time": null,
+    "grind_count": 0,
+    "grind_entries": [
+      364.27
+    ],
+    "tag": "breakout_long"
+  },
+  {
+    "id": "SIG-0016",
+    "time": "2026-08-03T21:02:12.217512+00:00",
+>>>>>>> Stashed changes
     "pair": "WIF/USDT",
     "exchange": "KuCoin",
     "direction": "LONG",
@@ -487,7 +525,11 @@
     "adx": 41.6,
     "rsi": 74.4,
     "rsi3": NaN,
+<<<<<<< Updated upstream
     "volume_x": 2.0,
+=======
+    "volume_x": 2.63,
+>>>>>>> Stashed changes
     "htf_trend": "NEUTRAL",
     "entry": 0.1427,
     "sl": 0.139846,
