@@ -1145,11 +1145,16 @@
   },
   {
     "id": "SIG-0034",
+<<<<<<< Updated upstream
     "time": "2026-08-03T09:03:59.875168+00:00",
+=======
+    "time": "2026-08-03T09:06:36.920544+00:00",
+>>>>>>> Stashed changes
     "pair": "SNX/USDT",
     "exchange": "KuCoin",
     "direction": "SHORT",
     "style": "CONFIRMED_BREAKOUT",
+<<<<<<< Updated upstream
     "score": 89.2,
     "adx": 29.2,
     "rsi": 4.3,
@@ -1164,6 +1169,22 @@
     "tp2": null,
     "tp3": null,
     "tp_main": 0.2078127,
+=======
+    "score": 90.0,
+    "adx": 30.0,
+    "rsi": 4.3,
+    "rsi3": 0.0,
+    "volume_x": 1.71,
+    "htf_trend": "BEARISH",
+    "entry": 0.2092,
+    "sl": 0.213384,
+    "best_price": 0.2092,
+    "worst_price": 0.2092,
+    "tp1": 0.2073172,
+    "tp2": null,
+    "tp3": null,
+    "tp_main": 0.2073172,
+>>>>>>> Stashed changes
     "capital": 1000.0,
     "status": "OPEN",
     "exit_price": null,
@@ -1173,7 +1194,11 @@
     "exit_time": null,
     "grind_count": 0,
     "grind_entries": [
+<<<<<<< Updated upstream
       0.2097
+=======
+      0.2092
+>>>>>>> Stashed changes
     ],
     "tag": "breakout_short"
   }
