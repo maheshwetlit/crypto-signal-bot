@@ -168,5 +168,39 @@
       44.31
     ],
     "tag": "breakout_long"
+  },
+  {
+    "id": "SIG-0006",
+    "time": "2026-08-03T19:41:41.221741+00:00",
+    "pair": "TRUMP/USDT",
+    "exchange": "KuCoin",
+    "direction": "SHORT",
+    "style": "CONFIRMED_BREAKOUT",
+    "score": 78.1,
+    "adx": 18.1,
+    "rsi": 37.0,
+    "rsi3": 42.9,
+    "volume_x": 2.73,
+    "htf_trend": "NEUTRAL",
+    "entry": 1.487,
+    "sl": 1.5167400000000002,
+    "best_price": 1.487,
+    "worst_price": 1.487,
+    "tp1": 1.4736170000000002,
+    "tp2": null,
+    "tp3": null,
+    "tp_main": 1.4736170000000002,
+    "capital": 1000.0,
+    "status": "OPEN",
+    "exit_price": null,
+    "pnl_usd": null,
+    "result": null,
+    "closed_at": null,
+    "exit_time": null,
+    "grind_count": 0,
+    "grind_entries": [
+      1.487
+    ],
+    "tag": "breakout_short"
   }
 ]
