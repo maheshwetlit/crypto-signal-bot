@@ -202,5 +202,39 @@
       52.979
     ],
     "tag": "breakout_long"
+  },
+  {
+    "id": "SIG-0007",
+    "time": "2026-08-03T12:36:36.148858+00:00",
+    "pair": "CHZ/USDT",
+    "exchange": "KuCoin",
+    "direction": "SHORT",
+    "style": "CONFIRMED_BREAKOUT",
+    "score": 79.2,
+    "adx": 19.2,
+    "rsi": 30.8,
+    "rsi3": 0.0,
+    "volume_x": 2.8,
+    "htf_trend": "BEARISH",
+    "entry": 0.0126,
+    "sl": 0.012852,
+    "best_price": 0.0126,
+    "worst_price": 0.0126,
+    "tp1": 0.0124866,
+    "tp2": null,
+    "tp3": null,
+    "tp_main": 0.0124866,
+    "capital": 1000.0,
+    "status": "OPEN",
+    "exit_price": null,
+    "pnl_usd": null,
+    "result": null,
+    "closed_at": null,
+    "exit_time": null,
+    "grind_count": 0,
+    "grind_entries": [
+      0.0126
+    ],
+    "tag": "breakout_short"
   }
 ]
