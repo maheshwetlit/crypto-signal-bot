@@ -266,17 +266,18 @@
     "tp3": null,
     "tp_main": 0.07118495,
     "capital": 1000.0,
-    "status": "OPEN",
-    "exit_price": null,
-    "pnl_usd": null,
-    "result": null,
-    "closed_at": null,
-    "exit_time": null,
+    "status": "CLOSED",
+    "exit_price": 0.07045,
+    "pnl_usd": -1.42,
+    "result": "STALE",
+    "closed_at": "2026-08-03T18:55:03.604271+00:00",
+    "exit_time": "2026-08-03T18:55:03.604271+00:00",
     "grind_count": 0,
     "grind_entries": [
       0.07055
     ],
-    "tag": "breakout_long"
+    "tag": "breakout_long",
+    "pnl_pct": -0.14
   },
   {
     "id": "SIG-0009",
@@ -300,17 +301,18 @@
     "tp3": null,
     "tp_main": 6.968961199999999,
     "capital": 1000.0,
-    "status": "OPEN",
-    "exit_price": null,
-    "pnl_usd": null,
-    "result": null,
-    "closed_at": null,
-    "exit_time": null,
+    "status": "WIN",
+    "exit_price": 6.9103,
+    "pnl_usd": 0.51,
+    "result": "WIN",
+    "closed_at": "2026-08-03T18:55:03.604271+00:00",
+    "exit_time": "2026-08-03T18:55:03.604271+00:00",
     "grind_count": 0,
     "grind_entries": [
       6.9068
     ],
-    "tag": "breakout_long"
+    "tag": "breakout_long",
+    "pnl_pct": 0.05
   },
   {
     "id": "SIG-0010",
@@ -447,5 +449,39 @@
       0.0128
     ],
     "tag": "breakout_short"
+  },
+  {
+    "id": "SIG-0014",
+    "time": "2026-08-03T18:55:28.537304+00:00",
+    "pair": "AVAX/USDT",
+    "exchange": "KuCoin",
+    "direction": "LONG",
+    "style": "CONFIRMED_BREAKOUT",
+    "score": 88.6,
+    "adx": 28.6,
+    "rsi": 68.3,
+    "rsi3": 71.9,
+    "volume_x": 2.5,
+    "htf_trend": "NEUTRAL",
+    "entry": 6.566,
+    "sl": 6.434679999999999,
+    "best_price": 6.566,
+    "worst_price": 6.566,
+    "tp1": 6.625093999999999,
+    "tp2": null,
+    "tp3": null,
+    "tp_main": 6.625093999999999,
+    "capital": 1000.0,
+    "status": "OPEN",
+    "exit_price": null,
+    "pnl_usd": null,
+    "result": null,
+    "closed_at": null,
+    "exit_time": null,
+    "grind_count": 0,
+    "grind_entries": [
+      6.566
+    ],
+    "tag": "breakout_long"
   }
 ]
