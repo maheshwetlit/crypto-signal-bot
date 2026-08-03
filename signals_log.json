@@ -1,29 +1,25 @@
 [
   {
     "id": "SIG-0001",
-<<<<<<< Updated upstream
-    "time": "2026-08-03T10:21:35.221945+00:00",
-=======
-    "time": "2026-08-03T10:21:36.517391+00:00",
->>>>>>> Stashed changes
-    "pair": "TRX/USDT",
+    "time": "2026-08-03T10:51:40.338257+00:00",
+    "pair": "CHZ/USDT",
     "exchange": "KuCoin",
-    "direction": "LONG",
+    "direction": "SHORT",
     "style": "CONFIRMED_BREAKOUT",
-    "score": 100.0,
-    "adx": 54.5,
-    "rsi": 72.4,
-    "rsi3": 66.7,
-    "volume_x": 1.12,
-    "htf_trend": "NEUTRAL",
-    "entry": 0.3279,
-    "sl": 0.321342,
-    "best_price": 0.3279,
-    "worst_price": 0.3279,
-    "tp1": 0.3308511,
+    "score": 81.0,
+    "adx": 21.0,
+    "rsi": 30.8,
+    "rsi3": 0.0,
+    "volume_x": 1.24,
+    "htf_trend": "BEARISH",
+    "entry": 0.01263,
+    "sl": 0.012882600000000001,
+    "best_price": 0.01263,
+    "worst_price": 0.01263,
+    "tp1": 0.01251633,
     "tp2": null,
     "tp3": null,
-    "tp_main": 0.3308511,
+    "tp_main": 0.01251633,
     "capital": 1000.0,
     "status": "OPEN",
     "exit_price": null,
@@ -33,8 +29,8 @@
     "exit_time": null,
     "grind_count": 0,
     "grind_entries": [
-      0.3279
+      0.01263
     ],
-    "tag": "breakout_long"
+    "tag": "breakout_short"
   }
 ]
