@@ -1,7 +1,11 @@
 [
   {
     "id": "SIG-0001",
+<<<<<<< Updated upstream
     "time": "2026-08-03T10:51:40.338257+00:00",
+=======
+    "time": "2026-08-03T10:52:08.957465+00:00",
+>>>>>>> Stashed changes
     "pair": "CHZ/USDT",
     "exchange": "KuCoin",
     "direction": "SHORT",
