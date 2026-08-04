@@ -446,7 +446,11 @@
   },
   {
     "id": "SIG-0014",
+<<<<<<< Updated upstream
     "time": "2026-08-04T04:26:41.024577+00:00",
+=======
+    "time": "2026-08-04T04:27:41.623924+00:00",
+>>>>>>> Stashed changes
     "pair": "TRUMP/USDT",
     "exchange": "KuCoin",
     "direction": "LONG",
@@ -455,7 +459,11 @@
     "adx": 23.1,
     "rsi": 86.7,
     "rsi3": NaN,
+<<<<<<< Updated upstream
     "volume_x": 1.06,
+=======
+    "volume_x": 2.33,
+>>>>>>> Stashed changes
     "htf_trend": "NEUTRAL",
     "entry": 1.477,
     "sl": 1.44746,
