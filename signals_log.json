@@ -648,5 +648,39 @@
       1.469
     ],
     "tag": "breakout_short"
+  },
+  {
+    "id": "SIG-0020",
+    "time": "2026-08-04T00:16:46.203011+00:00",
+    "pair": "AEON/USDT",
+    "exchange": "KuCoin",
+    "direction": "LONG",
+    "style": "CONFIRMED_BREAKOUT",
+    "score": 79.8,
+    "adx": 19.8,
+    "rsi": 65.0,
+    "rsi3": NaN,
+    "volume_x": 1.77,
+    "htf_trend": "BEARISH",
+    "entry": 0.06935,
+    "sl": 0.067963,
+    "best_price": 0.06935,
+    "worst_price": 0.06935,
+    "tp1": 0.06997414999999998,
+    "tp2": null,
+    "tp3": null,
+    "tp_main": 0.06997414999999998,
+    "capital": 1000.0,
+    "status": "OPEN",
+    "exit_price": null,
+    "pnl_usd": null,
+    "result": null,
+    "closed_at": null,
+    "exit_time": null,
+    "grind_count": 0,
+    "grind_entries": [
+      0.06935
+    ],
+    "tag": "breakout_long"
   }
 ]
