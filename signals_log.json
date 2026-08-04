@@ -273,13 +273,18 @@
   },
   {
     "id": "SIG-0009",
+<<<<<<< Updated upstream
     "time": "2026-08-04T20:41:16.123035+00:00",
+=======
+    "time": "2026-08-04T20:41:11.621424+00:00",
+>>>>>>> Stashed changes
     "pair": "BTC/USDT",
     "exchange": "KuCoin",
     "direction": "LONG",
     "style": "CONFIRMED_BREAKOUT",
     "score": 81.2,
     "adx": 21.2,
+<<<<<<< Updated upstream
     "rsi": 55.1,
     "rsi3": NaN,
     "volume_x": 1.61,
@@ -292,6 +297,20 @@
     "tp2": null,
     "tp3": null,
     "tp_main": 64957.09929999999,
+=======
+    "rsi": 55.5,
+    "rsi3": NaN,
+    "volume_x": 1.61,
+    "htf_trend": "NEUTRAL",
+    "entry": 64385.4,
+    "sl": 63097.692,
+    "best_price": 64385.4,
+    "worst_price": 64385.4,
+    "tp1": 64964.868599999994,
+    "tp2": null,
+    "tp3": null,
+    "tp_main": 64964.868599999994,
+>>>>>>> Stashed changes
     "capital": 1000.0,
     "status": "OPEN",
     "exit_price": null,
@@ -301,13 +320,21 @@
     "exit_time": null,
     "grind_count": 0,
     "grind_entries": [
+<<<<<<< Updated upstream
       64377.7
+=======
+      64385.4
+>>>>>>> Stashed changes
     ],
     "tag": "breakout_long"
   },
   {
     "id": "SIG-0010",
+<<<<<<< Updated upstream
     "time": "2026-08-04T20:41:27.954438+00:00",
+=======
+    "time": "2026-08-04T20:41:27.993690+00:00",
+>>>>>>> Stashed changes
     "pair": "SOL/USDT",
     "exchange": "KuCoin",
     "direction": "LONG",
@@ -341,7 +368,11 @@
   },
   {
     "id": "SIG-0011",
+<<<<<<< Updated upstream
     "time": "2026-08-04T20:41:51.711529+00:00",
+=======
+    "time": "2026-08-04T20:42:01.785778+00:00",
+>>>>>>> Stashed changes
     "pair": "GRAM/USDT",
     "exchange": "KuCoin",
     "direction": "LONG",
@@ -350,7 +381,11 @@
     "adx": 18.3,
     "rsi": 45.0,
     "rsi3": NaN,
+<<<<<<< Updated upstream
     "volume_x": 1.26,
+=======
+    "volume_x": 1.29,
+>>>>>>> Stashed changes
     "htf_trend": "BEARISH",
     "entry": 1.39,
     "sl": 1.3621999999999999,
@@ -375,7 +410,11 @@
   },
   {
     "id": "SIG-0012",
+<<<<<<< Updated upstream
     "time": "2026-08-04T20:41:59.069394+00:00",
+=======
+    "time": "2026-08-04T20:42:12.140423+00:00",
+>>>>>>> Stashed changes
     "pair": "WIF/USDT",
     "exchange": "KuCoin",
     "direction": "LONG",
