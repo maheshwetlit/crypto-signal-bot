@@ -1,7 +1,11 @@
 [
   {
     "id": "SIG-0001",
+<<<<<<< Updated upstream
     "time": "2026-08-04T09:01:58.447032+00:00",
+=======
+    "time": "2026-08-04T09:02:14.851289+00:00",
+>>>>>>> Stashed changes
     "pair": "SNX/USDT",
     "exchange": "KuCoin",
     "direction": "SHORT",
