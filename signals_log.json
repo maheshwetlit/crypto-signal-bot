@@ -169,5 +169,39 @@
       1.395
     ],
     "tag": "breakout_long"
+  },
+  {
+    "id": "SIG-0006",
+    "time": "2026-08-04T22:41:42.004750+00:00",
+    "pair": "GRAM/USDT",
+    "exchange": "KuCoin",
+    "direction": "LONG",
+    "style": "CONFIRMED_BREAKOUT",
+    "score": 93.1,
+    "adx": 33.1,
+    "rsi": 61.1,
+    "rsi3": 50.0,
+    "volume_x": 0.96,
+    "htf_trend": "NEUTRAL",
+    "entry": 1.396,
+    "sl": 1.36808,
+    "best_price": 1.396,
+    "worst_price": 1.396,
+    "tp1": 1.4085639999999997,
+    "tp2": null,
+    "tp3": null,
+    "tp_main": 1.4085639999999997,
+    "capital": 1000.0,
+    "status": "OPEN",
+    "exit_price": null,
+    "pnl_usd": null,
+    "result": null,
+    "closed_at": null,
+    "exit_time": null,
+    "grind_count": 0,
+    "grind_entries": [
+      1.396
+    ],
+    "tag": "breakout_long"
   }
 ]
