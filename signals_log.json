@@ -171,7 +171,11 @@
   },
   {
     "id": "SIG-0006",
+<<<<<<< Updated upstream
     "time": "2026-08-04T13:41:35.442537+00:00",
+=======
+    "time": "2026-08-04T13:41:35.365557+00:00",
+>>>>>>> Stashed changes
     "pair": "TRUMP/USDT",
     "exchange": "KuCoin",
     "direction": "LONG",
