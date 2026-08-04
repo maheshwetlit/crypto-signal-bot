@@ -1,33 +1,25 @@
 [
   {
     "id": "SIG-0001",
-<<<<<<< Updated upstream
-    "time": "2026-08-04T20:02:02.153270+00:00",
-=======
-    "time": "2026-08-04T20:02:54.253761+00:00",
->>>>>>> Stashed changes
-    "pair": "SHIB/USDT",
+    "time": "2026-08-04T20:06:51.192041+00:00",
+    "pair": "BANK/USDT",
     "exchange": "KuCoin",
     "direction": "SHORT",
     "style": "CONFIRMED_BREAKOUT",
-    "score": 76.1,
-    "adx": 16.1,
-    "rsi": 34.9,
-    "rsi3": 28.6,
-<<<<<<< Updated upstream
-    "volume_x": 1.89,
-=======
-    "volume_x": 2.02,
->>>>>>> Stashed changes
-    "htf_trend": "BULLISH",
-    "entry": 4.998e-06,
-    "sl": 5.097960000000001e-06,
-    "best_price": 4.998e-06,
-    "worst_price": 4.998e-06,
-    "tp1": 4.953018e-06,
+    "score": 79.9,
+    "adx": 19.9,
+    "rsi": 40.9,
+    "rsi3": 50.0,
+    "volume_x": 1.45,
+    "htf_trend": "NEUTRAL",
+    "entry": 0.0521,
+    "sl": 0.053142,
+    "best_price": 0.0521,
+    "worst_price": 0.0521,
+    "tp1": 0.0516311,
     "tp2": null,
     "tp3": null,
-    "tp_main": 4.953018e-06,
+    "tp_main": 0.0516311,
     "capital": 1000.0,
     "status": "OPEN",
     "exit_price": null,
@@ -37,45 +29,8 @@
     "exit_time": null,
     "grind_count": 0,
     "grind_entries": [
-      4.998e-06
+      0.0521
     ],
     "tag": "breakout_short"
-<<<<<<< Updated upstream
-  },
-  {
-    "id": "SIG-0002",
-    "time": "2026-08-04T20:02:15.308326+00:00",
-    "pair": "ADA/USDT",
-    "exchange": "KuCoin",
-    "direction": "SHORT",
-    "style": "CONFIRMED_BREAKOUT",
-    "score": 76.5,
-    "adx": 16.5,
-    "rsi": 54.1,
-    "rsi3": 14.3,
-    "volume_x": 0.58,
-    "htf_trend": "BULLISH",
-    "entry": 0.192,
-    "sl": 0.19584000000000001,
-    "best_price": 0.192,
-    "worst_price": 0.192,
-    "tp1": 0.190272,
-    "tp2": null,
-    "tp3": null,
-    "tp_main": 0.190272,
-    "capital": 1000.0,
-    "status": "OPEN",
-    "exit_price": null,
-    "pnl_usd": null,
-    "result": null,
-    "closed_at": null,
-    "exit_time": null,
-    "grind_count": 0,
-    "grind_entries": [
-      0.192
-    ],
-    "tag": "breakout_short"
-=======
->>>>>>> Stashed changes
   }
 ]
