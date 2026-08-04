@@ -1,7 +1,11 @@
 [
   {
     "id": "SIG-0001",
+<<<<<<< Updated upstream
     "time": "2026-08-04T20:02:02.153270+00:00",
+=======
+    "time": "2026-08-04T20:02:54.253761+00:00",
+>>>>>>> Stashed changes
     "pair": "SHIB/USDT",
     "exchange": "KuCoin",
     "direction": "SHORT",
@@ -10,7 +14,11 @@
     "adx": 16.1,
     "rsi": 34.9,
     "rsi3": 28.6,
+<<<<<<< Updated upstream
     "volume_x": 1.89,
+=======
+    "volume_x": 2.02,
+>>>>>>> Stashed changes
     "htf_trend": "BULLISH",
     "entry": 4.998e-06,
     "sl": 5.097960000000001e-06,
@@ -32,6 +40,7 @@
       4.998e-06
     ],
     "tag": "breakout_short"
+<<<<<<< Updated upstream
   },
   {
     "id": "SIG-0002",
@@ -66,5 +75,7 @@
       0.192
     ],
     "tag": "breakout_short"
+=======
+>>>>>>> Stashed changes
   }
 ]
