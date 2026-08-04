@@ -172,7 +172,11 @@
   },
   {
     "id": "SIG-0006",
+<<<<<<< Updated upstream
     "time": "2026-08-04T22:41:42.004750+00:00",
+=======
+    "time": "2026-08-04T22:41:59.646946+00:00",
+>>>>>>> Stashed changes
     "pair": "GRAM/USDT",
     "exchange": "KuCoin",
     "direction": "LONG",
@@ -181,7 +185,11 @@
     "adx": 33.1,
     "rsi": 61.1,
     "rsi3": 50.0,
+<<<<<<< Updated upstream
     "volume_x": 0.96,
+=======
+    "volume_x": 1.01,
+>>>>>>> Stashed changes
     "htf_trend": "NEUTRAL",
     "entry": 1.396,
     "sl": 1.36808,
