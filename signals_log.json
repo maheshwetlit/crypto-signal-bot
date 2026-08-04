@@ -1,29 +1,25 @@
 [
   {
     "id": "SIG-0001",
-<<<<<<< Updated upstream
-    "time": "2026-08-04T19:42:00.579031+00:00",
-=======
-    "time": "2026-08-04T19:42:02.710488+00:00",
->>>>>>> Stashed changes
-    "pair": "WIF/USDT",
+    "time": "2026-08-04T20:02:02.153270+00:00",
+    "pair": "SHIB/USDT",
     "exchange": "KuCoin",
-    "direction": "LONG",
+    "direction": "SHORT",
     "style": "CONFIRMED_BREAKOUT",
-    "score": 89.4,
-    "adx": 29.4,
-    "rsi": 47.6,
-    "rsi3": 75.0,
-    "volume_x": 1.0,
-    "htf_trend": "NEUTRAL",
-    "entry": 0.1417,
-    "sl": 0.138866,
-    "best_price": 0.1417,
-    "worst_price": 0.1417,
-    "tp1": 0.14297529999999997,
+    "score": 76.1,
+    "adx": 16.1,
+    "rsi": 34.9,
+    "rsi3": 28.6,
+    "volume_x": 1.89,
+    "htf_trend": "BULLISH",
+    "entry": 4.998e-06,
+    "sl": 5.097960000000001e-06,
+    "best_price": 4.998e-06,
+    "worst_price": 4.998e-06,
+    "tp1": 4.953018e-06,
     "tp2": null,
     "tp3": null,
-    "tp_main": 0.14297529999999997,
+    "tp_main": 4.953018e-06,
     "capital": 1000.0,
     "status": "OPEN",
     "exit_price": null,
@@ -33,8 +29,42 @@
     "exit_time": null,
     "grind_count": 0,
     "grind_entries": [
-      0.1417
+      4.998e-06
     ],
-    "tag": "breakout_long"
+    "tag": "breakout_short"
+  },
+  {
+    "id": "SIG-0002",
+    "time": "2026-08-04T20:02:15.308326+00:00",
+    "pair": "ADA/USDT",
+    "exchange": "KuCoin",
+    "direction": "SHORT",
+    "style": "CONFIRMED_BREAKOUT",
+    "score": 76.5,
+    "adx": 16.5,
+    "rsi": 54.1,
+    "rsi3": 14.3,
+    "volume_x": 0.58,
+    "htf_trend": "BULLISH",
+    "entry": 0.192,
+    "sl": 0.19584000000000001,
+    "best_price": 0.192,
+    "worst_price": 0.192,
+    "tp1": 0.190272,
+    "tp2": null,
+    "tp3": null,
+    "tp_main": 0.190272,
+    "capital": 1000.0,
+    "status": "OPEN",
+    "exit_price": null,
+    "pnl_usd": null,
+    "result": null,
+    "closed_at": null,
+    "exit_time": null,
+    "grind_count": 0,
+    "grind_entries": [
+      0.192
+    ],
+    "tag": "breakout_short"
   }
 ]
