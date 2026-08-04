@@ -171,6 +171,7 @@
   },
   {
     "id": "SIG-0006",
+<<<<<<< Updated upstream
     "time": "2026-08-04T21:54:50.684082+00:00",
     "pair": "XMR/USDT",
     "exchange": "KuCoin",
@@ -274,6 +275,9 @@
   {
     "id": "SIG-0009",
     "time": "2026-08-04T21:55:28.239365+00:00",
+=======
+    "time": "2026-08-04T21:56:53.091732+00:00",
+>>>>>>> Stashed changes
     "pair": "WIF/USDT",
     "exchange": "KuCoin",
     "direction": "SHORT",
@@ -282,7 +286,11 @@
     "adx": 16.7,
     "rsi": 35.3,
     "rsi3": 0.0,
+<<<<<<< Updated upstream
     "volume_x": 0.3,
+=======
+    "volume_x": 1.16,
+>>>>>>> Stashed changes
     "htf_trend": "NEUTRAL",
     "entry": 0.1409,
     "sl": 0.143718,
