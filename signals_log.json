@@ -443,6 +443,7 @@
   },
   {
     "id": "SIG-0014",
+<<<<<<< Updated upstream
     "time": "2026-08-04T07:14:44.371732+00:00",
     "pair": "ZEC/USDT",
     "exchange": "KuCoin",
@@ -564,6 +565,27 @@
     "tp2": null,
     "tp3": null,
     "tp_main": 8.0624787,
+=======
+    "time": "2026-08-04T07:16:41.885074+00:00",
+    "pair": "SEI/USDT",
+    "exchange": "KuCoin",
+    "direction": "SHORT",
+    "style": "CONFIRMED_BREAKOUT",
+    "score": 89.9,
+    "adx": 29.9,
+    "rsi": 13.5,
+    "rsi3": 0.0,
+    "volume_x": 1.88,
+    "htf_trend": "BEARISH",
+    "entry": 0.04137,
+    "sl": 0.042197399999999996,
+    "best_price": 0.04137,
+    "worst_price": 0.04137,
+    "tp1": 0.04099767,
+    "tp2": null,
+    "tp3": null,
+    "tp_main": 0.04099767,
+>>>>>>> Stashed changes
     "capital": 1000.0,
     "status": "OPEN",
     "exit_price": null,
@@ -573,7 +595,11 @@
     "exit_time": null,
     "grind_count": 0,
     "grind_entries": [
+<<<<<<< Updated upstream
       8.1357
+=======
+      0.04137
+>>>>>>> Stashed changes
     ],
     "tag": "breakout_short"
   }
