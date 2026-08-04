@@ -161,17 +161,18 @@
     "tp3": null,
     "tp_main": 6.635183999999999,
     "capital": 1000.0,
-    "status": "OPEN",
-    "exit_price": null,
-    "pnl_usd": null,
-    "result": null,
-    "closed_at": null,
-    "exit_time": null,
+    "status": "CLOSED",
+    "exit_price": 6.573,
+    "pnl_usd": -0.46,
+    "result": "STALE",
+    "closed_at": "2026-08-04T00:40:59.531638+00:00",
+    "exit_time": "2026-08-04T00:40:59.531638+00:00",
     "grind_count": 0,
     "grind_entries": [
       6.576
     ],
-    "tag": "breakout_long"
+    "tag": "breakout_long",
+    "pnl_pct": -0.05
   },
   {
     "id": "SIG-0006",
@@ -195,17 +196,18 @@
     "tp3": null,
     "tp_main": 0.04204503,
     "capital": 1000.0,
-    "status": "OPEN",
-    "exit_price": null,
-    "pnl_usd": null,
-    "result": null,
-    "closed_at": null,
-    "exit_time": null,
+    "status": "CLOSED",
+    "exit_price": 0.04153,
+    "pnl_usd": -3.36,
+    "result": "STALE",
+    "closed_at": "2026-08-04T00:40:59.531638+00:00",
+    "exit_time": "2026-08-04T00:40:59.531638+00:00",
     "grind_count": 0,
     "grind_entries": [
       0.04167
     ],
-    "tag": "breakout_long"
+    "tag": "breakout_long",
+    "pnl_pct": -0.34
   },
   {
     "id": "SIG-0007",
@@ -229,17 +231,18 @@
     "tp3": null,
     "tp_main": 1.497356,
     "capital": 1000.0,
-    "status": "OPEN",
-    "exit_price": null,
-    "pnl_usd": null,
-    "result": null,
-    "closed_at": null,
-    "exit_time": null,
+    "status": "CLOSED",
+    "exit_price": 1.46,
+    "pnl_usd": -16.17,
+    "result": "STALE",
+    "closed_at": "2026-08-04T00:40:59.531638+00:00",
+    "exit_time": "2026-08-04T00:40:59.531638+00:00",
     "grind_count": 0,
     "grind_entries": [
       1.484
     ],
-    "tag": "breakout_long"
+    "tag": "breakout_long",
+    "pnl_pct": -1.62
   },
   {
     "id": "SIG-0008",
@@ -734,7 +737,7 @@
     "htf_trend": "NEUTRAL",
     "entry": 0.6044,
     "sl": 0.5923120000000001,
-    "best_price": 0.6044,
+    "best_price": 0.6048,
     "worst_price": 0.604,
     "tp1": 0.6098396,
     "tp2": null,
@@ -768,7 +771,7 @@
     "htf_trend": "NEUTRAL",
     "entry": 0.6047,
     "sl": 0.592606,
-    "best_price": 0.6047,
+    "best_price": 0.6048,
     "worst_price": 0.6047,
     "tp1": 0.6101422999999999,
     "tp2": null,
