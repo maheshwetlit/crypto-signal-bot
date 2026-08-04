@@ -69,16 +69,28 @@
   },
   {
     "id": "SIG-0003",
+<<<<<<< Updated upstream
     "time": "2026-08-04T21:31:36.505377+00:00",
+=======
+    "time": "2026-08-04T21:32:53.160422+00:00",
+>>>>>>> Stashed changes
     "pair": "AVAX/USDT",
     "exchange": "KuCoin",
     "direction": "SHORT",
     "style": "CONFIRMED_BREAKOUT",
+<<<<<<< Updated upstream
     "score": 77.2,
     "adx": 17.2,
     "rsi": 41.3,
     "rsi3": 47.1,
     "volume_x": 2.16,
+=======
+    "score": 77.3,
+    "adx": 17.3,
+    "rsi": 41.3,
+    "rsi3": 47.1,
+    "volume_x": 3.3,
+>>>>>>> Stashed changes
     "htf_trend": "BULLISH",
     "entry": 6.703,
     "sl": 6.83706,
@@ -103,7 +115,11 @@
   },
   {
     "id": "SIG-0004",
+<<<<<<< Updated upstream
     "time": "2026-08-04T21:32:01.431028+00:00",
+=======
+    "time": "2026-08-04T21:33:17.535795+00:00",
+>>>>>>> Stashed changes
     "pair": "WIF/USDT",
     "exchange": "KuCoin",
     "direction": "SHORT",
@@ -112,7 +128,11 @@
     "adx": 16.7,
     "rsi": 47.6,
     "rsi3": 50.0,
+<<<<<<< Updated upstream
     "volume_x": 3.7,
+=======
+    "volume_x": 5.21,
+>>>>>>> Stashed changes
     "htf_trend": "NEUTRAL",
     "entry": 0.1409,
     "sl": 0.143718,
