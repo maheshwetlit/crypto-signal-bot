@@ -929,11 +929,16 @@
   },
   {
     "id": "SIG-0028",
+<<<<<<< Updated upstream
     "time": "2026-08-04T01:01:55.809807+00:00",
+=======
+    "time": "2026-08-04T01:03:06.609603+00:00",
+>>>>>>> Stashed changes
     "pair": "AVAX/USDT",
     "exchange": "KuCoin",
     "direction": "LONG",
     "style": "CONFIRMED_BREAKOUT",
+<<<<<<< Updated upstream
     "score": 77.3,
     "adx": 17.3,
     "rsi": 62.3,
@@ -948,6 +953,22 @@
     "tp2": null,
     "tp3": null,
     "tp_main": 6.659399999999999,
+=======
+    "score": 77.5,
+    "adx": 17.5,
+    "rsi": 62.9,
+    "rsi3": 61.3,
+    "volume_x": 1.4,
+    "htf_trend": "BULLISH",
+    "entry": 6.602,
+    "sl": 6.46996,
+    "best_price": 6.602,
+    "worst_price": 6.602,
+    "tp1": 6.661417999999999,
+    "tp2": null,
+    "tp3": null,
+    "tp_main": 6.661417999999999,
+>>>>>>> Stashed changes
     "capital": 1000.0,
     "status": "OPEN",
     "exit_price": null,
@@ -957,7 +978,11 @@
     "exit_time": null,
     "grind_count": 0,
     "grind_entries": [
+<<<<<<< Updated upstream
       6.6
+=======
+      6.602
+>>>>>>> Stashed changes
     ],
     "tag": "breakout_long"
   }
