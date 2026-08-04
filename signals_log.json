@@ -137,7 +137,11 @@
   },
   {
     "id": "SIG-0005",
+<<<<<<< Updated upstream
     "time": "2026-08-04T19:31:39.999792+00:00",
+=======
+    "time": "2026-08-04T19:31:44.054015+00:00",
+>>>>>>> Stashed changes
     "pair": "LTC/USDT",
     "exchange": "KuCoin",
     "direction": "LONG",
