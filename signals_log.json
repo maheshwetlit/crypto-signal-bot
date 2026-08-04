@@ -1,20 +1,16 @@
 [
   {
     "id": "SIG-0001",
-<<<<<<< Updated upstream
-    "time": "2026-08-04T09:01:58.447032+00:00",
-=======
-    "time": "2026-08-04T09:02:14.851289+00:00",
->>>>>>> Stashed changes
+    "time": "2026-08-04T09:07:23.633022+00:00",
     "pair": "SNX/USDT",
     "exchange": "KuCoin",
     "direction": "SHORT",
     "style": "CONFIRMED_BREAKOUT",
-    "score": 92.3,
-    "adx": 32.3,
+    "score": 92.1,
+    "adx": 32.1,
     "rsi": 54.8,
     "rsi3": 0.0,
-    "volume_x": 1.23,
+    "volume_x": 1.71,
     "htf_trend": "BULLISH",
     "entry": 0.2164,
     "sl": 0.220728,
