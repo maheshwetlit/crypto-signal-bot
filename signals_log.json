@@ -103,13 +103,18 @@
   },
   {
     "id": "SIG-0004",
+<<<<<<< Updated upstream
     "time": "2026-08-04T14:00:59.021999+00:00",
+=======
+    "time": "2026-08-04T14:01:27.544018+00:00",
+>>>>>>> Stashed changes
     "pair": "XRP/USDT",
     "exchange": "KuCoin",
     "direction": "SHORT",
     "style": "CONFIRMED_BREAKOUT",
     "score": 79.1,
     "adx": 19.1,
+<<<<<<< Updated upstream
     "rsi": 27.6,
     "rsi3": 0.0,
     "volume_x": 0.85,
@@ -122,6 +127,20 @@
     "tp2": null,
     "tp3": null,
     "tp_main": 1.06156911,
+=======
+    "rsi": 28.2,
+    "rsi3": 0.0,
+    "volume_x": 0.97,
+    "htf_trend": "BEARISH",
+    "entry": 1.0715,
+    "sl": 1.09293,
+    "best_price": 1.0715,
+    "worst_price": 1.0715,
+    "tp1": 1.0618565,
+    "tp2": null,
+    "tp3": null,
+    "tp_main": 1.0618565,
+>>>>>>> Stashed changes
     "capital": 1000.0,
     "status": "OPEN",
     "exit_price": null,
@@ -131,19 +150,28 @@
     "exit_time": null,
     "grind_count": 0,
     "grind_entries": [
+<<<<<<< Updated upstream
       1.07121
+=======
+      1.0715
+>>>>>>> Stashed changes
     ],
     "tag": "breakout_short"
   },
   {
     "id": "SIG-0005",
+<<<<<<< Updated upstream
     "time": "2026-08-04T14:01:35.283092+00:00",
+=======
+    "time": "2026-08-04T14:01:57.275103+00:00",
+>>>>>>> Stashed changes
     "pair": "TRUMP/USDT",
     "exchange": "KuCoin",
     "direction": "SHORT",
     "style": "CONFIRMED_BREAKOUT",
     "score": 78.9,
     "adx": 18.9,
+<<<<<<< Updated upstream
     "rsi": 42.1,
     "rsi3": 0.0,
     "volume_x": 2.6,
@@ -156,6 +184,20 @@
     "tp2": null,
     "tp3": null,
     "tp_main": 1.460734,
+=======
+    "rsi": 44.4,
+    "rsi3": 0.0,
+    "volume_x": 2.78,
+    "htf_trend": "NEUTRAL",
+    "entry": 1.475,
+    "sl": 1.5045000000000002,
+    "best_price": 1.475,
+    "worst_price": 1.475,
+    "tp1": 1.4617250000000002,
+    "tp2": null,
+    "tp3": null,
+    "tp_main": 1.4617250000000002,
+>>>>>>> Stashed changes
     "capital": 1000.0,
     "status": "OPEN",
     "exit_price": null,
@@ -165,6 +207,7 @@
     "exit_time": null,
     "grind_count": 0,
     "grind_entries": [
+<<<<<<< Updated upstream
       1.474
     ],
     "tag": "breakout_short"
@@ -200,6 +243,9 @@
     "grind_count": 0,
     "grind_entries": [
       0.1398
+=======
+      1.475
+>>>>>>> Stashed changes
     ],
     "tag": "breakout_short"
   }
