@@ -1559,5 +1559,39 @@
       4.876e-06
     ],
     "tag": "breakout_short"
+  },
+  {
+    "id": "SIG-0046",
+    "time": "2026-08-05T07:46:48.705056+00:00",
+    "pair": "WIF/USDT",
+    "exchange": "KuCoin",
+    "direction": "SHORT",
+    "style": "CONFIRMED_BREAKOUT",
+    "score": 80.9,
+    "adx": 20.9,
+    "rsi": 20.0,
+    "rsi3": 50.0,
+    "volume_x": 2.36,
+    "htf_trend": "NEUTRAL",
+    "entry": 0.1407,
+    "sl": 0.143514,
+    "best_price": 0.1407,
+    "worst_price": 0.1407,
+    "tp1": 0.1394337,
+    "tp2": null,
+    "tp3": null,
+    "tp_main": 0.1394337,
+    "capital": 1000.0,
+    "status": "OPEN",
+    "exit_price": null,
+    "pnl_usd": null,
+    "result": null,
+    "closed_at": null,
+    "exit_time": null,
+    "grind_count": 0,
+    "grind_entries": [
+      0.1407
+    ],
+    "tag": "breakout_short"
   }
 ]
