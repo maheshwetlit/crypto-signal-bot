@@ -1775,7 +1775,11 @@
   },
   {
     "id": "SIG-0052",
+<<<<<<< Updated upstream
     "time": "2026-08-05T09:51:39.804302+00:00",
+=======
+    "time": "2026-08-05T09:51:48.312535+00:00",
+>>>>>>> Stashed changes
     "pair": "PEPE/USDT",
     "exchange": "KuCoin",
     "direction": "LONG",
