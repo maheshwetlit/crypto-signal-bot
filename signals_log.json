@@ -1,69 +1,25 @@
 [
   {
     "id": "SIG-0001",
-    "time": "2026-08-05T15:26:46.263889+00:00",
-    "pair": "2U2/USDT",
+    "time": "2026-08-05T15:41:24.546662+00:00",
+    "pair": "SOL/USDT",
     "exchange": "KuCoin",
     "direction": "LONG",
     "style": "CONFIRMED_BREAKOUT",
-    "score": 92.1,
-    "adx": 32.1,
-    "rsi": 82.7,
+    "score": 78.6,
+    "adx": 18.6,
+    "rsi": 74.5,
     "rsi3": NaN,
-    "volume_x": 2.21,
-    "htf_trend": "BEARISH",
-    "entry": 0.02021,
-    "sl": 0.0198058,
-<<<<<<< Updated upstream
-    "best_price": 0.0212,
-=======
-    "best_price": 0.02086,
->>>>>>> Stashed changes
-    "worst_price": 0.02021,
-    "tp1": 0.020391889999999996,
+    "volume_x": 1.07,
+    "htf_trend": "BULLISH",
+    "entry": 74.25,
+    "sl": 72.765,
+    "best_price": 74.25,
+    "worst_price": 74.25,
+    "tp1": 74.91824999999999,
     "tp2": null,
     "tp3": null,
-    "tp_main": 0.020391889999999996,
-    "capital": 1000.0,
-    "status": "WIN",
-    "exit_price": 0.020391889999999996,
-    "pnl_usd": 9.0,
-    "result": "WIN",
-<<<<<<< Updated upstream
-    "closed_at": "2026-08-05T15:30:49.611245+00:00",
-    "exit_time": "2026-08-05T15:30:49.611245+00:00",
-=======
-    "closed_at": "2026-08-05T15:31:09.125222+00:00",
-    "exit_time": "2026-08-05T15:31:09.125222+00:00",
->>>>>>> Stashed changes
-    "grind_count": 0,
-    "grind_entries": [
-      0.02021
-    ],
-    "tag": "breakout_long",
-    "pnl_pct": 0.9
-  },
-  {
-    "id": "SIG-0002",
-    "time": "2026-08-05T15:26:59.227594+00:00",
-    "pair": "ASTER/USDT",
-    "exchange": "KuCoin",
-    "direction": "LONG",
-    "style": "CONFIRMED_BREAKOUT",
-    "score": 83.0,
-    "adx": 23.0,
-    "rsi": 43.2,
-    "rsi3": 72.7,
-    "volume_x": 1.42,
-    "htf_trend": "NEUTRAL",
-    "entry": 0.6075,
-    "sl": 0.59535,
-    "best_price": 0.6077,
-    "worst_price": 0.6075,
-    "tp1": 0.6129675,
-    "tp2": null,
-    "tp3": null,
-    "tp_main": 0.6129675,
+    "tp_main": 74.91824999999999,
     "capital": 1000.0,
     "status": "OPEN",
     "exit_price": null,
@@ -73,7 +29,7 @@
     "exit_time": null,
     "grind_count": 0,
     "grind_entries": [
-      0.6075
+      74.25
     ],
     "tag": "breakout_long"
   }
