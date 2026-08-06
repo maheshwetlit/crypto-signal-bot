@@ -307,13 +307,18 @@
   },
   {
     "id": "SIG-0010",
+<<<<<<< Updated upstream
     "time": "2026-08-06T11:31:45.620581+00:00",
+=======
+    "time": "2026-08-06T11:32:12.731825+00:00",
+>>>>>>> Stashed changes
     "pair": "HYPE/USDT",
     "exchange": "KuCoin",
     "direction": "SHORT",
     "style": "CONFIRMED_BREAKOUT",
     "score": 87.3,
     "adx": 27.3,
+<<<<<<< Updated upstream
     "rsi": 39.2,
     "rsi3": 0.0,
     "volume_x": 1.17,
@@ -326,6 +331,20 @@
     "tp2": null,
     "tp3": null,
     "tp_main": 54.982662,
+=======
+    "rsi": 39.0,
+    "rsi3": 0.0,
+    "volume_x": 1.28,
+    "htf_trend": "NEUTRAL",
+    "entry": 55.478,
+    "sl": 56.58756,
+    "best_price": 55.478,
+    "worst_price": 55.478,
+    "tp1": 54.978698,
+    "tp2": null,
+    "tp3": null,
+    "tp_main": 54.978698,
+>>>>>>> Stashed changes
     "capital": 1000.0,
     "status": "OPEN",
     "exit_price": null,
@@ -335,7 +354,11 @@
     "exit_time": null,
     "grind_count": 0,
     "grind_entries": [
+<<<<<<< Updated upstream
       55.482
+=======
+      55.478
+>>>>>>> Stashed changes
     ],
     "tag": "breakout_short"
   }
