@@ -135,5 +135,39 @@
       55.278
     ],
     "tag": "breakout_short"
+  },
+  {
+    "id": "SIG-0005",
+    "time": "2026-08-07T05:02:14.612605+00:00",
+    "pair": "ESPORTS/USDT",
+    "exchange": "KuCoin",
+    "direction": "LONG",
+    "style": "CONFIRMED_BREAKOUT",
+    "score": 88.6,
+    "adx": 28.6,
+    "rsi": 50.0,
+    "rsi3": 66.7,
+    "volume_x": 1.42,
+    "htf_trend": "NEUTRAL",
+    "entry": 0.0191,
+    "sl": 0.018718,
+    "best_price": 0.0191,
+    "worst_price": 0.0191,
+    "tp1": 0.019271899999999998,
+    "tp2": null,
+    "tp3": null,
+    "tp_main": 0.019271899999999998,
+    "capital": 1000.0,
+    "status": "OPEN",
+    "exit_price": null,
+    "pnl_usd": null,
+    "result": null,
+    "closed_at": null,
+    "exit_time": null,
+    "grind_count": 0,
+    "grind_entries": [
+      0.0191
+    ],
+    "tag": "breakout_long"
   }
 ]
