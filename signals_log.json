@@ -371,17 +371,18 @@
     "tp3": null,
     "tp_main": 0.1367195,
     "capital": 1000.0,
-    "status": "OPEN",
-    "exit_price": null,
-    "pnl_usd": null,
-    "result": null,
-    "closed_at": null,
-    "exit_time": null,
+    "status": "CLOSED",
+    "exit_price": 0.135,
+    "pnl_usd": -3.69,
+    "result": "STALE",
+    "closed_at": "2026-08-07T18:29:52.215157+00:00",
+    "exit_time": "2026-08-07T18:29:52.215157+00:00",
     "grind_count": 0,
     "grind_entries": [
       0.1355
     ],
-    "tag": "breakout_long"
+    "tag": "breakout_long",
+    "pnl_pct": -0.37
   },
   {
     "id": "SIG-0012",
@@ -434,7 +435,7 @@
     "entry": 46.03,
     "sl": 45.1094,
     "best_price": 46.03,
-    "worst_price": 45.46,
+    "worst_price": 45.4,
     "tp1": 46.444269999999996,
     "tp2": null,
     "tp3": null,
@@ -706,7 +707,7 @@
     "entry": 0.1984,
     "sl": 0.202368,
     "best_price": 0.1982,
-    "worst_price": 0.1989,
+    "worst_price": 0.1995,
     "tp1": 0.1966144,
     "tp2": null,
     "tp3": null,
@@ -808,7 +809,7 @@
     "entry": 0.0962,
     "sl": 0.09812399999999999,
     "best_price": 0.0962,
-    "worst_price": 0.0973,
+    "worst_price": 0.0974,
     "tp1": 0.0953342,
     "tp2": null,
     "tp3": null,
@@ -825,5 +826,39 @@
       0.0962
     ],
     "tag": "breakout_short"
+  },
+  {
+    "id": "SIG-0025",
+    "time": "2026-08-07T18:30:12.389780+00:00",
+    "pair": "DOT/USDT",
+    "exchange": "KuCoin",
+    "direction": "LONG",
+    "style": "CONFIRMED_BREAKOUT",
+    "score": 86.1,
+    "adx": 26.1,
+    "rsi": 67.7,
+    "rsi3": 88.9,
+    "volume_x": 1.27,
+    "htf_trend": "NEUTRAL",
+    "entry": 0.8088,
+    "sl": 0.792624,
+    "best_price": 0.8088,
+    "worst_price": 0.8088,
+    "tp1": 0.8160791999999999,
+    "tp2": null,
+    "tp3": null,
+    "tp_main": 0.8160791999999999,
+    "capital": 1000.0,
+    "status": "OPEN",
+    "exit_price": null,
+    "pnl_usd": null,
+    "result": null,
+    "closed_at": null,
+    "exit_time": null,
+    "grind_count": 0,
+    "grind_entries": [
+      0.8088
+    ],
+    "tag": "breakout_long"
   }
 ]
