@@ -35,7 +35,11 @@
   },
   {
     "id": "SIG-0002",
+<<<<<<< Updated upstream
     "time": "2026-08-07T10:01:43.706428+00:00",
+=======
+    "time": "2026-08-07T10:01:35.353358+00:00",
+>>>>>>> Stashed changes
     "pair": "SOL/USDT",
     "exchange": "KuCoin",
     "direction": "LONG",
@@ -69,7 +73,11 @@
   },
   {
     "id": "SIG-0003",
+<<<<<<< Updated upstream
     "time": "2026-08-07T10:01:54.448251+00:00",
+=======
+    "time": "2026-08-07T10:01:49.708075+00:00",
+>>>>>>> Stashed changes
     "pair": "AVAX/USDT",
     "exchange": "KuCoin",
     "direction": "LONG",
