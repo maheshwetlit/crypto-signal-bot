@@ -172,11 +172,16 @@
   },
   {
     "id": "SIG-0006",
+<<<<<<< Updated upstream
     "time": "2026-08-07T11:10:58.530841+00:00",
+=======
+    "time": "2026-08-07T11:11:27.205555+00:00",
+>>>>>>> Stashed changes
     "pair": "CASHCAT/USDT",
     "exchange": "KuCoin",
     "direction": "LONG",
     "style": "CONFIRMED_BREAKOUT",
+<<<<<<< Updated upstream
     "score": 84.2,
     "adx": 24.2,
     "rsi": 55.6,
@@ -191,6 +196,22 @@
     "tp2": null,
     "tp3": null,
     "tp_main": 0.10544049999999998,
+=======
+    "score": 84.4,
+    "adx": 24.4,
+    "rsi": 56.0,
+    "rsi3": 86.2,
+    "volume_x": 0.79,
+    "htf_trend": "BULLISH",
+    "entry": 0.1046,
+    "sl": 0.102508,
+    "best_price": 0.1046,
+    "worst_price": 0.1046,
+    "tp1": 0.1055414,
+    "tp2": null,
+    "tp3": null,
+    "tp_main": 0.1055414,
+>>>>>>> Stashed changes
     "capital": 1000.0,
     "status": "OPEN",
     "exit_price": null,
@@ -200,7 +221,11 @@
     "exit_time": null,
     "grind_count": 0,
     "grind_entries": [
+<<<<<<< Updated upstream
       0.1045
+=======
+      0.1046
+>>>>>>> Stashed changes
     ],
     "tag": "breakout_long"
   }
