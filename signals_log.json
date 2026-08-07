@@ -410,8 +410,13 @@
     "exit_price": 0.2001,
     "pnl_usd": 7.44,
     "result": "WIN",
+<<<<<<< Updated upstream
     "closed_at": "2026-08-07T03:36:00.340176+00:00",
     "exit_time": "2026-08-07T03:36:00.340176+00:00",
+=======
+    "closed_at": "2026-08-07T03:35:48.795399+00:00",
+    "exit_time": "2026-08-07T03:35:48.795399+00:00",
+>>>>>>> Stashed changes
     "grind_count": 0,
     "grind_entries": [
       0.2016
@@ -442,17 +447,29 @@
     "tp_main": 8.2801567,
     "capital": 1000.0,
     "status": "CLOSED",
+<<<<<<< Updated upstream
     "exit_price": 8.2007,
     "pnl_usd": -0.68,
     "result": "STALE",
     "closed_at": "2026-08-07T03:36:00.340176+00:00",
     "exit_time": "2026-08-07T03:36:00.340176+00:00",
+=======
+    "exit_price": 8.1981,
+    "pnl_usd": -1.0,
+    "result": "STALE",
+    "closed_at": "2026-08-07T03:35:48.795399+00:00",
+    "exit_time": "2026-08-07T03:35:48.795399+00:00",
+>>>>>>> Stashed changes
     "grind_count": 0,
     "grind_entries": [
       8.2063
     ],
     "tag": "breakout_long",
+<<<<<<< Updated upstream
     "pnl_pct": -0.07
+=======
+    "pnl_pct": -0.1
+>>>>>>> Stashed changes
   },
   {
     "id": "SIG-0014",
