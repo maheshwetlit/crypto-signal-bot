@@ -18,11 +18,12 @@
     "tp3": 44.69449333,
     "tp_main": 44.69449333,
     "capital": 1000.0,
-    "status": "OPEN",
-    "exit_price": null,
-    "pnl_usd": null,
-    "result": null,
-    "closed_at": null,
-    "exit_time": null
+    "status": "LOSS",
+    "exit_price": 44.96,
+    "pnl_usd": -3.12,
+    "result": "SL HIT",
+    "closed_at": "2026-08-19T14:00:13.191070+00:00",
+    "exit_time": "2026-08-19T14:00:13.191070+00:00",
+    "pnl_pct": -0.31
   }
 ]
