@@ -1,1 +1,28 @@
-[]
+[
+  {
+    "id": "SIG-0001",
+    "time": "2026-08-19T12:31:57.176415+00:00",
+    "pair": "LTC/USDT",
+    "exchange": "KuCoin",
+    "direction": "SHORT",
+    "style": "STRUCTURE",
+    "score": 85.0,
+    "adx": 27.2,
+    "rsi": 34.5,
+    "volume_x": 0.25,
+    "htf_trend": "BULLISH",
+    "entry": 44.82,
+    "sl": 44.95446,
+    "tp1": 44.74116,
+    "tp2": 44.72333333,
+    "tp3": 44.69449333,
+    "tp_main": 44.69449333,
+    "capital": 1000.0,
+    "status": "OPEN",
+    "exit_price": null,
+    "pnl_usd": null,
+    "result": null,
+    "closed_at": null,
+    "exit_time": null
+  }
+]
