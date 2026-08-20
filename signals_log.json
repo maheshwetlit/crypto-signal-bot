@@ -34,7 +34,7 @@
     "tag": "breakout_long",
     "pnl_pct": 1.1
   },
- {
+  {
     "id": "SIG-0002",
     "time": "2026-08-20T14:57:18.761318+00:00",
     "pair": "AAVE/USDT",
@@ -59,9 +59,9 @@
     "result": null,
     "closed_at": null,
     "exit_time": null
- },
- {
-   "id": "SIG-0003",
+  },
+  {
+    "id": "SIG-0003",
     "time": "2026-08-20T14:57:27.334166+00:00",
     "pair": "ASTER/USDT",
     "exchange": "KuCoin",
@@ -85,9 +85,9 @@
     "result": null,
     "closed_at": null,
     "exit_time": null
- },
- {
-   "id": "SIG-0004",
+  },
+  {
+    "id": "SIG-0004",
     "time": "2026-08-20T15:22:21.980871+00:00",
     "pair": "ETH/USDT",
     "exchange": "KuCoin",
@@ -105,15 +105,16 @@
     "tp3": 2227.21472,
     "tp_main": 2227.21472,
     "capital": 1000.0,
-    "status": "OPEN",
-    "exit_price": null,
-    "pnl_usd": null,
-    "result": null,
-    "closed_at": null,
-    "exit_time": null
- },
- {
-   "id": "SIG-0005",
+    "status": "LOSS",
+    "exit_price": 2327.77,
+    "pnl_usd": -10.83,
+    "result": "SL HIT",
+    "closed_at": "2026-08-20T15:52:33.157152+00:00",
+    "exit_time": "2026-08-20T15:52:33.157152+00:00",
+    "pnl_pct": -1.08
+  },
+  {
+    "id": "SIG-0005",
     "time": "2026-08-20T15:22:56.673848+00:00",
     "pair": "DOT/USDT",
     "exchange": "KuCoin",
@@ -137,9 +138,9 @@
     "result": null,
     "closed_at": null,
     "exit_time": null
- },
- {
-   "id": "SIG-0006",
+  },
+  {
+    "id": "SIG-0006",
     "time": "2026-08-20T15:32:16.775704+00:00",
     "pair": "FET/USDT",
     "exchange": "KuCoin",
@@ -171,5 +172,5 @@
       0.1375
     ],
     "tag": "breakout_long"
- }
+  }
 ]
