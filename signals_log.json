@@ -373,5 +373,39 @@
       82.68
     ],
     "tag": "breakout_short"
+  },
+  {
+    "id": "SIG-0012",
+    "time": "2026-08-20T20:02:29.168397+00:00",
+    "pair": "CRCLX/USDT",
+    "exchange": "KuCoin",
+    "direction": "LONG",
+    "style": "CONFIRMED_BREAKOUT",
+    "score": 82.5,
+    "adx": 22.5,
+    "rsi": 68.7,
+    "rsi3": NaN,
+    "volume_x": 0.67,
+    "htf_trend": "BULLISH",
+    "entry": 83.75,
+    "sl": 82.075,
+    "best_price": 83.75,
+    "worst_price": 83.75,
+    "tp1": 84.50375,
+    "tp2": null,
+    "tp3": null,
+    "tp_main": 84.50375,
+    "capital": 1000.0,
+    "status": "OPEN",
+    "exit_price": null,
+    "pnl_usd": null,
+    "result": null,
+    "closed_at": null,
+    "exit_time": null,
+    "grind_count": 0,
+    "grind_entries": [
+      83.75
+    ],
+    "tag": "breakout_long"
   }
 ]
