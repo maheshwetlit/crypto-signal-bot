@@ -51,5 +51,31 @@
     "result": null,
     "closed_at": null,
     "exit_time": null
+  },
+  {
+    "id": "SIG-0003",
+    "time": "2026-08-20T10:34:42.924480+00:00",
+    "pair": "SUI/USDT",
+    "exchange": "KuCoin",
+    "direction": "LONG",
+    "style": "STRUCTURE",
+    "score": 85.0,
+    "adx": 33.0,
+    "rsi": 73.5,
+    "volume_x": 1.18,
+    "htf_trend": "BULLISH",
+    "entry": 0.7304,
+    "sl": 0.71214,
+    "tp1": 0.73959118,
+    "tp2": 0.74249091,
+    "tp3": 0.74718209,
+    "tp_main": 0.74718209,
+    "capital": 1000.0,
+    "status": "OPEN",
+    "exit_price": null,
+    "pnl_usd": null,
+    "result": null,
+    "closed_at": null,
+    "exit_time": null
   }
 ]
