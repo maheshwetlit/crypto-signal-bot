@@ -25,5 +25,31 @@
     "closed_at": "2026-08-19T14:00:13.191070+00:00",
     "exit_time": "2026-08-19T14:00:13.191070+00:00",
     "pnl_pct": -0.31
+  },
+  {
+    "id": "SIG-0002",
+    "time": "2026-08-20T10:13:50.387128+00:00",
+    "pair": "SHIB/USDT",
+    "exchange": "KuCoin",
+    "direction": "LONG",
+    "style": "STRUCTURE",
+    "score": 85.0,
+    "adx": 41.9,
+    "rsi": 67.1,
+    "volume_x": 0.8,
+    "htf_trend": "BULLISH",
+    "entry": 4.925e-06,
+    "sl": 4.8e-06,
+    "tp1": 5.06e-06,
+    "tp2": 5.08e-06,
+    "tp3": 5.12e-06,
+    "tp_main": 5.12e-06,
+    "capital": 1000.0,
+    "status": "OPEN",
+    "exit_price": null,
+    "pnl_usd": null,
+    "result": null,
+    "closed_at": null,
+    "exit_time": null
   }
 ]
