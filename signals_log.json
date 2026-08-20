@@ -195,17 +195,29 @@
     "tp_main": 0.09091089999999999,
     "capital": 1000.0,
     "status": "CLOSED",
+<<<<<<< Updated upstream
     "exit_price": 0.0894,
     "pnl_usd": -7.77,
     "result": "STALE",
     "closed_at": "2026-08-20T20:55:44.898445+00:00",
     "exit_time": "2026-08-20T20:55:44.898445+00:00",
+=======
+    "exit_price": 0.0895,
+    "pnl_usd": -6.66,
+    "result": "STALE",
+    "closed_at": "2026-08-20T20:57:05.032675+00:00",
+    "exit_time": "2026-08-20T20:57:05.032675+00:00",
+>>>>>>> Stashed changes
     "grind_count": 0,
     "grind_entries": [
       0.0901
     ],
     "tag": "breakout_long",
+<<<<<<< Updated upstream
     "pnl_pct": -0.78
+=======
+    "pnl_pct": -0.67
+>>>>>>> Stashed changes
   },
   {
     "id": "SIG-0007",
@@ -222,7 +234,11 @@
     "htf_trend": "BULLISH",
     "entry": 0.2103,
     "sl": 0.214506,
+<<<<<<< Updated upstream
     "best_price": 0.2092,
+=======
+    "best_price": 0.2091,
+>>>>>>> Stashed changes
     "worst_price": 0.2103,
     "tp1": 0.2084073,
     "tp2": null,
@@ -256,7 +272,11 @@
     "htf_trend": "BULLISH",
     "entry": 0.1831,
     "sl": 0.186762,
+<<<<<<< Updated upstream
     "best_price": 0.1794,
+=======
+    "best_price": 0.1795,
+>>>>>>> Stashed changes
     "worst_price": 0.1831,
     "tp1": 0.1814521,
     "tp2": null,
@@ -393,7 +413,11 @@
     "entry": 83.75,
     "sl": 82.075,
     "best_price": 83.85,
+<<<<<<< Updated upstream
     "worst_price": 83.69,
+=======
+    "worst_price": 83.68,
+>>>>>>> Stashed changes
     "tp1": 84.50375,
     "tp2": null,
     "tp3": null,
@@ -461,7 +485,11 @@
     "entry": 406.39,
     "sl": 414.51779999999997,
     "best_price": 406.39,
+<<<<<<< Updated upstream
     "worst_price": 409.01,
+=======
+    "worst_price": 409.36,
+>>>>>>> Stashed changes
     "tp1": 402.73249,
     "tp2": null,
     "tp3": null,
@@ -494,7 +522,11 @@
     "htf_trend": "BULLISH",
     "entry": 652.116,
     "sl": 639.07368,
+<<<<<<< Updated upstream
     "best_price": 652.458,
+=======
+    "best_price": 652.74,
+>>>>>>> Stashed changes
     "worst_price": 652.116,
     "tp1": 657.9850439999999,
     "tp2": null,
