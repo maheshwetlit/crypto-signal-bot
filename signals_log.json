@@ -274,11 +274,16 @@
   },
   {
     "id": "SIG-0009",
+<<<<<<< Updated upstream
     "time": "2026-08-20T14:37:02.804153+00:00",
+=======
+    "time": "2026-08-20T14:37:13.950871+00:00",
+>>>>>>> Stashed changes
     "pair": "FET/USDT",
     "exchange": "KuCoin",
     "direction": "LONG",
     "style": "CONFIRMED_BREAKOUT",
+<<<<<<< Updated upstream
     "score": 76.3,
     "adx": 16.3,
     "rsi": 48.3,
@@ -293,6 +298,22 @@
     "tp2": null,
     "tp3": null,
     "tp_main": 0.135206,
+=======
+    "score": 76.1,
+    "adx": 16.1,
+    "rsi": 49.2,
+    "rsi3": 55.6,
+    "volume_x": 4.92,
+    "htf_trend": "NEUTRAL",
+    "entry": 0.1341,
+    "sl": 0.131418,
+    "best_price": 0.1341,
+    "worst_price": 0.1341,
+    "tp1": 0.13530689999999998,
+    "tp2": null,
+    "tp3": null,
+    "tp_main": 0.13530689999999998,
+>>>>>>> Stashed changes
     "capital": 1000.0,
     "status": "OPEN",
     "exit_price": null,
@@ -302,7 +323,11 @@
     "exit_time": null,
     "grind_count": 0,
     "grind_entries": [
+<<<<<<< Updated upstream
       0.134
+=======
+      0.1341
+>>>>>>> Stashed changes
     ],
     "tag": "breakout_long"
   }
