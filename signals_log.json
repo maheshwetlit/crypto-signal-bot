@@ -34,7 +34,7 @@
     "tag": "breakout_long",
     "pnl_pct": 1.1
   },
-  {
+ {
     "id": "SIG-0002",
     "time": "2026-08-20T14:57:18.761318+00:00",
     "pair": "AAVE/USDT",
@@ -49,7 +49,7 @@
     "entry": 96.412,
     "sl": 97.26292857,
     "tp1": 95.40156444,
-    "tp2": 95.06441818,
+    "tp2": 95.06418818,
     "tp3": 94.51898262,
     "tp_main": 94.51898262,
     "capital": 1000.0,
@@ -59,9 +59,9 @@
     "result": null,
     "closed_at": null,
     "exit_time": null
-  },
-  {
-    "id": "SIG-0003",
+ },
+ {
+   "id": "SIG-0003",
     "time": "2026-08-20T14:57:27.334166+00:00",
     "pair": "ASTER/USDT",
     "exchange": "KuCoin",
@@ -85,9 +85,9 @@
     "result": null,
     "closed_at": null,
     "exit_time": null
-  },
-  {
-    "id": "SIG-0004",
+ },
+ {
+   "id": "SIG-0004",
     "time": "2026-08-20T15:22:21.980871+00:00",
     "pair": "ETH/USDT",
     "exchange": "KuCoin",
@@ -111,9 +111,9 @@
     "result": null,
     "closed_at": null,
     "exit_time": null
-  },
-  {
-    "id": "SIG-0005",
+ },
+ {
+   "id": "SIG-0005",
     "time": "2026-08-20T15:22:56.673848+00:00",
     "pair": "DOT/USDT",
     "exchange": "KuCoin",
@@ -137,14 +137,10 @@
     "result": null,
     "closed_at": null,
     "exit_time": null
-  },
-  {
-    "id": "SIG-0006",
-<<<<<<< Updated upstream
-    "time": "2026-08-20T15:32:10.574014+00:00",
-=======
+ },
+ {
+   "id": "SIG-0006",
     "time": "2026-08-20T15:32:16.775704+00:00",
->>>>>>> Stashed changes
     "pair": "FET/USDT",
     "exchange": "KuCoin",
     "direction": "LONG",
@@ -171,9 +167,9 @@
     "closed_at": null,
     "exit_time": null,
     "grind_count": 0,
-    "grind_entries": [
+    "grid_entries": [
       0.1375
     ],
     "tag": "breakout_long"
-  }
+ }
 ]
