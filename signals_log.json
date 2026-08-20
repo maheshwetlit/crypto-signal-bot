@@ -103,7 +103,45 @@
   },
   {
     "id": "SIG-0004",
+<<<<<<< Updated upstream
     "time": "2026-08-20T21:31:32.742348+00:00",
+=======
+    "time": "2026-08-20T21:31:49.290605+00:00",
+    "pair": "DOT/USDT",
+    "exchange": "KuCoin",
+    "direction": "LONG",
+    "style": "CONFIRMED_BREAKOUT",
+    "score": 81.4,
+    "adx": 21.4,
+    "rsi": 68.3,
+    "rsi3": 47.4,
+    "volume_x": 1.3,
+    "htf_trend": "BULLISH",
+    "entry": 0.8419,
+    "sl": 0.825062,
+    "best_price": 0.8419,
+    "worst_price": 0.8419,
+    "tp1": 0.8494770999999999,
+    "tp2": null,
+    "tp3": null,
+    "tp_main": 0.8494770999999999,
+    "capital": 1000.0,
+    "status": "OPEN",
+    "exit_price": null,
+    "pnl_usd": null,
+    "result": null,
+    "closed_at": null,
+    "exit_time": null,
+    "grind_count": 0,
+    "grind_entries": [
+      0.8419
+    ],
+    "tag": "breakout_long"
+  },
+  {
+    "id": "SIG-0005",
+    "time": "2026-08-20T21:32:33.325204+00:00",
+>>>>>>> Stashed changes
     "pair": "BCH/USDT",
     "exchange": "KuCoin",
     "direction": "SHORT",
