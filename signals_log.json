@@ -471,8 +471,13 @@
     "exit_price": 0.00917181,
     "pnl_usd": 9.0,
     "result": "WIN",
+<<<<<<< Updated upstream
     "closed_at": "2026-08-20T13:01:04.386630+00:00",
     "exit_time": "2026-08-20T13:01:04.386630+00:00",
+=======
+    "closed_at": "2026-08-20T13:01:08.628757+00:00",
+    "exit_time": "2026-08-20T13:01:08.628757+00:00",
+>>>>>>> Stashed changes
     "grind_count": 0,
     "grind_entries": [
       0.00909
@@ -506,8 +511,13 @@
     "exit_price": 0.009202079999999998,
     "pnl_usd": 9.0,
     "result": "WIN",
+<<<<<<< Updated upstream
     "closed_at": "2026-08-20T13:01:04.386630+00:00",
     "exit_time": "2026-08-20T13:01:04.386630+00:00",
+=======
+    "closed_at": "2026-08-20T13:01:08.628757+00:00",
+    "exit_time": "2026-08-20T13:01:08.628757+00:00",
+>>>>>>> Stashed changes
     "grind_count": 0,
     "grind_entries": [
       0.00912
@@ -517,7 +527,11 @@
   },
   {
     "id": "SIG-0016",
+<<<<<<< Updated upstream
     "time": "2026-08-20T13:01:11.656284+00:00",
+=======
+    "time": "2026-08-20T13:01:15.662072+00:00",
+>>>>>>> Stashed changes
     "pair": "BTC/USDT",
     "exchange": "KuCoin",
     "direction": "LONG",
@@ -526,7 +540,11 @@
     "adx": 22.7,
     "rsi": 47.0,
     "rsi3": 92.7,
+<<<<<<< Updated upstream
     "volume_x": 1.74,
+=======
+    "volume_x": 1.77,
+>>>>>>> Stashed changes
     "htf_trend": "BULLISH",
     "entry": 71919.8,
     "sl": 70481.404,
