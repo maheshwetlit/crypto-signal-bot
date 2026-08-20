@@ -306,13 +306,18 @@
   },
   {
     "id": "SIG-0011",
+<<<<<<< Updated upstream
     "time": "2026-08-20T16:57:07.118666+00:00",
+=======
+    "time": "2026-08-20T16:57:13.147888+00:00",
+>>>>>>> Stashed changes
     "pair": "XLM/USDT",
     "exchange": "KuCoin",
     "direction": "LONG",
     "style": "CONFIRMED_BREAKOUT",
     "score": 76.5,
     "adx": 16.5,
+<<<<<<< Updated upstream
     "rsi": 72.8,
     "rsi3": NaN,
     "volume_x": 1.68,
@@ -325,6 +330,20 @@
     "tp2": null,
     "tp3": null,
     "tp_main": 0.18666499999999997,
+=======
+    "rsi": 73.2,
+    "rsi3": NaN,
+    "volume_x": 1.72,
+    "htf_trend": "BULLISH",
+    "entry": 0.1851,
+    "sl": 0.18139799999999998,
+    "best_price": 0.1851,
+    "worst_price": 0.1851,
+    "tp1": 0.18676589999999996,
+    "tp2": null,
+    "tp3": null,
+    "tp_main": 0.18676589999999996,
+>>>>>>> Stashed changes
     "capital": 1000.0,
     "status": "OPEN",
     "exit_price": null,
@@ -334,7 +353,11 @@
     "exit_time": null,
     "grind_count": 0,
     "grind_entries": [
+<<<<<<< Updated upstream
       0.185
+=======
+      0.1851
+>>>>>>> Stashed changes
     ],
     "tag": "breakout_long"
   }
