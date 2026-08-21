@@ -347,7 +347,11 @@
   },
   {
     "id": "SIG-0011",
+<<<<<<< Updated upstream
     "time": "2026-08-21T08:51:36.776216+00:00",
+=======
+    "time": "2026-08-21T08:51:43.672947+00:00",
+>>>>>>> Stashed changes
     "pair": "ADA/USDT",
     "exchange": "KuCoin",
     "direction": "LONG",
@@ -356,7 +360,11 @@
     "adx": 25.9,
     "rsi": 75.3,
     "rsi3": NaN,
+<<<<<<< Updated upstream
     "volume_x": 1.32,
+=======
+    "volume_x": 1.34,
+>>>>>>> Stashed changes
     "htf_trend": "BULLISH",
     "entry": 0.2155,
     "sl": 0.21119,
