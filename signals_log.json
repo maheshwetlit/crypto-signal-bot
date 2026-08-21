@@ -273,5 +273,39 @@
     ],
     "tag": "breakout_long",
     "pnl_pct": 0.9
+  },
+  {
+    "id": "SIG-0009",
+    "time": "2026-08-21T18:32:20.730451+00:00",
+    "pair": "MANTRA/USDT",
+    "exchange": "KuCoin",
+    "direction": "LONG",
+    "style": "CONFIRMED_BREAKOUT",
+    "score": 79.3,
+    "adx": 19.3,
+    "rsi": 66.7,
+    "rsi3": NaN,
+    "volume_x": 1.45,
+    "htf_trend": "NEUTRAL",
+    "entry": 0.00484,
+    "sl": 0.0047431999999999995,
+    "best_price": 0.00484,
+    "worst_price": 0.00484,
+    "tp1": 0.0048835599999999995,
+    "tp2": null,
+    "tp3": null,
+    "tp_main": 0.0048835599999999995,
+    "capital": 1000.0,
+    "status": "OPEN",
+    "exit_price": null,
+    "pnl_usd": null,
+    "result": null,
+    "closed_at": null,
+    "exit_time": null,
+    "grind_count": 0,
+    "grind_entries": [
+      0.00484
+    ],
+    "tag": "breakout_long"
   }
 ]
