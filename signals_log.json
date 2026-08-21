@@ -100,5 +100,39 @@
       7.435
     ],
     "tag": "breakout_long"
+  },
+  {
+    "id": "SIG-0004",
+    "time": "2026-08-21T00:02:44.987034+00:00",
+    "pair": "BCH/USDT",
+    "exchange": "KuCoin",
+    "direction": "LONG",
+    "style": "CONFIRMED_BREAKOUT",
+    "score": 100.0,
+    "adx": 50.8,
+    "rsi": 57.3,
+    "rsi3": 94.9,
+    "volume_x": 2.06,
+    "htf_trend": "BULLISH",
+    "entry": 223.39,
+    "sl": 218.92219999999998,
+    "best_price": 223.39,
+    "worst_price": 223.39,
+    "tp1": 225.40050999999997,
+    "tp2": null,
+    "tp3": null,
+    "tp_main": 225.40050999999997,
+    "capital": 1000.0,
+    "status": "OPEN",
+    "exit_price": null,
+    "pnl_usd": null,
+    "result": null,
+    "closed_at": null,
+    "exit_time": null,
+    "grind_count": 0,
+    "grind_entries": [
+      223.39
+    ],
+    "tag": "breakout_long"
   }
 ]
