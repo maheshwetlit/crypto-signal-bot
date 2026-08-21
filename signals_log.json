@@ -1,25 +1,25 @@
 [
   {
     "id": "SIG-0001",
-    "time": "2026-08-21T20:56:51.688123+00:00",
-    "pair": "ONDO/USDT",
+    "time": "2026-08-21T21:22:38.890769+00:00",
+    "pair": "ARB/USDT",
     "exchange": "KuCoin",
     "direction": "LONG",
     "style": "CONFIRMED_BREAKOUT",
-    "score": 83.3,
-    "adx": 23.3,
-    "rsi": 80.9,
-    "rsi3": 61.3,
-    "volume_x": 2.11,
+    "score": 81.2,
+    "adx": 21.2,
+    "rsi": 81.8,
+    "rsi3": NaN,
+    "volume_x": 2.82,
     "htf_trend": "BULLISH",
-    "entry": 0.38655,
-    "sl": 0.378819,
-    "best_price": 0.38655,
-    "worst_price": 0.38655,
-    "tp1": 0.39002895,
+    "entry": 0.0983,
+    "sl": 0.096334,
+    "best_price": 0.0983,
+    "worst_price": 0.0983,
+    "tp1": 0.09918469999999999,
     "tp2": null,
     "tp3": null,
-    "tp_main": 0.39002895,
+    "tp_main": 0.09918469999999999,
     "capital": 1000.0,
     "status": "OPEN",
     "exit_price": null,
@@ -29,83 +29,8 @@
     "exit_time": null,
     "grind_count": 0,
     "grind_entries": [
-      0.38655
+      0.0983
     ],
     "tag": "breakout_long"
-  },
-  {
-    "id": "SIG-0002",
-<<<<<<< Updated upstream
-    "time": "2026-08-21T21:11:25.208719+00:00",
-=======
-    "time": "2026-08-21T21:11:29.614802+00:00",
->>>>>>> Stashed changes
-    "pair": "PUMP/USDT",
-    "exchange": "KuCoin",
-    "direction": "LONG",
-    "style": "CONFIRMED_BREAKOUT",
-    "score": 88.7,
-    "adx": 28.7,
-    "rsi": 92.9,
-    "rsi3": 92.0,
-    "volume_x": 1.9,
-    "htf_trend": "BULLISH",
-    "entry": 0.004011,
-    "sl": 0.00393078,
-    "best_price": 0.004011,
-    "worst_price": 0.004011,
-    "tp1": 0.004047098999999999,
-    "tp2": null,
-    "tp3": null,
-    "tp_main": 0.004047098999999999,
-    "capital": 1000.0,
-    "status": "OPEN",
-    "exit_price": null,
-    "pnl_usd": null,
-    "result": null,
-    "closed_at": null,
-    "exit_time": null,
-    "grind_count": 0,
-    "grind_entries": [
-      0.004011
-    ],
-    "tag": "breakout_long"
-<<<<<<< Updated upstream
-=======
-  },
-  {
-    "id": "SIG-0003",
-    "time": "2026-08-21T21:11:51.558750+00:00",
-    "pair": "MANTRA/USDT",
-    "exchange": "KuCoin",
-    "direction": "LONG",
-    "style": "CONFIRMED_BREAKOUT",
-    "score": 86.0,
-    "adx": 26.0,
-    "rsi": 57.9,
-    "rsi3": 80.0,
-    "volume_x": 1.36,
-    "htf_trend": "NEUTRAL",
-    "entry": 0.00475,
-    "sl": 0.004654999999999999,
-    "best_price": 0.00475,
-    "worst_price": 0.00475,
-    "tp1": 0.004792749999999999,
-    "tp2": null,
-    "tp3": null,
-    "tp_main": 0.004792749999999999,
-    "capital": 1000.0,
-    "status": "OPEN",
-    "exit_price": null,
-    "pnl_usd": null,
-    "result": null,
-    "closed_at": null,
-    "exit_time": null,
-    "grind_count": 0,
-    "grind_entries": [
-      0.00475
-    ],
-    "tag": "breakout_long"
->>>>>>> Stashed changes
   }
 ]
