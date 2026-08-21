@@ -726,7 +726,11 @@
   },
   {
     "id": "SIG-0022",
+<<<<<<< Updated upstream
     "time": "2026-08-21T20:50:53.750551+00:00",
+=======
+    "time": "2026-08-21T20:51:53.272396+00:00",
+>>>>>>> Stashed changes
     "pair": "PIEVERSE/USDT",
     "exchange": "KuCoin",
     "direction": "LONG",
