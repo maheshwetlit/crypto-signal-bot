@@ -682,5 +682,31 @@
     "result": null,
     "closed_at": null,
     "exit_time": null
+  },
+  {
+    "id": "SIG-0021",
+    "time": "2026-08-21T12:05:16.628094+00:00",
+    "pair": "LINK/USDT",
+    "exchange": "KuCoin",
+    "direction": "SHORT",
+    "style": "STRUCTURE",
+    "score": 85.0,
+    "adx": 32.7,
+    "rsi": 31.5,
+    "volume_x": 0.32,
+    "htf_trend": "BULLISH",
+    "entry": 11.2625,
+    "sl": 11.45454286,
+    "tp1": 11.15550005,
+    "tp2": 11.1083373,
+    "tp3": 11.03203734,
+    "tp_main": 11.03203734,
+    "capital": 1000.0,
+    "status": "OPEN",
+    "exit_price": null,
+    "pnl_usd": null,
+    "result": null,
+    "closed_at": null,
+    "exit_time": null
   }
 ]
