@@ -429,7 +429,11 @@
     "htf_trend": "BULLISH",
     "entry": 0.2406,
     "sl": 0.235788,
+<<<<<<< Updated upstream
     "best_price": 0.2447,
+=======
+    "best_price": 0.2445,
+>>>>>>> Stashed changes
     "worst_price": 0.2406,
     "tp1": 0.2427654,
     "tp2": null,
@@ -440,8 +444,13 @@
     "exit_price": 0.2427654,
     "pnl_usd": 9.0,
     "result": "WIN",
+<<<<<<< Updated upstream
     "closed_at": "2026-08-22T03:20:55.603119+00:00",
     "exit_time": "2026-08-22T03:20:55.603119+00:00",
+=======
+    "closed_at": "2026-08-22T03:20:48.821993+00:00",
+    "exit_time": "2026-08-22T03:20:48.821993+00:00",
+>>>>>>> Stashed changes
     "grind_count": 0,
     "grind_entries": [
       0.2406
@@ -498,7 +507,11 @@
     "htf_trend": "BULLISH",
     "entry": 95.89,
     "sl": 93.9722,
+<<<<<<< Updated upstream
     "best_price": 96.77,
+=======
+    "best_price": 96.87,
+>>>>>>> Stashed changes
     "worst_price": 95.89,
     "tp1": 96.75300999999999,
     "tp2": null,
@@ -509,8 +522,13 @@
     "exit_price": 96.75300999999999,
     "pnl_usd": 9.0,
     "result": "WIN",
+<<<<<<< Updated upstream
     "closed_at": "2026-08-22T03:20:55.603119+00:00",
     "exit_time": "2026-08-22T03:20:55.603119+00:00",
+=======
+    "closed_at": "2026-08-22T03:20:48.821993+00:00",
+    "exit_time": "2026-08-22T03:20:48.821993+00:00",
+>>>>>>> Stashed changes
     "grind_count": 0,
     "grind_entries": [
       95.89
@@ -554,12 +572,17 @@
   },
   {
     "id": "SIG-0017",
+<<<<<<< Updated upstream
     "time": "2026-08-22T03:21:50.919636+00:00",
+=======
+    "time": "2026-08-22T03:22:01.506884+00:00",
+>>>>>>> Stashed changes
     "pair": "XLM/USDT",
     "exchange": "KuCoin",
     "direction": "LONG",
     "style": "CONFIRMED_BREAKOUT",
     "score": 100.0,
+<<<<<<< Updated upstream
     "adx": 42.6,
     "rsi": 81.1,
     "rsi3": NaN,
@@ -573,6 +596,21 @@
     "tp2": null,
     "tp3": null,
     "tp_main": 0.21663229999999997,
+=======
+    "adx": 42.7,
+    "rsi": 81.3,
+    "rsi3": NaN,
+    "volume_x": 1.62,
+    "htf_trend": "BULLISH",
+    "entry": 0.2149,
+    "sl": 0.210602,
+    "best_price": 0.2149,
+    "worst_price": 0.2149,
+    "tp1": 0.21683409999999997,
+    "tp2": null,
+    "tp3": null,
+    "tp_main": 0.21683409999999997,
+>>>>>>> Stashed changes
     "capital": 1000.0,
     "status": "OPEN",
     "exit_price": null,
@@ -582,7 +620,45 @@
     "exit_time": null,
     "grind_count": 0,
     "grind_entries": [
+<<<<<<< Updated upstream
       0.2147
+=======
+      0.2149
+    ],
+    "tag": "breakout_long"
+  },
+  {
+    "id": "SIG-0018",
+    "time": "2026-08-22T03:22:41.623643+00:00",
+    "pair": "CASHCAT/USDT",
+    "exchange": "KuCoin",
+    "direction": "LONG",
+    "style": "CONFIRMED_BREAKOUT",
+    "score": 88.0,
+    "adx": 28.0,
+    "rsi": 57.7,
+    "rsi3": NaN,
+    "volume_x": 0.92,
+    "htf_trend": "BULLISH",
+    "entry": 0.1275,
+    "sl": 0.12495,
+    "best_price": 0.1275,
+    "worst_price": 0.1275,
+    "tp1": 0.1286475,
+    "tp2": null,
+    "tp3": null,
+    "tp_main": 0.1286475,
+    "capital": 1000.0,
+    "status": "OPEN",
+    "exit_price": null,
+    "pnl_usd": null,
+    "result": null,
+    "closed_at": null,
+    "exit_time": null,
+    "grind_count": 0,
+    "grind_entries": [
+      0.1275
+>>>>>>> Stashed changes
     ],
     "tag": "breakout_long"
   }
