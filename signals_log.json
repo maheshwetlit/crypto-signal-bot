@@ -66,5 +66,39 @@
       0.1067
     ],
     "tag": "breakout_short"
+  },
+  {
+    "id": "SIG-0003",
+    "time": "2026-08-22T19:37:15.830471+00:00",
+    "pair": "FARTCOIN/USDT",
+    "exchange": "KuCoin",
+    "direction": "SHORT",
+    "style": "CONFIRMED_BREAKOUT",
+    "score": 93.1,
+    "adx": 33.1,
+    "rsi": 32.2,
+    "rsi3": 0.0,
+    "volume_x": 0.32,
+    "htf_trend": "BULLISH",
+    "entry": 0.187,
+    "sl": 0.19074,
+    "best_price": 0.187,
+    "worst_price": 0.187,
+    "tp1": 0.185317,
+    "tp2": null,
+    "tp3": null,
+    "tp_main": 0.185317,
+    "capital": 1000.0,
+    "status": "OPEN",
+    "exit_price": null,
+    "pnl_usd": null,
+    "result": null,
+    "closed_at": null,
+    "exit_time": null,
+    "grind_count": 0,
+    "grind_entries": [
+      0.187
+    ],
+    "tag": "breakout_short"
   }
 ]
