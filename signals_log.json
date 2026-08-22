@@ -305,5 +305,39 @@
       1.447
     ],
     "tag": "breakout_long"
+  },
+  {
+    "id": "SIG-0010",
+    "time": "2026-08-22T13:37:12.703485+00:00",
+    "pair": "ICP/USDT",
+    "exchange": "KuCoin",
+    "direction": "SHORT",
+    "style": "CONFIRMED_BREAKOUT",
+    "score": 79.4,
+    "adx": 19.4,
+    "rsi": 31.6,
+    "rsi3": 20.0,
+    "volume_x": 2.49,
+    "htf_trend": "NEUTRAL",
+    "entry": 2.388,
+    "sl": 2.43576,
+    "best_price": 2.388,
+    "worst_price": 2.388,
+    "tp1": 2.366508,
+    "tp2": null,
+    "tp3": null,
+    "tp_main": 2.366508,
+    "capital": 1000.0,
+    "status": "OPEN",
+    "exit_price": null,
+    "pnl_usd": null,
+    "result": null,
+    "closed_at": null,
+    "exit_time": null,
+    "grind_count": 0,
+    "grind_entries": [
+      2.388
+    ],
+    "tag": "breakout_short"
   }
 ]
