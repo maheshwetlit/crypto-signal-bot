@@ -137,6 +137,7 @@
   },
   {
     "id": "SIG-0005",
+<<<<<<< Updated upstream
     "time": "2026-08-22T19:48:42.312139+00:00",
     "pair": "ETH/USDT",
     "exchange": "KuCoin",
@@ -172,6 +173,9 @@
   {
     "id": "SIG-0006",
     "time": "2026-08-22T19:50:42.073431+00:00",
+=======
+    "time": "2026-08-22T19:52:14.239546+00:00",
+>>>>>>> Stashed changes
     "pair": "HBAR/USDT",
     "exchange": "KuCoin",
     "direction": "LONG",
