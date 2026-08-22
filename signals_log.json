@@ -482,5 +482,39 @@
       0.3229
     ],
     "tag": "breakout_short"
+  },
+  {
+    "id": "SIG-0015",
+    "time": "2026-08-22T08:37:25.748815+00:00",
+    "pair": "CRV/USDT",
+    "exchange": "KuCoin",
+    "direction": "SHORT",
+    "style": "CONFIRMED_BREAKOUT",
+    "score": 82.7,
+    "adx": 22.7,
+    "rsi": 30.5,
+    "rsi3": 0.0,
+    "volume_x": 1.54,
+    "htf_trend": "BULLISH",
+    "entry": 0.3181,
+    "sl": 0.324462,
+    "best_price": 0.3181,
+    "worst_price": 0.3181,
+    "tp1": 0.3152371,
+    "tp2": null,
+    "tp3": null,
+    "tp_main": 0.3152371,
+    "capital": 1000.0,
+    "status": "OPEN",
+    "exit_price": null,
+    "pnl_usd": null,
+    "result": null,
+    "closed_at": null,
+    "exit_time": null,
+    "grind_count": 0,
+    "grind_entries": [
+      0.3181
+    ],
+    "tag": "breakout_short"
   }
 ]
