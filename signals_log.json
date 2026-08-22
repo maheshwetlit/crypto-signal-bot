@@ -14,12 +14,47 @@
     "htf_trend": "BULLISH",
     "entry": 0.4289,
     "sl": 0.420322,
-    "best_price": 0.4289,
+    "best_price": 0.4342,
     "worst_price": 0.4289,
     "tp1": 0.4327601,
     "tp2": null,
     "tp3": null,
     "tp_main": 0.4327601,
+    "capital": 1000.0,
+    "status": "WIN",
+    "exit_price": 0.4327601,
+    "pnl_usd": 9.0,
+    "result": "WIN",
+    "closed_at": "2026-08-22T03:35:46.328388+00:00",
+    "exit_time": "2026-08-22T03:35:46.328388+00:00",
+    "grind_count": 0,
+    "grind_entries": [
+      0.4289
+    ],
+    "tag": "breakout_long",
+    "pnl_pct": 0.9
+  },
+  {
+    "id": "SIG-0002",
+    "time": "2026-08-22T03:37:34.970287+00:00",
+    "pair": "GALAX/USDT",
+    "exchange": "KuCoin",
+    "direction": "SHORT",
+    "style": "CONFIRMED_BREAKOUT",
+    "score": 83.1,
+    "adx": 23.1,
+    "rsi": 44.1,
+    "rsi3": 0.0,
+    "volume_x": 1.5,
+    "htf_trend": "BULLISH",
+    "entry": 0.00218,
+    "sl": 0.0022236,
+    "best_price": 0.00218,
+    "worst_price": 0.00218,
+    "tp1": 0.00216038,
+    "tp2": null,
+    "tp3": null,
+    "tp_main": 0.00216038,
     "capital": 1000.0,
     "status": "OPEN",
     "exit_price": null,
@@ -29,8 +64,8 @@
     "exit_time": null,
     "grind_count": 0,
     "grind_entries": [
-      0.4289
+      0.00218
     ],
-    "tag": "breakout_long"
+    "tag": "breakout_short"
   }
 ]
