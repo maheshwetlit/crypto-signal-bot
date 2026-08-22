@@ -305,8 +305,13 @@
     "exit_price": 1.441,
     "pnl_usd": -4.15,
     "result": "STALE",
+<<<<<<< Updated upstream
     "closed_at": "2026-08-22T16:20:48.011593+00:00",
     "exit_time": "2026-08-22T16:20:48.011593+00:00",
+=======
+    "closed_at": "2026-08-22T16:21:20.477870+00:00",
+    "exit_time": "2026-08-22T16:21:20.477870+00:00",
+>>>>>>> Stashed changes
     "grind_count": 0,
     "grind_entries": [
       1.447
@@ -398,7 +403,11 @@
     "entry": 39.54,
     "sl": 40.330799999999996,
     "best_price": 39.01,
+<<<<<<< Updated upstream
     "worst_price": 39.72,
+=======
+    "worst_price": 39.7,
+>>>>>>> Stashed changes
     "tp1": 39.18414,
     "tp2": null,
     "tp3": null,
@@ -500,7 +509,11 @@
     "entry": 7.461,
     "sl": 7.610220000000001,
     "best_price": 7.444,
+<<<<<<< Updated upstream
     "worst_price": 7.476,
+=======
+    "worst_price": 7.478,
+>>>>>>> Stashed changes
     "tp1": 7.393851000000001,
     "tp2": null,
     "tp3": null,
@@ -534,7 +547,11 @@
     "entry": 0.1978,
     "sl": 0.20175600000000002,
     "best_price": 0.1943,
+<<<<<<< Updated upstream
     "worst_price": 0.1991,
+=======
+    "worst_price": 0.1993,
+>>>>>>> Stashed changes
     "tp1": 0.1960198,
     "tp2": null,
     "tp3": null,
@@ -568,7 +585,11 @@
     "entry": 39.2,
     "sl": 39.984,
     "best_price": 39.03,
+<<<<<<< Updated upstream
     "worst_price": 39.72,
+=======
+    "worst_price": 39.7,
+>>>>>>> Stashed changes
     "tp1": 38.8472,
     "tp2": null,
     "tp3": null,
@@ -602,7 +623,11 @@
     "entry": 0.9214,
     "sl": 0.939828,
     "best_price": 0.9184,
+<<<<<<< Updated upstream
     "worst_price": 0.9303,
+=======
+    "worst_price": 0.931,
+>>>>>>> Stashed changes
     "tp1": 0.9131074,
     "tp2": null,
     "tp3": null,
@@ -774,7 +799,11 @@
     "entry": 275.14,
     "sl": 280.64279999999997,
     "best_price": 275.14,
+<<<<<<< Updated upstream
     "worst_price": 278.36,
+=======
+    "worst_price": 278.66,
+>>>>>>> Stashed changes
     "tp1": 272.66373999999996,
     "tp2": null,
     "tp3": null,
@@ -808,7 +837,11 @@
     "entry": 0.05198,
     "sl": 0.0530196,
     "best_price": 0.05198,
+<<<<<<< Updated upstream
     "worst_price": 0.05296,
+=======
+    "worst_price": 0.0531,
+>>>>>>> Stashed changes
     "tp1": 0.05151218,
     "tp2": null,
     "tp3": null,
@@ -842,7 +875,11 @@
     "entry": 0.05198,
     "sl": 0.0530196,
     "best_price": 0.05198,
+<<<<<<< Updated upstream
     "worst_price": 0.05296,
+=======
+    "worst_price": 0.0531,
+>>>>>>> Stashed changes
     "tp1": 0.05151218,
     "tp2": null,
     "tp3": null,
@@ -910,7 +947,11 @@
     "entry": 274.77,
     "sl": 280.2654,
     "best_price": 274.77,
+<<<<<<< Updated upstream
     "worst_price": 278.36,
+=======
+    "worst_price": 278.66,
+>>>>>>> Stashed changes
     "tp1": 272.29706999999996,
     "tp2": null,
     "tp3": null,
@@ -943,7 +984,11 @@
     "htf_trend": "BULLISH",
     "entry": 3.163e-06,
     "sl": 3.09974e-06,
+<<<<<<< Updated upstream
     "best_price": 3.217e-06,
+=======
+    "best_price": 3.227e-06,
+>>>>>>> Stashed changes
     "worst_price": 3.16e-06,
     "tp1": 3.1914669999999996e-06,
     "tp2": null,
@@ -954,8 +999,13 @@
     "exit_price": 3.1914669999999996e-06,
     "pnl_usd": 9.0,
     "result": "WIN",
+<<<<<<< Updated upstream
     "closed_at": "2026-08-22T16:20:48.011593+00:00",
     "exit_time": "2026-08-22T16:20:48.011593+00:00",
+=======
+    "closed_at": "2026-08-22T16:21:20.477870+00:00",
+    "exit_time": "2026-08-22T16:21:20.477870+00:00",
+>>>>>>> Stashed changes
     "grind_count": 0,
     "grind_entries": [
       3.163e-06
@@ -989,8 +1039,13 @@
     "exit_price": 0.008565400999999999,
     "pnl_usd": 9.0,
     "result": "WIN",
+<<<<<<< Updated upstream
     "closed_at": "2026-08-22T16:20:48.011593+00:00",
     "exit_time": "2026-08-22T16:20:48.011593+00:00",
+=======
+    "closed_at": "2026-08-22T16:21:20.477870+00:00",
+    "exit_time": "2026-08-22T16:21:20.477870+00:00",
+>>>>>>> Stashed changes
     "grind_count": 0,
     "grind_entries": [
       0.008489
@@ -1000,11 +1055,16 @@
   },
   {
     "id": "SIG-0030",
+<<<<<<< Updated upstream
     "time": "2026-08-22T16:22:15.163924+00:00",
+=======
+    "time": "2026-08-22T16:22:43.497610+00:00",
+>>>>>>> Stashed changes
     "pair": "BONK/USDT",
     "exchange": "KuCoin",
     "direction": "LONG",
     "style": "CONFIRMED_BREAKOUT",
+<<<<<<< Updated upstream
     "score": 81.3,
     "adx": 21.3,
     "rsi": 89.0,
@@ -1019,6 +1079,22 @@
     "tp2": null,
     "tp3": null,
     "tp_main": 3.2711779999999995e-06,
+=======
+    "score": 81.4,
+    "adx": 21.4,
+    "rsi": 89.3,
+    "rsi3": NaN,
+    "volume_x": 1.26,
+    "htf_trend": "BULLISH",
+    "entry": 3.247e-06,
+    "sl": 3.1820599999999997e-06,
+    "best_price": 3.247e-06,
+    "worst_price": 3.247e-06,
+    "tp1": 3.2762229999999997e-06,
+    "tp2": null,
+    "tp3": null,
+    "tp_main": 3.2762229999999997e-06,
+>>>>>>> Stashed changes
     "capital": 1000.0,
     "status": "OPEN",
     "exit_price": null,
@@ -1028,6 +1104,7 @@
     "exit_time": null,
     "grind_count": 0,
     "grind_entries": [
+<<<<<<< Updated upstream
       3.242e-06
     ],
     "tag": "breakout_long"
@@ -1063,6 +1140,9 @@
     "grind_count": 0,
     "grind_entries": [
       0.008594
+=======
+      3.247e-06
+>>>>>>> Stashed changes
     ],
     "tag": "breakout_long"
   }
