@@ -203,5 +203,39 @@
       52.56
     ],
     "tag": "breakout_long"
+  },
+  {
+    "id": "SIG-0007",
+    "time": "2026-08-23T13:06:50.833514+00:00",
+    "pair": "ADA/USDT",
+    "exchange": "KuCoin",
+    "direction": "LONG",
+    "style": "CONFIRMED_BREAKOUT",
+    "score": 91.1,
+    "adx": 31.1,
+    "rsi": 53.2,
+    "rsi3": NaN,
+    "volume_x": 1.35,
+    "htf_trend": "BULLISH",
+    "entry": 0.2253,
+    "sl": 0.220794,
+    "best_price": 0.2253,
+    "worst_price": 0.2253,
+    "tp1": 0.22732769999999997,
+    "tp2": null,
+    "tp3": null,
+    "tp_main": 0.22732769999999997,
+    "capital": 1000.0,
+    "status": "OPEN",
+    "exit_price": null,
+    "pnl_usd": null,
+    "result": null,
+    "closed_at": null,
+    "exit_time": null,
+    "grind_count": 0,
+    "grind_entries": [
+      0.2253
+    ],
+    "tag": "breakout_long"
   }
 ]
