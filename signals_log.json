@@ -343,7 +343,11 @@
   },
   {
     "id": "SIG-0011",
+<<<<<<< Updated upstream
     "time": "2026-08-23T08:46:00.907339+00:00",
+=======
+    "time": "2026-08-23T08:46:58.426168+00:00",
+>>>>>>> Stashed changes
     "pair": "FET/USDT",
     "exchange": "KuCoin",
     "direction": "LONG",
@@ -352,7 +356,11 @@
     "adx": 21.6,
     "rsi": 75.0,
     "rsi3": NaN,
+<<<<<<< Updated upstream
     "volume_x": 1.4,
+=======
+    "volume_x": 1.71,
+>>>>>>> Stashed changes
     "htf_trend": "BULLISH",
     "entry": 0.1589,
     "sl": 0.155722,
