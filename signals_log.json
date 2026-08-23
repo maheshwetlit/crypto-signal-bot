@@ -611,5 +611,39 @@
       0.215
     ],
     "tag": "breakout_short"
+  },
+  {
+    "id": "SIG-0019",
+    "time": "2026-08-23T05:32:49.041518+00:00",
+    "pair": "TSLAX/USDT",
+    "exchange": "KuCoin",
+    "direction": "SHORT",
+    "style": "CONFIRMED_BREAKOUT",
+    "score": 100.0,
+    "adx": 48.6,
+    "rsi": 18.8,
+    "rsi3": 16.7,
+    "volume_x": 1.9,
+    "htf_trend": "BULLISH",
+    "entry": 361.3,
+    "sl": 368.526,
+    "best_price": 361.3,
+    "worst_price": 361.3,
+    "tp1": 358.0483,
+    "tp2": null,
+    "tp3": null,
+    "tp_main": 358.0483,
+    "capital": 1000.0,
+    "status": "OPEN",
+    "exit_price": null,
+    "pnl_usd": null,
+    "result": null,
+    "closed_at": null,
+    "exit_time": null,
+    "grind_count": 0,
+    "grind_entries": [
+      361.3
+    ],
+    "tag": "breakout_short"
   }
 ]
