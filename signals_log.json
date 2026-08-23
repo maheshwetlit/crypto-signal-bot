@@ -713,5 +713,39 @@
       0.2139
     ],
     "tag": "breakout_short"
+  },
+  {
+    "id": "SIG-0022",
+    "time": "2026-08-23T06:32:27.507704+00:00",
+    "pair": "POL/USDT",
+    "exchange": "KuCoin",
+    "direction": "LONG",
+    "style": "CONFIRMED_BREAKOUT",
+    "score": 79.0,
+    "adx": 19.0,
+    "rsi": 68.6,
+    "rsi3": 88.9,
+    "volume_x": 2.02,
+    "htf_trend": "BULLISH",
+    "entry": 0.1042,
+    "sl": 0.102116,
+    "best_price": 0.1042,
+    "worst_price": 0.1042,
+    "tp1": 0.10513779999999999,
+    "tp2": null,
+    "tp3": null,
+    "tp_main": 0.10513779999999999,
+    "capital": 1000.0,
+    "status": "OPEN",
+    "exit_price": null,
+    "pnl_usd": null,
+    "result": null,
+    "closed_at": null,
+    "exit_time": null,
+    "grind_count": 0,
+    "grind_entries": [
+      0.1042
+    ],
+    "tag": "breakout_long"
   }
 ]
