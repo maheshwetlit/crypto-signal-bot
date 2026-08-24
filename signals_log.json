@@ -84,7 +84,11 @@
     "entry": 0.1658,
     "sl": 0.162484,
     "best_price": 0.1658,
+<<<<<<< Updated upstream
     "worst_price": 0.1657,
+=======
+    "worst_price": 0.1636,
+>>>>>>> Stashed changes
     "tp1": 0.16729219999999997,
     "tp2": null,
     "tp3": null,
@@ -118,7 +122,11 @@
     "entry": 0.2288,
     "sl": 0.224224,
     "best_price": 0.2297,
+<<<<<<< Updated upstream
     "worst_price": 0.2288,
+=======
+    "worst_price": 0.2256,
+>>>>>>> Stashed changes
     "tp1": 0.2308592,
     "tp2": null,
     "tp3": null,
@@ -152,24 +160,40 @@
     "entry": 53.71,
     "sl": 52.6358,
     "best_price": 53.71,
+<<<<<<< Updated upstream
     "worst_price": 53.71,
+=======
+    "worst_price": 52.57,
+>>>>>>> Stashed changes
     "tp1": 54.193389999999994,
     "tp2": null,
     "tp3": null,
     "tp_main": 54.193389999999994,
     "capital": 1000.0,
     "status": "LOSS",
+<<<<<<< Updated upstream
     "exit_price": 52.6,
     "pnl_usd": -20.67,
     "result": "SL HIT",
     "closed_at": "2026-08-24T11:00:09.290384+00:00",
     "exit_time": "2026-08-24T11:00:09.290384+00:00",
+=======
+    "exit_price": 52.6358,
+    "pnl_usd": -20.0,
+    "result": "LOSS",
+    "closed_at": "2026-08-24T11:00:45.323063+00:00",
+    "exit_time": "2026-08-24T11:00:45.323063+00:00",
+>>>>>>> Stashed changes
     "grind_count": 0,
     "grind_entries": [
       53.71
     ],
     "tag": "breakout_long",
+<<<<<<< Updated upstream
     "pnl_pct": -2.07
+=======
+    "pnl_pct": -2.0
+>>>>>>> Stashed changes
   },
   {
     "id": "SIG-0006",
@@ -187,7 +211,11 @@
     "entry": 0.04716,
     "sl": 0.0462168,
     "best_price": 0.04716,
+<<<<<<< Updated upstream
     "worst_price": 0.04716,
+=======
+    "worst_price": 0.04666,
+>>>>>>> Stashed changes
     "tp1": 0.04758444,
     "tp2": null,
     "tp3": null,
@@ -220,7 +248,11 @@
     "htf_trend": "BULLISH",
     "entry": 0.1585,
     "sl": 0.16167,
+<<<<<<< Updated upstream
     "best_price": 0.1585,
+=======
+    "best_price": 0.1577,
+>>>>>>> Stashed changes
     "worst_price": 0.1585,
     "tp1": 0.1570735,
     "tp2": null,
