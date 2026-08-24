@@ -59,8 +59,13 @@
     "exit_price": 53.608169999999994,
     "pnl_usd": 9.0,
     "result": "WIN",
+<<<<<<< Updated upstream
     "closed_at": "2026-08-24T10:10:46.262045+00:00",
     "exit_time": "2026-08-24T10:10:46.262045+00:00",
+=======
+    "closed_at": "2026-08-24T10:10:48.098935+00:00",
+    "exit_time": "2026-08-24T10:10:48.098935+00:00",
+>>>>>>> Stashed changes
     "grind_count": 0,
     "grind_entries": [
       53.13
@@ -138,11 +143,16 @@
   },
   {
     "id": "SIG-0005",
+<<<<<<< Updated upstream
     "time": "2026-08-24T10:11:28.233877+00:00",
+=======
+    "time": "2026-08-24T10:11:48.984149+00:00",
+>>>>>>> Stashed changes
     "pair": "LTC/USDT",
     "exchange": "KuCoin",
     "direction": "LONG",
     "style": "CONFIRMED_BREAKOUT",
+<<<<<<< Updated upstream
     "score": 93.3,
     "adx": 33.3,
     "rsi": 77.0,
@@ -157,6 +167,22 @@
     "tp2": null,
     "tp3": null,
     "tp_main": 54.193389999999994,
+=======
+    "score": 93.7,
+    "adx": 33.7,
+    "rsi": 78.7,
+    "rsi3": NaN,
+    "volume_x": 1.9,
+    "htf_trend": "BULLISH",
+    "entry": 53.95,
+    "sl": 52.871,
+    "best_price": 53.95,
+    "worst_price": 53.95,
+    "tp1": 54.43555,
+    "tp2": null,
+    "tp3": null,
+    "tp_main": 54.43555,
+>>>>>>> Stashed changes
     "capital": 1000.0,
     "status": "OPEN",
     "exit_price": null,
@@ -166,7 +192,11 @@
     "exit_time": null,
     "grind_count": 0,
     "grind_entries": [
+<<<<<<< Updated upstream
       53.71
+=======
+      53.95
+>>>>>>> Stashed changes
     ],
     "tag": "breakout_long"
   }
