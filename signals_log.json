@@ -119,7 +119,11 @@
     "htf_trend": "BULLISH",
     "entry": 0.1749,
     "sl": 0.171402,
+<<<<<<< Updated upstream
     "best_price": 0.1767,
+=======
+    "best_price": 0.1773,
+>>>>>>> Stashed changes
     "worst_price": 0.1749,
     "tp1": 0.1764741,
     "tp2": null,
@@ -130,8 +134,13 @@
     "exit_price": 0.1764741,
     "pnl_usd": 9.0,
     "result": "WIN",
+<<<<<<< Updated upstream
     "closed_at": "2026-08-24T14:31:05.360802+00:00",
     "exit_time": "2026-08-24T14:31:05.360802+00:00",
+=======
+    "closed_at": "2026-08-24T14:31:25.733415+00:00",
+    "exit_time": "2026-08-24T14:31:25.733415+00:00",
+>>>>>>> Stashed changes
     "grind_count": 0,
     "grind_entries": [
       0.1749
@@ -141,7 +150,11 @@
   },
   {
     "id": "SIG-0005",
+<<<<<<< Updated upstream
     "time": "2026-08-24T14:32:19.832758+00:00",
+=======
+    "time": "2026-08-24T14:32:39.509665+00:00",
+>>>>>>> Stashed changes
     "pair": "DASH/USDT",
     "exchange": "KuCoin",
     "direction": "LONG",
