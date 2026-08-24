@@ -1,29 +1,25 @@
 [
   {
     "id": "SIG-0001",
-<<<<<<< Updated upstream
-    "time": "2026-08-24T23:31:18.267772+00:00",
-=======
-    "time": "2026-08-24T23:32:15.731412+00:00",
->>>>>>> Stashed changes
-    "pair": "KCS/USDT",
+    "time": "2026-08-24T23:47:27.986192+00:00",
+    "pair": "KAS/USDT",
     "exchange": "KuCoin",
     "direction": "LONG",
     "style": "CONFIRMED_BREAKOUT",
-    "score": 100.0,
-    "adx": 47.4,
-    "rsi": 67.5,
-    "rsi3": 84.2,
-    "volume_x": 2.45,
+    "score": 78.3,
+    "adx": 18.3,
+    "rsi": 69.4,
+    "rsi3": 87.5,
+    "volume_x": 0.83,
     "htf_trend": "BULLISH",
-    "entry": 7.598,
-    "sl": 7.44604,
-    "best_price": 7.598,
-    "worst_price": 7.598,
-    "tp1": 7.666381999999999,
+    "entry": 0.02906,
+    "sl": 0.0284788,
+    "best_price": 0.02906,
+    "worst_price": 0.02906,
+    "tp1": 0.029321539999999997,
     "tp2": null,
     "tp3": null,
-    "tp_main": 7.666381999999999,
+    "tp_main": 0.029321539999999997,
     "capital": 1000.0,
     "status": "OPEN",
     "exit_price": null,
@@ -33,45 +29,8 @@
     "exit_time": null,
     "grind_count": 0,
     "grind_entries": [
-      7.598
+      0.02906
     ],
     "tag": "breakout_long"
-<<<<<<< Updated upstream
-=======
-  },
-  {
-    "id": "SIG-0002",
-    "time": "2026-08-24T23:32:57.216980+00:00",
-    "pair": "TRUMP/USDT",
-    "exchange": "KuCoin",
-    "direction": "SHORT",
-    "style": "CONFIRMED_BREAKOUT",
-    "score": 85.7,
-    "adx": 25.7,
-    "rsi": 27.4,
-    "rsi3": 48.0,
-    "volume_x": 1.55,
-    "htf_trend": "NEUTRAL",
-    "entry": 2.371,
-    "sl": 2.4184200000000002,
-    "best_price": 2.371,
-    "worst_price": 2.371,
-    "tp1": 2.3496609999999998,
-    "tp2": null,
-    "tp3": null,
-    "tp_main": 2.3496609999999998,
-    "capital": 1000.0,
-    "status": "OPEN",
-    "exit_price": null,
-    "pnl_usd": null,
-    "result": null,
-    "closed_at": null,
-    "exit_time": null,
-    "grind_count": 0,
-    "grind_entries": [
-      2.371
-    ],
-    "tag": "breakout_short"
->>>>>>> Stashed changes
   }
 ]
