@@ -35,6 +35,7 @@
   },
   {
     "id": "SIG-0002",
+<<<<<<< Updated upstream
     "time": "2026-08-24T12:51:28.398382+00:00",
     "pair": "HYPE/USDT",
     "exchange": "KuCoin",
@@ -54,6 +55,27 @@
     "tp2": null,
     "tp3": null,
     "tp_main": 81.54737999999999,
+=======
+    "time": "2026-08-24T12:51:41.913725+00:00",
+    "pair": "DOGE/USDT",
+    "exchange": "KuCoin",
+    "direction": "LONG",
+    "style": "CONFIRMED_BREAKOUT",
+    "score": 84.7,
+    "adx": 24.7,
+    "rsi": 57.6,
+    "rsi3": 74.4,
+    "volume_x": 0.97,
+    "htf_trend": "BULLISH",
+    "entry": 0.0932,
+    "sl": 0.091336,
+    "best_price": 0.0932,
+    "worst_price": 0.0932,
+    "tp1": 0.09403879999999999,
+    "tp2": null,
+    "tp3": null,
+    "tp_main": 0.09403879999999999,
+>>>>>>> Stashed changes
     "capital": 1000.0,
     "status": "OPEN",
     "exit_price": null,
@@ -63,12 +85,17 @@
     "exit_time": null,
     "grind_count": 0,
     "grind_entries": [
+<<<<<<< Updated upstream
       80.82
+=======
+      0.0932
+>>>>>>> Stashed changes
     ],
     "tag": "breakout_long"
   },
   {
     "id": "SIG-0003",
+<<<<<<< Updated upstream
     "time": "2026-08-24T12:52:07.650358+00:00",
     "pair": "XLM/USDT",
     "exchange": "KuCoin",
@@ -88,6 +115,27 @@
     "tp2": null,
     "tp3": null,
     "tp_main": 0.20139639999999998,
+=======
+    "time": "2026-08-24T12:51:47.862421+00:00",
+    "pair": "HYPE/USDT",
+    "exchange": "KuCoin",
+    "direction": "LONG",
+    "style": "CONFIRMED_BREAKOUT",
+    "score": 97.9,
+    "adx": 37.9,
+    "rsi": 67.9,
+    "rsi3": 91.5,
+    "volume_x": 2.78,
+    "htf_trend": "BULLISH",
+    "entry": 80.907,
+    "sl": 79.28886,
+    "best_price": 80.907,
+    "worst_price": 80.907,
+    "tp1": 81.63516299999999,
+    "tp2": null,
+    "tp3": null,
+    "tp_main": 81.63516299999999,
+>>>>>>> Stashed changes
     "capital": 1000.0,
     "status": "OPEN",
     "exit_price": null,
@@ -97,7 +145,11 @@
     "exit_time": null,
     "grind_count": 0,
     "grind_entries": [
+<<<<<<< Updated upstream
       0.1996
+=======
+      80.907
+>>>>>>> Stashed changes
     ],
     "tag": "breakout_long"
   }
