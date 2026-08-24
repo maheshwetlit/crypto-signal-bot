@@ -274,5 +274,39 @@
       0.2332
     ],
     "tag": "breakout_long"
+  },
+  {
+    "id": "SIG-0009",
+    "time": "2026-08-24T15:59:03.911884+00:00",
+    "pair": "DENT/USDT",
+    "exchange": "KuCoin",
+    "direction": "SHORT",
+    "style": "CONFIRMED_BREAKOUT",
+    "score": 85.6,
+    "adx": 25.6,
+    "rsi": 19.4,
+    "rsi3": 35.8,
+    "volume_x": 3.48,
+    "htf_trend": "BULLISH",
+    "entry": 8.66e-05,
+    "sl": 8.833200000000001e-05,
+    "best_price": 8.66e-05,
+    "worst_price": 8.66e-05,
+    "tp1": 8.58206e-05,
+    "tp2": null,
+    "tp3": null,
+    "tp_main": 8.58206e-05,
+    "capital": 1000.0,
+    "status": "OPEN",
+    "exit_price": null,
+    "pnl_usd": null,
+    "result": null,
+    "closed_at": null,
+    "exit_time": null,
+    "grind_count": 0,
+    "grind_entries": [
+      8.66e-05
+    ],
+    "tag": "breakout_short"
   }
 ]
