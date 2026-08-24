@@ -1,29 +1,25 @@
 [
   {
     "id": "SIG-0001",
-<<<<<<< Updated upstream
-    "time": "2026-08-24T11:41:30.038153+00:00",
-=======
-    "time": "2026-08-24T11:41:32.310820+00:00",
->>>>>>> Stashed changes
-    "pair": "FET/USDT",
+    "time": "2026-08-24T11:43:25.487832+00:00",
+    "pair": "XLM/USDT",
     "exchange": "KuCoin",
     "direction": "LONG",
     "style": "CONFIRMED_BREAKOUT",
-    "score": 83.4,
-    "adx": 23.4,
-    "rsi": 61.5,
+    "score": 90.0,
+    "adx": 30.0,
+    "rsi": 67.0,
     "rsi3": NaN,
-    "volume_x": 0.69,
+    "volume_x": 1.75,
     "htf_trend": "BULLISH",
-    "entry": 0.1672,
-    "sl": 0.16385599999999997,
-    "best_price": 0.1672,
-    "worst_price": 0.1672,
-    "tp1": 0.16870479999999996,
+    "entry": 0.1993,
+    "sl": 0.195314,
+    "best_price": 0.1993,
+    "worst_price": 0.1993,
+    "tp1": 0.2010937,
     "tp2": null,
     "tp3": null,
-    "tp_main": 0.16870479999999996,
+    "tp_main": 0.2010937,
     "capital": 1000.0,
     "status": "OPEN",
     "exit_price": null,
@@ -33,33 +29,31 @@
     "exit_time": null,
     "grind_count": 0,
     "grind_entries": [
-      0.1672
-<<<<<<< Updated upstream
-=======
+      0.1993
     ],
     "tag": "breakout_long"
   },
   {
     "id": "SIG-0002",
-    "time": "2026-08-24T11:41:47.001705+00:00",
-    "pair": "SNX/USDT",
+    "time": "2026-08-24T11:43:30.412663+00:00",
+    "pair": "GRAM/USDT",
     "exchange": "KuCoin",
     "direction": "LONG",
     "style": "CONFIRMED_BREAKOUT",
-    "score": 86.3,
-    "adx": 26.3,
-    "rsi": 61.6,
+    "score": 96.1,
+    "adx": 36.1,
+    "rsi": 63.6,
     "rsi3": NaN,
-    "volume_x": 0.91,
+    "volume_x": 3.13,
     "htf_trend": "BULLISH",
-    "entry": 0.2322,
-    "sl": 0.22755599999999998,
-    "best_price": 0.2322,
-    "worst_price": 0.2322,
-    "tp1": 0.23428979999999996,
+    "entry": 1.484,
+    "sl": 1.45432,
+    "best_price": 1.484,
+    "worst_price": 1.484,
+    "tp1": 1.497356,
     "tp2": null,
     "tp3": null,
-    "tp_main": 0.23428979999999996,
+    "tp_main": 1.497356,
     "capital": 1000.0,
     "status": "OPEN",
     "exit_price": null,
@@ -69,8 +63,7 @@
     "exit_time": null,
     "grind_count": 0,
     "grind_entries": [
-      0.2322
->>>>>>> Stashed changes
+      1.484
     ],
     "tag": "breakout_long"
   }
