@@ -1,80 +1,36 @@
 [
   {
     "id": "SIG-0001",
-    "time": "2026-08-24T20:11:48.798381+00:00",
-    "pair": "PENGU/USDT",
-    "exchange": "KuCoin",
-    "direction": "LONG",
-    "style": "CONFIRMED_BREAKOUT",
-    "score": 76.2,
-    "adx": 16.2,
-    "rsi": 55.7,
-    "rsi3": 78.4,
-    "volume_x": 1.46,
-    "htf_trend": "BULLISH",
-    "entry": 0.009479,
-    "sl": 0.009479,
-    "best_price": 0.009479,
-    "worst_price": 0.009479,
-    "tp1": 0.009564310999999999,
-    "tp2": null,
-    "tp3": null,
-    "tp_main": 0.009564310999999999,
-    "capital": 1000.0,
-    "status": "TRAILING",
-    "exit_price": null,
-    "pnl_usd": null,
-    "result": "BE_MOVED",
-    "closed_at": null,
-    "exit_time": null,
-    "grind_count": 0,
-    "grind_entries": [
-      0.009479
-    ],
-    "tag": "breakout_long"
-  },
-  {
-    "id": "SIG-0002",
-    "time": "2026-08-24T20:48:36.792578+00:00",
-    "pair": "CASHCAT/USDT",
+    "time": "2026-08-24T21:06:49.485221+00:00",
+    "pair": "ADA/USDT",
     "exchange": "KuCoin",
     "direction": "LONG",
     "style": "CONFIRMED_BREAKOUT",
     "score": 78.7,
     "adx": 18.7,
-    "rsi": 45.8,
+    "rsi": 68.2,
     "rsi3": NaN,
-    "volume_x": 1.78,
-    "htf_trend": "BULLISH",
-    "entry": 0.1849,
-    "sl": 0.181202,
-<<<<<<< Updated upstream
-    "best_price": 0.19,
-=======
-    "best_price": 0.1936,
->>>>>>> Stashed changes
-    "worst_price": 0.1849,
-    "tp1": 0.18656409999999998,
+    "volume_x": 1.76,
+    "htf_trend": "NEUTRAL",
+    "entry": 0.2212,
+    "sl": 0.216776,
+    "best_price": 0.2212,
+    "worst_price": 0.2212,
+    "tp1": 0.2231908,
     "tp2": null,
     "tp3": null,
-    "tp_main": 0.18656409999999998,
+    "tp_main": 0.2231908,
     "capital": 1000.0,
-    "status": "WIN",
-    "exit_price": 0.18656409999999998,
-    "pnl_usd": 9.0,
-    "result": "WIN",
-<<<<<<< Updated upstream
-    "closed_at": "2026-08-24T21:01:11.198418+00:00",
-    "exit_time": "2026-08-24T21:01:11.198418+00:00",
-=======
-    "closed_at": "2026-08-24T21:03:13.598057+00:00",
-    "exit_time": "2026-08-24T21:03:13.598057+00:00",
->>>>>>> Stashed changes
+    "status": "OPEN",
+    "exit_price": null,
+    "pnl_usd": null,
+    "result": null,
+    "closed_at": null,
+    "exit_time": null,
     "grind_count": 0,
     "grind_entries": [
-      0.1849
+      0.2212
     ],
-    "tag": "breakout_long",
-    "pnl_pct": 0.9
+    "tag": "breakout_long"
   }
 ]
