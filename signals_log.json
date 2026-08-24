@@ -82,7 +82,11 @@
     "htf_trend": "BULLISH",
     "entry": 0.09259,
     "sl": 0.0907382,
+<<<<<<< Updated upstream
     "best_price": 0.09268,
+=======
+    "best_price": 0.09276,
+>>>>>>> Stashed changes
     "worst_price": 0.09219,
     "tp1": 0.09342331,
     "tp2": null,
@@ -150,7 +154,11 @@
     "htf_trend": "BULLISH",
     "entry": 0.04755,
     "sl": 0.046599,
+<<<<<<< Updated upstream
     "best_price": 0.04772,
+=======
+    "best_price": 0.04775,
+>>>>>>> Stashed changes
     "worst_price": 0.04743,
     "tp1": 0.04797795,
     "tp2": null,
@@ -255,7 +263,11 @@
     "entry": 0.1702,
     "sl": 0.166796,
     "best_price": 0.1702,
+<<<<<<< Updated upstream
     "worst_price": 0.1696,
+=======
+    "worst_price": 0.1699,
+>>>>>>> Stashed changes
     "tp1": 0.17173179999999996,
     "tp2": null,
     "tp3": null,
@@ -288,7 +300,11 @@
     "htf_trend": "BULLISH",
     "entry": 0.04747,
     "sl": 0.046520599999999995,
+<<<<<<< Updated upstream
     "best_price": 0.04772,
+=======
+    "best_price": 0.04775,
+>>>>>>> Stashed changes
     "worst_price": 0.04747,
     "tp1": 0.04789722999999999,
     "tp2": null,
@@ -322,12 +338,47 @@
     "htf_trend": "BULLISH",
     "entry": 0.38121,
     "sl": 0.37358579999999997,
-    "best_price": 0.38121,
+    "best_price": 0.3857,
     "worst_price": 0.38121,
     "tp1": 0.38464088999999996,
     "tp2": null,
     "tp3": null,
     "tp_main": 0.38464088999999996,
+    "capital": 1000.0,
+    "status": "WIN",
+    "exit_price": 0.38464088999999996,
+    "pnl_usd": 9.0,
+    "result": "WIN",
+    "closed_at": "2026-08-24T12:41:18.902910+00:00",
+    "exit_time": "2026-08-24T12:41:18.902910+00:00",
+    "grind_count": 0,
+    "grind_entries": [
+      0.38121
+    ],
+    "tag": "breakout_long",
+    "pnl_pct": 0.9
+  },
+  {
+    "id": "SIG-0011",
+    "time": "2026-08-24T12:42:33.416905+00:00",
+    "pair": "SNX/USDT",
+    "exchange": "KuCoin",
+    "direction": "LONG",
+    "style": "CONFIRMED_BREAKOUT",
+    "score": 76.5,
+    "adx": 16.5,
+    "rsi": 54.1,
+    "rsi3": 81.5,
+    "volume_x": 1.35,
+    "htf_trend": "BULLISH",
+    "entry": 0.2316,
+    "sl": 0.226968,
+    "best_price": 0.2316,
+    "worst_price": 0.2316,
+    "tp1": 0.2336844,
+    "tp2": null,
+    "tp3": null,
+    "tp_main": 0.2336844,
     "capital": 1000.0,
     "status": "OPEN",
     "exit_price": null,
@@ -337,7 +388,7 @@
     "exit_time": null,
     "grind_count": 0,
     "grind_entries": [
-      0.38121
+      0.2316
     ],
     "tag": "breakout_long"
 <<<<<<< Updated upstream
