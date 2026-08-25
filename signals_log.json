@@ -1,7 +1,11 @@
 [
   {
     "id": "SIG-0001",
+<<<<<<< Updated upstream
     "time": "2026-08-25T10:02:21.497459+00:00",
+=======
+    "time": "2026-08-25T10:02:36.604921+00:00",
+>>>>>>> Stashed changes
     "pair": "ADA/USDT",
     "exchange": "KuCoin",
     "direction": "SHORT",
@@ -10,7 +14,11 @@
     "adx": 35.1,
     "rsi": 23.4,
     "rsi3": 0.0,
+<<<<<<< Updated upstream
     "volume_x": 3.41,
+=======
+    "volume_x": 3.43,
+>>>>>>> Stashed changes
     "htf_trend": "NEUTRAL",
     "entry": 0.2177,
     "sl": 0.222054,
