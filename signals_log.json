@@ -65,7 +65,45 @@
     "grind_entries": [
       0.04377
     ],
+<<<<<<< Updated upstream
     "tag": "breakout_short",
     "pnl_pct": -2.92
+=======
+    "tag": "breakout_short"
+  },
+  {
+    "id": "SIG-0003",
+    "time": "2026-08-25T04:07:02.990225+00:00",
+    "pair": "TRX/USDT",
+    "exchange": "KuCoin",
+    "direction": "SHORT",
+    "style": "CONFIRMED_BREAKOUT",
+    "score": 97.1,
+    "adx": 37.1,
+    "rsi": 17.2,
+    "rsi3": 0.0,
+    "volume_x": 1.58,
+    "htf_trend": "NEUTRAL",
+    "entry": 0.3439,
+    "sl": 0.350778,
+    "best_price": 0.3439,
+    "worst_price": 0.3439,
+    "tp1": 0.34080489999999997,
+    "tp2": null,
+    "tp3": null,
+    "tp_main": 0.34080489999999997,
+    "capital": 1000.0,
+    "status": "OPEN",
+    "exit_price": null,
+    "pnl_usd": null,
+    "result": null,
+    "closed_at": null,
+    "exit_time": null,
+    "grind_count": 0,
+    "grind_entries": [
+      0.3439
+    ],
+    "tag": "breakout_short"
+>>>>>>> Stashed changes
   }
 ]
