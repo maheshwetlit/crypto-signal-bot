@@ -1,33 +1,25 @@
 [
   {
     "id": "SIG-0001",
-<<<<<<< Updated upstream
-    "time": "2026-08-25T18:17:29.045500+00:00",
-=======
-    "time": "2026-08-25T18:17:38.848061+00:00",
->>>>>>> Stashed changes
-    "pair": "GRAM/USDT",
+    "time": "2026-08-25T18:26:44.931125+00:00",
+    "pair": "ENA/USDT",
     "exchange": "KuCoin",
-    "direction": "LONG",
+    "direction": "SHORT",
     "style": "CONFIRMED_BREAKOUT",
-    "score": 82.0,
-    "adx": 22.0,
-    "rsi": 77.5,
-    "rsi3": NaN,
-<<<<<<< Updated upstream
-    "volume_x": 1.24,
-=======
-    "volume_x": 1.4,
->>>>>>> Stashed changes
-    "htf_trend": "BULLISH",
-    "entry": 1.476,
-    "sl": 1.44648,
-    "best_price": 1.476,
-    "worst_price": 1.476,
-    "tp1": 1.4892839999999998,
+    "score": 77.7,
+    "adx": 17.7,
+    "rsi": 33.3,
+    "rsi3": 33.3,
+    "volume_x": 2.92,
+    "htf_trend": "NEUTRAL",
+    "entry": 0.1496,
+    "sl": 0.152592,
+    "best_price": 0.1496,
+    "worst_price": 0.1496,
+    "tp1": 0.1482536,
     "tp2": null,
     "tp3": null,
-    "tp_main": 1.4892839999999998,
+    "tp_main": 0.1482536,
     "capital": 1000.0,
     "status": "OPEN",
     "exit_price": null,
@@ -37,8 +29,8 @@
     "exit_time": null,
     "grind_count": 0,
     "grind_entries": [
-      1.476
+      0.1496
     ],
-    "tag": "breakout_long"
+    "tag": "breakout_short"
   }
 ]
