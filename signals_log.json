@@ -202,5 +202,39 @@
       0.219
     ],
     "tag": "breakout_short"
+  },
+  {
+    "id": "SIG-0007",
+    "time": "2026-08-25T10:42:24.780552+00:00",
+    "pair": "PENGU/USDT",
+    "exchange": "KuCoin",
+    "direction": "SHORT",
+    "style": "CONFIRMED_BREAKOUT",
+    "score": 96.7,
+    "adx": 36.7,
+    "rsi": 31.8,
+    "rsi3": 0.0,
+    "volume_x": 1.34,
+    "htf_trend": "BULLISH",
+    "entry": 0.00978,
+    "sl": 0.009975600000000001,
+    "best_price": 0.00978,
+    "worst_price": 0.00978,
+    "tp1": 0.009691980000000001,
+    "tp2": null,
+    "tp3": null,
+    "tp_main": 0.009691980000000001,
+    "capital": 1000.0,
+    "status": "OPEN",
+    "exit_price": null,
+    "pnl_usd": null,
+    "result": null,
+    "closed_at": null,
+    "exit_time": null,
+    "grind_count": 0,
+    "grind_entries": [
+      0.00978
+    ],
+    "tag": "breakout_short"
   }
 ]
