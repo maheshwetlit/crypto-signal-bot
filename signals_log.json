@@ -411,7 +411,45 @@
   },
   {
     "id": "SIG-0013",
+<<<<<<< Updated upstream
     "time": "2026-08-25T12:12:26.834979+00:00",
+=======
+    "time": "2026-08-25T12:11:02.194564+00:00",
+    "pair": "XMR/USDT",
+    "exchange": "KuCoin",
+    "direction": "SHORT",
+    "style": "CONFIRMED_BREAKOUT",
+    "score": 79.2,
+    "adx": 19.2,
+    "rsi": 28.5,
+    "rsi3": 36.1,
+    "volume_x": 1.48,
+    "htf_trend": "BULLISH",
+    "entry": 443.96,
+    "sl": 452.8392,
+    "best_price": 443.96,
+    "worst_price": 443.96,
+    "tp1": 439.96436,
+    "tp2": null,
+    "tp3": null,
+    "tp_main": 439.96436,
+    "capital": 1000.0,
+    "status": "OPEN",
+    "exit_price": null,
+    "pnl_usd": null,
+    "result": null,
+    "closed_at": null,
+    "exit_time": null,
+    "grind_count": 0,
+    "grind_entries": [
+      443.96
+    ],
+    "tag": "breakout_short"
+  },
+  {
+    "id": "SIG-0014",
+    "time": "2026-08-25T12:12:34.842432+00:00",
+>>>>>>> Stashed changes
     "pair": "ZRO/USDT",
     "exchange": "KuCoin",
     "direction": "SHORT",
