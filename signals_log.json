@@ -169,5 +169,39 @@
       0.01437
     ],
     "tag": "breakout_long"
+  },
+  {
+    "id": "SIG-0006",
+    "time": "2026-08-25T13:08:50.199669+00:00",
+    "pair": "DGAI/USDT",
+    "exchange": "KuCoin",
+    "direction": "SHORT",
+    "style": "CONFIRMED_BREAKOUT",
+    "score": 76.5,
+    "adx": 16.5,
+    "rsi": 48.2,
+    "rsi3": 22.1,
+    "volume_x": 1.6,
+    "htf_trend": "BULLISH",
+    "entry": 0.69931,
+    "sl": 0.7132962,
+    "best_price": 0.69931,
+    "worst_price": 0.69931,
+    "tp1": 0.69301621,
+    "tp2": null,
+    "tp3": null,
+    "tp_main": 0.69301621,
+    "capital": 1000.0,
+    "status": "OPEN",
+    "exit_price": null,
+    "pnl_usd": null,
+    "result": null,
+    "closed_at": null,
+    "exit_time": null,
+    "grind_count": 0,
+    "grind_entries": [
+      0.69931
+    ],
+    "tag": "breakout_short"
   }
 ]
