@@ -689,11 +689,16 @@
   },
   {
     "id": "SIG-0021",
+<<<<<<< Updated upstream
     "time": "2026-08-26T04:01:24.382825+00:00",
+=======
+    "time": "2026-08-26T04:02:12.503908+00:00",
+>>>>>>> Stashed changes
     "pair": "PENGU/USDT",
     "exchange": "KuCoin",
     "direction": "SHORT",
     "style": "CONFIRMED_BREAKOUT",
+<<<<<<< Updated upstream
     "score": 84.5,
     "adx": 24.5,
     "rsi": 26.2,
@@ -708,6 +713,22 @@
     "tp2": null,
     "tp3": null,
     "tp_main": 0.009362968,
+=======
+    "score": 84.6,
+    "adx": 24.6,
+    "rsi": 25.9,
+    "rsi3": 22.8,
+    "volume_x": 1.07,
+    "htf_trend": "NEUTRAL",
+    "entry": 0.009444,
+    "sl": 0.00963288,
+    "best_price": 0.009444,
+    "worst_price": 0.009444,
+    "tp1": 0.009359003999999999,
+    "tp2": null,
+    "tp3": null,
+    "tp_main": 0.009359003999999999,
+>>>>>>> Stashed changes
     "capital": 1000.0,
     "status": "OPEN",
     "exit_price": null,
@@ -717,7 +738,11 @@
     "exit_time": null,
     "grind_count": 0,
     "grind_entries": [
+<<<<<<< Updated upstream
       0.009448
+=======
+      0.009444
+>>>>>>> Stashed changes
     ],
     "tag": "breakout_short"
   }
