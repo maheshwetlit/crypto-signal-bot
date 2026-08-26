@@ -1316,5 +1316,39 @@
     ],
     "tag": "breakout_long",
     "pnl_pct": 0.9
+  },
+  {
+    "id": "SIG-0039",
+    "time": "2026-08-26T23:12:27.386042+00:00",
+    "pair": "ALIGN/USDT",
+    "exchange": "KuCoin",
+    "direction": "LONG",
+    "style": "CONFIRMED_BREAKOUT",
+    "score": 81.8,
+    "adx": 21.8,
+    "rsi": 56.7,
+    "rsi3": NaN,
+    "volume_x": 2.78,
+    "htf_trend": "BEARISH",
+    "entry": 0.01187,
+    "sl": 0.0116326,
+    "best_price": 0.01187,
+    "worst_price": 0.01187,
+    "tp1": 0.011976829999999999,
+    "tp2": null,
+    "tp3": null,
+    "tp_main": 0.011976829999999999,
+    "capital": 1000.0,
+    "status": "OPEN",
+    "exit_price": null,
+    "pnl_usd": null,
+    "result": null,
+    "closed_at": null,
+    "exit_time": null,
+    "grind_count": 0,
+    "grind_entries": [
+      0.01187
+    ],
+    "tag": "breakout_long"
   }
 ]
