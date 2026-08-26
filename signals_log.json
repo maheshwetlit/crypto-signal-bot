@@ -294,7 +294,7 @@
     "entry": 1.426,
     "sl": 1.45452,
     "best_price": 1.425,
-    "worst_price": 1.428,
+    "worst_price": 1.429,
     "tp1": 1.413166,
     "tp2": null,
     "tp3": null,
@@ -396,7 +396,7 @@
     "entry": 1.426,
     "sl": 1.45452,
     "best_price": 1.425,
-    "worst_price": 1.428,
+    "worst_price": 1.429,
     "tp1": 1.413166,
     "tp2": null,
     "tp3": null,
@@ -508,8 +508,13 @@
     "exit_price": 0.223734,
     "pnl_usd": -20.0,
     "result": "LOSS",
+<<<<<<< Updated upstream
     "closed_at": "2026-08-26T09:10:49.457309+00:00",
     "exit_time": "2026-08-26T09:10:49.457309+00:00",
+=======
+    "closed_at": "2026-08-26T09:11:02.222951+00:00",
+    "exit_time": "2026-08-26T09:11:02.222951+00:00",
+>>>>>>> Stashed changes
     "grind_count": 0,
     "grind_entries": [
       0.2283
@@ -600,7 +605,11 @@
     "htf_trend": "BULLISH",
     "entry": 1.2195,
     "sl": 1.1951100000000001,
+<<<<<<< Updated upstream
     "best_price": 1.23,
+=======
+    "best_price": 1.2292,
+>>>>>>> Stashed changes
     "worst_price": 1.2195,
     "tp1": 1.2304754999999998,
     "tp2": null,
