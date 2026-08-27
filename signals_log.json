@@ -3127,17 +3127,18 @@
     "tp3": null,
     "tp_main": 0.15942199999999998,
     "capital": 1000.0,
-    "status": "OPEN",
-    "exit_price": null,
-    "pnl_usd": null,
-    "result": null,
-    "closed_at": null,
-    "exit_time": null,
+    "status": "LOSS",
+    "exit_price": 0.1548,
+    "pnl_usd": -20.25,
+    "result": "SL HIT",
+    "closed_at": "2026-08-27T10:00:10.844950+00:00",
+    "exit_time": "2026-08-27T10:00:10.844950+00:00",
     "grind_count": 0,
     "grind_entries": [
       0.158
     ],
-    "tag": "breakout_long"
+    "tag": "breakout_long",
+    "pnl_pct": -2.03
   },
   {
     "id": "SIG-0091",
