@@ -4115,17 +4115,18 @@
     "tp3": null,
     "tp_main": 7.387897999999999,
     "capital": 1000.0,
-    "status": "OPEN",
-    "exit_price": null,
-    "pnl_usd": null,
-    "result": null,
-    "closed_at": null,
-    "exit_time": null,
+    "status": "CLOSED",
+    "exit_price": 7.26,
+    "pnl_usd": -8.47,
+    "result": "STALE",
+    "closed_at": "2026-08-27T19:35:45.821223+00:00",
+    "exit_time": "2026-08-27T19:35:45.821223+00:00",
     "grind_count": 0,
     "grind_entries": [
       7.322
     ],
-    "tag": "breakout_long"
+    "tag": "breakout_long",
+    "pnl_pct": -0.85
   },
   {
     "id": "SIG-0119",
@@ -4149,17 +4150,18 @@
     "tp3": null,
     "tp_main": 1.4539689999999998,
     "capital": 1000.0,
-    "status": "OPEN",
-    "exit_price": null,
-    "pnl_usd": null,
-    "result": null,
-    "closed_at": null,
-    "exit_time": null,
+    "status": "CLOSED",
+    "exit_price": 1.435,
+    "pnl_usd": -4.16,
+    "result": "STALE",
+    "closed_at": "2026-08-27T19:35:45.821223+00:00",
+    "exit_time": "2026-08-27T19:35:45.821223+00:00",
     "grind_count": 0,
     "grind_entries": [
       1.441
     ],
-    "tag": "breakout_long"
+    "tag": "breakout_long",
+    "pnl_pct": -0.42
   },
   {
     "id": "SIG-0120",
@@ -4262,5 +4264,39 @@
       0.2152
     ],
     "tag": "breakout_long"
+  },
+  {
+    "id": "SIG-0123",
+    "time": "2026-08-27T19:36:52.376351+00:00",
+    "pair": "KII/USDT",
+    "exchange": "KuCoin",
+    "direction": "SHORT",
+    "style": "CONFIRMED_BREAKOUT",
+    "score": 81.2,
+    "adx": 21.2,
+    "rsi": 33.0,
+    "rsi3": 36.6,
+    "volume_x": 1.94,
+    "htf_trend": "NEUTRAL",
+    "entry": 0.05874,
+    "sl": 0.059914800000000004,
+    "best_price": 0.05874,
+    "worst_price": 0.05874,
+    "tp1": 0.05821134,
+    "tp2": null,
+    "tp3": null,
+    "tp_main": 0.05821134,
+    "capital": 1000.0,
+    "status": "OPEN",
+    "exit_price": null,
+    "pnl_usd": null,
+    "result": null,
+    "closed_at": null,
+    "exit_time": null,
+    "grind_count": 0,
+    "grind_entries": [
+      0.05874
+    ],
+    "tag": "breakout_short"
   }
 ]
