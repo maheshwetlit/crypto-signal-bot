@@ -5274,5 +5274,39 @@
       1.394
     ],
     "tag": "breakout_short"
+  },
+  {
+    "id": "SIG-0152",
+    "time": "2026-08-28T04:06:36.434262+00:00",
+    "pair": "HYPE/USDT",
+    "exchange": "KuCoin",
+    "direction": "SHORT",
+    "style": "CONFIRMED_BREAKOUT",
+    "score": 80.3,
+    "adx": 20.3,
+    "rsi": 49.6,
+    "rsi3": 0.0,
+    "volume_x": 2.89,
+    "htf_trend": "BULLISH",
+    "entry": 83.362,
+    "sl": 85.02924,
+    "best_price": 83.362,
+    "worst_price": 83.362,
+    "tp1": 82.61174199999999,
+    "tp2": null,
+    "tp3": null,
+    "tp_main": 82.61174199999999,
+    "capital": 1000.0,
+    "status": "OPEN",
+    "exit_price": null,
+    "pnl_usd": null,
+    "result": null,
+    "closed_at": null,
+    "exit_time": null,
+    "grind_count": 0,
+    "grind_entries": [
+      83.362
+    ],
+    "tag": "breakout_short"
   }
 ]
