@@ -6418,17 +6418,18 @@
     "tp3": null,
     "tp_main": 0.20835849999999997,
     "capital": 1000.0,
-    "status": "OPEN",
-    "exit_price": null,
-    "pnl_usd": null,
-    "result": null,
-    "closed_at": null,
-    "exit_time": null,
+    "status": "LOSS",
+    "exit_price": 0.2019,
+    "pnl_usd": -22.28,
+    "result": "SL HIT",
+    "closed_at": "2026-08-28T12:58:57.102736+00:00",
+    "exit_time": "2026-08-28T12:58:57.102736+00:00",
     "grind_count": 0,
     "grind_entries": [
       0.2065
     ],
-    "tag": "breakout_long"
+    "tag": "breakout_long",
+    "pnl_pct": -2.23
   },
   {
     "id": "SIG-0185",
