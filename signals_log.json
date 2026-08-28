@@ -5375,17 +5375,18 @@
     "tp3": null,
     "tp_main": 0.08686115,
     "capital": 1000.0,
-    "status": "OPEN",
-    "exit_price": null,
-    "pnl_usd": null,
-    "result": null,
-    "closed_at": null,
-    "exit_time": null,
+    "status": "WIN",
+    "exit_price": 0.08763,
+    "pnl_usd": 0.23,
+    "result": "WIN",
+    "closed_at": "2026-08-28T07:35:47.584419+00:00",
+    "exit_time": "2026-08-28T07:35:47.584419+00:00",
     "grind_count": 0,
     "grind_entries": [
       0.08765
     ],
-    "tag": "breakout_short"
+    "tag": "breakout_short",
+    "pnl_pct": 0.02
   },
   {
     "id": "SIG-0155",
@@ -5607,7 +5608,7 @@
     "htf_trend": "NEUTRAL",
     "entry": 0.004686,
     "sl": 0.00477972,
-    "best_price": 0.004686,
+    "best_price": 0.004673,
     "worst_price": 0.004686,
     "tp1": 0.004643826,
     "tp2": null,
@@ -5675,7 +5676,7 @@
     "htf_trend": "NEUTRAL",
     "entry": 0.2095,
     "sl": 0.21369,
-    "best_price": 0.2095,
+    "best_price": 0.2092,
     "worst_price": 0.2095,
     "tp1": 0.20761449999999998,
     "tp2": null,
@@ -5691,6 +5692,40 @@
     "grind_count": 0,
     "grind_entries": [
       0.2095
+    ],
+    "tag": "breakout_short"
+  },
+  {
+    "id": "SIG-0164",
+    "time": "2026-08-28T07:36:52.738545+00:00",
+    "pair": "ADA/USDT",
+    "exchange": "KuCoin",
+    "direction": "SHORT",
+    "style": "CONFIRMED_BREAKOUT",
+    "score": 79.5,
+    "adx": 19.5,
+    "rsi": 36.6,
+    "rsi3": 0.0,
+    "volume_x": 2.75,
+    "htf_trend": "NEUTRAL",
+    "entry": 0.2091,
+    "sl": 0.213282,
+    "best_price": 0.2091,
+    "worst_price": 0.2091,
+    "tp1": 0.20721810000000002,
+    "tp2": null,
+    "tp3": null,
+    "tp_main": 0.20721810000000002,
+    "capital": 1000.0,
+    "status": "OPEN",
+    "exit_price": null,
+    "pnl_usd": null,
+    "result": null,
+    "closed_at": null,
+    "exit_time": null,
+    "grind_count": 0,
+    "grind_entries": [
+      0.2091
     ],
     "tag": "breakout_short"
   }
