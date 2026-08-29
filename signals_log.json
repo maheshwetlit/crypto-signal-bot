@@ -1351,17 +1351,18 @@
     "tp3": null,
     "tp_main": 0.010990189999999999,
     "capital": 1000.0,
-    "status": "OPEN",
-    "exit_price": null,
-    "pnl_usd": null,
-    "result": null,
-    "closed_at": null,
-    "exit_time": null,
+    "status": "WIN",
+    "exit_price": 0.01097,
+    "pnl_usd": 10.82,
+    "result": "WIN",
+    "closed_at": "2026-08-29T21:15:45.995337+00:00",
+    "exit_time": "2026-08-29T21:15:45.995337+00:00",
     "grind_count": 0,
     "grind_entries": [
       0.01109
     ],
-    "tag": "breakout_short"
+    "tag": "breakout_short",
+    "pnl_pct": 1.08
   },
   {
     "id": "SIG-0040",
@@ -1412,7 +1413,7 @@
     "htf_trend": "BULLISH",
     "entry": 464.99,
     "sl": 455.6902,
-    "best_price": 466.18,
+    "best_price": 466.31,
     "worst_price": 462.34,
     "tp1": 469.17490999999995,
     "tp2": null,
@@ -1651,7 +1652,7 @@
     "entry": 7.319,
     "sl": 7.46538,
     "best_price": 7.315,
-    "worst_price": 7.321,
+    "worst_price": 7.324,
     "tp1": 7.2531289999999995,
     "tp2": null,
     "tp3": null,
@@ -1685,7 +1686,7 @@
     "entry": 7.316,
     "sl": 7.46232,
     "best_price": 7.316,
-    "worst_price": 7.321,
+    "worst_price": 7.324,
     "tp1": 7.250156,
     "tp2": null,
     "tp3": null,
@@ -1702,5 +1703,39 @@
       7.316
     ],
     "tag": "breakout_short"
+  },
+  {
+    "id": "SIG-0050",
+    "time": "2026-08-29T21:16:17.800167+00:00",
+    "pair": "ASTER/USDT",
+    "exchange": "KuCoin",
+    "direction": "LONG",
+    "style": "CONFIRMED_BREAKOUT",
+    "score": 81.3,
+    "adx": 21.3,
+    "rsi": 52.4,
+    "rsi3": NaN,
+    "volume_x": 1.58,
+    "htf_trend": "NEUTRAL",
+    "entry": 0.6994,
+    "sl": 0.685412,
+    "best_price": 0.6994,
+    "worst_price": 0.6994,
+    "tp1": 0.7056946,
+    "tp2": null,
+    "tp3": null,
+    "tp_main": 0.7056946,
+    "capital": 1000.0,
+    "status": "OPEN",
+    "exit_price": null,
+    "pnl_usd": null,
+    "result": null,
+    "closed_at": null,
+    "exit_time": null,
+    "grind_count": 0,
+    "grind_entries": [
+      0.6994
+    ],
+    "tag": "breakout_long"
   }
 ]
