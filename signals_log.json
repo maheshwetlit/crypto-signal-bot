@@ -1596,17 +1596,18 @@
     "tp3": null,
     "tp_main": 0.0081057854,
     "capital": 1000.0,
-    "status": "OPEN",
-    "exit_price": null,
-    "pnl_usd": null,
-    "result": null,
-    "closed_at": null,
-    "exit_time": null,
+    "status": "CLOSED",
+    "exit_price": 0.0081825,
+    "pnl_usd": -0.38,
+    "result": "STALE",
+    "closed_at": "2026-08-29T23:20:49.215591+00:00",
+    "exit_time": "2026-08-29T23:20:49.215591+00:00",
     "grind_count": 0,
     "grind_entries": [
       0.0081794
     ],
-    "tag": "breakout_short"
+    "tag": "breakout_short",
+    "pnl_pct": -0.04
   },
   {
     "id": "SIG-0047",
@@ -1630,17 +1631,18 @@
     "tp3": null,
     "tp_main": 3.6949579999999995e-06,
     "capital": 1000.0,
-    "status": "OPEN",
-    "exit_price": null,
-    "pnl_usd": null,
-    "result": null,
-    "closed_at": null,
-    "exit_time": null,
+    "status": "CLOSED",
+    "exit_price": 3.659e-06,
+    "pnl_usd": -0.82,
+    "result": "STALE",
+    "closed_at": "2026-08-29T23:20:49.215591+00:00",
+    "exit_time": "2026-08-29T23:20:49.215591+00:00",
     "grind_count": 0,
     "grind_entries": [
       3.662e-06
     ],
-    "tag": "breakout_long"
+    "tag": "breakout_long",
+    "pnl_pct": -0.08
   },
   {
     "id": "SIG-0048",
@@ -2001,7 +2003,7 @@
     "entry": 83.573,
     "sl": 81.90154,
     "best_price": 83.573,
-    "worst_price": 83.503,
+    "worst_price": 83.362,
     "tp1": 84.32515699999999,
     "tp2": null,
     "tp3": null,
@@ -2034,7 +2036,7 @@
     "htf_trend": "NEUTRAL",
     "entry": 0.0081945,
     "sl": 0.00835839,
-    "best_price": 0.0081945,
+    "best_price": 0.0081825,
     "worst_price": 0.0081945,
     "tp1": 0.0081207495,
     "tp2": null,
@@ -2050,6 +2052,40 @@
     "grind_count": 0,
     "grind_entries": [
       0.0081945
+    ],
+    "tag": "breakout_short"
+  },
+  {
+    "id": "SIG-0060",
+    "time": "2026-08-29T23:21:49.429830+00:00",
+    "pair": "AKE/USDT",
+    "exchange": "KuCoin",
+    "direction": "SHORT",
+    "style": "CONFIRMED_BREAKOUT",
+    "score": 80.3,
+    "adx": 20.3,
+    "rsi": 34.1,
+    "rsi3": 0.0,
+    "volume_x": 3.84,
+    "htf_trend": "NEUTRAL",
+    "entry": 0.0081464,
+    "sl": 0.008309328,
+    "best_price": 0.0081464,
+    "worst_price": 0.0081464,
+    "tp1": 0.008073082399999999,
+    "tp2": null,
+    "tp3": null,
+    "tp_main": 0.008073082399999999,
+    "capital": 1000.0,
+    "status": "OPEN",
+    "exit_price": null,
+    "pnl_usd": null,
+    "result": null,
+    "closed_at": null,
+    "exit_time": null,
+    "grind_count": 0,
+    "grind_entries": [
+      0.0081464
     ],
     "tag": "breakout_short"
   }
