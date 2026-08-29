@@ -896,5 +896,39 @@
       0.08438
     ],
     "tag": "breakout_short"
+  },
+  {
+    "id": "SIG-0027",
+    "time": "2026-08-29T06:37:11.470979+00:00",
+    "pair": "DIAM/USDT",
+    "exchange": "KuCoin",
+    "direction": "SHORT",
+    "style": "CONFIRMED_BREAKOUT",
+    "score": 100.0,
+    "adx": 58.5,
+    "rsi": 45.0,
+    "rsi3": 45.0,
+    "volume_x": 3.12,
+    "htf_trend": "BULLISH",
+    "entry": 0.006382,
+    "sl": 0.00650964,
+    "best_price": 0.006382,
+    "worst_price": 0.006382,
+    "tp1": 0.006324562,
+    "tp2": null,
+    "tp3": null,
+    "tp_main": 0.006324562,
+    "capital": 1000.0,
+    "status": "OPEN",
+    "exit_price": null,
+    "pnl_usd": null,
+    "result": null,
+    "closed_at": null,
+    "exit_time": null,
+    "grind_count": 0,
+    "grind_entries": [
+      0.006382
+    ],
+    "tag": "breakout_short"
   }
 ]
