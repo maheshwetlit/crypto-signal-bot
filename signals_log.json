@@ -2894,5 +2894,39 @@
       0.08468
     ],
     "tag": "breakout_short"
+  },
+  {
+    "id": "SIG-0084",
+    "time": "2026-08-30T04:56:58.864790+00:00",
+    "pair": "HNT/USDT",
+    "exchange": "KuCoin",
+    "direction": "LONG",
+    "style": "CONFIRMED_BREAKOUT",
+    "score": 100.0,
+    "adx": 49.3,
+    "rsi": 84.7,
+    "rsi3": NaN,
+    "volume_x": 1.71,
+    "htf_trend": "BULLISH",
+    "entry": 0.626,
+    "sl": 0.61348,
+    "best_price": 0.626,
+    "worst_price": 0.626,
+    "tp1": 0.6316339999999999,
+    "tp2": null,
+    "tp3": null,
+    "tp_main": 0.6316339999999999,
+    "capital": 1000.0,
+    "status": "OPEN",
+    "exit_price": null,
+    "pnl_usd": null,
+    "result": null,
+    "closed_at": null,
+    "exit_time": null,
+    "grind_count": 0,
+    "grind_entries": [
+      0.626
+    ],
+    "tag": "breakout_long"
   }
 ]
