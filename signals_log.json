@@ -1107,5 +1107,39 @@
       84.346
     ],
     "tag": "breakout_long"
+  },
+  {
+    "id": "SIG-0033",
+    "time": "2026-08-31T20:21:51.772617+00:00",
+    "pair": "SHIB/USDT",
+    "exchange": "KuCoin",
+    "direction": "LONG",
+    "style": "CONFIRMED_BREAKOUT",
+    "score": 78.9,
+    "adx": 18.9,
+    "rsi": 57.9,
+    "rsi3": NaN,
+    "volume_x": 2.24,
+    "htf_trend": "BEARISH",
+    "entry": 5.077e-06,
+    "sl": 4.97546e-06,
+    "best_price": 5.077e-06,
+    "worst_price": 5.077e-06,
+    "tp1": 5.122692999999999e-06,
+    "tp2": null,
+    "tp3": null,
+    "tp_main": 5.122692999999999e-06,
+    "capital": 1000.0,
+    "status": "OPEN",
+    "exit_price": null,
+    "pnl_usd": null,
+    "result": null,
+    "closed_at": null,
+    "exit_time": null,
+    "grind_count": 0,
+    "grind_entries": [
+      5.077e-06
+    ],
+    "tag": "breakout_long"
   }
 ]
