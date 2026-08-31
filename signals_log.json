@@ -237,5 +237,39 @@
       0.697
     ],
     "tag": "breakout_short"
+  },
+  {
+    "id": "SIG-0008",
+    "time": "2026-08-31T14:26:55.953971+00:00",
+    "pair": "CASHCAT/USDT",
+    "exchange": "KuCoin",
+    "direction": "SHORT",
+    "style": "CONFIRMED_BREAKOUT",
+    "score": 87.9,
+    "adx": 27.9,
+    "rsi": 29.1,
+    "rsi3": 0.0,
+    "volume_x": 1.97,
+    "htf_trend": "NEUTRAL",
+    "entry": 0.19,
+    "sl": 0.1938,
+    "best_price": 0.19,
+    "worst_price": 0.19,
+    "tp1": 0.18829,
+    "tp2": null,
+    "tp3": null,
+    "tp_main": 0.18829,
+    "capital": 1000.0,
+    "status": "OPEN",
+    "exit_price": null,
+    "pnl_usd": null,
+    "result": null,
+    "closed_at": null,
+    "exit_time": null,
+    "grind_count": 0,
+    "grind_entries": [
+      0.19
+    ],
+    "tag": "breakout_short"
   }
 ]
