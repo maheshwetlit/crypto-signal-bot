@@ -2194,5 +2194,39 @@
       0.1906
     ],
     "tag": "breakout_short"
+  },
+  {
+    "id": "SIG-0064",
+    "time": "2026-08-31T04:37:17.584139+00:00",
+    "pair": "SKR/USDT",
+    "exchange": "KuCoin",
+    "direction": "SHORT",
+    "style": "CONFIRMED_BREAKOUT",
+    "score": 80.3,
+    "adx": 20.3,
+    "rsi": 38.4,
+    "rsi3": 0.0,
+    "volume_x": 2.17,
+    "htf_trend": "BULLISH",
+    "entry": 0.028091,
+    "sl": 0.028652820000000002,
+    "best_price": 0.028091,
+    "worst_price": 0.028091,
+    "tp1": 0.027838181,
+    "tp2": null,
+    "tp3": null,
+    "tp_main": 0.027838181,
+    "capital": 1000.0,
+    "status": "OPEN",
+    "exit_price": null,
+    "pnl_usd": null,
+    "result": null,
+    "closed_at": null,
+    "exit_time": null,
+    "grind_count": 0,
+    "grind_entries": [
+      0.028091
+    ],
+    "tag": "breakout_short"
   }
 ]
