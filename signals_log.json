@@ -450,11 +450,16 @@
   },
   {
     "id": "SIG-0014",
+<<<<<<< Updated upstream
     "time": "2026-09-01T04:56:36.113664+00:00",
+=======
+    "time": "2026-09-01T04:56:17.696890+00:00",
+>>>>>>> Stashed changes
     "pair": "GRAM/USDT",
     "exchange": "KuCoin",
     "direction": "SHORT",
     "style": "CONFIRMED_BREAKOUT",
+<<<<<<< Updated upstream
     "score": 84.6,
     "adx": 24.6,
     "rsi": 43.3,
@@ -469,6 +474,22 @@
     "tp2": null,
     "tp3": null,
     "tp_main": 1.376499,
+=======
+    "score": 84.1,
+    "adx": 24.1,
+    "rsi": 44.8,
+    "rsi3": 0.0,
+    "volume_x": 0.99,
+    "htf_trend": "NEUTRAL",
+    "entry": 1.39,
+    "sl": 1.4178,
+    "best_price": 1.39,
+    "worst_price": 1.39,
+    "tp1": 1.3774899999999999,
+    "tp2": null,
+    "tp3": null,
+    "tp_main": 1.3774899999999999,
+>>>>>>> Stashed changes
     "capital": 1000.0,
     "status": "OPEN",
     "exit_price": null,
@@ -478,7 +499,11 @@
     "exit_time": null,
     "grind_count": 0,
     "grind_entries": [
+<<<<<<< Updated upstream
       1.389
+=======
+      1.39
+>>>>>>> Stashed changes
     ],
     "tag": "breakout_short"
   }
