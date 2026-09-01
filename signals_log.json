@@ -692,5 +692,39 @@
       1.308
     ],
     "tag": "breakout_short"
+  },
+  {
+    "id": "SIG-0021",
+    "time": "2026-09-01T20:52:18.882230+00:00",
+    "pair": "CASHCAT/USDT",
+    "exchange": "KuCoin",
+    "direction": "LONG",
+    "style": "CONFIRMED_BREAKOUT",
+    "score": 88.5,
+    "adx": 28.5,
+    "rsi": 67.5,
+    "rsi3": NaN,
+    "volume_x": 1.32,
+    "htf_trend": "BULLISH",
+    "entry": 0.2186,
+    "sl": 0.21422799999999997,
+    "best_price": 0.2186,
+    "worst_price": 0.2186,
+    "tp1": 0.22056739999999997,
+    "tp2": null,
+    "tp3": null,
+    "tp_main": 0.22056739999999997,
+    "capital": 1000.0,
+    "status": "OPEN",
+    "exit_price": null,
+    "pnl_usd": null,
+    "result": null,
+    "closed_at": null,
+    "exit_time": null,
+    "grind_count": 0,
+    "grind_entries": [
+      0.2186
+    ],
+    "tag": "breakout_long"
   }
 ]
