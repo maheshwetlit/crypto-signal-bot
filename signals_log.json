@@ -304,5 +304,39 @@
       44.26
     ],
     "tag": "breakout_short"
+  },
+  {
+    "id": "SIG-0010",
+    "time": "2026-09-01T16:16:51.773869+00:00",
+    "pair": "BTR/USDT",
+    "exchange": "KuCoin",
+    "direction": "SHORT",
+    "style": "CONFIRMED_BREAKOUT",
+    "score": 84.9,
+    "adx": 24.9,
+    "rsi": 50.1,
+    "rsi3": 0.0,
+    "volume_x": 1.52,
+    "htf_trend": "NEUTRAL",
+    "entry": 0.09256,
+    "sl": 0.0944112,
+    "best_price": 0.09256,
+    "worst_price": 0.09256,
+    "tp1": 0.09172696,
+    "tp2": null,
+    "tp3": null,
+    "tp_main": 0.09172696,
+    "capital": 1000.0,
+    "status": "OPEN",
+    "exit_price": null,
+    "pnl_usd": null,
+    "result": null,
+    "closed_at": null,
+    "exit_time": null,
+    "grind_count": 0,
+    "grind_entries": [
+      0.09256
+    ],
+    "tag": "breakout_short"
   }
 ]
