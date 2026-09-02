@@ -1801,5 +1801,39 @@
       0.08533
     ],
     "tag": "breakout_short"
+  },
+  {
+    "id": "SIG-0053",
+    "time": "2026-09-02T03:26:42.013812+00:00",
+    "pair": "BNB/USDT",
+    "exchange": "KuCoin",
+    "direction": "LONG",
+    "style": "CONFIRMED_BREAKOUT",
+    "score": 87.7,
+    "adx": 27.7,
+    "rsi": 93.2,
+    "rsi3": NaN,
+    "volume_x": 2.12,
+    "htf_trend": "NEUTRAL",
+    "entry": 689.66,
+    "sl": 675.8668,
+    "best_price": 689.66,
+    "worst_price": 689.66,
+    "tp1": 695.8669399999999,
+    "tp2": null,
+    "tp3": null,
+    "tp_main": 695.8669399999999,
+    "capital": 1000.0,
+    "status": "OPEN",
+    "exit_price": null,
+    "pnl_usd": null,
+    "result": null,
+    "closed_at": null,
+    "exit_time": null,
+    "grind_count": 0,
+    "grind_entries": [
+      689.66
+    ],
+    "tag": "breakout_long"
   }
 ]
