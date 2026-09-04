@@ -3812,5 +3812,39 @@
     ],
     "tag": "breakout_long",
     "pnl_pct": 0.9
+  },
+  {
+    "id": "SIG-0110",
+    "time": "2026-09-04T16:36:22.242609+00:00",
+    "pair": "LONGXIA/USDT",
+    "exchange": "KuCoin",
+    "direction": "LONG",
+    "style": "CONFIRMED_BREAKOUT",
+    "score": 82.3,
+    "adx": 22.3,
+    "rsi": 85.7,
+    "rsi3": NaN,
+    "volume_x": 4.27,
+    "htf_trend": "BULLISH",
+    "entry": 0.09613,
+    "sl": 0.0942074,
+    "best_price": 0.09613,
+    "worst_price": 0.09613,
+    "tp1": 0.09699516999999998,
+    "tp2": null,
+    "tp3": null,
+    "tp_main": 0.09699516999999998,
+    "capital": 1000.0,
+    "status": "OPEN",
+    "exit_price": null,
+    "pnl_usd": null,
+    "result": null,
+    "closed_at": null,
+    "exit_time": null,
+    "grind_count": 0,
+    "grind_entries": [
+      0.09613
+    ],
+    "tag": "breakout_long"
   }
 ]
