@@ -1491,17 +1491,18 @@
     "tp3": null,
     "tp_main": 0.2609303,
     "capital": 1000.0,
-    "status": "OPEN",
-    "exit_price": null,
-    "pnl_usd": null,
-    "result": null,
-    "closed_at": null,
-    "exit_time": null,
+    "status": "WIN",
+    "exit_price": 0.2545,
+    "pnl_usd": 33.42,
+    "result": "TP HIT",
+    "closed_at": "2026-09-04T07:00:07.175493+00:00",
+    "exit_time": "2026-09-04T07:00:07.175493+00:00",
     "grind_count": 0,
     "grind_entries": [
       0.2633
     ],
-    "tag": "breakout_short"
+    "tag": "breakout_short",
+    "pnl_pct": 3.34
   },
   {
     "id": "SIG-0044",
@@ -1662,17 +1663,18 @@
     "tp3": null,
     "tp_main": 0.2609303,
     "capital": 1000.0,
-    "status": "OPEN",
-    "exit_price": null,
-    "pnl_usd": null,
-    "result": null,
-    "closed_at": null,
-    "exit_time": null,
+    "status": "WIN",
+    "exit_price": 0.2545,
+    "pnl_usd": 33.42,
+    "result": "TP HIT",
+    "closed_at": "2026-09-04T07:00:07.175493+00:00",
+    "exit_time": "2026-09-04T07:00:07.175493+00:00",
     "grind_count": 0,
     "grind_entries": [
       0.2633
     ],
-    "tag": "breakout_short"
+    "tag": "breakout_short",
+    "pnl_pct": 3.34
   },
   {
     "id": "SIG-0049",
@@ -1764,17 +1766,18 @@
     "tp3": null,
     "tp_main": 0.18373140000000002,
     "capital": 1000.0,
-    "status": "OPEN",
-    "exit_price": null,
-    "pnl_usd": null,
-    "result": null,
-    "closed_at": null,
-    "exit_time": null,
+    "status": "LOSS",
+    "exit_price": 0.1897,
+    "pnl_usd": -23.19,
+    "result": "SL HIT",
+    "closed_at": "2026-09-04T07:00:07.175493+00:00",
+    "exit_time": "2026-09-04T07:00:07.175493+00:00",
     "grind_count": 0,
     "grind_entries": [
       0.1854
     ],
-    "tag": "breakout_short"
+    "tag": "breakout_short",
+    "pnl_pct": -2.32
   },
   {
     "id": "SIG-0052",
@@ -1867,17 +1870,18 @@
     "tp3": null,
     "tp_main": 0.004254363,
     "capital": 1000.0,
-    "status": "OPEN",
-    "exit_price": null,
-    "pnl_usd": null,
-    "result": null,
-    "closed_at": null,
-    "exit_time": null,
+    "status": "LOSS",
+    "exit_price": 0.004389,
+    "pnl_usd": -22.36,
+    "result": "SL HIT",
+    "closed_at": "2026-09-04T07:00:07.175493+00:00",
+    "exit_time": "2026-09-04T07:00:07.175493+00:00",
     "grind_count": 0,
     "grind_entries": [
       0.004293
     ],
-    "tag": "breakout_short"
+    "tag": "breakout_short",
+    "pnl_pct": -2.24
   },
   {
     "id": "SIG-0055",
