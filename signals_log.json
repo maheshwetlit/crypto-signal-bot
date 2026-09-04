@@ -4535,5 +4535,39 @@
       5.226e-06
     ],
     "tag": "breakout_long"
+  },
+  {
+    "id": "SIG-0131",
+    "time": "2026-09-04T21:16:46.633243+00:00",
+    "pair": "DASH/USDT",
+    "exchange": "KuCoin",
+    "direction": "LONG",
+    "style": "CONFIRMED_BREAKOUT",
+    "score": 100.0,
+    "adx": 46.8,
+    "rsi": 77.2,
+    "rsi3": 60.7,
+    "volume_x": 1.03,
+    "htf_trend": "BULLISH",
+    "entry": 58.09,
+    "sl": 56.928200000000004,
+    "best_price": 58.09,
+    "worst_price": 58.09,
+    "tp1": 58.612809999999996,
+    "tp2": null,
+    "tp3": null,
+    "tp_main": 58.612809999999996,
+    "capital": 1000.0,
+    "status": "OPEN",
+    "exit_price": null,
+    "pnl_usd": null,
+    "result": null,
+    "closed_at": null,
+    "exit_time": null,
+    "grind_count": 0,
+    "grind_entries": [
+      58.09
+    ],
+    "tag": "breakout_long"
   }
 ]
