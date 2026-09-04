@@ -32,5 +32,39 @@
       0.055101
     ],
     "tag": "breakout_long"
+  },
+  {
+    "id": "SIG-0002",
+    "time": "2026-09-04T22:47:30.542740+00:00",
+    "pair": "CHIP/USDT",
+    "exchange": "KuCoin",
+    "direction": "LONG",
+    "style": "CONFIRMED_BREAKOUT",
+    "score": 77.0,
+    "adx": 17.0,
+    "rsi": 72.7,
+    "rsi3": NaN,
+    "volume_x": 4.23,
+    "htf_trend": "BULLISH",
+    "entry": 0.055452,
+    "sl": 0.05434296,
+    "best_price": 0.055452,
+    "worst_price": 0.055452,
+    "tp1": 0.05595106799999999,
+    "tp2": null,
+    "tp3": null,
+    "tp_main": 0.05595106799999999,
+    "capital": 1000.0,
+    "status": "OPEN",
+    "exit_price": null,
+    "pnl_usd": null,
+    "result": null,
+    "closed_at": null,
+    "exit_time": null,
+    "grind_count": 0,
+    "grind_entries": [
+      0.055452
+    ],
+    "tag": "breakout_long"
   }
 ]
