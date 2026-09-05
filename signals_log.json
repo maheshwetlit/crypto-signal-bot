@@ -374,5 +374,39 @@
       1.425
     ],
     "tag": "breakout_long"
+  },
+  {
+    "id": "SIG-0012",
+    "time": "2026-09-05T12:01:50.184329+00:00",
+    "pair": "AKE/USDT",
+    "exchange": "KuCoin",
+    "direction": "LONG",
+    "style": "CONFIRMED_BREAKOUT",
+    "score": 78.7,
+    "adx": 18.7,
+    "rsi": 58.3,
+    "rsi3": NaN,
+    "volume_x": 0.84,
+    "htf_trend": "BULLISH",
+    "entry": 0.0197166,
+    "sl": 0.019322268,
+    "best_price": 0.0197166,
+    "worst_price": 0.0197166,
+    "tp1": 0.0198940494,
+    "tp2": null,
+    "tp3": null,
+    "tp_main": 0.0198940494,
+    "capital": 1000.0,
+    "status": "OPEN",
+    "exit_price": null,
+    "pnl_usd": null,
+    "result": null,
+    "closed_at": null,
+    "exit_time": null,
+    "grind_count": 0,
+    "grind_entries": [
+      0.0197166
+    ],
+    "tag": "breakout_long"
   }
 ]
