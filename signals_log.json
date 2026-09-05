@@ -153,7 +153,11 @@
     "htf_trend": "BULLISH",
     "entry": 0.6119,
     "sl": 0.599662,
+<<<<<<< Updated upstream
     "best_price": 0.6183,
+=======
+    "best_price": 0.6216,
+>>>>>>> Stashed changes
     "worst_price": 0.6095,
     "tp1": 0.6174071,
     "tp2": null,
@@ -164,8 +168,13 @@
     "exit_price": 0.6174071,
     "pnl_usd": 9.0,
     "result": "WIN",
+<<<<<<< Updated upstream
     "closed_at": "2026-09-05T00:01:11.816226+00:00",
     "exit_time": "2026-09-05T00:01:11.816226+00:00",
+=======
+    "closed_at": "2026-09-05T00:01:30.558410+00:00",
+    "exit_time": "2026-09-05T00:01:30.558410+00:00",
+>>>>>>> Stashed changes
     "grind_count": 0,
     "grind_entries": [
       0.6119
@@ -241,5 +250,39 @@
     ],
     "tag": "breakout_long",
     "pnl_pct": 0.9
+  },
+  {
+    "id": "SIG-0008",
+    "time": "2026-09-05T00:03:16.686721+00:00",
+    "pair": "CHIP/USDT",
+    "exchange": "KuCoin",
+    "direction": "LONG",
+    "style": "CONFIRMED_BREAKOUT",
+    "score": 76.6,
+    "adx": 16.6,
+    "rsi": 58.1,
+    "rsi3": 98.1,
+    "volume_x": 2.25,
+    "htf_trend": "BULLISH",
+    "entry": 0.055395,
+    "sl": 0.0542871,
+    "best_price": 0.055395,
+    "worst_price": 0.055395,
+    "tp1": 0.055893555,
+    "tp2": null,
+    "tp3": null,
+    "tp_main": 0.055893555,
+    "capital": 1000.0,
+    "status": "OPEN",
+    "exit_price": null,
+    "pnl_usd": null,
+    "result": null,
+    "closed_at": null,
+    "exit_time": null,
+    "grind_count": 0,
+    "grind_entries": [
+      0.055395
+    ],
+    "tag": "breakout_long"
   }
 ]
