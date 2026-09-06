@@ -1946,17 +1946,18 @@
     "tp3": null,
     "tp_main": 5.496022999999999e-06,
     "capital": 1000.0,
-    "status": "OPEN",
-    "exit_price": null,
-    "pnl_usd": null,
-    "result": null,
-    "closed_at": null,
-    "exit_time": null,
+    "status": "CLOSED",
+    "exit_price": 5.425e-06,
+    "pnl_usd": -4.04,
+    "result": "STALE",
+    "closed_at": "2026-09-06T17:01:08.511764+00:00",
+    "exit_time": "2026-09-06T17:01:08.511764+00:00",
     "grind_count": 0,
     "grind_entries": [
       5.447e-06
     ],
-    "tag": "breakout_long"
+    "tag": "breakout_long",
+    "pnl_pct": -0.4
   },
   {
     "id": "SIG-0057",
@@ -1974,7 +1975,7 @@
     "entry": 0.07441,
     "sl": 0.0758982,
     "best_price": 0.07284,
-    "worst_price": 0.07473,
+    "worst_price": 0.07631,
     "tp1": 0.07374031,
     "tp2": null,
     "tp3": null,
@@ -2093,5 +2094,39 @@
       525.0
     ],
     "tag": "breakout_short"
+  },
+  {
+    "id": "SIG-0061",
+    "time": "2026-09-06T17:03:01.195466+00:00",
+    "pair": "CHIP/USDT",
+    "exchange": "KuCoin",
+    "direction": "LONG",
+    "style": "CONFIRMED_BREAKOUT",
+    "score": 83.7,
+    "adx": 23.7,
+    "rsi": 79.4,
+    "rsi3": NaN,
+    "volume_x": 0.6,
+    "htf_trend": "BULLISH",
+    "entry": 0.057926,
+    "sl": 0.056767479999999995,
+    "best_price": 0.057926,
+    "worst_price": 0.057926,
+    "tp1": 0.05844733399999999,
+    "tp2": null,
+    "tp3": null,
+    "tp_main": 0.05844733399999999,
+    "capital": 1000.0,
+    "status": "OPEN",
+    "exit_price": null,
+    "pnl_usd": null,
+    "result": null,
+    "closed_at": null,
+    "exit_time": null,
+    "grind_count": 0,
+    "grind_entries": [
+      0.057926
+    ],
+    "tag": "breakout_long"
   }
 ]
