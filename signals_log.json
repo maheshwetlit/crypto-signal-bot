@@ -1106,17 +1106,18 @@
     "tp3": null,
     "tp_main": 0.08976477999999999,
     "capital": 1000.0,
-    "status": "OPEN",
-    "exit_price": null,
-    "pnl_usd": null,
-    "result": null,
-    "closed_at": null,
-    "exit_time": null,
+    "status": "CLOSED",
+    "exit_price": 0.09089,
+    "pnl_usd": -3.42,
+    "result": "STALE",
+    "closed_at": "2026-09-06T07:55:43.423800+00:00",
+    "exit_time": "2026-09-06T07:55:43.423800+00:00",
     "grind_count": 0,
     "grind_entries": [
       0.09058
     ],
-    "tag": "breakout_short"
+    "tag": "breakout_short",
+    "pnl_pct": -0.34
   },
   {
     "id": "SIG-0033",
@@ -1140,17 +1141,18 @@
     "tp3": null,
     "tp_main": 0.08285751000000001,
     "capital": 1000.0,
-    "status": "OPEN",
-    "exit_price": null,
-    "pnl_usd": null,
-    "result": null,
-    "closed_at": null,
-    "exit_time": null,
+    "status": "CLOSED",
+    "exit_price": 0.0852822,
+    "pnl_usd": -20.0,
+    "result": "STALE",
+    "closed_at": "2026-09-06T07:55:43.423800+00:00",
+    "exit_time": "2026-09-06T07:55:43.423800+00:00",
     "grind_count": 0,
     "grind_entries": [
       0.08361
     ],
-    "tag": "breakout_short"
+    "tag": "breakout_short",
+    "pnl_pct": -2.0
   },
   {
     "id": "SIG-0034",
