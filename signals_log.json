@@ -204,5 +204,39 @@
       0.2204
     ],
     "tag": "breakout_short"
+  },
+  {
+    "id": "SIG-0007",
+    "time": "2026-09-07T02:17:11.352135+00:00",
+    "pair": "JUP/USDT",
+    "exchange": "KuCoin",
+    "direction": "LONG",
+    "style": "CONFIRMED_BREAKOUT",
+    "score": 86.5,
+    "adx": 26.5,
+    "rsi": 57.7,
+    "rsi3": 70.0,
+    "volume_x": 1.16,
+    "htf_trend": "BULLISH",
+    "entry": 0.2682,
+    "sl": 0.262836,
+    "best_price": 0.2682,
+    "worst_price": 0.2682,
+    "tp1": 0.27061379999999996,
+    "tp2": null,
+    "tp3": null,
+    "tp_main": 0.27061379999999996,
+    "capital": 1000.0,
+    "status": "OPEN",
+    "exit_price": null,
+    "pnl_usd": null,
+    "result": null,
+    "closed_at": null,
+    "exit_time": null,
+    "grind_count": 0,
+    "grind_entries": [
+      0.2682
+    ],
+    "tag": "breakout_long"
   }
 ]
