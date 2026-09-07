@@ -6762,6 +6762,7 @@
     "grind_entries": [
       62837.4
     ],
+<<<<<<< Updated upstream
     "tag": "ema_short",
     "best_price": 76559.4,
     "worst_price": 62837.4,
@@ -7326,5 +7327,42 @@
     "best_price": 0.3862,
     "worst_price": 0.3474,
     "pnl_pct": -2.0
+=======
+    "tag": "breakout_short"
+  },
+  {
+    "id": "SIG-0004",
+    "time": "2026-09-07T13:51:24.311822+00:00",
+    "pair": "SOL/USDT",
+    "exchange": "KuCoin",
+    "direction": "SHORT",
+    "style": "CONFIRMED_BREAKOUT",
+    "score": 91.0,
+    "adx": 31.0,
+    "rsi": 44.9,
+    "rsi3": 13.3,
+    "volume_x": 1.13,
+    "htf_trend": "BULLISH",
+    "entry": 104.99,
+    "sl": 107.0898,
+    "best_price": 104.99,
+    "worst_price": 104.99,
+    "tp1": 104.04508999999999,
+    "tp2": null,
+    "tp3": null,
+    "tp_main": 104.04508999999999,
+    "capital": 1000.0,
+    "status": "OPEN",
+    "exit_price": null,
+    "pnl_usd": null,
+    "result": null,
+    "closed_at": null,
+    "exit_time": null,
+    "grind_count": 0,
+    "grind_entries": [
+      104.99
+    ],
+    "tag": "breakout_short"
+>>>>>>> Stashed changes
   }
 ]
