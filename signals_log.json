@@ -8027,13 +8027,18 @@
   },
   {
     "id": "SIG-0265",
+<<<<<<< Updated upstream
     "time": "2026-09-08T05:56:23.971470+00:00",
+=======
+    "time": "2026-09-08T05:58:12.032459+00:00",
+>>>>>>> Stashed changes
     "pair": "LONGXIA/USDT",
     "exchange": "KuCoin",
     "direction": "SHORT",
     "style": "CONFIRMED_BREAKOUT",
     "score": 84.0,
     "adx": 24.0,
+<<<<<<< Updated upstream
     "rsi": 56.5,
     "rsi3": 8.0,
     "volume_x": 1.09,
@@ -8046,6 +8051,20 @@
     "tp2": null,
     "tp3": null,
     "tp_main": 0.056487,
+=======
+    "rsi": 56.6,
+    "rsi3": 8.0,
+    "volume_x": 2.18,
+    "htf_trend": "BEARISH",
+    "entry": 0.05702,
+    "sl": 0.0581604,
+    "best_price": 0.05702,
+    "worst_price": 0.05702,
+    "tp1": 0.05650682,
+    "tp2": null,
+    "tp3": null,
+    "tp_main": 0.05650682,
+>>>>>>> Stashed changes
     "capital": 1000.0,
     "status": "OPEN",
     "exit_price": null,
@@ -8055,7 +8074,11 @@
     "exit_time": null,
     "grind_count": 0,
     "grind_entries": [
+<<<<<<< Updated upstream
       0.057
+=======
+      0.05702
+>>>>>>> Stashed changes
     ],
     "tag": "breakout_short"
   }
