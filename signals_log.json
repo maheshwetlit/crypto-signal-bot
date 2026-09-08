@@ -304,5 +304,39 @@
       8.0527
     ],
     "tag": "breakout_short"
+  },
+  {
+    "id": "SIG-0010",
+    "time": "2026-09-08T07:32:24.988465+00:00",
+    "pair": "WLD/USDT",
+    "exchange": "KuCoin",
+    "direction": "LONG",
+    "style": "CONFIRMED_BREAKOUT",
+    "score": 88.4,
+    "adx": 28.4,
+    "rsi": 72.3,
+    "rsi3": NaN,
+    "volume_x": 1.53,
+    "htf_trend": "BULLISH",
+    "entry": 0.4714,
+    "sl": 0.461972,
+    "best_price": 0.4714,
+    "worst_price": 0.4714,
+    "tp1": 0.4756425999999999,
+    "tp2": null,
+    "tp3": null,
+    "tp_main": 0.4756425999999999,
+    "capital": 1000.0,
+    "status": "OPEN",
+    "exit_price": null,
+    "pnl_usd": null,
+    "result": null,
+    "closed_at": null,
+    "exit_time": null,
+    "grind_count": 0,
+    "grind_entries": [
+      0.4714
+    ],
+    "tag": "breakout_long"
   }
 ]
