@@ -9950,5 +9950,39 @@
       0.27199
     ],
     "tag": "breakout_short"
+  },
+  {
+    "id": "SIG-0320",
+    "time": "2026-09-08T19:17:34.662745+00:00",
+    "pair": "XLM/USDT",
+    "exchange": "KuCoin",
+    "direction": "SHORT",
+    "style": "CONFIRMED_BREAKOUT",
+    "score": 86.3,
+    "adx": 26.3,
+    "rsi": 36.8,
+    "rsi3": 0.0,
+    "volume_x": 2.13,
+    "htf_trend": "NEUTRAL",
+    "entry": 0.1888,
+    "sl": 0.192576,
+    "best_price": 0.1888,
+    "worst_price": 0.1888,
+    "tp1": 0.18710079999999998,
+    "tp2": null,
+    "tp3": null,
+    "tp_main": 0.18710079999999998,
+    "capital": 1000.0,
+    "status": "OPEN",
+    "exit_price": null,
+    "pnl_usd": null,
+    "result": null,
+    "closed_at": null,
+    "exit_time": null,
+    "grind_count": 0,
+    "grind_entries": [
+      0.1888
+    ],
+    "tag": "breakout_short"
   }
 ]
