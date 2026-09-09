@@ -10855,6 +10855,7 @@
   },
   {
     "id": "SIG-0346",
+<<<<<<< Updated upstream
     "time": "2026-09-09T01:24:37.307229+00:00",
     "pair": "XRP/USDT",
     "exchange": "KuCoin",
@@ -10874,6 +10875,27 @@
     "tp2": null,
     "tp3": null,
     "tp_main": 1.39916317,
+=======
+    "time": "2026-09-09T01:26:19.563887+00:00",
+    "pair": "BNB/USDT",
+    "exchange": "KuCoin",
+    "direction": "SHORT",
+    "style": "CONFIRMED_BREAKOUT",
+    "score": 85.5,
+    "adx": 25.5,
+    "rsi": 22.8,
+    "rsi3": 22.1,
+    "volume_x": 4.25,
+    "htf_trend": "BULLISH",
+    "entry": 750.9,
+    "sl": 765.918,
+    "best_price": 750.9,
+    "worst_price": 750.9,
+    "tp1": 744.1419,
+    "tp2": null,
+    "tp3": null,
+    "tp_main": 744.1419,
+>>>>>>> Stashed changes
     "capital": 1000.0,
     "status": "OPEN",
     "exit_price": null,
@@ -10883,6 +10905,7 @@
     "exit_time": null,
     "grind_count": 0,
     "grind_entries": [
+<<<<<<< Updated upstream
       1.41187
     ],
     "tag": "breakout_short"
@@ -10918,6 +10941,9 @@
     "grind_count": 0,
     "grind_entries": [
       0.08996
+=======
+      750.9
+>>>>>>> Stashed changes
     ],
     "tag": "breakout_short"
   }
