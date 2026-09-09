@@ -610,5 +610,39 @@
       1.8427
     ],
     "tag": "breakout_short"
+  },
+  {
+    "id": "SIG-0019",
+    "time": "2026-09-09T21:42:21.956915+00:00",
+    "pair": "AVAX/USDT",
+    "exchange": "KuCoin",
+    "direction": "SHORT",
+    "style": "CONFIRMED_BREAKOUT",
+    "score": 91.5,
+    "adx": 31.5,
+    "rsi": 39.7,
+    "rsi3": 11.8,
+    "volume_x": 1.57,
+    "htf_trend": "NEUTRAL",
+    "entry": 7.841,
+    "sl": 7.99782,
+    "best_price": 7.841,
+    "worst_price": 7.841,
+    "tp1": 7.770431,
+    "tp2": null,
+    "tp3": null,
+    "tp_main": 7.770431,
+    "capital": 1000.0,
+    "status": "OPEN",
+    "exit_price": null,
+    "pnl_usd": null,
+    "result": null,
+    "closed_at": null,
+    "exit_time": null,
+    "grind_count": 0,
+    "grind_entries": [
+      7.841
+    ],
+    "tag": "breakout_short"
   }
 ]
