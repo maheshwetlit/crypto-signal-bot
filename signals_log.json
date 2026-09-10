@@ -2745,7 +2745,7 @@
     "entry": 1.958,
     "sl": 1.99716,
     "best_price": 1.958,
-    "worst_price": 1.99,
+    "worst_price": 1.991,
     "tp1": 1.940378,
     "tp2": null,
     "tp3": null,
@@ -2984,22 +2984,23 @@
     "entry": 0.25238,
     "sl": 0.24733239999999998,
     "best_price": 0.25238,
-    "worst_price": 0.24787,
+    "worst_price": 0.24731,
     "tp1": 0.25465141999999996,
     "tp2": null,
     "tp3": null,
     "tp_main": 0.25465141999999996,
     "capital": 1000.0,
-    "status": "OPEN",
-    "exit_price": null,
-    "pnl_usd": null,
-    "result": null,
-    "closed_at": null,
-    "exit_time": null,
+    "status": "LOSS",
+    "exit_price": 0.24733239999999998,
+    "pnl_usd": -20.0,
+    "result": "LOSS",
+    "closed_at": "2026-09-10T19:10:57.110411+00:00",
+    "exit_time": "2026-09-10T19:10:57.110411+00:00",
     "grind_count": 0,
     "grind_entries": [
       0.25238
     ],
-    "tag": "breakout_long"
+    "tag": "breakout_long",
+    "pnl_pct": -2.0
   }
 ]
