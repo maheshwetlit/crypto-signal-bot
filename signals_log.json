@@ -2366,17 +2366,18 @@
     "tp3": null,
     "tp_main": 0.029739909999999998,
     "capital": 1000.0,
-    "status": "OPEN",
-    "exit_price": null,
-    "pnl_usd": null,
-    "result": null,
-    "closed_at": null,
-    "exit_time": null,
+    "status": "CLOSED",
+    "exit_price": 0.0302,
+    "pnl_usd": -6.33,
+    "result": "STALE",
+    "closed_at": "2026-09-10T15:45:50.310704+00:00",
+    "exit_time": "2026-09-10T15:45:50.310704+00:00",
     "grind_count": 0,
     "grind_entries": [
       0.03001
     ],
-    "tag": "breakout_short"
+    "tag": "breakout_short",
+    "pnl_pct": -0.63
   },
   {
     "id": "SIG-0069",
