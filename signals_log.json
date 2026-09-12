@@ -4186,17 +4186,18 @@
     "tp3": null,
     "tp_main": 0.08525040999999998,
     "capital": 1000.0,
-    "status": "OPEN",
-    "exit_price": null,
-    "pnl_usd": null,
-    "result": null,
-    "closed_at": null,
-    "exit_time": null,
+    "status": "CLOSED",
+    "exit_price": 0.08447,
+    "pnl_usd": -0.24,
+    "result": "STALE",
+    "closed_at": "2026-09-12T05:50:57.347488+00:00",
+    "exit_time": "2026-09-12T05:50:57.347488+00:00",
     "grind_count": 0,
     "grind_entries": [
       0.08449
     ],
-    "tag": "breakout_long"
+    "tag": "breakout_long",
+    "pnl_pct": -0.02
   },
   {
     "id": "SIG-0121",
@@ -4220,17 +4221,18 @@
     "tp3": null,
     "tp_main": 78.08782699999999,
     "capital": 1000.0,
-    "status": "OPEN",
-    "exit_price": null,
-    "pnl_usd": null,
-    "result": null,
-    "closed_at": null,
-    "exit_time": null,
+    "status": "WIN",
+    "exit_price": 78.765,
+    "pnl_usd": 0.41,
+    "result": "WIN",
+    "closed_at": "2026-09-12T05:50:57.347488+00:00",
+    "exit_time": "2026-09-12T05:50:57.347488+00:00",
     "grind_count": 0,
     "grind_entries": [
       78.797
     ],
-    "tag": "breakout_short"
+    "tag": "breakout_short",
+    "pnl_pct": 0.04
   },
   {
     "id": "SIG-0122",
@@ -4254,17 +4256,18 @@
     "tp3": null,
     "tp_main": 0.21067919999999998,
     "capital": 1000.0,
-    "status": "OPEN",
-    "exit_price": null,
-    "pnl_usd": null,
-    "result": null,
-    "closed_at": null,
-    "exit_time": null,
+    "status": "CLOSED",
+    "exit_price": 0.208,
+    "pnl_usd": -3.83,
+    "result": "STALE",
+    "closed_at": "2026-09-12T05:50:57.347488+00:00",
+    "exit_time": "2026-09-12T05:50:57.347488+00:00",
     "grind_count": 0,
     "grind_entries": [
       0.2088
     ],
-    "tag": "breakout_long"
+    "tag": "breakout_long",
+    "pnl_pct": -0.38
   },
   {
     "id": "SIG-0123",
@@ -4486,7 +4489,7 @@
     "htf_trend": "NEUTRAL",
     "entry": 533.61,
     "sl": 522.9378,
-    "best_price": 537.43,
+    "best_price": 537.49,
     "worst_price": 533.61,
     "tp1": 538.4124899999999,
     "tp2": null,
@@ -4589,7 +4592,7 @@
     "entry": 0.3437,
     "sl": 0.336826,
     "best_price": 0.344,
-    "worst_price": 0.3437,
+    "worst_price": 0.3436,
     "tp1": 0.34679329999999997,
     "tp2": null,
     "tp3": null,
@@ -4656,7 +4659,7 @@
     "htf_trend": "BULLISH",
     "entry": 53.82,
     "sl": 52.7436,
-    "best_price": 53.82,
+    "best_price": 53.87,
     "worst_price": 53.78,
     "tp1": 54.304379999999995,
     "tp2": null,
@@ -4691,7 +4694,7 @@
     "entry": 0.344,
     "sl": 0.33712,
     "best_price": 0.344,
-    "worst_price": 0.3438,
+    "worst_price": 0.3436,
     "tp1": 0.34709599999999996,
     "tp2": null,
     "tp3": null,
