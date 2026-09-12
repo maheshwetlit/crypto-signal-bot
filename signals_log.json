@@ -5415,8 +5415,13 @@
     "exit_price": 0.045,
     "pnl_usd": 1.56,
     "result": "WIN",
+<<<<<<< Updated upstream
     "closed_at": "2026-09-12T13:00:20.912072+00:00",
     "exit_time": "2026-09-12T13:00:20.912072+00:00",
+=======
+    "closed_at": "2026-09-12T13:01:16.238425+00:00",
+    "exit_time": "2026-09-12T13:01:16.238425+00:00",
+>>>>>>> Stashed changes
     "grind_count": 0,
     "grind_entries": [
       0.04493
@@ -5711,7 +5716,7 @@
     "htf_trend": "BEARISH",
     "entry": 0.1438,
     "sl": 0.14092400000000002,
-    "best_price": 0.1448,
+    "best_price": 0.145,
     "worst_price": 0.1438,
     "tp1": 0.1450942,
     "tp2": null,
