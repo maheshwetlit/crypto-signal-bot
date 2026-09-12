@@ -4360,5 +4360,39 @@
       0.6842
     ],
     "tag": "breakout_long"
+  },
+  {
+    "id": "SIG-0126",
+    "time": "2026-09-12T03:32:25.508547+00:00",
+    "pair": "RAY/USDT",
+    "exchange": "KuCoin",
+    "direction": "SHORT",
+    "style": "CONFIRMED_BREAKOUT",
+    "score": 83.5,
+    "adx": 23.5,
+    "rsi": 25.0,
+    "rsi3": 12.5,
+    "volume_x": 2.54,
+    "htf_trend": "BULLISH",
+    "entry": 1.6343,
+    "sl": 1.666986,
+    "best_price": 1.6343,
+    "worst_price": 1.6343,
+    "tp1": 1.6195913000000002,
+    "tp2": null,
+    "tp3": null,
+    "tp_main": 1.6195913000000002,
+    "capital": 1000.0,
+    "status": "OPEN",
+    "exit_price": null,
+    "pnl_usd": null,
+    "result": null,
+    "closed_at": null,
+    "exit_time": null,
+    "grind_count": 0,
+    "grind_entries": [
+      1.6343
+    ],
+    "tag": "breakout_short"
   }
 ]
