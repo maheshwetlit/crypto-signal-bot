@@ -645,13 +645,57 @@
     "exit_price": 0.00383082,
     "pnl_usd": -20.0,
     "result": "LOSS",
+<<<<<<< Updated upstream
     "closed_at": "2026-09-12T21:01:08.567023+00:00",
     "exit_time": "2026-09-12T21:01:08.567023+00:00",
+=======
+    "closed_at": "2026-09-12T21:01:11.801609+00:00",
+    "exit_time": "2026-09-12T21:01:11.801609+00:00",
     "grind_count": 0,
     "grind_entries": [
       0.003909
     ],
     "tag": "breakout_long",
     "pnl_pct": -2.0
+  },
+  {
+    "id": "SIG-0020",
+    "time": "2026-09-12T21:02:01.244752+00:00",
+    "pair": "SEI/USDT",
+    "exchange": "KuCoin",
+    "direction": "SHORT",
+    "style": "CONFIRMED_BREAKOUT",
+    "score": 77.9,
+    "adx": 17.9,
+    "rsi": 67.5,
+    "rsi3": 20.0,
+    "volume_x": 1.67,
+    "htf_trend": "BEARISH",
+    "entry": 0.04465,
+    "sl": 0.045543,
+    "best_price": 0.04465,
+    "worst_price": 0.04465,
+    "tp1": 0.04424815,
+    "tp2": null,
+    "tp3": null,
+    "tp_main": 0.04424815,
+    "capital": 1000.0,
+    "status": "OPEN",
+    "exit_price": null,
+    "pnl_usd": null,
+    "result": null,
+    "closed_at": null,
+    "exit_time": null,
+>>>>>>> Stashed changes
+    "grind_count": 0,
+    "grind_entries": [
+      0.04465
+    ],
+<<<<<<< Updated upstream
+    "tag": "breakout_long",
+    "pnl_pct": -2.0
+=======
+    "tag": "breakout_short"
+>>>>>>> Stashed changes
   }
 ]
