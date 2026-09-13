@@ -374,5 +374,39 @@
       0.1369
     ],
     "tag": "breakout_short"
+  },
+  {
+    "id": "SIG-0012",
+    "time": "2026-09-13T12:17:13.827323+00:00",
+    "pair": "MTL/USDT",
+    "exchange": "KuCoin",
+    "direction": "LONG",
+    "style": "CONFIRMED_BREAKOUT",
+    "score": 83.6,
+    "adx": 23.6,
+    "rsi": 73.0,
+    "rsi3": 97.6,
+    "volume_x": 2.67,
+    "htf_trend": "BULLISH",
+    "entry": 0.3282,
+    "sl": 0.321636,
+    "best_price": 0.3282,
+    "worst_price": 0.3282,
+    "tp1": 0.33115379999999994,
+    "tp2": null,
+    "tp3": null,
+    "tp_main": 0.33115379999999994,
+    "capital": 1000.0,
+    "status": "OPEN",
+    "exit_price": null,
+    "pnl_usd": null,
+    "result": null,
+    "closed_at": null,
+    "exit_time": null,
+    "grind_count": 0,
+    "grind_entries": [
+      0.3282
+    ],
+    "tag": "breakout_long"
   }
 ]
