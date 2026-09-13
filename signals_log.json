@@ -974,5 +974,39 @@
       54.3
     ],
     "tag": "breakout_long"
+  },
+  {
+    "id": "SIG-0029",
+    "time": "2026-09-13T05:56:56.314870+00:00",
+    "pair": "ARB/USDT",
+    "exchange": "KuCoin",
+    "direction": "LONG",
+    "style": "CONFIRMED_BREAKOUT",
+    "score": 96.4,
+    "adx": 36.4,
+    "rsi": 70.7,
+    "rsi3": NaN,
+    "volume_x": 2.97,
+    "htf_trend": "BEARISH",
+    "entry": 0.1431,
+    "sl": 0.140238,
+    "best_price": 0.1431,
+    "worst_price": 0.1431,
+    "tp1": 0.14438789999999999,
+    "tp2": null,
+    "tp3": null,
+    "tp_main": 0.14438789999999999,
+    "capital": 1000.0,
+    "status": "OPEN",
+    "exit_price": null,
+    "pnl_usd": null,
+    "result": null,
+    "closed_at": null,
+    "exit_time": null,
+    "grind_count": 0,
+    "grind_entries": [
+      0.1431
+    ],
+    "tag": "breakout_long"
   }
 ]
