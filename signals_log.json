@@ -616,17 +616,18 @@
     "tp3": null,
     "tp_main": 1.3224102199999999,
     "capital": 1000.0,
-    "status": "OPEN",
-    "exit_price": null,
-    "pnl_usd": null,
-    "result": null,
-    "closed_at": null,
-    "exit_time": null,
+    "status": "CLOSED",
+    "exit_price": 1.34865,
+    "pnl_usd": -10.66,
+    "result": "STALE",
+    "closed_at": "2026-09-13T16:31:01.595408+00:00",
+    "exit_time": "2026-09-13T16:31:01.595408+00:00",
     "grind_count": 0,
     "grind_entries": [
       1.33442
     ],
-    "tag": "breakout_short"
+    "tag": "breakout_short",
+    "pnl_pct": -1.07
   },
   {
     "id": "SIG-0019",
@@ -650,17 +651,18 @@
     "tp3": null,
     "tp_main": 0.13675800000000002,
     "capital": 1000.0,
-    "status": "OPEN",
-    "exit_price": null,
-    "pnl_usd": null,
-    "result": null,
-    "closed_at": null,
-    "exit_time": null,
+    "status": "CLOSED",
+    "exit_price": 0.1391,
+    "pnl_usd": -7.97,
+    "result": "STALE",
+    "closed_at": "2026-09-13T16:31:01.595408+00:00",
+    "exit_time": "2026-09-13T16:31:01.595408+00:00",
     "grind_count": 0,
     "grind_entries": [
       0.138
     ],
-    "tag": "breakout_short"
+    "tag": "breakout_short",
+    "pnl_pct": -0.8
   },
   {
     "id": "SIG-0020",
@@ -678,23 +680,24 @@
     "entry": 0.08297,
     "sl": 0.08462940000000001,
     "best_price": 0.08297,
-    "worst_price": 0.08376,
+    "worst_price": 0.08381,
     "tp1": 0.08222327,
     "tp2": null,
     "tp3": null,
     "tp_main": 0.08222327,
     "capital": 1000.0,
-    "status": "OPEN",
-    "exit_price": null,
-    "pnl_usd": null,
-    "result": null,
-    "closed_at": null,
-    "exit_time": null,
+    "status": "CLOSED",
+    "exit_price": 0.08381,
+    "pnl_usd": -10.12,
+    "result": "STALE",
+    "closed_at": "2026-09-13T16:31:01.595408+00:00",
+    "exit_time": "2026-09-13T16:31:01.595408+00:00",
     "grind_count": 0,
     "grind_entries": [
       0.08297
     ],
-    "tag": "breakout_short"
+    "tag": "breakout_short",
+    "pnl_pct": -1.01
   },
   {
     "id": "SIG-0021",
