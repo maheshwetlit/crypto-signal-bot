@@ -3801,17 +3801,18 @@
     "tp3": null,
     "tp_main": 0.1862089,
     "capital": 1000.0,
-    "status": "OPEN",
-    "exit_price": null,
-    "pnl_usd": null,
-    "result": null,
-    "closed_at": null,
-    "exit_time": null,
+    "status": "CLOSED",
+    "exit_price": 0.19,
+    "pnl_usd": -11.18,
+    "result": "STALE",
+    "closed_at": "2026-09-14T16:01:13.634048+00:00",
+    "exit_time": "2026-09-14T16:01:13.634048+00:00",
     "grind_count": 0,
     "grind_entries": [
       0.1879
     ],
-    "tag": "breakout_short"
+    "tag": "breakout_short",
+    "pnl_pct": -1.12
   },
   {
     "id": "SIG-0110",
