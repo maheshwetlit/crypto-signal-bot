@@ -4284,5 +4284,39 @@
       1.019
     ],
     "tag": "breakout_long"
+  },
+  {
+    "id": "SIG-0124",
+    "time": "2026-09-14T14:16:36.328849+00:00",
+    "pair": "FIL/USDT",
+    "exchange": "KuCoin",
+    "direction": "LONG",
+    "style": "CONFIRMED_BREAKOUT",
+    "score": 79.2,
+    "adx": 19.2,
+    "rsi": 71.0,
+    "rsi3": 87.2,
+    "volume_x": 4.2,
+    "htf_trend": "BULLISH",
+    "entry": 1.0243,
+    "sl": 1.003814,
+    "best_price": 1.0243,
+    "worst_price": 1.0243,
+    "tp1": 1.0335187,
+    "tp2": null,
+    "tp3": null,
+    "tp_main": 1.0335187,
+    "capital": 1000.0,
+    "status": "OPEN",
+    "exit_price": null,
+    "pnl_usd": null,
+    "result": null,
+    "closed_at": null,
+    "exit_time": null,
+    "grind_count": 0,
+    "grind_entries": [
+      1.0243
+    ],
+    "tag": "breakout_long"
   }
 ]
