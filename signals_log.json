@@ -5549,5 +5549,39 @@
       0.2081
     ],
     "tag": "breakout_short"
+  },
+  {
+    "id": "SIG-0160",
+    "time": "2026-09-15T01:51:39.944798+00:00",
+    "pair": "SHIB/USDT",
+    "exchange": "KuCoin",
+    "direction": "SHORT",
+    "style": "CONFIRMED_BREAKOUT",
+    "score": 93.4,
+    "adx": 33.4,
+    "rsi": 49.3,
+    "rsi3": 42.9,
+    "volume_x": 0.11,
+    "htf_trend": "BEARISH",
+    "entry": 5.211e-06,
+    "sl": 5.31522e-06,
+    "best_price": 5.211e-06,
+    "worst_price": 5.211e-06,
+    "tp1": 5.164101e-06,
+    "tp2": null,
+    "tp3": null,
+    "tp_main": 5.164101e-06,
+    "capital": 1000.0,
+    "status": "OPEN",
+    "exit_price": null,
+    "pnl_usd": null,
+    "result": null,
+    "closed_at": null,
+    "exit_time": null,
+    "grind_count": 0,
+    "grind_entries": [
+      5.211e-06
+    ],
+    "tag": "breakout_short"
   }
 ]
