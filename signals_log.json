@@ -6427,17 +6427,29 @@
     "tp_main": 0.1805602,
     "capital": 1000.0,
     "status": "WIN",
+<<<<<<< Updated upstream
     "exit_price": 0.1801,
     "pnl_usd": 11.53,
     "result": "WIN",
     "closed_at": "2026-09-15T09:29:32.049980+00:00",
     "exit_time": "2026-09-15T09:29:32.049980+00:00",
+=======
+    "exit_price": 0.18,
+    "pnl_usd": 12.07,
+    "result": "WIN",
+    "closed_at": "2026-09-15T09:30:59.471596+00:00",
+    "exit_time": "2026-09-15T09:30:59.471596+00:00",
+>>>>>>> Stashed changes
     "grind_count": 0,
     "grind_entries": [
       0.1822
     ],
     "tag": "breakout_short",
+<<<<<<< Updated upstream
     "pnl_pct": 1.15
+=======
+    "pnl_pct": 1.21
+>>>>>>> Stashed changes
   },
   {
     "id": "SIG-0185",
@@ -6465,8 +6477,13 @@
     "exit_price": 0.6879,
     "pnl_usd": -0.29,
     "result": "STALE",
+<<<<<<< Updated upstream
     "closed_at": "2026-09-15T09:29:32.049980+00:00",
     "exit_time": "2026-09-15T09:29:32.049980+00:00",
+=======
+    "closed_at": "2026-09-15T09:30:59.471596+00:00",
+    "exit_time": "2026-09-15T09:30:59.471596+00:00",
+>>>>>>> Stashed changes
     "grind_count": 0,
     "grind_entries": [
       0.6877
@@ -6693,7 +6710,11 @@
     "htf_trend": "BEARISH",
     "entry": 515.79,
     "sl": 505.47419999999994,
+<<<<<<< Updated upstream
     "best_price": 520.0,
+=======
+    "best_price": 519.94,
+>>>>>>> Stashed changes
     "worst_price": 513.87,
     "tp1": 520.43211,
     "tp2": null,
@@ -6829,7 +6850,11 @@
     "htf_trend": "BEARISH",
     "entry": 517.4,
     "sl": 507.05199999999996,
+<<<<<<< Updated upstream
     "best_price": 520.0,
+=======
+    "best_price": 519.93,
+>>>>>>> Stashed changes
     "worst_price": 517.4,
     "tp1": 522.0565999999999,
     "tp2": null,
@@ -6863,7 +6888,11 @@
     "htf_trend": "BEARISH",
     "entry": 52.56,
     "sl": 53.611200000000004,
+<<<<<<< Updated upstream
     "best_price": 52.54,
+=======
+    "best_price": 52.55,
+>>>>>>> Stashed changes
     "worst_price": 52.56,
     "tp1": 52.086960000000005,
     "tp2": null,
