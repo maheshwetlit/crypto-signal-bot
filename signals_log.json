@@ -652,5 +652,39 @@
       0.6857
     ],
     "tag": "breakout_long"
+  },
+  {
+    "id": "SIG-0020",
+    "time": "2026-09-16T18:32:48.990993+00:00",
+    "pair": "XAUT/USDT",
+    "exchange": "KuCoin",
+    "direction": "SHORT",
+    "style": "CONFIRMED_BREAKOUT",
+    "score": 82.4,
+    "adx": 22.4,
+    "rsi": 30.7,
+    "rsi3": 2.0,
+    "volume_x": 2.46,
+    "htf_trend": "BEARISH",
+    "entry": 4299.13,
+    "sl": 4385.1126,
+    "best_price": 4299.13,
+    "worst_price": 4299.13,
+    "tp1": 4260.43783,
+    "tp2": null,
+    "tp3": null,
+    "tp_main": 4260.43783,
+    "capital": 1000.0,
+    "status": "OPEN",
+    "exit_price": null,
+    "pnl_usd": null,
+    "result": null,
+    "closed_at": null,
+    "exit_time": null,
+    "grind_count": 0,
+    "grind_entries": [
+      4299.13
+    ],
+    "tag": "breakout_short"
   }
 ]
