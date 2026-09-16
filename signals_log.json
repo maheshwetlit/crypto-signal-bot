@@ -100,5 +100,39 @@
       0.1909
     ],
     "tag": "breakout_short"
+  },
+  {
+    "id": "SIG-0004",
+    "time": "2026-09-16T15:51:48.144758+00:00",
+    "pair": "TRX/USDT",
+    "exchange": "KuCoin",
+    "direction": "LONG",
+    "style": "CONFIRMED_BREAKOUT",
+    "score": 95.5,
+    "adx": 35.5,
+    "rsi": 80.0,
+    "rsi3": 71.4,
+    "volume_x": 0.48,
+    "htf_trend": "BEARISH",
+    "entry": 0.336,
+    "sl": 0.32928,
+    "best_price": 0.336,
+    "worst_price": 0.336,
+    "tp1": 0.339024,
+    "tp2": null,
+    "tp3": null,
+    "tp_main": 0.339024,
+    "capital": 1000.0,
+    "status": "OPEN",
+    "exit_price": null,
+    "pnl_usd": null,
+    "result": null,
+    "closed_at": null,
+    "exit_time": null,
+    "grind_count": 0,
+    "grind_entries": [
+      0.336
+    ],
+    "tag": "breakout_long"
   }
 ]
