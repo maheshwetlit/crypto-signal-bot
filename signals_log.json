@@ -3286,6 +3286,7 @@
   },
   {
     "id": "SIG-0095",
+<<<<<<< Updated upstream
     "time": "2026-09-18T17:52:15.336902+00:00",
     "pair": "PONS/USDT",
     "exchange": "KuCoin",
@@ -3305,6 +3306,27 @@
     "tp2": null,
     "tp3": null,
     "tp_main": 0.6638709,
+=======
+    "time": "2026-09-18T17:53:58.929306+00:00",
+    "pair": "DASH/USDT",
+    "exchange": "KuCoin",
+    "direction": "LONG",
+    "style": "CONFIRMED_BREAKOUT",
+    "score": 79.0,
+    "adx": 19.0,
+    "rsi": 61.9,
+    "rsi3": NaN,
+    "volume_x": 0.7,
+    "htf_trend": "BULLISH",
+    "entry": 58.75,
+    "sl": 57.574999999999996,
+    "best_price": 58.75,
+    "worst_price": 58.75,
+    "tp1": 59.278749999999995,
+    "tp2": null,
+    "tp3": null,
+    "tp_main": 59.278749999999995,
+>>>>>>> Stashed changes
     "capital": 1000.0,
     "status": "OPEN",
     "exit_price": null,
@@ -3314,8 +3336,14 @@
     "exit_time": null,
     "grind_count": 0,
     "grind_entries": [
+<<<<<<< Updated upstream
       0.6699
     ],
     "tag": "breakout_short"
+=======
+      58.75
+    ],
+    "tag": "breakout_long"
+>>>>>>> Stashed changes
   }
 ]
