@@ -479,5 +479,39 @@
       0.1858
     ],
     "tag": "breakout_long"
+  },
+  {
+    "id": "SIG-0015",
+    "time": "2026-09-18T20:02:56.272648+00:00",
+    "pair": "ILY/USDT",
+    "exchange": "KuCoin",
+    "direction": "LONG",
+    "style": "CONFIRMED_BREAKOUT",
+    "score": 79.6,
+    "adx": 19.6,
+    "rsi": 60.8,
+    "rsi3": 50.0,
+    "volume_x": 1.72,
+    "htf_trend": "BEARISH",
+    "entry": 0.3183,
+    "sl": 0.31193400000000004,
+    "best_price": 0.3183,
+    "worst_price": 0.3183,
+    "tp1": 0.32116469999999997,
+    "tp2": null,
+    "tp3": null,
+    "tp_main": 0.32116469999999997,
+    "capital": 1000.0,
+    "status": "OPEN",
+    "exit_price": null,
+    "pnl_usd": null,
+    "result": null,
+    "closed_at": null,
+    "exit_time": null,
+    "grind_count": 0,
+    "grind_entries": [
+      0.3183
+    ],
+    "tag": "breakout_long"
   }
 ]
