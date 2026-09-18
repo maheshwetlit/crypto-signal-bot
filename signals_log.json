@@ -2226,17 +2226,18 @@
     "tp3": null,
     "tp_main": 57.1807,
     "capital": 1000.0,
-    "status": "OPEN",
-    "exit_price": null,
-    "pnl_usd": null,
-    "result": null,
-    "closed_at": null,
-    "exit_time": null,
+    "status": "CLOSED",
+    "exit_price": 58.854000000000006,
+    "pnl_usd": -20.0,
+    "result": "STALE",
+    "closed_at": "2026-09-18T14:31:10.500108+00:00",
+    "exit_time": "2026-09-18T14:31:10.500108+00:00",
     "grind_count": 0,
     "grind_entries": [
       57.7
     ],
-    "tag": "breakout_short"
+    "tag": "breakout_short",
+    "pnl_pct": -2.0
   },
   {
     "id": "SIG-0065",
@@ -2425,7 +2426,7 @@
     "entry": 0.39934,
     "sl": 0.39135319999999996,
     "best_price": 0.40164,
-    "worst_price": 0.39421,
+    "worst_price": 0.39389,
     "tp1": 0.4029340599999999,
     "tp2": null,
     "tp3": null,
@@ -2961,5 +2962,39 @@
       0.2191
     ],
     "tag": "breakout_long"
+  },
+  {
+    "id": "SIG-0086",
+    "time": "2026-09-18T14:32:59.019098+00:00",
+    "pair": "ILY/USDT",
+    "exchange": "KuCoin",
+    "direction": "SHORT",
+    "style": "CONFIRMED_BREAKOUT",
+    "score": 78.1,
+    "adx": 18.1,
+    "rsi": 45.5,
+    "rsi3": 0.0,
+    "volume_x": 0.5,
+    "htf_trend": "BEARISH",
+    "entry": 0.3183,
+    "sl": 0.324666,
+    "best_price": 0.3183,
+    "worst_price": 0.3183,
+    "tp1": 0.31543530000000003,
+    "tp2": null,
+    "tp3": null,
+    "tp_main": 0.31543530000000003,
+    "capital": 1000.0,
+    "status": "OPEN",
+    "exit_price": null,
+    "pnl_usd": null,
+    "result": null,
+    "closed_at": null,
+    "exit_time": null,
+    "grind_count": 0,
+    "grind_entries": [
+      0.3183
+    ],
+    "tag": "breakout_short"
   }
 ]
