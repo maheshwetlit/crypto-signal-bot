@@ -965,5 +965,39 @@
       0.1922
     ],
     "tag": "breakout_long"
+  },
+  {
+    "id": "SIG-0029",
+    "time": "2026-09-18T03:37:22.054017+00:00",
+    "pair": "NIULAI/USDT",
+    "exchange": "KuCoin",
+    "direction": "LONG",
+    "style": "CONFIRMED_BREAKOUT",
+    "score": 97.4,
+    "adx": 37.4,
+    "rsi": 80.5,
+    "rsi3": 94.7,
+    "volume_x": 1.25,
+    "htf_trend": "NEUTRAL",
+    "entry": 0.11559,
+    "sl": 0.1132782,
+    "best_price": 0.11559,
+    "worst_price": 0.11559,
+    "tp1": 0.11663030999999999,
+    "tp2": null,
+    "tp3": null,
+    "tp_main": 0.11663030999999999,
+    "capital": 1000.0,
+    "status": "OPEN",
+    "exit_price": null,
+    "pnl_usd": null,
+    "result": null,
+    "closed_at": null,
+    "exit_time": null,
+    "grind_count": 0,
+    "grind_entries": [
+      0.11559
+    ],
+    "tag": "breakout_long"
   }
 ]
