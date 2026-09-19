@@ -346,13 +346,18 @@
   },
   {
     "id": "SIG-0011",
+<<<<<<< Updated upstream
     "time": "2026-09-19T00:42:20.934226+00:00",
+=======
+    "time": "2026-09-19T00:42:47.927547+00:00",
+>>>>>>> Stashed changes
     "pair": "DGAI/USDT",
     "exchange": "KuCoin",
     "direction": "LONG",
     "style": "CONFIRMED_BREAKOUT",
     "score": 78.9,
     "adx": 18.9,
+<<<<<<< Updated upstream
     "rsi": 71.5,
     "rsi3": 97.4,
     "volume_x": 1.29,
@@ -365,6 +370,20 @@
     "tp2": null,
     "tp3": null,
     "tp_main": 0.9693362099999999,
+=======
+    "rsi": 71.7,
+    "rsi3": 97.4,
+    "volume_x": 1.32,
+    "htf_trend": "BULLISH",
+    "entry": 0.96072,
+    "sl": 0.9415056,
+    "best_price": 0.96072,
+    "worst_price": 0.96072,
+    "tp1": 0.9693664799999999,
+    "tp2": null,
+    "tp3": null,
+    "tp_main": 0.9693664799999999,
+>>>>>>> Stashed changes
     "capital": 1000.0,
     "status": "OPEN",
     "exit_price": null,
@@ -374,6 +393,7 @@
     "exit_time": null,
     "grind_count": 0,
     "grind_entries": [
+<<<<<<< Updated upstream
       0.96069
     ],
     "tag": "breakout_long"
@@ -409,6 +429,9 @@
     "grind_count": 0,
     "grind_entries": [
       0.431
+=======
+      0.96072
+>>>>>>> Stashed changes
     ],
     "tag": "breakout_long"
   }
