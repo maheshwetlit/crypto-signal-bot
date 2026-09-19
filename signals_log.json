@@ -476,17 +476,18 @@
     "tp3": null,
     "tp_main": 0.05491131,
     "capital": 1000.0,
-    "status": "OPEN",
-    "exit_price": null,
-    "pnl_usd": null,
-    "result": null,
-    "closed_at": null,
-    "exit_time": null,
+    "status": "WIN",
+    "exit_price": 0.05161,
+    "pnl_usd": 68.58,
+    "result": "WIN",
+    "closed_at": "2026-09-19T06:35:44.458046+00:00",
+    "exit_time": "2026-09-19T06:35:44.458046+00:00",
     "grind_count": 0,
     "grind_entries": [
       0.05541
     ],
-    "tag": "breakout_short"
+    "tag": "breakout_short",
+    "pnl_pct": 6.86
   },
   {
     "id": "SIG-0015",
@@ -811,7 +812,7 @@
     "entry": 0.95475,
     "sl": 0.973845,
     "best_price": 0.95114,
-    "worst_price": 0.95612,
+    "worst_price": 0.95925,
     "tp1": 0.94615725,
     "tp2": null,
     "tp3": null,
@@ -1017,7 +1018,7 @@
     "entry": 111.74,
     "sl": 113.9748,
     "best_price": 111.38,
-    "worst_price": 111.74,
+    "worst_price": 111.84,
     "tp1": 110.73433999999999,
     "tp2": null,
     "tp3": null,
@@ -1051,7 +1052,7 @@
     "entry": 0.39375,
     "sl": 0.401625,
     "best_price": 0.39375,
-    "worst_price": 0.39554,
+    "worst_price": 0.39703,
     "tp1": 0.39020625,
     "tp2": null,
     "tp3": null,
@@ -1068,5 +1069,39 @@
       0.39375
     ],
     "tag": "breakout_short"
+  },
+  {
+    "id": "SIG-0032",
+    "time": "2026-09-19T06:37:07.923877+00:00",
+    "pair": "INJ/USDT",
+    "exchange": "KuCoin",
+    "direction": "LONG",
+    "style": "CONFIRMED_BREAKOUT",
+    "score": 93.5,
+    "adx": 33.5,
+    "rsi": 83.8,
+    "rsi3": NaN,
+    "volume_x": 1.31,
+    "htf_trend": "BULLISH",
+    "entry": 7.265,
+    "sl": 7.1197,
+    "best_price": 7.265,
+    "worst_price": 7.265,
+    "tp1": 7.330384999999999,
+    "tp2": null,
+    "tp3": null,
+    "tp_main": 7.330384999999999,
+    "capital": 1000.0,
+    "status": "OPEN",
+    "exit_price": null,
+    "pnl_usd": null,
+    "result": null,
+    "closed_at": null,
+    "exit_time": null,
+    "grind_count": 0,
+    "grind_entries": [
+      7.265
+    ],
+    "tag": "breakout_long"
   }
 ]
