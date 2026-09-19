@@ -134,5 +134,39 @@
       0.2276
     ],
     "tag": "breakout_short"
+  },
+  {
+    "id": "SIG-0005",
+    "time": "2026-09-19T23:51:57.301090+00:00",
+    "pair": "INJ/USDT",
+    "exchange": "KuCoin",
+    "direction": "SHORT",
+    "style": "CONFIRMED_BREAKOUT",
+    "score": 86.1,
+    "adx": 26.1,
+    "rsi": 36.6,
+    "rsi3": 4.4,
+    "volume_x": 1.22,
+    "htf_trend": "BULLISH",
+    "entry": 7.855,
+    "sl": 8.0121,
+    "best_price": 7.855,
+    "worst_price": 7.855,
+    "tp1": 7.784305000000001,
+    "tp2": null,
+    "tp3": null,
+    "tp_main": 7.784305000000001,
+    "capital": 1000.0,
+    "status": "OPEN",
+    "exit_price": null,
+    "pnl_usd": null,
+    "result": null,
+    "closed_at": null,
+    "exit_time": null,
+    "grind_count": 0,
+    "grind_entries": [
+      7.855
+    ],
+    "tag": "breakout_short"
   }
 ]
