@@ -1281,17 +1281,18 @@
     "tp3": null,
     "tp_main": 56.358169999999994,
     "capital": 1000.0,
-    "status": "OPEN",
-    "exit_price": null,
-    "pnl_usd": null,
-    "result": null,
-    "closed_at": null,
-    "exit_time": null,
+    "status": "CLOSED",
+    "exit_price": 56.96,
+    "pnl_usd": -1.58,
+    "result": "STALE",
+    "closed_at": "2026-09-20T11:31:05.968326+00:00",
+    "exit_time": "2026-09-20T11:31:05.968326+00:00",
     "grind_count": 0,
     "grind_entries": [
       56.87
     ],
-    "tag": "breakout_short"
+    "tag": "breakout_short",
+    "pnl_pct": -0.16
   },
   {
     "id": "SIG-0038",
@@ -1315,17 +1316,18 @@
     "tp3": null,
     "tp_main": 0.0985054,
     "capital": 1000.0,
-    "status": "OPEN",
-    "exit_price": null,
-    "pnl_usd": null,
-    "result": null,
-    "closed_at": null,
-    "exit_time": null,
+    "status": "WIN",
+    "exit_price": 0.0947,
+    "pnl_usd": 47.28,
+    "result": "WIN",
+    "closed_at": "2026-09-20T11:31:05.968326+00:00",
+    "exit_time": "2026-09-20T11:31:05.968326+00:00",
     "grind_count": 0,
     "grind_entries": [
       0.0994
     ],
-    "tag": "breakout_short"
+    "tag": "breakout_short",
+    "pnl_pct": 4.73
   },
   {
     "id": "SIG-0039",
@@ -1412,7 +1414,7 @@
     "entry": 91.095,
     "sl": 89.2731,
     "best_price": 91.262,
-    "worst_price": 90.85,
+    "worst_price": 90.81,
     "tp1": 91.91485499999999,
     "tp2": null,
     "tp3": null,
@@ -1548,7 +1550,7 @@
     "entry": 0.219,
     "sl": 0.22338,
     "best_price": 0.2183,
-    "worst_price": 0.2199,
+    "worst_price": 0.2201,
     "tp1": 0.217029,
     "tp2": null,
     "tp3": null,
@@ -1615,7 +1617,7 @@
     "htf_trend": "BULLISH",
     "entry": 0.0581439,
     "sl": 0.059306778,
-    "best_price": 0.0581439,
+    "best_price": 0.05415,
     "worst_price": 0.0616224,
     "tp1": 0.0576206049,
     "tp2": null,
