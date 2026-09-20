@@ -1598,5 +1598,39 @@
       0.4765
     ],
     "tag": "breakout_short"
+  },
+  {
+    "id": "SIG-0047",
+    "time": "2026-09-20T11:11:30.007153+00:00",
+    "pair": "AKE/USDT",
+    "exchange": "KuCoin",
+    "direction": "SHORT",
+    "style": "CONFIRMED_BREAKOUT",
+    "score": 83.4,
+    "adx": 23.4,
+    "rsi": 31.4,
+    "rsi3": 0.0,
+    "volume_x": 1.01,
+    "htf_trend": "BULLISH",
+    "entry": 0.0581439,
+    "sl": 0.059306778,
+    "best_price": 0.0581439,
+    "worst_price": 0.0581439,
+    "tp1": 0.0576206049,
+    "tp2": null,
+    "tp3": null,
+    "tp_main": 0.0576206049,
+    "capital": 1000.0,
+    "status": "OPEN",
+    "exit_price": null,
+    "pnl_usd": null,
+    "result": null,
+    "closed_at": null,
+    "exit_time": null,
+    "grind_count": 0,
+    "grind_entries": [
+      0.0581439
+    ],
+    "tag": "breakout_short"
   }
 ]
