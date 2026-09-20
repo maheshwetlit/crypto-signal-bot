@@ -2545,5 +2545,39 @@
       0.1955
     ],
     "tag": "breakout_long"
+  },
+  {
+    "id": "SIG-0074",
+    "time": "2026-09-20T18:21:00.268397+00:00",
+    "pair": "ZEC/USDT",
+    "exchange": "KuCoin",
+    "direction": "LONG",
+    "style": "CONFIRMED_BREAKOUT",
+    "score": 88.4,
+    "adx": 28.4,
+    "rsi": 69.7,
+    "rsi3": 93.3,
+    "volume_x": 1.84,
+    "htf_trend": "BULLISH",
+    "entry": 1475.874,
+    "sl": 1446.35652,
+    "best_price": 1475.874,
+    "worst_price": 1475.874,
+    "tp1": 1489.1568659999998,
+    "tp2": null,
+    "tp3": null,
+    "tp_main": 1489.1568659999998,
+    "capital": 1000.0,
+    "status": "OPEN",
+    "exit_price": null,
+    "pnl_usd": null,
+    "result": null,
+    "closed_at": null,
+    "exit_time": null,
+    "grind_count": 0,
+    "grind_entries": [
+      1475.874
+    ],
+    "tag": "breakout_long"
   }
 ]
