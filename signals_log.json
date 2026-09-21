@@ -3495,5 +3495,39 @@
       31.91
     ],
     "tag": "breakout_long"
+  },
+  {
+    "id": "SIG-0101",
+    "time": "2026-09-21T19:32:46.817124+00:00",
+    "pair": "ZAMA/USDT",
+    "exchange": "KuCoin",
+    "direction": "SHORT",
+    "style": "CONFIRMED_BREAKOUT",
+    "score": 85.2,
+    "adx": 25.2,
+    "rsi": 20.4,
+    "rsi3": 0.0,
+    "volume_x": 1.08,
+    "htf_trend": "BULLISH",
+    "entry": 0.09206,
+    "sl": 0.0939012,
+    "best_price": 0.09206,
+    "worst_price": 0.09206,
+    "tp1": 0.09123146,
+    "tp2": null,
+    "tp3": null,
+    "tp_main": 0.09123146,
+    "capital": 1000.0,
+    "status": "OPEN",
+    "exit_price": null,
+    "pnl_usd": null,
+    "result": null,
+    "closed_at": null,
+    "exit_time": null,
+    "grind_count": 0,
+    "grind_entries": [
+      0.09206
+    ],
+    "tag": "breakout_short"
   }
 ]
