@@ -3442,11 +3442,46 @@
     "entry": 0.0882,
     "sl": 0.086436,
     "best_price": 0.0888,
-    "worst_price": 0.0882,
+    "worst_price": 0.0852,
     "tp1": 0.0889938,
     "tp2": null,
     "tp3": null,
     "tp_main": 0.0889938,
+    "capital": 1000.0,
+    "status": "LOSS",
+    "exit_price": 0.086436,
+    "pnl_usd": -20.0,
+    "result": "LOSS",
+    "closed_at": "2026-09-21T18:45:51.632920+00:00",
+    "exit_time": "2026-09-21T18:45:51.632920+00:00",
+    "grind_count": 0,
+    "grind_entries": [
+      0.0882
+    ],
+    "tag": "breakout_long",
+    "pnl_pct": -2.0
+  },
+  {
+    "id": "SIG-0100",
+    "time": "2026-09-21T18:46:41.116035+00:00",
+    "pair": "VVV/USDT",
+    "exchange": "KuCoin",
+    "direction": "LONG",
+    "style": "CONFIRMED_BREAKOUT",
+    "score": 85.7,
+    "adx": 25.7,
+    "rsi": 63.3,
+    "rsi3": 78.2,
+    "volume_x": 1.29,
+    "htf_trend": "BULLISH",
+    "entry": 31.91,
+    "sl": 31.2718,
+    "best_price": 31.91,
+    "worst_price": 31.91,
+    "tp1": 32.19719,
+    "tp2": null,
+    "tp3": null,
+    "tp_main": 32.19719,
     "capital": 1000.0,
     "status": "OPEN",
     "exit_price": null,
@@ -3456,7 +3491,7 @@
     "exit_time": null,
     "grind_count": 0,
     "grind_entries": [
-      0.0882
+      31.91
     ],
     "tag": "breakout_long"
   }
