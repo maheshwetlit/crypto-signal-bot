@@ -4316,24 +4316,25 @@
     "htf_trend": "BULLISH",
     "entry": 0.00447,
     "sl": 0.0043806,
-    "best_price": 0.004485,
+    "best_price": 0.004517,
     "worst_price": 0.004417,
     "tp1": 0.00451023,
     "tp2": null,
     "tp3": null,
     "tp_main": 0.00451023,
     "capital": 1000.0,
-    "status": "OPEN",
-    "exit_price": null,
-    "pnl_usd": null,
-    "result": null,
-    "closed_at": null,
-    "exit_time": null,
+    "status": "WIN",
+    "exit_price": 0.00451023,
+    "pnl_usd": 9.0,
+    "result": "WIN",
+    "closed_at": "2026-09-22T01:35:46.907053+00:00",
+    "exit_time": "2026-09-22T01:35:46.907053+00:00",
     "grind_count": 0,
     "grind_entries": [
       0.00447
     ],
-    "tag": "breakout_long"
+    "tag": "breakout_long",
+    "pnl_pct": 0.9
   },
   {
     "id": "SIG-0125",
@@ -4453,7 +4454,7 @@
     "entry": 0.09192,
     "sl": 0.0937584,
     "best_price": 0.09187,
-    "worst_price": 0.09192,
+    "worst_price": 0.09248,
     "tp1": 0.09109272,
     "tp2": null,
     "tp3": null,
@@ -4502,6 +4503,40 @@
     "grind_count": 0,
     "grind_entries": [
       0.0862
+    ],
+    "tag": "breakout_long"
+  },
+  {
+    "id": "SIG-0130",
+    "time": "2026-09-22T01:37:07.699175+00:00",
+    "pair": "TRX/USDT",
+    "exchange": "KuCoin",
+    "direction": "LONG",
+    "style": "CONFIRMED_BREAKOUT",
+    "score": 100.0,
+    "adx": 50.0,
+    "rsi": 88.5,
+    "rsi3": NaN,
+    "volume_x": 2.77,
+    "htf_trend": "BULLISH",
+    "entry": 0.3476,
+    "sl": 0.340648,
+    "best_price": 0.3476,
+    "worst_price": 0.3476,
+    "tp1": 0.3507284,
+    "tp2": null,
+    "tp3": null,
+    "tp_main": 0.3507284,
+    "capital": 1000.0,
+    "status": "OPEN",
+    "exit_price": null,
+    "pnl_usd": null,
+    "result": null,
+    "closed_at": null,
+    "exit_time": null,
+    "grind_count": 0,
+    "grind_entries": [
+      0.3476
     ],
     "tag": "breakout_long"
   }
