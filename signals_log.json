@@ -643,7 +643,11 @@
     "htf_trend": "BULLISH",
     "entry": 0.0944,
     "sl": 0.092512,
+<<<<<<< Updated upstream
     "best_price": 0.09497,
+=======
+    "best_price": 0.09491,
+>>>>>>> Stashed changes
     "worst_price": 0.09376,
     "tp1": 0.09524959999999999,
     "tp2": null,
@@ -678,7 +682,11 @@
     "entry": 1535.308,
     "sl": 1504.60184,
     "best_price": 1535.335,
+<<<<<<< Updated upstream
     "worst_price": 1529.549,
+=======
+    "worst_price": 1530.866,
+>>>>>>> Stashed changes
     "tp1": 1549.1257719999999,
     "tp2": null,
     "tp3": null,
@@ -756,8 +764,13 @@
     "exit_price": 0.06515113,
     "pnl_usd": 9.0,
     "result": "WIN",
+<<<<<<< Updated upstream
     "closed_at": "2026-09-22T12:45:25.879562+00:00",
     "exit_time": "2026-09-22T12:45:25.879562+00:00",
+=======
+    "closed_at": "2026-09-22T12:45:51.605446+00:00",
+    "exit_time": "2026-09-22T12:45:51.605446+00:00",
+>>>>>>> Stashed changes
     "grind_count": 0,
     "grind_entries": [
       0.06457
@@ -825,8 +838,13 @@
     "exit_price": 0.06515113,
     "pnl_usd": 9.0,
     "result": "WIN",
+<<<<<<< Updated upstream
     "closed_at": "2026-09-22T12:45:25.879562+00:00",
     "exit_time": "2026-09-22T12:45:25.879562+00:00",
+=======
+    "closed_at": "2026-09-22T12:45:51.605446+00:00",
+    "exit_time": "2026-09-22T12:45:51.605446+00:00",
+>>>>>>> Stashed changes
     "grind_count": 0,
     "grind_entries": [
       0.06457
@@ -850,7 +868,11 @@
     "entry": 0.0757,
     "sl": 0.077214,
     "best_price": 0.0757,
+<<<<<<< Updated upstream
     "worst_price": 0.078,
+=======
+    "worst_price": 0.0782,
+>>>>>>> Stashed changes
     "tp1": 0.07501870000000001,
     "tp2": null,
     "tp3": null,
@@ -933,6 +955,40 @@
     "grind_count": 0,
     "grind_entries": [
       3.448e-06
+    ],
+    "tag": "breakout_long"
+  },
+  {
+    "id": "SIG-0028",
+    "time": "2026-09-22T12:46:15.718673+00:00",
+    "pair": "DOGE/USDT",
+    "exchange": "KuCoin",
+    "direction": "LONG",
+    "style": "CONFIRMED_BREAKOUT",
+    "score": 80.1,
+    "adx": 20.1,
+    "rsi": 72.1,
+    "rsi3": NaN,
+    "volume_x": 1.7,
+    "htf_trend": "BULLISH",
+    "entry": 0.09899,
+    "sl": 0.09701019999999999,
+    "best_price": 0.09899,
+    "worst_price": 0.09899,
+    "tp1": 0.09988090999999999,
+    "tp2": null,
+    "tp3": null,
+    "tp_main": 0.09988090999999999,
+    "capital": 1000.0,
+    "status": "OPEN",
+    "exit_price": null,
+    "pnl_usd": null,
+    "result": null,
+    "closed_at": null,
+    "exit_time": null,
+    "grind_count": 0,
+    "grind_entries": [
+      0.09899
     ],
     "tag": "breakout_long"
   }
