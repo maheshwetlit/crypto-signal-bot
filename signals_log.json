@@ -308,5 +308,39 @@
       0.09425
     ],
     "tag": "breakout_long"
+  },
+  {
+    "id": "SIG-0010",
+    "time": "2026-09-22T04:27:20.046081+00:00",
+    "pair": "KAS/USDT",
+    "exchange": "KuCoin",
+    "direction": "SHORT",
+    "style": "CONFIRMED_BREAKOUT",
+    "score": 76.9,
+    "adx": 16.9,
+    "rsi": 62.1,
+    "rsi3": 0.0,
+    "volume_x": 5.0,
+    "htf_trend": "BULLISH",
+    "entry": 0.043,
+    "sl": 0.043859999999999996,
+    "best_price": 0.043,
+    "worst_price": 0.043,
+    "tp1": 0.042613,
+    "tp2": null,
+    "tp3": null,
+    "tp_main": 0.042613,
+    "capital": 1000.0,
+    "status": "OPEN",
+    "exit_price": null,
+    "pnl_usd": null,
+    "result": null,
+    "closed_at": null,
+    "exit_time": null,
+    "grind_count": 0,
+    "grind_entries": [
+      0.043
+    ],
+    "tag": "breakout_short"
   }
 ]
