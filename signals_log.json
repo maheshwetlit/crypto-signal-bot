@@ -1112,5 +1112,39 @@
       791.921
     ],
     "tag": "breakout_long"
+  },
+  {
+    "id": "SIG-0033",
+    "time": "2026-09-23T02:03:02.403695+00:00",
+    "pair": "MHA/USDT",
+    "exchange": "KuCoin",
+    "direction": "LONG",
+    "style": "CONFIRMED_BREAKOUT",
+    "score": 100.0,
+    "adx": 53.4,
+    "rsi": 73.7,
+    "rsi3": 98.7,
+    "volume_x": 1.61,
+    "htf_trend": "BEARISH",
+    "entry": 0.031615,
+    "sl": 0.0309827,
+    "best_price": 0.031615,
+    "worst_price": 0.031615,
+    "tp1": 0.03189953499999999,
+    "tp2": null,
+    "tp3": null,
+    "tp_main": 0.03189953499999999,
+    "capital": 1000.0,
+    "status": "OPEN",
+    "exit_price": null,
+    "pnl_usd": null,
+    "result": null,
+    "closed_at": null,
+    "exit_time": null,
+    "grind_count": 0,
+    "grind_entries": [
+      0.031615
+    ],
+    "tag": "breakout_long"
   }
 ]
