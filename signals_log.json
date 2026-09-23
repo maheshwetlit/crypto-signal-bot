@@ -1982,5 +1982,39 @@
       60.82
     ],
     "tag": "breakout_long"
+  },
+  {
+    "id": "SIG-0058",
+    "time": "2026-09-23T18:03:09.099386+00:00",
+    "pair": "HBAR/USDT",
+    "exchange": "KuCoin",
+    "direction": "SHORT",
+    "style": "CONFIRMED_BREAKOUT",
+    "score": 82.2,
+    "adx": 22.2,
+    "rsi": 50.0,
+    "rsi3": 14.0,
+    "volume_x": 1.87,
+    "htf_trend": "NEUTRAL",
+    "entry": 0.09011,
+    "sl": 0.0919122,
+    "best_price": 0.09011,
+    "worst_price": 0.09011,
+    "tp1": 0.08929901,
+    "tp2": null,
+    "tp3": null,
+    "tp_main": 0.08929901,
+    "capital": 1000.0,
+    "status": "OPEN",
+    "exit_price": null,
+    "pnl_usd": null,
+    "result": null,
+    "closed_at": null,
+    "exit_time": null,
+    "grind_count": 0,
+    "grind_entries": [
+      0.09011
+    ],
+    "tag": "breakout_short"
   }
 ]
