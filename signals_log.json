@@ -2407,7 +2407,11 @@
   },
   {
     "id": "SIG-0070",
+<<<<<<< Updated upstream
     "time": "2026-09-23T19:57:09.936767+00:00",
+=======
+    "time": "2026-09-23T19:59:03.527005+00:00",
+>>>>>>> Stashed changes
     "pair": "GNOT/USDT",
     "exchange": "KuCoin",
     "direction": "LONG",
@@ -2416,7 +2420,11 @@
     "adx": 65.6,
     "rsi": 93.6,
     "rsi3": NaN,
+<<<<<<< Updated upstream
     "volume_x": 0.37,
+=======
+    "volume_x": 0.63,
+>>>>>>> Stashed changes
     "htf_trend": "BULLISH",
     "entry": 0.06896,
     "sl": 0.0675808,
