@@ -66,5 +66,39 @@
       0.1988
     ],
     "tag": "breakout_short"
+  },
+  {
+    "id": "SIG-0003",
+    "time": "2026-09-24T12:33:03.212548+00:00",
+    "pair": "BONK/USDT",
+    "exchange": "KuCoin",
+    "direction": "SHORT",
+    "style": "CONFIRMED_BREAKOUT",
+    "score": 81.9,
+    "adx": 21.9,
+    "rsi": 38.3,
+    "rsi3": 29.1,
+    "volume_x": 1.17,
+    "htf_trend": "NEUTRAL",
+    "entry": 3.506e-06,
+    "sl": 3.57612e-06,
+    "best_price": 3.506e-06,
+    "worst_price": 3.506e-06,
+    "tp1": 3.474446e-06,
+    "tp2": null,
+    "tp3": null,
+    "tp_main": 3.474446e-06,
+    "capital": 1000.0,
+    "status": "OPEN",
+    "exit_price": null,
+    "pnl_usd": null,
+    "result": null,
+    "closed_at": null,
+    "exit_time": null,
+    "grind_count": 0,
+    "grind_entries": [
+      3.506e-06
+    ],
+    "tag": "breakout_short"
   }
 ]
