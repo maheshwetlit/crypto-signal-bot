@@ -1180,5 +1180,39 @@
       0.009796
     ],
     "tag": "breakout_short"
+  },
+  {
+    "id": "SIG-0035",
+    "time": "2026-09-24T15:57:39.907565+00:00",
+    "pair": "BCH/USDT",
+    "exchange": "KuCoin",
+    "direction": "SHORT",
+    "style": "CONFIRMED_BREAKOUT",
+    "score": 81.2,
+    "adx": 21.2,
+    "rsi": 57.8,
+    "rsi3": 0.0,
+    "volume_x": 1.62,
+    "htf_trend": "BULLISH",
+    "entry": 337.25,
+    "sl": 343.995,
+    "best_price": 337.25,
+    "worst_price": 337.25,
+    "tp1": 334.21475,
+    "tp2": null,
+    "tp3": null,
+    "tp_main": 334.21475,
+    "capital": 1000.0,
+    "status": "OPEN",
+    "exit_price": null,
+    "pnl_usd": null,
+    "result": null,
+    "closed_at": null,
+    "exit_time": null,
+    "grind_count": 0,
+    "grind_entries": [
+      337.25
+    ],
+    "tag": "breakout_short"
   }
 ]
