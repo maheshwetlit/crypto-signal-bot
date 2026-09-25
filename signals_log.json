@@ -713,5 +713,39 @@
       0.2274
     ],
     "tag": "breakout_long"
+  },
+  {
+    "id": "SIG-0022",
+    "time": "2026-09-25T04:27:13.394999+00:00",
+    "pair": "INJ/USDT",
+    "exchange": "KuCoin",
+    "direction": "LONG",
+    "style": "CONFIRMED_BREAKOUT",
+    "score": 83.4,
+    "adx": 23.4,
+    "rsi": 67.7,
+    "rsi3": NaN,
+    "volume_x": 0.94,
+    "htf_trend": "BULLISH",
+    "entry": 8.012,
+    "sl": 7.8517600000000005,
+    "best_price": 8.012,
+    "worst_price": 8.012,
+    "tp1": 8.084108,
+    "tp2": null,
+    "tp3": null,
+    "tp_main": 8.084108,
+    "capital": 1000.0,
+    "status": "OPEN",
+    "exit_price": null,
+    "pnl_usd": null,
+    "result": null,
+    "closed_at": null,
+    "exit_time": null,
+    "grind_count": 0,
+    "grind_entries": [
+      8.012
+    ],
+    "tag": "breakout_long"
   }
 ]
