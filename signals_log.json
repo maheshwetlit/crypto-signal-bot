@@ -1043,5 +1043,39 @@
       0.003905
     ],
     "tag": "breakout_long"
+  },
+  {
+    "id": "SIG-0031",
+    "time": "2026-09-25T07:56:55.696702+00:00",
+    "pair": "FET/USDT",
+    "exchange": "KuCoin",
+    "direction": "LONG",
+    "style": "CONFIRMED_BREAKOUT",
+    "score": 77.4,
+    "adx": 17.4,
+    "rsi": 71.3,
+    "rsi3": NaN,
+    "volume_x": 1.7,
+    "htf_trend": "BULLISH",
+    "entry": 0.2339,
+    "sl": 0.22922199999999998,
+    "best_price": 0.2339,
+    "worst_price": 0.2339,
+    "tp1": 0.23600509999999997,
+    "tp2": null,
+    "tp3": null,
+    "tp_main": 0.23600509999999997,
+    "capital": 1000.0,
+    "status": "OPEN",
+    "exit_price": null,
+    "pnl_usd": null,
+    "result": null,
+    "closed_at": null,
+    "exit_time": null,
+    "grind_count": 0,
+    "grind_entries": [
+      0.2339
+    ],
+    "tag": "breakout_long"
   }
 ]
