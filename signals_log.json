@@ -168,5 +168,39 @@
       0.91498
     ],
     "tag": "breakout_short"
+  },
+  {
+    "id": "SIG-0006",
+    "time": "2026-09-25T14:17:07.694799+00:00",
+    "pair": "XPL/USDT",
+    "exchange": "KuCoin",
+    "direction": "SHORT",
+    "style": "CONFIRMED_BREAKOUT",
+    "score": 86.5,
+    "adx": 26.5,
+    "rsi": 22.5,
+    "rsi3": 39.0,
+    "volume_x": 1.18,
+    "htf_trend": "BULLISH",
+    "entry": 0.1066,
+    "sl": 0.108732,
+    "best_price": 0.1066,
+    "worst_price": 0.1066,
+    "tp1": 0.1056406,
+    "tp2": null,
+    "tp3": null,
+    "tp_main": 0.1056406,
+    "capital": 1000.0,
+    "status": "OPEN",
+    "exit_price": null,
+    "pnl_usd": null,
+    "result": null,
+    "closed_at": null,
+    "exit_time": null,
+    "grind_count": 0,
+    "grind_entries": [
+      0.1066
+    ],
+    "tag": "breakout_short"
   }
 ]
