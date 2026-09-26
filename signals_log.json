@@ -202,5 +202,39 @@
       3.203
     ],
     "tag": "breakout_short"
+  },
+  {
+    "id": "SIG-0007",
+    "time": "2026-09-26T20:12:17.110085+00:00",
+    "pair": "AERO/USDT",
+    "exchange": "KuCoin",
+    "direction": "SHORT",
+    "style": "CONFIRMED_BREAKOUT",
+    "score": 83.3,
+    "adx": 23.3,
+    "rsi": 50.0,
+    "rsi3": 0.0,
+    "volume_x": 2.06,
+    "htf_trend": "BULLISH",
+    "entry": 0.8752,
+    "sl": 0.8927039999999999,
+    "best_price": 0.8752,
+    "worst_price": 0.8752,
+    "tp1": 0.8673232,
+    "tp2": null,
+    "tp3": null,
+    "tp_main": 0.8673232,
+    "capital": 1000.0,
+    "status": "OPEN",
+    "exit_price": null,
+    "pnl_usd": null,
+    "result": null,
+    "closed_at": null,
+    "exit_time": null,
+    "grind_count": 0,
+    "grind_entries": [
+      0.8752
+    ],
+    "tag": "breakout_short"
   }
 ]
