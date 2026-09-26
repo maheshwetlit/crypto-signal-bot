@@ -967,17 +967,29 @@
     "tp_main": 0.47815749999999996,
     "capital": 1000.0,
     "status": "WIN",
+<<<<<<< Updated upstream
     "exit_price": 0.4825,
     "pnl_usd": 0.0,
     "result": "WIN",
     "closed_at": "2026-09-26T06:40:53.921502+00:00",
     "exit_time": "2026-09-26T06:40:53.921502+00:00",
+=======
+    "exit_price": 0.4803,
+    "pnl_usd": 4.56,
+    "result": "WIN",
+    "closed_at": "2026-09-26T06:42:09.222676+00:00",
+    "exit_time": "2026-09-26T06:42:09.222676+00:00",
+>>>>>>> Stashed changes
     "grind_count": 0,
     "grind_entries": [
       0.4825
     ],
     "tag": "breakout_short",
+<<<<<<< Updated upstream
     "pnl_pct": 0.0
+=======
+    "pnl_pct": 0.46
+>>>>>>> Stashed changes
   },
   {
     "id": "SIG-0029",
@@ -1098,7 +1110,11 @@
     "entry": 0.04347,
     "sl": 0.0426006,
     "best_price": 0.04381,
+<<<<<<< Updated upstream
     "worst_price": 0.04324,
+=======
+    "worst_price": 0.04328,
+>>>>>>> Stashed changes
     "tp1": 0.043861229999999994,
     "tp2": null,
     "tp3": null,
@@ -1132,7 +1148,11 @@
     "entry": 0.11,
     "sl": 0.11220000000000001,
     "best_price": 0.11,
+<<<<<<< Updated upstream
     "worst_price": 0.1124,
+=======
+    "worst_price": 0.1123,
+>>>>>>> Stashed changes
     "tp1": 0.10901,
     "tp2": null,
     "tp3": null,
@@ -1166,7 +1186,11 @@
     "entry": 0.04361,
     "sl": 0.0427378,
     "best_price": 0.04381,
+<<<<<<< Updated upstream
     "worst_price": 0.04324,
+=======
+    "worst_price": 0.04328,
+>>>>>>> Stashed changes
     "tp1": 0.04400249,
     "tp2": null,
     "tp3": null,
@@ -1337,7 +1361,11 @@
     "entry": 0.84352,
     "sl": 0.8603904000000001,
     "best_price": 0.82769,
+<<<<<<< Updated upstream
     "worst_price": 0.85168,
+=======
+    "worst_price": 0.85085,
+>>>>>>> Stashed changes
     "tp1": 0.8359283200000001,
     "tp2": null,
     "tp3": null,
@@ -1371,7 +1399,11 @@
     "entry": 335.93,
     "sl": 342.6486,
     "best_price": 335.93,
+<<<<<<< Updated upstream
     "worst_price": 339.52,
+=======
+    "worst_price": 338.39,
+>>>>>>> Stashed changes
     "tp1": 332.90663,
     "tp2": null,
     "tp3": null,
@@ -1405,7 +1437,11 @@
     "entry": 336.21,
     "sl": 342.9342,
     "best_price": 336.21,
+<<<<<<< Updated upstream
     "worst_price": 339.52,
+=======
+    "worst_price": 338.39,
+>>>>>>> Stashed changes
     "tp1": 333.18411,
     "tp2": null,
     "tp3": null,
