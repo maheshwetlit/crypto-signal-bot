@@ -4464,5 +4464,39 @@
       0.053295
     ],
     "tag": "breakout_long"
+  },
+  {
+    "id": "SIG-0129",
+    "time": "2026-09-27T14:17:36.330863+00:00",
+    "pair": "PUMP/USDT",
+    "exchange": "KuCoin",
+    "direction": "LONG",
+    "style": "CONFIRMED_BREAKOUT",
+    "score": 94.2,
+    "adx": 34.2,
+    "rsi": 80.8,
+    "rsi3": 89.2,
+    "volume_x": 1.83,
+    "htf_trend": "BULLISH",
+    "entry": 0.004764,
+    "sl": 0.00466872,
+    "best_price": 0.004764,
+    "worst_price": 0.004764,
+    "tp1": 0.004806876,
+    "tp2": null,
+    "tp3": null,
+    "tp_main": 0.004806876,
+    "capital": 1000.0,
+    "status": "OPEN",
+    "exit_price": null,
+    "pnl_usd": null,
+    "result": null,
+    "closed_at": null,
+    "exit_time": null,
+    "grind_count": 0,
+    "grind_entries": [
+      0.004764
+    ],
+    "tag": "breakout_long"
   }
 ]
