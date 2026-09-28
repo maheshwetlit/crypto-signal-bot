@@ -613,5 +613,39 @@
       0.005155
     ],
     "tag": "breakout_short"
+  },
+  {
+    "id": "SIG-0019",
+    "time": "2026-09-28T03:22:37.020522+00:00",
+    "pair": "JASMY/USDT",
+    "exchange": "KuCoin",
+    "direction": "SHORT",
+    "style": "CONFIRMED_BREAKOUT",
+    "score": 83.8,
+    "adx": 23.8,
+    "rsi": 19.1,
+    "rsi3": 22.5,
+    "volume_x": 1.28,
+    "htf_trend": "BULLISH",
+    "entry": 0.005121,
+    "sl": 0.0052234199999999995,
+    "best_price": 0.005121,
+    "worst_price": 0.005121,
+    "tp1": 0.005074911,
+    "tp2": null,
+    "tp3": null,
+    "tp_main": 0.005074911,
+    "capital": 1000.0,
+    "status": "OPEN",
+    "exit_price": null,
+    "pnl_usd": null,
+    "result": null,
+    "closed_at": null,
+    "exit_time": null,
+    "grind_count": 0,
+    "grind_entries": [
+      0.005121
+    ],
+    "tag": "breakout_short"
   }
 ]
