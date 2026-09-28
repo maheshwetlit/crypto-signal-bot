@@ -902,5 +902,39 @@
       89.852
     ],
     "tag": "breakout_long"
+  },
+  {
+    "id": "SIG-0027",
+    "time": "2026-09-28T11:27:52.051376+00:00",
+    "pair": "ZRO/USDT",
+    "exchange": "KuCoin",
+    "direction": "LONG",
+    "style": "CONFIRMED_BREAKOUT",
+    "score": 76.1,
+    "adx": 16.1,
+    "rsi": 60.9,
+    "rsi3": 77.5,
+    "volume_x": 1.12,
+    "htf_trend": "NEUTRAL",
+    "entry": 1.575,
+    "sl": 1.5434999999999999,
+    "best_price": 1.575,
+    "worst_price": 1.575,
+    "tp1": 1.5891749999999998,
+    "tp2": null,
+    "tp3": null,
+    "tp_main": 1.5891749999999998,
+    "capital": 1000.0,
+    "status": "OPEN",
+    "exit_price": null,
+    "pnl_usd": null,
+    "result": null,
+    "closed_at": null,
+    "exit_time": null,
+    "grind_count": 0,
+    "grind_entries": [
+      1.575
+    ],
+    "tag": "breakout_long"
   }
 ]
