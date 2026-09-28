@@ -475,5 +475,39 @@
       0.5572
     ],
     "tag": "breakout_short"
+  },
+  {
+    "id": "SIG-0015",
+    "time": "2026-09-28T02:42:30.916849+00:00",
+    "pair": "Q/USDT",
+    "exchange": "KuCoin",
+    "direction": "LONG",
+    "style": "CONFIRMED_BREAKOUT",
+    "score": 95.2,
+    "adx": 35.2,
+    "rsi": 51.2,
+    "rsi3": 90.6,
+    "volume_x": 0.88,
+    "htf_trend": "NEUTRAL",
+    "entry": 0.031586,
+    "sl": 0.03095428,
+    "best_price": 0.031586,
+    "worst_price": 0.031586,
+    "tp1": 0.031870274,
+    "tp2": null,
+    "tp3": null,
+    "tp_main": 0.031870274,
+    "capital": 1000.0,
+    "status": "OPEN",
+    "exit_price": null,
+    "pnl_usd": null,
+    "result": null,
+    "closed_at": null,
+    "exit_time": null,
+    "grind_count": 0,
+    "grind_entries": [
+      0.031586
+    ],
+    "tag": "breakout_long"
   }
 ]
