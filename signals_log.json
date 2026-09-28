@@ -305,5 +305,39 @@
       90.375
     ],
     "tag": "breakout_short"
+  },
+  {
+    "id": "SIG-0010",
+    "time": "2026-09-28T01:57:05.602282+00:00",
+    "pair": "GNOT/USDT",
+    "exchange": "KuCoin",
+    "direction": "SHORT",
+    "style": "CONFIRMED_BREAKOUT",
+    "score": 97.1,
+    "adx": 37.1,
+    "rsi": 27.5,
+    "rsi3": 0.0,
+    "volume_x": 2.94,
+    "htf_trend": "NEUTRAL",
+    "entry": 0.075,
+    "sl": 0.0765,
+    "best_price": 0.075,
+    "worst_price": 0.075,
+    "tp1": 0.074325,
+    "tp2": null,
+    "tp3": null,
+    "tp_main": 0.074325,
+    "capital": 1000.0,
+    "status": "OPEN",
+    "exit_price": null,
+    "pnl_usd": null,
+    "result": null,
+    "closed_at": null,
+    "exit_time": null,
+    "grind_count": 0,
+    "grind_entries": [
+      0.075
+    ],
+    "tag": "breakout_short"
   }
 ]
