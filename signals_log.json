@@ -4189,5 +4189,39 @@
       0.07018
     ],
     "tag": "breakout_short"
+  },
+  {
+    "id": "SIG-0121",
+    "time": "2026-09-29T05:57:30.509473+00:00",
+    "pair": "TINA/USDT",
+    "exchange": "KuCoin",
+    "direction": "LONG",
+    "style": "CONFIRMED_BREAKOUT",
+    "score": 100.0,
+    "adx": 52.8,
+    "rsi": 41.7,
+    "rsi3": NaN,
+    "volume_x": 1.86,
+    "htf_trend": "BEARISH",
+    "entry": 0.002137,
+    "sl": 0.00209426,
+    "best_price": 0.002137,
+    "worst_price": 0.002137,
+    "tp1": 0.0021562329999999996,
+    "tp2": null,
+    "tp3": null,
+    "tp_main": 0.0021562329999999996,
+    "capital": 1000.0,
+    "status": "OPEN",
+    "exit_price": null,
+    "pnl_usd": null,
+    "result": null,
+    "closed_at": null,
+    "exit_time": null,
+    "grind_count": 0,
+    "grind_entries": [
+      0.002137
+    ],
+    "tag": "breakout_long"
   }
 ]
