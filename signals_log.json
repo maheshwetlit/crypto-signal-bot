@@ -91,17 +91,18 @@
     "tp3": null,
     "tp_main": 0.03353544,
     "capital": 1000.0,
-    "status": "OPEN",
-    "exit_price": null,
-    "pnl_usd": null,
-    "result": null,
-    "closed_at": null,
-    "exit_time": null,
+    "status": "WIN",
+    "exit_price": 0.03383,
+    "pnl_usd": 0.3,
+    "result": "WIN",
+    "closed_at": "2026-09-29T19:40:51.259298+00:00",
+    "exit_time": "2026-09-29T19:40:51.259298+00:00",
     "grind_count": 0,
     "grind_entries": [
       0.03384
     ],
-    "tag": "breakout_short"
+    "tag": "breakout_short",
+    "pnl_pct": 0.03
   },
   {
     "id": "SIG-0004",
@@ -153,7 +154,7 @@
     "entry": 1.5,
     "sl": 1.53,
     "best_price": 1.5,
-    "worst_price": 1.527,
+    "worst_price": 1.536,
     "tp1": 1.4865,
     "tp2": null,
     "tp3": null,
@@ -257,7 +258,7 @@
     "entry": 86.577,
     "sl": 84.84546,
     "best_price": 86.577,
-    "worst_price": 86.361,
+    "worst_price": 85.993,
     "tp1": 87.35619299999999,
     "tp2": null,
     "tp3": null,
@@ -290,7 +291,7 @@
     "htf_trend": "BULLISH",
     "entry": 3.408,
     "sl": 3.3398399999999997,
-    "best_price": 3.408,
+    "best_price": 3.417,
     "worst_price": 3.402,
     "tp1": 3.4386719999999995,
     "tp2": null,
@@ -308,5 +309,39 @@
       3.408
     ],
     "tag": "breakout_long"
+  },
+  {
+    "id": "SIG-0010",
+    "time": "2026-09-29T19:42:14.486700+00:00",
+    "pair": "HYPE/USDT",
+    "exchange": "KuCoin",
+    "direction": "SHORT",
+    "style": "CONFIRMED_BREAKOUT",
+    "score": 76.4,
+    "adx": 16.4,
+    "rsi": 42.8,
+    "rsi3": 10.2,
+    "volume_x": 1.12,
+    "htf_trend": "BEARISH",
+    "entry": 85.916,
+    "sl": 87.63432,
+    "best_price": 85.916,
+    "worst_price": 85.916,
+    "tp1": 85.14275599999999,
+    "tp2": null,
+    "tp3": null,
+    "tp_main": 85.14275599999999,
+    "capital": 1000.0,
+    "status": "OPEN",
+    "exit_price": null,
+    "pnl_usd": null,
+    "result": null,
+    "closed_at": null,
+    "exit_time": null,
+    "grind_count": 0,
+    "grind_entries": [
+      85.916
+    ],
+    "tag": "breakout_short"
   }
 ]
