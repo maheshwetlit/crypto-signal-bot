@@ -169,5 +169,39 @@
       1.5
     ],
     "tag": "breakout_short"
+  },
+  {
+    "id": "SIG-0006",
+    "time": "2026-09-29T18:03:04.419368+00:00",
+    "pair": "USELESS/USDT",
+    "exchange": "KuCoin",
+    "direction": "LONG",
+    "style": "CONFIRMED_BREAKOUT",
+    "score": 81.9,
+    "adx": 21.9,
+    "rsi": 68.6,
+    "rsi3": NaN,
+    "volume_x": 2.21,
+    "htf_trend": "BEARISH",
+    "entry": 0.2377,
+    "sl": 0.232946,
+    "best_price": 0.2377,
+    "worst_price": 0.2377,
+    "tp1": 0.23983929999999998,
+    "tp2": null,
+    "tp3": null,
+    "tp_main": 0.23983929999999998,
+    "capital": 1000.0,
+    "status": "OPEN",
+    "exit_price": null,
+    "pnl_usd": null,
+    "result": null,
+    "closed_at": null,
+    "exit_time": null,
+    "grind_count": 0,
+    "grind_entries": [
+      0.2377
+    ],
+    "tag": "breakout_long"
   }
 ]
