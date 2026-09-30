@@ -407,5 +407,39 @@
     ],
     "tag": "breakout_long",
     "pnl_pct": 0.9
+  },
+  {
+    "id": "SIG-0013",
+    "time": "2026-09-30T05:12:15.107112+00:00",
+    "pair": "ICP/USDT",
+    "exchange": "KuCoin",
+    "direction": "LONG",
+    "style": "CONFIRMED_BREAKOUT",
+    "score": 88.4,
+    "adx": 28.4,
+    "rsi": 76.9,
+    "rsi3": 83.7,
+    "volume_x": 1.94,
+    "htf_trend": "BULLISH",
+    "entry": 3.449,
+    "sl": 3.3800199999999996,
+    "best_price": 3.449,
+    "worst_price": 3.449,
+    "tp1": 3.4800409999999995,
+    "tp2": null,
+    "tp3": null,
+    "tp_main": 3.4800409999999995,
+    "capital": 1000.0,
+    "status": "OPEN",
+    "exit_price": null,
+    "pnl_usd": null,
+    "result": null,
+    "closed_at": null,
+    "exit_time": null,
+    "grind_count": 0,
+    "grind_entries": [
+      3.449
+    ],
+    "tag": "breakout_long"
   }
 ]
