@@ -2296,17 +2296,18 @@
     "tp3": null,
     "tp_main": 2740.9585899999997,
     "capital": 1000.0,
-    "status": "OPEN",
-    "exit_price": null,
-    "pnl_usd": null,
-    "result": null,
-    "closed_at": null,
-    "exit_time": null,
+    "status": "CLOSED",
+    "exit_price": 2683.53,
+    "pnl_usd": -12.14,
+    "result": "STALE",
+    "closed_at": "2026-09-30T15:35:51.664282+00:00",
+    "exit_time": "2026-09-30T15:35:51.664282+00:00",
     "grind_count": 0,
     "grind_entries": [
       2716.51
     ],
-    "tag": "breakout_long"
+    "tag": "breakout_long",
+    "pnl_pct": -1.21
   },
   {
     "id": "SIG-0067",
@@ -2435,17 +2436,18 @@
     "tp3": null,
     "tp_main": 779.5897239999999,
     "capital": 1000.0,
-    "status": "OPEN",
-    "exit_price": null,
-    "pnl_usd": null,
-    "result": null,
-    "closed_at": null,
-    "exit_time": null,
+    "status": "CLOSED",
+    "exit_price": 768.741,
+    "pnl_usd": -5.04,
+    "result": "STALE",
+    "closed_at": "2026-09-30T15:35:51.664282+00:00",
+    "exit_time": "2026-09-30T15:35:51.664282+00:00",
     "grind_count": 0,
     "grind_entries": [
       772.636
     ],
-    "tag": "breakout_long"
+    "tag": "breakout_long",
+    "pnl_pct": -0.5
   },
   {
     "id": "SIG-0071",
@@ -2469,17 +2471,18 @@
     "tp3": null,
     "tp_main": 68.25885,
     "capital": 1000.0,
-    "status": "OPEN",
-    "exit_price": null,
-    "pnl_usd": null,
-    "result": null,
-    "closed_at": null,
-    "exit_time": null,
+    "status": "CLOSED",
+    "exit_price": 67.0,
+    "pnl_usd": -9.61,
+    "result": "STALE",
+    "closed_at": "2026-09-30T15:35:51.664282+00:00",
+    "exit_time": "2026-09-30T15:35:51.664282+00:00",
     "grind_count": 0,
     "grind_entries": [
       67.65
     ],
-    "tag": "breakout_long"
+    "tag": "breakout_long",
+    "pnl_pct": -0.96
   },
   {
     "id": "SIG-0072",
