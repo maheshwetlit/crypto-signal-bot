@@ -2297,17 +2297,29 @@
     "tp_main": 2740.9585899999997,
     "capital": 1000.0,
     "status": "CLOSED",
+<<<<<<< Updated upstream
     "exit_price": 2683.53,
     "pnl_usd": -12.14,
     "result": "STALE",
     "closed_at": "2026-09-30T15:35:51.664282+00:00",
     "exit_time": "2026-09-30T15:35:51.664282+00:00",
+=======
+    "exit_price": 2687.26,
+    "pnl_usd": -10.77,
+    "result": "STALE",
+    "closed_at": "2026-09-30T15:38:23.818636+00:00",
+    "exit_time": "2026-09-30T15:38:23.818636+00:00",
+>>>>>>> Stashed changes
     "grind_count": 0,
     "grind_entries": [
       2716.51
     ],
     "tag": "breakout_long",
+<<<<<<< Updated upstream
     "pnl_pct": -1.21
+=======
+    "pnl_pct": -1.08
+>>>>>>> Stashed changes
   },
   {
     "id": "SIG-0067",
@@ -2437,17 +2449,29 @@
     "tp_main": 779.5897239999999,
     "capital": 1000.0,
     "status": "CLOSED",
+<<<<<<< Updated upstream
     "exit_price": 768.741,
     "pnl_usd": -5.04,
     "result": "STALE",
     "closed_at": "2026-09-30T15:35:51.664282+00:00",
     "exit_time": "2026-09-30T15:35:51.664282+00:00",
+=======
+    "exit_price": 769.461,
+    "pnl_usd": -4.11,
+    "result": "STALE",
+    "closed_at": "2026-09-30T15:38:23.818636+00:00",
+    "exit_time": "2026-09-30T15:38:23.818636+00:00",
+>>>>>>> Stashed changes
     "grind_count": 0,
     "grind_entries": [
       772.636
     ],
     "tag": "breakout_long",
+<<<<<<< Updated upstream
     "pnl_pct": -0.5
+=======
+    "pnl_pct": -0.41
+>>>>>>> Stashed changes
   },
   {
     "id": "SIG-0071",
@@ -2472,17 +2496,29 @@
     "tp_main": 68.25885,
     "capital": 1000.0,
     "status": "CLOSED",
+<<<<<<< Updated upstream
     "exit_price": 67.0,
     "pnl_usd": -9.61,
     "result": "STALE",
     "closed_at": "2026-09-30T15:35:51.664282+00:00",
     "exit_time": "2026-09-30T15:35:51.664282+00:00",
+=======
+    "exit_price": 67.06,
+    "pnl_usd": -8.72,
+    "result": "STALE",
+    "closed_at": "2026-09-30T15:38:23.818636+00:00",
+    "exit_time": "2026-09-30T15:38:23.818636+00:00",
+>>>>>>> Stashed changes
     "grind_count": 0,
     "grind_entries": [
       67.65
     ],
     "tag": "breakout_long",
+<<<<<<< Updated upstream
     "pnl_pct": -0.96
+=======
+    "pnl_pct": -0.87
+>>>>>>> Stashed changes
   },
   {
     "id": "SIG-0072",
@@ -3407,7 +3443,7 @@
     "entry": 0.2198,
     "sl": 0.224196,
     "best_price": 0.2198,
-    "worst_price": 0.2223,
+    "worst_price": 0.2225,
     "tp1": 0.21782179999999998,
     "tp2": null,
     "tp3": null,
