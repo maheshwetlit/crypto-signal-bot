@@ -440,5 +440,39 @@
       0.2461
     ],
     "tag": "breakout_short"
+  },
+  {
+    "id": "SIG-0014",
+    "time": "2026-10-01T10:02:27.596272+00:00",
+    "pair": "GALA/USDT",
+    "exchange": "KuCoin",
+    "direction": "SHORT",
+    "style": "CONFIRMED_BREAKOUT",
+    "score": 77.8,
+    "adx": 17.8,
+    "rsi": 29.4,
+    "rsi3": 0.0,
+    "volume_x": 1.95,
+    "htf_trend": "NEUTRAL",
+    "entry": 0.00225,
+    "sl": 0.0022949999999999997,
+    "best_price": 0.00225,
+    "worst_price": 0.00225,
+    "tp1": 0.00222975,
+    "tp2": null,
+    "tp3": null,
+    "tp_main": 0.00222975,
+    "capital": 1000.0,
+    "status": "OPEN",
+    "exit_price": null,
+    "pnl_usd": null,
+    "result": null,
+    "closed_at": null,
+    "exit_time": null,
+    "grind_count": 0,
+    "grind_entries": [
+      0.00225
+    ],
+    "tag": "breakout_short"
   }
 ]
