@@ -169,5 +169,39 @@
       4187.52
     ],
     "tag": "breakout_long"
+  },
+  {
+    "id": "SIG-0006",
+    "time": "2026-10-01T19:02:26.959895+00:00",
+    "pair": "PAXG/USDT",
+    "exchange": "KuCoin",
+    "direction": "LONG",
+    "style": "CONFIRMED_BREAKOUT",
+    "score": 81.0,
+    "adx": 21.0,
+    "rsi": 59.6,
+    "rsi3": 22.3,
+    "volume_x": 0.97,
+    "htf_trend": "NEUTRAL",
+    "entry": 4185.51,
+    "sl": 4101.7998,
+    "best_price": 4185.51,
+    "worst_price": 4185.51,
+    "tp1": 4223.17959,
+    "tp2": null,
+    "tp3": null,
+    "tp_main": 4223.17959,
+    "capital": 1000.0,
+    "status": "OPEN",
+    "exit_price": null,
+    "pnl_usd": null,
+    "result": null,
+    "closed_at": null,
+    "exit_time": null,
+    "grind_count": 0,
+    "grind_entries": [
+      4185.51
+    ],
+    "tag": "breakout_long"
   }
 ]
