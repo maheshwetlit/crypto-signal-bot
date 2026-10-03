@@ -2611,17 +2611,18 @@
     "tp3": null,
     "tp_main": 0.24902119999999997,
     "capital": 1000.0,
-    "status": "OPEN",
-    "exit_price": null,
-    "pnl_usd": null,
-    "result": null,
-    "closed_at": null,
-    "exit_time": null,
+    "status": "CLOSED",
+    "exit_price": 0.2456,
+    "pnl_usd": -4.86,
+    "result": "STALE",
+    "closed_at": "2026-10-03T20:25:41.037215+00:00",
+    "exit_time": "2026-10-03T20:25:41.037215+00:00",
     "grind_count": 0,
     "grind_entries": [
       0.2468
     ],
-    "tag": "breakout_long"
+    "tag": "breakout_long",
+    "pnl_pct": -0.49
   },
   {
     "id": "SIG-0076",
@@ -2706,7 +2707,7 @@
     "htf_trend": "BEARISH",
     "entry": 4.309e-06,
     "sl": 4.222819999999999e-06,
-    "best_price": 4.321e-06,
+    "best_price": 4.323e-06,
     "worst_price": 4.305e-06,
     "tp1": 4.347780999999999e-06,
     "tp2": null,
@@ -3030,5 +3031,39 @@
       0.019497
     ],
     "tag": "breakout_short"
+  },
+  {
+    "id": "SIG-0088",
+    "time": "2026-10-03T20:26:55.277280+00:00",
+    "pair": "PEPE/USDT",
+    "exchange": "KuCoin",
+    "direction": "LONG",
+    "style": "CONFIRMED_BREAKOUT",
+    "score": 82.0,
+    "adx": 22.0,
+    "rsi": 64.2,
+    "rsi3": NaN,
+    "volume_x": 1.85,
+    "htf_trend": "NEUTRAL",
+    "entry": 4.324e-06,
+    "sl": 4.237519999999999e-06,
+    "best_price": 4.324e-06,
+    "worst_price": 4.324e-06,
+    "tp1": 4.362915999999999e-06,
+    "tp2": null,
+    "tp3": null,
+    "tp_main": 4.362915999999999e-06,
+    "capital": 1000.0,
+    "status": "OPEN",
+    "exit_price": null,
+    "pnl_usd": null,
+    "result": null,
+    "closed_at": null,
+    "exit_time": null,
+    "grind_count": 0,
+    "grind_entries": [
+      4.324e-06
+    ],
+    "tag": "breakout_long"
   }
 ]
