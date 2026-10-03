@@ -2988,7 +2988,7 @@
     "entry": 0.4031,
     "sl": 0.411162,
     "best_price": 0.4019,
-    "worst_price": 0.4139,
+    "worst_price": 0.4159,
     "tp1": 0.3994721,
     "tp2": null,
     "tp3": null,
@@ -3089,24 +3089,25 @@
     "htf_trend": "BULLISH",
     "entry": 0.5937,
     "sl": 0.581826,
-    "best_price": 0.5974,
+    "best_price": 0.5991,
     "worst_price": 0.5931,
     "tp1": 0.5990433,
     "tp2": null,
     "tp3": null,
     "tp_main": 0.5990433,
     "capital": 1000.0,
-    "status": "OPEN",
-    "exit_price": null,
-    "pnl_usd": null,
-    "result": null,
-    "closed_at": null,
-    "exit_time": null,
+    "status": "WIN",
+    "exit_price": 0.5990433,
+    "pnl_usd": 9.0,
+    "result": "WIN",
+    "closed_at": "2026-10-03T21:58:00.399599+00:00",
+    "exit_time": "2026-10-03T21:58:00.399599+00:00",
     "grind_count": 0,
     "grind_entries": [
       0.5937
     ],
-    "tag": "breakout_long"
+    "tag": "breakout_long",
+    "pnl_pct": 0.9
   },
   {
     "id": "SIG-0090",
@@ -3159,7 +3160,7 @@
     "entry": 0.49512,
     "sl": 0.48521759999999997,
     "best_price": 0.49512,
-    "worst_price": 0.49272,
+    "worst_price": 0.49246,
     "tp1": 0.49957608,
     "tp2": null,
     "tp3": null,
@@ -3260,7 +3261,7 @@
     "htf_trend": "BEARISH",
     "entry": 1.48729,
     "sl": 1.5170358,
-    "best_price": 1.48703,
+    "best_price": 1.48698,
     "worst_price": 1.48946,
     "tp1": 1.47390439,
     "tp2": null,
@@ -3328,7 +3329,7 @@
     "htf_trend": "BEARISH",
     "entry": 1.48711,
     "sl": 1.5168522,
-    "best_price": 1.48703,
+    "best_price": 1.48698,
     "worst_price": 1.48946,
     "tp1": 1.47372601,
     "tp2": null,
@@ -3396,7 +3397,7 @@
     "htf_trend": "BULLISH",
     "entry": 0.5977,
     "sl": 0.585746,
-    "best_price": 0.5977,
+    "best_price": 0.5991,
     "worst_price": 0.5974,
     "tp1": 0.6030793,
     "tp2": null,
@@ -3431,7 +3432,7 @@
     "entry": 0.2524,
     "sl": 0.257448,
     "best_price": 0.2521,
-    "worst_price": 0.2524,
+    "worst_price": 0.2525,
     "tp1": 0.25012840000000003,
     "tp2": null,
     "tp3": null,
@@ -3519,13 +3520,18 @@
   },
   {
     "id": "SIG-0102",
+<<<<<<< Updated upstream
     "time": "2026-10-03T21:57:58.702061+00:00",
+=======
+    "time": "2026-10-03T21:58:24.860205+00:00",
+>>>>>>> Stashed changes
     "pair": "LINK/USDT",
     "exchange": "KuCoin",
     "direction": "LONG",
     "style": "CONFIRMED_BREAKOUT",
     "score": 94.8,
     "adx": 34.8,
+<<<<<<< Updated upstream
     "rsi": 43.6,
     "rsi3": NaN,
     "volume_x": 1.93,
@@ -3538,6 +3544,20 @@
     "tp2": null,
     "tp3": null,
     "tp_main": 14.178669799999998,
+=======
+    "rsi": 41.7,
+    "rsi3": NaN,
+    "volume_x": 2.82,
+    "htf_trend": "BEARISH",
+    "entry": 14.0473,
+    "sl": 13.766354,
+    "best_price": 14.0473,
+    "worst_price": 14.0473,
+    "tp1": 14.173725699999999,
+    "tp2": null,
+    "tp3": null,
+    "tp_main": 14.173725699999999,
+>>>>>>> Stashed changes
     "capital": 1000.0,
     "status": "OPEN",
     "exit_price": null,
@@ -3547,13 +3567,21 @@
     "exit_time": null,
     "grind_count": 0,
     "grind_entries": [
+<<<<<<< Updated upstream
       14.0522
+=======
+      14.0473
+>>>>>>> Stashed changes
     ],
     "tag": "breakout_long"
   },
   {
     "id": "SIG-0103",
+<<<<<<< Updated upstream
     "time": "2026-10-03T21:58:31.780365+00:00",
+=======
+    "time": "2026-10-03T21:58:56.475360+00:00",
+>>>>>>> Stashed changes
     "pair": "ENA/USDT",
     "exchange": "KuCoin",
     "direction": "LONG",
