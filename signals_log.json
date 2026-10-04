@@ -2506,17 +2506,18 @@
     "tp3": null,
     "tp_main": 0.09426077999999999,
     "capital": 1000.0,
-    "status": "OPEN",
-    "exit_price": null,
-    "pnl_usd": null,
-    "result": null,
-    "closed_at": null,
-    "exit_time": null,
+    "status": "WIN",
+    "exit_price": 0.09344,
+    "pnl_usd": 0.21,
+    "result": "WIN",
+    "closed_at": "2026-10-04T13:05:43.988985+00:00",
+    "exit_time": "2026-10-04T13:05:43.988985+00:00",
     "grind_count": 0,
     "grind_entries": [
       0.09342
     ],
-    "tag": "breakout_long"
+    "tag": "breakout_long",
+    "pnl_pct": 0.02
   },
   {
     "id": "SIG-0073",
@@ -2540,17 +2541,18 @@
     "tp3": null,
     "tp_main": 1.5134899099999999,
     "capital": 1000.0,
-    "status": "OPEN",
-    "exit_price": null,
-    "pnl_usd": null,
-    "result": null,
-    "closed_at": null,
-    "exit_time": null,
+    "status": "CLOSED",
+    "exit_price": 1.49887,
+    "pnl_usd": -0.75,
+    "result": "STALE",
+    "closed_at": "2026-10-04T13:05:43.988985+00:00",
+    "exit_time": "2026-10-04T13:05:43.988985+00:00",
     "grind_count": 0,
     "grind_entries": [
       1.49999
     ],
-    "tag": "breakout_long"
+    "tag": "breakout_long",
+    "pnl_pct": -0.07
   },
   {
     "id": "SIG-0074",
@@ -2574,17 +2576,18 @@
     "tp3": null,
     "tp_main": 0.20321259999999997,
     "capital": 1000.0,
-    "status": "OPEN",
-    "exit_price": null,
-    "pnl_usd": null,
-    "result": null,
-    "closed_at": null,
-    "exit_time": null,
+    "status": "CLOSED",
+    "exit_price": 0.2004,
+    "pnl_usd": -4.97,
+    "result": "STALE",
+    "closed_at": "2026-10-04T13:05:43.988985+00:00",
+    "exit_time": "2026-10-04T13:05:43.988985+00:00",
     "grind_count": 0,
     "grind_entries": [
       0.2014
     ],
-    "tag": "breakout_long"
+    "tag": "breakout_long",
+    "pnl_pct": -0.5
   },
   {
     "id": "SIG-0075",
@@ -2841,7 +2844,7 @@
     "entry": 1.1829,
     "sl": 1.159242,
     "best_price": 1.1838,
-    "worst_price": 1.1827,
+    "worst_price": 1.1821,
     "tp1": 1.1935460999999998,
     "tp2": null,
     "tp3": null,
