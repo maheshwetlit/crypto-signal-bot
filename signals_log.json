@@ -273,5 +273,39 @@
       1.50833
     ],
     "tag": "breakout_long"
+  },
+  {
+    "id": "SIG-0009",
+    "time": "2026-10-04T19:56:34.817597+00:00",
+    "pair": "XRP/USDT",
+    "exchange": "KuCoin",
+    "direction": "LONG",
+    "style": "CONFIRMED_BREAKOUT",
+    "score": 87.2,
+    "adx": 27.2,
+    "rsi": 71.2,
+    "rsi3": 57.0,
+    "volume_x": 2.47,
+    "htf_trend": "NEUTRAL",
+    "entry": 1.50681,
+    "sl": 1.4766738,
+    "best_price": 1.50681,
+    "worst_price": 1.50681,
+    "tp1": 1.52037129,
+    "tp2": null,
+    "tp3": null,
+    "tp_main": 1.52037129,
+    "capital": 1000.0,
+    "status": "OPEN",
+    "exit_price": null,
+    "pnl_usd": null,
+    "result": null,
+    "closed_at": null,
+    "exit_time": null,
+    "grind_count": 0,
+    "grind_entries": [
+      1.50681
+    ],
+    "tag": "breakout_long"
   }
 ]
