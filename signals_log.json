@@ -1380,5 +1380,39 @@
       0.5886
     ],
     "tag": "breakout_short"
+  },
+  {
+    "id": "SIG-0041",
+    "time": "2026-10-04T04:01:52.211746+00:00",
+    "pair": "XDP/USDT",
+    "exchange": "KuCoin",
+    "direction": "SHORT",
+    "style": "CONFIRMED_BREAKOUT",
+    "score": 78.7,
+    "adx": 18.7,
+    "rsi": 50.0,
+    "rsi3": 0.0,
+    "volume_x": 1.1,
+    "htf_trend": "BEARISH",
+    "entry": 0.02005,
+    "sl": 0.020451,
+    "best_price": 0.02005,
+    "worst_price": 0.02005,
+    "tp1": 0.01986955,
+    "tp2": null,
+    "tp3": null,
+    "tp_main": 0.01986955,
+    "capital": 1000.0,
+    "status": "OPEN",
+    "exit_price": null,
+    "pnl_usd": null,
+    "result": null,
+    "closed_at": null,
+    "exit_time": null,
+    "grind_count": 0,
+    "grind_entries": [
+      0.02005
+    ],
+    "tag": "breakout_short"
   }
 ]
