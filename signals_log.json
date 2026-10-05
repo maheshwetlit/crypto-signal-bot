@@ -2639,5 +2639,39 @@
       0.337
     ],
     "tag": "breakout_long"
+  },
+  {
+    "id": "SIG-0077",
+    "time": "2026-10-05T10:56:32.811573+00:00",
+    "pair": "QNT/USDT",
+    "exchange": "KuCoin",
+    "direction": "SHORT",
+    "style": "CONFIRMED_BREAKOUT",
+    "score": 82.3,
+    "adx": 22.3,
+    "rsi": 32.9,
+    "rsi3": 4.0,
+    "volume_x": 0.97,
+    "htf_trend": "NEUTRAL",
+    "entry": 254.068,
+    "sl": 259.14936,
+    "best_price": 254.068,
+    "worst_price": 254.068,
+    "tp1": 251.78138800000002,
+    "tp2": null,
+    "tp3": null,
+    "tp_main": 251.78138800000002,
+    "capital": 1000.0,
+    "status": "OPEN",
+    "exit_price": null,
+    "pnl_usd": null,
+    "result": null,
+    "closed_at": null,
+    "exit_time": null,
+    "grind_count": 0,
+    "grind_entries": [
+      254.068
+    ],
+    "tag": "breakout_short"
   }
 ]
