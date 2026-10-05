@@ -206,7 +206,11 @@
   },
   {
     "id": "SIG-0007",
+<<<<<<< Updated upstream
     "time": "2026-10-05T21:26:30.225949+00:00",
+=======
+    "time": "2026-10-05T21:27:07.768960+00:00",
+>>>>>>> Stashed changes
     "pair": "WIF/USDT",
     "exchange": "KuCoin",
     "direction": "SHORT",
@@ -215,7 +219,11 @@
     "adx": 20.6,
     "rsi": 15.8,
     "rsi3": 0.0,
+<<<<<<< Updated upstream
     "volume_x": 2.22,
+=======
+    "volume_x": 2.33,
+>>>>>>> Stashed changes
     "htf_trend": "BULLISH",
     "entry": 0.2558,
     "sl": 0.26091600000000004,
