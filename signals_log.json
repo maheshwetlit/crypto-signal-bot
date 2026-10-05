@@ -1810,5 +1810,39 @@
       0.0284
     ],
     "tag": "breakout_long"
+  },
+  {
+    "id": "SIG-0053",
+    "time": "2026-10-05T07:36:31.835510+00:00",
+    "pair": "LYN/USDT",
+    "exchange": "KuCoin",
+    "direction": "LONG",
+    "style": "CONFIRMED_BREAKOUT",
+    "score": 86.2,
+    "adx": 26.2,
+    "rsi": 44.4,
+    "rsi3": NaN,
+    "volume_x": 2.19,
+    "htf_trend": "NEUTRAL",
+    "entry": 0.0284,
+    "sl": 0.027832000000000003,
+    "best_price": 0.0284,
+    "worst_price": 0.0284,
+    "tp1": 0.0286556,
+    "tp2": null,
+    "tp3": null,
+    "tp_main": 0.0286556,
+    "capital": 1000.0,
+    "status": "OPEN",
+    "exit_price": null,
+    "pnl_usd": null,
+    "result": null,
+    "closed_at": null,
+    "exit_time": null,
+    "grind_count": 0,
+    "grind_entries": [
+      0.0284
+    ],
+    "tag": "breakout_long"
   }
 ]
