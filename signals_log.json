@@ -934,5 +934,39 @@
       0.02136
     ],
     "tag": "breakout_long"
+  },
+  {
+    "id": "SIG-0028",
+    "time": "2026-10-05T00:47:09.101857+00:00",
+    "pair": "SAND/USDT",
+    "exchange": "KuCoin",
+    "direction": "SHORT",
+    "style": "CONFIRMED_BREAKOUT",
+    "score": 92.0,
+    "adx": 32.0,
+    "rsi": 16.8,
+    "rsi3": 0.0,
+    "volume_x": 0.95,
+    "htf_trend": "BULLISH",
+    "entry": 0.07296,
+    "sl": 0.0744192,
+    "best_price": 0.07296,
+    "worst_price": 0.07296,
+    "tp1": 0.07230336,
+    "tp2": null,
+    "tp3": null,
+    "tp_main": 0.07230336,
+    "capital": 1000.0,
+    "status": "OPEN",
+    "exit_price": null,
+    "pnl_usd": null,
+    "result": null,
+    "closed_at": null,
+    "exit_time": null,
+    "grind_count": 0,
+    "grind_entries": [
+      0.07296
+    ],
+    "tag": "breakout_short"
   }
 ]
