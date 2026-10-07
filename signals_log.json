@@ -2227,5 +2227,39 @@
       7.593
     ],
     "tag": "breakout_short"
+  },
+  {
+    "id": "SIG-0065",
+    "time": "2026-10-07T06:42:03.833840+00:00",
+    "pair": "RENDER/USDT",
+    "exchange": "KuCoin",
+    "direction": "LONG",
+    "style": "CONFIRMED_BREAKOUT",
+    "score": 80.6,
+    "adx": 20.6,
+    "rsi": 74.4,
+    "rsi3": 80.0,
+    "volume_x": 1.41,
+    "htf_trend": "BULLISH",
+    "entry": 2.122,
+    "sl": 2.07956,
+    "best_price": 2.122,
+    "worst_price": 2.122,
+    "tp1": 2.1410979999999995,
+    "tp2": null,
+    "tp3": null,
+    "tp_main": 2.1410979999999995,
+    "capital": 1000.0,
+    "status": "OPEN",
+    "exit_price": null,
+    "pnl_usd": null,
+    "result": null,
+    "closed_at": null,
+    "exit_time": null,
+    "grind_count": 0,
+    "grind_entries": [
+      2.122
+    ],
+    "tag": "breakout_long"
   }
 ]
