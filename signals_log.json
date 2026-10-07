@@ -128,8 +128,13 @@
     "exit_price": 254.68471699999998,
     "pnl_usd": 9.0,
     "result": "WIN",
+<<<<<<< Updated upstream
     "closed_at": "2026-10-07T20:49:38.892544+00:00",
     "exit_time": "2026-10-07T20:49:38.892544+00:00",
+=======
+    "closed_at": "2026-10-07T20:50:58.111363+00:00",
+    "exit_time": "2026-10-07T20:50:58.111363+00:00",
+>>>>>>> Stashed changes
     "grind_count": 0,
     "grind_entries": [
       252.413
@@ -460,7 +465,7 @@
     "entry": 0.2545,
     "sl": 0.25959,
     "best_price": 0.2544,
-    "worst_price": 0.255,
+    "worst_price": 0.2551,
     "tp1": 0.2522095,
     "tp2": null,
     "tp3": null,
@@ -528,7 +533,11 @@
     "entry": 0.2544,
     "sl": 0.259488,
     "best_price": 0.2544,
+<<<<<<< Updated upstream
     "worst_price": 0.2548,
+=======
+    "worst_price": 0.2551,
+>>>>>>> Stashed changes
     "tp1": 0.2521104,
     "tp2": null,
     "tp3": null,
