@@ -791,17 +791,18 @@
     "tp3": null,
     "tp_main": 8.193483599999999,
     "capital": 1000.0,
-    "status": "OPEN",
-    "exit_price": null,
-    "pnl_usd": null,
-    "result": null,
-    "closed_at": null,
-    "exit_time": null,
+    "status": "WIN",
+    "exit_price": 8.1521,
+    "pnl_usd": 3.9,
+    "result": "WIN",
+    "closed_at": "2026-10-07T03:01:31.186784+00:00",
+    "exit_time": "2026-10-07T03:01:31.186784+00:00",
     "grind_count": 0,
     "grind_entries": [
       8.1204
     ],
-    "tag": "breakout_long"
+    "tag": "breakout_long",
+    "pnl_pct": 0.39
   },
   {
     "id": "SIG-0024",
@@ -1365,7 +1366,7 @@
     "entry": 550.75,
     "sl": 561.765,
     "best_price": 550.75,
-    "worst_price": 558.58,
+    "worst_price": 561.54,
     "tp1": 545.79325,
     "tp2": null,
     "tp3": null,
@@ -1502,7 +1503,7 @@
     "entry": 1.45462,
     "sl": 1.4837124000000002,
     "best_price": 1.45462,
-    "worst_price": 1.46191,
+    "worst_price": 1.46274,
     "tp1": 1.44152842,
     "tp2": null,
     "tp3": null,
@@ -1673,7 +1674,7 @@
     "entry": 7.61,
     "sl": 7.762200000000001,
     "best_price": 7.61,
-    "worst_price": 7.61,
+    "worst_price": 7.615,
     "tp1": 7.541510000000001,
     "tp2": null,
     "tp3": null,
@@ -1688,6 +1689,40 @@
     "grind_count": 0,
     "grind_entries": [
       7.61
+    ],
+    "tag": "breakout_short"
+  },
+  {
+    "id": "SIG-0050",
+    "time": "2026-10-07T03:03:25.510587+00:00",
+    "pair": "TRX/USDT",
+    "exchange": "KuCoin",
+    "direction": "SHORT",
+    "style": "CONFIRMED_BREAKOUT",
+    "score": 100.0,
+    "adx": 59.0,
+    "rsi": 22.9,
+    "rsi3": 0.0,
+    "volume_x": 0.31,
+    "htf_trend": "BEARISH",
+    "entry": 0.3322,
+    "sl": 0.338844,
+    "best_price": 0.3322,
+    "worst_price": 0.3322,
+    "tp1": 0.3292102,
+    "tp2": null,
+    "tp3": null,
+    "tp_main": 0.3292102,
+    "capital": 1000.0,
+    "status": "OPEN",
+    "exit_price": null,
+    "pnl_usd": null,
+    "result": null,
+    "closed_at": null,
+    "exit_time": null,
+    "grind_count": 0,
+    "grind_entries": [
+      0.3322
     ],
     "tag": "breakout_short"
   }
