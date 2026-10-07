@@ -239,6 +239,7 @@
   },
   {
     "id": "SIG-0008",
+<<<<<<< Updated upstream
     "time": "2026-10-07T17:04:02.984651+00:00",
     "pair": "BTC/USDT",
     "exchange": "KuCoin",
@@ -376,6 +377,9 @@
   {
     "id": "SIG-0012",
     "time": "2026-10-07T17:05:14.454660+00:00",
+=======
+    "time": "2026-10-07T17:06:57.369907+00:00",
+>>>>>>> Stashed changes
     "pair": "INJ/USDT",
     "exchange": "KuCoin",
     "direction": "LONG",
