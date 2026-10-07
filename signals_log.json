@@ -4316,5 +4316,39 @@
       88.505
     ],
     "tag": "breakout_short"
+  },
+  {
+    "id": "SIG-0125",
+    "time": "2026-10-07T13:52:03.325483+00:00",
+    "pair": "PONS/USDT",
+    "exchange": "KuCoin",
+    "direction": "LONG",
+    "style": "CONFIRMED_BREAKOUT",
+    "score": 92.3,
+    "adx": 32.3,
+    "rsi": 59.0,
+    "rsi3": NaN,
+    "volume_x": 1.12,
+    "htf_trend": "NEUTRAL",
+    "entry": 0.4047,
+    "sl": 0.396606,
+    "best_price": 0.4047,
+    "worst_price": 0.4047,
+    "tp1": 0.40834229999999994,
+    "tp2": null,
+    "tp3": null,
+    "tp_main": 0.40834229999999994,
+    "capital": 1000.0,
+    "status": "OPEN",
+    "exit_price": null,
+    "pnl_usd": null,
+    "result": null,
+    "closed_at": null,
+    "exit_time": null,
+    "grind_count": 0,
+    "grind_entries": [
+      0.4047
+    ],
+    "tag": "breakout_long"
   }
 ]
