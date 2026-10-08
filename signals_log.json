@@ -1080,5 +1080,39 @@
       1.385
     ],
     "tag": "breakout_short"
+  },
+  {
+    "id": "SIG-0032",
+    "time": "2026-10-08T22:46:50.025150+00:00",
+    "pair": "ALGO/USDT",
+    "exchange": "KuCoin",
+    "direction": "SHORT",
+    "style": "CONFIRMED_BREAKOUT",
+    "score": 84.9,
+    "adx": 24.9,
+    "rsi": 34.5,
+    "rsi3": 57.1,
+    "volume_x": 1.09,
+    "htf_trend": "BEARISH",
+    "entry": 0.118,
+    "sl": 0.12036,
+    "best_price": 0.118,
+    "worst_price": 0.118,
+    "tp1": 0.11693799999999999,
+    "tp2": null,
+    "tp3": null,
+    "tp_main": 0.11693799999999999,
+    "capital": 1000.0,
+    "status": "OPEN",
+    "exit_price": null,
+    "pnl_usd": null,
+    "result": null,
+    "closed_at": null,
+    "exit_time": null,
+    "grind_count": 0,
+    "grind_entries": [
+      0.118
+    ],
+    "tag": "breakout_short"
   }
 ]
