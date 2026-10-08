@@ -421,14 +421,28 @@ def close_open_signals(ex, nt):
         if tp is not None:
             if direction == "LONG" and bp >= tp:
                 closed, res, px = True, "WIN", tp
-            elif direction == "SHORT" and wp <= tp:
+            elif direction == "SHORT" and bp <= tp:
                 closed, res, px = True, "WIN", tp
         # LOSS if price EVER touched SL
         if not closed and sl is not None:
             if direction == "LONG" and wp <= sl:
                 closed, res, px = True, "LOSS", sl
-            elif direction == "SHORT" and bp >= sl:
+            elif direction == "SHORT" and wp >= sl:
                 closed, res, px = True, "LOSS", sl
+        # Breakeven protection: move SL to entry at 60% of TP distance
+        if not closed and tp is not None and sl is not None:
+            tp_dist = abs(tp - entry)
+            be_dist = tp_dist * 0.60
+            if direction == "LONG":
+                be_price = entry + be_dist
+                if bp >= be_price and sl < entry:
+                    s["sl"] = round(entry, 8)
+                    print(f"   [BE] {sym} LONG: SL moved to entry {entry}")
+            else:
+                be_price = entry - be_dist
+                if wp <= be_price and sl > entry:
+                    s["sl"] = round(entry, 8)
+                    print(f"   [BE] {sym} SHORT: SL moved to entry {entry}")
         # stale timeout — close at the BETTER of (SL, current) so losses are
         # capped at MAX_SL_PCT and favorable stalls aren't force-closed at a dip
         if not closed:
@@ -1035,7 +1049,7 @@ def main():
         print(f"[PRESCAN] Failed: {e}")
 
     if btc_regime is None:
-        btc_regime = {"regime": "SIDEWAYS", "long_multiplier": 0.5, "short_multiplier": 0.8}
+        btc_regime = {"regime": "SIDEWAYS", "long_multiplier": 0.0, "short_multiplier": 0.8}
 
     regime = btc_regime.get("regime", "SIDEWAYS")
     long_mult = btc_regime.get("long_multiplier", 1.0)
