@@ -960,23 +960,24 @@
     "entry": 0.05503,
     "sl": 0.0561306,
     "best_price": 0.05503,
-    "worst_price": 0.05503,
+    "worst_price": 0.05619,
     "tp1": 0.054534730000000003,
     "tp2": null,
     "tp3": null,
     "tp_main": 0.054534730000000003,
     "capital": 1000.0,
-    "status": "OPEN",
-    "exit_price": null,
-    "pnl_usd": null,
-    "result": null,
-    "closed_at": null,
-    "exit_time": null,
+    "status": "LOSS",
+    "exit_price": 0.0561306,
+    "pnl_usd": -20.0,
+    "result": "LOSS",
+    "closed_at": "2026-10-08T22:31:05.111309+00:00",
+    "exit_time": "2026-10-08T22:31:05.111309+00:00",
     "grind_count": 0,
     "grind_entries": [
       0.05503
     ],
-    "tag": "breakout_short"
+    "tag": "breakout_short",
+    "pnl_pct": -2.0
   },
   {
     "id": "SIG-0029",
@@ -994,7 +995,7 @@
     "entry": 22.628,
     "sl": 23.080560000000002,
     "best_price": 22.628,
-    "worst_price": 22.628,
+    "worst_price": 22.816,
     "tp1": 22.424348,
     "tp2": null,
     "tp3": null,
@@ -1043,6 +1044,40 @@
     "grind_count": 0,
     "grind_entries": [
       0.2086
+    ],
+    "tag": "breakout_short"
+  },
+  {
+    "id": "SIG-0031",
+    "time": "2026-10-08T22:32:08.385821+00:00",
+    "pair": "GRAM/USDT",
+    "exchange": "KuCoin",
+    "direction": "SHORT",
+    "style": "CONFIRMED_BREAKOUT",
+    "score": 84.4,
+    "adx": 24.4,
+    "rsi": 37.5,
+    "rsi3": 33.3,
+    "volume_x": 1.83,
+    "htf_trend": "BEARISH",
+    "entry": 1.385,
+    "sl": 1.4127,
+    "best_price": 1.385,
+    "worst_price": 1.385,
+    "tp1": 1.372535,
+    "tp2": null,
+    "tp3": null,
+    "tp_main": 1.372535,
+    "capital": 1000.0,
+    "status": "OPEN",
+    "exit_price": null,
+    "pnl_usd": null,
+    "result": null,
+    "closed_at": null,
+    "exit_time": null,
+    "grind_count": 0,
+    "grind_entries": [
+      1.385
     ],
     "tag": "breakout_short"
   }
