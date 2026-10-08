@@ -3031,17 +3031,18 @@
     "tp3": null,
     "tp_main": 10.671088000000001,
     "capital": 1000.0,
-    "status": "OPEN",
-    "exit_price": null,
-    "pnl_usd": null,
-    "result": null,
-    "closed_at": null,
-    "exit_time": null,
+    "status": "CLOSED",
+    "exit_price": 10.887,
+    "pnl_usd": -11.05,
+    "result": "STALE",
+    "closed_at": "2026-10-08T07:45:55.636017+00:00",
+    "exit_time": "2026-10-08T07:45:55.636017+00:00",
     "grind_count": 0,
     "grind_entries": [
       10.768
     ],
-    "tag": "breakout_short"
+    "tag": "breakout_short",
+    "pnl_pct": -1.11
   },
   {
     "id": "SIG-0088",
@@ -3065,17 +3066,18 @@
     "tp3": null,
     "tp_main": 3.987784e-06,
     "capital": 1000.0,
-    "status": "OPEN",
-    "exit_price": null,
-    "pnl_usd": null,
-    "result": null,
-    "closed_at": null,
-    "exit_time": null,
+    "status": "CLOSED",
+    "exit_price": 4.051e-06,
+    "pnl_usd": -6.71,
+    "result": "STALE",
+    "closed_at": "2026-10-08T07:45:55.636017+00:00",
+    "exit_time": "2026-10-08T07:45:55.636017+00:00",
     "grind_count": 0,
     "grind_entries": [
       4.024e-06
     ],
-    "tag": "breakout_short"
+    "tag": "breakout_short",
+    "pnl_pct": -0.67
   },
   {
     "id": "SIG-0089",
@@ -3099,17 +3101,18 @@
     "tp3": null,
     "tp_main": 5.318697e-06,
     "capital": 1000.0,
-    "status": "OPEN",
-    "exit_price": null,
-    "pnl_usd": null,
-    "result": null,
-    "closed_at": null,
-    "exit_time": null,
+    "status": "CLOSED",
+    "exit_price": 5.404e-06,
+    "pnl_usd": -6.89,
+    "result": "STALE",
+    "closed_at": "2026-10-08T07:45:55.636017+00:00",
+    "exit_time": "2026-10-08T07:45:55.636017+00:00",
     "grind_count": 0,
     "grind_entries": [
       5.367e-06
     ],
-    "tag": "breakout_short"
+    "tag": "breakout_short",
+    "pnl_pct": -0.69
   },
   {
     "id": "SIG-0090",
@@ -3262,7 +3265,7 @@
     "htf_trend": "NEUTRAL",
     "entry": 0.073,
     "sl": 0.07446,
-    "best_price": 0.073,
+    "best_price": 0.07297,
     "worst_price": 0.0739,
     "tp1": 0.07234299999999999,
     "tp2": null,
