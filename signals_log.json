@@ -2334,5 +2334,39 @@
       7.098
     ],
     "tag": "breakout_short"
+  },
+  {
+    "id": "SIG-0068",
+    "time": "2026-10-09T10:02:46.663331+00:00",
+    "pair": "VVV/USDT",
+    "exchange": "KuCoin",
+    "direction": "SHORT",
+    "style": "CONFIRMED_BREAKOUT",
+    "score": 80.3,
+    "adx": 20.3,
+    "rsi": 35.4,
+    "rsi3": 21.0,
+    "volume_x": 1.56,
+    "htf_trend": "BEARISH",
+    "entry": 22.615,
+    "sl": 23.0673,
+    "best_price": 22.615,
+    "worst_price": 22.615,
+    "tp1": 22.411465,
+    "tp2": null,
+    "tp3": null,
+    "tp_main": 22.411465,
+    "capital": 1000.0,
+    "status": "OPEN",
+    "exit_price": null,
+    "pnl_usd": null,
+    "result": null,
+    "closed_at": null,
+    "exit_time": null,
+    "grind_count": 0,
+    "grind_entries": [
+      22.615
+    ],
+    "tag": "breakout_short"
   }
 ]
