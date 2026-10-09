@@ -790,5 +790,39 @@
       84.872
     ],
     "tag": "breakout_short"
+  },
+  {
+    "id": "SIG-0024",
+    "time": "2026-10-09T16:37:04.756588+00:00",
+    "pair": "RLC/USDT",
+    "exchange": "KuCoin",
+    "direction": "SHORT",
+    "style": "CONFIRMED_BREAKOUT",
+    "score": 100.0,
+    "adx": 44.1,
+    "rsi": 21.7,
+    "rsi3": 46.5,
+    "volume_x": 2.25,
+    "htf_trend": "NEUTRAL",
+    "entry": 0.85,
+    "sl": 0.867,
+    "best_price": 0.85,
+    "worst_price": 0.85,
+    "tp1": 0.8423499999999999,
+    "tp2": null,
+    "tp3": null,
+    "tp_main": 0.8423499999999999,
+    "capital": 1000.0,
+    "status": "OPEN",
+    "exit_price": null,
+    "pnl_usd": null,
+    "result": null,
+    "closed_at": null,
+    "exit_time": null,
+    "grind_count": 0,
+    "grind_entries": [
+      0.85
+    ],
+    "tag": "breakout_short"
   }
 ]
