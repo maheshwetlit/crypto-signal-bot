@@ -231,17 +231,18 @@
     "tp3": null,
     "tp_main": 0.20870460000000002,
     "capital": 1000.0,
-    "status": "OPEN",
-    "exit_price": null,
-    "pnl_usd": null,
-    "result": null,
-    "closed_at": null,
-    "exit_time": null,
+    "status": "CLOSED",
+    "exit_price": 0.2115,
+    "pnl_usd": -4.27,
+    "result": "STALE",
+    "closed_at": "2026-10-09T16:31:08.301502+00:00",
+    "exit_time": "2026-10-09T16:31:08.301502+00:00",
     "grind_count": 0,
     "grind_entries": [
       0.2106
     ],
-    "tag": "breakout_short"
+    "tag": "breakout_short",
+    "pnl_pct": -0.43
   },
   {
     "id": "SIG-0008",
@@ -265,17 +266,18 @@
     "tp3": null,
     "tp_main": 0.23536249999999997,
     "capital": 1000.0,
-    "status": "OPEN",
-    "exit_price": null,
-    "pnl_usd": null,
-    "result": null,
-    "closed_at": null,
-    "exit_time": null,
+    "status": "CLOSED",
+    "exit_price": 0.2376,
+    "pnl_usd": -0.42,
+    "result": "STALE",
+    "closed_at": "2026-10-09T16:31:08.301502+00:00",
+    "exit_time": "2026-10-09T16:31:08.301502+00:00",
     "grind_count": 0,
     "grind_entries": [
       0.2375
     ],
-    "tag": "breakout_short"
+    "tag": "breakout_short",
+    "pnl_pct": -0.04
   },
   {
     "id": "SIG-0009",
@@ -463,7 +465,7 @@
     "htf_trend": "BEARISH",
     "entry": 0.47625,
     "sl": 0.485775,
-    "best_price": 0.47625,
+    "best_price": 0.47619,
     "worst_price": 0.48106,
     "tp1": 0.47196375,
     "tp2": null,
@@ -736,7 +738,7 @@
     "htf_trend": "NEUTRAL",
     "entry": 245.0,
     "sl": 249.9,
-    "best_price": 245.0,
+    "best_price": 243.323,
     "worst_price": 245.0,
     "tp1": 242.795,
     "tp2": null,
@@ -752,6 +754,40 @@
     "grind_count": 0,
     "grind_entries": [
       245.0
+    ],
+    "tag": "breakout_short"
+  },
+  {
+    "id": "SIG-0023",
+    "time": "2026-10-09T16:32:16.687208+00:00",
+    "pair": "HYPE/USDT",
+    "exchange": "KuCoin",
+    "direction": "SHORT",
+    "style": "CONFIRMED_BREAKOUT",
+    "score": 77.9,
+    "adx": 17.9,
+    "rsi": 26.6,
+    "rsi3": 0.0,
+    "volume_x": 3.03,
+    "htf_trend": "BEARISH",
+    "entry": 84.872,
+    "sl": 86.56944,
+    "best_price": 84.872,
+    "worst_price": 84.872,
+    "tp1": 84.108152,
+    "tp2": null,
+    "tp3": null,
+    "tp_main": 84.108152,
+    "capital": 1000.0,
+    "status": "OPEN",
+    "exit_price": null,
+    "pnl_usd": null,
+    "result": null,
+    "closed_at": null,
+    "exit_time": null,
+    "grind_count": 0,
+    "grind_entries": [
+      84.872
     ],
     "tag": "breakout_short"
   }
