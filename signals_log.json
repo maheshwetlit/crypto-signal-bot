@@ -2060,5 +2060,39 @@
       0.119
     ],
     "tag": "breakout_short"
+  },
+  {
+    "id": "SIG-0060",
+    "time": "2026-10-09T08:57:32.184578+00:00",
+    "pair": "OGN/USDT",
+    "exchange": "KuCoin",
+    "direction": "SHORT",
+    "style": "CONFIRMED_BREAKOUT",
+    "score": 87.0,
+    "adx": 27.0,
+    "rsi": 23.6,
+    "rsi3": 10.6,
+    "volume_x": 0.86,
+    "htf_trend": "BULLISH",
+    "entry": 0.0386,
+    "sl": 0.039372000000000004,
+    "best_price": 0.0386,
+    "worst_price": 0.0386,
+    "tp1": 0.038252600000000005,
+    "tp2": null,
+    "tp3": null,
+    "tp_main": 0.038252600000000005,
+    "capital": 1000.0,
+    "status": "OPEN",
+    "exit_price": null,
+    "pnl_usd": null,
+    "result": null,
+    "closed_at": null,
+    "exit_time": null,
+    "grind_count": 0,
+    "grind_entries": [
+      0.0386
+    ],
+    "tag": "breakout_short"
   }
 ]
