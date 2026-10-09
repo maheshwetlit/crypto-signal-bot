@@ -2964,13 +2964,18 @@
   },
   {
     "id": "SIG-0086",
+<<<<<<< Updated upstream
     "time": "2026-10-09T12:36:50.206652+00:00",
+=======
+    "time": "2026-10-09T12:37:27.790166+00:00",
+>>>>>>> Stashed changes
     "pair": "LTC/USDT",
     "exchange": "KuCoin",
     "direction": "SHORT",
     "style": "CONFIRMED_BREAKOUT",
     "score": 80.9,
     "adx": 20.9,
+<<<<<<< Updated upstream
     "rsi": 53.6,
     "rsi3": 0.0,
     "volume_x": 1.35,
@@ -2983,6 +2988,20 @@
     "tp2": null,
     "tp3": null,
     "tp_main": 63.28526,
+=======
+    "rsi": 55.0,
+    "rsi3": 0.0,
+    "volume_x": 1.47,
+    "htf_trend": "BEARISH",
+    "entry": 63.89,
+    "sl": 65.1678,
+    "best_price": 63.89,
+    "worst_price": 63.89,
+    "tp1": 63.31499,
+    "tp2": null,
+    "tp3": null,
+    "tp_main": 63.31499,
+>>>>>>> Stashed changes
     "capital": 1000.0,
     "status": "OPEN",
     "exit_price": null,
@@ -2992,19 +3011,28 @@
     "exit_time": null,
     "grind_count": 0,
     "grind_entries": [
+<<<<<<< Updated upstream
       63.86
+=======
+      63.89
+>>>>>>> Stashed changes
     ],
     "tag": "breakout_short"
   },
   {
     "id": "SIG-0087",
+<<<<<<< Updated upstream
     "time": "2026-10-09T12:37:27.009580+00:00",
+=======
+    "time": "2026-10-09T12:37:52.052789+00:00",
+>>>>>>> Stashed changes
     "pair": "INJ/USDT",
     "exchange": "KuCoin",
     "direction": "SHORT",
     "style": "CONFIRMED_BREAKOUT",
     "score": 81.5,
     "adx": 21.5,
+<<<<<<< Updated upstream
     "rsi": 46.8,
     "rsi3": 0.0,
     "volume_x": 1.43,
@@ -3017,6 +3045,20 @@
     "tp2": null,
     "tp3": null,
     "tp_main": 6.963757,
+=======
+    "rsi": 48.3,
+    "rsi3": 0.0,
+    "volume_x": 1.44,
+    "htf_trend": "BEARISH",
+    "entry": 7.034,
+    "sl": 7.1746799999999995,
+    "best_price": 7.034,
+    "worst_price": 7.034,
+    "tp1": 6.970694,
+    "tp2": null,
+    "tp3": null,
+    "tp_main": 6.970694,
+>>>>>>> Stashed changes
     "capital": 1000.0,
     "status": "OPEN",
     "exit_price": null,
@@ -3026,7 +3068,11 @@
     "exit_time": null,
     "grind_count": 0,
     "grind_entries": [
+<<<<<<< Updated upstream
       7.027
+=======
+      7.034
+>>>>>>> Stashed changes
     ],
     "tag": "breakout_short"
   }
