@@ -1326,5 +1326,39 @@
       0.1837
     ],
     "tag": "breakout_short"
+  },
+  {
+    "id": "SIG-0039",
+    "time": "2026-10-10T08:36:50.595536+00:00",
+    "pair": "ATOM/USDT",
+    "exchange": "KuCoin",
+    "direction": "SHORT",
+    "style": "CONFIRMED_BREAKOUT",
+    "score": 79.1,
+    "adx": 19.1,
+    "rsi": 37.1,
+    "rsi3": 0.0,
+    "volume_x": 2.31,
+    "htf_trend": "BULLISH",
+    "entry": 1.9345,
+    "sl": 1.9731900000000002,
+    "best_price": 1.9345,
+    "worst_price": 1.9345,
+    "tp1": 1.9170895000000001,
+    "tp2": null,
+    "tp3": null,
+    "tp_main": 1.9170895000000001,
+    "capital": 1000.0,
+    "status": "OPEN",
+    "exit_price": null,
+    "pnl_usd": null,
+    "result": null,
+    "closed_at": null,
+    "exit_time": null,
+    "grind_count": 0,
+    "grind_entries": [
+      1.9345
+    ],
+    "tag": "breakout_short"
   }
 ]
