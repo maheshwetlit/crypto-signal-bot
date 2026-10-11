@@ -32,5 +32,39 @@
       0.03524
     ],
     "tag": "breakout_short"
+  },
+  {
+    "id": "SIG-0002",
+    "time": "2026-10-11T07:06:49.067201+00:00",
+    "pair": "PNT/USDT",
+    "exchange": "KuCoin",
+    "direction": "SHORT",
+    "style": "CONFIRMED_BREAKOUT",
+    "score": 100.0,
+    "adx": 78.0,
+    "rsi": 0.0,
+    "rsi3": 0.0,
+    "volume_x": 0.01,
+    "htf_trend": "BEARISH",
+    "entry": 0.03524,
+    "sl": 0.0359448,
+    "best_price": 0.03524,
+    "worst_price": 0.03524,
+    "tp1": 0.034922840000000004,
+    "tp2": null,
+    "tp3": null,
+    "tp_main": 0.034922840000000004,
+    "capital": 1000.0,
+    "status": "OPEN",
+    "exit_price": null,
+    "pnl_usd": null,
+    "result": null,
+    "closed_at": null,
+    "exit_time": null,
+    "grind_count": 0,
+    "grind_entries": [
+      0.03524
+    ],
+    "tag": "breakout_short"
   }
 ]
