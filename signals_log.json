@@ -1281,17 +1281,18 @@
     "tp3": null,
     "tp_main": 531.8697000000001,
     "capital": 1000.0,
-    "status": "OPEN",
-    "exit_price": null,
-    "pnl_usd": null,
-    "result": null,
-    "closed_at": null,
-    "exit_time": null,
+    "status": "WIN",
+    "exit_price": 533.96,
+    "pnl_usd": 5.11,
+    "result": "WIN",
+    "closed_at": "2026-10-12T04:01:21.336623+00:00",
+    "exit_time": "2026-10-12T04:01:21.336623+00:00",
     "grind_count": 0,
     "grind_entries": [
       536.7
     ],
-    "tag": "breakout_short"
+    "tag": "breakout_short",
+    "pnl_pct": 0.51
   },
   {
     "id": "SIG-0038",
