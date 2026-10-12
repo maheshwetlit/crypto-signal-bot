@@ -3601,5 +3601,39 @@
     ],
     "tag": "breakout_short",
     "pnl_pct": 0.9
+  },
+  {
+    "id": "SIG-0104",
+    "time": "2026-10-12T15:56:55.208698+00:00",
+    "pair": "GRASS/USDT",
+    "exchange": "KuCoin",
+    "direction": "SHORT",
+    "style": "CONFIRMED_BREAKOUT",
+    "score": 79.3,
+    "adx": 19.3,
+    "rsi": 34.2,
+    "rsi3": 0.0,
+    "volume_x": 1.5,
+    "htf_trend": "NEUTRAL",
+    "entry": 0.7477,
+    "sl": 0.762654,
+    "best_price": 0.7477,
+    "worst_price": 0.7477,
+    "tp1": 0.7409707,
+    "tp2": null,
+    "tp3": null,
+    "tp_main": 0.7409707,
+    "capital": 1000.0,
+    "status": "OPEN",
+    "exit_price": null,
+    "pnl_usd": null,
+    "result": null,
+    "closed_at": null,
+    "exit_time": null,
+    "grind_count": 0,
+    "grind_entries": [
+      0.7477
+    ],
+    "tag": "breakout_short"
   }
 ]
