@@ -1391,5 +1391,39 @@
       0.022247
     ],
     "tag": "breakout_short"
+  },
+  {
+    "id": "SIG-0041",
+    "time": "2026-10-12T01:42:04.637590+00:00",
+    "pair": "CT/USDT",
+    "exchange": "KuCoin",
+    "direction": "SHORT",
+    "style": "CONFIRMED_BREAKOUT",
+    "score": 85.0,
+    "adx": 25.0,
+    "rsi": 24.8,
+    "rsi3": 0.0,
+    "volume_x": 1.06,
+    "htf_trend": "BEARISH",
+    "entry": 0.3158,
+    "sl": 0.322116,
+    "best_price": 0.3158,
+    "worst_price": 0.3158,
+    "tp1": 0.3129578,
+    "tp2": null,
+    "tp3": null,
+    "tp_main": 0.3129578,
+    "capital": 1000.0,
+    "status": "OPEN",
+    "exit_price": null,
+    "pnl_usd": null,
+    "result": null,
+    "closed_at": null,
+    "exit_time": null,
+    "grind_count": 0,
+    "grind_entries": [
+      0.3158
+    ],
+    "tag": "breakout_short"
   }
 ]
