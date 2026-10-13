@@ -3556,17 +3556,18 @@
     "tp3": null,
     "tp_main": 2490.36318,
     "capital": 1000.0,
-    "status": "OPEN",
-    "exit_price": null,
-    "pnl_usd": null,
-    "result": null,
-    "closed_at": null,
-    "exit_time": null,
+    "status": "WIN",
+    "exit_price": 2503.83,
+    "pnl_usd": 3.64,
+    "result": "WIN",
+    "closed_at": "2026-10-13T18:41:00.541529+00:00",
+    "exit_time": "2026-10-13T18:41:00.541529+00:00",
     "grind_count": 0,
     "grind_entries": [
       2512.98
     ],
-    "tag": "breakout_short"
+    "tag": "breakout_short",
+    "pnl_pct": 0.36
   },
   {
     "id": "SIG-0103",
@@ -3590,17 +3591,18 @@
     "tp3": null,
     "tp_main": 106.25502,
     "capital": 1000.0,
-    "status": "OPEN",
-    "exit_price": null,
-    "pnl_usd": null,
-    "result": null,
-    "closed_at": null,
-    "exit_time": null,
+    "status": "CLOSED",
+    "exit_price": 107.64,
+    "pnl_usd": -3.92,
+    "result": "STALE",
+    "closed_at": "2026-10-13T18:41:00.541529+00:00",
+    "exit_time": "2026-10-13T18:41:00.541529+00:00",
     "grind_count": 0,
     "grind_entries": [
       107.22
     ],
-    "tag": "breakout_short"
+    "tag": "breakout_short",
+    "pnl_pct": -0.39
   },
   {
     "id": "SIG-0104",
@@ -3624,17 +3626,18 @@
     "tp3": null,
     "tp_main": 2485.8343099999997,
     "capital": 1000.0,
-    "status": "OPEN",
-    "exit_price": null,
-    "pnl_usd": null,
-    "result": null,
-    "closed_at": null,
-    "exit_time": null,
+    "status": "WIN",
+    "exit_price": 2503.83,
+    "pnl_usd": 1.83,
+    "result": "WIN",
+    "closed_at": "2026-10-13T18:41:00.541529+00:00",
+    "exit_time": "2026-10-13T18:41:00.541529+00:00",
     "grind_count": 0,
     "grind_entries": [
       2508.41
     ],
-    "tag": "breakout_short"
+    "tag": "breakout_short",
+    "pnl_pct": 0.18
   },
   {
     "id": "SIG-0105",
@@ -3687,7 +3690,7 @@
     "entry": 1.383,
     "sl": 1.41066,
     "best_price": 1.383,
-    "worst_price": 1.383,
+    "worst_price": 1.384,
     "tp1": 1.370553,
     "tp2": null,
     "tp3": null,
