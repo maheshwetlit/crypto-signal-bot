@@ -3917,7 +3917,11 @@
   },
   {
     "id": "SIG-0113",
+<<<<<<< Updated upstream
     "time": "2026-10-13T23:02:04.575482+00:00",
+=======
+    "time": "2026-10-13T23:02:12.964645+00:00",
+>>>>>>> Stashed changes
     "pair": "PUMP/USDT",
     "exchange": "KuCoin",
     "direction": "SHORT",
