@@ -1596,17 +1596,18 @@
     "tp3": null,
     "tp_main": 0.330003,
     "capital": 1000.0,
-    "status": "OPEN",
-    "exit_price": null,
-    "pnl_usd": null,
-    "result": null,
-    "closed_at": null,
-    "exit_time": null,
+    "status": "CLOSED",
+    "exit_price": 0.3334,
+    "pnl_usd": -1.2,
+    "result": "STALE",
+    "closed_at": "2026-10-14T16:25:45.149873+00:00",
+    "exit_time": "2026-10-14T16:25:45.149873+00:00",
     "grind_count": 0,
     "grind_entries": [
       0.333
     ],
-    "tag": "breakout_short"
+    "tag": "breakout_short",
+    "pnl_pct": -0.12
   },
   {
     "id": "SIG-0047",
