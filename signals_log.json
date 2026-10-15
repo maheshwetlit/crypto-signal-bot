@@ -169,5 +169,39 @@
       203.279
     ],
     "tag": "breakout_short"
+  },
+  {
+    "id": "SIG-0006",
+    "time": "2026-10-15T23:36:00.841728+00:00",
+    "pair": "SOL/USDT",
+    "exchange": "KuCoin",
+    "direction": "SHORT",
+    "style": "CONFIRMED_BREAKOUT",
+    "score": 83.6,
+    "adx": 23.6,
+    "rsi": 18.4,
+    "rsi3": 81.8,
+    "volume_x": 1.37,
+    "htf_trend": "NEUTRAL",
+    "entry": 105.35,
+    "sl": 107.457,
+    "best_price": 105.35,
+    "worst_price": 105.35,
+    "tp1": 104.40185,
+    "tp2": null,
+    "tp3": null,
+    "tp_main": 104.40185,
+    "capital": 1000.0,
+    "status": "OPEN",
+    "exit_price": null,
+    "pnl_usd": null,
+    "result": null,
+    "closed_at": null,
+    "exit_time": null,
+    "grind_count": 0,
+    "grind_entries": [
+      105.35
+    ],
+    "tag": "breakout_short"
   }
 ]
