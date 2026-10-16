@@ -2410,5 +2410,39 @@
     ],
     "tag": "breakout_short",
     "pnl_pct": 0.9
+  },
+  {
+    "id": "SIG-0070",
+    "time": "2026-10-16T17:02:30.130707+00:00",
+    "pair": "ZEREBRO/USDT",
+    "exchange": "KuCoin",
+    "direction": "SHORT",
+    "style": "CONFIRMED_BREAKOUT",
+    "score": 100.0,
+    "adx": 56.7,
+    "rsi": 25.1,
+    "rsi3": 0.0,
+    "volume_x": 2.27,
+    "htf_trend": "NEUTRAL",
+    "entry": 0.03412,
+    "sl": 0.0348024,
+    "best_price": 0.03412,
+    "worst_price": 0.03412,
+    "tp1": 0.033812919999999996,
+    "tp2": null,
+    "tp3": null,
+    "tp_main": 0.033812919999999996,
+    "capital": 1000.0,
+    "status": "OPEN",
+    "exit_price": null,
+    "pnl_usd": null,
+    "result": null,
+    "closed_at": null,
+    "exit_time": null,
+    "grind_count": 0,
+    "grind_entries": [
+      0.03412
+    ],
+    "tag": "breakout_short"
   }
 ]
