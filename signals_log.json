@@ -749,24 +749,25 @@
     "htf_trend": "NEUTRAL",
     "entry": 0.03884,
     "sl": 0.0396168,
-    "best_price": 0.03861,
+    "best_price": 0.03858,
     "worst_price": 0.03884,
     "tp1": 0.03849044,
     "tp2": null,
     "tp3": null,
     "tp_main": 0.03849044,
     "capital": 1000.0,
-    "status": "OPEN",
-    "exit_price": null,
-    "pnl_usd": null,
-    "result": null,
-    "closed_at": null,
-    "exit_time": null,
+    "status": "WIN",
+    "exit_price": 0.03858,
+    "pnl_usd": 6.69,
+    "result": "WIN",
+    "closed_at": "2026-10-16T05:50:54.664070+00:00",
+    "exit_time": "2026-10-16T05:50:54.664070+00:00",
     "grind_count": 0,
     "grind_entries": [
       0.03884
     ],
-    "tag": "breakout_short"
+    "tag": "breakout_short",
+    "pnl_pct": 0.67
   },
   {
     "id": "SIG-0023",
