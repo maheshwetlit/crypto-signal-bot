@@ -2086,5 +2086,39 @@
       553.79
     ],
     "tag": "breakout_short"
+  },
+  {
+    "id": "SIG-0061",
+    "time": "2026-10-16T14:31:57.755039+00:00",
+    "pair": "KCS/USDT",
+    "exchange": "KuCoin",
+    "direction": "SHORT",
+    "style": "CONFIRMED_BREAKOUT",
+    "score": 80.1,
+    "adx": 20.1,
+    "rsi": 35.8,
+    "rsi3": 0.0,
+    "volume_x": 1.03,
+    "htf_trend": "NEUTRAL",
+    "entry": 7.407,
+    "sl": 7.55514,
+    "best_price": 7.407,
+    "worst_price": 7.407,
+    "tp1": 7.340337,
+    "tp2": null,
+    "tp3": null,
+    "tp_main": 7.340337,
+    "capital": 1000.0,
+    "status": "OPEN",
+    "exit_price": null,
+    "pnl_usd": null,
+    "result": null,
+    "closed_at": null,
+    "exit_time": null,
+    "grind_count": 0,
+    "grind_entries": [
+      7.407
+    ],
+    "tag": "breakout_short"
   }
 ]
