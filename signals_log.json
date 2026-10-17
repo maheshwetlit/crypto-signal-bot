@@ -105,16 +105,28 @@
   },
   {
     "id": "SIG-0004",
+<<<<<<< Updated upstream
     "time": "2026-10-17T08:51:45.963085+00:00",
+=======
+    "time": "2026-10-17T08:52:08.495997+00:00",
+>>>>>>> Stashed changes
     "pair": "WLD/USDT",
     "exchange": "KuCoin",
     "direction": "SHORT",
     "style": "CONFIRMED_BREAKOUT",
+<<<<<<< Updated upstream
     "score": 79.8,
     "adx": 19.8,
     "rsi": 9.8,
     "rsi3": 28.6,
     "volume_x": 1.75,
+=======
+    "score": 79.9,
+    "adx": 19.9,
+    "rsi": 9.8,
+    "rsi3": 28.6,
+    "volume_x": 1.78,
+>>>>>>> Stashed changes
     "htf_trend": "BULLISH",
     "entry": 0.5215,
     "sl": 0.53193,
