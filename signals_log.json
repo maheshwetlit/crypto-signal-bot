@@ -1071,16 +1071,17 @@
     "tp3": null,
     "tp_main": 1.2777062099999998,
     "capital": 1000.0,
-    "status": "OPEN",
-    "exit_price": null,
-    "pnl_usd": null,
-    "result": null,
-    "closed_at": null,
-    "exit_time": null,
+    "status": "CLOSED",
+    "exit_price": 1.3005,
+    "pnl_usd": -8.68,
+    "result": "STALE",
+    "closed_at": "2026-10-17T20:05:44.225721+00:00",
+    "exit_time": "2026-10-17T20:05:44.225721+00:00",
     "grind_count": 0,
     "grind_entries": [
       1.28931
     ],
-    "tag": "breakout_short"
+    "tag": "breakout_short",
+    "pnl_pct": -0.87
   }
 ]
