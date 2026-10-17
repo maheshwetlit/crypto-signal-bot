@@ -618,13 +618,18 @@
   },
   {
     "id": "SIG-0019",
+<<<<<<< Updated upstream
     "time": "2026-10-17T12:41:23.071359+00:00",
+=======
+    "time": "2026-10-17T12:42:30.217738+00:00",
+>>>>>>> Stashed changes
     "pair": "XRP/USDT",
     "exchange": "KuCoin",
     "direction": "SHORT",
     "style": "CONFIRMED_BREAKOUT",
     "score": 89.5,
     "adx": 29.5,
+<<<<<<< Updated upstream
     "rsi": 25.7,
     "rsi3": 37.9,
     "volume_x": 1.71,
@@ -637,6 +642,20 @@
     "tp2": null,
     "tp3": null,
     "tp_main": 1.28818108,
+=======
+    "rsi": 27.6,
+    "rsi3": 43.0,
+    "volume_x": 1.75,
+    "htf_trend": "BEARISH",
+    "entry": 1.30028,
+    "sl": 1.3262856,
+    "best_price": 1.30028,
+    "worst_price": 1.30028,
+    "tp1": 1.28857748,
+    "tp2": null,
+    "tp3": null,
+    "tp_main": 1.28857748,
+>>>>>>> Stashed changes
     "capital": 1000.0,
     "status": "OPEN",
     "exit_price": null,
@@ -646,7 +665,11 @@
     "exit_time": null,
     "grind_count": 0,
     "grind_entries": [
+<<<<<<< Updated upstream
       1.29988
+=======
+      1.30028
+>>>>>>> Stashed changes
     ],
     "tag": "breakout_short"
   }
