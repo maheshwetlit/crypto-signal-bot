@@ -202,5 +202,39 @@
       8.746
     ],
     "tag": "breakout_short"
+  },
+  {
+    "id": "SIG-0007",
+    "time": "2026-10-17T11:16:50.282114+00:00",
+    "pair": "TIA/USDT",
+    "exchange": "KuCoin",
+    "direction": "SHORT",
+    "style": "CONFIRMED_BREAKOUT",
+    "score": 100.0,
+    "adx": 49.3,
+    "rsi": 33.5,
+    "rsi3": 0.0,
+    "volume_x": 0.46,
+    "htf_trend": "BULLISH",
+    "entry": 0.6693,
+    "sl": 0.682686,
+    "best_price": 0.6693,
+    "worst_price": 0.6693,
+    "tp1": 0.6632763,
+    "tp2": null,
+    "tp3": null,
+    "tp_main": 0.6632763,
+    "capital": 1000.0,
+    "status": "OPEN",
+    "exit_price": null,
+    "pnl_usd": null,
+    "result": null,
+    "closed_at": null,
+    "exit_time": null,
+    "grind_count": 0,
+    "grind_entries": [
+      0.6693
+    ],
+    "tag": "breakout_short"
   }
 ]
