@@ -1886,5 +1886,39 @@
       1128.91
     ],
     "tag": "breakout_short"
+  },
+  {
+    "id": "SIG-0055",
+    "time": "2026-10-18T09:31:43.617013+00:00",
+    "pair": "ICNT/USDT",
+    "exchange": "KuCoin",
+    "direction": "SHORT",
+    "style": "CONFIRMED_BREAKOUT",
+    "score": 100.0,
+    "adx": 43.1,
+    "rsi": 28.4,
+    "rsi3": 0.0,
+    "volume_x": 3.6,
+    "htf_trend": "BULLISH",
+    "entry": 0.19339,
+    "sl": 0.1972578,
+    "best_price": 0.19339,
+    "worst_price": 0.19339,
+    "tp1": 0.19164949,
+    "tp2": null,
+    "tp3": null,
+    "tp_main": 0.19164949,
+    "capital": 1000.0,
+    "status": "OPEN",
+    "exit_price": null,
+    "pnl_usd": null,
+    "result": null,
+    "closed_at": null,
+    "exit_time": null,
+    "grind_count": 0,
+    "grind_entries": [
+      0.19339
+    ],
+    "tag": "breakout_short"
   }
 ]
