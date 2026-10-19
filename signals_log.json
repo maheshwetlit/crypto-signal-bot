@@ -1001,17 +1001,18 @@
     "tp3": null,
     "tp_main": 588.11886,
     "capital": 1000.0,
-    "status": "OPEN",
-    "exit_price": null,
-    "pnl_usd": null,
-    "result": null,
-    "closed_at": null,
-    "exit_time": null,
+    "status": "CLOSED",
+    "exit_price": 594.5,
+    "pnl_usd": -1.75,
+    "result": "STALE",
+    "closed_at": "2026-10-19T08:05:48.495615+00:00",
+    "exit_time": "2026-10-19T08:05:48.495615+00:00",
     "grind_count": 0,
     "grind_entries": [
       593.46
     ],
-    "tag": "breakout_short"
+    "tag": "breakout_short",
+    "pnl_pct": -0.18
   },
   {
     "id": "SIG-0030",
@@ -1035,17 +1036,18 @@
     "tp3": null,
     "tp_main": 0.1876954,
     "capital": 1000.0,
-    "status": "OPEN",
-    "exit_price": null,
-    "pnl_usd": null,
-    "result": null,
-    "closed_at": null,
-    "exit_time": null,
+    "status": "CLOSED",
+    "exit_price": 0.1909,
+    "pnl_usd": -7.92,
+    "result": "STALE",
+    "closed_at": "2026-10-19T08:05:48.495615+00:00",
+    "exit_time": "2026-10-19T08:05:48.495615+00:00",
     "grind_count": 0,
     "grind_entries": [
       0.1894
     ],
-    "tag": "breakout_short"
+    "tag": "breakout_short",
+    "pnl_pct": -0.79
   },
   {
     "id": "SIG-0031",
@@ -1069,17 +1071,18 @@
     "tp3": null,
     "tp_main": 0.1971099,
     "capital": 1000.0,
-    "status": "OPEN",
-    "exit_price": null,
-    "pnl_usd": null,
-    "result": null,
-    "closed_at": null,
-    "exit_time": null,
+    "status": "CLOSED",
+    "exit_price": 0.2004,
+    "pnl_usd": -7.54,
+    "result": "STALE",
+    "closed_at": "2026-10-19T08:05:48.495615+00:00",
+    "exit_time": "2026-10-19T08:05:48.495615+00:00",
     "grind_count": 0,
     "grind_entries": [
       0.1989
     ],
-    "tag": "breakout_short"
+    "tag": "breakout_short",
+    "pnl_pct": -0.75
   },
   {
     "id": "SIG-0032",
@@ -1199,7 +1202,7 @@
     "htf_trend": "NEUTRAL",
     "entry": 1.1229,
     "sl": 1.145358,
-    "best_price": 1.1229,
+    "best_price": 1.1218,
     "worst_price": 1.1229,
     "tp1": 1.1127939,
     "tp2": null,
@@ -1233,7 +1236,7 @@
     "htf_trend": "BEARISH",
     "entry": 0.08446,
     "sl": 0.0861492,
-    "best_price": 0.08446,
+    "best_price": 0.08444,
     "worst_price": 0.08446,
     "tp1": 0.08369985999999999,
     "tp2": null,
