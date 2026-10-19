@@ -32,5 +32,39 @@
       4.014e-05
     ],
     "tag": "breakout_short"
+  },
+  {
+    "id": "SIG-0002",
+    "time": "2026-10-19T15:02:23.545551+00:00",
+    "pair": "TEA/USDT",
+    "exchange": "KuCoin",
+    "direction": "SHORT",
+    "style": "CONFIRMED_BREAKOUT",
+    "score": 100.0,
+    "adx": 79.3,
+    "rsi": 14.3,
+    "rsi3": 14.3,
+    "volume_x": 7.71,
+    "htf_trend": "BEARISH",
+    "entry": 4.013e-05,
+    "sl": 4.0932599999999995e-05,
+    "best_price": 4.013e-05,
+    "worst_price": 4.013e-05,
+    "tp1": 3.976883e-05,
+    "tp2": null,
+    "tp3": null,
+    "tp_main": 3.976883e-05,
+    "capital": 1000.0,
+    "status": "OPEN",
+    "exit_price": null,
+    "pnl_usd": null,
+    "result": null,
+    "closed_at": null,
+    "exit_time": null,
+    "grind_count": 0,
+    "grind_entries": [
+      4.013e-05
+    ],
+    "tag": "breakout_short"
   }
 ]
