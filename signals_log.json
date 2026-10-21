@@ -126,17 +126,18 @@
     "tp3": null,
     "tp_main": 1.0215227999999998,
     "capital": 1000.0,
-    "status": "OPEN",
-    "exit_price": null,
-    "pnl_usd": null,
-    "result": null,
-    "closed_at": null,
-    "exit_time": null,
+    "status": "CLOSED",
+    "exit_price": 1.0478,
+    "pnl_usd": -16.49,
+    "result": "STALE",
+    "closed_at": "2026-10-21T16:35:49.880309+00:00",
+    "exit_time": "2026-10-21T16:35:49.880309+00:00",
     "grind_count": 0,
     "grind_entries": [
       1.0308
     ],
-    "tag": "breakout_short"
+    "tag": "breakout_short",
+    "pnl_pct": -1.65
   },
   {
     "id": "SIG-0005",
@@ -195,17 +196,18 @@
     "tp3": null,
     "tp_main": 80.23136,
     "capital": 1000.0,
-    "status": "OPEN",
-    "exit_price": null,
-    "pnl_usd": null,
-    "result": null,
-    "closed_at": null,
-    "exit_time": null,
+    "status": "CLOSED",
+    "exit_price": 81.433,
+    "pnl_usd": -5.84,
+    "result": "STALE",
+    "closed_at": "2026-10-21T16:35:49.880309+00:00",
+    "exit_time": "2026-10-21T16:35:49.880309+00:00",
     "grind_count": 0,
     "grind_entries": [
       80.96
     ],
-    "tag": "breakout_short"
+    "tag": "breakout_short",
+    "pnl_pct": -0.58
   },
   {
     "id": "SIG-0007",
@@ -264,17 +266,18 @@
     "tp3": null,
     "tp_main": 8.615754,
     "capital": 1000.0,
-    "status": "OPEN",
-    "exit_price": null,
-    "pnl_usd": null,
-    "result": null,
-    "closed_at": null,
-    "exit_time": null,
+    "status": "WIN",
+    "exit_price": 8.688,
+    "pnl_usd": 0.69,
+    "result": "WIN",
+    "closed_at": "2026-10-21T16:35:49.880309+00:00",
+    "exit_time": "2026-10-21T16:35:49.880309+00:00",
     "grind_count": 0,
     "grind_entries": [
       8.694
     ],
-    "tag": "breakout_short"
+    "tag": "breakout_short",
+    "pnl_pct": 0.07
   },
   {
     "id": "SIG-0009",
@@ -569,7 +572,7 @@
     "htf_trend": "BULLISH",
     "entry": 8.702,
     "sl": 8.87604,
-    "best_price": 8.702,
+    "best_price": 8.688,
     "worst_price": 8.702,
     "tp1": 8.623682,
     "tp2": null,
