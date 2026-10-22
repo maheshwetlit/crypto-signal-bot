@@ -1458,5 +1458,39 @@
       5.098e-06
     ],
     "tag": "breakout_short"
+  },
+  {
+    "id": "SIG-0043",
+    "time": "2026-10-22T02:11:53.472079+00:00",
+    "pair": "PTB/USDT",
+    "exchange": "KuCoin",
+    "direction": "SHORT",
+    "style": "CONFIRMED_BREAKOUT",
+    "score": 97.8,
+    "adx": 37.8,
+    "rsi": 10.4,
+    "rsi3": 0.0,
+    "volume_x": 1.41,
+    "htf_trend": "BEARISH",
+    "entry": 0.0006,
+    "sl": 0.0006119999999999999,
+    "best_price": 0.0006,
+    "worst_price": 0.0006,
+    "tp1": 0.0005945999999999999,
+    "tp2": null,
+    "tp3": null,
+    "tp_main": 0.0005945999999999999,
+    "capital": 1000.0,
+    "status": "OPEN",
+    "exit_price": null,
+    "pnl_usd": null,
+    "result": null,
+    "closed_at": null,
+    "exit_time": null,
+    "grind_count": 0,
+    "grind_entries": [
+      0.0006
+    ],
+    "tag": "breakout_short"
   }
 ]
