@@ -791,17 +791,18 @@
     "tp3": null,
     "tp_main": 3970.94691,
     "capital": 1000.0,
-    "status": "OPEN",
-    "exit_price": null,
-    "pnl_usd": null,
-    "result": null,
-    "closed_at": null,
-    "exit_time": null,
+    "status": "CLOSED",
+    "exit_price": 4021.2,
+    "pnl_usd": -3.54,
+    "result": "STALE",
+    "closed_at": "2026-10-23T05:01:26.466753+00:00",
+    "exit_time": "2026-10-23T05:01:26.466753+00:00",
     "grind_count": 0,
     "grind_entries": [
       4007.01
     ],
-    "tag": "breakout_short"
+    "tag": "breakout_short",
+    "pnl_pct": -0.35
   },
   {
     "id": "SIG-0024",
@@ -834,6 +835,40 @@
     "grind_count": 0,
     "grind_entries": [
       7.356
+    ],
+    "tag": "breakout_short"
+  },
+  {
+    "id": "SIG-0025",
+    "time": "2026-10-23T05:02:09.836918+00:00",
+    "pair": "KCS/USDT",
+    "exchange": "KuCoin",
+    "direction": "SHORT",
+    "style": "CONFIRMED_BREAKOUT",
+    "score": 85.5,
+    "adx": 25.5,
+    "rsi": 20.0,
+    "rsi3": 54.5,
+    "volume_x": 1.05,
+    "htf_trend": "NEUTRAL",
+    "entry": 7.354,
+    "sl": 7.50108,
+    "best_price": 7.354,
+    "worst_price": 7.354,
+    "tp1": 7.287814,
+    "tp2": null,
+    "tp3": null,
+    "tp_main": 7.287814,
+    "capital": 1000.0,
+    "status": "OPEN",
+    "exit_price": null,
+    "pnl_usd": null,
+    "result": null,
+    "closed_at": null,
+    "exit_time": null,
+    "grind_count": 0,
+    "grind_entries": [
+      7.354
     ],
     "tag": "breakout_short"
   }
