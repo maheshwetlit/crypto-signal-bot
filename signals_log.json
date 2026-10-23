@@ -1246,17 +1246,18 @@
     "tp3": null,
     "tp_main": 1.29971632,
     "capital": 1000.0,
-    "status": "OPEN",
-    "exit_price": null,
-    "pnl_usd": null,
-    "result": null,
-    "closed_at": null,
-    "exit_time": null,
+    "status": "CLOSED",
+    "exit_price": 1.31299,
+    "pnl_usd": -1.12,
+    "result": "STALE",
+    "closed_at": "2026-10-23T17:20:58.700395+00:00",
+    "exit_time": "2026-10-23T17:20:58.700395+00:00",
     "grind_count": 0,
     "grind_entries": [
       1.31152
     ],
-    "tag": "breakout_short"
+    "tag": "breakout_short",
+    "pnl_pct": -0.11
   },
   {
     "id": "SIG-0037",
@@ -1315,17 +1316,18 @@
     "tp3": null,
     "tp_main": 737.007691,
     "capital": 1000.0,
-    "status": "OPEN",
-    "exit_price": null,
-    "pnl_usd": null,
-    "result": null,
-    "closed_at": null,
-    "exit_time": null,
+    "status": "CLOSED",
+    "exit_price": 747.19,
+    "pnl_usd": -4.69,
+    "result": "STALE",
+    "closed_at": "2026-10-23T17:20:58.700395+00:00",
+    "exit_time": "2026-10-23T17:20:58.700395+00:00",
     "grind_count": 0,
     "grind_entries": [
       743.701
     ],
-    "tag": "breakout_short"
+    "tag": "breakout_short",
+    "pnl_pct": -0.47
   },
   {
     "id": "SIG-0039",
@@ -1343,23 +1345,24 @@
     "entry": 0.0792,
     "sl": 0.08078400000000001,
     "best_price": 0.0792,
-    "worst_price": 0.08004,
+    "worst_price": 0.08006,
     "tp1": 0.07848720000000001,
     "tp2": null,
     "tp3": null,
     "tp_main": 0.07848720000000001,
     "capital": 1000.0,
-    "status": "OPEN",
-    "exit_price": null,
-    "pnl_usd": null,
-    "result": null,
-    "closed_at": null,
-    "exit_time": null,
+    "status": "CLOSED",
+    "exit_price": 0.08006,
+    "pnl_usd": -10.86,
+    "result": "STALE",
+    "closed_at": "2026-10-23T17:20:58.700395+00:00",
+    "exit_time": "2026-10-23T17:20:58.700395+00:00",
     "grind_count": 0,
     "grind_entries": [
       0.0792
     ],
-    "tag": "breakout_short"
+    "tag": "breakout_short",
+    "pnl_pct": -1.09
   },
   {
     "id": "SIG-0040",
@@ -1412,7 +1415,7 @@
     "entry": 53.54,
     "sl": 54.6108,
     "best_price": 53.54,
-    "worst_price": 53.54,
+    "worst_price": 53.58,
     "tp1": 53.05814,
     "tp2": null,
     "tp3": null,
