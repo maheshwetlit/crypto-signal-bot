@@ -1675,5 +1675,39 @@
       0.1693
     ],
     "tag": "breakout_short"
+  },
+  {
+    "id": "SIG-0049",
+    "time": "2026-10-24T13:39:58.740311+00:00",
+    "pair": "AAVE/USDT",
+    "exchange": "KuCoin",
+    "direction": "SHORT",
+    "style": "CONFIRMED_BREAKOUT",
+    "score": 85.6,
+    "adx": 25.6,
+    "rsi": 24.1,
+    "rsi3": 0.0,
+    "volume_x": 1.48,
+    "htf_trend": "BEARISH",
+    "entry": 138.922,
+    "sl": 141.70044,
+    "best_price": 138.922,
+    "worst_price": 138.922,
+    "tp1": 137.67170199999998,
+    "tp2": null,
+    "tp3": null,
+    "tp_main": 137.67170199999998,
+    "capital": 1000.0,
+    "status": "OPEN",
+    "exit_price": null,
+    "pnl_usd": null,
+    "result": null,
+    "closed_at": null,
+    "exit_time": null,
+    "grind_count": 0,
+    "grind_entries": [
+      138.922
+    ],
+    "tag": "breakout_short"
   }
 ]
