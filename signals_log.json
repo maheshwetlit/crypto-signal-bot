@@ -2623,5 +2623,39 @@
     ],
     "tag": "breakout_short",
     "pnl_pct": 0.9
+  },
+  {
+    "id": "SIG-0076",
+    "time": "2026-10-24T19:32:00.387445+00:00",
+    "pair": "BIRB/USDT",
+    "exchange": "KuCoin",
+    "direction": "SHORT",
+    "style": "CONFIRMED_BREAKOUT",
+    "score": 78.9,
+    "adx": 18.9,
+    "rsi": 44.2,
+    "rsi3": 47.2,
+    "volume_x": 2.67,
+    "htf_trend": "NEUTRAL",
+    "entry": 0.09325,
+    "sl": 0.095115,
+    "best_price": 0.09325,
+    "worst_price": 0.09325,
+    "tp1": 0.09241075,
+    "tp2": null,
+    "tp3": null,
+    "tp_main": 0.09241075,
+    "capital": 1000.0,
+    "status": "OPEN",
+    "exit_price": null,
+    "pnl_usd": null,
+    "result": null,
+    "closed_at": null,
+    "exit_time": null,
+    "grind_count": 0,
+    "grind_entries": [
+      0.09325
+    ],
+    "tag": "breakout_short"
   }
 ]
