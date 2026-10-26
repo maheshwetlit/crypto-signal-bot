@@ -6042,17 +6042,29 @@
     "tp_main": 100.25947000000001,
     "capital": 1000.0,
     "status": "CLOSED",
+<<<<<<< Updated upstream
     "exit_price": 101.41,
     "pnl_usd": -2.37,
     "result": "STALE",
     "closed_at": "2026-10-26T14:11:00.006916+00:00",
     "exit_time": "2026-10-26T14:11:00.006916+00:00",
+=======
+    "exit_price": 101.52,
+    "pnl_usd": -3.46,
+    "result": "STALE",
+    "closed_at": "2026-10-26T14:12:09.797383+00:00",
+    "exit_time": "2026-10-26T14:12:09.797383+00:00",
+>>>>>>> Stashed changes
     "grind_count": 0,
     "grind_entries": [
       101.17
     ],
     "tag": "breakout_short",
+<<<<<<< Updated upstream
     "pnl_pct": -0.24
+=======
+    "pnl_pct": -0.35
+>>>>>>> Stashed changes
   },
   {
     "id": "SIG-0174",
@@ -6069,7 +6081,11 @@
     "htf_trend": "BEARISH",
     "entry": 2318.55,
     "sl": 2364.9210000000003,
+<<<<<<< Updated upstream
     "best_price": 2314.86,
+=======
+    "best_price": 2315.76,
+>>>>>>> Stashed changes
     "worst_price": 2318.55,
     "tp1": 2297.68305,
     "tp2": null,
@@ -6104,7 +6120,11 @@
     "entry": 0.7083,
     "sl": 0.722466,
     "best_price": 0.7083,
+<<<<<<< Updated upstream
     "worst_price": 0.7092,
+=======
+    "worst_price": 0.709,
+>>>>>>> Stashed changes
     "tp1": 0.7019253000000001,
     "tp2": null,
     "tp3": null,
@@ -6138,7 +6158,11 @@
     "entry": 738.575,
     "sl": 753.3465000000001,
     "best_price": 738.575,
+<<<<<<< Updated upstream
     "worst_price": 740.258,
+=======
+    "worst_price": 740.581,
+>>>>>>> Stashed changes
     "tp1": 731.927825,
     "tp2": null,
     "tp3": null,
@@ -6172,7 +6196,11 @@
     "entry": 1.2828,
     "sl": 1.308456,
     "best_price": 1.2828,
+<<<<<<< Updated upstream
     "worst_price": 1.29256,
+=======
+    "worst_price": 1.29363,
+>>>>>>> Stashed changes
     "tp1": 1.2712548,
     "tp2": null,
     "tp3": null,
