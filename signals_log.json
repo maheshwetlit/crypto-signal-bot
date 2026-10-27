@@ -726,5 +726,39 @@
       199.088
     ],
     "tag": "breakout_short"
+  },
+  {
+    "id": "SIG-0022",
+    "time": "2026-10-27T06:36:37.584043+00:00",
+    "pair": "IRYS/USDT",
+    "exchange": "KuCoin",
+    "direction": "SHORT",
+    "style": "CONFIRMED_BREAKOUT",
+    "score": 98.2,
+    "adx": 38.2,
+    "rsi": 8.5,
+    "rsi3": 0.0,
+    "volume_x": 0.91,
+    "htf_trend": "NEUTRAL",
+    "entry": 0.02755,
+    "sl": 0.028101,
+    "best_price": 0.02755,
+    "worst_price": 0.02755,
+    "tp1": 0.02730205,
+    "tp2": null,
+    "tp3": null,
+    "tp_main": 0.02730205,
+    "capital": 1000.0,
+    "status": "OPEN",
+    "exit_price": null,
+    "pnl_usd": null,
+    "result": null,
+    "closed_at": null,
+    "exit_time": null,
+    "grind_count": 0,
+    "grind_entries": [
+      0.02755
+    ],
+    "tag": "breakout_short"
   }
 ]
