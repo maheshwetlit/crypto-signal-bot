@@ -1484,24 +1484,25 @@
     "htf_trend": "NEUTRAL",
     "entry": 0.03359,
     "sl": 0.0342618,
-    "best_price": 0.03352,
+    "best_price": 0.03344,
     "worst_price": 0.0337,
     "tp1": 0.03328769,
     "tp2": null,
     "tp3": null,
     "tp_main": 0.03328769,
     "capital": 1000.0,
-    "status": "OPEN",
-    "exit_price": null,
-    "pnl_usd": null,
-    "result": null,
-    "closed_at": null,
-    "exit_time": null,
+    "status": "WIN",
+    "exit_price": 0.03344,
+    "pnl_usd": 4.47,
+    "result": "WIN",
+    "closed_at": "2026-10-28T05:25:46.836455+00:00",
+    "exit_time": "2026-10-28T05:25:46.836455+00:00",
     "grind_count": 0,
     "grind_entries": [
       0.03359
     ],
-    "tag": "breakout_short"
+    "tag": "breakout_short",
+    "pnl_pct": 0.45
   },
   {
     "id": "SIG-0044",
@@ -1553,7 +1554,7 @@
     "entry": 0.05333,
     "sl": 0.0543966,
     "best_price": 0.05333,
-    "worst_price": 0.05333,
+    "worst_price": 0.05345,
     "tp1": 0.05285003,
     "tp2": null,
     "tp3": null,
@@ -1568,6 +1569,40 @@
     "grind_count": 0,
     "grind_entries": [
       0.05333
+    ],
+    "tag": "breakout_short"
+  },
+  {
+    "id": "SIG-0046",
+    "time": "2026-10-28T05:26:56.032545+00:00",
+    "pair": "AKE/USDT",
+    "exchange": "KuCoin",
+    "direction": "SHORT",
+    "style": "CONFIRMED_BREAKOUT",
+    "score": 76.6,
+    "adx": 16.6,
+    "rsi": 44.3,
+    "rsi3": 60.8,
+    "volume_x": 1.53,
+    "htf_trend": "BEARISH",
+    "entry": 0.0216375,
+    "sl": 0.02207025,
+    "best_price": 0.0216375,
+    "worst_price": 0.0216375,
+    "tp1": 0.0214427625,
+    "tp2": null,
+    "tp3": null,
+    "tp_main": 0.0214427625,
+    "capital": 1000.0,
+    "status": "OPEN",
+    "exit_price": null,
+    "pnl_usd": null,
+    "result": null,
+    "closed_at": null,
+    "exit_time": null,
+    "grind_count": 0,
+    "grind_entries": [
+      0.0216375
     ],
     "tag": "breakout_short"
   }
