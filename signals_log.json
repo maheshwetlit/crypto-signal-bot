@@ -2465,23 +2465,24 @@
     "entry": 1.29592,
     "sl": 1.3218384,
     "best_price": 1.29036,
-    "worst_price": 1.29592,
+    "worst_price": 1.30119,
     "tp1": 1.28425672,
     "tp2": null,
     "tp3": null,
     "tp_main": 1.28425672,
     "capital": 1000.0,
-    "status": "OPEN",
-    "exit_price": null,
-    "pnl_usd": null,
-    "result": null,
-    "closed_at": null,
-    "exit_time": null,
+    "status": "CLOSED",
+    "exit_price": 1.30119,
+    "pnl_usd": -4.07,
+    "result": "STALE",
+    "closed_at": "2026-10-29T05:11:02.805910+00:00",
+    "exit_time": "2026-10-29T05:11:02.805910+00:00",
     "grind_count": 0,
     "grind_entries": [
       1.29592
     ],
-    "tag": "breakout_short"
+    "tag": "breakout_short",
+    "pnl_pct": -0.41
   },
   {
     "id": "SIG-0072",
@@ -2499,23 +2500,24 @@
     "entry": 2304.3,
     "sl": 2350.3860000000004,
     "best_price": 2297.68,
-    "worst_price": 2304.3,
+    "worst_price": 2329.22,
     "tp1": 2283.5613000000003,
     "tp2": null,
     "tp3": null,
     "tp_main": 2283.5613000000003,
     "capital": 1000.0,
-    "status": "OPEN",
-    "exit_price": null,
-    "pnl_usd": null,
-    "result": null,
-    "closed_at": null,
-    "exit_time": null,
+    "status": "CLOSED",
+    "exit_price": 2329.22,
+    "pnl_usd": -10.81,
+    "result": "STALE",
+    "closed_at": "2026-10-29T05:11:02.805910+00:00",
+    "exit_time": "2026-10-29T05:11:02.805910+00:00",
     "grind_count": 0,
     "grind_entries": [
       2304.3
     ],
-    "tag": "breakout_short"
+    "tag": "breakout_short",
+    "pnl_pct": -1.08
   },
   {
     "id": "SIG-0073",
@@ -2568,22 +2570,23 @@
     "entry": 99.56,
     "sl": 101.55120000000001,
     "best_price": 99.41,
-    "worst_price": 99.56,
+    "worst_price": 100.5,
     "tp1": 98.66396,
     "tp2": null,
     "tp3": null,
     "tp_main": 98.66396,
     "capital": 1000.0,
-    "status": "OPEN",
-    "exit_price": null,
-    "pnl_usd": null,
-    "result": null,
-    "closed_at": null,
-    "exit_time": null,
+    "status": "CLOSED",
+    "exit_price": 100.5,
+    "pnl_usd": -9.44,
+    "result": "STALE",
+    "closed_at": "2026-10-29T05:11:02.805910+00:00",
+    "exit_time": "2026-10-29T05:11:02.805910+00:00",
     "grind_count": 0,
     "grind_entries": [
       99.56
     ],
-    "tag": "breakout_short"
+    "tag": "breakout_short",
+    "pnl_pct": -0.94
   }
 ]
