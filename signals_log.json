@@ -2436,17 +2436,18 @@
     "tp3": null,
     "tp_main": 0.03243543,
     "capital": 1000.0,
-    "status": "OPEN",
-    "exit_price": null,
-    "pnl_usd": null,
-    "result": null,
-    "closed_at": null,
-    "exit_time": null,
+    "status": "WIN",
+    "exit_price": 0.03251,
+    "pnl_usd": 6.72,
+    "result": "WIN",
+    "closed_at": "2026-10-30T19:31:10.805776+00:00",
+    "exit_time": "2026-10-30T19:31:10.805776+00:00",
     "grind_count": 0,
     "grind_entries": [
       0.03273
     ],
-    "tag": "breakout_short"
+    "tag": "breakout_short",
+    "pnl_pct": 0.67
   },
   {
     "id": "SIG-0071",
@@ -2672,7 +2673,7 @@
     "entry": 89.581,
     "sl": 91.37262,
     "best_price": 89.551,
-    "worst_price": 89.634,
+    "worst_price": 90.242,
     "tp1": 88.774771,
     "tp2": null,
     "tp3": null,
@@ -2706,7 +2707,7 @@
     "entry": 0.4022,
     "sl": 0.410244,
     "best_price": 0.4022,
-    "worst_price": 0.4022,
+    "worst_price": 0.4043,
     "tp1": 0.3985802,
     "tp2": null,
     "tp3": null,
@@ -2721,6 +2722,40 @@
     "grind_count": 0,
     "grind_entries": [
       0.4022
+    ],
+    "tag": "breakout_short"
+  },
+  {
+    "id": "SIG-0079",
+    "time": "2026-10-30T19:32:40.717023+00:00",
+    "pair": "KAS/USDT",
+    "exchange": "KuCoin",
+    "direction": "SHORT",
+    "style": "CONFIRMED_BREAKOUT",
+    "score": 79.1,
+    "adx": 19.1,
+    "rsi": 44.3,
+    "rsi3": 21.7,
+    "volume_x": 2.41,
+    "htf_trend": "BEARISH",
+    "entry": 0.03246,
+    "sl": 0.033109200000000005,
+    "best_price": 0.03246,
+    "worst_price": 0.03246,
+    "tp1": 0.03216786,
+    "tp2": null,
+    "tp3": null,
+    "tp_main": 0.03216786,
+    "capital": 1000.0,
+    "status": "OPEN",
+    "exit_price": null,
+    "pnl_usd": null,
+    "result": null,
+    "closed_at": null,
+    "exit_time": null,
+    "grind_count": 0,
+    "grind_entries": [
+      0.03246
     ],
     "tag": "breakout_short"
   }
