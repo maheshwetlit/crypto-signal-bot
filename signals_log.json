@@ -1380,22 +1380,23 @@
     "entry": 2178.25,
     "sl": 2221.815,
     "best_price": 2178.25,
-    "worst_price": 2178.25,
+    "worst_price": 2223.59,
     "tp1": 2158.64575,
     "tp2": null,
     "tp3": null,
     "tp_main": 2158.64575,
     "capital": 1000.0,
-    "status": "OPEN",
-    "exit_price": null,
-    "pnl_usd": null,
-    "result": null,
-    "closed_at": null,
-    "exit_time": null,
+    "status": "LOSS",
+    "exit_price": 2221.815,
+    "pnl_usd": -20.0,
+    "result": "LOSS",
+    "closed_at": "2026-10-30T03:31:11.649715+00:00",
+    "exit_time": "2026-10-30T03:31:11.649715+00:00",
     "grind_count": 0,
     "grind_entries": [
       2178.25
     ],
-    "tag": "breakout_short"
+    "tag": "breakout_short",
+    "pnl_pct": -2.0
   }
 ]
