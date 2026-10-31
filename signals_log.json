@@ -3514,23 +3514,24 @@
     "htf_trend": "BEARISH",
     "entry": 0.0111785,
     "sl": 0.011402069999999999,
-    "best_price": 0.0111785,
+    "best_price": 0.0110741,
     "worst_price": 0.0111785,
     "tp1": 0.0110778935,
     "tp2": null,
     "tp3": null,
     "tp_main": 0.0110778935,
     "capital": 1000.0,
-    "status": "OPEN",
-    "exit_price": null,
-    "pnl_usd": null,
-    "result": null,
-    "closed_at": null,
-    "exit_time": null,
+    "status": "WIN",
+    "exit_price": 0.0110778935,
+    "pnl_usd": 9.0,
+    "result": "WIN",
+    "closed_at": "2026-10-31T14:31:10.256207+00:00",
+    "exit_time": "2026-10-31T14:31:10.256207+00:00",
     "grind_count": 0,
     "grind_entries": [
       0.0111785
     ],
-    "tag": "breakout_short"
+    "tag": "breakout_short",
+    "pnl_pct": 0.9
   }
 ]
