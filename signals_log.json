@@ -4599,24 +4599,25 @@
     "htf_trend": "NEUTRAL",
     "entry": 0.1791,
     "sl": 0.182682,
-    "best_price": 0.1777,
+    "best_price": 0.1773,
     "worst_price": 0.1791,
     "tp1": 0.1774881,
     "tp2": null,
     "tp3": null,
     "tp_main": 0.1774881,
     "capital": 1000.0,
-    "status": "OPEN",
-    "exit_price": null,
-    "pnl_usd": null,
-    "result": null,
-    "closed_at": null,
-    "exit_time": null,
+    "status": "WIN",
+    "exit_price": 0.1774881,
+    "pnl_usd": 9.0,
+    "result": "WIN",
+    "closed_at": "2026-11-01T18:21:00.335929+00:00",
+    "exit_time": "2026-11-01T18:21:00.335929+00:00",
     "grind_count": 0,
     "grind_entries": [
       0.1791
     ],
-    "tag": "breakout_short"
+    "tag": "breakout_short",
+    "pnl_pct": 0.9
   },
   {
     "id": "SIG-0133",
@@ -4633,7 +4634,7 @@
     "htf_trend": "NEUTRAL",
     "entry": 0.1779,
     "sl": 0.181458,
-    "best_price": 0.1777,
+    "best_price": 0.1773,
     "worst_price": 0.1779,
     "tp1": 0.1762989,
     "tp2": null,
@@ -4649,6 +4650,40 @@
     "grind_count": 0,
     "grind_entries": [
       0.1779
+    ],
+    "tag": "breakout_short"
+  },
+  {
+    "id": "SIG-0134",
+    "time": "2026-11-01T18:22:02.682692+00:00",
+    "pair": "SHIB/USDT",
+    "exchange": "KuCoin",
+    "direction": "SHORT",
+    "style": "CONFIRMED_BREAKOUT",
+    "score": 85.3,
+    "adx": 25.3,
+    "rsi": 30.2,
+    "rsi3": 18.7,
+    "volume_x": 2.42,
+    "htf_trend": "BEARISH",
+    "entry": 4.685e-06,
+    "sl": 4.7787000000000005e-06,
+    "best_price": 4.685e-06,
+    "worst_price": 4.685e-06,
+    "tp1": 4.642835e-06,
+    "tp2": null,
+    "tp3": null,
+    "tp_main": 4.642835e-06,
+    "capital": 1000.0,
+    "status": "OPEN",
+    "exit_price": null,
+    "pnl_usd": null,
+    "result": null,
+    "closed_at": null,
+    "exit_time": null,
+    "grind_count": 0,
+    "grind_entries": [
+      4.685e-06
     ],
     "tag": "breakout_short"
   }
