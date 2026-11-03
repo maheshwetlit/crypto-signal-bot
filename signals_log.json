@@ -1432,5 +1432,39 @@
       1.592
     ],
     "tag": "breakout_short"
+  },
+  {
+    "id": "SIG-0042",
+    "time": "2026-11-03T14:21:49.479787+00:00",
+    "pair": "JCT/USDT",
+    "exchange": "KuCoin",
+    "direction": "SHORT",
+    "style": "CONFIRMED_BREAKOUT",
+    "score": 90.6,
+    "adx": 30.6,
+    "rsi": 61.2,
+    "rsi3": 32.1,
+    "volume_x": 2.1,
+    "htf_trend": "BEARISH",
+    "entry": 0.004448,
+    "sl": 0.00453696,
+    "best_price": 0.004448,
+    "worst_price": 0.004448,
+    "tp1": 0.004407968,
+    "tp2": null,
+    "tp3": null,
+    "tp_main": 0.004407968,
+    "capital": 1000.0,
+    "status": "OPEN",
+    "exit_price": null,
+    "pnl_usd": null,
+    "result": null,
+    "closed_at": null,
+    "exit_time": null,
+    "grind_count": 0,
+    "grind_entries": [
+      0.004448
+    ],
+    "tag": "breakout_short"
   }
 ]
