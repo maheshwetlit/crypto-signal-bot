@@ -1606,5 +1606,39 @@
       0.07505
     ],
     "tag": "breakout_short"
+  },
+  {
+    "id": "SIG-0047",
+    "time": "2026-11-03T17:27:11.205815+00:00",
+    "pair": "ASTER/USDT",
+    "exchange": "KuCoin",
+    "direction": "SHORT",
+    "style": "CONFIRMED_BREAKOUT",
+    "score": 83.7,
+    "adx": 23.7,
+    "rsi": 25.6,
+    "rsi3": 0.0,
+    "volume_x": 1.55,
+    "htf_trend": "NEUTRAL",
+    "entry": 0.6994,
+    "sl": 0.713388,
+    "best_price": 0.6994,
+    "worst_price": 0.6994,
+    "tp1": 0.6931054,
+    "tp2": null,
+    "tp3": null,
+    "tp_main": 0.6931054,
+    "capital": 1000.0,
+    "status": "OPEN",
+    "exit_price": null,
+    "pnl_usd": null,
+    "result": null,
+    "closed_at": null,
+    "exit_time": null,
+    "grind_count": 0,
+    "grind_entries": [
+      0.6994
+    ],
+    "tag": "breakout_short"
   }
 ]
