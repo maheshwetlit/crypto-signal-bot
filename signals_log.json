@@ -1048,5 +1048,39 @@
     ],
     "tag": "breakout_short",
     "pnl_pct": -2.0
+  },
+  {
+    "id": "SIG-0031",
+    "time": "2026-11-04T15:46:57.543959+00:00",
+    "pair": "EVAA/USDT",
+    "exchange": "KuCoin",
+    "direction": "SHORT",
+    "style": "CONFIRMED_BREAKOUT",
+    "score": 78.4,
+    "adx": 18.4,
+    "rsi": 34.2,
+    "rsi3": 0.0,
+    "volume_x": 2.52,
+    "htf_trend": "BULLISH",
+    "entry": 1.579,
+    "sl": 1.61058,
+    "best_price": 1.579,
+    "worst_price": 1.579,
+    "tp1": 1.564789,
+    "tp2": null,
+    "tp3": null,
+    "tp_main": 1.564789,
+    "capital": 1000.0,
+    "status": "OPEN",
+    "exit_price": null,
+    "pnl_usd": null,
+    "result": null,
+    "closed_at": null,
+    "exit_time": null,
+    "grind_count": 0,
+    "grind_entries": [
+      1.579
+    ],
+    "tag": "breakout_short"
   }
 ]
