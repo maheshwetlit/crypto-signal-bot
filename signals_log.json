@@ -1065,11 +1065,46 @@
     "entry": 1.579,
     "sl": 1.61058,
     "best_price": 1.579,
-    "worst_price": 1.579,
+    "worst_price": 1.6955,
     "tp1": 1.564789,
     "tp2": null,
     "tp3": null,
     "tp_main": 1.564789,
+    "capital": 1000.0,
+    "status": "LOSS",
+    "exit_price": 1.61058,
+    "pnl_usd": -20.0,
+    "result": "LOSS",
+    "closed_at": "2026-11-04T15:55:50.973165+00:00",
+    "exit_time": "2026-11-04T15:55:50.973165+00:00",
+    "grind_count": 0,
+    "grind_entries": [
+      1.579
+    ],
+    "tag": "breakout_short",
+    "pnl_pct": -2.0
+  },
+  {
+    "id": "SIG-0032",
+    "time": "2026-11-04T15:56:32.640829+00:00",
+    "pair": "TRX/USDT",
+    "exchange": "KuCoin",
+    "direction": "SHORT",
+    "style": "CONFIRMED_BREAKOUT",
+    "score": 89.9,
+    "adx": 29.9,
+    "rsi": 57.1,
+    "rsi3": 28.6,
+    "volume_x": 1.71,
+    "htf_trend": "BEARISH",
+    "entry": 0.3198,
+    "sl": 0.326196,
+    "best_price": 0.3198,
+    "worst_price": 0.3198,
+    "tp1": 0.3169218,
+    "tp2": null,
+    "tp3": null,
+    "tp_main": 0.3169218,
     "capital": 1000.0,
     "status": "OPEN",
     "exit_price": null,
@@ -1079,7 +1114,7 @@
     "exit_time": null,
     "grind_count": 0,
     "grind_entries": [
-      1.579
+      0.3198
     ],
     "tag": "breakout_short"
   }
