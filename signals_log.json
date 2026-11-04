@@ -1485,7 +1485,11 @@
     "entry": 0.0764,
     "sl": 0.077928,
     "best_price": 0.07639,
+<<<<<<< Updated upstream
     "worst_price": 0.07761,
+=======
+    "worst_price": 0.07764,
+>>>>>>> Stashed changes
     "tp1": 0.0757124,
     "tp2": null,
     "tp3": null,
@@ -1529,8 +1533,13 @@
     "exit_price": 56.712,
     "pnl_usd": -20.0,
     "result": "LOSS",
+<<<<<<< Updated upstream
     "closed_at": "2026-11-04T22:50:55.917463+00:00",
     "exit_time": "2026-11-04T22:50:55.917463+00:00",
+=======
+    "closed_at": "2026-11-04T22:51:39.524624+00:00",
+    "exit_time": "2026-11-04T22:51:39.524624+00:00",
+>>>>>>> Stashed changes
     "grind_count": 0,
     "grind_entries": [
       55.6
@@ -1554,7 +1563,11 @@
     "entry": 83.361,
     "sl": 85.02822,
     "best_price": 83.339,
+<<<<<<< Updated upstream
     "worst_price": 84.003,
+=======
+    "worst_price": 84.037,
+>>>>>>> Stashed changes
     "tp1": 82.61075100000001,
     "tp2": null,
     "tp3": null,
@@ -1588,7 +1601,11 @@
     "entry": 0.07213,
     "sl": 0.0735726,
     "best_price": 0.07201,
+<<<<<<< Updated upstream
     "worst_price": 0.07308,
+=======
+    "worst_price": 0.07307,
+>>>>>>> Stashed changes
     "tp1": 0.07148083,
     "tp2": null,
     "tp3": null,
@@ -1622,7 +1639,11 @@
     "entry": 80101.9,
     "sl": 81703.938,
     "best_price": 80101.9,
+<<<<<<< Updated upstream
     "worst_price": 80844.0,
+=======
+    "worst_price": 80841.0,
+>>>>>>> Stashed changes
     "tp1": 79380.98289999999,
     "tp2": null,
     "tp3": null,
