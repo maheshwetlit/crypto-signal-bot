@@ -1869,7 +1869,11 @@
     "htf_trend": "BEARISH",
     "entry": 77461.0,
     "sl": 79010.22,
+<<<<<<< Updated upstream
     "best_price": 76717.4,
+=======
+    "best_price": 76730.1,
+>>>>>>> Stashed changes
     "worst_price": 77461.0,
     "tp1": 76763.851,
     "tp2": null,
@@ -1880,8 +1884,13 @@
     "exit_price": 76763.851,
     "pnl_usd": 9.0,
     "result": "WIN",
+<<<<<<< Updated upstream
     "closed_at": "2026-11-04T02:25:52.750404+00:00",
     "exit_time": "2026-11-04T02:25:52.750404+00:00",
+=======
+    "closed_at": "2026-11-04T02:25:36.607317+00:00",
+    "exit_time": "2026-11-04T02:25:36.607317+00:00",
+>>>>>>> Stashed changes
     "grind_count": 0,
     "grind_entries": [
       77461.0
@@ -1904,7 +1913,11 @@
     "htf_trend": "NEUTRAL",
     "entry": 2275.36,
     "sl": 2320.8672,
+<<<<<<< Updated upstream
     "best_price": 2259.38,
+=======
+    "best_price": 2259.4,
+>>>>>>> Stashed changes
     "worst_price": 2277.37,
     "tp1": 2254.88176,
     "tp2": null,
@@ -2391,7 +2404,11 @@
     "htf_trend": "BEARISH",
     "entry": 53.25,
     "sl": 54.315,
+<<<<<<< Updated upstream
     "best_price": 53.12,
+=======
+    "best_price": 53.13,
+>>>>>>> Stashed changes
     "worst_price": 53.37,
     "tp1": 52.77075,
     "tp2": null,
@@ -2563,7 +2580,11 @@
     "entry": 1.25117,
     "sl": 1.2761934,
     "best_price": 1.24985,
+<<<<<<< Updated upstream
     "worst_price": 1.25259,
+=======
+    "worst_price": 1.25313,
+>>>>>>> Stashed changes
     "tp1": 1.23990947,
     "tp2": null,
     "tp3": null,
@@ -2596,7 +2617,11 @@
     "htf_trend": "BEARISH",
     "entry": 53.24,
     "sl": 54.3048,
+<<<<<<< Updated upstream
     "best_price": 53.12,
+=======
+    "best_price": 53.13,
+>>>>>>> Stashed changes
     "worst_price": 53.31,
     "tp1": 52.76084,
     "tp2": null,
@@ -2630,7 +2655,11 @@
     "htf_trend": "BEARISH",
     "entry": 0.07397,
     "sl": 0.0754494,
+<<<<<<< Updated upstream
     "best_price": 0.07376,
+=======
+    "best_price": 0.07374,
+>>>>>>> Stashed changes
     "worst_price": 0.07402,
     "tp1": 0.07330426999999999,
     "tp2": null,
