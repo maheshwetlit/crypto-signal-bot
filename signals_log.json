@@ -2655,5 +2655,39 @@
       1.169
     ],
     "tag": "breakout_short"
+  },
+  {
+    "id": "SIG-0077",
+    "time": "2026-11-05T23:52:25.036055+00:00",
+    "pair": "PAXG/USDT",
+    "exchange": "KuCoin",
+    "direction": "SHORT",
+    "style": "CONFIRMED_BREAKOUT",
+    "score": 91.0,
+    "adx": 31.0,
+    "rsi": 48.5,
+    "rsi3": 40.0,
+    "volume_x": 0.76,
+    "htf_trend": "BULLISH",
+    "entry": 4082.28,
+    "sl": 4163.9256000000005,
+    "best_price": 4082.28,
+    "worst_price": 4082.28,
+    "tp1": 4045.5394800000004,
+    "tp2": null,
+    "tp3": null,
+    "tp_main": 4045.5394800000004,
+    "capital": 1000.0,
+    "status": "OPEN",
+    "exit_price": null,
+    "pnl_usd": null,
+    "result": null,
+    "closed_at": null,
+    "exit_time": null,
+    "grind_count": 0,
+    "grind_entries": [
+      4082.28
+    ],
+    "tag": "breakout_short"
   }
 ]
