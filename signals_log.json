@@ -2658,7 +2658,11 @@
   },
   {
     "id": "SIG-0077",
+<<<<<<< Updated upstream
     "time": "2026-11-05T23:52:25.036055+00:00",
+=======
+    "time": "2026-11-05T23:52:34.631534+00:00",
+>>>>>>> Stashed changes
     "pair": "PAXG/USDT",
     "exchange": "KuCoin",
     "direction": "SHORT",
