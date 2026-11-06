@@ -1466,5 +1466,39 @@
       0.3184
     ],
     "tag": "breakout_short"
+  },
+  {
+    "id": "SIG-0043",
+    "time": "2026-11-06T17:41:26.165886+00:00",
+    "pair": "SONIC/USDT",
+    "exchange": "KuCoin",
+    "direction": "SHORT",
+    "style": "CONFIRMED_BREAKOUT",
+    "score": 94.2,
+    "adx": 34.2,
+    "rsi": 28.3,
+    "rsi3": 0.0,
+    "volume_x": 0.75,
+    "htf_trend": "NEUTRAL",
+    "entry": 0.02125,
+    "sl": 0.021675000000000003,
+    "best_price": 0.02125,
+    "worst_price": 0.02125,
+    "tp1": 0.02105875,
+    "tp2": null,
+    "tp3": null,
+    "tp_main": 0.02105875,
+    "capital": 1000.0,
+    "status": "OPEN",
+    "exit_price": null,
+    "pnl_usd": null,
+    "result": null,
+    "closed_at": null,
+    "exit_time": null,
+    "grind_count": 0,
+    "grind_entries": [
+      0.02125
+    ],
+    "tag": "breakout_short"
   }
 ]
