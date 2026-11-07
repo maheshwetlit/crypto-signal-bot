@@ -1596,17 +1596,18 @@
     "tp3": null,
     "tp_main": 0.1627222,
     "capital": 1000.0,
-    "status": "OPEN",
-    "exit_price": null,
-    "pnl_usd": null,
-    "result": null,
-    "closed_at": null,
-    "exit_time": null,
+    "status": "WIN",
+    "exit_price": 0.1633,
+    "pnl_usd": 5.48,
+    "result": "WIN",
+    "closed_at": "2026-11-07T01:20:59.296814+00:00",
+    "exit_time": "2026-11-07T01:20:59.296814+00:00",
     "grind_count": 0,
     "grind_entries": [
       0.1642
     ],
-    "tag": "breakout_short"
+    "tag": "breakout_short",
+    "pnl_pct": 0.55
   },
   {
     "id": "SIG-0047",
@@ -1693,7 +1694,7 @@
     "htf_trend": "BEARISH",
     "entry": 1.206,
     "sl": 1.2301199999999999,
-    "best_price": 1.203,
+    "best_price": 1.199,
     "worst_price": 1.207,
     "tp1": 1.195146,
     "tp2": null,
@@ -1728,7 +1729,7 @@
     "entry": 0.07242,
     "sl": 0.0738684,
     "best_price": 0.07242,
-    "worst_price": 0.07242,
+    "worst_price": 0.07255,
     "tp1": 0.07176822,
     "tp2": null,
     "tp3": null,
@@ -1777,6 +1778,40 @@
     "grind_count": 0,
     "grind_entries": [
       1.199
+    ],
+    "tag": "breakout_short"
+  },
+  {
+    "id": "SIG-0052",
+    "time": "2026-11-07T01:21:47.996713+00:00",
+    "pair": "XLM/USDT",
+    "exchange": "KuCoin",
+    "direction": "SHORT",
+    "style": "CONFIRMED_BREAKOUT",
+    "score": 81.2,
+    "adx": 21.2,
+    "rsi": 60.0,
+    "rsi3": 0.0,
+    "volume_x": 1.6,
+    "htf_trend": "BEARISH",
+    "entry": 0.1537,
+    "sl": 0.156774,
+    "best_price": 0.1537,
+    "worst_price": 0.1537,
+    "tp1": 0.1523167,
+    "tp2": null,
+    "tp3": null,
+    "tp_main": 0.1523167,
+    "capital": 1000.0,
+    "status": "OPEN",
+    "exit_price": null,
+    "pnl_usd": null,
+    "result": null,
+    "closed_at": null,
+    "exit_time": null,
+    "grind_count": 0,
+    "grind_entries": [
+      0.1537
     ],
     "tag": "breakout_short"
   }
