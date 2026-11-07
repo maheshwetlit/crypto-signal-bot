@@ -581,17 +581,18 @@
     "tp3": null,
     "tp_main": 220.43804,
     "capital": 1000.0,
-    "status": "OPEN",
-    "exit_price": null,
-    "pnl_usd": null,
-    "result": null,
-    "closed_at": null,
-    "exit_time": null,
+    "status": "CLOSED",
+    "exit_price": 224.26,
+    "pnl_usd": -8.18,
+    "result": "STALE",
+    "closed_at": "2026-11-07T19:25:50.254512+00:00",
+    "exit_time": "2026-11-07T19:25:50.254512+00:00",
     "grind_count": 0,
     "grind_entries": [
       222.44
     ],
-    "tag": "breakout_short"
+    "tag": "breakout_short",
+    "pnl_pct": -0.82
   },
   {
     "id": "SIG-0018",
@@ -608,7 +609,7 @@
     "htf_trend": "BEARISH",
     "entry": 2234.53,
     "sl": 2279.2206,
-    "best_price": 2234.53,
+    "best_price": 2234.05,
     "worst_price": 2237.25,
     "tp1": 2214.41923,
     "tp2": null,
@@ -642,7 +643,7 @@
     "htf_trend": "BEARISH",
     "entry": 0.02084,
     "sl": 0.021256800000000003,
-    "best_price": 0.02084,
+    "best_price": 0.02079,
     "worst_price": 0.02086,
     "tp1": 0.02065244,
     "tp2": null,
@@ -658,6 +659,40 @@
     "grind_count": 0,
     "grind_entries": [
       0.02084
+    ],
+    "tag": "breakout_short"
+  },
+  {
+    "id": "SIG-0020",
+    "time": "2026-11-07T19:26:37.338071+00:00",
+    "pair": "ENA/USDT",
+    "exchange": "KuCoin",
+    "direction": "SHORT",
+    "style": "CONFIRMED_BREAKOUT",
+    "score": 82.1,
+    "adx": 22.1,
+    "rsi": 26.9,
+    "rsi3": 0.0,
+    "volume_x": 1.98,
+    "htf_trend": "BEARISH",
+    "entry": 0.1574,
+    "sl": 0.16054800000000002,
+    "best_price": 0.1574,
+    "worst_price": 0.1574,
+    "tp1": 0.15598340000000002,
+    "tp2": null,
+    "tp3": null,
+    "tp_main": 0.15598340000000002,
+    "capital": 1000.0,
+    "status": "OPEN",
+    "exit_price": null,
+    "pnl_usd": null,
+    "result": null,
+    "closed_at": null,
+    "exit_time": null,
+    "grind_count": 0,
+    "grind_entries": [
+      0.1574
     ],
     "tag": "breakout_short"
   }
