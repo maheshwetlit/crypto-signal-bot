@@ -1981,17 +1981,18 @@
     "tp3": null,
     "tp_main": 0.1607402,
     "capital": 1000.0,
-    "status": "OPEN",
-    "exit_price": null,
-    "pnl_usd": null,
-    "result": null,
-    "closed_at": null,
-    "exit_time": null,
+    "status": "WIN",
+    "exit_price": 0.1617,
+    "pnl_usd": 3.08,
+    "result": "WIN",
+    "closed_at": "2026-11-07T06:31:10.319395+00:00",
+    "exit_time": "2026-11-07T06:31:10.319395+00:00",
     "grind_count": 0,
     "grind_entries": [
       0.1622
     ],
-    "tag": "breakout_short"
+    "tag": "breakout_short",
+    "pnl_pct": 0.31
   },
   {
     "id": "SIG-0058",
@@ -2009,7 +2010,7 @@
     "entry": 1.16042,
     "sl": 1.1836284000000001,
     "best_price": 1.15362,
-    "worst_price": 1.16391,
+    "worst_price": 1.16565,
     "tp1": 1.14997622,
     "tp2": null,
     "tp3": null,
@@ -2214,7 +2215,7 @@
     "entry": 0.1519,
     "sl": 0.15493800000000002,
     "best_price": 0.1518,
-    "worst_price": 0.1531,
+    "worst_price": 0.1532,
     "tp1": 0.1505329,
     "tp2": null,
     "tp3": null,
@@ -2335,5 +2336,39 @@
     ],
     "tag": "breakout_short",
     "pnl_pct": -2.0
+  },
+  {
+    "id": "SIG-0068",
+    "time": "2026-11-07T06:31:49.020825+00:00",
+    "pair": "LTC/USDT",
+    "exchange": "KuCoin",
+    "direction": "SHORT",
+    "style": "CONFIRMED_BREAKOUT",
+    "score": 81.8,
+    "adx": 21.8,
+    "rsi": 43.6,
+    "rsi3": 0.0,
+    "volume_x": 0.81,
+    "htf_trend": "BEARISH",
+    "entry": 52.35,
+    "sl": 53.397000000000006,
+    "best_price": 52.35,
+    "worst_price": 52.35,
+    "tp1": 51.87885,
+    "tp2": null,
+    "tp3": null,
+    "tp_main": 51.87885,
+    "capital": 1000.0,
+    "status": "OPEN",
+    "exit_price": null,
+    "pnl_usd": null,
+    "result": null,
+    "closed_at": null,
+    "exit_time": null,
+    "grind_count": 0,
+    "grind_entries": [
+      52.35
+    ],
+    "tag": "breakout_short"
   }
 ]
