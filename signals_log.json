@@ -1815,5 +1815,39 @@
       51.76
     ],
     "tag": "breakout_short"
+  },
+  {
+    "id": "SIG-0053",
+    "time": "2026-11-08T16:46:35.421410+00:00",
+    "pair": "ELSA/USDT",
+    "exchange": "KuCoin",
+    "direction": "SHORT",
+    "style": "CONFIRMED_BREAKOUT",
+    "score": 88.6,
+    "adx": 28.6,
+    "rsi": 24.5,
+    "rsi3": 0.0,
+    "volume_x": 0.5,
+    "htf_trend": "NEUTRAL",
+    "entry": 0.07507,
+    "sl": 0.0765714,
+    "best_price": 0.07507,
+    "worst_price": 0.07507,
+    "tp1": 0.07439437,
+    "tp2": null,
+    "tp3": null,
+    "tp_main": 0.07439437,
+    "capital": 1000.0,
+    "status": "OPEN",
+    "exit_price": null,
+    "pnl_usd": null,
+    "result": null,
+    "closed_at": null,
+    "exit_time": null,
+    "grind_count": 0,
+    "grind_entries": [
+      0.07507
+    ],
+    "tag": "breakout_short"
   }
 ]
