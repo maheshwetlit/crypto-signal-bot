@@ -1692,24 +1692,25 @@
     "htf_trend": "NEUTRAL",
     "entry": 0.07742,
     "sl": 0.07896840000000001,
-    "best_price": 0.07701,
+    "best_price": 0.07665,
     "worst_price": 0.07787,
     "tp1": 0.07672322000000001,
     "tp2": null,
     "tp3": null,
     "tp_main": 0.07672322000000001,
     "capital": 1000.0,
-    "status": "OPEN",
-    "exit_price": null,
-    "pnl_usd": null,
-    "result": null,
-    "closed_at": null,
-    "exit_time": null,
+    "status": "WIN",
+    "exit_price": 0.07672322000000001,
+    "pnl_usd": 9.0,
+    "result": "WIN",
+    "closed_at": "2026-11-08T16:10:59.993700+00:00",
+    "exit_time": "2026-11-08T16:10:59.993700+00:00",
     "grind_count": 0,
     "grind_entries": [
       0.07742
     ],
-    "tag": "breakout_short"
+    "tag": "breakout_short",
+    "pnl_pct": 0.9
   },
   {
     "id": "SIG-0050",
@@ -1726,7 +1727,7 @@
     "htf_trend": "NEUTRAL",
     "entry": 0.07695,
     "sl": 0.078489,
-    "best_price": 0.07695,
+    "best_price": 0.07666,
     "worst_price": 0.07695,
     "tp1": 0.07625745,
     "tp2": null,
@@ -1742,6 +1743,40 @@
     "grind_count": 0,
     "grind_entries": [
       0.07695
+    ],
+    "tag": "breakout_short"
+  },
+  {
+    "id": "SIG-0051",
+    "time": "2026-11-08T16:11:23.896803+00:00",
+    "pair": "ELSA/USDT",
+    "exchange": "KuCoin",
+    "direction": "SHORT",
+    "style": "CONFIRMED_BREAKOUT",
+    "score": 77.5,
+    "adx": 17.5,
+    "rsi": 39.7,
+    "rsi3": 0.0,
+    "volume_x": 0.52,
+    "htf_trend": "NEUTRAL",
+    "entry": 0.0766,
+    "sl": 0.07813200000000001,
+    "best_price": 0.0766,
+    "worst_price": 0.0766,
+    "tp1": 0.0759106,
+    "tp2": null,
+    "tp3": null,
+    "tp_main": 0.0759106,
+    "capital": 1000.0,
+    "status": "OPEN",
+    "exit_price": null,
+    "pnl_usd": null,
+    "result": null,
+    "closed_at": null,
+    "exit_time": null,
+    "grind_count": 0,
+    "grind_entries": [
+      0.0766
     ],
     "tag": "breakout_short"
   }
