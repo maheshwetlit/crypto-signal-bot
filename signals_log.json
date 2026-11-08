@@ -1974,24 +1974,25 @@
     "htf_trend": "NEUTRAL",
     "entry": 1250.416,
     "sl": 1275.4243199999999,
-    "best_price": 1250.416,
+    "best_price": 1240.515,
     "worst_price": 1264.965,
     "tp1": 1239.1622559999998,
     "tp2": null,
     "tp3": null,
     "tp_main": 1239.1622559999998,
     "capital": 1000.0,
-    "status": "OPEN",
-    "exit_price": null,
-    "pnl_usd": null,
-    "result": null,
-    "closed_at": null,
-    "exit_time": null,
+    "status": "WIN",
+    "exit_price": 1240.515,
+    "pnl_usd": 7.92,
+    "result": "WIN",
+    "closed_at": "2026-11-08T21:15:59.660279+00:00",
+    "exit_time": "2026-11-08T21:15:59.660279+00:00",
     "grind_count": 0,
     "grind_entries": [
       1250.416
     ],
-    "tag": "breakout_short"
+    "tag": "breakout_short",
+    "pnl_pct": 0.79
   },
   {
     "id": "SIG-0058",
@@ -2008,7 +2009,7 @@
     "htf_trend": "BEARISH",
     "entry": 51.57,
     "sl": 52.6014,
-    "best_price": 51.57,
+    "best_price": 51.54,
     "worst_price": 51.57,
     "tp1": 51.10587,
     "tp2": null,
@@ -2024,6 +2025,40 @@
     "grind_count": 0,
     "grind_entries": [
       51.57
+    ],
+    "tag": "breakout_short"
+  },
+  {
+    "id": "SIG-0059",
+    "time": "2026-11-08T21:16:06.347949+00:00",
+    "pair": "ZEC/USDT",
+    "exchange": "KuCoin",
+    "direction": "SHORT",
+    "style": "CONFIRMED_BREAKOUT",
+    "score": 93.5,
+    "adx": 33.5,
+    "rsi": 30.3,
+    "rsi3": 22.0,
+    "volume_x": 1.24,
+    "htf_trend": "NEUTRAL",
+    "entry": 1240.0,
+    "sl": 1264.8,
+    "best_price": 1240.0,
+    "worst_price": 1240.0,
+    "tp1": 1228.84,
+    "tp2": null,
+    "tp3": null,
+    "tp_main": 1228.84,
+    "capital": 1000.0,
+    "status": "OPEN",
+    "exit_price": null,
+    "pnl_usd": null,
+    "result": null,
+    "closed_at": null,
+    "exit_time": null,
+    "grind_count": 0,
+    "grind_entries": [
+      1240.0
     ],
     "tag": "breakout_short"
   }
