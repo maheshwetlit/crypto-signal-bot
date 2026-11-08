@@ -2061,5 +2061,39 @@
       1240.0
     ],
     "tag": "breakout_short"
+  },
+  {
+    "id": "SIG-0060",
+    "time": "2026-11-08T21:26:58.886527+00:00",
+    "pair": "GRAM/USDT",
+    "exchange": "KuCoin",
+    "direction": "SHORT",
+    "style": "CONFIRMED_BREAKOUT",
+    "score": 100.0,
+    "adx": 40.4,
+    "rsi": 31.0,
+    "rsi3": 14.3,
+    "volume_x": 0.74,
+    "htf_trend": "BEARISH",
+    "entry": 1.031,
+    "sl": 1.05162,
+    "best_price": 1.031,
+    "worst_price": 1.031,
+    "tp1": 1.0217209999999999,
+    "tp2": null,
+    "tp3": null,
+    "tp_main": 1.0217209999999999,
+    "capital": 1000.0,
+    "status": "OPEN",
+    "exit_price": null,
+    "pnl_usd": null,
+    "result": null,
+    "closed_at": null,
+    "exit_time": null,
+    "grind_count": 0,
+    "grind_entries": [
+      1.031
+    ],
+    "tag": "breakout_short"
   }
 ]
