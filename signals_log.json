@@ -2638,24 +2638,25 @@
     "htf_trend": "BEARISH",
     "entry": 4.391e-06,
     "sl": 4.47882e-06,
-    "best_price": 4.366e-06,
+    "best_price": 4.351e-06,
     "worst_price": 4.391e-06,
     "tp1": 4.351481e-06,
     "tp2": null,
     "tp3": null,
     "tp_main": 4.351481e-06,
     "capital": 1000.0,
-    "status": "OPEN",
-    "exit_price": null,
-    "pnl_usd": null,
-    "result": null,
-    "closed_at": null,
-    "exit_time": null,
+    "status": "WIN",
+    "exit_price": 4.351481e-06,
+    "pnl_usd": 9.0,
+    "result": "WIN",
+    "closed_at": "2026-11-09T06:41:14.239234+00:00",
+    "exit_time": "2026-11-09T06:41:14.239234+00:00",
     "grind_count": 0,
     "grind_entries": [
       4.391e-06
     ],
-    "tag": "breakout_short"
+    "tag": "breakout_short",
+    "pnl_pct": 0.9
   },
   {
     "id": "SIG-0077",
@@ -2688,6 +2689,40 @@
     "grind_count": 0,
     "grind_entries": [
       73.903
+    ],
+    "tag": "breakout_short"
+  },
+  {
+    "id": "SIG-0078",
+    "time": "2026-11-09T06:41:17.954789+00:00",
+    "pair": "ETH/USDT",
+    "exchange": "KuCoin",
+    "direction": "SHORT",
+    "style": "CONFIRMED_BREAKOUT",
+    "score": 89.8,
+    "adx": 29.8,
+    "rsi": 27.1,
+    "rsi3": 0.0,
+    "volume_x": 2.12,
+    "htf_trend": "BEARISH",
+    "entry": 2110.53,
+    "sl": 2152.7406,
+    "best_price": 2110.53,
+    "worst_price": 2110.53,
+    "tp1": 2091.53523,
+    "tp2": null,
+    "tp3": null,
+    "tp_main": 2091.53523,
+    "capital": 1000.0,
+    "status": "OPEN",
+    "exit_price": null,
+    "pnl_usd": null,
+    "result": null,
+    "closed_at": null,
+    "exit_time": null,
+    "grind_count": 0,
+    "grind_entries": [
+      2110.53
     ],
     "tag": "breakout_short"
   }
