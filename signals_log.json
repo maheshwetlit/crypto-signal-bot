@@ -4991,16 +4991,17 @@
     "tp3": null,
     "tp_main": 0.316129,
     "capital": 1000.0,
-    "status": "OPEN",
-    "exit_price": null,
-    "pnl_usd": null,
-    "result": null,
-    "closed_at": null,
-    "exit_time": null,
+    "status": "WIN",
+    "exit_price": 0.3179,
+    "pnl_usd": 3.45,
+    "result": "WIN",
+    "closed_at": "2026-11-10T18:51:02.016809+00:00",
+    "exit_time": "2026-11-10T18:51:02.016809+00:00",
     "grind_count": 0,
     "grind_entries": [
       0.319
     ],
-    "tag": "breakout_short"
+    "tag": "breakout_short",
+    "pnl_pct": 0.34
   }
 ]
