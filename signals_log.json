@@ -169,5 +169,39 @@
       1.61
     ],
     "tag": "breakout_short"
+  },
+  {
+    "id": "SIG-0006",
+    "time": "2026-11-11T18:11:33.474243+00:00",
+    "pair": "PIEVERSE/USDT",
+    "exchange": "KuCoin",
+    "direction": "SHORT",
+    "style": "CONFIRMED_BREAKOUT",
+    "score": 89.4,
+    "adx": 29.4,
+    "rsi": 2.6,
+    "rsi3": 0.0,
+    "volume_x": 1.03,
+    "htf_trend": "NEUTRAL",
+    "entry": 1.6064,
+    "sl": 1.638528,
+    "best_price": 1.6064,
+    "worst_price": 1.6064,
+    "tp1": 1.5919424,
+    "tp2": null,
+    "tp3": null,
+    "tp_main": 1.5919424,
+    "capital": 1000.0,
+    "status": "OPEN",
+    "exit_price": null,
+    "pnl_usd": null,
+    "result": null,
+    "closed_at": null,
+    "exit_time": null,
+    "grind_count": 0,
+    "grind_entries": [
+      1.6064
+    ],
+    "tag": "breakout_short"
   }
 ]
