@@ -5244,5 +5244,39 @@
       0.03413
     ],
     "tag": "breakout_short"
+  },
+  {
+    "id": "SIG-0151",
+    "time": "2026-11-11T05:11:33.274292+00:00",
+    "pair": "SKYAI/USDT",
+    "exchange": "KuCoin",
+    "direction": "SHORT",
+    "style": "CONFIRMED_BREAKOUT",
+    "score": 89.9,
+    "adx": 29.9,
+    "rsi": 28.1,
+    "rsi3": 0.0,
+    "volume_x": 0.91,
+    "htf_trend": "NEUTRAL",
+    "entry": 0.03409,
+    "sl": 0.034771800000000005,
+    "best_price": 0.03409,
+    "worst_price": 0.03409,
+    "tp1": 0.033783190000000005,
+    "tp2": null,
+    "tp3": null,
+    "tp_main": 0.033783190000000005,
+    "capital": 1000.0,
+    "status": "OPEN",
+    "exit_price": null,
+    "pnl_usd": null,
+    "result": null,
+    "closed_at": null,
+    "exit_time": null,
+    "grind_count": 0,
+    "grind_entries": [
+      0.03409
+    ],
+    "tag": "breakout_short"
   }
 ]
