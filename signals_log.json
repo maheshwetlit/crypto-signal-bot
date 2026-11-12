@@ -644,7 +644,11 @@
     "htf_trend": "BEARISH",
     "entry": 1.05043,
     "sl": 1.0714386,
+<<<<<<< Updated upstream
     "best_price": 1.04475,
+=======
+    "best_price": 1.04563,
+>>>>>>> Stashed changes
     "worst_price": 1.05273,
     "tp1": 1.04097613,
     "tp2": null,
@@ -652,17 +656,29 @@
     "tp_main": 1.04097613,
     "capital": 1000.0,
     "status": "WIN",
+<<<<<<< Updated upstream
     "exit_price": 1.04475,
     "pnl_usd": 5.41,
     "result": "WIN",
     "closed_at": "2026-11-12T04:15:19.457283+00:00",
     "exit_time": "2026-11-12T04:15:19.457283+00:00",
+=======
+    "exit_price": 1.04563,
+    "pnl_usd": 4.57,
+    "result": "WIN",
+    "closed_at": "2026-11-12T04:16:00.551046+00:00",
+    "exit_time": "2026-11-12T04:16:00.551046+00:00",
+>>>>>>> Stashed changes
     "grind_count": 0,
     "grind_entries": [
       1.05043
     ],
     "tag": "breakout_short",
+<<<<<<< Updated upstream
     "pnl_pct": 0.54
+=======
+    "pnl_pct": 0.46
+>>>>>>> Stashed changes
   },
   {
     "id": "SIG-0020",
@@ -679,7 +695,11 @@
     "htf_trend": "BULLISH",
     "entry": 2.567,
     "sl": 2.6183400000000003,
+<<<<<<< Updated upstream
     "best_price": 2.561,
+=======
+    "best_price": 2.562,
+>>>>>>> Stashed changes
     "worst_price": 2.567,
     "tp1": 2.5438970000000003,
     "tp2": null,
@@ -713,7 +733,11 @@
     "htf_trend": "NEUTRAL",
     "entry": 0.004112,
     "sl": 0.00419424,
+<<<<<<< Updated upstream
     "best_price": 0.004091,
+=======
+    "best_price": 0.004085,
+>>>>>>> Stashed changes
     "worst_price": 0.004112,
     "tp1": 0.004074992,
     "tp2": null,
@@ -747,7 +771,11 @@
     "htf_trend": "BULLISH",
     "entry": 2.563,
     "sl": 2.6142600000000003,
+<<<<<<< Updated upstream
     "best_price": 2.561,
+=======
+    "best_price": 2.562,
+>>>>>>> Stashed changes
     "worst_price": 2.563,
     "tp1": 2.539933,
     "tp2": null,
@@ -768,13 +796,18 @@
   },
   {
     "id": "SIG-0023",
+<<<<<<< Updated upstream
     "time": "2026-11-12T04:16:18.170233+00:00",
+=======
+    "time": "2026-11-12T04:16:58.136579+00:00",
+>>>>>>> Stashed changes
     "pair": "ARIA/USDT",
     "exchange": "KuCoin",
     "direction": "SHORT",
     "style": "CONFIRMED_BREAKOUT",
     "score": 89.9,
     "adx": 29.9,
+<<<<<<< Updated upstream
     "rsi": 39.2,
     "rsi3": 26.0,
     "volume_x": 1.41,
@@ -787,6 +820,20 @@
     "tp2": null,
     "tp3": null,
     "tp_main": 0.20334329,
+=======
+    "rsi": 38.8,
+    "rsi3": 24.8,
+    "volume_x": 1.51,
+    "htf_trend": "NEUTRAL",
+    "entry": 0.20482,
+    "sl": 0.2089164,
+    "best_price": 0.20482,
+    "worst_price": 0.20482,
+    "tp1": 0.20297662,
+    "tp2": null,
+    "tp3": null,
+    "tp_main": 0.20297662,
+>>>>>>> Stashed changes
     "capital": 1000.0,
     "status": "OPEN",
     "exit_price": null,
@@ -796,7 +843,11 @@
     "exit_time": null,
     "grind_count": 0,
     "grind_entries": [
+<<<<<<< Updated upstream
       0.20519
+=======
+      0.20482
+>>>>>>> Stashed changes
     ],
     "tag": "breakout_short"
   }
