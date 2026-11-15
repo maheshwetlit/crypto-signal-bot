@@ -1309,23 +1309,24 @@
     "entry": 1.7634,
     "sl": 1.7986680000000002,
     "best_price": 1.7634,
-    "worst_price": 1.7731,
+    "worst_price": 1.8056,
     "tp1": 1.7475294000000001,
     "tp2": null,
     "tp3": null,
     "tp_main": 1.7475294000000001,
     "capital": 1000.0,
-    "status": "OPEN",
-    "exit_price": null,
-    "pnl_usd": null,
-    "result": null,
-    "closed_at": null,
-    "exit_time": null,
+    "status": "LOSS",
+    "exit_price": 1.7986680000000002,
+    "pnl_usd": -20.0,
+    "result": "LOSS",
+    "closed_at": "2026-11-15T01:51:04.506732+00:00",
+    "exit_time": "2026-11-15T01:51:04.506732+00:00",
     "grind_count": 0,
     "grind_entries": [
       1.7634
     ],
-    "tag": "breakout_short"
+    "tag": "breakout_short",
+    "pnl_pct": -2.0
   },
   {
     "id": "SIG-0039",
@@ -1412,7 +1413,7 @@
     "entry": 0.0121269,
     "sl": 0.012369438,
     "best_price": 0.0121269,
-    "worst_price": 0.0121269,
+    "worst_price": 0.0121486,
     "tp1": 0.012017757899999999,
     "tp2": null,
     "tp3": null,
@@ -1427,6 +1428,40 @@
     "grind_count": 0,
     "grind_entries": [
       0.0121269
+    ],
+    "tag": "breakout_short"
+  },
+  {
+    "id": "SIG-0042",
+    "time": "2026-11-15T01:52:23.742582+00:00",
+    "pair": "PAXG/USDT",
+    "exchange": "KuCoin",
+    "direction": "SHORT",
+    "style": "CONFIRMED_BREAKOUT",
+    "score": 78.7,
+    "adx": 18.7,
+    "rsi": 31.7,
+    "rsi3": 37.7,
+    "volume_x": 1.17,
+    "htf_trend": "BEARISH",
+    "entry": 3800.31,
+    "sl": 3876.3162,
+    "best_price": 3800.31,
+    "worst_price": 3800.31,
+    "tp1": 3766.10721,
+    "tp2": null,
+    "tp3": null,
+    "tp_main": 3766.10721,
+    "capital": 1000.0,
+    "status": "OPEN",
+    "exit_price": null,
+    "pnl_usd": null,
+    "result": null,
+    "closed_at": null,
+    "exit_time": null,
+    "grind_count": 0,
+    "grind_entries": [
+      3800.31
     ],
     "tag": "breakout_short"
   }
