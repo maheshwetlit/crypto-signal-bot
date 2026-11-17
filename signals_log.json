@@ -2125,5 +2125,39 @@
     ],
     "tag": "breakout_short",
     "pnl_pct": 0.9
+  },
+  {
+    "id": "SIG-0062",
+    "time": "2026-11-17T02:26:55.652823+00:00",
+    "pair": "BLESS/USDT",
+    "exchange": "KuCoin",
+    "direction": "SHORT",
+    "style": "CONFIRMED_BREAKOUT",
+    "score": 94.1,
+    "adx": 34.1,
+    "rsi": 11.7,
+    "rsi3": 0.0,
+    "volume_x": 2.81,
+    "htf_trend": "BULLISH",
+    "entry": 0.01555,
+    "sl": 0.015861,
+    "best_price": 0.01555,
+    "worst_price": 0.01555,
+    "tp1": 0.01541005,
+    "tp2": null,
+    "tp3": null,
+    "tp_main": 0.01541005,
+    "capital": 1000.0,
+    "status": "OPEN",
+    "exit_price": null,
+    "pnl_usd": null,
+    "result": null,
+    "closed_at": null,
+    "exit_time": null,
+    "grind_count": 0,
+    "grind_entries": [
+      0.01555
+    ],
+    "tag": "breakout_short"
   }
 ]
