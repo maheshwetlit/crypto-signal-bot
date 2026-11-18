@@ -896,17 +896,18 @@
     "tp3": null,
     "tp_main": 1790.6775400000001,
     "capital": 1000.0,
-    "status": "OPEN",
-    "exit_price": null,
-    "pnl_usd": null,
-    "result": null,
-    "closed_at": null,
-    "exit_time": null,
+    "status": "WIN",
+    "exit_price": 1805.07,
+    "pnl_usd": 1.03,
+    "result": "WIN",
+    "closed_at": "2026-11-18T04:55:48.474348+00:00",
+    "exit_time": "2026-11-18T04:55:48.474348+00:00",
     "grind_count": 0,
     "grind_entries": [
       1806.94
     ],
-    "tag": "breakout_short"
+    "tag": "breakout_short",
+    "pnl_pct": 0.1
   },
   {
     "id": "SIG-0027",
@@ -1059,7 +1060,7 @@
     "htf_trend": "BEARISH",
     "entry": 3.848e-06,
     "sl": 3.92496e-06,
-    "best_price": 3.847e-06,
+    "best_price": 3.843e-06,
     "worst_price": 3.848e-06,
     "tp1": 3.813368e-06,
     "tp2": null,
