@@ -662,5 +662,39 @@
       0.1161
     ],
     "tag": "breakout_short"
+  },
+  {
+    "id": "SIG-0020",
+    "time": "2026-11-18T01:02:12.556081+00:00",
+    "pair": "ARB/USDT",
+    "exchange": "KuCoin",
+    "direction": "SHORT",
+    "style": "CONFIRMED_BREAKOUT",
+    "score": 82.5,
+    "adx": 22.5,
+    "rsi": 20.0,
+    "rsi3": 16.7,
+    "volume_x": 1.67,
+    "htf_trend": "BEARISH",
+    "entry": 0.1318,
+    "sl": 0.134436,
+    "best_price": 0.1318,
+    "worst_price": 0.1318,
+    "tp1": 0.1306138,
+    "tp2": null,
+    "tp3": null,
+    "tp_main": 0.1306138,
+    "capital": 1000.0,
+    "status": "OPEN",
+    "exit_price": null,
+    "pnl_usd": null,
+    "result": null,
+    "closed_at": null,
+    "exit_time": null,
+    "grind_count": 0,
+    "grind_entries": [
+      0.1318
+    ],
+    "tag": "breakout_short"
   }
 ]
