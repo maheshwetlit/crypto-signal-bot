@@ -3041,5 +3041,39 @@
       0.1063
     ],
     "tag": "breakout_short"
+  },
+  {
+    "id": "SIG-0088",
+    "time": "2026-11-19T18:47:00.105085+00:00",
+    "pair": "AAPLX/USDT",
+    "exchange": "KuCoin",
+    "direction": "SHORT",
+    "style": "CONFIRMED_BREAKOUT",
+    "score": 76.2,
+    "adx": 16.2,
+    "rsi": 44.7,
+    "rsi3": 26.6,
+    "volume_x": 1.37,
+    "htf_trend": "BEARISH",
+    "entry": 351.12,
+    "sl": 358.1424,
+    "best_price": 351.12,
+    "worst_price": 351.12,
+    "tp1": 347.95992,
+    "tp2": null,
+    "tp3": null,
+    "tp_main": 347.95992,
+    "capital": 1000.0,
+    "status": "OPEN",
+    "exit_price": null,
+    "pnl_usd": null,
+    "result": null,
+    "closed_at": null,
+    "exit_time": null,
+    "grind_count": 0,
+    "grind_entries": [
+      351.12
+    ],
+    "tag": "breakout_short"
   }
 ]
