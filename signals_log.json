@@ -2821,17 +2821,18 @@
     "tp3": null,
     "tp_main": 0.308201,
     "capital": 1000.0,
-    "status": "OPEN",
-    "exit_price": null,
-    "pnl_usd": null,
-    "result": null,
-    "closed_at": null,
-    "exit_time": null,
+    "status": "WIN",
+    "exit_price": 0.3104,
+    "pnl_usd": 1.93,
+    "result": "WIN",
+    "closed_at": "2026-11-19T18:10:59.817206+00:00",
+    "exit_time": "2026-11-19T18:10:59.817206+00:00",
     "grind_count": 0,
     "grind_entries": [
       0.311
     ],
-    "tag": "breakout_short"
+    "tag": "breakout_short",
+    "pnl_pct": 0.19
   },
   {
     "id": "SIG-0082",
