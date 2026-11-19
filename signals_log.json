@@ -3003,5 +3003,39 @@
       3.2657
     ],
     "tag": "breakout_short"
+  },
+  {
+    "id": "SIG-0087",
+    "time": "2026-11-19T16:03:16.068843+00:00",
+    "pair": "ENA/USDT",
+    "exchange": "KuCoin",
+    "direction": "SHORT",
+    "style": "CONFIRMED_BREAKOUT",
+    "score": 94.4,
+    "adx": 34.4,
+    "rsi": 17.7,
+    "rsi3": 28.6,
+    "volume_x": 0.8,
+    "htf_trend": "BEARISH",
+    "entry": 0.1063,
+    "sl": 0.10842600000000001,
+    "best_price": 0.1063,
+    "worst_price": 0.1063,
+    "tp1": 0.1053433,
+    "tp2": null,
+    "tp3": null,
+    "tp_main": 0.1053433,
+    "capital": 1000.0,
+    "status": "OPEN",
+    "exit_price": null,
+    "pnl_usd": null,
+    "result": null,
+    "closed_at": null,
+    "exit_time": null,
+    "grind_count": 0,
+    "grind_entries": [
+      0.1063
+    ],
+    "tag": "breakout_short"
   }
 ]
