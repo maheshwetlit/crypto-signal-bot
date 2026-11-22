@@ -2289,23 +2289,24 @@
     "htf_trend": "BULLISH",
     "entry": 0.07986,
     "sl": 0.08145720000000001,
-    "best_price": 0.07986,
+    "best_price": 0.07814,
     "worst_price": 0.07986,
     "tp1": 0.07914126,
     "tp2": null,
     "tp3": null,
     "tp_main": 0.07914126,
     "capital": 1000.0,
-    "status": "OPEN",
-    "exit_price": null,
-    "pnl_usd": null,
-    "result": null,
-    "closed_at": null,
-    "exit_time": null,
+    "status": "WIN",
+    "exit_price": 0.07914126,
+    "pnl_usd": 9.0,
+    "result": "WIN",
+    "closed_at": "2026-11-22T11:55:51.258896+00:00",
+    "exit_time": "2026-11-22T11:55:51.258896+00:00",
     "grind_count": 0,
     "grind_entries": [
       0.07986
     ],
-    "tag": "breakout_short"
+    "tag": "breakout_short",
+    "pnl_pct": 0.9
   }
 ]
