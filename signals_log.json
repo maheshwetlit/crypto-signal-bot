@@ -3285,5 +3285,39 @@
     ],
     "tag": "breakout_short",
     "pnl_pct": 0.9
+  },
+  {
+    "id": "SIG-0095",
+    "time": "2026-11-23T04:02:34.969010+00:00",
+    "pair": "MTX/USDT",
+    "exchange": "KuCoin",
+    "direction": "SHORT",
+    "style": "CONFIRMED_BREAKOUT",
+    "score": 79.8,
+    "adx": 19.8,
+    "rsi": 33.7,
+    "rsi3": 41.5,
+    "volume_x": 1.62,
+    "htf_trend": "BEARISH",
+    "entry": 0.5568,
+    "sl": 0.567936,
+    "best_price": 0.5568,
+    "worst_price": 0.5568,
+    "tp1": 0.5517888,
+    "tp2": null,
+    "tp3": null,
+    "tp_main": 0.5517888,
+    "capital": 1000.0,
+    "status": "OPEN",
+    "exit_price": null,
+    "pnl_usd": null,
+    "result": null,
+    "closed_at": null,
+    "exit_time": null,
+    "grind_count": 0,
+    "grind_entries": [
+      0.5568
+    ],
+    "tag": "breakout_short"
   }
 ]
