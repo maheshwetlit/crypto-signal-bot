@@ -4186,17 +4186,18 @@
     "tp3": null,
     "tp_main": 0.3077055,
     "capital": 1000.0,
-    "status": "OPEN",
-    "exit_price": null,
-    "pnl_usd": null,
-    "result": null,
-    "closed_at": null,
-    "exit_time": null,
+    "status": "WIN",
+    "exit_price": 0.3095,
+    "pnl_usd": 3.22,
+    "result": "WIN",
+    "closed_at": "2026-11-23T22:25:54.445916+00:00",
+    "exit_time": "2026-11-23T22:25:54.445916+00:00",
     "grind_count": 0,
     "grind_entries": [
       0.3105
     ],
-    "tag": "breakout_short"
+    "tag": "breakout_short",
+    "pnl_pct": 0.32
   },
   {
     "id": "SIG-0121",
@@ -4351,24 +4352,25 @@
     "htf_trend": "NEUTRAL",
     "entry": 0.996,
     "sl": 1.01592,
-    "best_price": 0.991,
+    "best_price": 0.987,
     "worst_price": 0.999,
     "tp1": 0.987036,
     "tp2": null,
     "tp3": null,
     "tp_main": 0.987036,
     "capital": 1000.0,
-    "status": "OPEN",
-    "exit_price": null,
-    "pnl_usd": null,
-    "result": null,
-    "closed_at": null,
-    "exit_time": null,
+    "status": "WIN",
+    "exit_price": 0.987036,
+    "pnl_usd": 9.0,
+    "result": "WIN",
+    "closed_at": "2026-11-23T22:25:54.445916+00:00",
+    "exit_time": "2026-11-23T22:25:54.445916+00:00",
     "grind_count": 0,
     "grind_entries": [
       0.996
     ],
-    "tag": "breakout_short"
+    "tag": "breakout_short",
+    "pnl_pct": 0.9
   },
   {
     "id": "SIG-0126",
@@ -4556,24 +4558,25 @@
     "htf_trend": "NEUTRAL",
     "entry": 0.998,
     "sl": 1.01796,
-    "best_price": 0.991,
+    "best_price": 0.987,
     "worst_price": 0.998,
     "tp1": 0.989018,
     "tp2": null,
     "tp3": null,
     "tp_main": 0.989018,
     "capital": 1000.0,
-    "status": "OPEN",
-    "exit_price": null,
-    "pnl_usd": null,
-    "result": null,
-    "closed_at": null,
-    "exit_time": null,
+    "status": "WIN",
+    "exit_price": 0.989018,
+    "pnl_usd": 9.0,
+    "result": "WIN",
+    "closed_at": "2026-11-23T22:25:54.445916+00:00",
+    "exit_time": "2026-11-23T22:25:54.445916+00:00",
     "grind_count": 0,
     "grind_entries": [
       0.998
     ],
-    "tag": "breakout_short"
+    "tag": "breakout_short",
+    "pnl_pct": 0.9
   },
   {
     "id": "SIG-0132",
