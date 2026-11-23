@@ -4469,5 +4469,39 @@
       788.533
     ],
     "tag": "breakout_short"
+  },
+  {
+    "id": "SIG-0129",
+    "time": "2026-11-23T21:26:57.981099+00:00",
+    "pair": "NVDAON/USDT",
+    "exchange": "KuCoin",
+    "direction": "SHORT",
+    "style": "CONFIRMED_BREAKOUT",
+    "score": 100.0,
+    "adx": 76.5,
+    "rsi": 0.8,
+    "rsi3": 0.0,
+    "volume_x": 3.79,
+    "htf_trend": "NEUTRAL",
+    "entry": 167.57,
+    "sl": 170.9214,
+    "best_price": 167.57,
+    "worst_price": 167.57,
+    "tp1": 166.06187,
+    "tp2": null,
+    "tp3": null,
+    "tp_main": 166.06187,
+    "capital": 1000.0,
+    "status": "OPEN",
+    "exit_price": null,
+    "pnl_usd": null,
+    "result": null,
+    "closed_at": null,
+    "exit_time": null,
+    "grind_count": 0,
+    "grind_entries": [
+      167.57
+    ],
+    "tag": "breakout_short"
   }
 ]
