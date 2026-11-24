@@ -1,0 +1,24 @@
+{
+  "verdict": "FAIL",
+  "oos": {
+    "trades": 285,
+    "trades_per_day": 4.12,
+    "win_rate": 32.6,
+    "avg_R": -0.128,
+    "net_usd": -789.5,
+    "per_trade_usd": -2.77,
+    "profit_factor": 0.73,
+    "max_dd_usd": -1138.1
+  },
+  "is": {
+    "set": "In-sample",
+    "trades": 372,
+    "trades_per_day": 3.59,
+    "win_rate": 27.7,
+    "avg_R": -0.315,
+    "net_usd": -1919.5,
+    "per_trade_usd": -5.16,
+    "profit_factor": 0.55,
+    "max_dd_usd": -2612.5
+  }
+}

@@ -1,0 +1,54 @@
+name: Backtest daily strategy
+on:
+  workflow_dispatch:
+    inputs:
+      phase:
+        description: "dev (data before cutoff only) or final (one-time check on untouched period)"
+        default: "dev"
+      cutoff:
+        description: "Untouched period starts on"
+        default: "2025-07-01"
+  push:
+    branches: [strategy-v12-daily]
+    paths: ["strategy_daily.py", "backtest_daily.py", ".github/workflows/backtest_daily.yml"]
+permissions:
+  contents: write
+concurrency:
+  group: backtest-daily-${{ github.ref }}
+  cancel-in-progress: false
+jobs:
+  backtest:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    env:
+      PHASE: ${{ inputs.phase || 'dev' }}  # push always runs dev; final only by manual dispatch
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+      - run: pip install -r requirements.txt
+      - name: Cache candle data
+        uses: actions/cache@v4
+        with:
+          path: backtest_cache_daily
+          key: hl-daily-${{ github.run_id }}
+          restore-keys: hl-daily-
+      - name: Run backtest
+        run: python backtest_daily.py --phase $PHASE --cutoff ${{ inputs.cutoff || '2025-07-01' }}
+      - name: Job summary
+        if: always()
+        run: cat backtest_results/daily_$PHASE/report.md >> $GITHUB_STEP_SUMMARY || true
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: daily-backtest-${{ env.PHASE }}
+          path: backtest_results/
+      - name: Commit report
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add backtest_results/daily_*/report.md backtest_results/daily_*/summary.json
+          git add -f backtest_results/daily_*/trades.csv
+          git diff --cached --quiet || git commit -m "Daily backtest report ($PHASE) [skip ci]"
+          for i in 1 2 3; do git push && break || { sleep 5; git pull --rebase origin ${GITHUB_REF_NAME}; }; done

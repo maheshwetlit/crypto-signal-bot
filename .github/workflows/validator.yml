@@ -1,8 +1,7 @@
 name: Hermes Signal Validator
 on:
- schedule:
- # Every 5 min via staggered triggers (GitHub free tier)
- - cron: '0,5,10,15,20,25,30,35,40,45,50,55 * * * *'
+ # DISABLED for v11: crypto_signal_bot.py now closes its own trades from candles.
+ # Running both made two writers fight over signals_log.json (lost trades).
  workflow_dispatch:
 permissions:
  contents: write

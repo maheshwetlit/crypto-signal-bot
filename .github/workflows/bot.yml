@@ -1,14 +1,16 @@
 name: Crypto Signal Bot
 on:
   schedule:
-    # Multiple staggered triggers - GitHub throttles single */10 on free repos
-    # These fire at :00, :10, :20, :30, :40, :50 of every hour
-    - cron: '0,10,20,30,40,50 * * * *'
+    # v12: hourly (paper fills/stops); daily scan runs on the first run after 00:00 UTC
+    - cron: '7 * * * *'
   workflow_dispatch:
   repository_dispatch:
     types: [run-bot]
 permissions:
   contents: write
+concurrency:
+  group: crypto-signal-bot
+  cancel-in-progress: false
 jobs:
   run-bot:
     runs-on: ubuntu-latest
@@ -42,7 +44,7 @@ jobs:
           if [ -f signals_log.json ]; then
             # Rebase-pull first so concurrent runs can't clobber each other's signals
             git pull --rebase --autostash origin main || true
-            git add signals_log.json
+            git add signals_log.json bot_state.json
             git diff --cached --quiet || git commit -m "Update signals_log.json [skip ci]"
             # Retry push up to 3x; if it fails (concurrent write), the next run picks up the slack
             for i in 1 2 3; do
@@ -57,7 +59,7 @@ jobs:
           GIT_COMMITTER_NAME: github-actions[bot]
           GIT_COMMITTER_EMAIL: github-actions[bot]@users.noreply.github.com
       - name: Notify status
-        if: success() || failure()
+        if: failure()
         run: |
           if [ "${{ job.status }}" = "success" ]; then
             MSG="Cryptosignal Bot run succeeded"
