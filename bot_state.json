@@ -1,1 +1,11 @@
-{}
+{
+  "strategy": "v12-daily-dip",
+  "equity_cash": 1000.0,
+  "slots": 4,
+  "peak_equity": 1000.0,
+  "halted": false,
+  "last_hour_t": 1795550400000,
+  "last_daily_t": 1795478400000,
+  "orders": [],
+  "positions": {}
+}
