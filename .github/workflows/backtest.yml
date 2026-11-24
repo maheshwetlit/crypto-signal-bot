@@ -8,6 +8,21 @@ on:
       pairs:
         description: "Number of most-liquid KuCoin pairs"
         default: "40"
+      tf:
+        description: "Signal timeframe (15m or 1h)"
+        default: "15m"
+      htf:
+        description: "Trend timeframe (1h or 4h)"
+        default: "1h"
+      end_days_ago:
+        description: "End the test window this many days ago (0 = now)"
+        default: "0"
+      max_risk:
+        description: "Max stop distance % (blank = strategy default)"
+        default: ""
+      tag:
+        description: "Sub-folder name for this report"
+        default: ""
   push:
     branches: [main, strategy-v11]
     paths: ["strategy.py", "backtest.py"]
@@ -31,13 +46,16 @@ jobs:
         uses: actions/cache@v4
         with:
           path: backtest_cache
-          key: candles-${{ inputs.days || '180' }}-${{ inputs.pairs || '40' }}-${{ github.run_id }}
-          restore-keys: candles-${{ inputs.days || '180' }}-${{ inputs.pairs || '40' }}-
+          key: candles-${{ github.run_id }}
+          restore-keys: candles-
       - name: Run backtest
-        run: python backtest.py --days ${{ inputs.days || '180' }} --pairs ${{ inputs.pairs || '40' }}
+        run: |
+          python backtest.py --days ${{ inputs.days || '180' }} --pairs ${{ inputs.pairs || '40' }} \
+            --tf ${{ inputs.tf || '15m' }} --htf ${{ inputs.htf || '1h' }} --end-days-ago ${{ inputs.end_days_ago || '0' }} \
+            ${{ inputs.max_risk && format('--max-risk {0}', inputs.max_risk) || '' }} ${{ inputs.tag && format('--tag {0}', inputs.tag) || '' }}
       - name: Job summary
         if: always()
-        run: test -f backtest_results/report.md && cat backtest_results/report.md >> $GITHUB_STEP_SUMMARY || true
+        run: f=$(ls -t backtest_results/*/report.md backtest_results/report.md 2>/dev/null | head -1); test -n "$f" && cat "$f" >> $GITHUB_STEP_SUMMARY || true
       - uses: actions/upload-artifact@v4
         if: always()
         with:
@@ -47,6 +65,6 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add backtest_results/report.md backtest_results/summary.json
+          git add backtest_results/ ':!backtest_results/**/trades.csv' ':!backtest_results/trades.csv' || git add backtest_results/
           git diff --cached --quiet || git commit -m "Backtest report [skip ci]"
           for i in 1 2 3; do git push && break || { sleep 5; git pull --rebase origin ${GITHUB_REF_NAME}; }; done

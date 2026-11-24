@@ -65,6 +65,11 @@ class P:
     USE_BTC_FILTER = True
 
     @classmethod
+    def use_timeframes(cls, tf, htf):
+        ms = {"15m": 15 * 60_000, "1h": 3_600_000, "4h": 4 * 3_600_000}
+        cls.TF, cls.TF_MS, cls.HTF, cls.HTF_MS = tf, ms[tf], htf, ms[htf]
+
+    @classmethod
     def round_trip_cost(cls):
         return 2 * (cls.FEE_PCT + cls.SLIPPAGE_PCT) / 100.0
 

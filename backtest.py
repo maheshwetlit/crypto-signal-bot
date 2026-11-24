@@ -67,11 +67,11 @@ def fetch_history(ex, sym, tf, tf_ms, start_ms, end_ms):
     return df[df["t"] < end_ms].reset_index(drop=True)
 
 
-def load_data(days, n_pairs, cache="backtest_cache"):
+def load_data(days, n_pairs, end_days_ago=0, cache="backtest_cache"):
     import ccxt
     ex = ccxt.kucoin({"enableRateLimit": True})
     os.makedirs(cache, exist_ok=True)
-    end_ms = (int(time.time() * 1000) // P.HTF_MS) * P.HTF_MS
+    end_ms = (int(time.time() * 1000) // P.HTF_MS) * P.HTF_MS - end_days_ago * 86_400_000
     start_ms = end_ms - days * 86_400_000
     warm_ms = 250 * P.HTF_MS  # EMA200 warm-up on 1h
     tick = ex.fetch_tickers()
@@ -81,14 +81,14 @@ def load_data(days, n_pairs, cache="backtest_cache"):
         pairs = ["BTC/USDT"] + pairs[:-1]
     data = {}
     for sym in pairs:
-        f = os.path.join(cache, sym.replace("/", "_") + f"_{days}.pkl")
+        f = os.path.join(cache, sym.replace("/", "_") + f"_{P.TF}_{P.HTF}_{days}_{end_days_ago}.pkl")
         if os.path.exists(f):
             data[sym] = pd.read_pickle(f)
             continue
         print(f"fetch {sym}")
         d15 = fetch_history(ex, sym, P.TF, P.TF_MS, start_ms - warm_ms, end_ms)
         d1h = fetch_history(ex, sym, P.HTF, P.HTF_MS, start_ms - warm_ms, end_ms)
-        if len(d15) < 1000 or len(d1h) < 300:
+        if len(d15) < 500 or len(d1h) < 250:
             print(f"  skip {sym}: not enough history")
             continue
         data[sym] = (d15, d1h)
@@ -202,10 +202,21 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--days", type=int, default=180)
     ap.add_argument("--pairs", type=int, default=40)
+    ap.add_argument("--tf", default="15m")
+    ap.add_argument("--htf", default="1h")
+    ap.add_argument("--end-days-ago", type=int, default=0)
+    ap.add_argument("--max-risk", type=float, default=None)
+    ap.add_argument("--tag", default="")
     ap.add_argument("--no-robustness", action="store_true")
     a = ap.parse_args()
+    P.use_timeframes(a.tf, a.htf)
+    if a.max_risk:
+        P.MAX_RISK_PCT = a.max_risk
+    global OUT_DIR
+    if a.tag:
+        OUT_DIR = os.path.join(OUT_DIR, a.tag)
 
-    data, start_ms, end_ms = load_data(a.days, a.pairs)
+    data, start_ms, end_ms = load_data(a.days, a.pairs, a.end_days_ago)
     split_ms = start_ms + int(0.6 * (end_ms - start_ms))
     trades, sigs = run_all(data, start_ms)
     os.makedirs(OUT_DIR, exist_ok=True)
@@ -213,7 +224,7 @@ def main():
     fmt = lambda ms: pd.to_datetime(ms, unit="ms", utc=True).strftime("%Y-%m-%d")
 
     rep = [f"# Backtest report — {S.VERSION}\n",
-           f"Generated {pd.Timestamp.utcnow():%Y-%m-%d %H:%M} UTC · {len(data)} KuCoin pairs · 15m candles · "
+           f"Generated {pd.Timestamp.utcnow():%Y-%m-%d %H:%M} UTC · {len(data)} KuCoin pairs · {P.TF} candles, {P.HTF} trend · max risk {P.MAX_RISK_PCT}% · "
            f"$1,000 per trade · costs {P.FEE_PCT}% fee + {P.SLIPPAGE_PCT}% slippage per side\n",
            f"In-sample: {fmt(start_ms)} → {fmt(split_ms)} · Out-of-sample: {fmt(split_ms)} → {fmt(end_ms)}\n"]
 
@@ -266,7 +277,7 @@ def main():
                 ("TP 1.5R", {"TP_R": 1.5}), ("TP 2.5R", {"TP_R": 2.5}),
                 ("ADX max 35", {"ADX_RANGE": (18, 35)}), ("ADX max 50", {"ADX_RANGE": (18, 50)}),
                 ("ext max 0.75 ATR", {"MAX_EXT_ATR": 0.75}), ("ext max 1.5 ATR", {"MAX_EXT_ATR": 1.5}),
-                ("time stop 4h", {"TIME_STOP_BARS": 16}), ("time stop 8h", {"TIME_STOP_BARS": 32}),
+                ("time stop x0.67", {"TIME_STOP_BARS": 16}), ("time stop x1.33", {"TIME_STOP_BARS": 32}),
                 ("no BTC filter", {"USE_BTC_FILTER": False})]
         g_rows = []
         for name, kw in grid:

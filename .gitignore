@@ -207,3 +207,4 @@ marimo/_lsp/
 __marimo__/
 backtest_cache/
 backtest_results/trades.csv
+backtest_results/**/trades.csv
