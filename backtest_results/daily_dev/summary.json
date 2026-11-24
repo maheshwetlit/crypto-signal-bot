@@ -1,0 +1,23 @@
+{
+  "phase": "dev",
+  "verdict": "PASS",
+  "trades": {
+    "trades": 233,
+    "win_rate": 66.5,
+    "avg_trade_pct": 3.432,
+    "avg_R": 0.088,
+    "profit_factor": 1.42,
+    "net_usd": 215.2,
+    "months_profitable_pct": 65.4,
+    "months": 26,
+    "avg_days_held": 5.9
+  },
+  "account": {
+    "start_equity": 1000.0,
+    "end_equity": 1215.2,
+    "return_pct": 21.5,
+    "cagr_pct": 8.1,
+    "max_drawdown_pct": -9.9,
+    "avg_open_positions": 1.52
+  }
+}
