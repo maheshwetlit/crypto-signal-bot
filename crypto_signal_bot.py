@@ -28,7 +28,7 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 LOG_FILE = os.path.join(HERE, "signals_log.json")
 STATE_FILE = os.path.join(HERE, "bot_state.json")
 TG_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN", "")
-TG_CHAT = os.getenv("TELEGRAM_CHAT_ID", "")
+TG_CHAT = os.getenv("TELEGRAM_CHAT_ID", "") or "5515185305"  # same fallback chat as v10
 SCAN_TOP_BY_24H_VOLUME = 60     # pre-filter before ranking by 30-day volume
 HALT_DD_PCT = 25.0              # safety switch: stop new entries beyond this drawdown
 VENUE = "Hyperliquid (paper)"
@@ -246,6 +246,9 @@ def main():
     st = load(STATE_FILE, {})
     if st.get("strategy") != S.VERSION:
         st = new_state()
+        tg(f"🤖 <b>Hermes {S.VERSION} started</b> (paper only, Hyperliquid data)\n"
+           f"Start balance ${D.START_EQUITY:,.0f} · {D.SLOTS_START} slots · {D.RISK_PCT}% risk per trade\n"
+           f"Daily summary after each 00:00 UTC close; alerts on fills and exits.")
     log = load(LOG_FILE, [])
     t = now_ms()
     hour_end = (t // HOUR_MS) * HOUR_MS
