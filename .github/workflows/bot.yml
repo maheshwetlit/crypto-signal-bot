@@ -1,8 +1,8 @@
 name: Crypto Signal Bot
 on:
   schedule:
-    # v11: 15m strategy — run just after each 15m candle closes
-    - cron: '1,16,31,46 * * * *'
+    # v12: hourly (paper fills/stops); daily scan runs on the first run after 00:00 UTC
+    - cron: '7 * * * *'
   workflow_dispatch:
   repository_dispatch:
     types: [run-bot]
@@ -59,7 +59,7 @@ jobs:
           GIT_COMMITTER_NAME: github-actions[bot]
           GIT_COMMITTER_EMAIL: github-actions[bot]@users.noreply.github.com
       - name: Notify status
-        if: success() || failure()
+        if: failure()
         run: |
           if [ "${{ job.status }}" = "success" ]; then
             MSG="Cryptosignal Bot run succeeded"

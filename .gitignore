@@ -208,3 +208,4 @@ __marimo__/
 backtest_cache/
 backtest_results/trades.csv
 backtest_results/**/trades.csv
+backtest_cache_daily/

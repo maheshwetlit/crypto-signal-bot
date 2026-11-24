@@ -1,17 +1,15 @@
 #!/usr/bin/env python3
 """
-crypto_signal_bot.py — Hermes v11 (trend pullback), PAPER signals on KuCoin.
+crypto_signal_bot.py — Hermes v12 daily dip-in-trend, PAPER trading on Hyperliquid data.
 
-What changed vs v10 (see STRATEGY.md for the full reasoning):
-  * Strategy logic lives in strategy.py and is shared with backtest.py,
-    so live == backtest.
-  * Signals use CLOSED 15m candles only (v10 read the still-forming candle).
-  * Trade exits are replayed from real candles since entry (stop checked
-    before target), not from 10-minute ticker snapshots.
-  * P&L includes fees + slippage. No averaging down ("grinding") — removed.
-  * One writer for signals_log.json (the old validator also closed trades
-    with different rules, which caused conflicts and lost trades).
-  * Unique trade IDs; trades are never dropped from the log.
+Runs every hour (GitHub Actions):
+  * hourly:  replays the last closed 1h candles to fill paper limit orders and
+             trigger stops (stop checked before anything else in a candle).
+  * daily:   after each daily close (00:00 UTC): exit checks (bounce / time stop),
+             scan of the most liquid perps, new limit orders, daily summary,
+             safety switch.
+Rules live in strategy_daily.py (shared with backtest_daily.py).
+No account or API key is needed for paper mode.
 """
 import json
 import os
@@ -19,27 +17,21 @@ import time
 import traceback
 from datetime import datetime, timezone
 
-import ccxt
 import requests
 
-import strategy as S
-from strategy import P
+import hl_data as H
+import strategy_daily as S
+from strategy_daily import D
 
-
-class Config:
-    SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
-    TELEGRAM_BOT_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN", "")
-    TELEGRAM_CHAT_ID = os.getenv("TELEGRAM_CHAT_ID", "")
-    EXCHANGE = "KuCoin"
-    CAPITAL_PER_SIGNAL = 1000.0
-    MIN_24H_VOLUME_USD = 5_000_000
-    MAX_COINS_TO_SCAN = 60
-    MAX_OPEN_TOTAL = 10
-    MAX_OPEN_PER_PAIR = 1
-    SIGNAL_LOG_FILE = os.path.join(SCRIPT_DIR, "signals_log.json")
-    STATE_FILE = os.path.join(SCRIPT_DIR, "bot_state.json")
-    EXCLUDE_BASES = {"USDC", "TUSD", "DAI", "FDUSD", "USDD", "PYUSD", "USDE", "USD1", "EUR", "PAXG", "XAUT", "BUSD"}
-    BLOCKLIST = {"H/USDT"}
+DAY_MS, HOUR_MS = S.DAY_MS, H.HOUR_MS
+HERE = os.path.dirname(os.path.abspath(__file__))
+LOG_FILE = os.path.join(HERE, "signals_log.json")
+STATE_FILE = os.path.join(HERE, "bot_state.json")
+TG_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN", "")
+TG_CHAT = os.getenv("TELEGRAM_CHAT_ID", "")
+SCAN_TOP_BY_24H_VOLUME = 60     # pre-filter before ranking by 30-day volume
+HALT_DD_PCT = 25.0              # safety switch: stop new entries beyond this drawdown
+VENUE = "Hyperliquid (paper)"
 
 
 def now_ms():
@@ -50,17 +42,7 @@ def iso(ms):
     return datetime.fromtimestamp(ms / 1000, tz=timezone.utc).isoformat()
 
 
-def is_tradeable(sym):
-    if not sym.endswith("/USDT") or sym in Config.BLOCKLIST:
-        return False
-    base = sym.split("/")[0]
-    if base in Config.EXCLUDE_BASES or base.endswith(("3L", "3S", "2L", "2S", "UP", "DOWN")):
-        return False
-    return True
-
-
-# ───────────────────────── storage ─────────────────────────
-def load_json(path, default):
+def load(path, default):
     try:
         with open(path) as f:
             return json.load(f)
@@ -68,178 +50,217 @@ def load_json(path, default):
         return default
 
 
-def save_json(path, obj):
-    tmp = path + ".tmp"
-    with open(tmp, "w") as f:
+def save(path, obj):
+    with open(path + ".tmp", "w") as f:
         json.dump(obj, f, indent=2)
-    os.replace(tmp, path)
+    os.replace(path + ".tmp", path)
 
 
-# ───────────────────────── telegram ─────────────────────────
-class Telegram:
-    def send(self, msg):
-        if not Config.TELEGRAM_BOT_TOKEN or not Config.TELEGRAM_CHAT_ID:
-            print(f"[TG-OFF] {msg}")
-            return
-        for _ in range(3):
-            try:
-                r = requests.post(f"https://api.telegram.org/bot{Config.TELEGRAM_BOT_TOKEN}/sendMessage",
-                                  json={"chat_id": Config.TELEGRAM_CHAT_ID, "text": msg, "parse_mode": "HTML"},
-                                  timeout=15)
-                if r.status_code == 200:
-                    return
-                print(f"Telegram {r.status_code}: {r.text[:200]}")
-            except Exception as e:
-                print(f"Telegram error: {e}")
-            time.sleep(2)
-
-
-# ───────────────────────── market data ─────────────────────────
-def fetch_closed(ex, sym, tf, tf_ms, limit=500, since=None):
-    rows = ex.fetch_ohlcv(sym, tf, since=since, limit=limit)
-    return S.closed_only(S.to_df(rows), tf_ms, now_ms())
+def tg(msg):
+    if not TG_TOKEN or not TG_CHAT:
+        print(f"[TG-OFF] {msg}")
+        return
+    for _ in range(3):
+        try:
+            r = requests.post(f"https://api.telegram.org/bot{TG_TOKEN}/sendMessage",
+                              json={"chat_id": TG_CHAT, "text": msg, "parse_mode": "HTML"}, timeout=15)
+            if r.status_code == 200:
+                return
+            print(f"Telegram {r.status_code}: {r.text[:200]}")
+        except Exception as e:
+            print(f"Telegram error: {e}")
+        time.sleep(2)
 
 
 def fmt(p):
-    return f"{p:.8g}"
+    return f"{p:.6g}"
 
 
-# ───────────────────────── exits ─────────────────────────
-def update_open_trades(ex, log, tg):
-    """Replay each open trade over the closed 15m candles since its entry bar."""
-    closed_n = 0
-    for s in log:
-        if s.get("status") != "OPEN" or s.get("strategy") != S.VERSION:
-            continue
+def new_state():
+    t = now_ms()
+    return {"strategy": S.VERSION, "equity_cash": D.START_EQUITY, "slots": D.SLOTS_START,
+            "peak_equity": D.START_EQUITY, "halted": False,
+            "last_hour_t": (t // HOUR_MS) * HOUR_MS, "last_daily_t": (t // DAY_MS) * DAY_MS - DAY_MS,
+            "orders": [], "positions": {}}
+
+
+# ───────────────────────── trade bookkeeping ─────────────────────────
+def open_position(st, log, o, fill, t):
+    pos = {**o, "entry": fill, "fill_t": int(t)}
+    pos["id"] = f"{datetime.fromtimestamp(t / 1000, tz=timezone.utc):%Y%m%d-%H}-{o['coin']}-{o['side'][0]}"
+    st["positions"][o["coin"]] = pos
+    log.append({"id": pos["id"], "strategy": S.VERSION, "time": iso(t), "pair": f"{o['coin']}/USD",
+                "exchange": VENUE, "direction": o["side"], "style": "DAILY_DIP_IN_TREND",
+                "entry": fill, "sl": o["stop"], "tp1": None, "tp_main": None,
+                "notional": round(o["notional"], 2), "risk_pct": round(o["stop_pct"], 2),
+                "capital": round(o["notional"], 2), "status": "OPEN", "result": None,
+                "exit_price": None, "pnl_usd": None, "closed_at": None, "exit_time": None})
+    tg(f"⚡ <b>{o['side']} filled</b> <code>{o['coin']}</code> (paper)\n"
+       f"Entry: <code>{fmt(fill)}</code> · Size: ${o['notional']:,.0f}\n"
+       f"Stop: <code>{fmt(o['stop'])}</code> (−{o['stop_pct']:.1f}%, risk ≈ ${o['notional'] * o['stop_pct'] / 100:,.0f})\n"
+       f"Exit on bounce or after {D.TIME_STOP_DAYS} days · Slots {len(st['positions'])}/{st['slots']}")
+
+
+def close_position(st, log, coin, px, reason, t):
+    pos = st["positions"].pop(coin)
+    held = int((t // DAY_MS) * DAY_MS - (pos["fill_t"] // DAY_MS) * DAY_MS) // DAY_MS
+    p = S.close_pnl(pos, px, held)
+    st["equity_cash"] += p["net_usd"]
+    won = p["net_usd"] > 0
+    st["slots"] = S.next_slots(st["slots"], won)
+    for rec in log:
+        if rec.get("id") == pos["id"]:
+            rec.update({"status": "WIN" if won else "LOSS", "result": "WIN" if won else "LOSS",
+                        "exit_reason": reason, "exit_price": px, "closed_at": iso(t), "exit_time": iso(t),
+                        "days_held": held, "pnl_usd": round(p["net_usd"], 2), "pnl_pct": round(p["net_pct"], 3),
+                        "cost_usd": round(p["cost_usd"], 2), "r_multiple": round(p["r"], 2),
+                        "equity_after": round(st["equity_cash"], 2)})
+    tg(f"{'✅' if won else '❌'} <b>CLOSED {pos['side']}</b> <code>{coin}</code> (paper)\n"
+       f"Reason: {reason} · {held} day(s)\nExit: <code>{fmt(px)}</code>\n"
+       f"P&L after costs: <b>{p['net_usd']:+.2f} USD</b> ({p['net_pct']:+.2f}%)\n"
+       f"Account: ${st['equity_cash']:,.2f} · Slots now {st['slots']}")
+
+
+# ───────────────────────── hourly: fills & stops ─────────────────────────
+def hourly(st, log, hour_end):
+    coins = set(st["positions"]) | {o["coin"] for o in st["orders"]}
+    for coin in sorted(coins):
         try:
-            bars = fetch_closed(ex, s["pair"], P.TF, P.TF_MS, limit=P.TIME_STOP_BARS + 10, since=s["entry_bar_t"])
-            bars = bars[bars["t"] >= s["entry_bar_t"]].reset_index(drop=True)
-            trade = {"side": s["direction"], "entry": s["entry"], "sl": s["sl"], "tp": s["tp_main"], "risk": s["risk"]}
-            res = S.simulate_exit(trade, bars)
+            bars = H.closed_only(H.candles(coin, "1h", st["last_hour_t"], hour_end), HOUR_MS, hour_end)
         except Exception as e:
-            print(f"[EXIT] {s['pair']}: {e}")
+            print(f"[1h] {coin}: {e}")
             continue
-        if res is None:
-            continue
-        pnl = Config.CAPITAL_PER_SIGNAL * res["net_pct"] / 100
-        exit_bar_t = int(bars["t"].iat[res["bars"] - 1])
-        s.update({
-            "status": "WIN" if pnl > 0 else "LOSS",
-            "result": "WIN" if pnl > 0 else "LOSS",
-            "exit_reason": res["reason"],
-            "exit_price": res["exit"],
-            "closed_at": iso(exit_bar_t + P.TF_MS),
-            "exit_time": iso(exit_bar_t + P.TF_MS),
-            "bars_held": res["bars"],
-            "pnl_gross_pct": round(res["gross_pct"], 3),
-            "pnl_pct": round(res["net_pct"], 3),
-            "pnl_usd": round(pnl, 2),
-            "cost_usd": round(Config.CAPITAL_PER_SIGNAL * P.round_trip_cost(), 2),
-            "r_multiple": round(res["r_net"], 2),
-        })
-        closed_n += 1
-        icon = "✅" if pnl > 0 else "❌"
-        tg.send(f"{icon} <b>CLOSED {s['direction']}</b> <code>{s['pair']}</code>\n"
-                f"Reason: {res['reason']} · {res['bars'] * 15} min\n"
-                f"Exit: <code>{fmt(res['exit'])}</code>\n"
-                f"P&L after costs: <b>{pnl:+.2f} USD</b> ({res['r_net']:+.2f}R)")
-    return closed_n
+        bars = bars[bars["t"] >= st["last_hour_t"]]
+        for _, bar in bars.iterrows():
+            t = int(bar["t"])
+            if coin in st["positions"]:
+                px = S.stop_hit(st["positions"][coin], bar)
+                if px is not None:
+                    close_position(st, log, coin, px, "STOP", t + HOUR_MS)
+                continue
+            for o in [o for o in st["orders"] if o["coin"] == coin]:
+                if not (o["valid_from"] <= t < o["expire_t"]):
+                    continue
+                fill = S.try_fill(o, bar)
+                if fill is None:
+                    continue
+                st["orders"].remove(o)
+                open_position(st, log, o, fill, t)
+                px = S.stop_hit(st["positions"][coin], bar, fill_bar=True)
+                if px is not None:
+                    close_position(st, log, coin, px, "STOP", t + HOUR_MS)
+                break
+    st["last_hour_t"] = hour_end
 
 
-# ───────────────────────── entries ─────────────────────────
-def scan(ex, log, state, tg):
-    tickers = ex.fetch_tickers()
-    syms = sorted([s for s, t in tickers.items()
-                   if is_tradeable(s) and (t.get("quoteVolume") or 0) >= Config.MIN_24H_VOLUME_USD],
-                  key=lambda s: -(tickers[s].get("quoteVolume") or 0))[:Config.MAX_COINS_TO_SCAN]
-    open_trades = [s for s in log if s.get("status") == "OPEN"]
-    if len(open_trades) >= Config.MAX_OPEN_TOTAL:
-        print("[SCAN] max open reached")
-        return 0
-    btc1h = fetch_closed(ex, "BTC/USDT", P.HTF, P.HTF_MS, limit=500)
-    sent, cooldowns = 0, state.setdefault("cooldowns_ms", {})
-    for sym in syms:
-        if len(open_trades) >= Config.MAX_OPEN_TOTAL:
-            break
-        if sum(1 for s in open_trades if s["pair"] == sym) >= Config.MAX_OPEN_PER_PAIR:
-            continue
-        if now_ms() < cooldowns.get(sym, 0):
-            continue
+# ───────────────────────── daily: exits, scan, orders ─────────────────────────
+def daily(st, log, day_t, uni):
+    expired = [o for o in st["orders"] if o["expire_t"] <= day_t]
+    st["orders"] = [o for o in st["orders"] if o["expire_t"] > day_t]
+    marks = dict(zip(uni["coin"], uni["mark"]))
+    live = uni[~uni["delisted"]].sort_values("day_ntl_vlm", ascending=False)
+    coins = list(dict.fromkeys(list(live["coin"].head(SCAN_TOP_BY_24H_VOLUME)) + list(st["positions"])))
+    feats = {}
+    for coin in coins:
         try:
-            d15 = fetch_closed(ex, sym, P.TF, P.TF_MS, limit=500)
-            d1h = btc1h if sym == "BTC/USDT" else fetch_closed(ex, sym, P.HTF, P.HTF_MS, limit=500)
-            if len(d15) < 250 or len(d1h) < 250:
-                continue
-            sig = S.compute_signals(d15, d1h, None if sym == "BTC/USDT" else btc1h)
-            last = sig.iloc[-1]
-            # act only on the candle that JUST closed (GitHub cron can lag a few minutes)
-            if now_ms() - int(last["close_time"]) > P.TF_MS:
-                continue
-            if not (last["long_sig"] or last["short_sig"]):
-                continue
-            side = "LONG" if last["long_sig"] else "SHORT"
-            px = float(tickers[sym]["last"] or ex.fetch_ticker(sym)["last"])
-            tr = S.build_trade(side, px, float(last["sl_long" if side == "LONG" else "sl_short"]))
-            if tr is None:
-                continue
-            # anti-chase: skip if price already ran > MAX_CHASE_R beyond the signal close
-            ran = (px - last["close"]) if side == "LONG" else (last["close"] - px)
-            if ran > P.MAX_CHASE_R * tr["risk"]:
-                print(f"[SKIP] {sym} chased {ran / tr['risk']:.2f}R")
-                continue
+            d = H.closed_only(H.candles(coin, "1d", day_t - 400 * DAY_MS, day_t), DAY_MS, day_t)
+            if len(d) >= 30:
+                feats[coin] = S.features(d)
         except Exception as e:
-            print(f"[SCAN] {sym}: {e}")
-            continue
+            print(f"[1d] {coin}: {e}")
+        time.sleep(0.2)
 
-        entry_bar_t = (now_ms() // P.TF_MS) * P.TF_MS
-        rec = {
-            "id": f"{datetime.now(timezone.utc):%Y%m%d-%H%M}-{sym.split('/')[0]}-{side[0]}",
-            "strategy": S.VERSION,
-            "time": datetime.now(timezone.utc).isoformat(),
-            "signal_bar_close": iso(int(last["close_time"])),
-            "entry_bar_t": int(entry_bar_t),
-            "pair": sym, "exchange": Config.EXCHANGE, "direction": side,
-            "style": "TREND_PULLBACK", "tag": f"pullback_{side.lower()}",
-            "entry": tr["entry"], "sl": tr["sl"], "tp1": tr["tp"], "tp_main": tr["tp"], "risk": tr["risk"],
-            "risk_pct": round(tr["risk"] / tr["entry"] * 100, 3),
-            "adx": round(float(last["adx"]), 1), "rsi": round(float(last["rsi"]), 1),
-            "volume_x": round(float(last["volr"]), 2), "ext_atr": round(float(last["ext_atr"]), 2),
-            "htf_trend": "BULLISH" if side == "LONG" else "BEARISH",
-            "capital": Config.CAPITAL_PER_SIGNAL,
-            "status": "OPEN", "result": None, "exit_price": None, "pnl_usd": None,
-            "closed_at": None, "exit_time": None,
-        }
-        log.append(rec)
-        open_trades.append(rec)
-        cooldowns[sym] = now_ms() + (P.TIME_STOP_BARS + P.COOLDOWN_BARS) * P.TF_MS
-        sent += 1
-        tg.send(f"⚡ <b>{side}</b> <code>{sym}</code> (paper · {S.VERSION})\n"
-                f"Entry: <code>{fmt(tr['entry'])}</code>\n"
-                f"Stop: <code>{fmt(tr['sl'])}</code> (−{rec['risk_pct']}%)\n"
-                f"Target: <code>{fmt(tr['tp'])}</code> ({P.TP_R}R) · time stop {P.TIME_STOP_BARS * 15 // 60}h\n"
-                f"ADX {rec['adx']} · RSI {rec['rsi']} · Vol {rec['volume_x']}x")
-    return sent
+    # exits (bounce / time stop) at the current price ~ next open
+    for coin in list(st["positions"]):
+        f = feats.get(coin)
+        if f is None or f.empty or int(f["t"].iloc[-1]) != day_t - DAY_MS:
+            continue
+        pos = st["positions"][coin]
+        held = int((f["t"].iloc[-1] - (pos["fill_t"] // DAY_MS) * DAY_MS) // DAY_MS)
+        reason = S.exit_signal(pos, f.iloc[-1], held)
+        if reason:
+            close_position(st, log, coin, float(marks.get(coin) or f["close"].iloc[-1]), reason, day_t)
+
+    # mark-to-market equity + safety switch
+    unreal = 0.0
+    for coin, pos in st["positions"].items():
+        m = marks.get(coin) or pos["entry"]
+        unreal += pos["notional"] * ((m - pos["entry"]) / pos["entry"] if pos["side"] == "LONG" else (pos["entry"] - m) / pos["entry"])
+    equity = st["equity_cash"] + unreal
+    st["peak_equity"] = max(st.get("peak_equity", equity), equity)
+    dd = (equity / st["peak_equity"] - 1) * 100
+    if dd <= -HALT_DD_PCT and not st["halted"]:
+        st["halted"] = True
+        tg(f"🛑 <b>Safety switch</b>: drawdown {dd:.1f}% (limit {HALT_DD_PCT}%). "
+           f"No new entries until you reset it. Open trades are still managed.")
+
+    # new limit orders for the coming day
+    rows = []
+    for coin, f in feats.items():
+        if f.empty or int(f["t"].iloc[-1]) != day_t - DAY_MS:
+            continue
+        r = f.iloc[-1].copy()
+        r["coin"] = coin
+        rows.append(r)
+    placed = []
+    if rows and not st["halted"]:
+        import pandas as pd
+        day = pd.DataFrame(rows)
+        uni_set = S.rank_universe(day)
+        cand = day[day["coin"].isin(uni_set) & ~day["coin"].isin(list(st["positions"])) &
+                   (day["long_setup"] | day["short_setup"])].sort_values("dv30", ascending=False)
+        capacity = st["slots"] - len(st["positions"])
+        used = sum(p["notional"] for p in st["positions"].values())
+        for _, r in cand.iterrows():
+            if capacity <= 0:
+                break
+            o = S.make_order(r["coin"], "LONG" if r["long_setup"] else "SHORT", r)
+            if o is None:
+                continue
+            n = S.size_notional(equity, o["stop_pct"], used)
+            if n < 10:
+                break
+            o.update({"notional": n, "signal_t": int(r["t"]), "valid_from": day_t, "expire_t": day_t + DAY_MS})
+            st["orders"].append(o)
+            placed.append(o)
+            used += n
+            capacity -= 1
+
+    lines = [f"📊 <b>Daily summary</b> ({iso(day_t)[:10]}, paper · {S.VERSION})",
+             f"Account: <b>${equity:,.2f}</b> (cash ${st['equity_cash']:,.2f}) · drawdown {dd:.1f}%",
+             f"Slots: {len(st['positions'])}/{st['slots']}" + (" · 🛑 HALTED" if st["halted"] else "")]
+    for coin, p in st["positions"].items():
+        m = marks.get(coin) or p["entry"]
+        ch = ((m - p["entry"]) / p["entry"] if p["side"] == "LONG" else (p["entry"] - m) / p["entry"]) * 100
+        lines.append(f"• {p['side']} {coin} {ch:+.1f}%")
+    lines.append(f"New limit orders: {len(placed)}" + (" — " + ", ".join(f"{o['side'][0]} {o['coin']} @ {fmt(o['limit'])}" for o in placed) if placed else ""))
+    if expired:
+        lines.append(f"Expired unfilled: {', '.join(o['coin'] for o in expired)}")
+    top = live.head(5)
+    lines.append("Top 24h volume: " + ", ".join(f"{c} ${v / 1e6:,.0f}M" for c, v in zip(top["coin"], top["day_ntl_vlm"])))
+    tg("\n".join(lines))
+    st["last_daily_t"] = day_t
 
 
 def main():
-    ex = ccxt.kucoin({"enableRateLimit": True})
-    tg = Telegram()
-    log = load_json(Config.SIGNAL_LOG_FILE, [])
-    state = load_json(Config.STATE_FILE, {})
-    state.pop("cooldowns", None)  # v10 format
+    st = load(STATE_FILE, {})
+    if st.get("strategy") != S.VERSION:
+        st = new_state()
+    log = load(LOG_FILE, [])
+    t = now_ms()
+    hour_end = (t // HOUR_MS) * HOUR_MS
+    day_t = (t // DAY_MS) * DAY_MS
     try:
-        closed = update_open_trades(ex, log, tg)
-        save_json(Config.SIGNAL_LOG_FILE, log)
-        sent = scan(ex, log, state, tg)
+        if hour_end > st["last_hour_t"]:
+            hourly(st, log, hour_end)
+        if day_t > st["last_daily_t"]:
+            daily(st, log, day_t, H.universe())
     except Exception:
         traceback.print_exc()
-        tg.send("⚠️ Hermes v11 run error — check Actions log")
-        closed, sent = 0, 0
-    # prune expired cooldowns
-    state["cooldowns_ms"] = {k: v for k, v in state.get("cooldowns_ms", {}).items() if v > now_ms()}
-    save_json(Config.SIGNAL_LOG_FILE, log)
-    save_json(Config.STATE_FILE, state)
-    print(f"[RUN] closed={closed} new={sent} open={sum(1 for s in log if s.get('status') == 'OPEN')}")
+        tg("⚠️ Hermes v12 run error — check the Actions log")
+    save(LOG_FILE, log)
+    save(STATE_FILE, st)
+    print(f"[RUN] equity_cash={st['equity_cash']:.2f} positions={len(st['positions'])} orders={len(st['orders'])} slots={st['slots']}")
 
 
 if __name__ == "__main__":
