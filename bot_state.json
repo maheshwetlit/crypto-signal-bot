@@ -4,8 +4,31 @@
   "slots": 4,
   "peak_equity": 1000.0,
   "halted": false,
-  "last_hour_t": 1795820400000,
-  "last_daily_t": 1795737600000,
-  "orders": [],
+  "last_hour_t": 1795824000000,
+  "last_daily_t": 1795824000000,
+  "orders": [
+    {
+      "coin": "LIT",
+      "side": "SHORT",
+      "limit": 2.76219304986008,
+      "stop": 3.5721235484608775,
+      "stop_pct": 29.32200914204114,
+      "notional": 34.10407503646214,
+      "signal_t": 1795737600000,
+      "valid_from": 1795824000000,
+      "expire_t": 1795910400000
+    },
+    {
+      "coin": "LINK",
+      "side": "SHORT",
+      "limit": 9.523831779934762,
+      "stop": 11.072149579282378,
+      "stop_pct": 16.257298901579535,
+      "notional": 61.51083313740645,
+      "signal_t": 1795737600000,
+      "valid_from": 1795824000000,
+      "expire_t": 1795910400000
+    }
+  ],
   "positions": {}
 }
